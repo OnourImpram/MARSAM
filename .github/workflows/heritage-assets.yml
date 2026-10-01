@@ -1,0 +1,64 @@
+name: Prepare heritage and bibliographic assets
+on:
+  push:
+    branches: [design/heritage-publications-20261001]
+    paths: [.github/workflows/heritage-assets.yml]
+permissions:
+  contents: read
+jobs:
+  assets:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - name: Collect public publisher metadata and small identification images
+        run: |
+          python -m pip install -q pillow beautifulsoup4
+          python - <<'PY'
+          from urllib.request import urlopen,Request
+          from urllib.parse import urljoin
+          from pathlib import Path
+          from io import BytesIO
+          from concurrent.futures import ThreadPoolExecutor
+          from bs4 import BeautifulSoup
+          from PIL import Image
+          import json,hashlib
+          root=Path('assets');root.mkdir();(root/'metadata').mkdir()
+          books={
+            'trauma-spirituality':'https://www.nobelyayin.com/travmanin-izinde-maneviyat-butuncul-bir-psikoterapi-rehberi-23386.html',
+            'spiritual-practices':'https://www.nobelyayin.com/manevi-yasam-pratikleri-21520.html',
+            'discovering-spirituality':'https://www.nobelyayin.com/maneviyatin-kesfi-21-boyutta-kendi-kendine-yardim-kilavuzu-21519.html',
+            'cbt-spiritual':'https://www.nobelyayin.com/bilissel-davranisci-terapi-manevi-perspektifli-teori-ve-uygulamalar-18795.html',
+            'techniques-101':'https://www.nobelyayin.com/psikoterapi-ve-psikolojik-danismada-manevi-yonelimli-101-teknik-18476.html',
+            'group-counselling':'https://www.nobelyayin.com/grupla-psikolojik-danisma-uygulamalari-psikospirituel-gelisim-kilavuzu-17677.html',
+            'family-spiritual':'https://www.nobelyayin.com/aile-terapisi-manevi-yonelimli-bir-perspektif-16429.html',
+            'spiritual-counselling-book':'https://www.nobelyayin.com/manevi-yonelimli-psikolojik-danisma-15894.html',
+            'theories-book':'https://www.kaknus.com.tr/urun/psikoterapi-ve-psikolojik-danisma-kuramlari/'
+          }
+          def get(url):return urlopen(Request(url,headers={'User-Agent':'Mozilla/5.0 MARSAM-bibliographic-review'}),timeout=35).read()
+          def book(item):
+            id,url=item;record={'id':id,'source':url,'role':'Small cover thumbnail for bibliographic identification. Copyright remains with publisher and rights holders. No general reuse licence or full-text permission claimed.'}
+            try:
+              html=get(url);soup=BeautifulSoup(html,'html.parser');(root/'metadata'/f'{id}.txt').write_text(soup.get_text(' ',strip=True))
+              tags=soup.select('meta[property="og:image"],meta[name="og:image"]');image=tags[0].get('content')if tags else None
+              record['imageURL']=urljoin(url,image or '')
+              (root/'metadata'/f'{id}-image-candidates.json').write_text(json.dumps([dict(i.attrs)for i in soup.select('img')],ensure_ascii=False,indent=2))
+              if image:
+                im=Image.open(BytesIO(get(record['imageURL']))).convert('RGB');record['originalDimensions']=im.size
+                im.thumbnail((320,460));out=root/f'{id}.webp';im.save(out,'WEBP',quality=84,method=6)
+                record['sha256']=hashlib.sha256(out.read_bytes()).hexdigest();record['dimensions']=im.size
+            except Exception as e:record['error']=str(e)
+            return record
+          with ThreadPoolExecutor(max_workers=4)as pool:records=list(pool.map(book,books.items()))
+          url='https://upload.wikimedia.org/wikipedia/commons/4/4d/Ebru_%28Water_Marbling%29_Art.jpg'
+          try:
+            im=Image.open(BytesIO(get(url))).convert('RGB');out=root/'ebru-marbling.webp';im.save(out,'WEBP',quality=88,method=6)
+            records.append({'id':'ebru-marbling','source':'https://commons.wikimedia.org/wiki/File:Ebru_(Water_Marbling)_Art.jpg','imageURL':url,'creator':'Metasqaure10','license':'CC0 1.0','dimensions':im.size,'sha256':hashlib.sha256(out.read_bytes()).hexdigest(),'role':'Contemporary decorative ebru photograph. Not an Ottoman or Seljuk historical artefact.'})
+          except Exception as e:records.append({'id':'ebru-marbling','error':str(e)})
+          (root/'asset-ledger.json').write_text(json.dumps(records,ensure_ascii=False,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: marsam-heritage-assets
+          path: assets/
+          retention-days: 7
