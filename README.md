@@ -1,18 +1,92 @@
-# MARSAM
+# MARSAM · spirituality, mental health, and accountable knowledge
 
-**Maneviyat ve Ruh Sağlığı Araştırmaları Merkezi — kuruluş fikri için dijital platform önizlemesi.**
+A content-first, five-language website **development preview** for the proposed *Maneviyat ve Ruh Sağlığı Araştırmaları Merkezi*. It is not an announcement of a formally established center, university affiliation, clinical service or approved training provider.
 
-Ruh sağlığı profesyonelleri, öğrenciler ve araştırmacılar için Türkçe, İngilizce, Almanca, Basitleştirilmiş Çince ve Rusça içerik mimarisi ve web uygulaması geliştirilmektedir.
+## Run locally
 
-## Statü
+Requires **Node.js 22 or later**. There are no npm dependencies and no installation step.
 
-Bu depo bir geliştirme çalışmasıdır. MARSAM'ın resmî olarak kurulmuş, akredite veya bir üniversiteye bağlı bir merkez olduğunu ileri sürmez. Kurumsal kimlik, editoryal atamalar, içerik onayları ve canlı yayın kararı henüz kesinleşmiş değildir.
+```sh
+npm run build
+npm run preview
+```
 
-## Sınırlar
+Open `http://127.0.0.1:4173/tr/`. Change `/tr/` to `/en/`, `/de/`, `/zh/` or `/ru/`. The root page provides a language selector. Do not double-click generated HTML: the site uses root-relative assets and search indexes, so it requires a local HTTP server.
 
-- Özel konuşmalar, danışan verileri, yayımlanmamış ders dosyaları ve izin alınmamış kitap bölümleri depoya yüklenmez.
-- Kaynaklara bağlantı verilmesi, iş birliği veya kurumsal onay anlamına gelmez.
-- Önizleme sağlık hizmeti, teşhis, terapi veya araştırma katılımcısı kaydı sağlamaz.
-- IAPOS kaynak ve iddia kontrolleri içerik yönetiminin tasarım girdisidir. Teknik testler bilimsel onay değildir.
+```sh
+npm run check
+# Optional subdirectory hosting preview:
+BASE_PATH=/MARSAM/ npm run build
+npm run preview
+# Open http://127.0.0.1:4173/MARSAM/tr/
+```
 
-Uygulama, içerik modeli, kaynak defteri, kurulum ve test kayıtları geliştirme dalında hazırlanacaktır.
+Windows PowerShell equivalent: `$env:BASE_PATH='/MARSAM/'; npm run build`. Remove it with `Remove-Item Env:BASE_PATH` before rebuilding at the root.
+
+`HOST` and `PORT` configure the local server. Its default loopback binding is intentional. No public server has been provisioned or deployed.
+
+## What is implemented
+
+- Five complete interface dictionaries: Turkish, English, German, Simplified Chinese and Russian.
+- **240 localized route files**, one language landing page and a real 404 page. This is 48 logical pages per locale, not 240 distinct research publications.
+- **8 original introductory dossiers**, with body text, reflection prompts and limits in all five languages.
+- **18 linked source records**, not rehosted publications. Source titles and citation metadata remain in their original language.
+- **3 reading pathways**, a concept map, theoretical comparison questions and proposed research areas.
+- Full-text local search, type/topic filtering, locale switching on the same page, a browser-only reading list, citation copy, metadata-only RIS/BibTeX export and print styles.
+- Local-only source-suggestion JSON download. The form does not send, register or publish anything.
+- Institutional-status notices, source inspection limits, translation status, rights notices and a machine-readable source ledger.
+
+The rich architecture covers concepts, theories, professional practice, ethics, methods, measurement directories, research participation, projects, learning, external media, announcements and an international resource directory. Empty research and course states are deliberate: no unapproved studies or invented events are presented as active.
+
+## Content and maintenance
+
+| File | Responsibility |
+| --- | --- |
+| `src/i18n.mjs` | Interface copy and localized source notes |
+| `src/content.mjs` | Source records, catalogue entries, section metadata and taxonomy |
+| `src/articles.mjs` | Eight five-language introductory dossiers |
+| `src/info.mjs` | Learning paths, editorial/about text and proposed work areas |
+| `src/lib.mjs` | Validation, URL safety, HTML escaping, routes and export functions |
+| `src/site.mjs` | Accessible shared templates and prerendered pages |
+| `public/site.css` | Responsive visual system, typography, reduced motion and printing |
+| `public/app.js` | Small client-side enhancements; no analytics or remote form posting |
+| `scripts/build.mjs` | Static generation and fail-closed publication guard |
+| `scripts/serve.mjs` | Local HTTP preview with real 404 and security headers |
+
+Use a branch and pull request to change content. Keep source IDs stable. Add all five language values and a bounded source role. Run the tests before requesting scientific and language review. A `draft` flag is not silently removed by a passing build. There is **no online CMS or shared editorial backend** in this preview. The local suggestion tool is not a substitute for one.
+
+## Scientific, institutional and privacy boundaries
+
+The content architecture adapts the user's canonical IAPOS source/claim controls. It does not implement the full IAPOS runtime or turn code tests into scientific approval. Current source records are **V1 / PARTIALLY_VERIFIED** with inspected scope and limitations. Original dossiers and translations are **AI-assisted editorial drafts** awaiting responsible human review. Native-language review has not been claimed.
+
+No private messages, unpublished coursework, personal clinical material, restricted scale items or confidential research data are committed. Official publisher files are linked, not copied. A public tool or article page is not automatically permission to translate or republish it. External institutions are **resource links, not partners**.
+
+The preview has no accounts, survey response store, tracking code, external font or embedded third-party video. A reading list stays in browser storage after user action. The contribution form exports a local file only. Hosting operators may have their own ordinary access logs; production privacy notices and data-controller decisions remain open.
+
+`PUBLISH=true npm run build` intentionally fails. A production release requires institutional authorization, content approval tied to the reviewed versions, translation review, source/rights checks and hosting decisions. `noindex` is a crawler instruction, **not access control**; this public repository is not confidential.
+
+## Verification
+
+```sh
+npm test              # content and safety contracts
+npm run build
+npm run test:build    # route parity, all generated internal links, citations and release guard
+```
+
+Optional browser checks require Python and Playwright. With a working browser and the preview server running:
+
+```sh
+python tests/browser_check.py --browser /path/to/chromium
+```
+
+The development environment blocked browser navigation to local URLs. For this delivery, visual and interaction checks used `--offline-fixture`: generated HTML and CSS were rendered locally, the actual application script ran, and browser I/O boundaries were mocked. Real local HTTP responses were checked separately. This mode is explicitly **not** full end-to-end verification. Native persistence, clipboard permissions, navigation, real file downloads, browser CSP enforcement, screen readers and cross-browser behaviour require a live-browser pass. No browser or machine policy was changed.
+
+See `verification/` and `docs/VERIFICATION.md` for the exact scope and commands. Tests are implementation checks, not a claim of WCAG certification, clinical safety validation or scholarly approval.
+
+## Documents
+
+- `docs/MIMARI_VE_ICERIK_PLANI_TR.md`: meeting-ready Turkish architecture and content proposal.
+- `docs/BENCHMARK_AND_SOURCES.md`: public precedents and inspected source roles.
+- `docs/IAPOS_AND_RELEASE.md`: canonical IAPOS references, approval boundaries and release checklist.
+
+Copyright permissions for external sources remain with their owners. This repository does not grant reuse rights for linked materials or impersonate an institution. Code and original editorial-text licensing should be decided by the project owner before a production release.
