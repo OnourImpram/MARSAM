@@ -1,35 +1,49 @@
-# MARSAM. Canlı tasarım revizyonu
+# MARSAM. Canlı teslim kaydı
 
-1 Ekim 2026. Tasarım sürümü 0.5.0.
+1 Ekim 2026. Sürüm 0.6.0.
 
-## Canlı adres
+## Yayın
 
-https://onourimpram.github.io/MARSAM/tr/
+Canlı adres https://onourimpram.github.io/MARSAM/tr/
 
-Yayımlanan uygulama kaynağı `a5dfb6558be5dbbf180321e114f4725b3e6b9657`. Yayın deposundaki commit `56f9e346f5616853191e2c1c245da4e40926943c`. Bu nottan sonraki belge ve test güncellemeleri, yayımlanan uygulama dosyalarını değiştirmez.
+Uygulama kaynağı `038506a0313509437ba038043188f3aa0c398cb6`.
 
-## İncelenen tasarım süreci
+Yayın deposu `OnourImpram/onourimpram.github.io`.
 
-Elif Tasarım'ın önceki tasarım değerlendirmeleri, V4 teslim raporu ve V23 olarak etiketlenen son canlı ana sayfası incelendi. Bütün tarihsel sürümler yeniden kurulmuş gibi bir iddia yoktur. Kaynaklardan gözlenenler ve MARSAM'a ilişkin tasarım çıkarımları docs/ELIF_DESIGN_LESSONS_TR.md dosyasında ayrılmıştır.
+Yayın commit'i `7a15cd6d9daec45a81a60b1669bbad24b81a789f`.
 
-## Görsel düzenleme
+MARSAM alt ağacı `6572d86391949326f6a1f476d3d4b512c84be76b`.
 
-Marmara işareti ve merkezin tam adı korundu. Üst bölüm sadeleştirildi. Mobilde gereksiz tekrarlar kaldırıldı ve dil seçicinin görünür etiketi kısaltılırken tam dil adı erişilebilir kaldı.
+Canlı sürüm kimliği `marsam-heritage-0.6.0`.
 
-Açılışta açık zemin, büyük serif başlık ve dekoratif su fotoğrafı kullanıldı. Fotoğraf bir MARSAM binası veya faaliyeti olarak sunulmadı. Kaynak kaydı ayrı tutuldu. Gerçek bina gibi gösterilen temsili görüntüler, hayalî personel, uydurma istatistikler veya tanıtım videosu eklenmedi.
+## Tasarım
 
-Tekrarlayan eş boyutlu kutuların yerine, araştırma alanlarında asimetrik dizin, yayınlarda farklı ağırlıklara sahip seçki, öğrenmede yerel HTML açılır bölümleri ve okuma dosyalarında ayrı bir görsel düzen kuruldu. Kütüphane, kaynak detayları, karşılaştırma tablosu ve uzun okuma sayfaları da aynı tipografi ve boşluk sistemiyle düzenlendi.
+Ebru dokusu, geometrik geçmeler ve bitkisel bezeme, Marmara kimliğini koruyan bir editöryal düzen içinde kullanıldı. Açılıştaki kompozisyon kâğıt rengi, lacivert, petrol mavisi ve sınırlı altın vurgusuyla yeniden kuruldu. Okuma yüzeyleri sade tutuldu. Kitaplar gerçek kapaklarıyla gösterilir. Ana sayfa, kitaplık, güncel araştırmalar ve ayrıntılı kaynak sayfaları aynı tasarım sistemiyle düzenlenmiştir.
 
-## Korunanlar
+Ebru için eser ve lisans kaydı vardır. Özgün geometrik çizimler belirli bir Selçuklu veya Osmanlı yapısının birebir kopyası olarak sunulmaz. GitHub tasarım belgeleri içerik hiyerarşisi, tipografi, sade kontroller ve tarayıcı üzerinden görsel değerlendirme için kullanıldı. İncelenen projeler ve uygulanan ilkeler `docs/HERITAGE_DESIGN_REVIEW_TR.md` dosyasındadır.
 
-Sekiz dil, Arapça yönü, arama, okuma listesi, kaynak karşılaştırma, atıf indirme ve yerel katkı taslağı korunur. Akademik içerik kayıtları değiştirilmedi. Önceki düzeltmedeki sınırlar korunur. Tasarım referansları kamusal kurum dizinine dönüştürülmedi. Kişisel araştırma sorusu merkez sloganı yapılmadı.
+## Yayın seçkisi
 
-## Canlı doğrulama
+Kitaplıkta dokuz eser, güncel araştırmalar bölümünde 2025 ve 2026 yıllarından sekiz makale bulunur. Bunlar tüm yayınları kapsayan bibliyometrik bir tarama değildir. Eylül 2026 tarihli Travmanın İzinde Maneviyat ve 21 Eylül 2026 tarihli Spiritual Burnout Scale çalışması seçkiye dâhildir. SIPAS ve mesleki yeterlik eğitimi çalışmaları tüm ortak yazarlarıyla kaydedilmiştir.
 
-Son başarılı canlı doğrulama çalışması https://github.com/OnourImpram/onourimpram.github.io/actions/runs/36895762664 adresindedir. Yayın işi 36894438613 içinde dosya hash denetimi ve kapsamlı tarayıcı adımları başarılı olmuş, son ek kontrol başarısız kalmıştır. Bu nedenle normal, sorgu parametresi içermeyen stil dosyası ve kullanıcı akışları ayrı bir işte yeniden denetlenmiştir. Son işteki 100 kontrolün tamamı geçmiştir. Önceki işin bütünü başarılıymış gibi gösterilmez.
+Özgün eser adı, yazar veya editör rolleri, yayın tarihi, DOI veya ISBN ve kaynak bağlantıları kayıt düzeyinde sunulur. Başlık, yazar ve yıl filtreleri çalışır. Kitap ve makale atıfları RIS ve BibTeX biçiminde indirilebilir. Makale açıklamaları erişilebilir kayıt ve özet kapsamındadır. Kitap künyesini doğrulamak kitabın bilimsel değerlendirmesini tamamlamak anlamına gelmez. Çeviri açıklamaları resmî çeviri baskısı olarak gösterilmez. Ortak yazarlardan öğrencilik, arkadaşlık veya merkez üyeliği çıkarılmaz.
 
-Yayımlanan dosyalar kaynak sürümün hash kayıtlarıyla karşılaştırıldı. Gerçek GitHub Pages adresinde sekiz dil ve dört ekran genişliğiyle gezinme, başlıklar, görüntü yükleme, mobil menü, öğrenme yolları, kaynak karşılaştırma ve indirme denetlendi. Çince, CJK yazı tipleri bulunan bir test ortamında ayrıca görsel olarak kontrol edildi. Arama düğmesinin satır kırılması aynı ortamda yeniden üretildi ve giderildi.
+## Gerçek canlı doğrulama
 
-Canlı son sürümde arama, okuma listesi kalıcılığı ve gerçek RIS indirme yeniden sınandı. Ana sayfa ve iç sayfaların masaüstü ve mobil ekranları canlı adresten alındı. Tarayıcı denetimi Chromium ile sınırlıdır. Bağımsız erişilebilirlik sertifikası, ana dil uzmanı incelemesi veya bilimsel editör onayı değildir.
+Son çalışma https://github.com/OnourImpram/onourimpram.github.io/actions/runs/36911218513 adresinde başarıyla tamamlandı.
 
-Yayın deposunda yalnız MARSAM ağacı değiştirildi. Elif Tasarım, kişisel ana sayfa ve diğer kök girdilerinin hash değerleri korundu. Bir kerelik taşıma iş akışları ve kod aktarım paketleri MARSAM ana dalına taşınmadı.
+Artifakt `11186343156`, adı `marsam-heritage-final-live`.
+
+Canlı sunucudan gelen 584 dosya yayın kaydındaki SHA-256 değerleriyle eşleşti. Sorgu parametresi olmadan sunulan ana sayfa, stil ve betik dosyaları da kontrol edildi. Sekiz dilde, 320, 390, 768 ve 1440 piksel genişliklerde gerçek Chromium gezinmesiyle 876 kontrol geçti. Üç ek akışta arama, okuma listesinin yeniden yükleme sonrasında korunması ve gerçek karşılaştırma dosyası indirmesi doğrulandı. Katalog filtreleri, klavye ile kayıt açma, görüntü yükleme, yatay taşma ve gerçek RIS ile BibTeX indirmeleri denetlendi. JavaScript kapalıyken iki katalog da içeriklerini gösterdi.
+
+Ekran görüntüleri GitHub Pages üzerindeki gerçek site üzerinden alındı. Türkçe masaüstü ve mobil açılış, kitaplık, makale listesi, kaynak ayrıntıları, Arapça ve Çince örnekler görsel olarak incelendi. Tarayıcı denetimi Chromium ile sınırlıdır. Ana dil uzmanı veya bağımsız insan değerlendirici incelemesi yapılmış sayılmaz.
+
+Önceki yayın çalışması `36909457529` kaynak derleme ve hazırlama aşamalarında başarılıydı. Canlı kontrol ortamının CJK font paketi indirmesi zaman aşımına uğradı. Bu çalışma başarılı canlı denetim diye sunulmadı. Son çalışmada test ortamı için sabitlenmiş resmî Noto kaynağından glif desteği sağlandı ve canlı denetim yeniden yürütüldü. Yazı tipi dosyaları yayımlanan siteye veya artifaktlara eklenmedi.
+
+## Korunan sınırlar
+
+Yayın deposunda yalnız MARSAM alt ağacı değişti. Elif Tasarım, kişisel ana sayfa, README, .github ve .nojekyll girdilerinin kimlikleri önceki ana dalla aynı kaldı. Tek seferlik hazırlama iş akışları uygulama ana dalına taşınmadı.
+
+Türkçe, İngilizce, Almanca, Çince, Rusça, Arapça, Endonezce ve Malayca korunur. Arapça düzeni sağdan soladır. Tasarım referansları kamusal ortaklar listesine, kişisel araştırma sorusu merkez sloganına dönüştürülmedi.
+
+Site kurumsal inceleme sürümüdür. Resmî kuruluş ve bilimsel editör onayları doğrulanmış değildir. Bu teslim belgesinin güncellenmesi, yayımlanan uygulama dosyalarını değiştirmez.

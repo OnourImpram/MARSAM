@@ -1,31 +1,41 @@
 # MARSAM
 
-Marmara Üniversitesi bünyesinde planlanan Maneviyat ve Ruh Sağlığı Araştırmaları Merkezi için hazırlanmış kurumsal web sitesi taslağı.
+Marmara Üniversitesi bünyesinde planlanan Maneviyat ve Ruh Sağlığı Araştırmaları Merkezi için kurumsal web sitesi taslağı.
 
-## Canlı tasarım
+## Canlı sürüm
 
 https://onourimpram.github.io/MARSAM/tr/
 
-Tasarım sürümü 0.5.0. Uygulama kaynağı `a5dfb6558be5dbbf180321e114f4725b3e6b9657`. Daha sonraki teslim notları ve test korumaları, yayımlanan uygulama dosyalarını değiştirmez.
+Sürüm 0.6.0. Ebru ve mimari bezemeden esinlenen görsel kimlik, dokuz kitaplık seçki ve 2025 ile 2026 yıllarından sekiz araştırma kaydı.
 
-Açık zemin, Marmara mavisi, serif başlıklar, kontrollü fotoğraf kullanımı, asimetrik araştırma dizini, yayın seçkisi, hedef kitleye göre açılan öğrenme yolları ve ortak bir okuma düzeni kullanılır. Elif Tasarım süreci tasarım geliştirme yöntemi bakımından incelenmiştir. Elif'in markası, ticari içeriği veya 3D ürünü MARSAM'a aktarılmamıştır.
+Yayımlanan uygulama kaynağı `038506a0313509437ba038043188f3aa0c398cb6`. Yayın deposundaki commit `7a15cd6d9daec45a81a60b1669bbad24b81a789f`. Daha sonraki teslim belgeleri uygulama dosyalarını değiştirmez.
+
+Kitaplık https://onourimpram.github.io/MARSAM/tr/books/
+
+Güncel araştırmalar https://onourimpram.github.io/MARSAM/tr/publications/
+
+## Görsel kimlik ve kaynaklar
+
+Marmara işareti, lacivert ve petrol mavisi korunur. Kâğıt tonları, ölçülü altın çizgiler, geometrik geçmeler ve bitkisel bezeme kullanılır. Ebru uyarlamasının eser sahibi, lisansı ve yapılan değişiklikler belirtilmiştir. Belirli bir tarihî yapının birebir rekonstrüksiyonu iddia edilmez.
+
+GitHub tasarım kaynaklarından yararlanılan ilkeler ve incelenen commitler `docs/HERITAGE_DESIGN_REVIEW_TR.md` dosyasındadır. Elif Tasarım sürecinden alınan tasarım dersleri `docs/ELIF_DESIGN_LESSONS_TR.md` dosyasında korunur. Referans kurumlar ortak veya merkez üyesi olarak sunulmaz.
 
 ## Kapsam
 
-Türkçe, İngilizce, Almanca, Basitleştirilmiş Çince, Rusça, Arapça, Endonezce ve Malayca. Arapça sağdan sola düzen kullanır. Kaynak kayıtları, okuma dosyaları ve öğrenme yolları korunmuştur. Arama, aynı sayfada dil değişimi, yerel okuma listesi, kaynak karşılaştırma, RIS ve BibTeX indirme ve yerel katkı taslağı bulunur.
+Türkçe, İngilizce, Almanca, Basitleştirilmiş Çince, Rusça, Arapça, Endonezce ve Malayca. Arapça sağdan sola düzen kullanır. Arama, okuma listesi, kaynak karşılaştırma, RIS ve BibTeX indirme, kitap ve makale filtreleri bulunur. Katalog, özgün eser adlarını ve yazar sırasını korur. Diğer dillerdeki açıklamalar yayımlanmış çeviri baskılarına işaret etmez.
 
-Web sitesi bir kurumsal önizlemedir. Resmî kuruluş kararı, bilimsel editör onayı, çeviri uzmanı onayı veya klinik hizmet yetkisi varmış gibi sunulmaz. Katılımcı yanıtı, ödeme veya kişisel sağlık bilgisi toplanmaz. Etkinlik ve yayın boşlukları uydurma içerikle doldurulmaz.
+Site kurumsal inceleme sürümüdür. Resmî kuruluş kararı, bilimsel editör onayı veya klinik hizmet yetkisi varmış gibi sunulmaz. Katılımcı yanıtı, ödeme veya kişisel sağlık bilgisi toplanmaz. Yayın ortaklığı, kadro üyeliği veya öğrencilik ilişkisi olarak yorumlanmaz. Tam metinler ve kişisel ders dosyaları yayımlanmaz.
 
 ## Yerel çalıştırma
 
-Node.js 22 veya üzeri gerekir. Uygulamanın paket bağımlılığı yoktur.
+Node.js 22 veya üzeri. Uygulamanın paket bağımlılığı yoktur.
 
 ```sh
 npm run check
 npm run preview
 ```
 
-Tarayıcı adresi `http://127.0.0.1:4173/tr/`.
+Yerel adres `http://127.0.0.1:4173/tr/`.
 
 GitHub Pages alt yolu için.
 
@@ -35,12 +45,6 @@ BASE_PATH=/MARSAM/ PAGES_PREVIEW=true npm run check
 
 ## Doğrulama
 
-`npm test` içerik ve tasarım korumalarını, `npm run test:build` üretilen yolları ve iç bağlantıları denetler. Gerçek tarayıcı kontrolleri `tests/browser_e2e.py`, `tests/scope_e2e.py` ve `tests/design_e2e.py` dosyalarındadır. Tarayıcı ortamında Çince için gerçek CJK glif desteği bulunmalıdır. Test ortamına kurulan yazı tipleri web sitesiyle veya teslim dosyalarıyla dağıtılmaz.
+`npm run check` kaynak testlerini, derlemeyi ve iç bağlantıları denetler. `tests/heritage_e2e.py` yeni tasarım ve katalogların gerçek tarayıcı denetimidir. Önceki işlevler `tests/browser_e2e.py` ve `tests/scope_e2e.py` ile korunur. Gerçek glif desteği test ortamında sağlanır. Yazı tipi dosyaları siteyle veya teslim arşivleriyle dağıtılmaz.
 
-Canlı dağıtım ve son doğrulama kaydı DELIVERY_STATUS.md dosyasındadır. Tasarımın uygunluğu test adediyle eşitlenmez.
-
-## Tasarım ve içerik kayıtları
-
-Tasarım incelemesi `docs/ELIF_DESIGN_LESSONS_TR.md`. Görsel kaydı `docs/VISUAL_ASSET_PROVENANCE.json`. Kurumsal içerik sınırları `docs/SCOPE_CORRECTION_TR.md`. Canlı sürüm kaydı `docs/LIVE_REVIEW_RELEASE.json`.
-
-Kaynak kimliği, doğrulama kapsamı ve editöryal onay birbirinden ayrıdır. Görsel tasarım incelemesi kaynak doğrulama veya bilimsel onay anlamına gelmez.
+Son canlı doğrulama https://github.com/OnourImpram/onourimpram.github.io/actions/runs/36911218513 adresindedir. Doğrulama kapsamı ve önceki başarısız kurulum kaydı `DELIVERY_STATUS.md` dosyasındadır. Teknik testler bilimsel onay, ana dil uzmanı incelemesi veya bağımsız erişilebilirlik sertifikası değildir.
