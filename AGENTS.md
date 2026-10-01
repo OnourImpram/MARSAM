@@ -9,3 +9,7 @@
 7. Run `npm run check`, `tests/browser_e2e.py` and `tests/scope_e2e.py`. Evaluate the actual meaning and purpose of copy, not only absence of technical errors.
 8. Publish only the generated MARSAM subtree to the existing Pages host. Read the current host main branch first and preserve every other root entry exactly. Remove obsolete MARSAM routes rather than leaving stale files.
 9. Confirm the actual public release identifier, file hashes, interactions and screenshots before announcing a live correction. Technical checks are not human academic, native-language or independent accessibility approval.
+
+## Script-aware visual verification
+
+The verification host must have actual glyph coverage for all eight languages. Install CJK fonts on the test host before judging Chinese screenshots. Keep short action labels on one line without causing horizontal overflow. Test-host fonts must not be included in website assets, source bundles or user deliverables.

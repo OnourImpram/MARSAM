@@ -1,29 +1,35 @@
-# MARSAM. Canlı içerik düzeltmesi
+# MARSAM. Canlı tasarım revizyonu
 
-1 Ekim 2026. Sürüm 0.4.0.
+1 Ekim 2026. Tasarım sürümü 0.5.0.
 
 ## Canlı adres
 
-https://onourimpram.github.io/MARSAM/
+https://onourimpram.github.io/MARSAM/tr/
 
-Düzeltilmiş uygulama kodu MARSAM ana dalındadır. Yayımlanan uygulama commit'i `37fe3fe678ccb3854398b18db51f604a378e2f78`. Daha sonraki teslim kaydı değişiklikleri uygulama dosyalarını değiştirmez.
+Yayımlanan uygulama kaynağı `a5dfb6558be5dbbf180321e114f4725b3e6b9657`. Yayın deposundaki commit `56f9e346f5616853191e2c1c245da4e40926943c`. Bu nottan sonraki belge ve test güncellemeleri, yayımlanan uygulama dosyalarını değiştirmez.
 
-## Yapılan düzeltmeler
+## İncelenen tasarım süreci
 
-Tasarım karşılaştırması amacıyla incelenen kurumların tanıtım kartları, isim vitrinleri, kurum dizini ve dış etkinlik kayıtları kamusal siteden kaldırıldı. Bunlar arama dizininde ve indirilen kaynak verilerinde de bulunmuyor. Eski kurum sayfaları yayın klasöründe bırakılmadı. Bilimsel makale, kitap ve mesleki rehberlerin kaynakça bilgileri tasarım referanslarından ayrı tutuldu.
+Elif Tasarım'ın önceki tasarım değerlendirmeleri, V4 teslim raporu ve V23 olarak etiketlenen son canlı ana sayfası incelendi. Bütün tarihsel sürümler yeniden kurulmuş gibi bir iddia yoktur. Kaynaklardan gözlenenler ve MARSAM'a ilişkin tasarım çıkarımları docs/ELIF_DESIGN_LESSONS_TR.md dosyasında ayrılmıştır.
 
-Ana sayfa sekiz dilde merkezin tam adıyla açılıyor. Kişisel araştırma sorusu ve buna dayanan tercih sloganı kurumsal açılıştan çıkarıldı. Merkezin kapsamı maneviyat ve ruh sağlığı alanında araştırma, eğitim, mesleki gelişim ve bilgi paylaşımı olarak düzenlendi. Menü ve çalışma alanları bu kapsamla eşleştirildi.
+## Görsel düzenleme
 
-Haber, etkinlik, proje ve video alanlarında onaylı içerik bulunmaması yabancı kurum kayıtlarıyla veya uydurma etkinliklerle kapatılmadı. Marmara Üniversitesi için planlanan merkez statüsü ve üniversitenin görsel işaretleri korundu. Sekiz dil, Arapça yönü, arama, okuma listesi, kaynak karşılaştırma ve gerçek dosya indirme işlevleri korundu.
+Marmara işareti ve merkezin tam adı korundu. Üst bölüm sadeleştirildi. Mobilde gereksiz tekrarlar kaldırıldı ve dil seçicinin görünür etiketi kısaltılırken tam dil adı erişilebilir kaldı.
+
+Açılışta açık zemin, büyük serif başlık ve dekoratif su fotoğrafı kullanıldı. Fotoğraf bir MARSAM binası veya faaliyeti olarak sunulmadı. Kaynak kaydı ayrı tutuldu. Gerçek bina gibi gösterilen temsili görüntüler, hayalî personel, uydurma istatistikler veya tanıtım videosu eklenmedi.
+
+Tekrarlayan eş boyutlu kutuların yerine, araştırma alanlarında asimetrik dizin, yayınlarda farklı ağırlıklara sahip seçki, öğrenmede yerel HTML açılır bölümleri ve okuma dosyalarında ayrı bir görsel düzen kuruldu. Kütüphane, kaynak detayları, karşılaştırma tablosu ve uzun okuma sayfaları da aynı tipografi ve boşluk sistemiyle düzenlendi.
+
+## Korunanlar
+
+Sekiz dil, Arapça yönü, arama, okuma listesi, kaynak karşılaştırma, atıf indirme ve yerel katkı taslağı korunur. Akademik içerik kayıtları değiştirilmedi. Önceki düzeltmedeki sınırlar korunur. Tasarım referansları kamusal kurum dizinine dönüştürülmedi. Kişisel araştırma sorusu merkez sloganı yapılmadı.
 
 ## Canlı doğrulama
 
-GitHub Pages dağıtım çalışması `36885792178` başarılı tamamlandı. Ardından `36885376516` çalışması doğrudan `https://onourimpram.github.io` üzerinden yayımlanan dosyaları ve etkileşimleri denetledi. Yeni sürümün 398 dosyası hash kayıtlarıyla eşleşti. Kaldırılan kurumsal içerik yollarından 40 adresin 404 döndürdüğü doğrulandı.
+Son başarılı canlı doğrulama çalışması https://github.com/OnourImpram/onourimpram.github.io/actions/runs/36895762664 adresindedir. Yayın işi 36894438613 içinde dosya hash denetimi ve kapsamlı tarayıcı adımları başarılı olmuş, son ek kontrol başarısız kalmıştır. Bu nedenle normal, sorgu parametresi içermeyen stil dosyası ve kullanıcı akışları ayrı bir işte yeniden denetlenmiştir. Son işteki 100 kontrolün tamamı geçmiştir. Önceki işin bütünü başarılıymış gibi gösterilmez.
 
-Gerçek Chromium oturumlarında sekiz dil, dört ekran genişliği, ana başlık, mobil menü, kaynak seçimi, okuma listesi kalıcılığı, aynı sayfada dil değişimi ve yerel dosya indirmesi denetlendi. Türkçe, Arapça, Endonezce ve Malayca aramanın çalıştığı, eski referans kurum aramasının sonuç vermediği ayrıca kontrol edildi. Ana sayfanın masaüstü ve mobil ekran görüntüleri yayımlanan adresten alındı. Almanca kart taşması ve Rusça başlık taşması metin kaydırma düzenlenerek giderildi.
+Yayımlanan dosyalar kaynak sürümün hash kayıtlarıyla karşılaştırıldı. Gerçek GitHub Pages adresinde sekiz dil ve dört ekran genişliğiyle gezinme, başlıklar, görüntü yükleme, mobil menü, öğrenme yolları, kaynak karşılaştırma ve indirme denetlendi. Çince, CJK yazı tipleri bulunan bir test ortamında ayrıca görsel olarak kontrol edildi. Arama düğmesinin satır kırılması aynı ortamda yeniden üretildi ve giderildi.
 
-Yayın deposunda yalnız MARSAM klasörü değiştirildi. Diğer bütün kök girdilerinin dosya veya ağaç hash'leri önceki sürümle aynı kaldı. Bir kerelik kaynak taşıma ve tanılama iş akışları MARSAM ana dalına taşınmadı.
+Canlı son sürümde arama, okuma listesi kalıcılığı ve gerçek RIS indirme yeniden sınandı. Ana sayfa ve iç sayfaların masaüstü ve mobil ekranları canlı adresten alındı. Tarayıcı denetimi Chromium ile sınırlıdır. Bağımsız erişilebilirlik sertifikası, ana dil uzmanı incelemesi veya bilimsel editör onayı değildir.
 
-[Canlı doğrulama çalışması](https://github.com/OnourImpram/onourimpram.github.io/actions/runs/36885376516). [Makine tarafından okunabilir teslim kaydı](docs/LIVE_REVIEW_RELEASE.json).
-
-Bu denetim bağımsız erişilebilirlik sertifikası, bilimsel editör onayı veya ana dil uzmanı incelemesi değildir. Kurumsal kuruluş ve resmî yayın onayları ayrıca gereklidir. Tasarımın kullanıcıya uygunluğu teknik test sayısıyla eşitlenmez.
+Yayın deposunda yalnız MARSAM ağacı değiştirildi. Elif Tasarım, kişisel ana sayfa ve diğer kök girdilerinin hash değerleri korundu. Bir kerelik taşıma iş akışları ve kod aktarım paketleri MARSAM ana dalına taşınmadı.

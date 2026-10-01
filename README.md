@@ -1,54 +1,46 @@
 # MARSAM
 
-Maneviyat ve Ruh Sağlığı Araştırmaları Merkezi. Marmara Üniversitesi bünyesinde planlanan merkez için sekiz dilli web taslağı.
+Marmara Üniversitesi bünyesinde planlanan Maneviyat ve Ruh Sağlığı Araştırmaları Merkezi için hazırlanmış kurumsal web sitesi taslağı.
 
-İnceleme adresi: https://onourimpram.github.io/MARSAM/
+## Canlı tasarım
 
-## Sürüm 0.4.0
+https://onourimpram.github.io/MARSAM/tr/
 
-Ana sayfa merkezin tam adı, araştırma, eğitim ve mesleki gelişim çerçevesiyle açılır. Çalışma alanları, yayınlar, temel okumalar, öğrenme yolları, araştırma projeleri, seminerler, video arşivi ve duyurular ayrı bölümlerdir.
+Tasarım sürümü 0.5.0. Uygulama kaynağı `a5dfb6558be5dbbf180321e114f4725b3e6b9657`. Daha sonraki teslim notları ve test korumaları, yayımlanan uygulama dosyalarını değiştirmez.
 
-Tasarım için incelenen kurumların tanıtım kartları, kurum dizini ve dış etkinlik akışı kaldırılmıştır. Karşılaştırmalı web incelemeleri yalnız geliştirme belgelerinde kalır. Önceki tasarım raporlarında bu kurumların kamusal içeriğe taşınmasını öneren kararlar `docs/SCOPE_CORRECTION_TR.md` ile yürürlükten kaldırılmıştır. Bir öğrencinin araştırma sorusu veya kişisel yansıtması merkezin sloganı olarak kullanılmaz.
+Açık zemin, Marmara mavisi, serif başlıklar, kontrollü fotoğraf kullanımı, asimetrik araştırma dizini, yayın seçkisi, hedef kitleye göre açılan öğrenme yolları ve ortak bir okuma düzeni kullanılır. Elif Tasarım süreci tasarım geliştirme yöntemi bakımından incelenmiştir. Elif'in markası, ticari içeriği veya 3D ürünü MARSAM'a aktarılmamıştır.
 
-Alanla ilgili gerçek makaleler, kitaplar ve mesleki rehberler kaynakça bilgileriyle korunur. Bunlar tasarım referansı kurumların tanıtımından ayrıdır. Onaylanmış kayıt bulunmayan haber, proje, etkinlik ve video alanlarında gerçek durum belirtilir. Kayıt uydurulmaz.
+## Kapsam
 
-Türkçe, İngilizce, Almanca, Basitleştirilmiş Çince, Rusça, Arapça, Endonezce ve Malayca. Arapça sağdan sola düzenlenir. Endonezce ve Malayca ayrı metinlerdir. Her dilde aynı içerik yapısı bulunur. Şu an 12 kaynak kaydı, sekiz giriş okuması ve üç öğrenme yolu vardır. Yerelleştirilmiş adres sayısı yayın sayısı değildir.
+Türkçe, İngilizce, Almanca, Basitleştirilmiş Çince, Rusça, Arapça, Endonezce ve Malayca. Arapça sağdan sola düzen kullanır. Kaynak kayıtları, okuma dosyaları ve öğrenme yolları korunmuştur. Arama, aynı sayfada dil değişimi, yerel okuma listesi, kaynak karşılaştırma, RIS ve BibTeX indirme ve yerel katkı taslağı bulunur.
 
-## Yerelde çalıştırma
+Web sitesi bir kurumsal önizlemedir. Resmî kuruluş kararı, bilimsel editör onayı, çeviri uzmanı onayı veya klinik hizmet yetkisi varmış gibi sunulmaz. Katılımcı yanıtı, ödeme veya kişisel sağlık bilgisi toplanmaz. Etkinlik ve yayın boşlukları uydurma içerikle doldurulmaz.
 
-Node.js 22 veya üzeri. Uygulamanın npm paket bağımlılığı yoktur.
+## Yerel çalıştırma
+
+Node.js 22 veya üzeri gerekir. Uygulamanın paket bağımlılığı yoktur.
 
 ```sh
 npm run check
 npm run preview
 ```
 
-Yerel adres: `http://127.0.0.1:4173/tr/`.
+Tarayıcı adresi `http://127.0.0.1:4173/tr/`.
 
-GitHub Pages yolu için:
+GitHub Pages alt yolu için.
 
 ```sh
 BASE_PATH=/MARSAM/ PAGES_PREVIEW=true npm run check
-npm run preview
 ```
 
-## Testler
+## Doğrulama
 
-`npm run check` içerik, dil, kaynak, başlık, bağlantı ve yayın sınırı kontrollerini çalıştırır. Kurum vitrininin arama ve veri kayıtlarına geri girmesi ayrıca denetlenir.
+`npm test` içerik ve tasarım korumalarını, `npm run test:build` üretilen yolları ve iç bağlantıları denetler. Gerçek tarayıcı kontrolleri `tests/browser_e2e.py`, `tests/scope_e2e.py` ve `tests/design_e2e.py` dosyalarındadır. Tarayıcı ortamında Çince için gerçek CJK glif desteği bulunmalıdır. Test ortamına kurulan yazı tipleri web sitesiyle veya teslim dosyalarıyla dağıtılmaz.
 
-```sh
-python -m pip install playwright==1.57.0
-python -m playwright install chromium
-python tests/browser_e2e.py
-python tests/scope_e2e.py
-```
+Canlı dağıtım ve son doğrulama kaydı DELIVERY_STATUS.md dosyasındadır. Tasarımın uygunluğu test adediyle eşitlenmez.
 
-`tests/scope_e2e.py`, `PREVIEW_ORIGIN` tanımlandığında gerçek yayımlanmış siteyi sınayabilir. Arama, yerel okuma listesi, kaynak karşılaştırma, aynı sayfada dil değişimi, mobil menü ve gerçek dosya indirmesi korunur. Teknik testler bilimsel değerlendirme veya bağımsız erişilebilirlik sertifikası değildir.
+## Tasarım ve içerik kayıtları
 
-## Yayın düzeni
+Tasarım incelemesi `docs/ELIF_DESIGN_LESSONS_TR.md`. Görsel kaydı `docs/VISUAL_ASSET_PROVENANCE.json`. Kurumsal içerik sınırları `docs/SCOPE_CORRECTION_TR.md`. Canlı sürüm kaydı `docs/LIVE_REVIEW_RELEASE.json`.
 
-Kaynak kodu bu depoda tutulur. Mevcut inceleme sitesi `OnourImpram/onourimpram.github.io` deposunun yalnız `MARSAM/` klasöründen yayımlanır. Güncelleme sırasında bu klasör temiz üretimle değiştirilir, kullanıcının diğer sitelerine dokunulmaz. Başarılı dağıtım ve gerçek HTTP kontrolü olmadan güncel sürümün canlı olduğu ileri sürülmez.
-
-## İçerik sınırları
-
-Kurumsal işaretler, Marmara Üniversitesi için planlanan merkezin görsel kimlik taslağında kullanılır. Site resmî kuruluş kararı, yönetim ataması veya üniversite yayın onayı ilan etmez. Kaynaklar belgelenmiş erişim sınırlarını korur. Metin ve çeviriler bilimsel ve dilsel insan incelemesini bekler. Özel ders dosyaları, yayımlanmamış kitap bölümleri, özel yazışmalar ve katılımcı verileri yayımlanmaz. Site klinik hizmet, gerçek CMS, LMS veya araştırma veri tabanı sunmaz.
+Kaynak kimliği, doğrulama kapsamı ve editöryal onay birbirinden ayrıdır. Görsel tasarım incelemesi kaynak doğrulama veya bilimsel onay anlamına gelmez.
