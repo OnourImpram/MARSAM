@@ -35,7 +35,7 @@ try:
      response=page.goto(origin+base+l+'/'+path,wait_until='networkidle')
      ck('HTTP '+l+'/'+path+' '+str(width),response.status==200)
      ck('viewport '+l+'/'+path+' '+str(width),page.evaluate('document.documentElement.scrollWidth<=innerWidth+1'))
-     ck('current release '+l+'/'+path,page.locator('body').get_attribute('data-release')=='0.4.0')
+     ck('current release '+l+'/'+path,page.locator('body').get_attribute('data-release')=='0.5.0')
      if not path:
       data=json.loads(page.locator('#ui-data').text_content())
       ck('actual institutional heading '+l,page.locator('h1').inner_text()==data['labels']['brand'])
@@ -50,7 +50,7 @@ try:
       if width in [390,1440]:page.screenshot(path=str(out/f'{l}-home-{width}.png'),full_page=True)
    page.goto(origin+base+l+'/library/',wait_until='networkidle')
    page.locator('[data-compare-id]').nth(0).click();page.locator('[data-compare-id]').nth(1).click()
-   page.locator('[data-compare-nav]').click();page.wait_for_selector('.comparison-table')
+   page.locator('[data-compare-nav]').first.click();page.wait_for_selector('.comparison-table')
    ck('comparison still works '+l,page.locator('.comparison-table thead th').count()==3)
    with page.expect_download()as d:page.locator('[data-comparison-export]').click()
    ck('native comparison download '+l,len(json.loads(Path(d.value.path()).read_text())['items'])==2)
@@ -69,5 +69,5 @@ try:
 finally:
  if server:server.terminate();server.wait(timeout=10)
  (ROOT/'verification').mkdir(exist_ok=True)
- (ROOT/'verification/scope-browser.json').write_text(json.dumps({'origin':origin,'release':'0.4.0','checks':checks,'errors':errors,'passed':sum(c['passed']for c in checks),'total':len(checks),'scientificApproval':False},ensure_ascii=False,indent=2))
+ (ROOT/'verification/scope-browser.json').write_text(json.dumps({'origin':origin,'release':'0.5.0','checks':checks,'errors':errors,'passed':sum(c['passed']for c in checks),'total':len(checks),'scientificApproval':False},ensure_ascii=False,indent=2))
 print(json.dumps({'passed':len(checks),'origin':origin}))
