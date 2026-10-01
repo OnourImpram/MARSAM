@@ -1,0 +1,32 @@
+name: Verify preview
+on:
+  push:
+    branches: [feat/multilingual-knowledge-platform]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Content and route checks
+        run: npm run check
+      - name: Package source and preview
+        if: always()
+        run: |
+          mkdir -p /tmp/marsam-delivery
+          git archive HEAD -o /tmp/marsam-delivery/source.tar
+          if [ -d dist ]; then cp -r dist /tmp/marsam-delivery/dist; fi
+      - name: Upload development artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: marsam-preview
+          path: /tmp/marsam-delivery/
+          retention-days: 14
