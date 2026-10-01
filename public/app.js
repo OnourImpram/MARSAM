@@ -8,7 +8,7 @@ if (node) {
 function start({locale, base, labels: t}) {
   const $ = (s, p=document) => p.querySelector(s);
   const $$ = (s, p=document) => [...p.querySelectorAll(s)];
-  const normalize = s => String(s).replace(/İ/g,'i').replace(/I/g,'i').toLocaleLowerCase('tr').replace(/ı/g,'i').normalize('NFD').replace(/\p{Diacritic}/gu,'');
+  const normalize = s => String(s).replace(/İ/g,'i').replace(/I/g,'i').toLocaleLowerCase('tr').replace(/ı/g,'i').normalize('NFD').replace(/\p{Diacritic}/gu,'').replace(/[\u0640\u064b-\u065f\u0670]/g,'').replace(/[أإآٱ]/g,'ا').replace(/ى/g,'ي');
   const safeURL = value => { try { const u=new URL(value); return u.protocol==='https:'&&!u.username&&!u.password?u.href:null; } catch{return null;} };
   const toast = $('.toast'); let toastTimer;
   const announce = message => { if(!toast)return; toast.textContent=message; toast.classList.add('visible'); clearTimeout(toastTimer); toastTimer=setTimeout(()=>toast.classList.remove('visible'),4400); };
@@ -22,7 +22,7 @@ function start({locale, base, labels: t}) {
   for(const btn of $$('[data-save]'))btn.addEventListener('click',()=>{const id=btn.dataset.save;const next=saved.includes(id)?saved.filter(x=>x!==id):[...saved,id];if(writeSaved(next)){syncButtons();announce(saved.includes(id)?t.bookmarked:t.remove);}});
   let indexPromise;
   async function getIndex(){if(!indexPromise)indexPromise=fetch(`${base}data/search-${locale}.json`,{credentials:'omit'}).then(r=>{if(!r.ok)throw Error('Index unavailable');return r.json();}).then(data=>{if(!Array.isArray(data))throw Error('Invalid index');return data.filter(x=>x&&typeof x.id==='string'&&typeof x.title==='string'&&typeof x.summary==='string'&&typeof x.text==='string'&&typeof x.url==='string'&&x.url.startsWith(`${base}${locale}/`)&&!x.url.includes('..')&&!x.url.includes('\\'));});return indexPromise;}
-  function resultLink(item){const a=document.createElement('a');a.className='search-result';a.href=item.url;const label=document.createElement('span');label.className='eyebrow';label.textContent=item.kind;const h=document.createElement('h2');h.textContent=item.title;const p=document.createElement('p');p.textContent=item.summary;a.append(label,h,p);return a;}
+  function resultLink(item){const a=document.createElement('a');a.className='search-result';a.href=item.url;const label=document.createElement('span');label.className='eyebrow';label.textContent=item.kind;const h=document.createElement('h2');h.textContent=item.title;h.dir='auto';const p=document.createElement('p');p.textContent=item.summary;p.dir='auto';a.append(label,h,p);return a;}
   function empty(message){const p=document.createElement('p');p.className='empty-state';p.textContent=message;return p;}
   async function renderSaved(){const mount=$('[data-saved-list]');if(!mount)return;const clear=$('[data-clear-saved]');try{const items=(await getIndex()).filter(x=>saved.includes(x.id));mount.replaceChildren();if(!items.length)mount.append(empty(storageAvailable?t.savedEmpty:t.storageError));for(const item of items){const row=document.createElement('div');row.className='saved-item';const remove=document.createElement('button');remove.type='button';remove.textContent=t.remove;remove.setAttribute('aria-label',`${t.remove}: ${item.title}`);remove.addEventListener('click',()=>{if(writeSaved(saved.filter(x=>x!==item.id)))renderSaved();});row.append(resultLink(item),remove);mount.append(row);}clear.hidden=!items.length;}catch{mount.replaceChildren(empty(t.searchError));}}
   renderSaved();

@@ -1,6 +1,6 @@
 # MARSAM · spirituality, mental health, and accountable knowledge
 
-A content-first, five-language website **development preview** for the proposed *Maneviyat ve Ruh Sağlığı Araştırmaları Merkezi*. It is not an announcement of a formally established center, university affiliation, clinical service or approved training provider.
+A content-first, eight-language website **development preview** for the proposed *Maneviyat ve Ruh Sağlığı Araştırmaları Merkezi*. It is not an announcement of a formally established center, university affiliation, clinical service or approved training provider.
 
 ## Run locally
 
@@ -11,7 +11,7 @@ npm run build
 npm run preview
 ```
 
-Open `http://127.0.0.1:4173/tr/`. Change `/tr/` to `/en/`, `/de/`, `/zh/` or `/ru/`. The root page provides a language selector. Do not double-click generated HTML: the site uses root-relative assets and search indexes, so it requires a local HTTP server.
+Open `http://127.0.0.1:4173/tr/`. Change `/tr/` to `/en/`, `/de/`, `/zh/` `/ru/`, `/ar/`, `/id/` or `/ms/`. The root page provides a language selector. Do not double-click generated HTML: the site uses root-relative assets and search indexes, so it requires a local HTTP server.
 
 ```sh
 npm run check
@@ -27,10 +27,10 @@ Windows PowerShell equivalent: `$env:BASE_PATH='/MARSAM/'; npm run build`. Remov
 
 ## What is implemented
 
-- Five complete interface dictionaries: Turkish, English, German, Simplified Chinese and Russian.
-- **240 localized route files**, one language landing page and a real 404 page. This is 48 logical pages per locale, not 240 distinct research publications.
-- **8 original introductory dossiers**, with body text, reflection prompts and limits in all five languages.
-- **18 linked source records**, not rehosted publications. Source titles and citation metadata remain in their original language.
+- Eight complete interface dictionaries: Turkish, English, German, Simplified Chinese, Russian, Arabic, Indonesian and Malay.
+- **400 localized route files**, one language landing page and a real 404 page. This is 50 logical pages per locale, not 400 distinct research publications.
+- **8 original introductory dossiers**, with body text, reflection prompts and limits in all eight languages.
+- **20 linked source records**, not rehosted publications. Source titles and citation metadata remain in their original language.
 - **3 reading pathways**, a concept map, theoretical comparison questions and proposed research areas.
 - Full-text local search, type/topic filtering, locale switching on the same page, a browser-only reading list, citation copy, metadata-only RIS/BibTeX export and print styles.
 - Local-only source-suggestion JSON download. The form does not send, register or publish anything.
@@ -44,7 +44,7 @@ The rich architecture covers concepts, theories, professional practice, ethics, 
 | --- | --- |
 | `src/i18n.mjs` | Interface copy and localized source notes |
 | `src/content.mjs` | Source records, catalogue entries, section metadata and taxonomy |
-| `src/articles.mjs` | Eight five-language introductory dossiers |
+| `src/articles.mjs` | Eight eight-language introductory dossiers |
 | `src/info.mjs` | Learning paths, editorial/about text and proposed work areas |
 | `src/lib.mjs` | Validation, URL safety, HTML escaping, routes and export functions |
 | `src/site.mjs` | Accessible shared templates and prerendered pages |
@@ -53,7 +53,7 @@ The rich architecture covers concepts, theories, professional practice, ethics, 
 | `scripts/build.mjs` | Static generation and fail-closed publication guard |
 | `scripts/serve.mjs` | Local HTTP preview with real 404 and security headers |
 
-Use a branch and pull request to change content. Keep source IDs stable. Add all five language values and a bounded source role. Run the tests before requesting scientific and language review. A `draft` flag is not silently removed by a passing build. There is **no online CMS or shared editorial backend** in this preview. The local suggestion tool is not a substitute for one.
+Use a branch and pull request to change content. Keep source IDs stable. Add all eight language values and a bounded source role. Run the tests before requesting scientific and language review. A `draft` flag is not silently removed by a passing build. There is **no online CMS or shared editorial backend** in this preview. The local suggestion tool is not a substitute for one.
 
 ## Scientific, institutional and privacy boundaries
 
@@ -90,3 +90,11 @@ See `verification/` and `docs/VERIFICATION.md` for the exact scope and commands.
 - `docs/IAPOS_AND_RELEASE.md`: canonical IAPOS references, approval boundaries and release checklist.
 
 Copyright permissions for external sources remain with their owners. This repository does not grant reuse rights for linked materials or impersonate an institution. Code and original editorial-text licensing should be decided by the project owner before a production release.
+
+## Arabic, Indonesian and Malay extension, version 0.2.0
+
+Scope follows the owner's academic-audience request. Supported locales are `tr en de zh ru ar id ms`. No Javanese or Sundanese locales have been added. Indonesian and Malay are separate language packs, not aliases. Arabic uses `dir=rtl`, logical spacing, mirrored directional arrows, bidirectional isolation of source citations, and Arabic-aware search normalization.
+
+Each additional language has 360 explicit source-string translations, including the full eight introductory dossiers. New regional catalogue records are also written in all eight languages. Source-string lookup throws on missing translations. All translations remain AI-assisted drafts awaiting scientific and native-language review.
+
+See `docs/LOCALE_EXPANSION_TR.md`. Run `python tests/browser_e2e.py` after installing Playwright and its Chromium browser for an independent live HTTP test environment. This test is not a clinical, scholarly, language-quality or screen-reader certification.

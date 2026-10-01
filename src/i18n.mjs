@@ -1,7 +1,7 @@
-export const locales = ['tr', 'en', 'de', 'zh', 'ru'];
-export const localeNames = {tr:'Türkçe',en:'English',de:'Deutsch',zh:'简体中文',ru:'Русский'};
-export const langTags = {tr:'tr',en:'en',de:'de',zh:'zh-Hans',ru:'ru'};
-export const L = (tr,en,de,zh,ru) => Object.fromEntries(locales.map((l,i)=>[l,[tr,en,de,zh,ru][i]]));
+import {baseLocales,extraLocales,locales,localeNames,langTags,direction} from './languages.mjs';
+import {translate} from './translate.mjs';
+export {locales,localeNames,langTags,direction};
+export const L = (tr,en,de,zh,ru) => ({...Object.fromEntries(baseLocales.map((l,i)=>[l,[tr,en,de,zh,ru][i]])),...Object.fromEntries(extraLocales.map(l=>[l,translate(en,l)]))});
 const copy = {
 brand: ['Maneviyat ve Ruh Sağlığı Araştırmaları Merkezi','Research Center for Spirituality and Mental Health','Forschungszentrum für Spiritualität und psychische Gesundheit','灵性与心理健康研究中心','Исследовательский центр духовности и психического здоровья'],
 preview: ['Kuruluş fikri · Dijital önizleme','Center initiative · Digital preview','Zentrumsinitiative · Digitale Vorschau','中心筹建构想 · 数字预览','Инициатива создания центра · Предварительная версия'],
@@ -146,7 +146,7 @@ clearConfirm: ['Okuma listesi temizlendi.','Reading list cleared.','Leseliste ge
 notFound: ['Bu sayfa bulunamadı','Page not found','Seite nicht gefunden','未找到页面','Страница не найдена'],
 notFoundText: ['İçeriğe ana sayfadan veya aramadan ulaşabilirsin.','Use the home page or search to find content.','Nutzen Sie die Startseite oder Suche.','可通过首页或搜索查找内容。','Найдите материалы на главной странице или через поиск.']
 };
-export const labels = Object.fromEntries(locales.map((l,i)=>[l,Object.fromEntries(Object.entries(copy).map(([k,v])=>[k,v[i]]))]));
+export const labels = Object.fromEntries(baseLocales.map((l,i)=>[l,Object.fromEntries(Object.entries(copy).map(([k,v])=>[k,v[i]]))]));
 const extras={
  abstractOnly:['Kaynak künyesi ve erişilebilir özet incelendi. Tam metin ve bütün ekler denetlenmiş değildir.','Bibliographic record and available abstract inspected. Full text and all supplements were not audited.','Bibliografischer Eintrag und verfügbare Zusammenfassung geprüft. Volltext und sämtliche Anlagen nicht auditiert.','已核查书目信息与可访问摘要，未审查全文及全部补充材料。','Проверены запись и доступная аннотация. Полный текст и все приложения не проверены.'],
  officialPage:['İlgili resmî kaynak sayfası incelendi. Bağlı bütün dosyaların ve programların denetlendiği ileri sürülmez.','Relevant official resource page inspected. Not an audit of all linked files or programs.','Relevante offizielle Seite geprüft. Keine Prüfung aller verlinkten Dateien oder Programme.','已核查相关官方页面，不代表审查全部链接文件或项目。','Изучена соответствующая официальная страница, но не все связанные файлы или программы.'],
@@ -157,13 +157,14 @@ const extras={
  readingMap:['Karşılaştırmalı okuma haritası','Comparative reading map','Vergleichende Lesekarte','比较阅读图','Карта сравнительного чтения'],
  proposedMap:['Bu harita karşılaştırma soruları önerir. Yaklaşımların etkililik sıralaması veya tam kuramsal özeti değildir.','This map proposes comparison questions. It is not an efficacy ranking or comprehensive theory summary.','Die Karte schlägt Vergleichsfragen vor. Keine Wirksamkeitsrangliste oder vollständige Theorieübersicht.','本图提出比较问题，不是疗效排名或完整理论总结。','Карта предлагает вопросы для сравнения, а не рейтинг эффективности или полный обзор теорий.'],
  updatesTitle:['Önizlemeden notlar','Notes from the preview','Notizen zur Vorschau','预览说明','Заметки о версии'],
- updatesText:['İlk sürümde kaynak kütüphanesi, sekiz okuma dosyası ve beş dilde öğrenme rotaları hazırlandı. Bu geliştirme notu bir merkez açılışı, tamamlanmış araştırma veya duyurulmuş eğitim etkinliği değildir.','The first version includes a source library, eight reading dossiers and learning paths in five languages. This development note is not a center launch, completed research or training event announcement.','Die erste Version enthält Quellenbibliothek, acht Lesedossiers und Lernpfade in fünf Sprachen. Kein Hinweis auf eine Zentrumseröffnung, abgeschlossene Forschung oder angekündigte Schulung.','首版包含资源库、八份阅读专题与五种语言的学习路径。本开发说明不是中心成立、研究完成或培训活动公告。','Первая версия включает библиотеку, восемь досье и маршруты на пяти языках. Это не объявление об открытии центра, завершённом исследовании или обучающем мероприятии.'],
+ updatesText:['Bu önizlemede kaynak kütüphanesi, sekiz okuma dosyası ve sekiz dilde öğrenme rotaları bulunuyor. Bu geliştirme notu bir merkez açılışı, tamamlanmış araştırma veya duyurulmuş eğitim etkinliği değildir.','The current preview includes a source library, eight reading dossiers and learning paths in eight languages. This development note is not a center launch, completed research or training event announcement.','Die aktuelle Vorschau enthält Quellenbibliothek, acht Lesedossiers und Lernpfade in acht Sprachen. Kein Hinweis auf eine Zentrumseröffnung, abgeschlossene Forschung oder angekündigte Schulung.','当前预览包含资源库、八份阅读专题与八种语言的学习路径。本开发说明不是中心成立、研究完成或培训活动公告。','Текущая версия включает библиотеку, восемь досье и маршруты на восьми языках. Это не объявление об открытии центра, завершённом исследовании или обучающем мероприятии.'],
  completeList:['Bütün kaynak kayıtları','All source records','Alle Quelleneinträge','全部来源记录','Все записи источников'],
  sourceDate:['Kontrol tarihi, yayın tarihi değildir.','Check date is not the publication date.','Prüfdatum ist nicht Veröffentlichungsdatum.','核查日期并非发布日期。','Дата проверки не является датой публикации.'],
  localTool:['Yalnız yerel taslak aracı','Local-only drafting tool','Nur lokales Entwurfswerkzeug','仅本地草稿工具','Только локальный инструмент'],
  sourceLedger:['Kaynak kayıtlarını JSON olarak indir','Download source ledger as JSON','Quellenverzeichnis als JSON herunterladen','下载 JSON 来源记录','Скачать реестр источников JSON']
 };
-for(const [key,row]of Object.entries(extras))for(let i=0;i<locales.length;i++)labels[locales[i]][key]=row[i];
+for(const [key,row]of Object.entries(extras))for(let i=0;i<baseLocales.length;i++)labels[baseLocales[i]][key]=row[i];
+for(const l of extraLocales) labels[l] = Object.fromEntries(Object.entries(labels.en).map(([key,value])=>[key,translate(value,l)]));
 export const sourceNotes = {
 's-aservic': L('İncelenen 2025 belgesinin kapağı ASERVIC onayını ve ACA onayının beklendiğini bildirir. Ayrı bir güncel ACA kararı doğrulanmadı.','The inspected 2025 PDF records ASERVIC approval and pending ACA endorsement. A separate current ACA decision was not verified.','Das geprüfte PDF von 2025 nennt die ASERVIC-Freigabe und eine ausstehende ACA-Zustimmung. Eine gesonderte aktuelle ACA-Entscheidung wurde nicht geprüft.','已核查的2025年文件标明ASERVIC已批准，ACA认可仍待确认。未另行核查ACA当前决定。','В изученном документе 2025 года указаны одобрение ASERVIC и ожидание одобрения ACA. Отдельное актуальное решение ACA не проверялось.'),
 's-flourish': L('Resmî sayfa ticari olmayan kullanım için CC BY-NC 4.0 ile ticari lisanslamayı ayırır. Bu kayıtta maddeler, çeviri veya puanlama aracı yayımlanmaz.','The official page distinguishes noncommercial CC BY-NC 4.0 use from commercial licensing. No items, translations or scoring tool are published here.','Die offizielle Seite unterscheidet nichtkommerzielle CC-BY-NC-4.0-Nutzung von kommerzieller Lizenzierung. Hier werden weder Items noch Übersetzungen oder Auswertungstools veröffentlicht.','官方页面区分CC BY-NC 4.0非商业使用与商业许可。此处不发布量表条目、翻译或评分工具。','Официальная страница различает некоммерческое использование по CC BY-NC 4.0 и коммерческое лицензирование. Пункты, переводы и инструменты подсчёта здесь не публикуются.'),

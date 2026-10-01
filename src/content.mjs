@@ -78,3 +78,7 @@ export const topics={
  network:L('Dış kaynaklar','External resources','Externe Ressourcen','外部资源','Внешние ресурсы'),
  digital:L('Dijital araçlar','Digital tools','Digitale Werkzeuge','数字工具','Цифровые инструменты')
 };
+
+import {regionalSources,regionalResources} from './regional.mjs';
+sources.push(...regionalSources);
+resources.push(...regionalResources);

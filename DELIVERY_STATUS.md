@@ -1,27 +1,11 @@
-# MARSAM development delivery status
+# MARSAM development status
 
-Date: 2026-10-01.
+Version 0.2.0. Eight-language development preview.
 
-## Repository status
+The branch contains the runnable source for Turkish, English, German, Simplified Chinese, Russian, Arabic, Indonesian and Malay. Javanese and Sundanese are outside this request's scope.
 
-This development branch contains the complete application source, five-language content, build and preview scripts, tests, and architecture documents. It supersedes the earlier incomplete-synchronization notice. The main branch has not been merged and no website has been deployed.
+400 localized content routes, a language landing page and a 404 page are generated from 20 linked source records, 8 introductory dossiers and 3 learning paths. Source titles remain in their original language.
 
-The companion archive `MARSAM_Web_Sitesi_ve_Kaynak_Kodu.zip` includes the same application source plus generated HTML, raw local verification logs and a delivery manifest. Generated files are intentionally not committed to Git.
+Run `npm run check` for 20 unit/content and 9 build/link tests. The additional `tests/browser_e2e.py` performs real local HTTP navigation, persistent storage, language switching, searches and native downloads. See the generated verification records for what actually ran. Local offline-fixture results are not described as end-to-end tests.
 
-## Scope
-
-- Turkish, English, German, Simplified Chinese and Russian interface and introductory content.
-- 240 localized routes, one language landing page and a 404 page.
-- 18 source records, eight reading dossiers and three learning paths.
-- Search, filters, browser-local reading list, citation export and local-only contribution draft.
-- Node.js 22+ with no npm dependencies. See README for build and preview commands.
-
-## Verification
-
-12 Node content/safety tests and nine build/link tests passed locally. The subdirectory build was tested separately. A further 96 checks used an offline browser fixture and separate real HTTP checks. The test script and limitations are in `tests/browser_check.py` and `docs/VERIFICATION.md`. Raw execution logs accompany the archive; no remote CI run is claimed.
-
-The browser environment blocked navigation. Offline DOM tests mock fetch, storage and download boundaries. Native browser persistence, clipboard permissions, real downloads, browser CSP enforcement and assistive-technology review remain open.
-
-## Release boundaries
-
-MARSAM is a proposed center, not a formally established institution or clinical service. Original editorial texts and translations await human scientific and language review. No participant data is collected. No private messages, unpublished chapters or restricted scale items are included. Technical verification is not IAPOS scientific approval. Production publication remains blocked in the builder.
+All editorial content and translations require human scientific and language review. No main-branch merge, production launch, clinical service or participant data collection is implied.

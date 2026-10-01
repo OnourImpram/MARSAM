@@ -8,7 +8,7 @@ if (existsSync(moduleURL)) {
  const {locales,labels}=await import('../src/i18n.mjs');
  const {sources,resources,sections}=await import('../src/content.mjs');
  const {articles}=await import('../src/articles.mjs');
- test('exact five requested locales',()=>assert.deepEqual(locales,['tr','en','de','zh','ru']));
+ test('exact eight requested locales',()=>assert.deepEqual(locales,['tr','en','de','zh','ru','ar','id','ms']));
  test('locale key parity and nonempty strings',()=>{const walk=(x,p='')=>Object.entries(x).flatMap(([k,v])=>typeof v==='object'&&!Array.isArray(v)?walk(v,p+k+'.'):[p+k]);const keys=walk(labels.tr).sort();for(const l of locales){assert.deepEqual(walk(labels[l]).sort(),keys,l);assert.ok(!JSON.stringify(labels[l]).includes('TODO'));const leaves=(o)=>Object.values(o).flatMap(v=>typeof v==='object'?leaves(v):[v]);assert.ok(leaves(labels[l]).every(v=>typeof v==='string'&&v.trim()));}});
  test('HTML escaping',()=>assert.equal(escapeHTML('<img onerror="x"> & \'x\''),'&lt;img onerror=&quot;x&quot;&gt; &amp; &#39;x&#39;'));
  test('only https external URLs accepted',()=>{for(const u of ['javascript:alert(1)','data:text/html,test','http://example.com','//evil.test','https://user:pass@example.com'])assert.equal(safeURL(u),null,u);assert.equal(safeURL('https://doi.org/10.1037/amp0000821'),'https://doi.org/10.1037/amp0000821');});

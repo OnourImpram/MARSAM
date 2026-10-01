@@ -61,12 +61,14 @@ with sync_playwright() as pw:
             record('HTTP '+route,response.status==200)
         page.wait_for_timeout(80)
         return context,page
-    # All five home pages and representative deep pages: layout, language and interactions.
+    # All configured home pages and representative deep pages: layout, language and interactions.
     for locale in manifest['locales']:
         for width in [1440,390]:
             ctx,page=page_for(f'{locale}/',width)
             record(f'{locale} home width {width}',page.evaluate('document.documentElement.scrollWidth <= innerWidth + 1'))
             record(f'{locale} one main heading',page.locator('h1').count()==1)
+            record(f'{locale} HTML direction',page.locator('html').get_attribute('dir')==('rtl' if locale=='ar' else 'ltr'))
+            record(f'{locale} eight language links',page.locator('.language-panel a').count()==len(manifest['locales']))
             page.screenshot(path=str(output/f'{locale}-home-{width}.png'),full_page=True)
             if width==390:
                 page.locator('.mobile-nav > summary').click()
@@ -91,7 +93,7 @@ with sync_playwright() as pw:
             if route.startswith('dossier/'):
                 hrefs=page.locator('.language-panel a').evaluate_all('(els)=>els.map(e=>e.getAttribute("href"))')
                 record(f'{locale} deep locale links preserve page',all('dossier/understanding-spiritual-experience/' in u for u in hrefs))
-            if locale=='tr':page.screenshot(path=str(output/('tr-'+route.replace('/','-')+'390.png')),full_page=True)
+            if locale in ['tr','ar','id','ms']:page.screenshot(path=str(output/('tr-'+route.replace('/','-')+'390.png')),full_page=True)
             ctx.close()
     # Real catalogue DOM filtering, case/diacritic handling, empty and reset states.
     ctx,page=page_for('tr/library/')
@@ -104,7 +106,7 @@ with sync_playwright() as pw:
     page.locator('[data-filter-type]').select_option('measure')
     record('type filter works',page.locator('[data-filter-scope] [data-card]:visible').count()==3)
     page.screenshot(path=str(output/'tr-library-filter.png'),full_page=True);ctx.close()
-    for locale,q in [('tr','inanc'),('zh','精神'),('ru','духов')]:
+    for locale,q in [('tr','inanc'),('zh','精神'),('ru','духов'),('ar','الارشاد'),('id','konseling'),('ms','kaunseling')]:
         ctx,page=page_for(locale+'/search/')
         page.locator('#page-search').fill(q);page.wait_for_timeout(400)
         record(f'{locale} full-text search finds records',page.locator('[data-search-results] .search-result').count()>0)

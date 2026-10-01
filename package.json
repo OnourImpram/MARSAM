@@ -1,1 +1,17 @@
-{"name":"marsam-knowledge-platform","version":"0.1.0","private":true,"type":"module","description":"Five-language source-aware research and learning portal preview","engines":{"node":">=22"},"scripts":{"build":"node scripts/build.mjs","preview":"node scripts/serve.mjs","test":"node --test tests/core.test.mjs","test:build":"node --test tests/build.test.mjs","check":"npm test && npm run build && npm run test:build"}}
+{
+  "name": "marsam-knowledge-platform",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "Eight-language source-aware research and learning portal preview",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/serve.mjs",
+    "test": "node --test tests/core.test.mjs tests/locales.test.mjs",
+    "test:build": "node --test tests/build.test.mjs",
+    "check": "npm test && npm run build && npm run test:build"
+  }
+}
