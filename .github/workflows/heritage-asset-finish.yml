@@ -1,0 +1,55 @@
+name: Resolve exact visual assets
+on:
+  push:
+    branches: [design/heritage-publications-20261001]
+    paths: [.github/workflows/heritage-asset-finish.yml]
+permissions:
+  contents: read
+  actions: read
+jobs:
+  assets:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Reuse metadata snapshot and fetch identified cover files
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api repos/OnourImpram/MARSAM/actions/artifacts/11182496531/zip > /tmp/assets.zip
+          python -m pip install -q pillow beautifulsoup4
+          python - <<'PY'
+          from pathlib import Path
+          from urllib.request import urlopen,Request
+          from urllib.parse import urljoin,quote
+          from concurrent.futures import ThreadPoolExecutor
+          from io import BytesIO
+          from PIL import Image
+          from bs4 import BeautifulSoup
+          import zipfile,json,hashlib
+          root=Path('assets');root.mkdir();zipfile.ZipFile('/tmp/assets.zip').extractall(root)
+          def get(url):return urlopen(Request(url,headers={'User-Agent':'Mozilla/5.0 MARSAM-bibliographic-review'}),timeout=25).read()
+          records=json.loads((root/'asset-ledger.json').read_text())
+          def cover(r):
+            f=root/'metadata'/f"{r['id']}-image-candidates.json"
+            if not f.exists()or r.get('sha256'):return r
+            image=next((i.get('src')for i in json.loads(f.read_text())if i.get('id')=='kitapKapakImg'),None)
+            if not image:return r
+            try:
+              r['imageURL']=image;im=Image.open(BytesIO(get(image))).convert('RGB');r['originalDimensions']=im.size;im.thumbnail((320,460));out=root/f"{r['id']}.webp";im.save(out,'WEBP',quality=84,method=6);r['dimensions']=im.size;r['sha256']=hashlib.sha256(out.read_bytes()).hexdigest()
+            except Exception as e:r['error']=str(e)
+            return r
+          with ThreadPoolExecutor(max_workers=4)as pool:records=list(pool.map(cover,records))
+          for id,name,creator,license in [('battal-ebru','Battal_Ebru.jpg','Akcire.14','CC BY-SA 4.0'),('ebru-artworks','The_Ebru_Artworks.jpg','Artofebru','CC0 1.0'),('ebru-resim','Ebru_Sanatı_Resim_Art.jpg','Brcan','CC0 1.0')]:
+            r={'id':id,'source':'https://commons.wikimedia.org/wiki/File:'+quote(name),'creator':creator,'license':license,'role':'Contemporary ebru reference. Not an attributed historical Seljuk or Ottoman artefact.'};records.append(r)
+            try:
+              digest=hashlib.md5(name.encode()).hexdigest();url=f'https://upload.wikimedia.org/wikipedia/commons/{digest[0]}/{digest[:2]}/{quote(name)}';r['imageURL']=url
+              im=Image.open(BytesIO(get(url))).convert('RGB');r['originalDimensions']=im.size;im.thumbnail((1600,1900));out=root/f'{id}.webp';im.save(out,'WEBP',quality=88,method=6);r['dimensions']=im.size;r['sha256']=hashlib.sha256(out.read_bytes()).hexdigest()
+            except Exception as e:r['error']=str(e)
+          (root/'asset-ledger.json').write_text(json.dumps(records,ensure_ascii=False,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: marsam-heritage-final-assets
+          path: assets/
+          retention-days: 7
