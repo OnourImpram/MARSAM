@@ -14,18 +14,20 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Apply bounded source migration
-        run: python .github/apply-scope.py
+      - name: Apply bounded source migration and diagnosed wrap correction
+        run: |
+          python .github/apply-scope.py
+          cat .github/scope-wrap.css >> public/campus.css
       - name: Verify content, claims boundary and links
         run: |
           set -euo pipefail
           mkdir -p verification
           npm run check | tee verification/scope-root.txt
           BASE_PATH=/MARSAM/ PAGES_PREVIEW=true npm run check | tee verification/scope-subpath.txt
-      - name: Install verification browser
+      - name: Install verification browser using preinstalled runner libraries
         run: |
           python -m pip install playwright==1.57.0
-          python -m playwright install --with-deps chromium
+          python -m playwright install chromium
       - name: Preserve existing real interactions
         run: python tests/browser_e2e.py
       - name: Verify corrected public meaning and navigation
@@ -55,5 +57,6 @@ jobs:
           path: |
             verification
             .browser-results/scope
+            .browser-results/live
           include-hidden-files: true
           retention-days: 7
