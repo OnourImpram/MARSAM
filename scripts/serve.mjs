@@ -5,7 +5,7 @@ import {fileURLToPath} from 'node:url';
 const root=resolve(dirname(fileURLToPath(import.meta.url)),'../dist');
 let manifest;try{manifest=JSON.parse(await readFile(resolve(root,'build-manifest.json'),'utf8'));}catch{console.error('Run npm run build before npm run preview.');process.exit(1);}
 const base=manifest.base,port=Number(process.env.PORT||4173),host=process.env.HOST||'127.0.0.1';
-const mime={'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'text/javascript; charset=utf-8','.json':'application/json; charset=utf-8','.svg':'image/svg+xml','.txt':'text/plain; charset=utf-8','.ris':'application/x-research-info-systems; charset=utf-8','.bib':'application/x-bibtex; charset=utf-8'};
+const mime={'.webp':'image/webp','.png':'image/png','.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'text/javascript; charset=utf-8','.json':'application/json; charset=utf-8','.svg':'image/svg+xml','.txt':'text/plain; charset=utf-8','.ris':'application/x-research-info-systems; charset=utf-8','.bib':'application/x-bibtex; charset=utf-8'};
 const headers={'X-Content-Type-Options':'nosniff','X-Robots-Tag':'noindex, nofollow','Referrer-Policy':'no-referrer','Permissions-Policy':'camera=(), microphone=(), geolocation=()','Content-Security-Policy':"default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-src 'none'; frame-ancestors 'none'"};
 const server=http.createServer(async(req,res)=>{
   const finish=(status,content,type='text/plain; charset=utf-8')=>{res.writeHead(status,{...headers,'Content-Type':type,'Cache-Control':'no-store'});res.end(req.method==='HEAD'?undefined:content);};
