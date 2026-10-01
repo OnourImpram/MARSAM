@@ -1,0 +1,59 @@
+name: Verify institutional content correction
+on:
+  push:
+    branches: [fix/institutional-content-scope]
+    paths: [.github/workflows/scope-repair.yml]
+permissions:
+  contents: write
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Apply bounded source migration
+        run: python .github/apply-scope.py
+      - name: Verify content, claims boundary and links
+        run: |
+          set -euo pipefail
+          mkdir -p verification
+          npm run check | tee verification/scope-root.txt
+          BASE_PATH=/MARSAM/ PAGES_PREVIEW=true npm run check | tee verification/scope-subpath.txt
+      - name: Install verification browser
+        run: |
+          python -m pip install playwright==1.57.0
+          python -m playwright install --with-deps chromium
+      - name: Preserve existing real interactions
+        run: python tests/browser_e2e.py
+      - name: Verify corrected public meaning and navigation
+        run: python tests/scope_e2e.py
+      - name: Commit verified source on isolated revision branch
+        run: |
+          set -euo pipefail
+          git config user.name 'Onour Impram'
+          git config user.email '215815131+OnourImpram@users.noreply.github.com'
+          git add src public scripts tests package.json docs/SCOPE_CORRECTION_TR.md
+          git commit -m 'fix: restore MARSAM institutional remit and remove benchmark promotion'
+          git push origin HEAD:fix/institutional-content-scope
+          git ls-tree -r HEAD > verification/scope-tree.txt
+          python - <<'PY'
+          from pathlib import Path
+          import zipfile
+          with zipfile.ZipFile('verification/corrected-source.zip','w',zipfile.ZIP_DEFLATED)as z:
+              for directory in ['src','public','scripts','tests']:
+                  for f in Path(directory).rglob('*'):
+                      if f.is_file() and f.suffix not in ['.woff','.woff2','.ttf','.otf'] and '__pycache__' not in f.parts:z.write(f)
+              z.write('package.json')
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: marsam-scope-correction
+          path: |
+            verification
+            .browser-results/scope
+          include-hidden-files: true
+          retention-days: 7
