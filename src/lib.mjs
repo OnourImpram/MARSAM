@@ -19,5 +19,18 @@ export function validateContent({locales,labels,sources,resources,sections,artic
  return errors;
 }
 export function readingMinutes(text,locale){const n=locale==='zh'?String(text).replace(/\s/g,'').length/350:String(text).split(/\s+/).length/180;return Math.max(2,Math.ceil(n));}
-export function exportRIS(source){const year=String(source.year||'');return `TY  - ${source.kind==='study'?'JOUR':'GEN'}\nTI  - ${source.title}\nPY  - ${year}\nUR  - ${source.url}\nN1  - ${source.citation}\nER  - \n`;}
-export function exportBib(source){const e=s=>String(s).replace(/[{}]/g,'').replace(/\n/g,' ');return `@misc{${source.id.replace(/-/g,'')},\n  title = {${e(source.title)}},\n  year = {${source.year||''}},\n  url = {${e(source.url)}},\n  note = {${e(source.citation)}}\n}\n`;}
+function citeValue(value=''){return String(value).replace(/[\r\n]/g,' ').trim();}
+export function exportRIS(source){
+ const b=source.bibliography;const rows=[['TY',b?.type==='book'?'BOOK':b?.type==='article'||source.kind==='study'?'JOUR':'GEN'],['TI',source.title],['PY',source.year||''],['UR',source.url]];
+ if(b){for(const author of b.authors||[])rows.push(['AU',author]);for(const editor of b.editors||[])rows.push(['ED',editor]);
+  for(const[k,v]of [['DO',b.doi],['SN',b.isbn],['PB',b.publisher],['T2',b.journal],['VL',b.volume],['IS',b.issue],['ET',b.edition],['DA',b.date]])if(v)rows.push([k,v]);
+  if(b.type==='article'&&b.pages){const pages=b.pages.split(/[–-]/);rows.push(['SP',pages[0]]);if(pages[1])rows.push(['EP',pages[1]]);}
+  if(b.type==='book'&&b.pages)rows.push(['N1',b.pages+' pages']);
+ }
+ rows.push(['N1',source.citation],['ER','']);return rows.map(([k,v])=>k+'  - '+citeValue(v)).join('\n')+'\n';
+}
+export function exportBib(source){
+ const clean=s=>citeValue(s).replace(/[{}]/g,'').replace(/\\/g,'');const b=source.bibliography;const fields={title:source.title,year:source.year||'',url:source.url};
+ if(b){if(b.authors?.length)fields.author=b.authors.join(' and ');if(b.editors?.length)fields.editor=b.editors.join(' and ');for(const key of ['doi','isbn','publisher','journal','volume','edition'])if(b[key])fields[key]=b[key];if(b.issue)fields.number=b.issue;if(b.pages&&b.type==='article')fields.pages=b.pages.replace(/[–-]/g,'--');}
+ fields.note=source.citation;return '@'+(b?.type==='book'?'book':b?.type==='article'?'article':'misc')+'{'+source.id.replace(/-/g,'')+',\n'+Object.entries(fields).map(([k,v])=>'  '+k+' = {'+clean(v)+'}').join(',\n')+'\n}\n';
+}
