@@ -1,23 +1,43 @@
-# MARSAM institutional preview status
+# MARSAM. Canlı web sitesi ve teslim durumu
 
-1 October 2026. Version 0.3.0.
+1 Ekim 2026. İnceleme sürümü 0.3.0.
 
-The complete institutional enhancement is committed as regular source files on `feat/multilingual-knowledge-platform`. Verified application commit: `e7087f6805431438fa3aba83627cf0084c52026d`. The subsequent documentation and permanent-workflow commit does not alter the tested application.
+**[Web sitesini aç](https://onourimpram.github.io/MARSAM/)**
 
-## Implemented
+Site GitHub Pages üzerinde yayımlandı. Gerçek HTTPS dosyaları ve canlı tarayıcı etkileşimleri doğrulandı. Kullanıcının beğendiği Marmara kimlikli tasarım ve sekiz dil korundu. Kaynak kodu [PR 1](https://github.com/OnourImpram/MARSAM/pull/1) üzerinden bu deponun `main` dalına birleştirildi.
 
-Marmara University planned-center identity, unchanged official university marks, eight languages, Arabic RTL, six thematic collections, four-source comparison with persistent selection and cross-language shareable URLs, local JSON export, dated external events and an international research directory. The catalog contains 22 sources, eight introductory dossiers and three learning paths. There are 440 localized routes plus a full Turkish root page and 404.
+## Tamamlanan yayın
 
-## Recorded technical checks
+Yayımlanan uygulama kaynağı `3fbce07da07e68b08d443d2643ff09be7f1fb0e2`. Kaynak birleştirme commit'i `5518f8ba5320036a5c3c1cbf8f5358dbda8162cc`.
 
-GitHub Actions run `36871527013` completed successfully. Both root and `/MARSAM/` builds passed 29 Node content/locale/contract tests and nine generated-link tests. Real HTTP Chromium suites passed 642 baseline checks and 803 institutional-feature checks. These are automated assertions, not counts of distinct user journeys. No mocked fetch, storage or downloads were used. The successful artifact contains logs, screenshots and the exact committed source archive.
+Yayın ana makinesi `OnourImpram/onourimpram.github.io`, yayın dizini `MARSAM/`, yayın commit'i `94ebcf8cf2d61a38717fb95bd8b1a87e3e1b68e2`.
 
-German and Russian long-heading overflow at 320px was reproduced in real browser screenshots and corrected through heading wrapping. Closed mobile menu layout and Malay preview-banner overflow were also corrected and retested. No body-level overflow masking was used.
+Önceki bağımsız Pages yapılandırma engeli için artık kullanıcı işlemi gerekmiyor. Sürüm, kullanıcının zaten etkin olan Pages yayınına ayrı bir dizin olarak eklendi. Yönetim yetkileri, hesap ayarları, kişisel ana sayfa, diğer siteler ve mevcut iş akışları değiştirilmedi.
 
-## GitHub Pages
+[GitHub Pages dağıtımı](https://github.com/OnourImpram/onourimpram.github.io/actions/runs/36876484050) başarıyla tamamlandı.
 
-The user authorized a public development preview. The permanent deployment workflow is `.github/workflows/deploy-pages.yml`. Initial Pages creation was rejected by GitHub with `Resource not accessible by integration`. The account owner must select GitHub Actions in repository Settings, Pages. A deployment workflow being present is not evidence of a live website. Its post-deployment job verifies public HTML and the deployed commit before announcing a live URL.
+[Yayın ve canlı tarayıcı doğrulaması](https://github.com/OnourImpram/onourimpram.github.io/actions/runs/36875672984) başarıyla tamamlandı.
 
-## Limits
+## Yayımlanan özellikler
 
-No formal center-establishment claim, director/board appointments, private course files, book drafts or participant data. Sources remain V1 / PARTIALLY_VERIFIED. Translations and original editorial content await human academic and language review. No genuine CMS, LMS, account system or participant database. Chromium checks are not independent accessibility certification, cross-browser verification or academic approval. Main has not been merged.
+Marmara Üniversitesi için planlanan merkez kimliği, resmî genel üniversite işaretleri, sekiz dil, Arapça sağdan sola düzen, altı tematik koleksiyon, dört kaynağa kadar karşılaştırma, yerel kalıcı seçim ve diller arasında korunan paylaşılabilir adresler bulunur. Yerel JSON dışa aktarımı, tarihli dış etkinlikler ve uluslararası kaynak dizini çalışır.
+
+Arama, konu ve tür filtreleri, kalıcı okuma listesi, atıf kopyalama, RIS ve BibTeX araçları korunmuştur. Katalog 22 kaynak kaydı, sekiz başlangıç dosyası ve üç öğrenme rotası içerir. 55 mantıksal sayfanın sekiz dildeki karşılığı 440 yerelleştirilmiş adrestir. Ayrıca Türkçe kök ana sayfa ve 404 dosyası bulunur. Bu sayılar ayrı yayın sayıları değildir.
+
+## Bu yayında yeniden çalıştırılan kontroller
+
+Kök yol ve `/MARSAM/` yolunda 29 Node içerik, dil ve sözleşme testi ile dokuz üretilen bağlantı testi geçti. Yayın öncesi gerçek HTTP Chromium testlerinde 642 temel işlev kontrolü ve 803 kurumsal geliştirme kontrolü geçti.
+
+Canlı HTTPS adresinde 506 dosyanın içeriği SHA256 manifestiyle eşleşti. Canlı sunucudan alınan manifestin Git blob kimliği ayrıca yayımlanmış depodaki `c34cd64f0e3026e3b379f7bbdbf5af01ab3bcfa3` kimliğiyle eşleştirildi. Böylece canlı dosya kontrolü yayımlanan Git sürümüne bağlandı.
+
+Doğrudan canlı site üzerinde 803 Chromium kontrolü geçti. Ek olarak Türkçe arama, yeniden yükleme sonrasında okuma listesi kalıcılığı, klavyeyle arama penceresi ve gerçek yerel JSON indirmesi doğrulandı. Tarayıcı hata listesi boştur. Kontroller 320, 390, 768 ve 1440 piksel genişlikleri içerir. Canlı Türkçe masaüstü ve mobil görüntüleri ile Arapça mobil görünüm görsel olarak da incelendi.
+
+[Kalıcılığı sağlanan doğrulama özeti](docs/LIVE_REVIEW_RELEASE.json). Ayrıntılı test ve ekran görüntüsü paketi Actions kaydında 15 Ekim 2026 tarihine kadar saklanır. Bu sayılar otomatik doğrulama koşullarıdır, farklı kullanıcı senaryosu veya bağımsız katılımcı sayısı değildir.
+
+## Sınırlar
+
+Bu, çalışan ve herkese açık bir kurumsal inceleme sitesidir. Resmî merkez kuruluşunu, üniversitenin yayın onayını, yönetim atamalarını veya bilimsel değerlendirmelerin tamamlandığını ilan etmez. Kaynak kayıtları V1 ve PARTIALLY_VERIFIED düzeyini korur. Metinler ve çeviriler bilimsel ve dilsel insan incelemesini bekler.
+
+Gerçek CMS, LMS, hesap sistemi, araştırma veritabanı veya sunucu tarafı başvuru sistemi yoktur. Katkı aracı yalnız yerel dosya oluşturur, gönderim yapmaz. Özel ders dosyaları, kitap taslakları, mesajlar, kısıtlı ölçek maddeleri veya katılımcı verileri yayımlanmamıştır. Chromium kontrolleri bağımsız erişilebilirlik belgesi veya bütün tarayıcılarda kusursuzluk garantisi değildir.
+
+[Güncelleme ve yayın mimarisi](docs/GITHUB_PAGES_TR.md).
