@@ -1,0 +1,103 @@
+name: Verify heritage design and publications
+on:
+  push:
+    branches: [design/heritage-publications-20261001]
+    paths: [.github/workflows/heritage-verify.yml]
+permissions:
+  contents: write
+  actions: read
+env:
+  BASE_PATH: /MARSAM/
+  PAGES_PREVIEW: 'true'
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Apply the checksum-identified source patch
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import base64,lzma,hashlib,subprocess
+          parts=sorted(Path('.github/heritage-payload').glob('part*.b64'));assert len(parts)==5
+          data=base64.b64decode(''.join(p.read_text().strip()for p in parts))
+          assert hashlib.sha256(data).hexdigest()=='b8589ffd04514326ba6e08fc24a1ccc73a5c5371e4806f077207c5383e957547'
+          patch=lzma.decompress(data);Path('/tmp/heritage.patch').write_bytes(patch)
+          subprocess.run(['git','apply','--check','/tmp/heritage.patch'],check=True)
+          subprocess.run(['git','apply','/tmp/heritage.patch'],check=True)
+          PY
+      - name: Reuse documented cover images and reproduce the credited ebru derivative
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api repos/OnourImpram/MARSAM/actions/artifacts/11182571848/zip > /tmp/assets.zip
+          python -m pip install -q pillow==12.3.0
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image,ImageOps
+          import zipfile,shutil,hashlib,json
+          source=Path('/tmp/heritage-assets');zipfile.ZipFile('/tmp/assets.zip').extractall(source)
+          dest=Path('public/assets/heritage');dest.mkdir(parents=True,exist_ok=True)
+          names=['cbt-spiritual','discovering-spirituality','family-spiritual','group-counselling','spiritual-counselling-book','spiritual-practices','techniques-101','theories-book','trauma-spirituality']
+          for name in names:shutil.copy2(source/(name+'.webp'),dest/(name+'.webp'))
+          im=Image.open(source/'battal-ebru.webp').convert('L');im=ImageOps.autocontrast(im,cutoff=1)
+          im=ImageOps.colorize(im,black='#17475a',white='#d4d5bc',mid='#719e9e',midpoint=132)
+          im.thumbnail((1200,1450));im.save(dest/'ebru-marbling.webp','WEBP',quality=87,method=6)
+          small=im.copy();small.thumbnail((650,780));small.save(dest/'ebru-marbling-small.webp','WEBP',quality=85,method=6)
+          expected={'ebru-marbling.webp':'67b39fd21102e2c19d9d09fd4538580309d0def94493ab9d222f8a2fa02e686f','ebru-marbling-small.webp':'9d044b22baf46e92f86ce0ceba1c79d8ccd97e7bc6212430c5dbf3610e822843'}
+          meta=json.loads(Path('docs/HERITAGE_ASSET_LEDGER.json').read_text())
+          for a in meta['assets']:
+              name=a['id']+'.webp'
+              if a['id']in names:expected[name]=a['sha256']
+          for name,digest in expected.items():assert hashlib.sha256((dest/name).read_bytes()).hexdigest()==digest,name
+          assert len(expected)==11
+          PY
+      - name: Check source and both deployment paths
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p verification
+          BASE_PATH=/ npm run check | tee verification/heritage-root.log
+          npm run check | tee verification/heritage-pages.log
+      - name: Prepare real browser and script coverage on the test host only
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install --no-install-recommends -y fonts-noto-cjk
+          python -m pip install -q playwright==1.57.0
+          python -m playwright install chromium
+          fc-match 'Noto Serif CJK SC' > verification/heritage-font-environment.txt
+      - name: Render and test heritage design, catalogues and citation downloads
+        run: python tests/heritage_e2e.py
+      - name: Retest existing site workflows
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tests/browser_e2e.py & core=$!
+          python tests/scope_e2e.py & scope=$!
+          wait "$core"
+          wait "$scope"
+      - name: Commit only verified application files to the working branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'Onour Impram'
+          git config user.email '215815131+OnourImpram@users.noreply.github.com'
+          git add src public scripts tests docs package.json
+          git diff --cached --stat > verification/heritage-change-stat.txt
+          git commit -m 'design: introduce credited ebru and architectural ornament with verified scholarly catalogue'
+          git push origin HEAD:design/heritage-publications-20261001
+          git rev-parse HEAD > verification/heritage-source-sha.txt
+          git ls-tree HEAD > verification/heritage-source-tree.txt
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: marsam-heritage-design-verification
+          path: |
+            verification/heritage*
+            .browser-results/heritage/
+          include-hidden-files: true
+          retention-days: 7
