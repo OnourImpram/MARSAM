@@ -1,0 +1,73 @@
+name: Finalize search-control typography
+on:
+  push:
+    branches: [design/editorial-finish-20261001]
+    paths: [.github/workflows/editorial-control-finish.yml]
+permissions:
+  contents: write
+env:
+  BASE_PATH: /MARSAM/
+  PAGES_PREVIEW: 'true'
+jobs:
+  finish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Prepare CJK-aware browser verification, without distributing fonts
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install --no-install-recommends -y fonts-noto-cjk
+          python -m pip install -q playwright==1.57.0
+          python -m playwright install chromium
+          npm run build
+      - name: Reproduce and repair the compact search label
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from playwright.sync_api import sync_playwright
+          import subprocess,os,time,urllib.request,json
+          server=subprocess.Popen(['node','scripts/serve.mjs'],env={**os.environ,'PORT':'4199'},stdout=subprocess.DEVNULL)
+          root='http://127.0.0.1:4199/MARSAM/'
+          for _ in range(60):
+              try:urllib.request.urlopen(root+'tr/',timeout=1);break
+              except Exception:time.sleep(.1)
+          result={}
+          try:
+              with sync_playwright()as p:
+                  b=p.chromium.launch();page=b.new_page(viewport={'width':1440,'height':1000})
+                  page.goto(root+'zh/',wait_until='networkidle')
+                  lines="el=>{const r=document.createRange();r.selectNodeContents(el);return r.getClientRects().length}"
+                  before=page.locator('.discovery-bar form button').evaluate(lines);result['beforeLines']=before;assert before>1
+                  f=Path('public/editorial.css');f.write_text(f.read_text()+'\n/* Short search actions remain on one line in every script. */\n.discovery-bar form>button{white-space:nowrap;flex-shrink:0}\n')
+                  subprocess.run(['npm','run','build'],check=True)
+                  for l in ['tr','en','de','zh','ru','ar','id','ms']:
+                      for w in [320,390,768,1440]:
+                          page.set_viewport_size({'width':w,'height':1000});page.goto(root+l+'/',wait_until='networkidle')
+                          count=page.locator('.discovery-bar form button').evaluate(lines)
+                          assert count==1,(l,w,count)
+                          assert page.evaluate('document.documentElement.scrollWidth<=innerWidth+1'),(l,w)
+                  result['afterLines']=1;result['locales']=8;result['widths']=[320,390,768,1440];result['passed']=True;b.close()
+          finally:server.terminate();server.wait(timeout=10)
+          Path('verification/editorial-control-finish.json').write_text(json.dumps(result,indent=2))
+          PY
+      - name: Recheck source and generated links
+        run: npm run check
+      - name: Commit the verified typography amendment
+        run: |
+          git config user.name 'Onour Impram'
+          git config user.email '215815131+OnourImpram@users.noreply.github.com'
+          git add public/editorial.css
+          git commit -m 'fix: keep compact search actions on one line across all scripts'
+          git push origin HEAD:design/editorial-finish-20261001
+          git ls-tree HEAD > verification/editorial-control-tree.txt
+          git rev-parse HEAD > verification/editorial-control-sha.txt
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: marsam-control-typography
+          path: verification/editorial-control*
+          retention-days: 7
