@@ -1,0 +1,9 @@
+
+/* The German cards exceeded their min-content track at 320px. Russian education
+   headings painted beyond the content width. Wrap the text, never mask the page. */
+.theme-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.theme-tile,.portal-introduction>div,.audience-routes>a>div{min-width:0}
+.theme-tile{overflow-wrap:anywhere}
+body[data-campus] main h2,body[data-campus] main h3{overflow-wrap:anywhere;hyphens:auto}
+@media(max-width:850px){.theme-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.theme-grid{grid-template-columns:minmax(0,1fr)}}
