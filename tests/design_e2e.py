@@ -44,6 +44,7 @@ try:
       if w in [390,1440]:
        screenshot(page,f'{l}-home-{w}.png',True)
        screenshot(page,f'{l}-home-{w}-top.png')
+      if w<=600:check('compact masthead '+l,page.locator('.header-inner').bounding_box()['height']<=95)
       if w<=768:
        page.locator('.mobile-nav summary').click()
        check('visible mobile menu '+l,page.locator('.mobile-nav nav').is_visible())
