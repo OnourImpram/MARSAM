@@ -5,15 +5,22 @@ on:
     paths: [.github/workflows/heritage-verify.yml]
 permissions:
   contents: write
-  actions: read
+  actions: write
 env:
   BASE_PATH: /MARSAM/
   PAGES_PREVIEW: 'true'
 jobs:
   verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 12
     steps:
+      - name: Stop the preceding dependency setup and preserve its diagnosis
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          state=$(gh api repos/OnourImpram/MARSAM/actions/runs/36906830167 --jq .status)
+          if [ "$state" != completed ]; then gh api -X POST repos/OnourImpram/MARSAM/actions/runs/36906830167/cancel; fi
+          sleep 15
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
@@ -26,11 +33,26 @@ jobs:
           parts=sorted(Path('.github/heritage-payload').glob('part*.b64'));assert len(parts)==5
           data=base64.b64decode(''.join(p.read_text().strip()for p in parts))
           assert hashlib.sha256(data).hexdigest()=='b8589ffd04514326ba6e08fc24a1ccc73a5c5371e4806f077207c5383e957547'
-          patch=lzma.decompress(data);Path('/tmp/heritage.patch').write_bytes(patch)
+          Path('/tmp/heritage.patch').write_bytes(lzma.decompress(data))
           subprocess.run(['git','apply','--check','/tmp/heritage.patch'],check=True)
           subprocess.run(['git','apply','/tmp/heritage.patch'],check=True)
+          f=Path('public/heritage.css')
+          f.write_text(f.read_text()+'''\n/* Catalogue metadata remains readable, including at narrow viewport widths. */
+          @media screen {
+          .book-gallery .book-imprint{font-size:.75rem;color:#526154;letter-spacing:.01em;flex-wrap:wrap}
+          .book-gallery .book-edition{font-size:.75rem;color:#6b5f48}
+          .book-gallery .book-credit{font-size:.8rem}
+          .research-journal{color:#536969;font-size:.8rem}
+          .new-book-feature>p{color:#55625b;font-size:.83rem}
+          .bibliography-count,.bibliography-isbn{font-size:.8rem;color:#58675e}
+          .bibliography-filters label,.bibliographic-grid dt,.bibliographic-people h3{font-size:.8rem}
+          .heritage-hero .editorial-hero-copy>.eyebrow{font-size:.75rem}
+          .books-full .book-synopsis,.record-original>p{font-size:.94rem}
+          }
+          ''')
           PY
       - name: Reuse documented cover images and reproduce the credited ebru derivative
+        timeout-minutes: 2
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -53,6 +75,8 @@ jobs:
           for a in meta['assets']:
               name=a['id']+'.webp'
               if a['id']in names:expected[name]=a['sha256']
+              if a['id']=='battal-ebru':a['derivativeDimensions']={'ebru-marbling.webp':list(im.size),'ebru-marbling-small.webp':list(small.size)}
+          Path('docs/HERITAGE_ASSET_LEDGER.json').write_text(json.dumps(meta,ensure_ascii=False,indent=2)+'\n')
           for name,digest in expected.items():assert hashlib.sha256((dest/name).read_bytes()).hexdigest()==digest,name
           assert len(expected)==11
           PY
@@ -63,13 +87,17 @@ jobs:
           mkdir -p verification
           BASE_PATH=/ npm run check | tee verification/heritage-root.log
           npm run check | tee verification/heritage-pages.log
-      - name: Prepare real browser and script coverage on the test host only
+      - name: Install test browser with bounded setup
+        timeout-minutes: 3
         run: |
-          sudo apt-get update -qq
-          sudo apt-get install --no-install-recommends -y fonts-noto-cjk
-          python -m pip install -q playwright==1.57.0
+          python -m pip install --timeout 25 -q playwright==1.57.0
           python -m playwright install chromium
+      - name: Install script fonts without refreshing unrelated package repositories
+        timeout-minutes: 2
+        run: |
+          sudo apt-get -o Acquire::Retries=0 -o Acquire::http::Timeout=20 install --no-install-recommends -y fonts-noto-cjk
           fc-match 'Noto Serif CJK SC' > verification/heritage-font-environment.txt
+          grep -q CJK verification/heritage-font-environment.txt
       - name: Render and test heritage design, catalogues and citation downloads
         run: python tests/heritage_e2e.py
       - name: Retest existing site workflows
@@ -92,6 +120,13 @@ jobs:
           git push origin HEAD:design/heritage-publications-20261001
           git rev-parse HEAD > verification/heritage-source-sha.txt
           git ls-tree HEAD > verification/heritage-source-tree.txt
+      - name: Preserve prior dependency failure context
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p verification
+          gh api repos/OnourImpram/MARSAM/actions/jobs/110519366245/logs | tail -90 > verification/heritage-prior-setup-tail.txt
       - uses: actions/upload-artifact@v4
         if: always()
         with:
