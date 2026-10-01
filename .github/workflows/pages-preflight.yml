@@ -1,0 +1,21 @@
+name: Pages preview preflight
+on:
+  push:
+    branches: [feat/multilingual-knowledge-platform]
+    paths: [.github/workflows/pages-preflight.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+jobs:
+  pages:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Configure the requested GitHub Pages preview
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+      - name: Confirm configuration
+        run: echo 'Pages configuration succeeded. Deployment will use the separately tested preview build.'
