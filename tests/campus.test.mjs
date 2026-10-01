@@ -8,11 +8,11 @@ if(existsSync(path)){
  const {locales}=await import('../src/languages.mjs');
  const {sources,resources}=await import('../src/content.mjs');
  test('campus copy has exact eight-language coverage',()=>{const keys=Object.keys(campusCopy.tr).sort();for(const l of locales){assert.deepEqual(Object.keys(campusCopy[l]).sort(),keys);for(const v of Object.values(campusCopy[l]))assert.ok(typeof v==='string'&&v.trim());}});
- test('four requested institutions, no invented partnerships',()=>{assert.deepEqual(institutions.map(x=>x.id),['harvard','duke','smbi','iapr']);for(const x of institutions){assert.equal(x.relationship,'external-resource');assert.ok(x.links.length>=3);for(const l of locales)assert.ok(x.summary[l]);}});
+ test('design benchmarks are excluded from the public content',()=>assert.deepEqual(institutions,[]));
  test('comparison selection validates IDs and caps four',()=>{assert.deepEqual(parseSelection('a,b,a,unknown,c,d,e',['a','b','c','d','e']),['a','b','c','d']);assert.deepEqual(parseSelection('../secret,<img>', ['a']),[]);});
  test('event status uses dates, not evergreen registrations',()=>{assert.equal(eventState('2025-08-22','2026-10-01'),'past');assert.equal(eventState('2026-10-03','2026-10-01'),'upcoming');assert.equal(eventState('2026-10-01','2026-10-01'),'today');assert.throws(()=>eventState('garbage','2026-10-01'));});
  test('source comparison is descriptive, no efficacy ranking',()=>{const rows=comparisonRows(resources.slice(0,2),'tr');assert.equal(rows.length,2);assert.ok(rows[0].citation);assert.ok(rows[0].review);assert.ok(!('score' in rows[0]));});
  test('Marmara proposed affiliation appears in all rendered locales',()=>{for(const l of locales){const h=decorate(renderCampusHome(l,'/MARSAM/'),l,'','/MARSAM/');assert.ok(h.includes('https://www.marmara.edu.tr/'));assert.ok(h.includes(campusCopy[l].university));assert.ok(h.includes('campus.css'));assert.ok(h.includes('noindex'));assert.ok(h.includes('data-campus'));assert.ok(!h.includes('href="/tr/'));}});
  test('comparison page and source IDs present in every locale',()=>{for(const l of locales){const h=renderCompare(l,'/MARSAM/');assert.ok(h.includes('data-compare-page'));assert.ok(h.includes('data-comparison-records'));assert.ok(h.includes(campusCopy[l].compare));}});
- test('new institution resources preserve bounded provenance',()=>{for(const id of ['s-smbi','s-iapr']){const s=sources.find(x=>x.id===id);assert.ok(s);assert.equal(s.level,'V1');assert.equal(s.status,'PARTIALLY_VERIFIED');assert.equal(s.inspection,'official');}});
+ test('institution directory entries are not shipped as scholarly sources',()=>{for(const id of ['s-smbi','s-iapr','s-duke','s-harvard'])assert.ok(!sources.some(x=>x.id===id));});
 }

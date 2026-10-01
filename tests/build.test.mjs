@@ -23,3 +23,10 @@ test('all locale search indexes cover sections, dossiers and records without dup
 test('preview contains no external embeds, fonts, trackers or submission endpoints',()=>{for(const{path,html}of pages){assert.ok(!/<(?:iframe|embed|object)\b/.test(html),path);assert.ok(!/<(?:script|link)[^>]+(?:src|href)="https?:\/\//.test(html),path);assert.ok(!/method="post"/i.test(html),path);}const forms=pages.filter(x=>x.path.endsWith('/contribute/'));assert.equal(forms.length,locales.length);for(const{html}of forms){assert.ok(html.includes('data-draft-form'));assert.ok(html.includes('data-requires-js hidden'));assert.ok(!/name="(?:email|note|message|name)"/.test(html));}});
 test('non-publication defaults persist, publication flag fails closed',async()=>{assert.equal(manifest.publicationAuthorized,false);assert.equal(await readFile(resolve(dist,'robots.txt'),'utf8'),'User-agent: *\nDisallow: /\n');const result=spawnSync(process.execPath,['scripts/build.mjs'],{cwd:root,env:{...process.env,PUBLISH:'true'},encoding:'utf8'});assert.notEqual(result.status,0);assert.match(result.stderr,/PUBLICATION BLOCKED/);assert.equal(JSON.parse(await readFile(resolve(dist,'build-manifest.json'),'utf8')).mode,'preview');});
 test('bibliography and IAPOS inspection ledger do not claim independent or full review',async()=>{const ledger=JSON.parse(await readFile(resolve(dist,'data/source-ledger.json'),'utf8'));assert.equal(ledger.review,'SEQUENTIAL_ROLE_REVIEW');assert.ok(ledger.sources.every(s=>s.level==='V1'&&s.status==='PARTIALLY_VERIFIED'));});
+
+test('no design benchmark institutions in public HTML, search or source data',async()=>{
+ const banned=/Harvard|Duke|GWish|Danielsen|Columbia|\bSMBI\b|\bIAPR\b|RCPsych|Bilkent/i;
+ for(const{path,html}of pages)assert.ok(!banned.test(html),path);
+ for(const l of locales)assert.ok(!banned.test(await readFile(resolve(dist,`data/search-${l}.json`),'utf8')),l);
+ assert.ok(!banned.test(await readFile(resolve(dist,'data/source-ledger.json'),'utf8')));
+});
