@@ -1,0 +1,145 @@
+name: Assemble and verify Marmara preview
+on:
+  push:
+    branches: [feat/multilingual-knowledge-platform]
+    paths: [.github/workflows/campus-materialize.yml]
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: read
+jobs:
+  campus:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Restore exact source blobs
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs=require('fs'),crypto=require('crypto'),path=require('path');
+            const files={
+              'src/campus-copy.mjs':'b025867146fd2569ca9be9b33244cdb7792a1277',
+              'src/campus-data.mjs':'6fe5698c667e3d9521aab08c6e389f52e639a264',
+              'src/campus.mjs':'f75ea8b0ae57d6ab1527b557e9eecdc1fa8b1003',
+              'public/campus.css':'ee52adf789ba7e52a5b79049ff38fa457e2f7eb7',
+              'public/campus.js':'aef9e73e33b2911eb8b097d266b30c7e4edf4b48',
+              'tests/campus_e2e.py':'1318d770cbe3de811e5faaf0c3d47edec20537e5'
+            };
+            for(const [file,sha] of Object.entries(files)){
+              const {data}=await github.rest.git.getBlob({...context.repo,file_sha:sha});
+              const bytes=Buffer.from(data.content,'base64');
+              const actual=crypto.createHash('sha1').update(Buffer.from(`blob ${bytes.length}\0`)).update(bytes).digest('hex');
+              if(actual!==sha)throw Error('Blob identity mismatch '+file);
+              fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,bytes);
+            }
+      - name: Wire source module and test contracts
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import json
+          p=Path('package.json');data=json.loads(p.read_text());data['version']='0.3.0';data['scripts']['test']='node --test tests/core.test.mjs tests/locales.test.mjs tests/campus.test.mjs';p.write_text(json.dumps(data,indent=2)+'\n')
+          p=Path('tests/build.test.mjs');s=p.read_text();prefix="import '../src/campus.mjs';\n";p.write_text(s if s.startswith(prefix) else prefix+s)
+          p=Path('scripts/build.mjs');s=p.read_text()
+          assert 'campusRenderers' not in s, 'Unexpected already-modified build. Reconcile instead of overwriting.'
+          s="import {decorate,renderCampusHome,campusRenderers} from '../src/campus.mjs';\n"+s
+          s=s.replace('await writeFile(target,html);paths.push',"const [locale,...parts]=path.split('/');await writeFile(target,locales.includes(locale)?decorate(html,locale,parts.join('/'),base):html);paths.push")
+          s=s.replace('await emit(l,home(l,base))','await emit(l,renderCampusHome(l,base))')
+          s=s.replace('sectionPage(s.id,l,base));for(const a',"(campusRenderers[s.id]?campusRenderers[s.id](l,base):sectionPage(s.id,l,base)));for(const a")
+          start=s.index('const landing=');end=s.index("await emit('',landing);",start)+len("await emit('',landing);")
+          s=s[:start]+"// The project root opens the full Turkish preview, not a placeholder splash.\nawait emit('',decorate(renderCampusHome('tr',base),'tr','',base));"+s[end:]
+          s=s.replace('<title>404 · MARSAM</title><link rel="stylesheet" href="${base}site.css">','<title>404 · MARSAM</title><link rel="stylesheet" href="${base}site.css"><link rel="stylesheet" href="${base}campus.css">')
+          s=s.replace("await writeFile(resolve(dist,'robots.txt')","await writeFile(resolve(dist,'.nojekyll'),'');\nawait writeFile(resolve(dist,'robots.txt')")
+          s=s.replace("const manifest={version:'0.2.0'","const manifest={institution:{name:'Marmara University',relationship:'planned-centre',formalApprovalVerified:false},previewDeploymentAuthorized:process.env.PAGES_PREVIEW==='true',version:'0.3.0'")
+          assert 'formalApprovalVerified' in s
+          p.write_text(s)
+          Path('public/campus-core.js').write_text('''/** Pure logic shared by the static renderer, browser and Node tests. */
+          export function parseSelection(value,allowed){const ids=new Set(allowed);return [...new Set(String(value||'').split(',').filter(id=>/^[a-z0-9-]+$/.test(id)&&ids.has(id)))].slice(0,4);}
+          export function eventState(end,today){for(const value of [end,today])if(!/^\\d{4}-\\d{2}-\\d{2}$/.test(value)||Number.isNaN(Date.parse(value))||new Date(value).toISOString().slice(0,10)!==value)throw new Error('Valid ISO dates required');return end<today?'past':end===today?'today':'upcoming';}
+          ''')
+          PY
+          cat > tests/campus.test.mjs <<'JS'
+          import test from 'node:test';
+          import assert from 'node:assert/strict';
+          import {existsSync} from 'node:fs';
+          const path=new URL('../src/campus.mjs',import.meta.url);
+          test('institutional enhancement module is implemented',()=>assert.ok(existsSync(path),'campus module is required'));
+          if(existsSync(path)){
+           const {campusCopy,institutions,comparisonRows,parseSelection,eventState,decorate,renderCampusHome,renderCompare}=await import(path);
+           const {locales}=await import('../src/languages.mjs');
+           const {sources,resources}=await import('../src/content.mjs');
+           test('campus copy has exact eight-language coverage',()=>{const keys=Object.keys(campusCopy.tr).sort();for(const l of locales){assert.deepEqual(Object.keys(campusCopy[l]).sort(),keys);for(const v of Object.values(campusCopy[l]))assert.ok(typeof v==='string'&&v.trim());}});
+           test('four requested institutions, no invented partnerships',()=>{assert.deepEqual(institutions.map(x=>x.id),['harvard','duke','smbi','iapr']);for(const x of institutions){assert.equal(x.relationship,'external-resource');assert.ok(x.links.length>=3);for(const l of locales)assert.ok(x.summary[l]);}});
+           test('comparison selection validates IDs and caps four',()=>{assert.deepEqual(parseSelection('a,b,a,unknown,c,d,e',['a','b','c','d','e']),['a','b','c','d']);assert.deepEqual(parseSelection('../secret,<img>', ['a']),[]);});
+           test('event status uses dates, not evergreen registrations',()=>{assert.equal(eventState('2025-08-22','2026-10-01'),'past');assert.equal(eventState('2026-10-03','2026-10-01'),'upcoming');assert.equal(eventState('2026-10-01','2026-10-01'),'today');assert.throws(()=>eventState('garbage','2026-10-01'));});
+           test('source comparison is descriptive, no efficacy ranking',()=>{const rows=comparisonRows(resources.slice(0,2),'tr');assert.equal(rows.length,2);assert.ok(rows[0].citation);assert.ok(rows[0].review);assert.ok(!('score' in rows[0]));});
+           test('Marmara proposed affiliation appears in all rendered locales',()=>{for(const l of locales){const h=decorate(renderCampusHome(l,'/MARSAM/'),l,'','/MARSAM/');assert.ok(h.includes('https://www.marmara.edu.tr/'));assert.ok(h.includes(campusCopy[l].university));assert.ok(h.includes('campus.css'));assert.ok(h.includes('noindex'));assert.ok(h.includes('data-campus'));assert.ok(!h.includes('href="/tr/'));}});
+           test('comparison page and source IDs present in every locale',()=>{for(const l of locales){const h=renderCompare(l,'/MARSAM/');assert.ok(h.includes('data-compare-page'));assert.ok(h.includes('data-comparison-records'));assert.ok(h.includes(campusCopy[l].compare));}});
+           test('new institution resources preserve bounded provenance',()=>{for(const id of ['s-smbi','s-iapr']){const s=sources.find(x=>x.id===id);assert.ok(s);assert.equal(s.level,'V1');assert.equal(s.status,'PARTIALLY_VERIFIED');assert.equal(s.inspection,'official');}});
+          }
+          JS
+      - name: Retrieve only the two verified official university marks
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api repos/OnourImpram/MARSAM/actions/artifacts/11163745955/zip > /tmp/marmara-research.zip
+          python - <<'PY'
+          from pathlib import Path
+          import zipfile,hashlib,json
+          z=zipfile.ZipFile('/tmp/marmara-research.zip')
+          marks=[('tr','marmara-asset-1-44.png','4646a98b7bb6b128a4cf5dc1ae2915eea0675d20aea2c04a15e01564f1af333b'),('en','marmara-asset-1-26.png','30c3b2c37ddf361c82659d5ac322089984957434ad156cb5b473ec2c278a92be')]
+          assets=[]
+          for lang,filename,expected in marks:
+            matches=[n for n in z.namelist() if n==filename or n.endswith('/'+filename)]
+            assert len(matches)==1,filename
+            data=z.read(matches[0]);assert hashlib.sha256(data).hexdigest()==expected
+            p=Path(f'public/assets/marmara-{lang}.png');p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(data)
+            assets.append({'path':str(p),'sha256':expected})
+          record={'sourcePage':'https://isletme.marmara.edu.tr/fakulte/kurumsal-logo','guide':'https://isletme.marmara.edu.tr/dosya/isf/Kurumsal_Logo_Kullanim_Kilavuzu.pdf','checked':'2026-10-01','primaryHex':'#003d72','treatment':'General university TR/EN horizontal marks copied byte-for-byte from the official archive. CSS preserves proportions. No font files or faculty-specific marks. Institutional proposal, not formal endorsement.','assets':assets}
+          Path('docs/MARMARA_ASSETS.json').write_text(json.dumps(record,ensure_ascii=False,indent=2)+'\n')
+          observation=[n for n in z.namelist() if n=='observations.json' or n.endswith('/observations.json')]
+          assert len(observation)==1
+          Path('docs/BENCHMARK_BROWSER_OBSERVATIONS.json').write_bytes(z.read(observation[0]))
+          PY
+      - name: Content and root/subpath tests
+        run: |
+          mkdir -p verification
+          npm run check 2>&1 | tee verification/campus-root.log
+          BASE_PATH=/MARSAM/ npm run check 2>&1 | tee verification/campus-subpath.log
+          npm run build
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install test browser
+        run: pip install playwright==1.57.0 && python -m playwright install --with-deps chromium
+      - name: Real HTTP verification of old and new interactions
+        run: |
+          python tests/browser_e2e.py
+          python tests/campus_e2e.py
+      - name: Commit tested sources to the feature branch only
+        run: |
+          test "$(git ls-remote origin refs/heads/feat/multilingual-knowledge-platform | cut -f1)" = "$GITHUB_SHA"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add src/campus*.mjs public/campus* public/assets/marmara-*.png scripts/build.mjs package.json tests/campus* tests/build.test.mjs docs/MARMARA_ASSETS.json docs/BENCHMARK_BROWSER_OBSERVATIONS.json
+          git commit -m 'feat: Marmara institutional preview with thematic collections and source comparison [skip ci]'
+          git push origin HEAD:feat/multilingual-knowledge-platform
+      - name: Package source and verification evidence
+        if: always()
+        run: |
+          mkdir -p /tmp/campus-delivery
+          git archive HEAD -o /tmp/campus-delivery/committed-source.tar
+          git rev-parse HEAD > /tmp/campus-delivery/commit.txt
+          cp -r src public scripts tests docs package.json /tmp/campus-delivery/
+          if [ -d dist ]; then cp -r dist /tmp/campus-delivery/; fi
+          if [ -d verification ]; then cp -r verification /tmp/campus-delivery/; fi
+          if [ -d .browser-results/campus ]; then cp -r .browser-results/campus /tmp/campus-delivery/screenshots; fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: marmara-institutional-preview
+          path: /tmp/campus-delivery/
+          retention-days: 14
