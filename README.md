@@ -1,100 +1,84 @@
-# MARSAM · spirituality, mental health, and accountable knowledge
+# MARSAM
 
-A content-first, eight-language website **development preview** for the proposed *Maneviyat ve Ruh Sağlığı Araştırmaları Merkezi*. It is not an announcement of a formally established center, university affiliation, clinical service or approved training provider.
+A content-first, eight-language development preview for the proposed Maneviyat ve Ruh Sağlığı Araştırmaları Merkezi. It is not an announcement of formal establishment, university affiliation, accreditation, clinical services or approved training.
 
 ## Run locally
 
-Requires **Node.js 22 or later**. There are no npm dependencies and no installation step.
-
-```sh
-npm run build
-npm run preview
-```
-
-Open `http://127.0.0.1:4173/tr/`. Change `/tr/` to `/en/`, `/de/`, `/zh/` `/ru/`, `/ar/`, `/id/` or `/ms/`. The root page provides a language selector. Do not double-click generated HTML: the site uses root-relative assets and search indexes, so it requires a local HTTP server.
+Node.js 22 or later is required. There are no npm dependencies and no installation step.
 
 ```sh
 npm run check
-# Optional subdirectory hosting preview:
-BASE_PATH=/MARSAM/ npm run build
 npm run preview
-# Open http://127.0.0.1:4173/MARSAM/tr/
 ```
 
-Windows PowerShell equivalent: `$env:BASE_PATH='/MARSAM/'; npm run build`. Remove it with `Remove-Item Env:BASE_PATH` before rebuilding at the root.
+Open `http://127.0.0.1:4173/tr/`. The language selector preserves the current page. Supported routes are `/tr/`, `/en/`, `/de/`, `/zh/`, `/ru/`, `/ar/`, `/id/` and `/ms/`. Do not double-click generated HTML. Search and root-relative assets require the provided local HTTP server.
 
-`HOST` and `PORT` configure the local server. Its default loopback binding is intentional. No public server has been provisioned or deployed.
+Optional subdirectory hosting preview:
 
-## What is implemented
+```sh
+BASE_PATH=/MARSAM/ npm run build
+npm run preview
+```
 
-- Eight complete interface dictionaries: Turkish, English, German, Simplified Chinese, Russian, Arabic, Indonesian and Malay.
-- **400 localized route files**, one language landing page and a real 404 page. This is 50 logical pages per locale, not 400 distinct research publications.
-- **8 original introductory dossiers**, with body text, reflection prompts and limits in all eight languages.
-- **20 linked source records**, not rehosted publications. Source titles and citation metadata remain in their original language.
-- **3 reading pathways**, a concept map, theoretical comparison questions and proposed research areas.
-- Full-text local search, type/topic filtering, locale switching on the same page, a browser-only reading list, citation copy, metadata-only RIS/BibTeX export and print styles.
-- Local-only source-suggestion JSON download. The form does not send, register or publish anything.
-- Institutional-status notices, source inspection limits, translation status, rights notices and a machine-readable source ledger.
+On Windows PowerShell, use `$env:BASE_PATH='/MARSAM/'; npm run build`. Remove that setting with `Remove-Item Env:BASE_PATH` before rebuilding at the root. `HOST` and `PORT` configure the local preview server. No public hosting is provisioned.
 
-The rich architecture covers concepts, theories, professional practice, ethics, methods, measurement directories, research participation, projects, learning, external media, announcements and an international resource directory. Empty research and course states are deliberate: no unapproved studies or invented events are presented as active.
+## Implemented scope
 
-## Content and maintenance
+- Turkish, English, German, Simplified Chinese, Russian, Arabic, Indonesian and Malay.
+- 400 localized content routes, one language landing page and a real 404 page. This represents 50 logical pages per locale, not 400 research publications.
+- Eight original introductory dossiers with complete body text, reflection questions, sources and limits in each language.
+- Twenty linked source records and three learning pathways.
+- Concepts, theoretical comparison questions, practice, ethics, methods, instrument directory, proposed research areas, participation conditions, external media, announcements and an international resource directory.
+- Local full-text search, topic/type filters, same-page language switching, persistent browser-only reading lists, citation copy, RIS/BibTeX export and printing.
+- A local-only contribution draft tool. It downloads JSON and does not submit or register anything.
 
-| File | Responsibility |
-| --- | --- |
-| `src/i18n.mjs` | Interface copy and localized source notes |
-| `src/content.mjs` | Source records, catalogue entries, section metadata and taxonomy |
-| `src/articles.mjs` | Eight eight-language introductory dossiers |
-| `src/info.mjs` | Learning paths, editorial/about text and proposed work areas |
-| `src/lib.mjs` | Validation, URL safety, HTML escaping, routes and export functions |
-| `src/site.mjs` | Accessible shared templates and prerendered pages |
-| `public/site.css` | Responsive visual system, typography, reduced motion and printing |
-| `public/app.js` | Small client-side enhancements; no analytics or remote form posting |
-| `scripts/build.mjs` | Static generation and fail-closed publication guard |
-| `scripts/serve.mjs` | Local HTTP preview with real 404 and security headers |
+Each new language has 360 explicit translated source strings. Indonesian and Malay have separate dictionaries. Javanese and Sundanese are not included, following the owner's academic-audience scope. Arabic has RTL layout, logical spacing, direction-aware arrows, Arabic search normalization, and isolation of original Latin-script citations and URLs. Missing translations stop the build instead of silently displaying English.
 
-Use a branch and pull request to change content. Keep source IDs stable. Add all eight language values and a bounded source role. Run the tests before requesting scientific and language review. A `draft` flag is not silently removed by a passing build. There is **no online CMS or shared editorial backend** in this preview. The local suggestion tool is not a substitute for one.
+The Malaysia and Indonesia additions are an original UKM journal record and UII's Pusat Studi Psikologi Islam resource page. The UKM article describes content analysis of previous publications, not a new clinical trial. Neither institution is presented as a MARSAM partner.
 
-## Scientific, institutional and privacy boundaries
+## Source organization
 
-The content architecture adapts the user's canonical IAPOS source/claim controls. It does not implement the full IAPOS runtime or turn code tests into scientific approval. Current source records are **V1 / PARTIALLY_VERIFIED** with inspected scope and limitations. Original dossiers and translations are **AI-assisted editorial drafts** awaiting responsible human review. Native-language review has not been claimed.
+- `src/languages.mjs`, `src/i18n.mjs`, `src/translate.mjs` and `src/locales/` define languages and translation contracts.
+- `src/content.mjs` and `src/regional.mjs` hold linked sources, bounded descriptions, inspection status and taxonomy.
+- `src/articles.mjs` and `src/info.mjs` hold reading dossiers, learning paths, editorial policies and proposed work areas.
+- `src/site.mjs` and `public/` contain the shared templates and progressive browser enhancements.
+- `src/lib.mjs` validates records, routes, escaping and publication boundaries.
+- `scripts/build.mjs` generates static HTML. `scripts/serve.mjs` serves the preview with real status codes and security headers.
 
-No private messages, unpublished coursework, personal clinical material, restricted scale items or confidential research data are committed. Official publisher files are linked, not copied. A public tool or article page is not automatically permission to translate or republish it. External institutions are **resource links, not partners**.
-
-The preview has no accounts, survey response store, tracking code, external font or embedded third-party video. A reading list stays in browser storage after user action. The contribution form exports a local file only. Hosting operators may have their own ordinary access logs; production privacy notices and data-controller decisions remain open.
-
-`PUBLISH=true npm run build` intentionally fails. A production release requires institutional authorization, content approval tied to the reviewed versions, translation review, source/rights checks and hosting decisions. `noindex` is a crawler instruction, **not access control**; this public repository is not confidential.
+There is no online CMS, survey-response database or shared editorial backend. A local proposal file is not a submission system. Future tools require separate design and authorization.
 
 ## Verification
 
-```sh
-npm test              # content and safety contracts
-npm run build
-npm run test:build    # route parity, all generated internal links, citations and release guard
-```
+20 Node unit/content/locale tests and 9 build/link tests passed at both root and `/MARSAM/` paths. GitHub Actions additionally completed 642 live HTTP Chromium assertions using real navigation, storage and downloads. The application files downloaded from the CI artifact matched the local implementation byte for byte.
 
-Optional browser checks require Python and Playwright. With a working browser and the preview server running:
+See `docs/VERIFICATION_8_LANGUAGES.md` and `verification/live-browser.json` for the exact snapshot, scope and limitations. Older verification documents describe the earlier five-language preview and offline fixture, not the new live test.
+
+Optional live browser test:
 
 ```sh
-python tests/browser_check.py --browser /path/to/chromium
+python -m pip install playwright==1.57.0
+python -m playwright install chromium
+python tests/browser_e2e.py
 ```
 
-The development environment blocked browser navigation to local URLs. For this delivery, visual and interaction checks used `--offline-fixture`: generated HTML and CSS were rendered locally, the actual application script ran, and browser I/O boundaries were mocked. Real local HTTP responses were checked separately. This mode is explicitly **not** full end-to-end verification. Native persistence, clipboard permissions, navigation, real file downloads, browser CSP enforcement, screen readers and cross-browser behaviour require a live-browser pass. No browser or machine policy was changed.
+The test starts its own local server. Clipboard permissions, screen-reader use, other browsers and native-language expert review remain outside the recorded checks. Tests are not accessibility certification or scientific approval.
 
-See `verification/` and `docs/VERIFICATION.md` for the exact scope and commands. Tests are implementation checks, not a claim of WCAG certification, clinical safety validation or scholarly approval.
+## Scientific, rights and institutional boundaries
+
+Relevant IAPOS distinctions between source identity, claim support, interpretation, translation and authorization inform the content model. This does not implement the full IAPOS runtime. Source records are V1 / PARTIALLY_VERIFIED with explicit inspection scopes. Editorial content and translations remain AI-assisted drafts awaiting human scientific and language review.
+
+No private messages, unpublished coursework, identifiable clinical material, restricted instrument items or confidential research data are included. Original files are linked, not rehosted. Public availability does not automatically permit translation or republication. Source titles and citations remain in their original languages.
+
+There are no user accounts, tracking cookies, third-party analytics, remote fonts or embedded external video. Reading lists are stored locally after user action. Hosting providers may keep ordinary access logs, which require separate production decisions.
+
+`PUBLISH=true npm run build` intentionally fails pending institutional authorization, content and translation review, source/rights checks and hosting decisions. `noindex` is not access control. This public repository is not confidential. No main-branch merge or production deployment has been performed.
 
 ## Documents
 
-- `docs/MIMARI_VE_ICERIK_PLANI_TR.md`: meeting-ready Turkish architecture and content proposal.
-- `docs/BENCHMARK_AND_SOURCES.md`: public precedents and inspected source roles.
-- `docs/IAPOS_AND_RELEASE.md`: canonical IAPOS references, approval boundaries and release checklist.
+- `docs/LOCALE_EXPANSION_TR.md` records the Arabic, Indonesian and Malay implementation and regional sources.
+- `docs/VERIFICATION_8_LANGUAGES.md` records the verified application delivery.
+- `docs/MIMARI_VE_ICERIK_PLANI_TR.md` preserves the original architecture proposal. Read its initial five-language scope together with the expansion note.
+- `docs/BENCHMARK_AND_SOURCES.md` records the original source selection.
+- `docs/IAPOS_AND_RELEASE.md` describes scientific review and authorization boundaries.
 
-Copyright permissions for external sources remain with their owners. This repository does not grant reuse rights for linked materials or impersonate an institution. Code and original editorial-text licensing should be decided by the project owner before a production release.
-
-## Arabic, Indonesian and Malay extension, version 0.2.0
-
-Scope follows the owner's academic-audience request. Supported locales are `tr en de zh ru ar id ms`. No Javanese or Sundanese locales have been added. Indonesian and Malay are separate language packs, not aliases. Arabic uses `dir=rtl`, logical spacing, mirrored directional arrows, bidirectional isolation of source citations, and Arabic-aware search normalization.
-
-Each additional language has 360 explicit source-string translations, including the full eight introductory dossiers. New regional catalogue records are also written in all eight languages. Source-string lookup throws on missing translations. All translations remain AI-assisted drafts awaiting scientific and native-language review.
-
-See `docs/LOCALE_EXPANSION_TR.md`. Run `python tests/browser_e2e.py` after installing Playwright and its Chromium browser for an independent live HTTP test environment. This test is not a clinical, scholarly, language-quality or screen-reader certification.
+The project owner must decide licensing for original code and editorial text before public production release. Rights in linked materials remain with their respective owners.
