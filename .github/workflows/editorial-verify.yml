@@ -1,0 +1,89 @@
+name: Verify MARSAM editorial refinement
+on:
+  push:
+    branches: [design/editorial-finish-20261001]
+    paths: [.github/workflows/editorial-verify.yml]
+permissions:
+  contents: write
+  actions: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Apply the exact locally inspected source, not a regenerated approximation
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import base64,lzma,json,hashlib
+          data=base64.b64decode(''.join(p.read_text().strip()for p in sorted(Path('.github/editorial-payload').glob('part*.b64'))))
+          assert hashlib.sha256(data).hexdigest()=='050172b52309e791373d1245c5aab0985a6602cfdd875eb0626a45c200cf8319'
+          files=json.loads(lzma.decompress(data))
+          allowed={'src/editorial.mjs','public/editorial.css','tests/design.test.mjs','tests/design_e2e.py','docs/ELIF_DESIGN_LESSONS_TR.md','docs/VISUAL_ASSET_PROVENANCE.json'}
+          assert set(files)==allowed
+          for name,content in files.items():Path(name).write_text(content)
+          f=Path('src/campus.mjs');s=f.read_text();s="import {renderEditorialHome} from './editorial.mjs';\n"+s
+          start=s.index('export function renderCampusHome(');end=s.index('export function renderCollections(',start)
+          s=s[:start]+'export const renderCampusHome=renderEditorialHome;\n'+s[end:]
+          s=s.replace('<link rel="stylesheet" href="${b}campus.css">','<link rel="stylesheet" href="${b}campus.css"><link rel="stylesheet" href="${b}editorial.css">')
+          s=s.replace("html=html.replace('</header>','</header>'+toolbar);", "html=html.replace('<div class=\"footer-main\">',toolbar+'<div class=\"footer-main\">');\n html=html.replace(/<a class=\"nav-reading\"[\\s\\S]*?<\\/a>/,`<a class=\"nav-reading\" href=\"${route(l,'compare',b)}\" data-compare-nav>${e(c.compare)}<span class=\"compare-count\" data-compare-count>0</span></a>`);")
+          f.write_text(s.replace('0.4.0','0.5.0'))
+          f=Path('scripts/build.mjs');s=f.read_text().replace("version:'0.4.0'","version:'0.5.0'").replace('<link rel="stylesheet" href="${base}campus.css">','<link rel="stylesheet" href="${base}campus.css"><link rel="stylesheet" href="${base}editorial.css">');f.write_text(s)
+          f=Path('package.json');d=json.loads(f.read_text());d['version']='0.5.0';d['scripts']['test']+=' tests/design.test.mjs';f.write_text(json.dumps(d,indent=2)+'\n')
+          f=Path('tests/scope_e2e.py');f.write_text(f.read_text().replace("'0.4.0'","'0.5.0'").replace("page.locator('[data-compare-nav]').click()","page.locator('[data-compare-nav]').first.click()"))
+          f=Path('scripts/serve.mjs');f.write_text(f.read_text().replace('const mime={',"const mime={'.webp':'image/webp','.png':'image/png',"))
+          f=Path('tests/design.test.mjs');f.write_text(f.read_text()+"\ntest('preview server serves WebP and university PNG with image MIME types',()=>{const s=readFileSync(new URL('../scripts/serve.mjs',import.meta.url),'utf8');assert.ok(s.includes(\"'.webp':'image/webp'\"));assert.ok(s.includes(\"'.png':'image/png'\"));});\n")
+          PY
+      - name: Reuse the checksum-identified decorative image bytes
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api repos/OnourImpram/MARSAM/actions/artifacts/11174724873/zip > /tmp/water-assets.zip
+          python - <<'PY'
+          import zipfile,hashlib,json
+          from pathlib import Path
+          z=zipfile.ZipFile('/tmp/water-assets.zip');meta=json.loads(Path('docs/VISUAL_ASSET_PROVENANCE.json').read_text())
+          for name,info in meta['derivatives'].items():
+              data=z.read(name);assert hashlib.sha256(data).hexdigest()==info['sha256']
+              Path('public/assets',name).write_bytes(data)
+          PY
+      - name: Verify root and Pages builds, content boundaries and links
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p verification
+          npm run check | tee verification/editorial-root.log
+          BASE_PATH=/MARSAM/ PAGES_PREVIEW=true npm run check | tee verification/editorial-pages.log
+      - name: Install the test browser
+        run: |
+          python -m pip install -q playwright==1.57.0
+          python -m playwright install chromium
+      - name: Retest existing search, reading list and downloads
+        run: python tests/browser_e2e.py
+      - name: Test actual editorial layout and navigation
+        run: python tests/design_e2e.py
+      - name: Commit only the verified source to the working branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'Onour Impram'
+          git config user.email '215815131+OnourImpram@users.noreply.github.com'
+          git add src public scripts tests package.json docs/ELIF_DESIGN_LESSONS_TR.md docs/VISUAL_ASSET_PROVENANCE.json
+          git diff --cached --stat > verification/editorial-change-stat.txt
+          git commit -m 'design: refine MARSAM editorial hierarchy, imagery and eight-language reading experience'
+          git push origin HEAD:design/editorial-finish-20261001
+          git ls-tree -r HEAD > verification/editorial-source-tree.txt
+          git rev-parse HEAD > verification/editorial-source-sha.txt
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: marsam-editorial-verification
+          path: |
+            verification/editorial*
+            .browser-results/editorial/
+          include-hidden-files: true
+          retention-days: 7
