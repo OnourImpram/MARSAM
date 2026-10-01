@@ -1,11 +1,29 @@
-# MARSAM correction status
+# MARSAM. Canlı içerik düzeltmesi
 
-1 October 2026. Source version 0.4.0.
+1 Ekim 2026. Sürüm 0.4.0.
 
-The public institution-directory and external-event content introduced from design references has been removed. The homepage now opens with the full centre name and a broad research, education and practice remit. Personal research questions remain outside institutional messaging. The eight languages and Marmara planned-centre identity are preserved.
+## Canlı adres
 
-The corrected source passed content and generated-link checks, the existing real HTTP browser suite, and the new editorial-scope browser suite in run 36883795970. A narrow comparison-label correction was tested across all eight languages in run 36884574358. German grid and Russian heading overflow were reproduced and corrected without hiding page overflow.
+https://onourimpram.github.io/MARSAM/
 
-The source has been promoted without one-time migration or diagnostic workflows. Public deployment of this exact version is a separate operation. The live release receipt will be updated only after the current public files and interactions are verified. Older release receipts describe the previous version and are not evidence for this correction.
+Düzeltilmiş uygulama kodu MARSAM ana dalındadır. Yayımlanan uygulama commit'i `37fe3fe678ccb3854398b18db51f604a378e2f78`. Daha sonraki teslim kaydı değişiklikleri uygulama dosyalarını değiştirmez.
 
-This technical correction does not constitute scientific, native-language, institutional or independent accessibility approval.
+## Yapılan düzeltmeler
+
+Tasarım karşılaştırması amacıyla incelenen kurumların tanıtım kartları, isim vitrinleri, kurum dizini ve dış etkinlik kayıtları kamusal siteden kaldırıldı. Bunlar arama dizininde ve indirilen kaynak verilerinde de bulunmuyor. Eski kurum sayfaları yayın klasöründe bırakılmadı. Bilimsel makale, kitap ve mesleki rehberlerin kaynakça bilgileri tasarım referanslarından ayrı tutuldu.
+
+Ana sayfa sekiz dilde merkezin tam adıyla açılıyor. Kişisel araştırma sorusu ve buna dayanan tercih sloganı kurumsal açılıştan çıkarıldı. Merkezin kapsamı maneviyat ve ruh sağlığı alanında araştırma, eğitim, mesleki gelişim ve bilgi paylaşımı olarak düzenlendi. Menü ve çalışma alanları bu kapsamla eşleştirildi.
+
+Haber, etkinlik, proje ve video alanlarında onaylı içerik bulunmaması yabancı kurum kayıtlarıyla veya uydurma etkinliklerle kapatılmadı. Marmara Üniversitesi için planlanan merkez statüsü ve üniversitenin görsel işaretleri korundu. Sekiz dil, Arapça yönü, arama, okuma listesi, kaynak karşılaştırma ve gerçek dosya indirme işlevleri korundu.
+
+## Canlı doğrulama
+
+GitHub Pages dağıtım çalışması `36885792178` başarılı tamamlandı. Ardından `36885376516` çalışması doğrudan `https://onourimpram.github.io` üzerinden yayımlanan dosyaları ve etkileşimleri denetledi. Yeni sürümün 398 dosyası hash kayıtlarıyla eşleşti. Kaldırılan kurumsal içerik yollarından 40 adresin 404 döndürdüğü doğrulandı.
+
+Gerçek Chromium oturumlarında sekiz dil, dört ekran genişliği, ana başlık, mobil menü, kaynak seçimi, okuma listesi kalıcılığı, aynı sayfada dil değişimi ve yerel dosya indirmesi denetlendi. Türkçe, Arapça, Endonezce ve Malayca aramanın çalıştığı, eski referans kurum aramasının sonuç vermediği ayrıca kontrol edildi. Ana sayfanın masaüstü ve mobil ekran görüntüleri yayımlanan adresten alındı. Almanca kart taşması ve Rusça başlık taşması metin kaydırma düzenlenerek giderildi.
+
+Yayın deposunda yalnız MARSAM klasörü değiştirildi. Diğer bütün kök girdilerinin dosya veya ağaç hash'leri önceki sürümle aynı kaldı. Bir kerelik kaynak taşıma ve tanılama iş akışları MARSAM ana dalına taşınmadı.
+
+[Canlı doğrulama çalışması](https://github.com/OnourImpram/onourimpram.github.io/actions/runs/36885376516). [Makine tarafından okunabilir teslim kaydı](docs/LIVE_REVIEW_RELEASE.json).
+
+Bu denetim bağımsız erişilebilirlik sertifikası, bilimsel editör onayı veya ana dil uzmanı incelemesi değildir. Kurumsal kuruluş ve resmî yayın onayları ayrıca gereklidir. Tasarımın kullanıcıya uygunluğu teknik test sayısıyla eşitlenmez.
