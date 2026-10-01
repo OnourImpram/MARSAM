@@ -1,0 +1,52 @@
+name: Diagnose narrow institutional layout
+on:
+  push:
+    branches: [fix/institutional-content-scope]
+    paths: [.github/workflows/scope-diagnose.yml]
+permissions:
+  contents: read
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: |
+          python .github/apply-scope.py
+          BASE_PATH=/MARSAM/ PAGES_PREVIEW=true npm run build
+          python -m pip install playwright==1.57.0
+          python -m playwright install chromium
+      - name: Record overflowing elements and computed fonts
+        run: |
+          python - <<'PY'
+          import subprocess,os,time,json
+          from pathlib import Path
+          from playwright.sync_api import sync_playwright
+          out=Path('diagnostic');out.mkdir()
+          server=subprocess.Popen(['node','scripts/serve.mjs'],env={**os.environ,'PORT':'4197'})
+          time.sleep(1)
+          with sync_playwright()as p:
+              browser=p.chromium.launch()
+              results={}
+              for l in ['de','ru','ar','tr','en','zh','id','ms']:
+                  page=browser.new_page(viewport={'width':320,'height':960})
+                  page.goto('http://127.0.0.1:4197/MARSAM/'+l+'/',wait_until='networkidle')
+                  results[l]=page.evaluate("()=>({width:innerWidth,scroll:document.documentElement.scrollWidth,elements:[...document.querySelectorAll('body *')].map(e=>{const r=e.getBoundingClientRect(),c=getComputedStyle(e);return{tag:e.tagName,cls:e.className,text:e.innerText?.slice(0,120),left:r.left,right:r.right,width:r.width,font:c.fontFamily,word:c.overflowWrap,white:c.whiteSpace,display:c.display}}).filter(r=>r.width>0&&(r.right>321||r.left<-1))})")
+                  print(l,json.dumps(results[l],ensure_ascii=False))
+                  if results[l]['scroll']>321:page.screenshot(path=str(out/(l+'-320.png')),full_page=True)
+                  page.close()
+              (out/'rects.json').write_text(json.dumps(results,ensure_ascii=False,indent=2))
+              browser.close()
+          server.terminate();server.wait()
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: marsam-layout-diagnostic
+          path: diagnostic
+          retention-days: 3
