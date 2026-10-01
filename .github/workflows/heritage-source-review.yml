@@ -1,0 +1,51 @@
+name: Capture source and design references
+on:
+  push:
+    branches: [design/heritage-publications-20261001]
+    paths: [.github/workflows/heritage-source-review.yml]
+permissions:
+  contents: read
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 3232caf5a9c6f5eb7fc3cda5bd09b0c9ff300d8f
+      - name: Snapshot source and read-only reference documents
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p review
+          git archive HEAD --format=zip -o review/current-source.zip
+          python - <<'PY'
+          import json,subprocess,urllib.request
+          from pathlib import Path
+          repos=['dickwu/apple-design-skill','nexu-io/open-design','bergside/awesome-design-skills','pbakaus/impeccable','Leonxlnx/taste-skill','img2threejs/img2threejs','brijr/iris','nextlevelbuilder/ui-ux-pro-max-skill','OnourImpram/IAPOS']
+          out=Path('review/references');out.mkdir();ledger=[]
+          for repo in repos:
+              entry={'repo':repo};ledger.append(entry)
+              try:
+                  meta=json.loads(subprocess.check_output(['gh','api',f'repos/{repo}']))
+                  ref=meta['default_branch'];commit=json.loads(subprocess.check_output(['gh','api',f'repos/{repo}/commits/{ref}']))['sha'];entry['commit']=commit
+                  tree=json.loads(subprocess.check_output(['gh','api',f'repos/{repo}/git/trees/{commit}?recursive=1']))['tree']
+                  paths=[x['path']for x in tree if x['type']=='blob'];entry['license']=meta.get('license')
+                  root=out/repo.replace('/','__');root.mkdir();(root/'tree.txt').write_text('\n'.join(paths))
+                  selected=[p for p in paths if p in ['README.md','SKILL.md','LICENSE','LICENSE.md','NOTICE.md','skill/SKILL.src.md','references/02-citation-verification.md','references/03-academic-writing.md']]
+                  selected+= [p for p in paths if p.endswith('.md')and any(t in p.lower()for t in ['typography','color-and-contrast','spatial-design','responsive-design','ux-writing','apple-design/skill','design-taste/skill'])][:8]
+                  entry['files']=list(dict.fromkeys(selected))
+                  for path in entry['files']:
+                      u=f'https://raw.githubusercontent.com/{repo}/{commit}/{path}'
+                      data=urllib.request.urlopen(u,timeout=25).read()
+                      if len(data)>150000:continue
+                      f=root/path;f.parent.mkdir(parents=True,exist_ok=True);f.write_bytes(data)
+              except Exception as e:entry['error']=str(e)
+          Path('review/reference-ledger.json').write_text(json.dumps(ledger,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: marsam-heritage-source-review
+          path: review/
+          retention-days: 7
