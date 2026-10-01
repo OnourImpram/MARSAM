@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {renderCampusHome,decorate,institutions,events} from '../src/campus.mjs';
+import {renderCampusHome,decorate,institutions,events,campusCopy} from '../src/campus.mjs';
 import {locales,labels} from '../src/i18n.mjs';
 import {sources,resources,sections} from '../src/content.mjs';
 import {searchIndex} from '../src/site.mjs';
@@ -31,3 +31,5 @@ test('homepage leads to centre research, education and publications',()=>{
  const visible=h.replace(/<script[\s\S]*?<\/script>/g,'');assert.ok(!visible.includes('JSON'));assert.ok(!visible.includes('PARTIALLY_VERIFIED'));
  }
 });
+
+test('comparison summary row uses a concise field label',()=>{for(const l of locales)assert.ok(campusCopy[l].scope.length<35,l);});

@@ -12,7 +12,7 @@ import {institutions,collections,events} from './campus-data.mjs';
 import {parseSelection,eventState} from '../public/campus-core.js';
 export {campusCopy,institutions,collections,events,parseSelection,eventState};
 for(const l of locales){
- Object.assign(campusCopy[l],{scope:n.libraryLead[l],heroLead:n.lead[l],collections:n.areas[l],collectionLead:n.areasLead[l],events:n.events[l],eventsLead:n.eventLead[l],status:n.institutionNotice[l]});
+ Object.assign(campusCopy[l],{scope:C('Özet','Summary','Zusammenfassung','摘要','Краткое описание','ملخص','Ringkasan','Ringkasan')[l],heroLead:n.lead[l],collections:n.areas[l],collectionLead:n.areasLead[l],events:n.events[l],eventsLead:n.eventLead[l],status:n.institutionNotice[l]});
  for(const key of ['heroFirst','heroSecond','heroQuestion','question','institutionMap','mapLead'])delete campusCopy[l][key];
  Object.assign(labels[l],{preview:campusCopy[l].preview,previewNote:n.institutionNotice[l],heroText:n.lead[l],collections:n.areas[l],compare:campusCopy[l].compare,events:n.events[l],center:n.centre[l],research:n.research[l],learn:n.education[l],explore:n.resources[l],library:n.library[l],readings:n.readings[l],readingsIntro:n.readingsLead[l],selectedSources:n.library[l],selectedSourcesIntro:n.libraryLead[l],forYou:n.educationTitle[l],forYouIntro:n.educationLead[l],student:n.students[l],professional:n.professionals[l],researcher:n.researchers[l],learning:n.learning[l],media:n.media[l],news:n.news[l],projects:n.projects[l],practicePage:n.practiceTitle[l],footerLine:n.footer[l],featuredTitle:labels[l].brand,browse:n.viewLibrary[l],startLearning:n.viewEducation[l],heroTitle:labels[l].brand,heroAccent:n.research[l]});
 }
