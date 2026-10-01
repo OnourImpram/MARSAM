@@ -17,21 +17,21 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Restore the exact failed-test artifact without publishing
+      - name: Restore the exact post-fix artifact
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh api repos/OnourImpram/MARSAM/actions/artifacts/11165407466/zip > /tmp/campus.zip
+          gh api repos/OnourImpram/MARSAM/actions/artifacts/11164934239/zip > /tmp/campus.zip
           python - <<'PY'
           import hashlib,zipfile,pathlib
           p=pathlib.Path('/tmp/campus.zip')
-          assert hashlib.sha256(p.read_bytes()).hexdigest()=='8e442b72ba25ca5afc98c9cf8ebd41019287332bc18da450fa3f3121f5a7a566'
+          assert hashlib.sha256(p.read_bytes()).hexdigest()=='beadfdd95f9e5ef6393c4524ad4c810af39a96cb69043dfd7ade42cfa0789153'
           z=zipfile.ZipFile(p)
           for n in z.namelist():
             if n.startswith(('src/','public/','scripts/','tests/','dist/')) or n=='package.json':z.extract(n,'.')
           PY
       - run: pip install playwright==1.57.0 && python -m playwright install --with-deps chromium
-      - name: Measure actual overflowing elements
+      - name: Measure remaining overflow after fonts and modules load
         run: |
           mkdir -p diagnostic
           python - <<'PY'
@@ -43,11 +43,11 @@ jobs:
             with sync_playwright() as p:
               b=p.chromium.launch();page=b.new_page()
               for l in ['tr','en','de','zh','ru','ar','id','ms']:
-                for w in [320,390,768,1440]:
+                for w in [320,390,768]:
                   page.set_viewport_size({'width':w,'height':900})
-                  for suffix in ['', 'collections/', 'compare/', 'events/', 'network/', 'library/', 'resource/spiritual-competence/']:
+                  for suffix in ['', 'collections/', 'compare/', 'events/', 'network/']:
                     page.goto(f'http://127.0.0.1:4173/{l}/{suffix}',wait_until='networkidle')
-                    v=page.evaluate('''({vw:innerWidth,sw:document.documentElement.scrollWidth,elements:[...document.querySelectorAll('body *')].filter(x=>{let r=x.getBoundingClientRect();return r.right>innerWidth+1||r.left< -1}).slice(0,30).map(x=>({tag:x.tagName,cls:typeof x.className==='string'?x.className:'svg',rect:{l:x.getBoundingClientRect().left,r:x.getBoundingClientRect().right,w:x.getBoundingClientRect().width},font:getComputedStyle(x).font,text:x.textContent?.slice(0,100)}))})''')
+                    v=page.evaluate('''({vw:innerWidth,sw:document.documentElement.scrollWidth,styles:[...document.styleSheets].map(s=>({url:s.href,rules:s.cssRules.length})),nav:{open:document.querySelector('.mobile-nav').open,display:getComputedStyle(document.querySelector('.mobile-nav nav')).display},elements:[...document.querySelectorAll('body *')].filter(x=>{let r=x.getBoundingClientRect();return r.right>innerWidth+1||r.left< -1}).slice(0,30).map(x=>({tag:x.tagName,cls:typeof x.className==='string'?x.className:'svg',rect:{l:x.getBoundingClientRect().left,r:x.getBoundingClientRect().right,w:x.getBoundingClientRect().width},font:getComputedStyle(x).font,whiteSpace:getComputedStyle(x).whiteSpace,overflowWrap:getComputedStyle(x).overflowWrap,display:getComputedStyle(x).display,text:x.textContent?.slice(0,120)}))})''')
                     if v['sw']>w+1:
                       name=f'{l}-{suffix.replace("/", "-") or "home"}-{w}'
                       results.append({'page':name,**v});page.screenshot(path=f'diagnostic/{name}.png',full_page=True)
