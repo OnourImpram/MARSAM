@@ -1,0 +1,46 @@
+name: Observe existing design before refinement
+on:
+  push:
+    branches: [design/editorial-finish-20261001]
+    paths: [.github/workflows/design-observe.yml]
+permissions:
+  contents: read
+jobs:
+  observe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - name: Archive the exact current application
+        run: |
+          mkdir -p observation
+          git archive 3155cc8b82289d5014eade7cebb9724941e36051 --format=zip -o observation/source-baseline.zip
+          git ls-tree -r 3155cc8b82289d5014eade7cebb9724941e36051 > observation/source-tree.txt
+      - name: Inspect live Elif and MARSAM without modifying either
+        run: |
+          python -m pip install -q playwright==1.57.0
+          python -m playwright install chromium
+          python - <<'PY'
+          from playwright.sync_api import sync_playwright
+          from pathlib import Path
+          import json
+          out=Path('observation');results={}
+          with sync_playwright() as p:
+              browser=p.chromium.launch()
+              for name,url in [('elif','https://onourimpram.github.io/elif-tasarim/'),('marsam','https://onourimpram.github.io/MARSAM/tr/')]:
+                  results[name]={}
+                  for width in [390,1440]:
+                      page=browser.new_page(viewport={'width':width,'height':1000})
+                      page.goto(url,wait_until='networkidle');page.wait_for_timeout(1000)
+                      page.screenshot(path=str(out/f'{name}-{width}-top.png'))
+                      page.screenshot(path=str(out/f'{name}-{width}-full.png'),full_page=True)
+                      results[name][str(width)]=page.evaluate('''()=>({title:document.title,headings:[...document.querySelectorAll('h1,h2,h3')].map(e=>({tag:e.tagName,text:e.textContent,font:getComputedStyle(e).fontFamily,size:getComputedStyle(e).fontSize})),images:[...document.images].map(e=>({src:e.currentSrc,alt:e.alt,width:e.width,height:e.height})),styles:[...document.querySelectorAll('link[rel="stylesheet"]')].map(e=>e.href),links:[...document.querySelectorAll('header a')].map(e=>({text:e.innerText,url:e.href})),height:document.documentElement.scrollHeight})''')
+                      page.close()
+              browser.close()
+          (out/'live-design-observations.json').write_text(json.dumps(results,ensure_ascii=False,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: marsam-elif-design-baseline
+          path: observation/
+          retention-days: 7
