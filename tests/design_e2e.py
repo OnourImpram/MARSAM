@@ -22,7 +22,7 @@ try:
    try:urllib.request.urlopen(origin+base+'tr/',timeout=1);break
    except Exception:time.sleep(.1)
  with sync_playwright() as p:
-  browser=p.chromium.launch()
+  browser=p.chromium.launch(**({'executable_path':os.environ['PLAYWRIGHT_CHROMIUM_EXECUTABLE'],'args':['--no-sandbox']} if os.getenv('PLAYWRIGHT_CHROMIUM_EXECUTABLE') else {}))
   for l in m['locales']:
    ctx=browser.new_context(accept_downloads=True,reduced_motion='reduce')
    page=ctx.new_page();page.on('pageerror',lambda error:errors.append(str(error)))

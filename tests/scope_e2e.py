@@ -35,7 +35,7 @@ try:
      response=page.goto(origin+base+l+'/'+path,wait_until='networkidle')
      ck('HTTP '+l+'/'+path+' '+str(width),response.status==200)
      ck('viewport '+l+'/'+path+' '+str(width),page.evaluate('document.documentElement.scrollWidth<=innerWidth+1'))
-     ck('current release '+l+'/'+path,page.locator('body').get_attribute('data-release')=='0.5.0')
+     ck('current release '+l+'/'+path,page.locator('body').get_attribute('data-release')=='0.6.0')
      if not path:
       data=json.loads(page.locator('#ui-data').text_content())
       ck('actual institutional heading '+l,page.locator('h1').inner_text()==data['labels']['brand'])
@@ -69,5 +69,5 @@ try:
 finally:
  if server:server.terminate();server.wait(timeout=10)
  (ROOT/'verification').mkdir(exist_ok=True)
- (ROOT/'verification/scope-browser.json').write_text(json.dumps({'origin':origin,'release':'0.5.0','checks':checks,'errors':errors,'passed':sum(c['passed']for c in checks),'total':len(checks),'scientificApproval':False},ensure_ascii=False,indent=2))
+ (ROOT/'verification/scope-browser.json').write_text(json.dumps({'origin':origin,'release':'0.6.0','checks':checks,'errors':errors,'passed':sum(c['passed']for c in checks),'total':len(checks),'scientificApproval':False},ensure_ascii=False,indent=2))
 print(json.dumps({'passed':len(checks),'origin':origin}))

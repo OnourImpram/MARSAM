@@ -14,18 +14,18 @@ test('refined home has an explicit editorial hierarchy rather than the former re
 });
 test('hero artwork is responsive and decorative, not falsely attributed campus photography',()=>{
  const h=renderCampusHome('tr','/MARSAM/');
- assert.ok(h.includes('water-1440.webp'));assert.ok(h.includes('water-640.webp'));
+ assert.ok(h.includes('ebru-marbling.webp'));assert.ok(h.includes('ebru-marbling-small.webp'));
  assert.match(h,/<img[^>]+class="hero-water"[^>]+alt=""/);
  assert.equal((h.match(/fetchpriority="high"/g)||[]).length,1);
 });
 test('design keeps the real sources, pathways and direct comparison controls',()=>{
  for(const l of locales){const h=decorate(renderCampusHome(l,'/MARSAM/'),l,'','/MARSAM/');
   for(const path of ['collections','library','learning','projects','events','media','compare'])assert.ok(h.includes(`/${l}/${path}/`));
-  assert.ok(h.includes('data-compare-nav'));assert.ok(h.includes('data-release="0.5.0"'));
+  assert.ok(h.includes('data-compare-nav'));assert.ok(h.includes('data-release="0.6.0"'));
   assert.equal((h.match(/class="learning-choice"/g)||[]).length,3);
   assert.ok(h.includes('editorial.css'));
  }
- assert.equal(resources.length,12);
+ assert.equal(resources.length,27);
 });
 test('refinement has reduced-motion, print and RTL rules without hidden content tricks',()=>{
  assert.ok(existsSync(new URL('../public/editorial.css',import.meta.url)));

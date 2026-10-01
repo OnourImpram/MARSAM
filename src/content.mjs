@@ -67,3 +67,10 @@ export const topics={
 import {regionalSources,regionalResources} from './regional.mjs';
 sources.push(...regionalSources);
 resources.push(...regionalResources);
+
+import {applyPublications} from './publications-data.mjs';
+applyPublications(sources,resources);
+typeKeys.book='metaBook';
+
+import {h as heritageLabels} from './heritage-copy.mjs';
+for(const id of ['publications','books'])if(!sections.some(s=>s.id===id))sections.push({id,title:heritageLabels[id],summary:heritageLabels[id+'Lead'],group:'explore',topic:'theory'});

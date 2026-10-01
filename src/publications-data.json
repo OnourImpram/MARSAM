@@ -1,0 +1,1216 @@
+{
+  "checked": "2026-10-01",
+  "scope": "A dated editorial selection, not an exhaustive publication list or a centre staff roster.",
+  "books": [
+    {
+      "id": "trauma-spirituality",
+      "sourceId": "s-trauma-spirituality",
+      "title": "Travmanın İzinde Maneviyat: Bütüncül Bir Psikoterapi Rehberi",
+      "year": 2026,
+      "url": "https://www.nobelyayin.com/travmanin-izinde-maneviyat-butuncul-bir-psikoterapi-rehberi-23386.html",
+      "display": {
+        "tr": "Travmanın İzinde Maneviyat",
+        "en": "Spirituality in the Wake of Trauma",
+        "de": "Spiritualität im Kontext von Trauma",
+        "zh": "创伤历程中的灵性",
+        "ru": "Духовность в контексте травмы",
+        "ar": "الروحانية في سياق الصدمة",
+        "id": "Spiritualitas dalam Jejak Trauma",
+        "ms": "Kerohanian dalam Jejak Trauma"
+      },
+      "summary": {
+        "tr": "Travma ve maneviyatı psikoterapi bağlamında ele alan, Eylül 2026 tarihli derleme kitap.",
+        "en": "A September 2026 edited volume addressing trauma and spirituality in psychotherapy.",
+        "de": "Ein im September 2026 erschienener Sammelband über Trauma und Spiritualität in der Psychotherapie.",
+        "zh": "2026年9月出版的编著，在心理治疗情境中讨论创伤与灵性。",
+        "ru": "Коллективная книга сентября 2026 года о травме и духовности в психотерапии.",
+        "ar": "كتاب جماعي صدر في سبتمبر 2026 يتناول الصدمة والروحانية في العلاج النفسي.",
+        "id": "Buku suntingan September 2026 tentang trauma dan spiritualitas dalam psikoterapi.",
+        "ms": "Buku suntingan September 2026 tentang trauma dan kerohanian dalam psikoterapi."
+      },
+      "topic": "theory",
+      "sections": [
+        "library",
+        "books",
+        "learning"
+      ],
+      "kind": "book",
+      "language": "tr",
+      "bibliography": {
+        "type": "book",
+        "collection": "books",
+        "date": "2026-09",
+        "isbn": "978-625-8804-58-4",
+        "pages": "384",
+        "edition": "1",
+        "authors": [],
+        "editors": [
+          "Halil Ekşi"
+        ],
+        "contributors": [
+          "Cemile Edibe Okur",
+          "Fatma Sevim",
+          "Halil Ekşi",
+          "Hatice Selman",
+          "Okan Tiring"
+        ],
+        "publisher": "Nobel Akademik Yayıncılık",
+        "identityVerified": true,
+        "identitySources": [
+          "https://www.nobelyayin.com/travmanin-izinde-maneviyat-butuncul-bir-psikoterapi-rehberi-23386.html"
+        ],
+        "note": {
+          "tr": "Baskı bilgisi yayınevi kaydına dayanır. Tanıtım özeti, etkililik değerlendirmesi veya tam metin incelemesi değildir.",
+          "en": "Edition details follow the publisher. This catalogue summary is not an efficacy assessment or full-text review.",
+          "de": "Die Auflage folgt dem Verlag. Die Katalogbeschreibung ist keine Wirksamkeitsbewertung oder Volltextprüfung.",
+          "zh": "版次信息依据出版社记录。此目录简介并非疗效评价或全文审读。",
+          "ru": "Сведения об издании взяты у издателя. Описание не является оценкой эффективности или анализом полного текста.",
+          "ar": "تفاصيل الطبعة وفق سجل الناشر. الملخص الفهرسي ليس تقييماً للفعالية أو مراجعة للنص الكامل.",
+          "id": "Rincian edisi mengikuti penerbit. Ringkasan katalog bukan penilaian efektivitas atau telaah teks lengkap.",
+          "ms": "Butiran edisi mengikut penerbit. Ringkasan katalog bukan penilaian keberkesanan atau ulasan teks penuh."
+        },
+        "cover": "assets/heritage/trauma-spirituality.webp"
+      },
+      "citation": "Halil Ekşi (Ed.). (2026). Travmanın İzinde Maneviyat: Bütüncül Bir Psikoterapi Rehberi. Nobel Akademik Yayıncılık. ISBN 978-625-8804-58-4."
+    },
+    {
+      "id": "spiritual-counselling-book",
+      "sourceId": "s-spiritual-counselling-book",
+      "title": "Manevi Yönelimli Psikolojik Danışma",
+      "year": 2024,
+      "url": "https://www.nobelyayin.com/manevi-yonelimli-psikolojik-danisma-15894.html",
+      "display": {
+        "tr": "Manevi Yönelimli Psikolojik Danışma",
+        "en": "Spiritually Oriented Psychological Counselling",
+        "de": "Spirituell orientierte psychologische Beratung",
+        "zh": "灵性取向心理咨询",
+        "ru": "Духовно ориентированное психологическое консультирование",
+        "ar": "الإرشاد النفسي ذو التوجه الروحي",
+        "id": "Konseling Psikologis Berorientasi Spiritual",
+        "ms": "Kaunseling Psikologi Berorientasikan Kerohanian"
+      },
+      "summary": {
+        "tr": "Kavramsal temeller, kültür, ölçme, uygulama ve etik. Güncellenmiş üçüncü baskı.",
+        "en": "Conceptual foundations, culture, assessment, practice and ethics. Updated third edition.",
+        "de": "Grundlagen, Kultur, Diagnostik, Praxis und Ethik. Aktualisierte dritte Auflage.",
+        "zh": "涵盖概念基础、文化、评估、实践与伦理。修订第三版。",
+        "ru": "Основы, культура, оценка, практика и этика. Обновлённое третье издание.",
+        "ar": "الأسس المفاهيمية والثقافة والتقييم والممارسة والأخلاق. الطبعة الثالثة المحدثة.",
+        "id": "Landasan konseptual, budaya, asesmen, praktik, dan etika. Edisi ketiga yang diperbarui.",
+        "ms": "Asas konsep, budaya, penilaian, amalan dan etika. Edisi ketiga yang dikemas kini."
+      },
+      "topic": "theory",
+      "sections": [
+        "library",
+        "books",
+        "learning"
+      ],
+      "kind": "book",
+      "language": "tr",
+      "bibliography": {
+        "type": "book",
+        "collection": "books",
+        "date": "2024-10",
+        "isbn": "978-605-033-256-8",
+        "pages": "384",
+        "edition": "3",
+        "authors": [],
+        "editors": [
+          "Halil Ekşi"
+        ],
+        "contributors": [
+          "Ayşenur Yabanigül",
+          "Berra Keçeci",
+          "Beyza Kırca",
+          "Bilge Nuran Aydoğdu",
+          "Çınar Kaya",
+          "Çiğdem Demir Çelebi",
+          "Dilek Akça Koca",
+          "Figen Kasapoğlu",
+          "Gökhan Özcan",
+          "Gülşen Özgen",
+          "Halil Ekşi",
+          "Hatun Sevgi Yalin",
+          "Kübra Kaplaner",
+          "M. Şerif Keskinoğlu",
+          "Neslihan Yaman",
+          "Nesrullah Okan",
+          "Özge Erduran Tekin",
+          "Tuğba Türk",
+          "Vildan Saruhan",
+          "Yahya Şahin",
+          "Yakup İme",
+          "Zehra Eminoğlu"
+        ],
+        "publisher": "Nobel Akademik Yayıncılık",
+        "identityVerified": true,
+        "identitySources": [
+          "https://www.nobelyayin.com/manevi-yonelimli-psikolojik-danisma-15894.html"
+        ],
+        "note": {
+          "tr": "Baskı bilgisi yayınevi kaydına dayanır. Tanıtım özeti, etkililik değerlendirmesi veya tam metin incelemesi değildir.",
+          "en": "Edition details follow the publisher. This catalogue summary is not an efficacy assessment or full-text review.",
+          "de": "Die Auflage folgt dem Verlag. Die Katalogbeschreibung ist keine Wirksamkeitsbewertung oder Volltextprüfung.",
+          "zh": "版次信息依据出版社记录。此目录简介并非疗效评价或全文审读。",
+          "ru": "Сведения об издании взяты у издателя. Описание не является оценкой эффективности или анализом полного текста.",
+          "ar": "تفاصيل الطبعة وفق سجل الناشر. الملخص الفهرسي ليس تقييماً للفعالية أو مراجعة للنص الكامل.",
+          "id": "Rincian edisi mengikuti penerbit. Ringkasan katalog bukan penilaian efektivitas atau telaah teks lengkap.",
+          "ms": "Butiran edisi mengikut penerbit. Ringkasan katalog bukan penilaian keberkesanan atau ulasan teks penuh."
+        },
+        "cover": "assets/heritage/spiritual-counselling-book.webp",
+        "editionUpdated": true
+      },
+      "citation": "Halil Ekşi (Ed.). (2024). Manevi Yönelimli Psikolojik Danışma. Nobel Akademik Yayıncılık. ISBN 978-605-033-256-8."
+    },
+    {
+      "id": "discovering-spirituality",
+      "sourceId": "s-discovering-spirituality",
+      "title": "Maneviyatın Keşfi: 21 Boyutta Kendi Kendine Yardım Kılavuzu",
+      "year": 2024,
+      "url": "https://www.nobelyayin.com/maneviyatin-kesfi-21-boyutta-kendi-kendine-yardim-kilavuzu-21519.html",
+      "display": {
+        "tr": "Maneviyatın Keşfi",
+        "en": "Exploring Spirituality",
+        "de": "Spiritualität entdecken",
+        "zh": "探索灵性",
+        "ru": "Открывая духовность",
+        "ar": "اكتشاف الروحانية",
+        "id": "Menjelajahi Spiritualitas",
+        "ms": "Meneroka Kerohanian"
+      },
+      "summary": {
+        "tr": "Maneviyatı 21 boyut üzerinden ele alan, kendi kendine yardım odaklı bir kitap.",
+        "en": "A self-help-oriented book exploring spirituality through 21 dimensions.",
+        "de": "Ein Selbsthilfebuch über 21 Dimensionen der Spiritualität.",
+        "zh": "从21个维度探索灵性的自助类书籍。",
+        "ru": "Книга самопомощи, рассматривающая 21 измерение духовности.",
+        "ar": "كتاب للمساعدة الذاتية يستكشف الروحانية عبر واحد وعشرين بُعداً.",
+        "id": "Buku bantuan diri yang membahas spiritualitas melalui 21 dimensi.",
+        "ms": "Buku bantuan kendiri yang membincangkan kerohanian melalui 21 dimensi."
+      },
+      "topic": "theory",
+      "sections": [
+        "library",
+        "books",
+        "learning"
+      ],
+      "kind": "book",
+      "language": "tr",
+      "bibliography": {
+        "type": "book",
+        "collection": "books",
+        "date": "2024-10",
+        "isbn": "978-625-371-703-2",
+        "pages": "374",
+        "edition": "1",
+        "authors": [
+          "Halil Ekşi",
+          "Dilek Günel",
+          "Ece Yağcı Akgündüz",
+          "Emre Gürkan",
+          "Fadile Zeynep Çavuş",
+          "Yasemin Altıntaş"
+        ],
+        "editors": [],
+        "contributors": [],
+        "publisher": "Nobel Akademik Yayıncılık",
+        "identityVerified": true,
+        "identitySources": [
+          "https://www.nobelyayin.com/maneviyatin-kesfi-21-boyutta-kendi-kendine-yardim-kilavuzu-21519.html"
+        ],
+        "note": {
+          "tr": "Baskı bilgisi yayınevi kaydına dayanır. Tanıtım özeti, etkililik değerlendirmesi veya tam metin incelemesi değildir.",
+          "en": "Edition details follow the publisher. This catalogue summary is not an efficacy assessment or full-text review.",
+          "de": "Die Auflage folgt dem Verlag. Die Katalogbeschreibung ist keine Wirksamkeitsbewertung oder Volltextprüfung.",
+          "zh": "版次信息依据出版社记录。此目录简介并非疗效评价或全文审读。",
+          "ru": "Сведения об издании взяты у издателя. Описание не является оценкой эффективности или анализом полного текста.",
+          "ar": "تفاصيل الطبعة وفق سجل الناشر. الملخص الفهرسي ليس تقييماً للفعالية أو مراجعة للنص الكامل.",
+          "id": "Rincian edisi mengikuti penerbit. Ringkasan katalog bukan penilaian efektivitas atau telaah teks lengkap.",
+          "ms": "Butiran edisi mengikut penerbit. Ringkasan katalog bukan penilaian keberkesanan atau ulasan teks penuh."
+        },
+        "cover": "assets/heritage/discovering-spirituality.webp"
+      },
+      "citation": "Halil Ekşi, Dilek Günel, Ece Yağcı Akgündüz, Emre Gürkan, Fadile Zeynep Çavuş, Yasemin Altıntaş. (2024). Maneviyatın Keşfi: 21 Boyutta Kendi Kendine Yardım Kılavuzu. Nobel Akademik Yayıncılık. ISBN 978-625-371-703-2."
+    },
+    {
+      "id": "spiritual-practices",
+      "sourceId": "s-spiritual-practices",
+      "title": "Manevi Yaşam Pratikleri",
+      "year": 2024,
+      "url": "https://www.nobelyayin.com/manevi-yasam-pratikleri-21520.html",
+      "display": {
+        "tr": "Manevi Yaşam Pratikleri",
+        "en": "Practices for Spiritual Living",
+        "de": "Spirituelle Lebenspraxis",
+        "zh": "灵性生活实践",
+        "ru": "Практики духовной жизни",
+        "ar": "ممارسات الحياة الروحية",
+        "id": "Praktik Kehidupan Spiritual",
+        "ms": "Amalan Kehidupan Rohani"
+      },
+      "summary": {
+        "tr": "Manevi yaşamı günlük pratikler ve kendi kendine yardım çerçevesinde ele alan kitap.",
+        "en": "A book on spiritual living through everyday practices and self-help.",
+        "de": "Ein Buch über spirituelles Leben, Alltagspraxis und Selbsthilfe.",
+        "zh": "以日常实践和自助为视角讨论灵性生活的书籍。",
+        "ru": "Книга о духовной жизни, повседневных практиках и самопомощи.",
+        "ar": "كتاب يتناول الحياة الروحية عبر الممارسات اليومية والمساعدة الذاتية.",
+        "id": "Buku tentang kehidupan spiritual melalui praktik sehari-hari dan bantuan diri.",
+        "ms": "Buku tentang kehidupan rohani melalui amalan harian dan bantuan kendiri."
+      },
+      "topic": "theory",
+      "sections": [
+        "library",
+        "books",
+        "learning"
+      ],
+      "kind": "book",
+      "language": "tr",
+      "bibliography": {
+        "type": "book",
+        "collection": "books",
+        "date": "2024-10",
+        "isbn": "978-625-371-699-8",
+        "pages": "184",
+        "edition": "1",
+        "authors": [],
+        "editors": [
+          "Halil Ekşi"
+        ],
+        "contributors": [],
+        "publisher": "Nobel Akademik Yayıncılık",
+        "identityVerified": true,
+        "identitySources": [
+          "https://www.nobelyayin.com/manevi-yasam-pratikleri-21520.html",
+          "https://www.researchgate.net/publication/386370581_Manevi_Yasam_Pratikleri"
+        ],
+        "note": {
+          "tr": "Yayınevi sayfası Halil Ekşi’yi yazar, kendisinin paylaştığı iç kapak ise editör olarak belirtir. Editör kaydı iç kapağı izler.",
+          "en": "The publisher page lists Halil Ekşi as author, while his shared title page says editor. The editor field follows the title page.",
+          "de": "Der Verlag nennt Halil Ekşi als Autor, sein geteiltes Titelblatt als Herausgeber. Das Herausgeberfeld folgt dem Titelblatt.",
+          "zh": "出版社页面列Halil Ekşi为作者，他分享的内封则列为主编。此处主编字段依据内封。",
+          "ru": "Издатель указывает Halil Ekşi как автора, опубликованный им титульный лист как редактора. Поле редактора следует титульному листу.",
+          "ar": "يسجّل الناشر Halil Ekşi مؤلفاً، بينما تذكر صفحة العنوان التي نشرها أنه محرر. حقل المحرر يتبع صفحة العنوان.",
+          "id": "Penerbit mencantumkan Halil Ekşi sebagai penulis, tetapi halaman judul yang ia bagikan menyebut editor. Kolom editor mengikuti halaman judul.",
+          "ms": "Penerbit menyenaraikan Halil Ekşi sebagai penulis, tetapi halaman judul yang dikongsinya menyebut editor. Ruangan editor mengikut halaman judul."
+        },
+        "cover": "assets/heritage/spiritual-practices.webp",
+        "creditConflict": true
+      },
+      "citation": "Halil Ekşi (Ed.). (2024). Manevi Yaşam Pratikleri. Nobel Akademik Yayıncılık. ISBN 978-625-371-699-8."
+    },
+    {
+      "id": "theories-book",
+      "sourceId": "s-eksi",
+      "title": "Psikoterapi ve Psikolojik Danışma Kuramları: Manevi Boyutlarıyla",
+      "year": 2024,
+      "url": "https://www.kaknus.com.tr/urun/psikoterapi-ve-psikolojik-danisma-kuramlari/",
+      "display": {
+        "tr": "Psikoterapi ve Psikolojik Danışma Kuramları",
+        "en": "Psychotherapy and Counselling Theories",
+        "de": "Psychotherapie- und Beratungstheorien",
+        "zh": "心理治疗与咨询理论",
+        "ru": "Теории психотерапии и консультирования",
+        "ar": "نظريات العلاج النفسي والإرشاد",
+        "id": "Teori Psikoterapi dan Konseling",
+        "ms": "Teori Psikoterapi dan Kaunseling"
+      },
+      "summary": {
+        "tr": "Farklı psikoterapi kuramlarının manevi boyutlarını inceleyen, Halil Ekşi editörlüğündeki çok yazarlı eser.",
+        "en": "An edited collection examining the spiritual dimensions of different psychotherapy theories.",
+        "de": "Ein Sammelband über die spirituellen Dimensionen unterschiedlicher Psychotherapietheorien.",
+        "zh": "探讨不同心理治疗理论之灵性维度的多作者编著。",
+        "ru": "Коллективная книга о духовных измерениях различных теорий психотерапии.",
+        "ar": "كتاب جماعي يستكشف الأبعاد الروحية لنظريات مختلفة في العلاج النفسي.",
+        "id": "Kumpulan tulisan yang mengkaji dimensi spiritual berbagai teori psikoterapi.",
+        "ms": "Himpunan tulisan yang meneliti dimensi kerohanian pelbagai teori psikoterapi."
+      },
+      "topic": "theory",
+      "sections": [
+        "library",
+        "books",
+        "learning"
+      ],
+      "kind": "book",
+      "language": "tr",
+      "bibliography": {
+        "type": "book",
+        "collection": "books",
+        "date": "2024",
+        "isbn": "978-975-256-715-3",
+        "pages": "784",
+        "edition": "1",
+        "authors": [],
+        "editors": [
+          "Halil Ekşi"
+        ],
+        "contributors": [
+          "Ayfer Summermatter",
+          "Betül Gülcan Çakmak",
+          "Bülent Dilmaç",
+          "Büşra Ünverdi Demir",
+          "Cem Boyalı",
+          "Erdem Sevim",
+          "Gökhan Özcan",
+          "Gülşen Topal Özgen",
+          "Hale Nur Kılıç Memur",
+          "Halil Ekşi",
+          "Hatice Hilal Saçar",
+          "Hatun Sevgi Yalın",
+          "Merve Baysal",
+          "Merve Nur Çınar",
+          "Nesrullah Okan",
+          "Oğuzhan Yavuz",
+          "Pınar Özdemir",
+          "Selami Kardaş",
+          "Tuğba Turgut",
+          "Tuğba Türk Kurtça",
+          "Vedat Bakır",
+          "Yakup Özkapu",
+          "Zeynep Şimşir Gökalp"
+        ],
+        "publisher": "Kaknüs Yayınları",
+        "identityVerified": true,
+        "identitySources": [
+          "https://www.kaknus.com.tr/urun/psikoterapi-ve-psikolojik-danisma-kuramlari/"
+        ],
+        "note": {
+          "tr": "Baskı bilgisi yayınevi kaydına dayanır. Tanıtım özeti, etkililik değerlendirmesi veya tam metin incelemesi değildir.",
+          "en": "Edition details follow the publisher. This catalogue summary is not an efficacy assessment or full-text review.",
+          "de": "Die Auflage folgt dem Verlag. Die Katalogbeschreibung ist keine Wirksamkeitsbewertung oder Volltextprüfung.",
+          "zh": "版次信息依据出版社记录。此目录简介并非疗效评价或全文审读。",
+          "ru": "Сведения об издании взяты у издателя. Описание не является оценкой эффективности или анализом полного текста.",
+          "ar": "تفاصيل الطبعة وفق سجل الناشر. الملخص الفهرسي ليس تقييماً للفعالية أو مراجعة للنص الكامل.",
+          "id": "Rincian edisi mengikuti penerbit. Ringkasan katalog bukan penilaian efektivitas atau telaah teks lengkap.",
+          "ms": "Butiran edisi mengikut penerbit. Ringkasan katalog bukan penilaian keberkesanan atau ulasan teks penuh."
+        },
+        "cover": "assets/heritage/theories-book.webp"
+      },
+      "citation": "Halil Ekşi (Ed.). (2024). Psikoterapi ve Psikolojik Danışma Kuramları: Manevi Boyutlarıyla. Kaknüs Yayınları. ISBN 978-975-256-715-3."
+    },
+    {
+      "id": "techniques-101",
+      "sourceId": "s-techniques-101",
+      "title": "Psikoterapi ve Psikolojik Danışmada Manevi Yönelimli 101 Teknik",
+      "year": 2024,
+      "url": "https://www.nobelyayin.com/psikoterapi-ve-psikolojik-danismada-manevi-yonelimli-101-teknik-18476.html",
+      "display": {
+        "tr": "Manevi Yönelimli 101 Teknik",
+        "en": "101 Spiritually Oriented Techniques",
+        "de": "101 spirituell orientierte Techniken",
+        "zh": "101种灵性取向技术",
+        "ru": "101 духовно ориентированная техника",
+        "ar": "101 تقنية ذات توجه روحي",
+        "id": "101 Teknik Berorientasi Spiritual",
+        "ms": "101 Teknik Berorientasikan Kerohanian"
+      },
+      "summary": {
+        "tr": "Psikolojik danışma ve psikoterapide manevi yönelimli teknikleri bir araya getiren başvuru kitabı.",
+        "en": "A reference volume bringing together spiritually oriented techniques for counselling and psychotherapy.",
+        "de": "Ein Nachschlagewerk über spirituell orientierte Techniken in Beratung und Psychotherapie.",
+        "zh": "汇集心理咨询与心理治疗中灵性取向技术的参考书。",
+        "ru": "Справочное издание о духовно ориентированных техниках консультирования и психотерапии.",
+        "ar": "مرجع يجمع تقنيات ذات توجه روحي للإرشاد والعلاج النفسي.",
+        "id": "Buku referensi yang menghimpun teknik berorientasi spiritual untuk konseling dan psikoterapi.",
+        "ms": "Buku rujukan yang menghimpunkan teknik berorientasikan kerohanian untuk kaunseling dan psikoterapi."
+      },
+      "topic": "theory",
+      "sections": [
+        "library",
+        "books",
+        "learning"
+      ],
+      "kind": "book",
+      "language": "tr",
+      "bibliography": {
+        "type": "book",
+        "collection": "books",
+        "date": "2024-01",
+        "isbn": "978-625-417-915-0",
+        "pages": "610",
+        "edition": "2",
+        "authors": [],
+        "editors": [
+          "Halil Ekşi"
+        ],
+        "contributors": [
+          "Betül Gülcan Çakmak",
+          "Büşra Ünverdi",
+          "Cem Boyalı",
+          "Halil Ekşi",
+          "Hatice Hilal Saçar",
+          "M. Şerif Keskinoğlu",
+          "Merve Emre",
+          "Merve Nur Çınar",
+          "Oğuzhan Yavuz",
+          "Yakup Özkapu"
+        ],
+        "publisher": "Nobel Akademik Yayıncılık",
+        "identityVerified": true,
+        "identitySources": [
+          "https://www.nobelyayin.com/psikoterapi-ve-psikolojik-danismada-manevi-yonelimli-101-teknik-18476.html"
+        ],
+        "note": {
+          "tr": "Baskı bilgisi yayınevi kaydına dayanır. Tanıtım özeti, etkililik değerlendirmesi veya tam metin incelemesi değildir.",
+          "en": "Edition details follow the publisher. This catalogue summary is not an efficacy assessment or full-text review.",
+          "de": "Die Auflage folgt dem Verlag. Die Katalogbeschreibung ist keine Wirksamkeitsbewertung oder Volltextprüfung.",
+          "zh": "版次信息依据出版社记录。此目录简介并非疗效评价或全文审读。",
+          "ru": "Сведения об издании взяты у издателя. Описание не является оценкой эффективности или анализом полного текста.",
+          "ar": "تفاصيل الطبعة وفق سجل الناشر. الملخص الفهرسي ليس تقييماً للفعالية أو مراجعة للنص الكامل.",
+          "id": "Rincian edisi mengikuti penerbit. Ringkasan katalog bukan penilaian efektivitas atau telaah teks lengkap.",
+          "ms": "Butiran edisi mengikut penerbit. Ringkasan katalog bukan penilaian keberkesanan atau ulasan teks penuh."
+        },
+        "cover": "assets/heritage/techniques-101.webp"
+      },
+      "citation": "Halil Ekşi (Ed.). (2024). Psikoterapi ve Psikolojik Danışmada Manevi Yönelimli 101 Teknik. Nobel Akademik Yayıncılık. ISBN 978-625-417-915-0."
+    },
+    {
+      "id": "family-spiritual",
+      "sourceId": "s-family-spiritual",
+      "title": "Aile Terapisi: Manevi Yönelimli Bir Perspektif",
+      "year": 2023,
+      "url": "https://www.nobelyayin.com/aile-terapisi-manevi-yonelimli-bir-perspektif-16429.html",
+      "display": {
+        "tr": "Aile Terapisi",
+        "en": "Family Therapy",
+        "de": "Familientherapie",
+        "zh": "家庭治疗",
+        "ru": "Семейная терапия",
+        "ar": "العلاج الأسري",
+        "id": "Terapi Keluarga",
+        "ms": "Terapi Keluarga"
+      },
+      "summary": {
+        "tr": "Aile terapisi ve maneviyat ilişkisini manevi yönelimli bir perspektifle ele alan derleme.",
+        "en": "An edited volume examining family therapy and spirituality from a spiritually oriented perspective.",
+        "de": "Ein Sammelband über Familientherapie und Spiritualität aus spirituell orientierter Perspektive.",
+        "zh": "从灵性取向视角探讨家庭治疗与灵性关系的编著。",
+        "ru": "Коллективная книга о семейной терапии и духовности с духовно ориентированной перспективы.",
+        "ar": "كتاب جماعي يدرس العلاقة بين العلاج الأسري والروحانية من منظور ذي توجه روحي.",
+        "id": "Buku suntingan tentang terapi keluarga dan spiritualitas dari perspektif berorientasi spiritual.",
+        "ms": "Buku suntingan tentang terapi keluarga dan kerohanian daripada perspektif berorientasikan kerohanian."
+      },
+      "topic": "theory",
+      "sections": [
+        "library",
+        "books",
+        "learning"
+      ],
+      "kind": "book",
+      "language": "tr",
+      "bibliography": {
+        "type": "book",
+        "collection": "books",
+        "date": "2023-05",
+        "isbn": "978-625-406-392-3",
+        "pages": "338",
+        "edition": "2",
+        "authors": [],
+        "editors": [
+          "Halil Ekşi"
+        ],
+        "contributors": [],
+        "publisher": "Nobel Akademik Yayıncılık",
+        "identityVerified": true,
+        "identitySources": [
+          "https://www.nobelyayin.com/aile-terapisi-manevi-yonelimli-bir-perspektif-16429.html"
+        ],
+        "note": {
+          "tr": "Baskı bilgisi yayınevi kaydına dayanır. Tanıtım özeti, etkililik değerlendirmesi veya tam metin incelemesi değildir.",
+          "en": "Edition details follow the publisher. This catalogue summary is not an efficacy assessment or full-text review.",
+          "de": "Die Auflage folgt dem Verlag. Die Katalogbeschreibung ist keine Wirksamkeitsbewertung oder Volltextprüfung.",
+          "zh": "版次信息依据出版社记录。此目录简介并非疗效评价或全文审读。",
+          "ru": "Сведения об издании взяты у издателя. Описание не является оценкой эффективности или анализом полного текста.",
+          "ar": "تفاصيل الطبعة وفق سجل الناشر. الملخص الفهرسي ليس تقييماً للفعالية أو مراجعة للنص الكامل.",
+          "id": "Rincian edisi mengikuti penerbit. Ringkasan katalog bukan penilaian efektivitas atau telaah teks lengkap.",
+          "ms": "Butiran edisi mengikut penerbit. Ringkasan katalog bukan penilaian keberkesanan atau ulasan teks penuh."
+        },
+        "cover": "assets/heritage/family-spiritual.webp"
+      },
+      "citation": "Halil Ekşi (Ed.). (2023). Aile Terapisi: Manevi Yönelimli Bir Perspektif. Nobel Akademik Yayıncılık. ISBN 978-625-406-392-3."
+    },
+    {
+      "id": "group-counselling",
+      "sourceId": "s-group-counselling",
+      "title": "Grupla Psikolojik Danışma Uygulamaları: Psikospiritüel Gelişim Kılavuzu",
+      "year": 2023,
+      "url": "https://www.nobelyayin.com/grupla-psikolojik-danisma-uygulamalari-psikospirituel-gelisim-kilavuzu-17677.html",
+      "display": {
+        "tr": "Grupla Psikolojik Danışma Uygulamaları",
+        "en": "Group Counselling Practices",
+        "de": "Praxis der Gruppenberatung",
+        "zh": "团体心理咨询实践",
+        "ru": "Практика группового консультирования",
+        "ar": "ممارسات الإرشاد النفسي الجماعي",
+        "id": "Praktik Konseling Kelompok",
+        "ms": "Amalan Kaunseling Kelompok"
+      },
+      "summary": {
+        "tr": "Ergenler ve yetişkinler için psikospiritüel gelişim temalarını grup çalışmalarıyla ele alan kılavuz.",
+        "en": "A guide addressing psychospiritual development through group work with adolescents and adults.",
+        "de": "Ein Leitfaden zur psychospirituellen Entwicklung in Gruppen mit Jugendlichen und Erwachsenen.",
+        "zh": "通过青少年与成人团体工作讨论心理灵性发展的指南。",
+        "ru": "Руководство по психодуховному развитию в групповой работе с подростками и взрослыми.",
+        "ar": "دليل للتطور النفسي الروحي عبر العمل الجماعي مع المراهقين والبالغين.",
+        "id": "Panduan perkembangan psikospiritual melalui kerja kelompok bersama remaja dan orang dewasa.",
+        "ms": "Panduan perkembangan psikokerohanian melalui kerja kelompok bersama remaja dan orang dewasa."
+      },
+      "topic": "theory",
+      "sections": [
+        "library",
+        "books",
+        "learning"
+      ],
+      "kind": "book",
+      "language": "tr",
+      "bibliography": {
+        "type": "book",
+        "collection": "books",
+        "date": "2023-03",
+        "isbn": "978-625-417-005-8",
+        "pages": "450",
+        "edition": "2",
+        "authors": [],
+        "editors": [
+          "Halil Ekşi",
+          "Osman Hatun"
+        ],
+        "contributors": [
+          "Beyza Kırca",
+          "Halil Ekşi",
+          "Kübra Kaplaner",
+          "Osman Hatun",
+          "Serra Dinç"
+        ],
+        "publisher": "Nobel Akademik Yayıncılık",
+        "identityVerified": true,
+        "identitySources": [
+          "https://www.nobelyayin.com/grupla-psikolojik-danisma-uygulamalari-psikospirituel-gelisim-kilavuzu-17677.html"
+        ],
+        "note": {
+          "tr": "Baskı bilgisi yayınevi kaydına dayanır. Tanıtım özeti, etkililik değerlendirmesi veya tam metin incelemesi değildir.",
+          "en": "Edition details follow the publisher. This catalogue summary is not an efficacy assessment or full-text review.",
+          "de": "Die Auflage folgt dem Verlag. Die Katalogbeschreibung ist keine Wirksamkeitsbewertung oder Volltextprüfung.",
+          "zh": "版次信息依据出版社记录。此目录简介并非疗效评价或全文审读。",
+          "ru": "Сведения об издании взяты у издателя. Описание не является оценкой эффективности или анализом полного текста.",
+          "ar": "تفاصيل الطبعة وفق سجل الناشر. الملخص الفهرسي ليس تقييماً للفعالية أو مراجعة للنص الكامل.",
+          "id": "Rincian edisi mengikuti penerbit. Ringkasan katalog bukan penilaian efektivitas atau telaah teks lengkap.",
+          "ms": "Butiran edisi mengikut penerbit. Ringkasan katalog bukan penilaian keberkesanan atau ulasan teks penuh."
+        },
+        "cover": "assets/heritage/group-counselling.webp"
+      },
+      "citation": "Halil Ekşi, Osman Hatun (Eds.). (2023). Grupla Psikolojik Danışma Uygulamaları: Psikospiritüel Gelişim Kılavuzu. Nobel Akademik Yayıncılık. ISBN 978-625-417-005-8."
+    },
+    {
+      "id": "cbt-spiritual",
+      "sourceId": "s-cbt-spiritual",
+      "title": "Bilişsel Davranışçı Terapi: Manevi Perspektifli Teori ve Uygulamalar",
+      "year": 2022,
+      "url": "https://www.nobelyayin.com/bilissel-davranisci-terapi-manevi-perspektifli-teori-ve-uygulamalar-18795.html",
+      "display": {
+        "tr": "Bilişsel Davranışçı Terapi",
+        "en": "Cognitive Behavioural Therapy",
+        "de": "Kognitive Verhaltenstherapie",
+        "zh": "认知行为治疗",
+        "ru": "Когнитивно-поведенческая терапия",
+        "ar": "العلاج المعرفي السلوكي",
+        "id": "Terapi Kognitif Perilaku",
+        "ms": "Terapi Tingkah Laku Kognitif"
+      },
+      "summary": {
+        "tr": "Bilişsel davranışçı terapinin teori ve uygulamalarını manevi perspektiften tartışan kitap.",
+        "en": "A book discussing cognitive behavioural theory and practice from a spiritual perspective.",
+        "de": "Ein Buch über Theorie und Praxis der kognitiven Verhaltenstherapie aus spiritueller Perspektive.",
+        "zh": "从灵性视角讨论认知行为治疗理论与实践的书籍。",
+        "ru": "Книга о теории и практике когнитивно-поведенческой терапии с духовной перспективы.",
+        "ar": "كتاب يناقش نظرية العلاج المعرفي السلوكي وممارسته من منظور روحي.",
+        "id": "Buku yang membahas teori dan praktik terapi kognitif perilaku dari perspektif spiritual.",
+        "ms": "Buku yang membincangkan teori dan amalan terapi tingkah laku kognitif daripada perspektif kerohanian."
+      },
+      "topic": "theory",
+      "sections": [
+        "library",
+        "books",
+        "learning"
+      ],
+      "kind": "book",
+      "language": "tr",
+      "bibliography": {
+        "type": "book",
+        "collection": "books",
+        "date": "2022-09",
+        "isbn": "978-625-427-158-8",
+        "pages": "224",
+        "edition": "1",
+        "authors": [
+          "Tuğba Turgut",
+          "Halil Ekşi"
+        ],
+        "editors": [],
+        "contributors": [],
+        "publisher": "Nobel Akademik Yayıncılık",
+        "identityVerified": true,
+        "identitySources": [
+          "https://www.nobelyayin.com/bilissel-davranisci-terapi-manevi-perspektifli-teori-ve-uygulamalar-18795.html"
+        ],
+        "note": {
+          "tr": "Baskı bilgisi yayınevi kaydına dayanır. Tanıtım özeti, etkililik değerlendirmesi veya tam metin incelemesi değildir.",
+          "en": "Edition details follow the publisher. This catalogue summary is not an efficacy assessment or full-text review.",
+          "de": "Die Auflage folgt dem Verlag. Die Katalogbeschreibung ist keine Wirksamkeitsbewertung oder Volltextprüfung.",
+          "zh": "版次信息依据出版社记录。此目录简介并非疗效评价或全文审读。",
+          "ru": "Сведения об издании взяты у издателя. Описание не является оценкой эффективности или анализом полного текста.",
+          "ar": "تفاصيل الطبعة وفق سجل الناشر. الملخص الفهرسي ليس تقييماً للفعالية أو مراجعة للنص الكامل.",
+          "id": "Rincian edisi mengikuti penerbit. Ringkasan katalog bukan penilaian efektivitas atau telaah teks lengkap.",
+          "ms": "Butiran edisi mengikut penerbit. Ringkasan katalog bukan penilaian keberkesanan atau ulasan teks penuh."
+        },
+        "cover": "assets/heritage/cbt-spiritual.webp"
+      },
+      "citation": "Tuğba Turgut, Halil Ekşi. (2022). Bilişsel Davranışçı Terapi: Manevi Perspektifli Teori ve Uygulamalar. Nobel Akademik Yayıncılık. ISBN 978-625-427-158-8."
+    }
+  ],
+  "papers": [
+    {
+      "id": "spiritual-burnout",
+      "sourceId": "s-spiritual-burnout",
+      "title": "The Spiritual Burnout Scale: Development and Psychometric Validation of a Measure of Spiritual Resource Depletion in Türkiye",
+      "year": 2026,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42766252/",
+      "display": {
+        "tr": "Manevi tükenmişliğin ölçülmesi",
+        "en": "Measuring spiritual burnout",
+        "de": "Spirituelles Ausgebranntsein erfassen",
+        "zh": "测量灵性耗竭",
+        "ru": "Измерение духовного выгорания",
+        "ar": "قياس الاحتراق الروحي",
+        "id": "Mengukur kelelahan spiritual",
+        "ms": "Mengukur kelesuan rohani"
+      },
+      "summary": {
+        "tr": "Türkiye’de üniversite öğrencileriyle manevi kaynak tükenmesini ölçmeye yönelik ölçek geliştirme ve ilk psikometrik değerlendirme.",
+        "en": "Scale development and initial psychometric evaluation of spiritual resource depletion among university students in Türkiye.",
+        "de": "Skalenentwicklung und erste psychometrische Prüfung spiritueller Erschöpfung bei Studierenden in der Türkei.",
+        "zh": "在土耳其大学生中开展灵性资源耗竭量表开发与初步心理测量评价。",
+        "ru": "Разработка и первичная психометрическая оценка шкалы истощения духовных ресурсов у студентов в Турции.",
+        "ar": "تطوير مقياس وتقييم سيكومتري أولي لاستنزاف الموارد الروحية لدى طلبة الجامعات في تركيا.",
+        "id": "Pengembangan skala dan evaluasi psikometrik awal penipisan sumber daya spiritual pada mahasiswa di Türkiye.",
+        "ms": "Pembangunan skala dan penilaian psikometrik awal penyusutan sumber kerohanian dalam kalangan mahasiswa di Türkiye."
+      },
+      "topic": "assessment",
+      "sections": [
+        "library",
+        "publications",
+        "measures"
+      ],
+      "kind": "study",
+      "language": "en",
+      "bibliography": {
+        "type": "article",
+        "collection": "recent-research",
+        "date": "2026-09-21",
+        "authors": [
+          "Nesrullah Okan",
+          "Osman Hatun",
+          "Füsun Ekşi",
+          "Halil Ekşi",
+          "Nihat Köse"
+        ],
+        "editors": [],
+        "journal": "Journal of Religion and Health",
+        "volume": "",
+        "issue": "",
+        "pages": "",
+        "doi": "10.1007/s10943-026-02801-4",
+        "identityVerified": true,
+        "identitySources": [
+          "https://pubmed.ncbi.nlm.nih.gov/42766252/"
+        ],
+        "note": {
+          "tr": "Psikometrik çalışma. Araştırma örneklemindeki ölçme kanıtı, klinik tanı yetkisi veya kullanım izni anlamına gelmez.",
+          "en": "Psychometric study. Measurement evidence in the research sample does not establish diagnostic authority or reuse permission.",
+          "de": "Psychometrische Studie. Messbefunde in der Stichprobe begründen weder diagnostische Befugnis noch Nutzungsrechte.",
+          "zh": "心理测量研究。研究样本中的测量证据不等于临床诊断资格或使用许可。",
+          "ru": "Психометрическое исследование. Данные выборки не означают права на диагностику или разрешения использовать шкалу.",
+          "ar": "دراسة سيكومترية. أدلة القياس في العينة لا تمنح صلاحية التشخيص أو إذن استخدام المقياس.",
+          "id": "Studi psikometrik. Bukti pengukuran pada sampel bukan kewenangan diagnosis atau izin penggunaan instrumen.",
+          "ms": "Kajian psikometrik. Bukti pengukuran dalam sampel bukan kuasa diagnosis atau kebenaran menggunakan instrumen."
+        },
+        "publicationState": "online-first"
+      },
+      "citation": "Nesrullah Okan, Osman Hatun, Füsun Ekşi, Halil Ekşi, Nihat Köse. (2026). The Spiritual Burnout Scale: Development and Psychometric Validation of a Measure of Spiritual Resource Depletion in Türkiye. Journal of Religion and Health. https://doi.org/10.1007/s10943-026-02801-4"
+    },
+    {
+      "id": "sipas",
+      "sourceId": "s-sipas",
+      "title": "Spiritually Integrated Process Assessment Scale (SIPAS): Validity and Reliability Study",
+      "year": 2026,
+      "url": "https://dergipark.org.tr/en/pub/spiritualpc/article/1793082",
+      "display": {
+        "tr": "SIPAS. Maneviyatın danışma sürecine bütünleştirilmesi",
+        "en": "SIPAS. Integrating spirituality into counselling",
+        "de": "SIPAS. Spiritualität in der Beratung",
+        "zh": "SIPAS. 咨询中的灵性整合",
+        "ru": "SIPAS. Интеграция духовности в консультирование",
+        "ar": "SIPAS. دمج الروحانية في الإرشاد",
+        "id": "SIPAS. Integrasi spiritualitas dalam konseling",
+        "ms": "SIPAS. Integrasi kerohanian dalam kaunseling"
+      },
+      "summary": {
+        "tr": "Profesyonellerin manevi entegrasyon tutumlarını, öz yeterliklerini ve uygulamalarını değerlendiren Türkçe uyarlama çalışması.",
+        "en": "Turkish adaptation assessing professionals’ attitudes, self-efficacy and practice concerning spiritual integration.",
+        "de": "Türkische Adaptation zur Erfassung professioneller Einstellungen, Selbstwirksamkeit und spiritueller Integrationspraxis.",
+        "zh": "评估专业人员灵性整合态度、自我效能与实践的土耳其语适配研究。",
+        "ru": "Турецкая адаптация оценки установок, самоэффективности и практики специалистов в духовной интеграции.",
+        "ar": "دراسة تكييف تركي لتقييم اتجاهات المهنيين وكفاءتهم الذاتية وممارساتهم المتعلقة بالدمج الروحي.",
+        "id": "Adaptasi Turki untuk menilai sikap, efikasi diri, dan praktik profesional terkait integrasi spiritual.",
+        "ms": "Adaptasi Turki untuk menilai sikap, efikasi kendiri dan amalan profesional berkaitan integrasi kerohanian."
+      },
+      "topic": "assessment",
+      "sections": [
+        "library",
+        "publications",
+        "measures"
+      ],
+      "kind": "study",
+      "language": "en",
+      "bibliography": {
+        "type": "article",
+        "collection": "recent-research",
+        "date": "2026-06-30",
+        "authors": [
+          "Halil Eksi",
+          "Havvanur Akyol",
+          "Neslihan Aydın",
+          "Fatma Betül Karalı",
+          "Mehmet Özalp",
+          "M. Furkan Tunç",
+          "Ebru Talibe Turgut"
+        ],
+        "editors": [],
+        "journal": "Spiritual Psychology and Counseling",
+        "volume": "11",
+        "issue": "2",
+        "pages": "211–232",
+        "doi": "10.37898/spiritualpc.1793082",
+        "identityVerified": true,
+        "identitySources": [
+          "https://dergipark.org.tr/en/pub/spiritualpc/article/1793082"
+        ],
+        "note": {
+          "tr": "Psikometrik çalışma. Araştırma örneklemindeki ölçme kanıtı, klinik tanı yetkisi veya kullanım izni anlamına gelmez.",
+          "en": "Psychometric study. Measurement evidence in the research sample does not establish diagnostic authority or reuse permission.",
+          "de": "Psychometrische Studie. Messbefunde in der Stichprobe begründen weder diagnostische Befugnis noch Nutzungsrechte.",
+          "zh": "心理测量研究。研究样本中的测量证据不等于临床诊断资格或使用许可。",
+          "ru": "Психометрическое исследование. Данные выборки не означают права на диагностику или разрешения использовать шкалу.",
+          "ar": "دراسة سيكومترية. أدلة القياس في العينة لا تمنح صلاحية التشخيص أو إذن استخدام المقياس.",
+          "id": "Studi psikometrik. Bukti pengukuran pada sampel bukan kewenangan diagnosis atau izin penggunaan instrumen.",
+          "ms": "Kajian psikometrik. Bukti pengukuran dalam sampel bukan kuasa diagnosis atau kebenaran menggunakan instrumen."
+        }
+      },
+      "citation": "Halil Eksi, Havvanur Akyol, Neslihan Aydın, Fatma Betül Karalı, Mehmet Özalp, M. Furkan Tunç, Ebru Talibe Turgut. (2026). Spiritually Integrated Process Assessment Scale (SIPAS): Validity and Reliability Study. Spiritual Psychology and Counseling, 11(2), 211–232. https://doi.org/10.37898/spiritualpc.1793082"
+    },
+    {
+      "id": "loneliness-spirituality",
+      "sourceId": "s-loneliness-spirituality",
+      "title": "The Mediating Role of Loneliness in the Relationship Between Spirituality and Anxiety Levels Among University Students in Turkiye",
+      "year": 2026,
+      "url": "https://dergipark.org.tr/en/pub/spiritualpc/article/1603809",
+      "display": {
+        "tr": "Manevi iyi oluş, yalnızlık ve kaygı",
+        "en": "Spiritual well-being, loneliness and anxiety",
+        "de": "Spirituelles Wohlbefinden, Einsamkeit und Angst",
+        "zh": "灵性福祉、孤独与焦虑",
+        "ru": "Духовное благополучие, одиночество и тревога",
+        "ar": "الرفاه الروحي والوحدة والقلق",
+        "id": "Kesejahteraan spiritual, kesepian, dan kecemasan",
+        "ms": "Kesejahteraan rohani, kesunyian dan kebimbangan"
+      },
+      "summary": {
+        "tr": "Türkiye’de üniversite öğrencilerinin manevi iyi oluş, yalnızlık ve kaygı düzeyleri arasındaki ilişkileri inceleyen araştırma.",
+        "en": "A study of associations between spiritual well-being, loneliness and anxiety among university students in Türkiye.",
+        "de": "Eine Studie zu Zusammenhängen zwischen spirituellem Wohlbefinden, Einsamkeit und Angst bei Studierenden in der Türkei.",
+        "zh": "考察土耳其大学生灵性福祉、孤独与焦虑之间关联的研究。",
+        "ru": "Исследование связей духовного благополучия, одиночества и тревоги у студентов в Турции.",
+        "ar": "دراسة للعلاقات بين الرفاه الروحي والوحدة والقلق لدى طلبة الجامعات في تركيا.",
+        "id": "Studi hubungan kesejahteraan spiritual, kesepian, dan kecemasan pada mahasiswa di Türkiye.",
+        "ms": "Kajian hubungan kesejahteraan rohani, kesunyian dan kebimbangan dalam kalangan mahasiswa di Türkiye."
+      },
+      "topic": "practice",
+      "sections": [
+        "library",
+        "publications",
+        "practice"
+      ],
+      "kind": "study",
+      "language": "en",
+      "bibliography": {
+        "type": "article",
+        "collection": "recent-research",
+        "date": "2026-06-30",
+        "authors": [
+          "Yasemin Ekici",
+          "Figen Kasapoğlu"
+        ],
+        "editors": [],
+        "journal": "Spiritual Psychology and Counseling",
+        "volume": "11",
+        "issue": "2",
+        "pages": "195–210",
+        "doi": "10.37898/spiritualpc.1603809",
+        "identityVerified": true,
+        "identitySources": [
+          "https://dergipark.org.tr/en/pub/spiritualpc/article/1603809"
+        ],
+        "note": {
+          "tr": "İlişkisel araştırma. Aracılık analizi, bu gözlemsel tasarımda nedensel mekanizma veya müdahale etkisi göstermez.",
+          "en": "Correlational research. Mediation in this observational design does not establish a causal mechanism or intervention effect.",
+          "de": "Korrelative Forschung. Die Mediation im Beobachtungsdesign belegt weder einen kausalen Mechanismus noch einen Interventionseffekt.",
+          "zh": "相关研究。此观察性设计中的中介分析不能证明因果机制或干预效果。",
+          "ru": "Корреляционное исследование. Анализ медиации не устанавливает причинный механизм или эффект вмешательства.",
+          "ar": "بحث ارتباطي. تحليل الوساطة في هذا التصميم الرصدي لا يثبت آلية سببية أو أثر تدخل.",
+          "id": "Penelitian korelasional. Mediasi pada desain observasional tidak membuktikan mekanisme sebab akibat atau efek intervensi.",
+          "ms": "Penyelidikan korelasi. Mediasi dalam reka bentuk pemerhatian tidak membuktikan mekanisme sebab akibat atau kesan intervensi."
+        }
+      },
+      "citation": "Yasemin Ekici, Figen Kasapoğlu. (2026). The Mediating Role of Loneliness in the Relationship Between Spirituality and Anxiety Levels Among University Students in Turkiye. Spiritual Psychology and Counseling, 11(2), 195–210. https://doi.org/10.37898/spiritualpc.1603809"
+    },
+    {
+      "id": "professional-training",
+      "sourceId": "s-professional-training",
+      "title": "Addressing Spirituality in Counseling: Turkish Mental Health Professionals’ Views on a Training Program for Professional Competencies",
+      "year": 2026,
+      "url": "https://link.springer.com/article/10.1007/s10943-025-02551-9",
+      "display": {
+        "tr": "Maneviyatla çalışmak için mesleki eğitim",
+        "en": "Professional training for working with spirituality",
+        "de": "Professionelle Ausbildung im Umgang mit Spiritualität",
+        "zh": "灵性相关工作的专业培训",
+        "ru": "Профессиональное обучение работе с духовностью",
+        "ar": "التدريب المهني للعمل مع الروحانية",
+        "id": "Pelatihan profesional untuk bekerja dengan spiritualitas",
+        "ms": "Latihan profesional untuk bekerja dengan kerohanian"
+      },
+      "summary": {
+        "tr": "Türkiye’de ruh sağlığı profesyonellerinin manevi danışmanlık yeterliklerine yönelik eğitim gereksinimlerini ele alan nitel çalışma.",
+        "en": "Qualitative research on Turkish mental health professionals’ training needs for spiritual counselling competencies.",
+        "de": "Qualitative Forschung zum Ausbildungsbedarf türkischer Fachkräfte für spirituelle Beratungskompetenzen.",
+        "zh": "关于土耳其心理健康专业人员灵性咨询胜任力培训需求的质性研究。",
+        "ru": "Качественное исследование потребностей специалистов Турции в обучении духовному консультированию.",
+        "ar": "بحث نوعي عن احتياجات تدريب مهنيي الصحة النفسية في تركيا على كفايات الإرشاد الروحي.",
+        "id": "Penelitian kualitatif tentang kebutuhan pelatihan profesional kesehatan mental Turki dalam kompetensi konseling spiritual.",
+        "ms": "Penyelidikan kualitatif tentang keperluan latihan profesional kesihatan mental Turki dalam kompetensi kaunseling rohani."
+      },
+      "topic": "ethics",
+      "sections": [
+        "library",
+        "publications",
+        "practice"
+      ],
+      "kind": "study",
+      "language": "en",
+      "bibliography": {
+        "type": "article",
+        "collection": "recent-research",
+        "date": "2026-01-19",
+        "authors": [
+          "Halil Ekşi",
+          "Ebru Talibe Turgut",
+          "Fatma Betül Karalı",
+          "Hale Şen",
+          "Havvanur Akyol",
+          "Neslihan Aydın",
+          "Yusuf Ziya Koç"
+        ],
+        "editors": [],
+        "journal": "Journal of Religion and Health",
+        "volume": "65",
+        "issue": "3",
+        "pages": "2796–2824",
+        "doi": "10.1007/s10943-025-02551-9",
+        "identityVerified": true,
+        "identitySources": [
+          "https://link.springer.com/article/10.1007/s10943-025-02551-9"
+        ],
+        "note": {
+          "tr": "Nitel araştırma. Katılımcı görüşleri bağlam içinde okunmalıdır. Bulgular bir eğitim veya müdahalenin etkililiğini sınamaz.",
+          "en": "Qualitative research. Read participants’ accounts in context. Findings do not test training or intervention efficacy.",
+          "de": "Qualitative Forschung. Aussagen sind kontextgebunden. Die Wirksamkeit einer Ausbildung oder Intervention wird nicht geprüft.",
+          "zh": "质性研究。应结合情境理解参与者陈述。研究未检验培训或干预效果。",
+          "ru": "Качественное исследование. Высказывания участников контекстуальны. Эффективность обучения или вмешательства не проверяется.",
+          "ar": "بحث نوعي. تُقرأ روايات المشاركين ضمن سياقها. النتائج لا تختبر فعالية التدريب أو التدخل.",
+          "id": "Penelitian kualitatif. Pengalaman peserta dibaca dalam konteks. Temuan tidak menguji efektivitas pelatihan atau intervensi.",
+          "ms": "Penyelidikan kualitatif. Pengalaman peserta dibaca dalam konteks. Dapatan tidak menguji keberkesanan latihan atau intervensi."
+        },
+        "issueDate": "2026-06"
+      },
+      "citation": "Halil Ekşi, Ebru Talibe Turgut, Fatma Betül Karalı, Hale Şen, Havvanur Akyol, Neslihan Aydın, Yusuf Ziya Koç. (2026). Addressing Spirituality in Counseling: Turkish Mental Health Professionals’ Views on a Training Program for Professional Competencies. Journal of Religion and Health, 65(3), 2796–2824. https://doi.org/10.1007/s10943-025-02551-9"
+    },
+    {
+      "id": "sacred-tensions",
+      "sourceId": "s-tunc",
+      "title": "Sacred Tensions: How Mental Health Professionals Navigate Spirituality, Ethics, and Professional Identity",
+      "year": 2025,
+      "url": "https://link.springer.com/article/10.1007/s11089-025-01244-0",
+      "display": {
+        "tr": "Maneviyat, etik ve mesleki kimlik",
+        "en": "Spirituality, ethics and professional identity",
+        "de": "Spiritualität, Ethik und berufliche Identität",
+        "zh": "灵性、伦理与专业身份",
+        "ru": "Духовность, этика и профессиональная идентичность",
+        "ar": "الروحانية والأخلاق والهوية المهنية",
+        "id": "Spiritualitas, etika, dan identitas profesional",
+        "ms": "Kerohanian, etika dan identiti profesional"
+      },
+      "summary": {
+        "tr": "Sekiz uygulayıcının deneyimlerinden hareketle manevi değerler, mesleki sınırlar ve kültürel duyarlılığı inceleyen nitel araştırma.",
+        "en": "Qualitative research on spiritual values, professional boundaries and cultural sensitivity through eight practitioners’ experiences.",
+        "de": "Qualitative Forschung zu spirituellen Werten, beruflichen Grenzen und Kultursensibilität anhand der Erfahrungen von acht Praktizierenden.",
+        "zh": "通过八位实践者的经验考察灵性价值、专业边界与文化敏感性的质性研究。",
+        "ru": "Качественное исследование духовных ценностей, профессиональных границ и культурной чувствительности на опыте восьми практиков.",
+        "ar": "بحث نوعي عن القيم الروحية والحدود المهنية والحساسية الثقافية من تجارب ثمانية ممارسين.",
+        "id": "Penelitian kualitatif tentang nilai spiritual, batas profesional, dan kepekaan budaya melalui pengalaman delapan praktisi.",
+        "ms": "Penyelidikan kualitatif tentang nilai kerohanian, batas profesional dan kepekaan budaya melalui pengalaman lapan pengamal."
+      },
+      "topic": "ethics",
+      "sections": [
+        "library",
+        "publications",
+        "practice"
+      ],
+      "kind": "study",
+      "language": "en",
+      "bibliography": {
+        "type": "article",
+        "collection": "recent-research",
+        "date": "2025-08-21",
+        "authors": [
+          "M. Furkan Tunç",
+          "Halil Ekşi"
+        ],
+        "editors": [],
+        "journal": "Pastoral Psychology",
+        "volume": "74",
+        "issue": "6",
+        "pages": "937–958",
+        "doi": "10.1007/s11089-025-01244-0",
+        "identityVerified": true,
+        "identitySources": [
+          "https://link.springer.com/article/10.1007/s11089-025-01244-0"
+        ],
+        "note": {
+          "tr": "Nitel araştırma. Katılımcı görüşleri bağlam içinde okunmalıdır. Bulgular bir eğitim veya müdahalenin etkililiğini sınamaz.",
+          "en": "Qualitative research. Read participants’ accounts in context. Findings do not test training or intervention efficacy.",
+          "de": "Qualitative Forschung. Aussagen sind kontextgebunden. Die Wirksamkeit einer Ausbildung oder Intervention wird nicht geprüft.",
+          "zh": "质性研究。应结合情境理解参与者陈述。研究未检验培训或干预效果。",
+          "ru": "Качественное исследование. Высказывания участников контекстуальны. Эффективность обучения или вмешательства не проверяется.",
+          "ar": "بحث نوعي. تُقرأ روايات المشاركين ضمن سياقها. النتائج لا تختبر فعالية التدريب أو التدخل.",
+          "id": "Penelitian kualitatif. Pengalaman peserta dibaca dalam konteks. Temuan tidak menguji efektivitas pelatihan atau intervensi.",
+          "ms": "Penyelidikan kualitatif. Pengalaman peserta dibaca dalam konteks. Dapatan tidak menguji keberkesanan latihan atau intervensi."
+        }
+      },
+      "citation": "M. Furkan Tunç, Halil Ekşi. (2025). Sacred Tensions: How Mental Health Professionals Navigate Spirituality, Ethics, and Professional Identity. Pastoral Psychology, 74(6), 937–958. https://doi.org/10.1007/s11089-025-01244-0"
+    },
+    {
+      "id": "spiritual-integrity",
+      "sourceId": "s-spiritual-integrity",
+      "title": "Measuring Spiritual Integrity in Turkish Culture: A Psychometric Approach to Understanding the Relationship Between Spirituality and Well-Being",
+      "year": 2025,
+      "url": "https://link.springer.com/article/10.1007/s10943-025-02329-z",
+      "display": {
+        "tr": "Manevi bütünlük ve iyi oluş",
+        "en": "Spiritual integrity and well-being",
+        "de": "Spirituelle Integrität und Wohlbefinden",
+        "zh": "灵性整合与福祉",
+        "ru": "Духовная целостность и благополучие",
+        "ar": "التكامل الروحي والرفاه",
+        "id": "Integritas spiritual dan kesejahteraan",
+        "ms": "Integriti kerohanian dan kesejahteraan"
+      },
+      "summary": {
+        "tr": "Türk kültüründe manevi bütünlüğün ölçülmesini ve iyi oluşla ilişkisini inceleyen psikometrik araştırma.",
+        "en": "Psychometric research on measuring spiritual integrity and its association with well-being in Turkish culture.",
+        "de": "Psychometrische Forschung zur spirituellen Integrität und ihrem Zusammenhang mit Wohlbefinden in der türkischen Kultur.",
+        "zh": "关于土耳其文化中灵性整合测量及其与福祉关联的心理测量研究。",
+        "ru": "Психометрическое исследование духовной целостности и её связи с благополучием в турецкой культуре.",
+        "ar": "بحث سيكومتري في قياس التكامل الروحي وعلاقته بالرفاه في الثقافة التركية.",
+        "id": "Penelitian psikometrik tentang pengukuran integritas spiritual dan hubungannya dengan kesejahteraan dalam budaya Turki.",
+        "ms": "Penyelidikan psikometrik tentang pengukuran integriti kerohanian dan hubungannya dengan kesejahteraan dalam budaya Turki."
+      },
+      "topic": "assessment",
+      "sections": [
+        "library",
+        "publications",
+        "measures"
+      ],
+      "kind": "study",
+      "language": "en",
+      "bibliography": {
+        "type": "article",
+        "collection": "recent-research",
+        "date": "2025-05-23",
+        "authors": [
+          "Nesrullah Okan",
+          "Füsun Ekşi",
+          "Erdal Zengin",
+          "Halil Ekşi"
+        ],
+        "editors": [],
+        "journal": "Journal of Religion and Health",
+        "volume": "64",
+        "issue": "4",
+        "pages": "3209–3235",
+        "doi": "10.1007/s10943-025-02329-z",
+        "identityVerified": true,
+        "identitySources": [
+          "https://link.springer.com/article/10.1007/s10943-025-02329-z"
+        ],
+        "note": {
+          "tr": "Psikometrik çalışma. Araştırma örneklemindeki ölçme kanıtı, klinik tanı yetkisi veya kullanım izni anlamına gelmez.",
+          "en": "Psychometric study. Measurement evidence in the research sample does not establish diagnostic authority or reuse permission.",
+          "de": "Psychometrische Studie. Messbefunde in der Stichprobe begründen weder diagnostische Befugnis noch Nutzungsrechte.",
+          "zh": "心理测量研究。研究样本中的测量证据不等于临床诊断资格或使用许可。",
+          "ru": "Психометрическое исследование. Данные выборки не означают права на диагностику или разрешения использовать шкалу.",
+          "ar": "دراسة سيكومترية. أدلة القياس في العينة لا تمنح صلاحية التشخيص أو إذن استخدام المقياس.",
+          "id": "Studi psikometrik. Bukti pengukuran pada sampel bukan kewenangan diagnosis atau izin penggunaan instrumen.",
+          "ms": "Kajian psikometrik. Bukti pengukuran dalam sampel bukan kuasa diagnosis atau kebenaran menggunakan instrumen."
+        }
+      },
+      "citation": "Nesrullah Okan, Füsun Ekşi, Erdal Zengin, Halil Ekşi. (2025). Measuring Spiritual Integrity in Turkish Culture: A Psychometric Approach to Understanding the Relationship Between Spirituality and Well-Being. Journal of Religion and Health, 64(4), 3209–3235. https://doi.org/10.1007/s10943-025-02329-z"
+    },
+    {
+      "id": "spirituality-dimensions",
+      "sourceId": "s-spirituality-dimensions",
+      "title": "Unveiling the Multifaceted Nature of Spirituality: Assessing the Dimensions of the Spirituality Inventory in the Turkish Context—A Preliminary Adaptation and Validity Reliability Study",
+      "year": 2025,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40274690/",
+      "display": {
+        "tr": "Maneviyatın çok boyutlu yapısı",
+        "en": "The multidimensional nature of spirituality",
+        "de": "Die Mehrdimensionalität der Spiritualität",
+        "zh": "灵性的多维结构",
+        "ru": "Многомерная природа духовности",
+        "ar": "طبيعة الروحانية متعددة الأبعاد",
+        "id": "Sifat multidimensi spiritualitas",
+        "ms": "Sifat kerohanian yang multidimensi"
+      },
+      "summary": {
+        "tr": "Maneviyatın Boyutları Envanteri için Türkçe uyarlama ve ön psikometrik değerlendirme çalışması.",
+        "en": "A Turkish adaptation and preliminary psychometric evaluation of the Dimensions of Spirituality Inventory.",
+        "de": "Türkische Adaptation und vorläufige psychometrische Prüfung des Dimensions of Spirituality Inventory.",
+        "zh": "灵性维度量表的土耳其语适配与初步心理测量评价。",
+        "ru": "Турецкая адаптация и предварительная психометрическая оценка опросника измерений духовности.",
+        "ar": "تكييف تركي وتقييم سيكومتري أولي لقائمة أبعاد الروحانية.",
+        "id": "Adaptasi Turki dan evaluasi psikometrik awal Inventori Dimensi Spiritualitas.",
+        "ms": "Adaptasi Turki dan penilaian psikometrik awal Inventori Dimensi Kerohanian."
+      },
+      "topic": "assessment",
+      "sections": [
+        "library",
+        "publications",
+        "measures"
+      ],
+      "kind": "study",
+      "language": "en",
+      "bibliography": {
+        "type": "article",
+        "collection": "recent-research",
+        "date": "2025-04-24",
+        "authors": [
+          "Halil Ekşi",
+          "Dilek Günel",
+          "Ece Yağcı Akgündüz",
+          "Emre Gürkan",
+          "Fadile Zeynep Çavuş",
+          "Yasemin Altıntaş"
+        ],
+        "editors": [],
+        "journal": "Journal of Religion and Health",
+        "volume": "64",
+        "issue": "4",
+        "pages": "3105–3127",
+        "doi": "10.1007/s10943-025-02313-7",
+        "identityVerified": true,
+        "identitySources": [
+          "https://pubmed.ncbi.nlm.nih.gov/40274690/"
+        ],
+        "note": {
+          "tr": "Psikometrik çalışma. Araştırma örneklemindeki ölçme kanıtı, klinik tanı yetkisi veya kullanım izni anlamına gelmez.",
+          "en": "Psychometric study. Measurement evidence in the research sample does not establish diagnostic authority or reuse permission.",
+          "de": "Psychometrische Studie. Messbefunde in der Stichprobe begründen weder diagnostische Befugnis noch Nutzungsrechte.",
+          "zh": "心理测量研究。研究样本中的测量证据不等于临床诊断资格或使用许可。",
+          "ru": "Психометрическое исследование. Данные выборки не означают права на диагностику или разрешения использовать шкалу.",
+          "ar": "دراسة سيكومترية. أدلة القياس في العينة لا تمنح صلاحية التشخيص أو إذن استخدام المقياس.",
+          "id": "Studi psikometrik. Bukti pengukuran pada sampel bukan kewenangan diagnosis atau izin penggunaan instrumen.",
+          "ms": "Kajian psikometrik. Bukti pengukuran dalam sampel bukan kuasa diagnosis atau kebenaran menggunakan instrumen."
+        }
+      },
+      "citation": "Halil Ekşi, Dilek Günel, Ece Yağcı Akgündüz, Emre Gürkan, Fadile Zeynep Çavuş, Yasemin Altıntaş. (2025). Unveiling the Multifaceted Nature of Spirituality: Assessing the Dimensions of the Spirituality Inventory in the Turkish Context—A Preliminary Adaptation and Validity Reliability Study. Journal of Religion and Health, 64(4), 3105–3127. https://doi.org/10.1007/s10943-025-02313-7"
+    },
+    {
+      "id": "spiritual-struggles",
+      "sourceId": "s-spiritual-struggles",
+      "title": "Dini ve Manevi Mücadele Ölçeği’nin Türkçe Uyarlaması: Geçerlik ve Güvenirlik Çalışması",
+      "year": 2025,
+      "url": "https://dergipark.org.tr/tr/pub/ilted/article/1564927",
+      "display": {
+        "tr": "Dini ve manevi mücadele",
+        "en": "Religious and spiritual struggles",
+        "de": "Religiöse und spirituelle Konflikte",
+        "zh": "宗教与灵性挣扎",
+        "ru": "Религиозные и духовные трудности",
+        "ar": "الصراعات الدينية والروحية",
+        "id": "Pergumulan agama dan spiritual",
+        "ms": "Pergelutan agama dan kerohanian"
+      },
+      "summary": {
+        "tr": "Dini ve manevi mücadeleyi ölçen RSS-14 formunun yetişkin örnekleminde Türkçeye uyarlanması.",
+        "en": "Turkish adaptation of the RSS-14 measure of religious and spiritual struggles in an adult sample.",
+        "de": "Türkische Adaptation der RSS-14 zu religiösen und spirituellen Konflikten in einer Erwachsenenstichprobe.",
+        "zh": "在成人样本中开展宗教与灵性挣扎测量工具RSS-14的土耳其语适配。",
+        "ru": "Турецкая адаптация RSS-14 для измерения религиозных и духовных трудностей у взрослых.",
+        "ar": "تكييف تركي لمقياس RSS-14 للصراعات الدينية والروحية لدى عينة من البالغين.",
+        "id": "Adaptasi Turki RSS-14 untuk mengukur pergumulan agama dan spiritual pada sampel dewasa.",
+        "ms": "Adaptasi Turki RSS-14 untuk mengukur pergelutan agama dan kerohanian dalam sampel dewasa."
+      },
+      "topic": "assessment",
+      "sections": [
+        "library",
+        "publications",
+        "measures"
+      ],
+      "kind": "study",
+      "language": "tr",
+      "bibliography": {
+        "type": "article",
+        "collection": "recent-research",
+        "date": "2025-04-30",
+        "authors": [
+          "Dilanur Rehber",
+          "Muhammet Enes Vural",
+          "Halil Ekşi"
+        ],
+        "editors": [],
+        "journal": "İlahiyat Tetkikleri Dergisi",
+        "volume": "",
+        "issue": "63",
+        "pages": "45–54",
+        "doi": "10.29288/ilted.1564927",
+        "identityVerified": true,
+        "identitySources": [
+          "https://dergipark.org.tr/tr/pub/ilted/article/1564927"
+        ],
+        "note": {
+          "tr": "Psikometrik çalışma. Araştırma örneklemindeki ölçme kanıtı, klinik tanı yetkisi veya kullanım izni anlamına gelmez.",
+          "en": "Psychometric study. Measurement evidence in the research sample does not establish diagnostic authority or reuse permission.",
+          "de": "Psychometrische Studie. Messbefunde in der Stichprobe begründen weder diagnostische Befugnis noch Nutzungsrechte.",
+          "zh": "心理测量研究。研究样本中的测量证据不等于临床诊断资格或使用许可。",
+          "ru": "Психометрическое исследование. Данные выборки не означают права на диагностику или разрешения использовать шкалу.",
+          "ar": "دراسة سيكومترية. أدلة القياس في العينة لا تمنح صلاحية التشخيص أو إذن استخدام المقياس.",
+          "id": "Studi psikometrik. Bukti pengukuran pada sampel bukan kewenangan diagnosis atau izin penggunaan instrumen.",
+          "ms": "Kajian psikometrik. Bukti pengukuran dalam sampel bukan kuasa diagnosis atau kebenaran menggunakan instrumen."
+        },
+        "onlineDate": "2025-03-06"
+      },
+      "citation": "Dilanur Rehber, Muhammet Enes Vural, Halil Ekşi. (2025). Dini ve Manevi Mücadele Ölçeği’nin Türkçe Uyarlaması: Geçerlik ve Güvenirlik Çalışması. İlahiyat Tetkikleri Dergisi(63), 45–54. https://doi.org/10.29288/ilted.1564927"
+    }
+  ]
+}
