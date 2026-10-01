@@ -1,6 +1,6 @@
 {
   "name": "marsam-knowledge-platform",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "type": "module",
   "description": "Eight-language source-aware research and learning portal preview",
@@ -10,7 +10,7 @@
   "scripts": {
     "build": "node scripts/build.mjs",
     "preview": "node scripts/serve.mjs",
-    "test": "node --test tests/core.test.mjs tests/locales.test.mjs",
+    "test": "node --test tests/core.test.mjs tests/locales.test.mjs tests/campus.test.mjs",
     "test:build": "node --test tests/build.test.mjs",
     "check": "npm test && npm run build && npm run test:build"
   }
