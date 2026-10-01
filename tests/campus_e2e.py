@@ -28,7 +28,7 @@ try:
             page.on('request',lambda r:posts.append(r.url) if r.method=='POST' else None)
             for w in [320,390,768,1440]:
                 page.set_viewport_size({'width':w,'height':960})
-                for path in ['', 'collections/', 'compare/', 'events/', 'network/']:
+                for path in ['', 'collections/', 'compare/', 'events/', 'about/']:
                     r=page.goto(origin+base+l+'/'+path,wait_until='networkidle')
                     ck(f'HTTP {l}/{path} {w}',r.status==200)
                     ck(f'no body overflow {l}/{path} {w}',page.evaluate('document.documentElement.scrollWidth<=innerWidth+1'))
@@ -72,10 +72,8 @@ try:
             ck(f'duplicate and unsafe IDs removed {l}',page.locator('.comparison-table thead th').count()==2)
             page.locator('[data-compare-slot]').nth(0).select_option('')
             ck(f'empty comparison handles correctly {l}',page.locator('[data-comparison-export]').is_disabled())
-            page.goto(origin+base+l+'/events/',wait_until='networkidle');page.locator('[data-event-filter="past"]').click()
-            ck(f'historical external conference archived {l}',page.locator('[data-event-end="2025-08-22"]').is_visible())
-            page.locator('[data-event-filter="upcoming"]').click()
-            ck(f'past conference absent from upcoming {l}',not page.locator('[data-event-end="2025-08-22"]').is_visible())
+            page.goto(origin+base+l+'/events/',wait_until='networkidle')
+            ck(f'no unapproved external event feed {l}',page.locator('.event-card').count()==0 and page.locator('.centre-empty').count()==1)
             ctx.close()
         nojs=browser.new_context(java_script_enabled=False);page=nojs.new_page()
         page.goto(origin+base+'ar/collections/')

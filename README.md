@@ -1,83 +1,54 @@
 # MARSAM
 
-**Maneviyat ve Ruh Sağlığı Araştırmaları Merkezi. Marmara Üniversitesi için geliştirilen akademik kaynak platformu.**
+Maneviyat ve Ruh Sağlığı Araştırmaları Merkezi. Marmara Üniversitesi bünyesinde planlanan merkez için sekiz dilli web taslağı.
 
-## Web sitesini incele
+İnceleme adresi: https://onourimpram.github.io/MARSAM/
 
-**[MARSAM web sitesini aç](https://onourimpram.github.io/MARSAM/)**
+## Sürüm 0.4.0
 
-[Türkçe](https://onourimpram.github.io/MARSAM/tr/) · [English](https://onourimpram.github.io/MARSAM/en/) · [العربية](https://onourimpram.github.io/MARSAM/ar/)
+Ana sayfa merkezin tam adı, araştırma, eğitim ve mesleki gelişim çerçevesiyle açılır. Çalışma alanları, yayınlar, temel okumalar, öğrenme yolları, araştırma projeleri, seminerler, video arşivi ve duyurular ayrı bölümlerdir.
 
-Marmara kimlikli sekiz dilli sürüm, 1 Ekim 2026 tarihinde kullanıcının incelemesi için GitHub Pages üzerinde yayımlandı. Kaynak geliştirmesi bu deponun `main` dalındadır. [PR 1](https://github.com/OnourImpram/MARSAM/pull/1) ana dala birleştirilmiştir.
+Tasarım için incelenen kurumların tanıtım kartları, kurum dizini ve dış etkinlik akışı kaldırılmıştır. Karşılaştırmalı web incelemeleri yalnız geliştirme belgelerinde kalır. Önceki tasarım raporlarında bu kurumların kamusal içeriğe taşınmasını öneren kararlar `docs/SCOPE_CORRECTION_TR.md` ile yürürlükten kaldırılmıştır. Bir öğrencinin araştırma sorusu veya kişisel yansıtması merkezin sloganı olarak kullanılmaz.
 
-Bu yayın, Marmara Üniversitesi bünyesinde planlanan merkez için hazırlanmış çalışan bir kurumsal inceleme sitesidir. Resmî kuruluş kararı, üniversitenin yayın onayı veya bilimsel ve dilsel insan incelemesinin tamamlandığı anlamına gelmez.
+Alanla ilgili gerçek makaleler, kitaplar ve mesleki rehberler kaynakça bilgileriyle korunur. Bunlar tasarım referansı kurumların tanıtımından ayrıdır. Onaylanmış kayıt bulunmayan haber, proje, etkinlik ve video alanlarında gerçek durum belirtilir. Kayıt uydurulmaz.
 
-## Başlangıç noktaları
+Türkçe, İngilizce, Almanca, Basitleştirilmiş Çince, Rusça, Arapça, Endonezce ve Malayca. Arapça sağdan sola düzenlenir. Endonezce ve Malayca ayrı metinlerdir. Her dilde aynı içerik yapısı bulunur. Şu an 12 kaynak kaydı, sekiz giriş okuması ve üç öğrenme yolu vardır. Yerelleştirilmiş adres sayısı yayın sayısı değildir.
 
-[Kaynak kütüphanesi](https://onourimpram.github.io/MARSAM/tr/library/), [tematik koleksiyonlar](https://onourimpram.github.io/MARSAM/tr/collections/), [kaynak karşılaştırma](https://onourimpram.github.io/MARSAM/tr/compare/), [öğrenme rotaları](https://onourimpram.github.io/MARSAM/tr/learning/), [etkinlikler](https://onourimpram.github.io/MARSAM/tr/events/) ve [uluslararası kaynaklar](https://onourimpram.github.io/MARSAM/tr/network/).
+## Yerelde çalıştırma
 
-Türkçe, İngilizce, Almanca, Basitleştirilmiş Çince, Rusça, Arapça, Endonezce ve Malayca. Arapça sağdan sola düzen kullanır. Endonezce ve Malayca ayrı çevirilerdir.
-
-22 kaynak kaydı, 8 başlangıç okuma dosyası, 3 öğrenme rotası ve 6 tematik koleksiyon bulunur. 55 mantıksal sayfanın sekiz dildeki karşılığı 440 yerelleştirilmiş adrestir. Bunlar 440 farklı yayın değildir. Proje kökü Türkçe ana sayfayı açar.
-
-Arama, konu ve tür filtreleri, yerel okuma listesi, atıf kopyalama, RIS ve BibTeX dışa aktarımı bulunur. Karşılaştırma aracı en fazla dört kaynağın künyesini, kapsamını, haklarını ve yorum sınırını gösterir. Seçim dil değişiminde korunur ve adres üzerinden paylaşılabilir. Karşılaştırma JSON olarak indirilebilir. Klinik etkililik sıralaması yapılmaz.
-
-Etkinlikler dış kurumlardan alınır ve tarihine göre arşiv veya yaklaşan olarak ayrılır. Tarihin gösterilmesi kayıtların açık olduğu anlamına gelmez. Katkı aracı yalnızca yerel dosya üretir, başvuru göndermez.
-
-## Yayın ve kaynak ilişkisi
-
-İlk bağımsız Pages etkinleştirme girişimi yönetim izni nedeniyle sonuçlanmadı. İnceleme sitesi, kullanıcının zaten etkin olan [onourimpram.github.io](https://github.com/OnourImpram/onourimpram.github.io/tree/main/MARSAM) deposuna yalnızca `MARSAM/` klasörü eklenerek yayımlandı. Kişisel ana sayfa, diğer siteler ve mevcut iş akışları değiştirilmedi. Pages yönetim ayarları veya hesap izinleri değiştirilmedi.
-
-Yayımlanan uygulamanın kaynak commit'i `3fbce07da07e68b08d443d2643ff09be7f1fb0e2`, yayın commit'i `94ebcf8cf2d61a38717fb95bd8b1a87e3e1b68e2`.
-
-[Pages dağıtımı](https://github.com/OnourImpram/onourimpram.github.io/actions/runs/36876484050), [yayın ve canlı tarayıcı kontrolleri](https://github.com/OnourImpram/onourimpram.github.io/actions/runs/36875672984), [yayın manifesti](https://onourimpram.github.io/MARSAM/release.json).
-
-[Yayın ve güncelleme notları](docs/GITHUB_PAGES_TR.md). Bu depodaki bağımsız `deploy-pages.yml` iş akışı mevcut ana makine yayınıyla aynı dağıtım yolu değildir.
-
-## Yerel çalıştırma
-
-Node.js 22 veya üzeri. Uygulamanın npm çalışma zamanı bağımlılığı yoktur.
+Node.js 22 veya üzeri. Uygulamanın npm paket bağımlılığı yoktur.
 
 ```sh
 npm run check
 npm run preview
 ```
 
-Yerel adres `http://127.0.0.1:4173/tr/`.
+Yerel adres: `http://127.0.0.1:4173/tr/`.
 
-GitHub Pages yolu için.
+GitHub Pages yolu için:
 
 ```sh
 BASE_PATH=/MARSAM/ PAGES_PREVIEW=true npm run check
 npm run preview
 ```
 
-PowerShell ortamında değişkenler ayrı satırlarda tanımlanır.
+## Testler
 
-```powershell
-$env:BASE_PATH='/MARSAM/'
-$env:PAGES_PREVIEW='true'
-npm run check
-npm run preview
-```
-
-Bu yapıda yerel adres `http://127.0.0.1:4173/MARSAM/tr/` olur.
-
-## Testler ve tasarım dayanakları
-
-`npm run check` içerik, dil, rota ve kaynak kontrollerini çalıştırır. Gerçek tarayıcı testleri için yalnız test ortamında Playwright kullanılır.
+`npm run check` içerik, dil, kaynak, başlık, bağlantı ve yayın sınırı kontrollerini çalıştırır. Kurum vitrininin arama ve veri kayıtlarına geri girmesi ayrıca denetlenir.
 
 ```sh
 python -m pip install playwright==1.57.0
-python -m playwright install --with-deps chromium
+python -m playwright install chromium
 python tests/browser_e2e.py
-python tests/campus_e2e.py
+python tests/scope_e2e.py
 ```
 
-[Karşılaştırmalı akademik platform incelemesi](docs/ACADEMIC_BENCHMARK_TR.md), Harvard Human Flourishing Program, Duke, Columbia SMBI ve IAPR için gözlenen yapı, tasarım çıkarımı ve uygulanan özelliği ayırır. Bu bir prestij sıralaması değildir. Marmara genel üniversite işaretlerinin kaynakları [varlık kayıtlarında](docs/MARMARA_ASSETS.json) bulunur.
+`tests/scope_e2e.py`, `PREVIEW_ORIGIN` tanımlandığında gerçek yayımlanmış siteyi sınayabilir. Arama, yerel okuma listesi, kaynak karşılaştırma, aynı sayfada dil değişimi, mobil menü ve gerçek dosya indirmesi korunur. Teknik testler bilimsel değerlendirme veya bağımsız erişilebilirlik sertifikası değildir.
+
+## Yayın düzeni
+
+Kaynak kodu bu depoda tutulur. Mevcut inceleme sitesi `OnourImpram/onourimpram.github.io` deposunun yalnız `MARSAM/` klasöründen yayımlanır. Güncelleme sırasında bu klasör temiz üretimle değiştirilir, kullanıcının diğer sitelerine dokunulmaz. Başarılı dağıtım ve gerçek HTTP kontrolü olmadan güncel sürümün canlı olduğu ileri sürülmez.
 
 ## İçerik sınırları
 
-Kaynak kayıtları V1 ve PARTIALLY_VERIFIED düzeyindedir. Çeviriler bilimsel ve dilsel insan incelemesini bekler. Teknik testler bağımsız erişilebilirlik, bilimsel onay veya ana dil incelemesi değildir. Özel konuşmalar, danışan verileri, ders dosyaları, kısıtlı ölçek maddeleri ve yayımlanmamış kitap bölümleri yayın paketinde bulunmaz. Dış kurumlar ortak veya destekçi olarak gösterilmez.
-
-Site statiktir. Yönetici paneli, LMS, araştırma veritabanı ve sunucu tarafı başvuru işlemleri içermez. `PAGES_PREVIEW=true` teknik inceleme yayınını kaydeder. `PUBLISH=true` gerekli bilimsel ve kurumsal onaylar olmadığı sürece kapalıdır. Üniversite alan adına geçiş ayrıca ele alınır.
+Kurumsal işaretler, Marmara Üniversitesi için planlanan merkezin görsel kimlik taslağında kullanılır. Site resmî kuruluş kararı, yönetim ataması veya üniversite yayın onayı ilan etmez. Kaynaklar belgelenmiş erişim sınırlarını korur. Metin ve çeviriler bilimsel ve dilsel insan incelemesini bekler. Özel ders dosyaları, yayımlanmamış kitap bölümleri, özel yazışmalar ve katılımcı verileri yayımlanmaz. Site klinik hizmet, gerçek CMS, LMS veya araştırma veri tabanı sunmaz.
