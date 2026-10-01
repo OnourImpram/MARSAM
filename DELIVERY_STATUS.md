@@ -1,11 +1,23 @@
-# MARSAM development status
+# MARSAM institutional preview status
 
-Version 0.2.0. Eight-language development preview.
+1 October 2026. Version 0.3.0.
 
-The branch contains the runnable source for Turkish, English, German, Simplified Chinese, Russian, Arabic, Indonesian and Malay. Javanese and Sundanese are outside this request's scope.
+The complete institutional enhancement is committed as regular source files on `feat/multilingual-knowledge-platform`. Verified application commit: `e7087f6805431438fa3aba83627cf0084c52026d`. The subsequent documentation and permanent-workflow commit does not alter the tested application.
 
-400 localized content routes, a language landing page and a 404 page are generated from 20 linked source records, 8 introductory dossiers and 3 learning paths. Source titles remain in their original language.
+## Implemented
 
-Run `npm run check` for 20 unit/content and 9 build/link tests. The additional `tests/browser_e2e.py` performs real local HTTP navigation, persistent storage, language switching, searches and native downloads. See the generated verification records for what actually ran. Local offline-fixture results are not described as end-to-end tests.
+Marmara University planned-center identity, unchanged official university marks, eight languages, Arabic RTL, six thematic collections, four-source comparison with persistent selection and cross-language shareable URLs, local JSON export, dated external events and an international research directory. The catalog contains 22 sources, eight introductory dossiers and three learning paths. There are 440 localized routes plus a full Turkish root page and 404.
 
-All editorial content and translations require human scientific and language review. No main-branch merge, production launch, clinical service or participant data collection is implied.
+## Recorded technical checks
+
+GitHub Actions run `36871527013` completed successfully. Both root and `/MARSAM/` builds passed 29 Node content/locale/contract tests and nine generated-link tests. Real HTTP Chromium suites passed 642 baseline checks and 803 institutional-feature checks. These are automated assertions, not counts of distinct user journeys. No mocked fetch, storage or downloads were used. The successful artifact contains logs, screenshots and the exact committed source archive.
+
+German and Russian long-heading overflow at 320px was reproduced in real browser screenshots and corrected through heading wrapping. Closed mobile menu layout and Malay preview-banner overflow were also corrected and retested. No body-level overflow masking was used.
+
+## GitHub Pages
+
+The user authorized a public development preview. The permanent deployment workflow is `.github/workflows/deploy-pages.yml`. Initial Pages creation was rejected by GitHub with `Resource not accessible by integration`. The account owner must select GitHub Actions in repository Settings, Pages. A deployment workflow being present is not evidence of a live website. Its post-deployment job verifies public HTML and the deployed commit before announcing a live URL.
+
+## Limits
+
+No formal center-establishment claim, director/board appointments, private course files, book drafts or participant data. Sources remain V1 / PARTIALLY_VERIFIED. Translations and original editorial content await human academic and language review. No genuine CMS, LMS, account system or participant database. Chromium checks are not independent accessibility certification, cross-browser verification or academic approval. Main has not been merged.
