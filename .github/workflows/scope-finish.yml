@@ -1,0 +1,66 @@
+name: Finalize comparison labels
+on:
+  push:
+    branches: [fix/institutional-content-scope]
+    paths: [.github/workflows/scope-finish.yml]
+permissions:
+  contents: write
+jobs:
+  finish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Separate the comparison field label from the catalogue introduction
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('src/campus.mjs');s=p.read_text()
+          old='scope:n.libraryLead[l]'
+          assert s.count(old)==1
+          new="scope:C('Özet','Summary','Zusammenfassung','摘要','Краткое описание','ملخص','Ringkasan','Ringkasan')[l]"
+          p.write_text(s.replace(old,new))
+          p=Path('tests/editorial-scope.test.mjs');s=p.read_text().replace('renderCampusHome,decorate,institutions,events','renderCampusHome,decorate,institutions,events,campusCopy')
+          s+="\ntest('comparison summary row uses a concise field label',()=>{for(const l of locales)assert.ok(campusCopy[l].scope.length<35,l);});\n"
+          p.write_text(s)
+          PY
+          BASE_PATH=/MARSAM/ PAGES_PREVIEW=true npm run check
+      - name: Check the actual comparison table in each language
+        run: |
+          python -m pip install playwright==1.57.0
+          python -m playwright install chromium
+          python - <<'PY'
+          from pathlib import Path
+          from playwright.sync_api import sync_playwright
+          import subprocess,os,time,json
+          server=subprocess.Popen(['node','scripts/serve.mjs'],env={**os.environ,'PORT':'4197'})
+          time.sleep(1);checks=[]
+          with sync_playwright()as p:
+              browser=p.chromium.launch()
+              for l in ['tr','en','de','zh','ru','ar','id','ms']:
+                  page=browser.new_page(viewport={'width':390,'height':844})
+                  page.goto('http://127.0.0.1:4197/MARSAM/'+l+'/compare/?ids=spiritual-competence,theories-book',wait_until='networkidle')
+                  label=page.locator('.comparison-table tbody tr').first.locator('th').inner_text()
+                  assert 0<len(label)<35
+                  assert page.evaluate('document.documentElement.scrollWidth<=innerWidth+1')
+                  checks.append({'locale':l,'summaryLabel':label,'passed':True});page.close()
+              browser.close()
+          server.terminate();server.wait()
+          Path('verification/final-label-checks.json').write_text(json.dumps(checks,ensure_ascii=False,indent=2))
+          PY
+      - name: Commit verified correction
+        run: |
+          git config user.name 'Onour Impram'
+          git config user.email '215815131+OnourImpram@users.noreply.github.com'
+          git add src/campus.mjs tests/editorial-scope.test.mjs
+          git commit -m 'fix: use concise multilingual field labels in source comparison'
+          git push origin HEAD:fix/institutional-content-scope
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: marsam-final-label-checks
+          path: verification/final-label-checks.json
+          retention-days: 7
