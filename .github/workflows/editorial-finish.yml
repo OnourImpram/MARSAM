@@ -1,0 +1,56 @@
+name: Finalize editorial spacing and mobile masthead
+on:
+  push:
+    branches: [design/editorial-finish-20261001]
+    paths: [.github/workflows/editorial-finish.yml]
+permissions:
+  contents: write
+jobs:
+  finish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Apply the visually diagnosed masthead and reading refinements
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          f=Path('public/editorial.css');s=f.read_text();s+='\n/* Override the old stacked mobile lockup, not merely its flex direction. */\n@media(max-width:600px){.institution-lockup{display:flex;flex-direction:row;align-items:center}.university-signature{margin-bottom:0;padding:0}.header-inner{align-items:center}.header-actions{align-self:center}.lockup-rule{display:block}}\n'
+          s+='\n.article-layout{justify-content:start}.locale-abbr{display:none}\n@media(max-width:600px){.language-select summary>.locale-abbr{display:inline;font-size:.67rem}.language-select summary>bdi{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}}\n';f.write_text(s)
+          f=Path('src/campus.mjs');s=f.read_text();needle='const toolbar=`<div class="campus-tools">';assert needle in s;s=s.replace(needle,'html=html.replace(\'<details class="language-select"><summary>\',`<details class="language-select"><summary><span class="locale-abbr" aria-hidden="true" dir="ltr">${l.toUpperCase()}</span>`);\n '+needle);f.write_text(s)
+          f=Path('tests/design_e2e.py');s=f.read_text().replace("if w<=768:\n       page.locator", "if w<=600:check('compact masthead '+l,page.locator('.header-inner').bounding_box()['height']<=95)\n      if w<=768:\n       page.locator");f.write_text(s)
+          PY
+      - name: Rerun complete source and link checks
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p verification
+          BASE_PATH=/MARSAM/ PAGES_PREVIEW=true npm run check | tee verification/editorial-final-check.log
+      - name: Check actual layout after the final visual refinements
+        run: |
+          python -m pip install -q playwright==1.57.0
+          python -m playwright install chromium
+          python tests/design_e2e.py
+      - name: Commit the reviewed final source
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'Onour Impram'
+          git config user.email '215815131+OnourImpram@users.noreply.github.com'
+          git add public/editorial.css src/campus.mjs tests/design_e2e.py
+          git commit -m 'design: finish compact accessible masthead and balanced reading columns'
+          git push origin HEAD:design/editorial-finish-20261001
+          git ls-tree -r HEAD > verification/editorial-final-tree.txt
+          git rev-parse HEAD > verification/editorial-final-sha.txt
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: marsam-editorial-final-review
+          path: |
+            verification/editorial*
+            .browser-results/editorial/
+          include-hidden-files: true
+          retention-days: 7
