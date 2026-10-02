@@ -1,0 +1,116 @@
+name: Verify reading-room candidate
+on:
+  push:
+    branches: [feat/scholarly-reading-room-20261002]
+    paths:
+      - '.github/workflows/reading-room-verify.yml'
+      - 'src/**'
+      - 'public/**'
+      - 'scripts/**'
+      - 'tests/**'
+      - 'package.json'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: reading-room-candidate
+  cancel-in-progress: false
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    container: mcr.microsoft.com/playwright/python:v1.61.0-noble
+    timeout-minutes: 20
+    env:
+      BROWSERS: chromium,firefox,webkit
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Reconstruct and check the exact locally tested source delta
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          python - <<'PY'
+          from pathlib import Path,PurePosixPath
+          import base64,lzma,hashlib,json
+          marker=Path('.github/reading-room-payload/APPLIED')
+          digest='8309141315c1389db3a95ed0da261d8d66b400078f8a811fb2624f995c5c115a'
+          if marker.exists():
+              assert marker.read_text().strip()==digest
+          else:
+              parts=sorted(Path('.github/reading-room-payload').glob('part*.b64'));assert len(parts)==8
+              raw=base64.b64decode(''.join(p.read_text().strip()for p in parts),validate=True)
+              assert hashlib.sha256(raw).hexdigest()==digest
+              data=json.loads(lzma.decompress(raw));assert data['schema']==1
+              assert data['baseline']=='d2caf4854caabafcee6d2c737222c6b9d224e772'
+              prepared=[]
+              for record in data['files']:
+                  p=PurePosixPath(record['path']);assert not p.is_absolute() and '..' not in p.parts
+                  assert p.parts[0] in {'.github','src','public','scripts','tests','docs','package.json','AGENTS.md'}
+                  target=Path(p);assert not target.is_symlink()
+                  old=target.read_bytes()if target.exists()else b''
+                  assert hashlib.sha256(old).hexdigest()==record['baseHash'],str(p)
+                  if record['delete']:prepared.append((target,None));continue
+                  lines=old.decode().splitlines(keepends=True)
+                  for start,end,replacement in reversed(record['ops']):
+                      assert 0<=start<=end<=len(lines)
+                      lines[start:end]=[replacement]
+                  new=''.join(lines).encode()
+                  assert hashlib.sha256(new).hexdigest()==record['hash'],str(p)
+                  prepared.append((target,new))
+              for target,new in prepared:
+                  if new is None:target.unlink()
+                  else:target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(new)
+              marker.write_text(digest+'\n')
+          PY
+      - name: Retain the candidate on its isolated branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'Onour Impram'
+          git config user.email '215815131+OnourImpram@users.noreply.github.com'
+          git add src public scripts tests docs AGENTS.md package.json .github/reading-room-payload/APPLIED
+          if ! git diff --cached --quiet; then
+            git commit -m 'feat: stage scholarly reading-room candidate for browser verification'
+            git push origin HEAD:feat/scholarly-reading-room-20261002
+          fi
+          mkdir -p verification
+          git rev-parse HEAD > verification/reading-room-source-sha.txt
+          git ls-tree HEAD > verification/reading-room-source-tree.txt
+      - name: Verify both route roots and content contracts
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm run check | tee verification/reading-room-root.log
+          BASE_PATH=/MARSAM/ PAGES_PREVIEW=true npm run check | tee verification/reading-room-pages.log
+          node scripts/budget.mjs
+      - name: Prepare matching browser package and script coverage
+        timeout-minutes: 4
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --timeout 25 -q playwright==1.61.0
+          python scripts/test-fonts.py
+      - name: Exercise real interactions and layouts in all three native engines
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tests/browser_e2e.py & core=$!
+          python tests/scope_e2e.py & scope=$!
+          python tests/heritage_e2e.py & layout=$!
+          status=0
+          wait "$core" || status=1
+          wait "$scope" || status=1
+          wait "$layout" || status=1
+          exit "$status"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: reading-room-candidate-evidence
+          path: |
+            verification/reading-room-*
+            .browser-results/reading-room/
+          include-hidden-files: true
+          retention-days: 14
