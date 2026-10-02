@@ -1,0 +1,161 @@
+name: Verify existing cini visibility
+on:
+  push:
+    branches: [fix/cini-visibility-20261002]
+    paths: [.github/workflows/cini-visibility-review.yml]
+permissions:
+  contents: write
+env:
+  BASE_PATH: /MARSAM/
+  PAGES_PREVIEW: 'true'
+  BROWSERS: chromium,firefox,webkit
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    container: mcr.microsoft.com/playwright/python:v1.61.0-noble
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Trust the checkout inside the job container
+        run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
+      - uses: actions/checkout@v4
+        with:
+          repository: OnourImpram/MARSAM
+          ref: 0ca2cb83667788fed8379f22a8ea5a1916ca2a3e
+          path: .baseline
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Add a failing regression before adjusting the existing rules
+        run: |
+          mkdir -p verification
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('tests/cini.test.mjs')
+          p.write_text(p.read_text()+r'''
+          // Owner refinement. Increase visibility of existing artwork, not its density.
+          test('existing cini contours are visibly reinforced without opaque decoration', () => {
+            const source = css();
+            for (const selector of ['body::before', '.editorial-hero::before', '.editorial-hero-copy::before']) {
+              const start = source.indexOf(selector + '{', source.indexOf('/* MARSAM Iznik cini'));
+              const rule = source.slice(start, source.indexOf('}', start));
+              const opacity = Number(rule.match(/opacity:([.\d]+)/)?.[1]);
+              assert.ok(opacity >= .24 && opacity <= .4, `${selector} must remain visible but subordinate, got ${opacity}`);
+              assert.match(rule, /background-repeat:no-repeat/);
+              assert.match(rule, /pointer-events:none/);
+            }
+          });
+          test('stronger cini still fades completely before the reading container', () => {
+            const source = css();
+            const rules = source.slice(source.indexOf('/* MARSAM Iznik cini'));
+            assert.match(rules, /transparent calc\(var\(--cini-gutter\) - 10px\)/);
+            assert.match(rules, /transparent calc\(var\(--cini-gutter\) - 8px\)/);
+            assert.ok(!rules.includes('background-repeat:repeat'));
+            assert.ok(!/filter:|backdrop-filter:|mix-blend-mode:|animation:|text-shadow:/.test(rules));
+          });
+          ''')
+          PY
+          if node --test tests/cini.test.mjs > verification/visibility-red.log 2>&1; then
+            echo 'The pre-change visibility regression unexpectedly passed' >&2
+            exit 1
+          fi
+          grep -q 'must remain visible but subordinate' verification/visibility-red.log
+      - name: Change opacity and gutter fading only, preserving all existing shapes and colours
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import json,hashlib,subprocess
+          p=Path('public/site.css');s=p.read_text()
+          assert hashlib.sha1(b'blob '+str(len(s.encode())).encode()+b'\0'+s.encode()).hexdigest()=='ddce5bfbf9dda48a4e470858e949d30d2e503c15'
+          start=s.index('/* MARSAM Iznik cini');a=s[:start];b=s[start:]
+          replacements={'opacity:.07;':'opacity:.30;','opacity:.105;':'opacity:.32;','opacity:.095;':'opacity:.34;','opacity:.045}':'opacity:.18}','opacity:.065}':'opacity:.22}','height:6rem;opacity:.065;':'height:6rem;opacity:.24;','opacity:.055}':'opacity:.20}','opacity:.06;':'opacity:.20;'}
+          for old,new in replacements.items():
+              assert b.count(old)==1,(old,b.count(old));b=b.replace(old,new)
+          for inset in ['10','8']:
+              old=f'linear-gradient(90deg,#000,transparent calc(var(--cini-gutter) - {inset}px)'
+              assert old in b
+              b=b.replace(old,f'linear-gradient(90deg,#000 calc(var(--cini-gutter)*.25),transparent calc(var(--cini-gutter) - {inset}px)')
+              old=f'transparent calc(100% - var(--cini-gutter) + {inset}px),#000)'
+              assert old in b
+              b=b.replace(old,f'transparent calc(100% - var(--cini-gutter) + {inset}px),#000 calc(100% - var(--cini-gutter)*.25))')
+          p.write_text(a+b)
+          p=Path('package.json');m=json.loads(p.read_text());assert m['version']=='0.8.1';m['version']='0.8.2';p.write_text(json.dumps(m,indent=2)+'\n')
+          p=Path('src/release.mjs');p.write_text(p.read_text().replace('0.8.1','0.8.2'))
+          p=Path('tests/cini_e2e.py');s=p.read_text()
+          old="                    if width>900:\n"
+          assert s.count(old)==1
+          s=s.replace(old,"                    if width>1100:\n                        check(prefix+' existing contours visible',float(s['opacity'])>=.24 and float(h['opacity'])>=.24 and float(accent['opacity'])>=.24)\n"+old)
+          old="                    (OUT/f'baseline-metrics-{engine}-{width}.json').write_text"
+          assert old in s
+          s=s.replace(old,"                    if engine=='chromium':page.screenshot(path=str(OUT/f'before-{width}.png'))\n"+old)
+          p.write_text(s)
+          p=Path('docs/design/CINI_0_8_1.md');p.write_text(p.read_text()+'''\n\n## 0.8.2. Mevcut motiflerin görünürlük düzeltmesi\n\nKullanıcının son talebi yeni tasarım veya yeni çizim değil, mevcut çiniyi belirginleştirmektir. Aynı iki SVG, aynı renk kodları, aynı konumlar ve aynı boyutlar korunur. Yalnız CSS opaklığı ve dış kenardaki alfa geçişi değişir. Masaüstünde sayfa 0,30, açılış kenarı 0,32, başlık üstü mevcut motif 0,34 opaklıktadır. Bu sayılar algısal yoğunluk ölçümü değildir. Tablet 0,18 ila 0,24 ve mobildeki tek mevcut fragman 0,20 değerini kullanır. Maske içerik sınırından 8 veya 10 piksel önce tamamen kaybolmaya devam eder. Panelin içine, kartlara veya başlıkların arkasına yeni görsel eklenmez.\n\nYeni görsel, SVG, JavaScript, font, renk, motif, hareket veya düzen değişikliği yoktur. Koyu yüzeyler, Marmara kimliği, ebru paneli, sekiz dil ve tüm akademik içerik korunur. Önceden üretilen on görsel taslak siteye aktarılmamıştır.\n''')
+          for path in ['public/assets','src/tokens.json','src/articles.mjs','src/content.mjs','src/publications-data.json','src/locales','src/campus.mjs','src/site.mjs','public/app.js','public/heritage.js','research']:
+              subprocess.run(['git','diff','--exit-code','--',path],check=True)
+          PY
+      - name: Verify both roots and unchanged asset inventory
+        shell: bash
+        run: |
+          set -euo pipefail
+          BASE_PATH=/ npm run check > verification/visibility-root.log
+          npm run check > verification/visibility-pages.log
+          node scripts/budget.mjs
+          cd .baseline
+          npm run build
+      - name: Prepare browsers and native script glyphs
+        run: |
+          python -m pip install --timeout 25 -q playwright==1.61.0 nbclient==0.10.2 nbformat==5.10.4 ipykernel==6.30.1 pillow
+          python scripts/test-fonts.py
+      - name: Verify preserved research downloads
+        run: python tests/research_artifacts.py
+      - name: Check all current interactions and compare exact before and after panel pixels
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tests/browser_e2e.py & core=$!
+          python tests/scope_e2e.py & scope=$!
+          python tests/heritage_e2e.py & layout=$!
+          timeout 420 python -u tests/research_e2e.py & research=$!
+          BASELINE_SOURCE="$GITHUB_WORKSPACE/.baseline" python tests/cini_e2e.py & cini=$!
+          status=0
+          wait "$core" || status=1
+          wait "$scope" || status=1
+          wait "$layout" || status=1
+          wait "$research" || status=1
+          wait "$cini" || status=1
+          exit "$status"
+      - name: Record only the verified visibility candidate
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          import json,subprocess
+          expected={'public/site.css','package.json','src/release.mjs','tests/cini.test.mjs','tests/cini_e2e.py','docs/design/CINI_0_8_1.md'}
+          changed=set(subprocess.check_output(['git','diff','--name-only']).decode().splitlines());assert changed==expected,(changed,expected)
+          report={'version':'0.8.2','state':'verified-candidate-not-yet-live','baseline':'0ca2cb83667788fed8379f22a8ea5a1916ca2a3e','newVisualAssets':0,'paletteChanged':False,'artworkFilesChanged':False,'contentChanged':False,'layoutChanged':False,'files':sorted(changed),'suites':{}}
+          for file in ['reading-room-core.json','reading-room-scope.json','reading-room-layout.json','research-browser.json','cini-browser.json']:
+              r=json.loads((Path('verification')/file).read_text());assert r['success'];report['suites'][file]={k:r[k]for k in ['passed','total','browsers']if k in r}
+          Path('verification/visibility-candidate.json').write_text(json.dumps(report,indent=2)+'\n')
+          PY
+          git config user.name 'Onour Impram'
+          git config user.email '215815131+OnourImpram@users.noreply.github.com'
+          git add public/site.css package.json src/release.mjs tests/cini.test.mjs tests/cini_e2e.py docs/design/CINI_0_8_1.md
+          git diff --cached --stat > verification/visibility-change-stat.txt
+          git commit -m 'fix: make existing cini visible without new artwork or design changes'
+          git push origin HEAD:fix/cini-visibility-20261002
+          git rev-parse HEAD > verification/visibility-source-sha.txt
+          git ls-tree HEAD > verification/visibility-source-tree.txt
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: marsam-existing-cini-visibility
+          path: |
+            verification/visibility-*
+            verification/reading-room-*.json
+            verification/research-*.json
+            verification/cini-browser.json
+            .browser-results/cini/
+          include-hidden-files: true
+          retention-days: 14
