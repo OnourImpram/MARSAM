@@ -1,0 +1,25 @@
+name: Inspect matte panel baseline
+on:
+  push:
+    branches: [fix/matte-panel-research-resources-20261002]
+    paths: [.github/workflows/matte-source-review.yml]
+permissions:
+  contents: read
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: cc7aadf643bf6786194484134d7e98de9f14fdb7
+      - run: |
+          mkdir -p evidence
+          git archive HEAD --format=zip -o evidence/source.zip
+          git ls-tree -r HEAD > evidence/source-tree.txt
+          curl -fsS --max-time 25 https://onourimpram.github.io/MARSAM/release.json > evidence/live-release.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: marsam-matte-source
+          path: evidence/
+          retention-days: 14
