@@ -1,61 +1,53 @@
-# MARSAM 0.7.1. Visual correction candidate
+# MARSAM 0.7.2. Tamamlanan canlı teslim
 
-Restores the approved 0.6 heritage composition and Marmara masthead without rolling back the richer 0.7 catalogue, search, provenance, eight locales or citation exports. Planned affiliation uses official faculty and department names. The homepage warning strip and governance-promotion block are removed. Candidate browser receipts are in docs/releases/restoration-0.7.1-candidate.json. Live delivery must be verified separately before it is announced.
+2 Ekim 2026. Kullanıcının işaretlediği görsel düzeltmeler ana dala alındı, GitHub Pages üzerinde yayımlandı ve gerçek canlı adreste kontrol edildi.
 
-## Previous completed release record
-
-# MARSAM. Tamamlanan okuma ve araştırma platformu sürümü
-
-2 Ekim 2026. Uygulama sürümü 0.7.0.
-
-## Canlı yayın
-
-İngilizce https://onourimpram.github.io/MARSAM/en/
+## Canlı adres ve sürüm
 
 Türkçe https://onourimpram.github.io/MARSAM/tr/
 
-Yayımlanan uygulama kaynağı 0e8a30477876b7b8e910348bbf46b50cf3df8934. Yayın deposundaki commit ffbbe35d28407189c4b927bd930f76445acc2611. Sonraki belge güncellemeleri bu uygulama sürümünü değiştirmez.
+İngilizce https://onourimpram.github.io/MARSAM/en/
 
-Onaylanan tasarım araştırmasının uygulaması tamamlandı ve gerçek GitHub Pages adresinde doğrulandı. Yeni sürüm yalnız geliştirme dalında bırakılmadı. Kaynak ana dala alındı, üretilen site yayın deposunun yalnız MARSAM bölümüne yerleştirildi.
+Uygulama kaynağı 5807ac46976daadd93285a6dd5355347dd3dfbcc.
 
-## Kullanıcıya yansıyan değişiklikler
+Yayın deposu OnourImpram/onourimpram.github.io. Yayın commit 1161a132093fb6d55cde8d65d7a754a87019b834. Yayımlanan MARSAM ağacı f4f7e6f82af914779c66b74e5039db98b5ab4191. Sonraki belge güncellemeleri bu uygulama kimliğini değiştirmez.
 
-Gezinme beş görev alanına ayrıldı. Konuları keşfet, kütüphane, öğrenme, araştırma ve hakkında. Arama açılışta doğrudan görünür. Mobil ekranda dekoratif görsel içerik erişiminin önüne geçmez. Ebru, kâğıt tonları ve ölçülü geometrik bezeme korundu. Uzun okumalar ve kaynak sayfaları sade yüzeyler kullanır.
+## Görselde istenen düzeltmeler
 
-Kitaplar ve makaleler ortak katalog verileriyle sunulur. Kitaplarda kapak ve liste görünümü vardır. Arama özgün eser adlarını, yazarları, DOI ve ISBN bilgilerini kullanır. Kimlik sorguları önceliklendirilir. Türkçe, Çince, Rusça ve Arapça yazım özellikleri ortak arama modülünde ayrı ele alınır. Dil değiştirildiğinde ilgili sayfa ve filtreler korunur.
+Kırmızı ile çizilen alt çiçek bezemesi HTML içinden kaldırıldı. Üstteki geometrik motif ayrı bir simge olmaktan çıkarıldı. Mevcut özgün motif, sarı ile çevrelenen kemerli iç yüzeyin tamamında arka plan olarak kullanılıyor. MARSAM yazısı merkezde, yumuşak kâğıt geçişiyle okunaklı tutuluyor. Kullanıcının sarı ve kırmızı işaretleri siteye renk veya görsel olarak taşınmadı.
 
-Kaynak kimliği, erişilip incelenen kapsam, bilimsel değerlendirme, güncellik, dil incelemesi ve kullanım hakları altı ayrı boyutta gösterilir. Tek bir yeşil onay etiketiyle eşitlenmez. Kaynakların özgün yazar sırası, yayın künyeleri, kitap kapakları ve mevcut bibliyografik sınırlılıklar korunur. Ortak yazarlık merkez üyeliği veya danışmanlık ilişkisi olarak sunulmaz.
+Ebru çerçevenin özgün dosyaları ve Marmara Üniversitesi üst kimliği korundu. Planlanan akademik yapı Atatürk Eğitim Fakültesi, Eğitim Bilimleri Bölümü, Rehberlik ve Psikolojik Danışmanlık Anabilim Dalı olarak gösteriliyor. Resmî kuruluş onayı ileri sürülmüyor.
 
-Sekiz dil ve Arapça sağdan sola düzen sürer. Çeviri kayıtları kaynak ve hedef sürüm hash değerlerini taşır. Okuma listesi kullanılan tarayıcıda saklanır. Atıf dosyaları ve kaynak karşılaştırma indirmeleri çalışır. Katkı formu hataları ilgili alana bağlar ve yalnız yerel dosya oluşturduğunu açıkça bildirir. Gönderim yapılmış gibi davranmaz.
+Önceki düzeltmede açılışta kalmış olan açıklama paragrafı, büyük arama formu ve altındaki bağlantı sırası da kaldırıldı. Üst menüdeki arama, ayrı arama sayfası ve katalog filtreleri korundu.
 
-## Teknik düzenleme
+## Genel arka plan
 
-Açık bileşen yapısı ve tek semantik değişkenli stil dosyası kullanılır. Önceki HTML üzerinde düzenli ifadeyle sonradan değişiklik yapan katman kaldırıldı. Genel kurum adı yasağı yerine ilişki türünü ve onayını denetleyen kurallar getirildi. Gerçek bilimsel kaynaklarda kurum adlarının bulunması tek başına engellenmez. Kitap ve makale sayıları gelecekteki genişlemeyi engelleyen sabit test kuralları değildir.
+Sıcak kâğıt tonları korundu. Açılış yüzeyine hafif ton geçişi verildi. Geometrik desenler genel sayfada dış kenarlarla sınırlandı, uzun metinlerin okuma yüzeyleri sade bırakıldı. Okuma seçkisi ve alt bilgi aynı paletle ilişkilendirildi. Dar ekranlarda kenar süslemeleri kaldırılıyor. Yazdırma ve yüksek karşıtlık durumları sade yüzey kullanıyor.
 
-Ana dal doğrulaması güncel üç motorlu testlere bağlandı. Kaynak deposunun yayın iş akışı yalnız kaynak sürümüne bağlı Pages paketi hazırlar. Gerçek yayın ayrı mevcut host üzerinde MARSAM kapsamıyla sınırlıdır. Taşıma dosyaları ve tek kullanımlık düzeltme betikleri ana dala alınmadı.
+Yeni görsel dosyası, yazı tipi, hareketli fon veya JavaScript bağımlılığı eklenmedi. Yeni arka plan mevcut SVG dosyalarını kullanıyor.
+
+## Korunan içerik ve işlevler
+
+Akademik kaynak dosyaları, kitap ve makale künyeleri, yazar sıraları, DOI ve ISBN kayıtları, sekiz dilin metinleri ve inceleme durumları değiştirilmedi. Arama kodu, okuma listesi, atıf indirme, karşılaştırma ve katalog etkileşimleri korundu. Kaynak koruma denetimi aday doğrulama iş akışında geçti.
 
 ## Gerçek canlı doğrulama
 
-Kaynak ana dal kontrolü https://github.com/OnourImpram/MARSAM/actions/runs/36969902819
+Kaynak ana dal kontrolü https://github.com/OnourImpram/MARSAM/actions/runs/36977839984
 
-Canlı yayın ve tarayıcı kontrolü https://github.com/OnourImpram/onourimpram.github.io/actions/runs/36969983821
+Aday ve geri dönüş testi https://github.com/OnourImpram/MARSAM/actions/runs/36977278814
 
-İki kontrol de başarıyla tamamlandı. Canlı sunucudaki 599 dosya kaynak sürümünün hash kayıtlarıyla eşleşti. Sorgu parametresi olmayan giriş ve temel uygulama dosyaları da kontrol edildi. Üç gerçek tarayıcı motorunda 818 temel etkileşim, 899 kapsam ve 2243 yerleşim kontrolü geçti. Motorlar Chromium 149.0.7827.55, Firefox 151.0 ve WebKit 26.5. Sekiz dil ve 320, 390, 768, 1440 piksel genişlikler kullanıldı. Girdi ve çıktı sahteleştirilmedi. Ekranlar canlı adresten alındı.
+Canlı doğrulama https://github.com/OnourImpram/onourimpram.github.io/actions/runs/36977980013
 
-Yarım kalan WebKit Rusça seçim kutusu taşması önce yeniden üretildi. Native seçim ve klavye odağı korunarak düzeltildi. Sayfayı kırpmak çözüm olarak kullanılmadı. Önceki başarısız test ve betik tekrar çalıştırma kayıtları başarı olarak yeniden etiketlenmedi.
+Üç iş akışı da başarıyla tamamlandı. Canlı sitedeki 601 dosyanın hash değeri sürüm kaydıyla eşleşti. Chromium, Firefox ve WebKit üzerinde 818 temel etkileşim, 899 kapsam ve 2627 yerleşim kontrolü geçti. Sekiz dil ve 320, 390, 768, 1440 piksel genişlikler sınandı. Yeni arka planın ölçüleri iç panelle karşılaştırıldı. Kaldırılan öğelerin yokluğu ve Marmara kimliğinin varlığı canlı HTML üzerinde kontrol edildi.
 
-## Yayın sınırları
+Ana sayfa, mobil görünüm ve panelin yakın görünümü doğrudan canlı adresten alındı. Masaüstü ve yakın görünüm ayrıca görsel olarak incelendi. Önceki 0.7.1 yayını da başarılıydı. O çalışmanın kesilen son yanıtı yayın başarısızlığı olarak yeniden etiketlenmedi. Önceki canlı kayıt docs/releases/restoration-0.7.1-live.json dosyasındadır.
 
-Marmara Üniversitesi bağlamında önerilen merkez çerçevesi görünür. Kuruluş, üniversite sahipliği, resmî logo kullanımı, onay, akreditasyon veya klinik işletme yetkisi doğrulanmış değildir. Bu nedenle kamusal başlıkta onaysız resmî üniversite logo birleşimi kullanılmaz.
+## Diğer sitelerin korunması
 
-Bilimsel editör ve ana dil uzmanı incelemesi henüz tamamlanmış sayılmaz. Otomatik kontroller ekran okuyucu, gerçek cihaz, kullanıcı araştırması veya bağımsız erişilebilirlik onayı değildir. Dosya boyutu testleri sahadan ölçülmüş performans sonuçları değildir. Kitap kapakları ve diğer eserler için ilgili hak değerlendirmeleri ayrı kalır.
+Yayın sırasında host ana dalındaki eşzamanlı Elif V25.1 güncellemesi tespit edildi. Yalnız MARSAM, güncel dc0e9f4aaa9925464ba947c4af90defd1e727c34 üzerine yerleştirildi. Elif ağacı 9f335f631c2d456706e6a9703973128a09d8a513 olarak korundu. Kişisel index.html, kök README, .github ve .nojekyll de değişmedi.
 
-Bilgi grafiği, gerçek editör hesapları, güvenli CMS, korumalı araştırma katılımı ve tam kişi kimliği ayrıştırması bu sürüme eklenmedi. Bunlar araştırma raporunda sonraki aşama olarak tanımlanan, ayrıca karar gerektiren işlerdir. Özel ders ödevleri, yayımlanmamış bölüm metinleri ve kişisel araştırma verisi yayımlanmadı.
+## Sınırlar ve kalıcı kayıt
 
-GitHub Pages yanıt başlıkları ölçüldü. Yanıt düzeyinde CSP veya X-Frame-Options gözlenmedi. Bilinmeyen adres gerçek 404 döndürür ve host varsayılan sayfasını kullanır. Ortak kök 404 veya robots dosyası değiştirilmedi. noindex erişim kontrolü sayılmaz.
+Bilimsel editör ve ana dil uzmanı incelemesi, resmî kurumsal onay ve bağımsız erişilebilirlik değerlendirmesi tamamlanmış sayılmaz. Tarayıcı motoru kontrolleri gerçek cihaz veya ekran okuyucu testlerinin yerine geçmez. Dosya boyutu bütçeleri sahadan ölçülmüş performans sonuçları değildir.
 
-## Korunan diğer siteler ve kayıtlar
-
-Yayın deposunda yalnız MARSAM ağacı değişti. Elif Tasarım, kişisel index.html, kök README, .github ve .nojekyll girdilerinin önceki hash değerleri aynen korundu.
-
-Güncel kapsam docs/design/COVERAGE.md, uygulama ve tasarım sözleşmeleri docs/design/README.md, kalıcı doğrulama kaydı docs/releases/reading-room-0.7.0-verification.json, sürüm kimliği docs/LIVE_REVIEW_RELEASE.json dosyalarında bulunur. Önceki 0.6 teslimi docs/releases/DELIVERY_0_6.md, önceki yayın kimliği docs/releases/RELEASE_0_6.json olarak arşivlenmiştir.
+Güncel kalıcı doğrulama docs/releases/bookplate-0.7.2-live.json dosyasıdır. Tarihsel 0.7.0 ve 0.7.1 teslim metni docs/releases/DELIVERY_0_7_0_1_HISTORICAL.md olarak korunmuştur. Tasarım yönünü değiştiren eski öneriler güncel kullanıcı düzeltmesinin yerine geçmez.

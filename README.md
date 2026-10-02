@@ -1,49 +1,43 @@
-# MARSAM 0.7.1. Marmara identity and heritage restoration
+# MARSAM 0.7.2
 
-The owner-requested 0.6 visual identity is restored over the 0.7 content and interaction model. The planned academic home is Marmara University, Atatürk Faculty of Education, Department of Educational Sciences, Division of Guidance and Psychological Counselling. See docs/design/RESTORATION_0_7_1.md. The prominent homepage warning strip and governance promotion are removed. About and source-level review details remain available. Formal establishment is not asserted.
+Maneviyat ve Ruh Sağlığı Araştırmaları Merkezi için sekiz dilli akademik bilgi platformu. Planlanan akademik yapı Marmara Üniversitesi, Atatürk Eğitim Fakültesi, Eğitim Bilimleri Bölümü, Rehberlik ve Psikolojik Danışmanlık Anabilim Dalıdır. Marmara kimliği korunur. Merkezin resmî kuruluşu bu teknik teslimle doğrulanmış sayılmaz.
 
-## Previous 0.7 release documentation
+## Canlı site ve güncel kararlar
 
-# MARSAM
+Türkçe https://onourimpram.github.io/MARSAM/tr/
 
-Maneviyat, ruh sağlığı, araştırma ve öğrenme için sekiz dilli akademik bilgi platformu. Marmara Üniversitesi bağlamında önerilen merkez için hazırlanmış kurumsal inceleme sürümüdür. Resmî kuruluş, üniversite sahipliği, onay, akreditasyon veya klinik hizmet yetkisi doğrulanmış değildir.
+English https://onourimpram.github.io/MARSAM/en/
 
-## Güncel tasarım ve uygulama
+Güncel teslim `DELIVERY_STATUS.md`, sürüm kimliği `docs/LIVE_REVIEW_RELEASE.json`, kalıcı canlı kontrol kaydı `docs/releases/bookplate-0.7.2-live.json` dosyalarındadır. Tasarımın güncel dizini `docs/design/README.md`, son görsel düzeltmenin kapsamı `docs/design/SURFACE_0_7_2.md` dosyasıdır. Eski raporlar tarihsel kayıtlardır.
 
-Kod sürümü 0.7.0. Araştırma ve tasarım kararlarının güncel dizini `docs/design/README.md`. Uygulanan, kısmen uygulanan ve ileri aşamaya bırakılan kapsam `docs/design/COVERAGE.md`. Doğrulanmış canlı sürüm ve yayın kanıtı `DELIVERY_STATUS.md` dosyasında tutulur. Eski sürüm raporları tarihsel kayıtlardır.
+## Son görsel düzeltme
 
-İngilizce site https://onourimpram.github.io/MARSAM/en/
+Alt çiçek bezemesi kaldırıldı. Üstte ayrı duran geometrik motif, mevcut özgün SVG kullanılarak kemerli iç yüzeyin tamamına arka plan yapıldı. MARSAM yazısı merkezde tutuldu. Ebru çerçeve ve Marmara üst kimliği korundu. Daha önce kaldırılması istenen açılış paragrafı, büyük arama formu ve bağlantı sırası çıkarıldı. Üst menüdeki arama ve ayrı arama sayfası çalışmaya devam eder.
 
-Türkçe site https://onourimpram.github.io/MARSAM/tr/
+Genel arka plan sıcak kâğıt tonları ve okuma metninden uzakta kalan geometrik kenarlar kullanır. Mobil, yazdırma ve yüksek karşıtlık durumlarında süsleme azaltılır veya kaldırılır. Yeni görsel dosyası, yazı tipi, JavaScript bağımlılığı veya hareketli arka plan eklenmedi.
 
-## Uygulama
+## Korunan işlevler ve içerik
 
-Beş ana gezinme alanı, erken görünür arama, özgün eser künyelerini koruyan katalog, kitaplarda kapak ve liste görünümü, kaynak karşılaştırma ve ayrı kaynak inceleme boyutları bulunur. Öğrenci, uygulayıcı ve araştırmacı okuma yolları korunur. DOI ve ISBN sorguları önceliklidir. Dil değişimi filtreleri ve ilgili sayfayı korur. Okuma listesi yalnız kullanılan tarayıcıda tutulur. Katkı formu yerel dosya hazırlar, gönderim yapmaz.
+Türkçe, İngilizce, Almanca, Basitleştirilmiş Çince, Rusça, Arapça, Endonezce ve Malayca. Arapça sağdan sola düzen ve özgün bibliyografik bilgiler korunur. Kitap ve makale kayıtları, özgün yazar sırası, DOI, ISBN ve inceleme durumları değiştirilmedi.
 
-Türkçe, İngilizce, Almanca, Basitleştirilmiş Çince, Rusça, Arapça, Endonezce ve Malayca. Arapça sağdan sola düzen kullanır. Akademik açıklamalar ve arayüz metinleri insan dil incelemesi bekler. Kaynak kimliği, erişilen kapsam, bilimsel değerlendirme, güncellik ve kullanım hakları aynı onay sayılmaz.
+Katalog filtreleri, kapak ve liste görünümü, DOI ve ISBN araması, okuma listesi, kaynak karşılaştırma ve atıf dosyaları sürer. Okuma listesi kullanılan tarayıcıda tutulur. Katkı formu yerel dosya hazırlar, sunucuya gönderim yapmaz.
 
-Ebru, kâğıt tonları ve ölçülü geometrik bezeme okuma düzenini destekler. Üniversite logosu için izin doğrulanmadığından kamusal üst bölümde resmî logo birleşimi kullanılmaz. Önerilen Marmara bağlamı açıkça belirtilir. Özel ders dosyaları, kişisel yansıtmalar, katılımcı verisi ve tam kitap metinleri yayımlanmaz. Tasarım örneği olarak incelenen kurumlar ortakmış gibi gösterilmez.
+## Geliştirme ve doğrulama
 
-## Teknik yapı
-
-Node.js 22 veya üzeri ile bağımlılıksız statik HTML üretimi. Açık bileşenler, tek stil dosyası ve semantik tasarım değişkenleri kullanılır. React, sunucu uygulaması, hesap, klinik asistan veya veri toplama altyapısı eklenmemiştir.
+Node.js 22 veya üzeri. Statik HTML, açık bileşenler ve tek stil dosyası.
 
 ```sh
 npm run check
 npm run preview
-```
-
-Yerel adres `http://127.0.0.1:4173/en/`.
-
-GitHub Pages alt yolu için.
-
-```sh
 BASE_PATH=/MARSAM/ PAGES_PREVIEW=true npm run check
 node scripts/budget.mjs
+BROWSERS=chromium,firefox,webkit python tests/browser_e2e.py
+BROWSERS=chromium,firefox,webkit python tests/scope_e2e.py
+BROWSERS=chromium,firefox,webkit python tests/heritage_e2e.py
 ```
 
-## Doğrulama ve sınırlar
+Tarayıcı testleri eşleşen Playwright kurulumu ve sekiz dilin gerçek karakter kapsamını gerektirir. Test ortamı yazı tipleri dağıtıma eklenmez. Yayında yalnız mevcut host deposunun MARSAM alt ağacı değiştirilir. Güncel host ana dalı önce okunur, diğer sitelerin yeni değişiklikleri korunur.
 
-Kaynak ve bağlantı testleri `npm run check` komutuyla çalışır. `tests/browser_e2e.py`, `tests/scope_e2e.py` ve `tests/heritage_e2e.py` güncel ortak tarayıcı paketine yönlenir. `BROWSERS=chromium,firefox,webkit` üç motoru seçer. Test ortamı için kurulan yazı tipleri dağıtılmaz.
+## İnceleme sınırları
 
-Otomatik testler insan akademik değerlendirmesi, ana dil incelemesi, gerçek cihaz testi, ekran okuyucu değerlendirmesi veya bağımsız erişilebilirlik onayı değildir. Kurumsal yayın, görsel kullanım izinleri ve bilimsel sorumluluk insan kararına bağlıdır.
+Otomatik kontroller bilimsel editör incelemesi, ana dil uzmanı değerlendirmesi, ekran okuyucu veya gerçek cihaz testi ve bağımsız erişilebilirlik onayı değildir. Resmî kuruluş, akreditasyon, klinik hizmet, ortaklık veya hak sahipliği uydurulmaz. Özel ders dosyaları ve yayımlanmamış araştırma verileri yayımlanmaz.
