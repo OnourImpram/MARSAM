@@ -1,3 +1,4 @@
+import {researchGuides} from './research-data.mjs';
 import {bibliographyDetail} from './publications-view.mjs';
 import {locales,langTags,sourceNotes} from './i18n.mjs';
 import {labels,sources,resources,sections,topics,typeKeys,articles,learningPaths,overview,campusCopy,sourceById} from './catalogue.mjs';
@@ -42,7 +43,7 @@ export function pathPage(p,l,b){const t=labels[l];return shell(l,`learning/${p.i
 export function searchIndex(l,b){
  const indexed=(record,rawText)=>({...record,rawText,text:normalizeText(rawText,l)});
  return [
-  ...sections.map(s=>indexed({id:'section-'+s.id,title:s.id==='practice'?labels[l].practicePage:s.id==='search'?labels[l].searchPage:s.title[l],summary:s.summary[l],kind:labels[l].topics,url:route(l,s.id,b),identifiers:[]},s.title[l]+' '+s.summary[l])),
+  ...sections.map(s=>indexed({id:'section-'+s.id,title:s.id==='practice'?labels[l].practicePage:s.id==='search'?labels[l].searchPage:s.title[l],summary:s.summary[l],kind:labels[l].topics,url:route(l,s.id,b),identifiers:[]},s.title[l]+' '+s.summary[l]+' '+(researchGuides.find(g=>g.id===s.id)?.blocks.map(x=>x.heading[l]+' '+x.text[l]).join(' ')||''))),
   ...articles.map(a=>indexed({id:a.id,title:a.title[l],summary:a.summary[l],kind:labels[l].dossiers,url:articleURL(l,a.id,b),identifiers:[]},a.title[l]+' '+a.summary[l]+' '+a.body[l].map(x=>x.heading+' '+x.text).join(' '))),
   ...resources.map(r=>{const source=sourceById[r.sources[0]];return indexed({id:r.id,title:r.title[l],originalTitle:source.title,summary:r.summary[l],kind:typeName(r.kind,labels[l]),url:resourceURL(l,r.id,b),identifiers:identifiersFor(source)},r.title[l]+' '+r.summary[l]+' '+source.title+' '+source.citation);})
  ];

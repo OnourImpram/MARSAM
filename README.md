@@ -1,3 +1,11 @@
+# MARSAM 0.8.0. Matte panel and research workbench
+
+Candidate implementation. The central white gradient overlay and glowing wordmark are removed. The approved heritage composition and Marmara PDR identity remain. Four eight-language method guides, blank extraction templates and an executable catalogue-inventory laboratory are added to the existing Research route. The richer catalogue and source-review distinctions are preserved.
+
+See docs/design/MATTE_RESEARCH_0_8.md for the source-to-implementation record. Independent scientific, language and institutional approval are not asserted. Quarto source is provided, but no Quarto execution service or completed meta analysis is claimed. Public delivery must be confirmed separately against the exact source commit.
+
+## Previous completed release record
+
 # MARSAM 0.7.2
 
 Maneviyat ve Ruh Sağlığı Araştırmaları Merkezi için sekiz dilli akademik bilgi platformu. Planlanan akademik yapı Marmara Üniversitesi, Atatürk Eğitim Fakültesi, Eğitim Bilimleri Bölümü, Rehberlik ve Psikolojik Danışmanlık Anabilim Dalıdır. Marmara kimliği korunur. Merkezin resmî kuruluşu bu teknik teslimle doğrulanmış sayılmaz.
