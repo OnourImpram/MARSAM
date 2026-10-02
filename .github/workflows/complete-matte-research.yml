@@ -1,0 +1,141 @@
+name: Complete matte panel and research guides
+on:
+  push:
+    branches: [fix/matte-research-content-073]
+    paths: [.github/workflows/complete-matte-research.yml]
+permissions:
+  contents: write
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    container: mcr.microsoft.com/playwright/python:v1.61.0-noble
+    timeout-minutes: 16
+    env:
+      BROWSERS: chromium,firefox,webkit
+    steps:
+      - uses: actions/checkout@v4
+      - name: Establish container repository trust
+        run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Recover complete records, reproduce the defects, and apply the exact completion
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import base64,lzma,json,hashlib,re,subprocess
+          def digest(b):return hashlib.sha256(b).hexdigest()
+          old=base64.b64decode(''.join(p.read_text().strip()for p in sorted(Path('.github/matte-content-payload').glob('part*.b64'))))
+          assert digest(old)=='bbae02c88b75bbd75882810da1c0a1a8daf983f95b0e25f750c98b64ec9e164b'
+          decompressor=lzma.LZMADecompressor();text=decompressor.decompress(old).decode();assert not decompressor.eof
+          decoder=json.JSONDecoder();pos=1;recovered=[]
+          while True:
+              while pos<len(text)and text[pos]in ' ,\r\n':pos+=1
+              try:item,end=decoder.raw_decode(text,pos)
+              except json.JSONDecodeError:break
+              recovered.append(item);pos=end
+          assert len(recovered)==11
+          match=re.search(r'"edits":\[\[0,0,"',text[pos:]);assert match
+          s=text[pos:][match.end():];decoded=[];i=0
+          while i<len(s):
+              if s[i]=='"':break
+              if s[i]=='\\':
+                  n=6 if i+1<len(s)and s[i+1]=='u'else 2
+                  if i+n>len(s):break
+                  decoded.append(json.loads('"'+s[i:i+n]+'"'));i+=n
+              else:decoded.append(s[i]);i+=1
+          body=''.join(decoded);guides=[];pos=1
+          while True:
+              while pos<len(body)and body[pos]in ' ,\r\n':pos+=1
+              try:item,pos=decoder.raw_decode(body,pos)
+              except json.JSONDecodeError:break
+              guides.append(item)
+          assert len(guides)==4
+          data=base64.b64decode(''.join(p.read_text().strip()for p in sorted(Path('.github/matte-completion').glob('part*.b64'))))
+          assert digest(data)=='747ef1660523b8f8847da519242848b37997df33de19bdc8711dc86afb3893f5'
+          supplement=json.loads(lzma.decompress(data));assert len(supplement)==16
+          def change(item,original):
+              assert (digest(original)if original is not None else None)==item['before'],item['path']
+              value=original.decode()if original is not None else ''
+              for a,b,replacement in reversed(item['edits']):value=value[:a]+replacement+value[b:]
+              result=value.encode();assert digest(result)==item['after'],item['path']
+              return result
+          testname='tests/matte-research.test.mjs'
+          red=change(next(x for x in recovered if x['path']==testname),None)
+          red=change(next(x for x in supplement if x['path']==testname),red)
+          Path(testname).write_bytes(red);Path('verification').mkdir(exist_ok=True)
+          result=subprocess.run(['node','--test',testname],capture_output=True,text=True)
+          Path('verification/matte-red.log').write_text(result.stdout+result.stderr)
+          assert result.returncode!=0 and 'uniform paper surface'in result.stdout
+          Path(testname).unlink()
+          def apply(item):
+              p=Path(item['path']);assert not p.is_absolute()and '..'not in p.parts
+              original=p.read_bytes()if p.exists()else None
+              result=change(item,original);p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(result)
+          for item in recovered:apply(item)
+          Path('content').mkdir(exist_ok=True)
+          Path('content/research-guides.json').write_text(json.dumps(guides,ensure_ascii=False,indent=2)+'\n')
+          for item in supplement:apply(item)
+          Path('verification/matte-recovery.json').write_text(json.dumps({'recoveredCompletePatches':len(recovered),'recoveredCompleteGuides':len(guides),'completionSHA256':digest(data),'defectsReproduced':True,'completionAppliedAgainstExactHashes':True},indent=2))
+          PY
+      - name: Preserve the richer original catalogue and approved identity
+        run: |
+          git diff --exit-code -- src/articles.mjs src/content.mjs src/publications-data.json src/publications-data.mjs src/locales src/i18n.mjs src/chrome.mjs src/editorial.mjs src/messages.json public/app.js public/search-core.js public/heritage.js public/campus.js public/assets
+      - name: Verify both deployment roots and asset budgets
+        shell: bash
+        run: |
+          set -euo pipefail
+          BASE_PATH=/ npm run check > verification/matte-root-check.log
+          BASE_PATH=/MARSAM/ PAGES_PREVIEW=true npm run check > verification/matte-pages-check.log
+          node scripts/budget.mjs
+      - name: Prepare matching browsers and script coverage
+        run: |
+          python -m pip install --timeout 25 -q playwright==1.61.0
+          python scripts/test-fonts.py
+      - name: Verify existing workflows and new content in native browsers
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tests/browser_e2e.py & core=$!
+          python tests/scope_e2e.py & scope=$!
+          python tests/heritage_e2e.py & layout=$!
+          python tests/research_content_e2e.py & research=$!
+          status=0
+          wait "$core" || status=1
+          wait "$scope" || status=1
+          wait "$layout" || status=1
+          wait "$research" || status=1
+          exit "$status"
+      - name: Commit the verified candidate, not the incomplete transport
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          import json
+          suites={}
+          for name,path in [('core','reading-room-core.json'),('scope','reading-room-scope.json'),('layout','reading-room-layout.json'),('research','research-content-browser.json')]:
+              r=json.loads(Path('verification',path).read_text());assert r['success'];suites[name]={k:r[k]for k in ['browsers','passed','total']}
+          Path('docs/releases/matte-0.7.3-candidate.json').write_text(json.dumps({'version':'0.7.3','state':'candidate-verified-not-live','suites':suites,'scientificApproval':False,'humanLanguageReview':False,'formalInstitutionalApproval':False},indent=2)+'\n')
+          PY
+          git config user.name 'Onour Impram'
+          git config user.email '215815131+OnourImpram@users.noreply.github.com'
+          git add AGENTS.md README.md DELIVERY_STATUS.md package.json src public scripts tests content docs/design/MATTE_RESEARCH_0_7_3.md docs/releases/DELIVERY_BEFORE_0_7_3.md docs/releases/matte-0.7.3-candidate.json .github/workflows/verify-preview.yml
+          git diff --cached --stat > verification/matte-change-stat.txt
+          git commit -m 'fix: remove bookplate glow and integrate source-based research guides and blank worksheets'
+          git push origin HEAD:fix/matte-research-content-073
+          git rev-parse HEAD > verification/matte-source-sha.txt
+          git ls-tree HEAD > verification/matte-source-tree.txt
+          git archive HEAD --format=zip -o verification/matte-verified-source.zip
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: marsam-matte-content-verified
+          path: |
+            verification/matte-*
+            verification/reading-room-*.json
+            verification/research-content-browser.json
+            .browser-results/reading-room/
+            .browser-results/research-content/
+          include-hidden-files: true
+          retention-days: 14
