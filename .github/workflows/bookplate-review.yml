@@ -1,0 +1,27 @@
+name: Bookplate source and design review
+on:
+  push:
+    branches: [fix/bookplate-background-072]
+    paths: [.github/workflows/bookplate-review.yml]
+permissions:
+  contents: read
+jobs:
+  source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 999e640f3f33a490087d5d774ceae3c94c217b84
+          persist-credentials: false
+      - name: Archive exact source without credentials or generated data
+        run: |
+          mkdir -p /tmp/bookplate-review
+          git archive --format=zip HEAD > /tmp/bookplate-review/source.zip
+          git rev-parse HEAD > /tmp/bookplate-review/source-commit.txt
+          git ls-tree -r HEAD > /tmp/bookplate-review/source-tree.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: bookplate-exact-source
+          path: /tmp/bookplate-review/
+          retention-days: 7
