@@ -59,7 +59,8 @@ class Review:
         size = page.evaluate('({width:innerWidth,document:document.documentElement.scrollWidth})')
         if size['document'] > size['width'] + 1:
             offenders = page.evaluate("""() => [...document.querySelectorAll('body *')].filter(e=>{const r=e.getBoundingClientRect();return r.width&&getComputedStyle(e).visibility!=='hidden'&&(r.right>innerWidth+1||r.left < -1)}).slice(0,35).map(e=>({tag:e.tagName,cls:e.className,text:e.textContent.slice(0,85),rect:e.getBoundingClientRect().toJSON()}))""")
-            (self.output / 'overflow.json').write_text(json.dumps({'name': name, 'size': size, 'offenders': offenders}, ensure_ascii=False, indent=2))
+            intrinsic = page.evaluate("""() => [...document.querySelectorAll('body *')].filter(e=>{const s=getComputedStyle(e);return e.clientWidth>0&&e.scrollWidth>e.clientWidth+1&&s.overflowX==='visible'}).map(e=>({tag:e.tagName,cls:String(e.className),text:e.textContent.slice(0,100),scroll:e.scrollWidth,client:e.clientWidth,rect:e.getBoundingClientRect().toJSON()}))""")
+            (self.output / 'overflow.json').write_text(json.dumps({'name': name, 'size': size, 'offenders': offenders, 'intrinsic': intrinsic}, ensure_ascii=False, indent=2))
         self.ck(name, size['document'] <= size['width'] + 1)
 
     def context(self, browser, **kwargs):
