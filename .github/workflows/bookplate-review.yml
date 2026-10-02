@@ -4,24 +4,101 @@ on:
     branches: [fix/bookplate-background-072]
     paths: [.github/workflows/bookplate-review.yml]
 permissions:
-  contents: read
+  contents: write
 jobs:
-  source:
+  verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 3
+    container: mcr.microsoft.com/playwright/python:v1.61.0-noble
+    timeout-minutes: 12
+    env:
+      BROWSERS: chromium,firefox,webkit
     steps:
       - uses: actions/checkout@v4
+      - run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
+      - uses: actions/setup-node@v4
         with:
-          ref: 999e640f3f33a490087d5d774ceae3c94c217b84
-          persist-credentials: false
-      - name: Archive exact source without credentials or generated data
+          node-version: '22'
+      - name: Verify a real failing regression before changing application code
         run: |
-          mkdir -p /tmp/bookplate-review
-          git archive --format=zip HEAD > /tmp/bookplate-review/source.zip
-          git rev-parse HEAD > /tmp/bookplate-review/source-commit.txt
-          git ls-tree -r HEAD > /tmp/bookplate-review/source-tree.txt
+          python - <<'PY'
+          from pathlib import Path
+          import base64,lzma,hashlib,json,subprocess
+          data=base64.b64decode(Path('.github/bookplate-patch.b64').read_text())
+          assert hashlib.sha256(data).hexdigest()=='f9bc76280d20949b65d5d184b5b0b6b3cfb03060f0c4c4f07056945c54a5ca6e'
+          changes=json.loads(lzma.decompress(data));assert len(changes)==14
+          item=next(c for c in changes if c['path']=='tests/bookplate.test.mjs')
+          assert item['before'] is None
+          p=Path(item['path']);assert not p.exists();p.write_text(item['edits'][0][2])
+          run=subprocess.run(['node','--test',str(p)],stdout=subprocess.PIPE,stderr=subprocess.STDOUT,text=True)
+          Path('verification').mkdir(exist_ok=True)
+          Path('verification/bookplate-red.log').write_text(run.stdout)
+          assert run.returncode!=0 and '# fail 3' in run.stdout
+          p.unlink()
+          for c in changes:
+              p=Path(c['path']);assert not p.is_absolute() and '..' not in p.parts
+              old=p.read_bytes() if p.exists() else None
+              assert (hashlib.sha256(old).hexdigest()if old is not None else None)==c['before'],str(p)
+              text=old.decode()if old is not None else ''
+              for a,b,s in reversed(c['edits']):text=text[:a]+s+text[b:]
+              new=text.encode();assert hashlib.sha256(new).hexdigest()==c['after'],str(p)
+              p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(new)
+          PY
+      - name: Preserve academic records, languages, institutional identity and application behaviour
+        run: |
+          git diff --exit-code -- src/articles.mjs src/content.mjs src/publications-data.mjs src/publications-data.json src/locales src/i18n.mjs src/messages.mjs src/chrome.mjs public/assets public/app.js public/search-core.js public/heritage.js public/campus.js
+      - name: Verify current source, generated routes and budgets
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --test tests/bookplate.test.mjs > verification/bookplate-green.log
+          BASE_PATH=/ npm run check > verification/bookplate-root.log
+          BASE_PATH=/MARSAM/ PAGES_PREVIEW=true npm run check > verification/bookplate-pages.log
+          node scripts/budget.mjs
+      - name: Prepare matching browsers and script fonts on test host only
+        run: |
+          python -m pip install --timeout 25 -q playwright==1.61.0
+          python scripts/test-fonts.py
+      - name: Check actual eight-language composition and preserved workflows
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tests/browser_e2e.py & core=$!
+          python tests/scope_e2e.py & scope=$!
+          python tests/heritage_e2e.py & layout=$!
+          status=0
+          wait "$core" || status=1
+          wait "$scope" || status=1
+          wait "$layout" || status=1
+          exit "$status"
+      - name: Commit only a verified candidate, pending visual inspection and live deployment
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          import json,os
+          p=Path('docs/releases/bookplate-0.7.2-candidate.json');record=json.loads(p.read_text())
+          record['status']='candidate-tested-pending-visual-review-and-deployment';record['workflowRun']=int(os.environ['GITHUB_RUN_ID']);record['suites']={}
+          for name in ['core','scope','layout']:
+              result=json.loads(Path('verification/reading-room-'+name+'.json').read_text());assert result['success']
+              record['suites'][name]={k:result[k]for k in ['passed','total','success','browsers']}
+          p.write_text(json.dumps(record,indent=2)+'\n')
+          PY
+          git config user.name 'Onour Impram'
+          git config user.email '215815131+OnourImpram@users.noreply.github.com'
+          git add AGENTS.md package.json src/editorial.mjs src/release.mjs public/site.css tests docs/design/README.md docs/design/SURFACE_0_7_2.md docs/releases/bookplate-0.7.2-candidate.json docs/releases/restoration-0.7.1-live.json
+          git diff --cached --stat > verification/bookplate-change-stat.txt
+          git commit -m 'design: spread geometric motif across bookplate, remove floral and rejected hero search block'
+          git push origin HEAD:fix/bookplate-background-072
+          git rev-parse HEAD > verification/bookplate-candidate-sha.txt
+          git ls-tree HEAD > verification/bookplate-candidate-tree.txt
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
-          name: bookplate-exact-source
-          path: /tmp/bookplate-review/
-          retention-days: 7
+          name: bookplate-candidate-review
+          path: |
+            verification/bookplate-*
+            verification/reading-room-*.json
+            .browser-results/reading-room/
+          include-hidden-files: true
+          retention-days: 14
