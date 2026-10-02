@@ -1,0 +1,27 @@
+name: Capture reading-room baseline
+on:
+  push:
+    branches: [feat/scholarly-reading-room-20261002]
+    paths: [.github/workflows/reading-room-snapshot.yml]
+permissions:
+  contents: read
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: d2caf4854caabafcee6d2c737222c6b9d224e772
+          persist-credentials: false
+      - name: Archive exact source and tree
+        run: |
+          mkdir -p /tmp/marsam-baseline
+          git archive HEAD --format=zip -o /tmp/marsam-baseline/source.zip
+          git rev-parse HEAD > /tmp/marsam-baseline/commit.txt
+          git ls-tree -r HEAD > /tmp/marsam-baseline/tree.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reading-room-baseline
+          path: /tmp/marsam-baseline/
+          retention-days: 7
