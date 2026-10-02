@@ -9,9 +9,10 @@ jobs:
   verify:
     runs-on: ubuntu-latest
     container: mcr.microsoft.com/playwright/python:v1.61.0-noble
-    timeout-minutes: 15
+    timeout-minutes: 12
     env:
       BROWSERS: chromium,firefox,webkit
+      PYTHONUNBUFFERED: '1'
     steps:
       - uses: actions/checkout@v4
       - run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
@@ -35,6 +36,14 @@ jobs:
               for start,end,value in reversed(item['edits']):text=text[:start]+value+text[end:]
               new=text.encode();assert hashlib.sha256(new).hexdigest()==item['after'],str(path)
               path.parent.mkdir(parents=True,exist_ok=True);path.write_bytes(new)
+          p=Path('tests/research_e2e.py');s=p.read_text()
+          s=s.replace("def go(page,locale,path=''):","def go(page,locale,path='',wait_fonts=True):")
+          s=s.replace("    page.evaluate('document.fonts.ready')", "    if wait_fonts:page.wait_for_function(\"document.fonts.status === 'loaded'\",timeout=8000)")
+          s=s.replace("page=nojs.new_page();go(page,'tr','research-guide/')", "page=nojs.new_page();go(page,'tr','research-guide/',wait_fonts=False)")
+          s=s.replace("            for locale in locales:", "            for locale in locales:\n                print(f'Research checks {engine}/{locale}',flush=True)")
+          s=s.replace("    checks.append({'name':name,'passed':bool(condition)})", "    checks.append({'name':name,'passed':bool(condition)})\n    (out/'progress.json').write_text(json.dumps({'lastCheck':name,'checksCompleted':len(checks),'passed':bool(condition)},ensure_ascii=False))")
+          p.write_text(s)
+          p=Path('.github/workflows/verify-preview.yml');s=p.read_text().replace('python tests/research_e2e.py & research=$!','timeout 420 python -u tests/research_e2e.py & research=$!');p.write_text(s)
           PY
       - name: Protect approved visual structure and original scholarly records
         run: |
@@ -57,10 +66,10 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          python tests/browser_e2e.py & core=$!
-          python tests/scope_e2e.py & scope=$!
-          python tests/heritage_e2e.py & layout=$!
-          python tests/research_e2e.py & research=$!
+          timeout 420 python tests/browser_e2e.py & core=$!
+          timeout 420 python tests/scope_e2e.py & scope=$!
+          timeout 420 python tests/heritage_e2e.py & layout=$!
+          timeout 420 python -u tests/research_e2e.py & research=$!
           status=0
           wait "$core" || status=1
           wait "$scope" || status=1
@@ -78,7 +87,7 @@ jobs:
           for name in ['reading-room-core','reading-room-scope','reading-room-layout','research-browser','research-artifacts']:
               data=json.loads(Path('verification',name+'.json').read_text());assert data['success'],name
               reports[name]=data
-          record={'version':'0.8.0','status':'candidate-verified-not-yet-published','originalBibliographyChanged':False,'formalApproval':False,'humanLanguageReview':False,'notebookActuallyExecuted':True,'quartoRendererExecuted':False,'browsers':['chromium','firefox','webkit'],'reportFiles':list(reports)}
+          record={'version':'0.8.0','status':'candidate-verified-not-yet-published','originalBibliographyChanged':False,'formalApproval':False,'humanLanguageReview':False,'notebookActuallyExecuted':True,'quartoRendererExecuted':False,'browsers':['chromium','firefox','webkit'],'reportFiles':list(reports),'earlierRun':37001753686,'earlierRunConclusion':'cancelled after unbounded research-browser wait, not a successful release'}
           Path('docs/releases/matte-research-0.8.0-candidate.json').write_text(json.dumps(record,indent=2)+'\n')
           PY
           git config user.name 'Onour Impram'
