@@ -26,6 +26,7 @@ jobs:
           data=base64.b64decode(Path('.github/iznik-payload.b64').read_text())
           assert hashlib.sha256(data).hexdigest()=='c911ba6e7714201ddf88a7dff887731cfac662eb476395f81ebd9d91a534d68c'
           subprocess.run(['git','config','--global','--add','safe.directory',str(Path.cwd())],check=True)
+          subprocess.run(['git','fetch','--depth=1','origin','377f00c01a0100b73ba782abbd6ddd6157bc90d5'],check=True)
           subprocess.run('mkdir .baseline && git archive 377f00c01a0100b73ba782abbd6ddd6157bc90d5 | tar -x -C .baseline',shell=True,check=True)
           for item in json.loads(lzma.decompress(data)):
               p=Path(item['path']);old=p.read_bytes() if p.exists() else None
