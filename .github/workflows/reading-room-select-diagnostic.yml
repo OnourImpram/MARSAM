@@ -1,0 +1,60 @@
+name: Diagnose native select reflow
+on:
+  push:
+    branches: [feat/scholarly-reading-room-20261002]
+    paths: ['.github/workflows/reading-room-select-diagnostic.yml']
+permissions:
+  contents: read
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    container: mcr.microsoft.com/playwright/python:v1.61.0-noble
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: python -m pip install --timeout 25 -q playwright==1.61.0
+      - name: Reproduce the overflow and evaluate minimal native-select rendering changes
+        env:
+          BASE_PATH: /MARSAM/
+          PAGES_PREVIEW: 'true'
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from playwright.sync_api import sync_playwright
+          import os,pwd,subprocess,time,urllib.request,json
+          os.environ['HOME']=pwd.getpwuid(os.getuid()).pw_dir
+          out=Path('diagnostic');out.mkdir()
+          f=Path('public/site.css');original=f.read_text()
+          variants={'baseline':'','appearance':'.comparison-picker select{appearance:none;-webkit-appearance:none;white-space:nowrap}','clip-control':'.comparison-picker select{clip-path:inset(0 round 3px)}'}
+          subprocess.run(['npm','run','build'],check=True)
+          server=subprocess.Popen(['node','scripts/serve.mjs'],env={**os.environ,'PORT':'4199'},stdout=subprocess.DEVNULL)
+          root='http://127.0.0.1:4199/MARSAM/';results={}
+          for _ in range(40):
+              try:urllib.request.urlopen(root+'ru/',timeout=1);break
+              except Exception:time.sleep(.1)
+          try:
+              with sync_playwright()as p:
+                  b=p.webkit.launch()
+                  for name,css in variants.items():
+                      f.write_text(original+'\n'+css);subprocess.run(['npm','run','build'],check=True,stdout=subprocess.DEVNULL)
+                      page=b.new_page(viewport={'width':1280,'height':920})
+                      page.goto(root+'ru/compare/?ids=aservic-principles,spiritual-competence,integration-meta-analysis,client-preference',wait_until='networkidle')
+                      page.wait_for_selector('.comparison-table');page.set_viewport_size({'width':390,'height':900});page.wait_for_timeout(100)
+                      results[name]=page.evaluate('''()=>({viewport:innerWidth,document:document.documentElement.scrollWidth,selects:[...document.querySelectorAll('.comparison-picker select')].map(e=>({width:e.getBoundingClientRect().width,scroll:e.scrollWidth,parentScroll:e.parentElement.scrollWidth,parentWidth:e.parentElement.clientWidth,appearance:getComputedStyle(e).appearance,overflow:getComputedStyle(e).overflow,text:e.selectedOptions[0].textContent}))})''')
+                      page.screenshot(path=str(out/(name+'.png')),full_page=True);page.close()
+                  b.close()
+          finally:
+              f.write_text(original);server.terminate();server.wait(timeout=10)
+          (out/'results.json').write_text(json.dumps(results,ensure_ascii=False,indent=2))
+          print(json.dumps(results,ensure_ascii=False))
+          assert results['baseline']['document']>results['baseline']['viewport'],'Failure must reproduce before changing code'
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: reading-room-select-diagnostic
+          path: diagnostic/
+          retention-days: 7
