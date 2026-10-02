@@ -42,7 +42,10 @@ jobs:
           s=s.replace("page=nojs.new_page();go(page,'tr','research-guide/')", "page=nojs.new_page();go(page,'tr','research-guide/',wait_fonts=False)")
           s=s.replace("            for locale in locales:", "            for locale in locales:\n                print(f'Research checks {engine}/{locale}',flush=True)")
           s=s.replace("    checks.append({'name':name,'passed':bool(condition)})", "    checks.append({'name':name,'passed':bool(condition)})\n    (out/'progress.json').write_text(json.dumps({'lastCheck':name,'checksCompleted':len(checks),'passed':bool(condition)},ensure_ascii=False))")
-          p.write_text(s)
+          s=s.replace('import pwd','import pwd\nimport unicodedata')
+          old="check('inventory table uses current catalogue',expectedCount in page.locator('.lab-output caption').inner_text())"
+          new="captionNumber=page.locator('.lab-output caption').inner_text().split()[0]\n                # Node and browser ICU may choose different valid Arabic digit systems.\n                digits=''.join(str(unicodedata.decimal(ch)) for ch in captionNumber if ch.isdecimal())\n                check('inventory table uses current catalogue',bool(digits) and int(digits)==manifest['resources'])"
+          assert old in s;s=s.replace(old,new);p.write_text(s)
           p=Path('.github/workflows/verify-preview.yml');s=p.read_text().replace('python tests/research_e2e.py & research=$!','timeout 420 python -u tests/research_e2e.py & research=$!');p.write_text(s)
           PY
       - name: Protect approved visual structure and original scholarly records
@@ -87,7 +90,7 @@ jobs:
           for name in ['reading-room-core','reading-room-scope','reading-room-layout','research-browser','research-artifacts']:
               data=json.loads(Path('verification',name+'.json').read_text());assert data['success'],name
               reports[name]=data
-          record={'version':'0.8.0','status':'candidate-verified-not-yet-published','originalBibliographyChanged':False,'formalApproval':False,'humanLanguageReview':False,'notebookActuallyExecuted':True,'quartoRendererExecuted':False,'browsers':['chromium','firefox','webkit'],'reportFiles':list(reports),'earlierRun':37001753686,'earlierRunConclusion':'cancelled after unbounded research-browser wait, not a successful release'}
+          record={'version':'0.8.0','status':'candidate-verified-not-yet-published','originalBibliographyChanged':False,'formalApproval':False,'humanLanguageReview':False,'notebookActuallyExecuted':True,'quartoRendererExecuted':False,'browsers':['chromium','firefox','webkit'],'reportFiles':list(reports),'earlierRuns':[{'id':37001753686,'conclusion':'cancelled','reason':'unbounded font-ready wait in research test'},{'id':37003531140,'conclusion':'failure','reason':'browser and server ICU chose different valid Arabic numeral systems in test assertion'}]}
           Path('docs/releases/matte-research-0.8.0-candidate.json').write_text(json.dumps(record,indent=2)+'\n')
           PY
           git config user.name 'Onour Impram'
