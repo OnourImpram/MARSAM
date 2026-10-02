@@ -1,0 +1,97 @@
+name: Restore and verify Marmara heritage identity
+on:
+  push:
+    branches: [fix/restore-heritage-marmara-20261002]
+    paths: [.github/workflows/restore-identity.yml]
+permissions:
+  contents: write
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    container: mcr.microsoft.com/playwright/python:v1.61.0-noble
+    timeout-minutes: 15
+    env:
+      BROWSERS: chromium,firefox,webkit
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Apply only the exact reviewed changes against their original hashes
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import base64,lzma,json,hashlib
+          data=base64.b64decode(Path('.github/restoration-payload.b64').read_text())
+          assert hashlib.sha256(data).hexdigest()=='b4be471686297930817776df58cb4c9807e299c7988a38fafe650367b728fa51'
+          patches=json.loads(lzma.decompress(data));assert len(patches)==17
+          for item in patches:
+              p=Path(item['path']);assert not p.is_absolute() and '..' not in p.parts
+              old=p.read_bytes() if p.exists() else None
+              assert (hashlib.sha256(old).hexdigest()if old is not None else None)==item['before'],str(p)
+              text=old.decode() if old is not None else ''
+              for a,b,s in reversed(item['edits']):text=text[:a]+s+text[b:]
+              new=text.encode();assert hashlib.sha256(new).hexdigest()==item['after'],str(p)
+              p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(new)
+          PY
+      - name: Protect current academic content and interactive features
+        run: |
+          git diff --exit-code -- src/articles.mjs src/content.mjs src/publications-data.json src/publications-data.mjs src/locales src/i18n.mjs public/app.js public/search-core.js public/heritage.js public/campus.js
+      - name: Check both deployment roots and asset budgets
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p verification
+          BASE_PATH=/ npm run check > verification/restoration-root.log
+          BASE_PATH=/MARSAM/ PAGES_PREVIEW=true npm run check > verification/restoration-pages.log
+          node scripts/budget.mjs
+      - name: Prepare matching browsers and script coverage
+        run: |
+          python -m pip install --timeout 25 -q playwright==1.61.0
+          python scripts/test-fonts.py
+      - name: Native browser regression and visual checks
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tests/browser_e2e.py & core=$!
+          python tests/scope_e2e.py & scope=$!
+          python tests/heritage_e2e.py & layout=$!
+          status=0
+          wait "$core" || status=1
+          wait "$scope" || status=1
+          wait "$layout" || status=1
+          exit "$status"
+      - name: Record only successful candidate verification
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          import json
+          record={'version':'0.7.1','status':'candidate-verified-not-yet-deployed','restoresVisualBaseline':'0.6.0','retainsFunctionalBaseline':'0.7.0','academicContentChanged':False,'formalInstitutionalApproval':False,'humanLanguageReview':False,'suites':{}}
+          for name in ['core','scope','layout']:
+              r=json.loads(Path(f'verification/reading-room-{name}.json').read_text());assert r['success'];record['suites'][name]={'browsers':r['browsers'],'passed':r['passed'],'total':r['total']}
+          Path('docs/releases/restoration-0.7.1-candidate.json').write_text(json.dumps(record,indent=2)+'\n')
+          p=Path('README.md');p.write_text('# MARSAM 0.7.1. Marmara identity and heritage restoration\n\nThe owner-requested 0.6 visual identity is restored over the 0.7 content and interaction model. The planned academic home is Marmara University, Atatürk Faculty of Education, Department of Educational Sciences, Division of Guidance and Psychological Counselling. See docs/design/RESTORATION_0_7_1.md. The prominent homepage warning strip and governance promotion are removed. About and source-level review details remain available. Formal establishment is not asserted.\n\n## Previous 0.7 release documentation\n\n'+p.read_text())
+          p=Path('DELIVERY_STATUS.md');p.write_text('# MARSAM 0.7.1. Visual correction candidate\n\nRestores the approved 0.6 heritage composition and Marmara masthead without rolling back the richer 0.7 catalogue, search, provenance, eight locales or citation exports. Planned affiliation uses official faculty and department names. The homepage warning strip and governance-promotion block are removed. Candidate browser receipts are in docs/releases/restoration-0.7.1-candidate.json. Live delivery must be verified separately before it is announced.\n\n## Previous completed release record\n\n'+p.read_text())
+          p=Path('docs/design/GOVERNANCE_AND_RIGHTS.md');p.write_text('# Owner correction, 2 October 2026\n\nThe owner has requested the Marmara masthead and planned PDR academic home to be visible. RESTORATION_0_7_1.md supersedes previous recommendations to omit the logo. Original assets and proportions are preserved. No formal establishment, accreditation, clinical authorization or unrelated partnership is asserted. Institutional review and source rights are not upgraded by this display instruction.\n\n## Earlier governance analysis\n\n'+p.read_text())
+          PY
+          git config user.name 'Onour Impram'
+          git config user.email '215815131+OnourImpram@users.noreply.github.com'
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          git add AGENTS.md README.md DELIVERY_STATUS.md src public scripts tests package.json docs/design docs/releases/restoration-0.7.1-candidate.json
+          git diff --cached --stat > verification/restoration-change-stat.txt
+          git commit -m 'fix: restore approved heritage design and planned Marmara PDR identity, retain 0.7 content'
+          git push origin HEAD:fix/restore-heritage-marmara-20261002
+          git rev-parse HEAD > verification/restoration-source-sha.txt
+          git ls-tree HEAD > verification/restoration-source-tree.txt
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: marsam-restoration-review
+          path: |
+            verification/restoration-*
+            verification/reading-room-*.json
+            .browser-results/reading-room/
+          include-hidden-files: true
+          retention-days: 14
