@@ -58,11 +58,16 @@ jobs:
           p=Path('public/site.css');p.write_text(p.read_text()+'\n@supports not (mask-image:linear-gradient(#000,transparent)){body::before,.editorial-hero::before,.editorial-hero-copy::before{display:none!important}}\n')
           p=Path('tests/cini.test.mjs');p.write_text(p.read_text()+"\ntest('unsupported masks omit ornament',()=>{assert.ok(css().includes('@supports not (mask-image:linear-gradient(#000,transparent)){body::before,.editorial-hero::before,.editorial-hero-copy::before{display:none!important}}'));});\n")
           p=Path('docs/design/CINI_0_8_1.md');s=p.read_text().replace('Maske desteklenmezse içerik değişmez. Opaklığı zaten düşük çizgiler gösterilir.','Maske desteklenmezse yeni bezeme tamamen kapatılır. İçerik ve diğer görsel öğeler değişmez.')
-          s+='\n## Piksel ve yükleme karşılaştırması\n\nKesirli CSS koordinatlarının ekran görüntüsünde dışarı yuvarlanması, dış zeminden örneklenen tek piksellik kenarda fark oluşturur. Tanılama 390 pikselde 20, 1440 pikselde 12 değişmiş dış kenar pikseli, panelin iç yüzeyinde sıfır fark gösterdi. Test yalnız bir piksellik dış örnekleme sınırını kırpar. Panelin geri kalanında toleranssız piksel eşitliği aranır. Kitap gridi karşılaştırılmadan önce her iki sitede tembel yüklenen kapaklara kaydırılır ve yükleme tamamlanır. Grid ve metin ölçüleri aynı yükleme durumunda karşılaştırılır.\n'
+          s+='\n## Piksel ve yükleme karşılaştırması\n\nKesirli CSS koordinatlarının ekran görüntüsünde dışarı yuvarlanması, dış zeminden örneklenen tek piksellik kenarda fark oluşturur. Test yalnız bir piksellik dış örnekleme sınırını kırpar. Panelin geri kalanında toleranssız piksel eşitliği aranır. Kitap gridi karşılaştırılmadan önce her iki sitede tembel yüklenen kapaklara kaydırılır ve yükleme tamamlanır. Grid ve metin ölçüleri aynı yükleme durumunda karşılaştırılır.\n'
           p.write_text(s)
+          Path('verification').mkdir(exist_ok=True)
+          # The build token cannot update workflows. Preserve the reviewed CI proposal separately.
+          import subprocess
+          Path('verification/cini-ci-proposed.yml').write_bytes(Path('.github/workflows/verify-preview.yml').read_bytes())
+          subprocess.run(['git','restore','--','.github/workflows/verify-preview.yml'],check=True)
           PY
       - name: Protect content and institutional identity
-        run: git diff --exit-code -- src ':!src/release.mjs' public/app.js public/campus.js public/campus-core.js public/search-core.js public/heritage.js public/url-state.js public/assets/heritage public/assets/marmara-tr.png public/assets/marmara-en.png
+        run: git diff --exit-code -- src ':!src/release.mjs' public/app.js public/campus.js public/campus-core.js public/search-core.js public/heritage.js public/url-state.js public/assets/heritage public/assets/marmara-tr.png public/assets/marmara-en.png .github/workflows/verify-preview.yml
       - name: Verify both deployment paths and budgets
         shell: bash
         run: |
@@ -112,13 +117,14 @@ jobs:
           PY
           git config user.name 'Onour Impram'
           git config user.email '215815131+OnourImpram@users.noreply.github.com'
-          git add .github/workflows/verify-preview.yml AGENTS.md docs/CINI_ASSETS.json docs/design/CINI_0_8_1.md docs/releases/cini-0.8.1-candidate.json package.json public/site.css public/assets/cini src/release.mjs tests/cini.test.mjs tests/cini_e2e.py
+          git add AGENTS.md docs/CINI_ASSETS.json docs/design/CINI_0_8_1.md docs/releases/cini-0.8.1-candidate.json package.json public/site.css public/assets/cini src/release.mjs tests/cini.test.mjs tests/cini_e2e.py
+          git diff --cached --exit-code -- .github/
           git diff --cached --stat > verification/cini-change-stat.txt
           git commit -m 'design: introduce original sparse Iznik cini while preserving academic layouts and matte identity'
           git push origin HEAD:design/iznik-cini-20261002
           git rev-parse HEAD > verification/cini-source-sha.txt
           git ls-tree HEAD > verification/cini-source-tree.txt
-          git rev-parse HEAD:.github/workflows/verify-preview.yml > verification/cini-ci-blob.txt
+          git archive HEAD --format=zip -o verification/cini-reviewed-source.zip
       - uses: actions/upload-artifact@v4
         if: always()
         with:
