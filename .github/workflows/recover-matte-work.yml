@@ -1,0 +1,31 @@
+name: Recover interrupted matte and research work
+on:
+  push:
+    branches: [fix/matte-research-content-073]
+    paths: [.github/workflows/recover-matte-work.yml]
+permissions:
+  contents: read
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          mkdir -p recovery
+          git archive HEAD --format=zip -o recovery/source.zip
+          python - <<'PY'
+          import base64,lzma,json,hashlib
+          from pathlib import Path
+          parts=sorted(Path('.github/matte-content-payload').glob('part*.b64'))
+          b=base64.b64decode(''.join(p.read_text().strip() for p in parts))
+          decoder=lzma.LZMADecompressor();text=decoder.decompress(b)
+          Path('recovery/partial-payload.txt').write_bytes(text)
+          Path('recovery/payload-status.json').write_text(json.dumps({'parts':[p.name for p in parts],'bytes':len(b),'sha256':hashlib.sha256(b).hexdigest(),'complete':decoder.eof,'decodedBytes':len(text)},indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: marsam-matte-recovery
+          path: recovery/
+          retention-days: 7
