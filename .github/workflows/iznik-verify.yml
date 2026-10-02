@@ -1,0 +1,110 @@
+name: Verify original Iznik cini surface
+on:
+  push:
+    branches: [design/iznik-cini-20261002]
+    paths: [.github/workflows/iznik-verify.yml]
+permissions:
+  contents: write
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    container: mcr.microsoft.com/playwright/python:v1.61.0-noble
+    timeout-minutes: 15
+    env:
+      BASE_PATH: /MARSAM/
+      PAGES_PREVIEW: 'true'
+      BROWSERS: chromium,firefox,webkit
+    steps:
+      - uses: actions/checkout@v4
+      - name: Trust the disposable checkout
+        run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Apply the checksum-bound reviewed change set
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import base64,lzma,json,hashlib
+          data=base64.b64decode(Path('.github/iznik-payload.b64').read_text())
+          assert hashlib.sha256(data).hexdigest()=='c911ba6e7714201ddf88a7dff887731cfac662eb476395f81ebd9d91a534d68c'
+          patches=json.loads(lzma.decompress(data));assert len(patches)==11
+          for item in patches:
+              p=Path(item['path']);assert not p.is_absolute() and '..' not in p.parts
+              old=p.read_bytes() if p.exists() else None
+              assert (hashlib.sha256(old).hexdigest() if old is not None else None)==item['before'],str(p)
+              text=old.decode() if old is not None else ''
+              for a,b,replacement in reversed(item['edits']):text=text[:a]+replacement+text[b:]
+              new=text.encode();assert hashlib.sha256(new).hexdigest()==item['after'],str(p)
+              p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(new)
+          PY
+      - name: Prove academic data, institutional markup and application behaviour remain unchanged
+        run: |
+          git diff --exit-code -- src ':!src/release.mjs' public/app.js public/campus.js public/campus-core.js public/search-core.js public/heritage.js public/url-state.js public/assets/heritage public/assets/marmara-tr.png public/assets/marmara-en.png
+      - name: Verify both deployment paths and budgets
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p verification
+          BASE_PATH=/ npm run check > verification/cini-root-check.log
+          npm run check > verification/cini-pages-check.log
+          node scripts/budget.mjs
+      - uses: actions/checkout@v4
+        with:
+          ref: 377f00c01a0100b73ba782abbd6ddd6157bc90d5
+          path: .cini-baseline
+          persist-credentials: false
+      - name: Build the original baseline for real pixel and geometry comparison
+        working-directory: .cini-baseline
+        run: npm run build
+      - name: Prepare test browsers and script coverage
+        run: |
+          python -m pip install --timeout 25 -q playwright==1.61.0 pillow==11.3.0 nbclient==0.10.2 nbformat==5.10.4 ipykernel==6.30.1
+          python scripts/test-fonts.py
+      - name: Real-browser cini review and unchanged panel comparison
+        env:
+          BASELINE_SOURCE: ${{ github.workspace }}/.cini-baseline
+        run: python -u tests/cini_e2e.py
+      - name: Execute research assets and existing browser regressions
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tests/research_artifacts.py
+          python tests/browser_e2e.py & core=$!
+          python tests/scope_e2e.py & scope=$!
+          python tests/heritage_e2e.py & layout=$!
+          timeout 420 python -u tests/research_e2e.py & research=$!
+          status=0
+          wait "$core" || status=1
+          wait "$scope" || status=1
+          wait "$layout" || status=1
+          wait "$research" || status=1
+          exit "$status"
+      - name: Commit only verified files on the review branch
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import json
+          r=json.loads(Path('verification/cini-browser.json').read_text());assert r['success']
+          Path('docs/releases/cini-0.8.1-candidate.json').write_text(json.dumps({'version':'0.8.1','state':'candidate-verified-not-yet-deployed','browsers':r['browsers'],'checks':r['total'],'baselineCompared':r['baselineCompared'],'originalArtwork':True,'academicContentChanged':False,'humanReview':False,'formalApproval':False},indent=2)+'\n')
+          PY
+          git config user.name 'Onour Impram'
+          git config user.email '215815131+OnourImpram@users.noreply.github.com'
+          git add .github/workflows/verify-preview.yml AGENTS.md docs/CINI_ASSETS.json docs/design/CINI_0_8_1.md docs/releases/cini-0.8.1-candidate.json package.json public/site.css public/assets/cini src/release.mjs tests/cini.test.mjs tests/cini_e2e.py
+          git diff --cached --stat > verification/cini-change-stat.txt
+          git commit -m 'design: introduce original sparse Iznik cini while preserving academic layouts and matte identity'
+          git push origin HEAD:design/iznik-cini-20261002
+          git rev-parse HEAD > verification/cini-source-sha.txt
+          git ls-tree HEAD > verification/cini-source-tree.txt
+          git rev-parse HEAD:.github/workflows/verify-preview.yml > verification/cini-ci-blob.txt
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: marsam-cini-reviewed
+          path: |
+            verification/cini-*
+            verification/reading-room-*.json
+            verification/research-*.json
+            .browser-results/cini/
+          include-hidden-files: true
+          retention-days: 14
