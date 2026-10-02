@@ -21,7 +21,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Apply the checksum-bound reviewed change set
+      - name: Apply reviewed changes and diagnostic corrections
         run: |
           python - <<'PY'
           from pathlib import Path
@@ -39,22 +39,31 @@ jobs:
               p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(new)
           p=Path('tests/cini_e2e.py');s=p.read_text()
           old="check(f'{engine}/{width} approved panel pixel-identical',a.size==b.size and ImageChops.difference(a,b).getbbox() is None)"
-          new="""# Fractional CSS bounds are rounded outward by element screenshots.
-                              # Diagnosis found only outer background pixels, zero interior changes.
-                              check(f'{engine}/{width} panel dimensions unchanged',a.size==b.size)
-                              crop=(1,1,a.width-1,a.height-1)
-                              check(f'{engine}/{width} panel inside rounding edge pixel-identical',ImageChops.difference(a.crop(crop),b.crop(crop)).getbbox() is None)"""
-          new=new.replace('\n                              ','\n                    ')
-          assert old in s;p.write_text(s.replace(old,new))
+          new="check(f'{engine}/{width} panel dimensions unchanged',a.size==b.size)\n                    crop=(1,1,a.width-1,a.height-1)\n                    check(f'{engine}/{width} panel inside rounding edge pixel-identical',ImageChops.difference(a.crop(crop),b.crop(crop)).getbbox() is None)"
+          assert old in s;s=s.replace(old,new)
+          settle="""def settle_reading_layout(page):
+              # Lazy covers must be decoded in both origins before comparing grid geometry.
+              # Scroll them into view normally, without changing application styles or requests.
+              for image in page.locator('.book-cover,.new-book-cover img').all():
+                  image.scroll_into_view_if_needed()
+                  image.evaluate('image=>image.decode()')
+              page.evaluate('window.scrollTo(0,0)')
+              page.wait_for_function("document.fonts.status === 'loaded'")
+              page.evaluate('()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)))')
+          """
+          s=s.replace('def metrics(page):',settle+'\ndef metrics(page):')
+          s=s.replace("wait_until='networkidle');after=metrics(page)","wait_until='networkidle');settle_reading_layout(page);after=metrics(page)")
+          s=s.replace("wait_until='networkidle');before=metrics(page)","wait_until='networkidle');settle_reading_layout(page);before=metrics(page)")
+          s=s.replace('for selector in before:check(',"(OUT/f'baseline-metrics-{engine}-{width}.json').write_text(json.dumps({'before':before,'after':after},indent=2))\n                    for selector in before:check(")
+          p.write_text(s)
           p=Path('public/site.css');p.write_text(p.read_text()+'\n@supports not (mask-image:linear-gradient(#000,transparent)){body::before,.editorial-hero::before,.editorial-hero-copy::before{display:none!important}}\n')
           p=Path('tests/cini.test.mjs');p.write_text(p.read_text()+"\ntest('unsupported masks omit ornament',()=>{assert.ok(css().includes('@supports not (mask-image:linear-gradient(#000,transparent)){body::before,.editorial-hero::before,.editorial-hero-copy::before{display:none!important}}'));});\n")
           p=Path('docs/design/CINI_0_8_1.md');s=p.read_text().replace('Maske desteklenmezse içerik değişmez. Opaklığı zaten düşük çizgiler gösterilir.','Maske desteklenmezse yeni bezeme tamamen kapatılır. İçerik ve diğer görsel öğeler değişmez.')
-          s+='\n## Piksel karşılaştırma ayrıntısı\n\nİlk tam çerçeve karşılaştırması, kesirli CSS koordinatlarının ekran görüntüsünde dışarı yuvarlanması nedeniyle dış zeminden örneklenen tek piksellik kenarda fark buldu. Tanılama 390 pikselde 20, 1440 pikselde 12 değişmiş dış kenar pikseli, panelin iç yüzeyinde sıfır fark gösterdi. Kabul testi yalnız bu bir piksellik dış örnekleme sınırını kırpar. Panelin geri kalanında toleranssız piksel eşitliği ve yerleşim ölçülerinde birebir eşitlik aranır.\n'
+          s+='\n## Piksel ve yükleme karşılaştırması\n\nKesirli CSS koordinatlarının ekran görüntüsünde dışarı yuvarlanması, dış zeminden örneklenen tek piksellik kenarda fark oluşturur. Tanılama 390 pikselde 20, 1440 pikselde 12 değişmiş dış kenar pikseli, panelin iç yüzeyinde sıfır fark gösterdi. Test yalnız bir piksellik dış örnekleme sınırını kırpar. Panelin geri kalanında toleranssız piksel eşitliği aranır. Kitap gridi karşılaştırılmadan önce her iki sitede tembel yüklenen kapaklara kaydırılır ve gerçek görsel çözümlemesi beklenir. Grid ve metin ölçüleri aynı yükleme durumunda karşılaştırılır.\n'
           p.write_text(s)
           PY
-      - name: Prove academic data, institutional markup and application behaviour remain unchanged
-        run: |
-          git diff --exit-code -- src ':!src/release.mjs' public/app.js public/campus.js public/campus-core.js public/search-core.js public/heritage.js public/url-state.js public/assets/heritage public/assets/marmara-tr.png public/assets/marmara-en.png
+      - name: Protect content and institutional identity
+        run: git diff --exit-code -- src ':!src/release.mjs' public/app.js public/campus.js public/campus-core.js public/search-core.js public/heritage.js public/url-state.js public/assets/heritage public/assets/marmara-tr.png public/assets/marmara-en.png
       - name: Verify both deployment paths and budgets
         shell: bash
         run: |
@@ -68,18 +77,18 @@ jobs:
           ref: 377f00c01a0100b73ba782abbd6ddd6157bc90d5
           path: .cini-baseline
           persist-credentials: false
-      - name: Build the original baseline for real pixel and geometry comparison
+      - name: Build original comparison baseline
         working-directory: .cini-baseline
         run: npm run build
-      - name: Prepare test browsers and script coverage
+      - name: Prepare test environment
         run: |
           python -m pip install --timeout 25 -q playwright==1.61.0 pillow==11.3.0 nbclient==0.10.2 nbformat==5.10.4 ipykernel==6.30.1
           python scripts/test-fonts.py
-      - name: Real-browser cini review and unchanged panel comparison
+      - name: Cini and baseline browser comparison
         env:
           BASELINE_SOURCE: ${{ github.workspace }}/.cini-baseline
         run: python -u tests/cini_e2e.py
-      - name: Execute research assets and existing browser regressions
+      - name: Existing browser and research regressions
         shell: bash
         run: |
           set -euo pipefail
@@ -94,7 +103,7 @@ jobs:
           wait "$layout" || status=1
           wait "$research" || status=1
           exit "$status"
-      - name: Commit only verified files on the review branch
+      - name: Commit verified candidate
         run: |
           python - <<'PY'
           from pathlib import Path
