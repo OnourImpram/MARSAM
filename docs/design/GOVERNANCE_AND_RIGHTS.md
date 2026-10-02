@@ -1,3 +1,9 @@
+# Owner correction, 2 October 2026
+
+The owner has requested the Marmara masthead and planned PDR academic home to be visible. RESTORATION_0_7_1.md supersedes previous recommendations to omit the logo. Original assets and proportions are preserved. No formal establishment, accreditation, clinical authorization or unrelated partnership is asserted. Institutional review and source rights are not upgraded by this display instruction.
+
+## Earlier governance analysis
+
 # Authority, provenance and rights register
 
 ## Current institutional boundary

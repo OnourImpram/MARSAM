@@ -1,3 +1,9 @@
+# Owner correction, 2 October 2026
+
+RESTORATION_0_7_1.md supersedes the prior visual-identity and homepage-order recommendations below. University identity is visible, with the existing university marks reused unchanged. The planned academic home is identified using verified faculty and department names. A footer and About page carry concise prospective wording. No completed establishment, accreditation or clinical authorization is asserted. Keep the restored heritage composition visible and balanced, including a compact mobile version after the search form. Remove the rejected homepage warning strip and governance promotion. Retain one stylesheet, explicit composition, all current content and working features.
+
+## Earlier 0.7 contracts, retained for rationale and unchanged functional requirements
+
 # Reading-room design and component contracts
 
 ## Product and information architecture

@@ -1,6 +1,6 @@
 # MARSAM content and release boundaries
 
-Current design authority: docs/design/README.md. Version 0.7.0 uses explicit composition, one stylesheet and a proposed-project masthead without the university logo. Read the current contracts before older historical reports.
+Current design authority: docs/design/RESTORATION_0_7_1.md, reflecting the owner correction on 2 October 2026. Restore the approved 0.6 heritage visual identity and Marmara masthead while retaining all 0.7 content and interaction improvements. The planned academic home is Marmara University, Atatürk Faculty of Education, Department of Educational Sciences, Division of Guidance and Psychological Counselling. Do not remove institutional identity or flatten the approved artwork during unrelated refactors. Formal establishment remains pending. The rejected public homepage warning strip and governance promotion are not part of the design. Governance and source-review details remain available on their relevant pages.
 
 1. Build the institution's website, not an individual's research proposal or a directory of design benchmarks. Main heading is the localized centre name. The remit is spirituality and mental health research, education, professional learning and knowledge exchange.
 2. Websites supplied for design analysis stay in development documentation. Do not turn their names, logos, home pages, programs or events into public content. Real academic publications may be cited for specific supported claims, with clear provenance.

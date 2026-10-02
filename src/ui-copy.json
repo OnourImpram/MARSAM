@@ -60,14 +60,14 @@
     "ms": "Pratonton pembangunan dan semakan institusi"
   },
   "site.context": {
-    "tr": "Marmara Üniversitesi bağlamında önerilen bir akademik platform. Resmî kuruluş ve üniversite onayı henüz doğrulanmamıştır.",
-    "en": "A proposed academic platform in the Marmara University context. Formal establishment and university authorization have not been verified.",
-    "de": "Eine vorgeschlagene akademische Plattform im Kontext der Marmara-Universität. Formelle Gründung und universitäre Genehmigung sind nicht bestätigt.",
-    "zh": "在马尔马拉大学背景下提出的学术平台。正式设立及大学授权尚未核实。",
-    "ru": "Предлагаемая академическая платформа в контексте Университета Мармара. Официальное учреждение и разрешение университета не подтверждены.",
-    "ar": "منصة أكاديمية مقترحة في سياق جامعة مرمرة. لم يتم التحقق من التأسيس الرسمي أو تفويض الجامعة.",
-    "id": "Platform akademik yang diusulkan dalam konteks Universitas Marmara. Pendirian resmi dan izin universitas belum terverifikasi.",
-    "ms": "Platform akademik yang dicadangkan dalam konteks Universiti Marmara. Penubuhan rasmi dan kebenaran universiti belum disahkan."
+    "tr": "Marmara Üniversitesi Atatürk Eğitim Fakültesi, Eğitim Bilimleri Bölümü, Rehberlik ve Psikolojik Danışmanlık Anabilim Dalına bağlı olarak kurulması planlanan MARSAM için hazırlanan web sitesi.",
+    "en": "Website for MARSAM, planned within the Division of Guidance and Psychological Counselling, Department of Educational Sciences, Atatürk Faculty of Education, Marmara University.",
+    "de": "Website für MARSAM, dessen Einrichtung im Fachbereich für Beratung und psychologische Beratung der Abteilung für Erziehungswissenschaften an der Atatürk-Fakultät der Marmara Universität geplant ist.",
+    "zh": "本网站为拟设于马尔马拉大学阿塔图尔克教育学院教育科学系指导与心理咨询学科的MARSAM提供内容与设计预览。",
+    "ru": "Сайт MARSAM, создание которого планируется в отделении профориентации и психологического консультирования кафедры педагогических наук педагогического факультета имени Ататюрка Университета Мармара.",
+    "ar": "موقع لمركز MARSAM المزمع إنشاؤه ضمن شعبة التوجيه والإرشاد النفسي في قسم العلوم التربوية بكلية أتاتورك للتربية في جامعة مرمرة.",
+    "id": "Situs untuk MARSAM yang direncanakan berada di bawah Divisi Bimbingan dan Konseling Psikologis, Departemen Ilmu Pendidikan, Fakultas Pendidikan Atatürk, Universitas Marmara.",
+    "ms": "Laman untuk MARSAM yang dirancang di bawah Bahagian Bimbingan dan Kaunseling Psikologi, Jabatan Sains Pendidikan, Fakulti Pendidikan Atatürk, Universiti Marmara."
   },
   "site.kicker": {
     "tr": "Maneviyat, ruh sağlığı ve akademik bilgi",
@@ -588,5 +588,55 @@
     "ar": "تحقق من صيغة القيمة.",
     "id": "Periksa format nilai ini.",
     "ms": "Semak format nilai ini."
+  },
+  "institution.university": {
+    "tr": "Marmara Üniversitesi",
+    "en": "Marmara University",
+    "de": "Marmara Universität",
+    "zh": "马尔马拉大学",
+    "ru": "Университет Мармара",
+    "ar": "جامعة مرمرة",
+    "id": "Universitas Marmara",
+    "ms": "Universiti Marmara"
+  },
+  "institution.faculty": {
+    "tr": "Atatürk Eğitim Fakültesi",
+    "en": "Atatürk Faculty of Education",
+    "de": "Atatürk-Fakultät für Erziehungswissenschaften",
+    "zh": "阿塔图尔克教育学院",
+    "ru": "Педагогический факультет имени Ататюрка",
+    "ar": "كلية أتاتورك للتربية",
+    "id": "Fakultas Pendidikan Atatürk",
+    "ms": "Fakulti Pendidikan Atatürk"
+  },
+  "institution.department": {
+    "tr": "Eğitim Bilimleri Bölümü",
+    "en": "Department of Educational Sciences",
+    "de": "Abteilung für Erziehungswissenschaften",
+    "zh": "教育科学系",
+    "ru": "Кафедра педагогических наук",
+    "ar": "قسم العلوم التربوية",
+    "id": "Departemen Ilmu Pendidikan",
+    "ms": "Jabatan Sains Pendidikan"
+  },
+  "institution.division": {
+    "tr": "Rehberlik ve Psikolojik Danışmanlık Anabilim Dalı",
+    "en": "Division of Guidance and Psychological Counselling",
+    "de": "Fachbereich für Beratung und psychologische Beratung",
+    "zh": "指导与心理咨询学科",
+    "ru": "Отделение профориентации и психологического консультирования",
+    "ar": "شعبة التوجيه والإرشاد النفسي",
+    "id": "Divisi Bimbingan dan Konseling Psikologis",
+    "ms": "Bahagian Bimbingan dan Kaunseling Psikologi"
+  },
+  "institution.stage": {
+    "tr": "Kuruluş hazırlığı",
+    "en": "In preparation",
+    "de": "In Vorbereitung",
+    "zh": "筹建阶段",
+    "ru": "Подготовка к созданию",
+    "ar": "قيد التأسيس",
+    "id": "Dalam persiapan",
+    "ms": "Dalam persediaan"
   }
 }

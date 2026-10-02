@@ -1,3 +1,7 @@
+# Current design authority
+
+The owner explicitly corrected version 0.7 on 2 October 2026. Read RESTORATION_0_7_1.md first. The visual baseline is the approved 0.6 heritage design, combined with the 0.7 content, search, catalogue, provenance and accessibility improvements. The Marmara masthead and planned PDR academic home are restored. Earlier recommendations to omit the university logo or hide the heritage artwork on mobile are superseded by this correction.
+
 # Current design and delivery authority
 
 The owner approved the 1 October investigation and requested its implementation on the existing GitHub website on 2 October 2026. This directory is the current design authority for version 0.7.0. The complete report is `RESEARCH_BRIEF.md`. The implemented scope and task decisions are `IMPLEMENTATION.md`.
