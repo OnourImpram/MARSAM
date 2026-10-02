@@ -1,3 +1,4 @@
+import {researchGuides} from './research-data.mjs';
 /** Immutable presentation projection. Original academic text and provenance stay in their source modules. */
 import {labels as baseLabels} from './i18n.mjs';
 import {sources,resources as baseResources,sections as baseSections,topics,typeKeys} from './content.mjs';
@@ -36,6 +37,7 @@ for(const [id,title,summary,group]of [
  ['events',n.events,n.eventLead,'center'],['research',localized('research.title'),localized('research.lead'),'research'],
  ['governance',localized('governance.title'),localized('governance.lead'),'center']
 ])if(!sections.some(s=>s.id===id))sections.push({id,title,summary,group,topic:'methods'});
+for(const g of researchGuides)sections.push({id:g.id,title:g.title,summary:g.summary,group:'research',topic:'methods'});
 export const overview={...baseOverview,editorial:baseOverview.editorial.map((item,i)=>i===2?{...item,text:permissionsText}:item),about:[
  {title:n.aboutTitle,text:n.aboutText},{title:n.areas,text:n.areasLead},{title:n.educationTitle,text:n.educationLead}
 ]};

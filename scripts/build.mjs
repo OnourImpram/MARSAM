@@ -1,3 +1,4 @@
+import {emitResearchArtifacts} from './research-artifacts.mjs';
 import {renderCampusHome,campusRenderers} from '../src/campus.mjs';
 import {mkdir,writeFile,readFile,cp,rm} from 'node:fs/promises';
 import {resolve,dirname} from 'node:path';
@@ -23,6 +24,7 @@ if(process.env.PUBLISH==='true'){
 }
 const dist=resolve(root,'dist');await rm(dist,{recursive:true,force:true});await mkdir(dist,{recursive:true});await cp(resolve(root,'public'),dist,{recursive:true,filter:path=>!/(?:water-(?:640|1440)\.webp)$/.test(path)});
 await writeFile(resolve(dist,'site.css'),tokenCSS()+await readFile(resolve(root,'public/site.css'),'utf8'));
+await emitResearchArtifacts(root,dist);
 const paths=[];
 async function emit(path,html){const target=resolve(dist,path,'index.html');await mkdir(dirname(target),{recursive:true});const [locale,...parts]=path.split('/');await writeFile(target,html);paths.push('/'+(path?path+'/':''));}
 for(const l of locales){await emit(l,renderCampusHome(l,base));for(const s of sections)await emit(`${l}/${s.id}`,(campusRenderers[s.id]?campusRenderers[s.id](l,base):sectionPage(s.id,l,base)));for(const a of articles)await emit(`${l}/dossier/${a.id}`,dossierPage(a,l,base));for(const r of resources)await emit(`${l}/resource/${r.id}`,resourcePage(r,l,base));for(const p of learningPaths)await emit(`${l}/learning/${p.id}`,pathPage(p,l,base));}
