@@ -4,7 +4,7 @@ on:
     branches: [feat/scholarly-reading-room-20261002]
     paths:
       - '.github/workflows/reading-room-verify.yml'
-      - '.github/reading-room-payload/fix*.py'
+      - '.github/reading-room-payload/fix4.py'
       - 'src/**'
       - 'public/**'
       - 'scripts/**'
@@ -20,7 +20,7 @@ jobs:
   verify:
     runs-on: ubuntu-latest
     container: mcr.microsoft.com/playwright/python:v1.61.0-noble
-    timeout-minutes: 20
+    timeout-minutes: 15
     env:
       BROWSERS: chromium,firefox,webkit
     steps:
@@ -28,13 +28,13 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Apply the diagnosed browser corrections to the existing candidate
+      - name: Apply only the recovered candidate's remaining correction
         shell: bash
         run: |
           set -euo pipefail
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           test "$(cat .github/reading-room-payload/APPLIED)" = 8309141315c1389db3a95ed0da261d8d66b400078f8a811fb2624f995c5c115a
-          for f in .github/reading-room-payload/fix*.py; do python "$f"; done
+          python .github/reading-room-payload/fix4.py
       - name: Retain the candidate on its isolated branch
         shell: bash
         run: |
@@ -43,12 +43,13 @@ jobs:
           git config user.email '215815131+OnourImpram@users.noreply.github.com'
           git add src public scripts tests docs AGENTS.md package.json
           if ! git diff --cached --quiet; then
-            git commit -m 'fix: resolve observed reading-room browser regressions'
+            git commit -m 'fix: contain WebKit native select labels without hiding page content'
             git push origin HEAD:feat/scholarly-reading-room-20261002
           fi
           mkdir -p verification
           git rev-parse HEAD > verification/reading-room-source-sha.txt
           git ls-tree HEAD > verification/reading-room-source-tree.txt
+          git archive HEAD --format=zip -o verification/reading-room-source.zip
       - name: Verify both route roots and content contracts
         shell: bash
         run: |
