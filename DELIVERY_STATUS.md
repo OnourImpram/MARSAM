@@ -1,27 +1,55 @@
-# MARSAM. Reading-room implementation
+# MARSAM. Tamamlanan okuma ve araştırma platformu sürümü
 
-2 October 2026. Application version 0.7.0.
+2 Ekim 2026. Uygulama sürümü 0.7.0.
 
-## Current state
+## Canlı yayın
 
-The owner requested implementation of the approved design investigation on the existing GitHub Pages website. The application has been implemented and its recovered candidate passed the full native-browser verification on run 36969322920. The exact tested candidate is 45b9657ccab1688c3472d3e574a44e031aac6a08. Promotion of this source and verification of its public deployment are the next release steps. This document does not yet claim that 0.7.0 is live.
+İngilizce https://onourimpram.github.io/MARSAM/en/
 
-## Verified candidate
+Türkçe https://onourimpram.github.io/MARSAM/tr/
 
-Root and /MARSAM/ content and build checks passed. Core interaction checks passed 818 of 818, responsive layout checks 2243 of 2243, and scope checks 899 of 899. Chromium 149.0.7827.55, Firefox 151.0 and WebKit 26.5 were used in the matching Playwright 1.61.0 environment. Browser input/output was not mocked. The tests include eight languages, real HTTP, native downloads, saved readings, language-preserved state, no-JavaScript reading, reduced motion, forced colours and specified text-enlargement checks.
+Yayımlanan uygulama kaynağı 0e8a30477876b7b8e910348bbf46b50cf3df8934. Yayın deposundaki commit ffbbe35d28407189c4b927bd930f76445acc2611. Sonraki belge güncellemeleri bu uygulama sürümünü değiştirmez.
 
-The previous WebKit native select issue was reproduced before the fix. The corrected control keeps native selection and keyboard focus without clipping the page. The failed migration-replay run remains recorded as a failure, not relabelled a successful application check.
+Onaylanan tasarım araştırmasının uygulaması tamamlandı ve gerçek GitHub Pages adresinde doğrulandı. Yeni sürüm yalnız geliştirme dalında bırakılmadı. Kaynak ana dala alındı, üretilen site yayın deposunun yalnız MARSAM bölümüne yerleştirildi.
 
-## Implemented scope
+## Kullanıcıya yansıyan değişiklikler
 
-Five task-oriented navigation groups, search before ornament, unified catalogue views, DOI and ISBN-first retrieval, script-aware normalization, exact source titles, readable provenance dimensions, version-bound translation records, explicit composition and one semantic-token stylesheet. Ebru and restrained ornament remain. No official university logo lockup is displayed without authorization. The proposed Marmara context remains visible.
+Gezinme beş görev alanına ayrıldı. Konuları keşfet, kütüphane, öğrenme, araştırma ve hakkında. Arama açılışta doğrudan görünür. Mobil ekranda dekoratif görsel içerik erişiminin önüne geçmez. Ebru, kâğıt tonları ve ölçülü geometrik bezeme korundu. Uzun okumalar ve kaynak sayfaları sade yüzeyler kullanır.
 
-The current design authority is docs/design/README.md. Coverage and deliberate limits are in docs/design/COVERAGE.md. Rights and governance are in docs/design/GOVERNANCE_AND_RIGHTS.md. The separate publishing repository and scoped release procedure are documented in docs/design/DEPLOYMENT.md.
+Kitaplar ve makaleler ortak katalog verileriyle sunulur. Kitaplarda kapak ve liste görünümü vardır. Arama özgün eser adlarını, yazarları, DOI ve ISBN bilgilerini kullanır. Kimlik sorguları önceliklendirilir. Türkçe, Çince, Rusça ve Arapça yazım özellikleri ortak arama modülünde ayrı ele alınır. Dil değiştirildiğinde ilgili sayfa ve filtreler korunur.
 
-## Boundaries
+Kaynak kimliği, erişilip incelenen kapsam, bilimsel değerlendirme, güncellik, dil incelemesi ve kullanım hakları altı ayrı boyutta gösterilir. Tek bir yeşil onay etiketiyle eşitlenmez. Kaynakların özgün yazar sırası, yayın künyeleri, kitap kapakları ve mevcut bibliyografik sınırlılıklar korunur. Ortak yazarlık merkez üyeliği veya danışmanlık ilişkisi olarak sunulmaz.
 
-No institutional approval, scientific editorial approval, human language approval, independent accessibility audit or clinical authority is asserted. The eight language versions still require qualified human review. No authenticated CMS, protected participant collection, clinical assistant, unsupported graph relationships or private course materials have been published. Automated test counts are not a usability study or accessibility certification.
+Sekiz dil ve Arapça sağdan sola düzen sürer. Çeviri kayıtları kaynak ve hedef sürüm hash değerlerini taşır. Okuma listesi kullanılan tarayıcıda saklanır. Atıf dosyaları ve kaynak karşılaştırma indirmeleri çalışır. Katkı formu hataları ilgili alana bağlar ve yalnız yerel dosya oluşturduğunu açıkça bildirir. Gönderim yapılmış gibi davranmaz.
 
-## Historical release
+## Teknik düzenleme
 
-The 0.6.0 delivery status is preserved in docs/releases/DELIVERY_0_6.md. Earlier source and deployment records retain their historical meaning. The current live receipt will be recorded after real public verification.
+Açık bileşen yapısı ve tek semantik değişkenli stil dosyası kullanılır. Önceki HTML üzerinde düzenli ifadeyle sonradan değişiklik yapan katman kaldırıldı. Genel kurum adı yasağı yerine ilişki türünü ve onayını denetleyen kurallar getirildi. Gerçek bilimsel kaynaklarda kurum adlarının bulunması tek başına engellenmez. Kitap ve makale sayıları gelecekteki genişlemeyi engelleyen sabit test kuralları değildir.
+
+Ana dal doğrulaması güncel üç motorlu testlere bağlandı. Kaynak deposunun yayın iş akışı yalnız kaynak sürümüne bağlı Pages paketi hazırlar. Gerçek yayın ayrı mevcut host üzerinde MARSAM kapsamıyla sınırlıdır. Taşıma dosyaları ve tek kullanımlık düzeltme betikleri ana dala alınmadı.
+
+## Gerçek canlı doğrulama
+
+Kaynak ana dal kontrolü https://github.com/OnourImpram/MARSAM/actions/runs/36969902819
+
+Canlı yayın ve tarayıcı kontrolü https://github.com/OnourImpram/onourimpram.github.io/actions/runs/36969983821
+
+İki kontrol de başarıyla tamamlandı. Canlı sunucudaki 599 dosya kaynak sürümünün hash kayıtlarıyla eşleşti. Sorgu parametresi olmayan giriş ve temel uygulama dosyaları da kontrol edildi. Üç gerçek tarayıcı motorunda 818 temel etkileşim, 899 kapsam ve 2243 yerleşim kontrolü geçti. Motorlar Chromium 149.0.7827.55, Firefox 151.0 ve WebKit 26.5. Sekiz dil ve 320, 390, 768, 1440 piksel genişlikler kullanıldı. Girdi ve çıktı sahteleştirilmedi. Ekranlar canlı adresten alındı.
+
+Yarım kalan WebKit Rusça seçim kutusu taşması önce yeniden üretildi. Native seçim ve klavye odağı korunarak düzeltildi. Sayfayı kırpmak çözüm olarak kullanılmadı. Önceki başarısız test ve betik tekrar çalıştırma kayıtları başarı olarak yeniden etiketlenmedi.
+
+## Yayın sınırları
+
+Marmara Üniversitesi bağlamında önerilen merkez çerçevesi görünür. Kuruluş, üniversite sahipliği, resmî logo kullanımı, onay, akreditasyon veya klinik işletme yetkisi doğrulanmış değildir. Bu nedenle kamusal başlıkta onaysız resmî üniversite logo birleşimi kullanılmaz.
+
+Bilimsel editör ve ana dil uzmanı incelemesi henüz tamamlanmış sayılmaz. Otomatik kontroller ekran okuyucu, gerçek cihaz, kullanıcı araştırması veya bağımsız erişilebilirlik onayı değildir. Dosya boyutu testleri sahadan ölçülmüş performans sonuçları değildir. Kitap kapakları ve diğer eserler için ilgili hak değerlendirmeleri ayrı kalır.
+
+Bilgi grafiği, gerçek editör hesapları, güvenli CMS, korumalı araştırma katılımı ve tam kişi kimliği ayrıştırması bu sürüme eklenmedi. Bunlar araştırma raporunda sonraki aşama olarak tanımlanan, ayrıca karar gerektiren işlerdir. Özel ders ödevleri, yayımlanmamış bölüm metinleri ve kişisel araştırma verisi yayımlanmadı.
+
+GitHub Pages yanıt başlıkları ölçüldü. Yanıt düzeyinde CSP veya X-Frame-Options gözlenmedi. Bilinmeyen adres gerçek 404 döndürür ve host varsayılan sayfasını kullanır. Ortak kök 404 veya robots dosyası değiştirilmedi. noindex erişim kontrolü sayılmaz.
+
+## Korunan diğer siteler ve kayıtlar
+
+Yayın deposunda yalnız MARSAM ağacı değişti. Elif Tasarım, kişisel index.html, kök README, .github ve .nojekyll girdilerinin önceki hash değerleri aynen korundu.
+
+Güncel kapsam docs/design/COVERAGE.md, uygulama ve tasarım sözleşmeleri docs/design/README.md, kalıcı doğrulama kaydı docs/releases/reading-room-0.7.0-verification.json, sürüm kimliği docs/LIVE_REVIEW_RELEASE.json dosyalarında bulunur. Önceki 0.6 teslimi docs/releases/DELIVERY_0_6.md, önceki yayın kimliği docs/releases/RELEASE_0_6.json olarak arşivlenmiştir.
