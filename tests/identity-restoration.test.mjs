@@ -22,10 +22,10 @@ test('unwanted public homepage warning promotions are removed, not merely CSS hi
   assert.ok(html.includes('/governance/'),l);
  }
 });
-test('restored hero keeps readable search and version 0.7 source records',()=>{
+test('restored hero keeps header search, patterned artwork and version 0.7 source records',()=>{
  const html=renderCampusHome('tr','/MARSAM/');
- assert.ok(html.includes('class="heritage-rosette"'));
- assert.ok(html.includes('hero-search'));
+ assert.ok(html.includes('class="manuscript-pattern"'));
+ assert.ok(html.includes('data-open-search'));
  assert.ok(html.includes('ebru-marbling.webp'));
  assert.ok(html.includes('Atatürk Eğitim Fakültesi'));
  assert.ok(html.includes('Eğitim Bilimleri Bölümü'));

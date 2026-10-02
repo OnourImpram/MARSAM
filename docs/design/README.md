@@ -1,13 +1,9 @@
 # Current design authority
 
-The owner explicitly corrected version 0.7 on 2 October 2026. Read RESTORATION_0_7_1.md first. The visual baseline is the approved 0.6 heritage design, combined with the 0.7 content, search, catalogue, provenance and accessibility improvements. The Marmara masthead and planned PDR academic home are restored. Earlier recommendations to omit the university logo or hide the heritage artwork on mobile are superseded by this correction.
+Read SURFACE_0_7_2.md first, then RESTORATION_0_7_1.md. The owner’s 2 October annotated screenshot specifies a full-interior geometric background and removal of the bottom floral ornament. The earlier hero paragraph, search form and shortcut row are removed. The shared header search remains.
 
-# Current design and delivery authority
+The preferred heritage composition, original ebru border, Marmara masthead and planned PDR academic home remain. The 0.7 catalogue, source records, provenance, eight languages, search and citation exports are not rolled back. Changes to ornament must not silently simplify the whole identity again.
 
-The owner approved the 1 October investigation and requested its implementation on the existing GitHub website on 2 October 2026. This directory is the current design authority for version 0.7.0. The complete report is `RESEARCH_BRIEF.md`. The implemented scope and task decisions are `IMPLEMENTATION.md`.
+CONTRACTS.md, GOVERNANCE_AND_RIGHTS.md and DEPLOYMENT.md still govern interactions, content, rights and release boundaries unless explicitly superseded by these narrow owner corrections. RESEARCH_BRIEF.md and IMPLEMENTATION.md describe the earlier investigation and implementation, not current aesthetic approval. Formal establishment, clinical authorization and human language approval are not asserted.
 
-Read `CONTRACTS.md` before editing components or content. Read `GOVERNANCE_AND_RIGHTS.md` before changing public identity, source interpretation, translation approval or assets. Read `DEPLOYMENT.md` before publishing. `COVERAGE.md` maps the investigation to implementation and explicitly deferred work.
-
-Earlier design and verification files elsewhere in docs describe their recorded versions. They are historical evidence, not current acceptance criteria. In particular, five-language references, 0.4.0 deployment instructions, original university-logo tests and fixed catalogue totals do not describe the current implementation. Historical failure records and prior release receipts are retained, not relabelled successful.
-
-The runtime is dependency-free Node-generated HTML and native browser JavaScript. There is no React migration, Pagefind dependency, backend, clinical assistant or visitor account. No design repository was installed as a runtime. Their principles informed original code and contracts. No benchmark logos, visual assets or proprietary blocks were imported.
+The application remains dependency-free static HTML with native JavaScript. No new font, asset, runtime library, animation or framework is added in 0.7.2.

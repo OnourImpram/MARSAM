@@ -12,7 +12,7 @@ test('restored institutional shell retains five primary routes, planned status, 
   assert.ok(html.includes('data-primary-nav'),l);
   assert.ok(html.includes('data-institution-status="planned"'),l);
   assert.ok(html.includes('university-signature'),l);
-  assert.ok(html.indexOf('id="hero-search"')<html.indexOf('class="heritage-art"'),l);
+  assert.ok(html.includes('data-open-search')&&!html.includes('id="hero-search"'),l);
   for(const path of ['collections','library','learning','research','about'])assert.ok(html.includes(`/MARSAM/${l}/${path}/`));
  }
 });
