@@ -1,0 +1,104 @@
+name: Verify matte panel and research workbench
+on:
+  push:
+    branches: [fix/matte-panel-research-resources-20261002]
+    paths: [.github/workflows/matte-research-verify.yml]
+permissions:
+  contents: write
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    container: mcr.microsoft.com/playwright/python:v1.61.0-noble
+    timeout-minutes: 15
+    env:
+      BROWSERS: chromium,firefox,webkit
+    steps:
+      - uses: actions/checkout@v4
+      - run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Apply exact reviewed source and validate original file identities
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import base64,lzma,json,hashlib
+          parts=sorted(Path('.github/matte-payload').glob('part*.b64'));assert len(parts)==7
+          data=base64.b64decode(''.join(p.read_text().strip()for p in parts))
+          assert hashlib.sha256(data).hexdigest()=='f7f3b844b8d03ee55842aace6199638189c77ee70dd1d9890f46e0dedbb7c601'
+          edits=json.loads(lzma.decompress(data));assert len(edits)==29
+          for item in edits:
+              path=Path(item['path']);assert not path.is_absolute()and '..' not in path.parts
+              old=path.read_bytes()if path.exists()else None
+              assert (hashlib.sha256(old).hexdigest()if old is not None else None)==item['before'],str(path)
+              text=old.decode()if old is not None else ''
+              for start,end,value in reversed(item['edits']):text=text[:start]+value+text[end:]
+              new=text.encode();assert hashlib.sha256(new).hexdigest()==item['after'],str(path)
+              path.parent.mkdir(parents=True,exist_ok=True);path.write_bytes(new)
+          PY
+      - name: Protect approved visual structure and original scholarly records
+        run: |
+          git diff --exit-code -- src/editorial.mjs src/chrome.mjs src/content.mjs src/articles.mjs src/publications-data.json src/publications-data.mjs src/locales public/assets public/app.js public/campus.js public/heritage.js public/search-core.js
+      - name: Test content and links at both deployment roots
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p verification
+          BASE_PATH=/ npm run check > verification/matte-root.log
+          BASE_PATH=/MARSAM/ PAGES_PREVIEW=true npm run check > verification/matte-pages.log
+          node scripts/budget.mjs
+      - name: Prepare matching browser, scripts and notebook kernel
+        run: |
+          python -m pip install --timeout 25 -q playwright==1.61.0 nbclient==0.10.2 nbformat==5.10.4 ipykernel==6.30.1
+          python scripts/test-fonts.py
+      - name: Execute downloadable Python and notebook, including integrity failures
+        run: python tests/research_artifacts.py
+      - name: Verify actual browser rendering and native interactions
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tests/browser_e2e.py & core=$!
+          python tests/scope_e2e.py & scope=$!
+          python tests/heritage_e2e.py & layout=$!
+          python tests/research_e2e.py & research=$!
+          status=0
+          wait "$core" || status=1
+          wait "$scope" || status=1
+          wait "$layout" || status=1
+          wait "$research" || status=1
+          exit "$status"
+      - name: Commit only the verified candidate source
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          import json
+          reports={}
+          for name in ['reading-room-core','reading-room-scope','reading-room-layout','research-browser','research-artifacts']:
+              data=json.loads(Path('verification',name+'.json').read_text());assert data['success'],name
+              reports[name]=data
+          record={'version':'0.8.0','status':'candidate-verified-not-yet-published','originalBibliographyChanged':False,'formalApproval':False,'humanLanguageReview':False,'notebookActuallyExecuted':True,'quartoRendererExecuted':False,'browsers':['chromium','firefox','webkit'],'reportFiles':list(reports)}
+          Path('docs/releases/matte-research-0.8.0-candidate.json').write_text(json.dumps(record,indent=2)+'\n')
+          PY
+          git config user.name 'Onour Impram'
+          git config user.email '215815131+OnourImpram@users.noreply.github.com'
+          git add .github/workflows/verify-preview.yml AGENTS.md README.md DELIVERY_STATUS.md package.json public/site.css scripts src research schemas tests docs/design/MATTE_RESEARCH_0_8.md docs/releases/matte-research-0.8.0-candidate.json
+          git diff --cached --stat > verification/matte-change-stat.txt
+          git commit -m 'fix: remove central glare and add source-grounded multilingual research workbench'
+          git push origin HEAD:fix/matte-panel-research-resources-20261002
+          git rev-parse HEAD > verification/matte-candidate-sha.txt
+          git ls-tree HEAD > verification/matte-candidate-tree.txt
+          git rev-parse HEAD:.github/workflows/verify-preview.yml > verification/matte-main-workflow-blob.txt
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: marsam-matte-research-review
+          path: |
+            verification/matte-*
+            verification/reading-room-*.json
+            verification/research-*
+            .browser-results/research/
+            .browser-results/reading-room/
+          include-hidden-files: true
+          retention-days: 14
