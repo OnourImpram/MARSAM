@@ -207,9 +207,15 @@ class Review:
                     self.ck(f'{engine}/{locale}/{path}/{width} direction', page.locator('html').get_attribute('dir') == ('rtl' if locale == 'ar' else 'ltr'))
                     self.ck(f'{engine}/{locale}/{path}/{width} one stylesheet', page.locator('link[rel=stylesheet]').count() == 1)
                     if path == '':
-                        self.ck(f'{engine}/{locale}/{width} search early', page.locator('#hero-search').bounding_box()['y'] < (800 if width < 650 else 1000))
+                        self.ck(f'{engine}/{locale}/{width} global search remains reachable', page.locator('[data-open-search]').is_visible())
+                        self.ck(f'{engine}/{locale}/{width} rejected hero block absent', page.locator('.hero-search-form,.hero-deck,.hero-actions').count() == 0)
+                        self.ck(f'{engine}/{locale}/{width} crossed-out embellishments absent', page.locator('.heritage-floral,.heritage-rosette').count() == 0)
+                        inner = page.locator('.manuscript-inner').bounding_box()
+                        pattern = page.locator('.manuscript-pattern').bounding_box()
+                        self.ck(f'{engine}/{locale}/{width} pattern covers complete interior', abs(inner['width'] - pattern['width']) <= 2 and abs(inner['height'] - pattern['height']) <= 2)
+                        self.ck(f'{engine}/{locale}/{width} decorative background never captures input', page.locator('.manuscript-pattern').evaluate('(e)=>getComputedStyle(e).pointerEvents') == 'none')
                         if width < 650:
-                            self.ck(f'{engine}/{locale}/{width} compact heritage follows discovery', page.locator('.heritage-art').bounding_box()['y'] > page.locator('#hero-search').bounding_box()['y'] and page.locator('.heritage-art').bounding_box()['height'] < 340)
+                            self.ck(f'{engine}/{locale}/{width} compact heritage follows title', page.locator('.heritage-art').bounding_box()['y'] > page.locator('#centre-title').bounding_box()['y'] and page.locator('.heritage-art').bounding_box()['height'] < 340)
                             page.locator('.mobile-nav summary').click()
                             self.fit(page, f'{engine}/{locale}/{width} open menu')
                             page.locator('.mobile-nav summary').click()
