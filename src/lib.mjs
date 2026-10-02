@@ -1,8 +1,9 @@
+import {normalizeLoose} from '../public/search-core.js';
 import {locales} from './languages.mjs';
 /** Shared, side-effect-free contracts. All editorial text is escaped at render time. */
 export function escapeHTML(value='') { return String(value).replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
 export function safeURL(value) { try { const u=new URL(value); return u.protocol==='https:'&&!u.username&&!u.password ? u.href : null; } catch { return null; } }
-export function normalizeText(value='') { return String(value).replace(/İ/g,'i').replace(/I/g,'i').toLocaleLowerCase('tr').replace(/ı/g,'i').normalize('NFD').replace(/\p{Diacritic}/gu,'').replace(/[\u0640\u064b-\u065f\u0670]/g,'').replace(/[أإآٱ]/g,'ا').replace(/ى/g,'ي'); }
+export function normalizeText(value='',locale='tr') {return normalizeLoose(value,locale);}
 export function normalizeBase(base='/') { if(!/^\/(?:[A-Za-z0-9_-]+\/)*$/.test(base)) throw new Error('BASE_PATH must be / or a slash-delimited safe path, e.g. /MARSAM/'); return base; }
 export function route(locale,path='',base='/') { if(!locales.includes(locale))throw new Error('Unsupported locale'); if(path&&!/^[a-z0-9]+(?:[-/][a-z0-9]+)*$/.test(path))throw new Error('Invalid content path');return `${normalizeBase(base)}${locale}/${path?path+'/':''}`; }
 export function canPublish(record,expectedHash=null) { const a=record?.approval;return record?.review==='approved'&&['owned','permission-recorded','link-only'].includes(record?.rights)&&record?.translation==='approved'&&typeof a?.by==='string'&&!!a.by.trim()&&/^\d{4}-\d{2}-\d{2}$/.test(a?.date||'')&&/^[a-f0-9]{64}$/.test(a?.hash||'')&&(!expectedHash||a.hash===expectedHash); }

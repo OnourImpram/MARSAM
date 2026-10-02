@@ -1,11 +1,13 @@
+import {renderCampusHome as home} from '../src/campus.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {locales,labels,L} from '../src/i18n.mjs';
+import {locales,L} from '../src/i18n.mjs';
+import {labels} from '../src/catalogue.mjs';
 import {route,normalizeText,validateContent} from '../src/lib.mjs';
-import {resources,sources,sections} from '../src/content.mjs';
-import {articles} from '../src/articles.mjs';
-import {learningPaths,overview} from '../src/info.mjs';
-import {home,dossierPage,resourcePage,searchIndex} from '../src/site.mjs';
+import {resources,sources,sections} from '../src/catalogue.mjs';
+import {articles} from '../src/catalogue.mjs';
+import {learningPaths,overview} from '../src/catalogue.mjs';
+import {dossierPage,resourcePage,searchIndex} from '../src/site.mjs';
 const expected=['tr','en','de','zh','ru','ar','id','ms'];
 test('Arabic, Indonesian and Malay are real additional locales',()=>assert.deepEqual(locales,expected));
 test('all eight labels and full reading bodies exist without fallback',()=>{
@@ -14,7 +16,7 @@ test('all eight labels and full reading bodies exist without fallback',()=>{
 });
 test('new locales have distinct safe routes and are searchable',()=>{
  for(const l of ['ar','id','ms']){assert.equal(route(l,'library','/MARSAM/'),`/MARSAM/${l}/library/`);const data=searchIndex(l,'/');assert.equal(data.length,sections.length+articles.length+resources.length);assert.ok(data.every(x=>x.url.startsWith('/'+l+'/')));}
- assert.equal(normalizeText('الإِرشـاد'),normalizeText('الارشاد'));assert.equal(normalizeText('ى'),normalizeText('ي'));
+ assert.equal(normalizeText('الإِرشـاد','ar'),normalizeText('الارشاد','ar'));assert.equal(normalizeText('ى','ar'),normalizeText('ي','ar'));
 });
 test('Arabic pages declare RTL, original citations remain LTR',()=>{
  const html=resourcePage(resources[1],'ar','/');assert.match(html,/<html lang="ar" dir="rtl"/);assert.match(html,/<p[^>]*dir="ltr"[^>]*data-citation|<p[^>]*data-citation[^>]*dir="ltr"/);assert.match(html,/<bdi[^>]*>Bahasa Indonesia<\/bdi>/);
