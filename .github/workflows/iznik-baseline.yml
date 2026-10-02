@@ -1,0 +1,37 @@
+name: Iznik baseline capture
+on:
+  push:
+    branches: [design/iznik-cini-20261002]
+    paths: [.github/workflows/iznik-baseline.yml]
+permissions:
+  contents: read
+jobs:
+  baseline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 377f00c01a0100b73ba782abbd6ddd6157bc90d5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Capture source without credentials or repository internals
+        run: |
+          mkdir -p /tmp/cini-baseline
+          git archive --format=tar HEAD > /tmp/cini-baseline/source.tar
+          git rev-parse HEAD > /tmp/cini-baseline/source-sha.txt
+          git ls-tree -r HEAD > /tmp/cini-baseline/source-tree.txt
+      - name: Verify existing application and build exact baseline
+        env:
+          BASE_PATH: /MARSAM/
+          PAGES_PREVIEW: 'true'
+        run: |
+          npm run check > /tmp/cini-baseline/baseline-check.log
+          tar -cf /tmp/cini-baseline/dist.tar dist
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: marsam-iznik-baseline
+          path: /tmp/cini-baseline/
+          retention-days: 7
