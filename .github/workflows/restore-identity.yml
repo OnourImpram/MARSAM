@@ -35,6 +35,12 @@ jobs:
               for a,b,s in reversed(item['edits']):text=text[:a]+s+text[b:]
               new=text.encode();assert hashlib.sha256(new).hexdigest()==item['after'],str(p)
               p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(new)
+          p=Path('tests/browser_suite.py');s=p.read_text();old="f'{engine}/{locale}/{path} proposed masthead', page.locator('[data-institution-status=\"proposed\"]')";assert old in s;p.write_text(s.replace(old,"f'{engine}/{locale}/{path} planned masthead', page.locator('[data-institution-status=\"planned\"]')"))
+          p=Path('public/site.css');p.write_text(p.read_text()+'''\n/* Restored composition, checked at narrow German widths and against artwork overlap. */
+          .hero-search-form input[type="search"]{border:0;background:transparent;box-shadow:none}
+          .heritage-floral{width:120px;height:120px;bottom:22px}
+          @media(max-width:650px){.editorial-hero h1{overflow-wrap:anywhere;hyphens:auto}.heritage-floral{width:68px;height:68px;bottom:14px}}
+          ''')
           PY
       - name: Protect current academic content and interactive features
         run: |
