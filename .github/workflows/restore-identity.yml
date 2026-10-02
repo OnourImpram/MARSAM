@@ -14,6 +14,8 @@ jobs:
       BROWSERS: chromium,firefox,webkit
     steps:
       - uses: actions/checkout@v4
+      - name: Establish repository trust in the persistent container home
+        run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
@@ -78,7 +80,6 @@ jobs:
           PY
           git config user.name 'Onour Impram'
           git config user.email '215815131+OnourImpram@users.noreply.github.com'
-          git config --global --add safe.directory "$GITHUB_WORKSPACE"
           git add AGENTS.md README.md DELIVERY_STATUS.md src public scripts tests package.json docs/design docs/releases/restoration-0.7.1-candidate.json
           git diff --cached --stat > verification/restoration-change-stat.txt
           git commit -m 'fix: restore approved heritage design and planned Marmara PDR identity, retain 0.7 content'
