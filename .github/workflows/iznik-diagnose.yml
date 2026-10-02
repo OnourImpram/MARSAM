@@ -1,0 +1,74 @@
+name: Diagnose panel pixel comparison
+on:
+  push:
+    branches: [design/iznik-cini-20261002]
+    paths: [.github/workflows/iznik-diagnose.yml]
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    container: mcr.microsoft.com/playwright/python:v1.61.0-noble
+    timeout-minutes: 5
+    env:
+      BASE_PATH: /MARSAM/
+      PAGES_PREVIEW: 'true'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Recreate original and proposed sites
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import base64,lzma,json,hashlib,subprocess
+          data=base64.b64decode(Path('.github/iznik-payload.b64').read_text())
+          assert hashlib.sha256(data).hexdigest()=='c911ba6e7714201ddf88a7dff887731cfac662eb476395f81ebd9d91a534d68c'
+          subprocess.run(['git','config','--global','--add','safe.directory',str(Path.cwd())],check=True)
+          subprocess.run('mkdir .baseline && git archive 377f00c01a0100b73ba782abbd6ddd6157bc90d5 | tar -x -C .baseline',shell=True,check=True)
+          for item in json.loads(lzma.decompress(data)):
+              p=Path(item['path']);old=p.read_bytes() if p.exists() else None
+              assert (hashlib.sha256(old).hexdigest()if old else None)==item['before']
+              text=old.decode()if old else ''
+              for a,b,s in reversed(item['edits']):text=text[:a]+s+text[b:]
+              assert hashlib.sha256(text.encode()).hexdigest()==item['after']
+              p.parent.mkdir(parents=True,exist_ok=True);p.write_text(text)
+          PY
+          npm run build
+          cd .baseline && npm run build
+      - name: Capture exact pixel differences and scroll positions
+        run: |
+          python -m pip install -q playwright==1.61.0 pillow==11.3.0
+          python scripts/test-fonts.py
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image,ImageChops,ImageStat
+          from playwright.sync_api import sync_playwright
+          import os,pwd,subprocess,time,io,json
+          os.environ['HOME']=pwd.getpwuid(os.getuid()).pw_dir
+          root=Path.cwd();out=root/'diagnosis';out.mkdir();processes=[];report=[]
+          for folder,port in [(root,4195),(root/'.baseline',4196)]:processes.append(subprocess.Popen(['node','scripts/serve.mjs'],cwd=folder,env={**os.environ,'PORT':str(port)},stdout=subprocess.DEVNULL))
+          time.sleep(2)
+          with sync_playwright()as p:
+              browser=p.chromium.launch();ctx=browser.new_context(viewport={'width':390,'height':1000});page=ctx.new_page()
+              for width in [390,1440]:
+                  page.set_viewport_size({'width':width,'height':1000});imgs={};states={}
+                  for label,port in [('after',4195),('before',4196)]:
+                      page.goto(f'http://127.0.0.1:{port}/MARSAM/tr/',wait_until='networkidle')
+                      states[label]=page.evaluate("() => ({scrollY,frame:document.querySelector('.manuscript-frame').getBoundingClientRect().toJSON(),inner:document.querySelector('.manuscript-inner').getBoundingClientRect().toJSON()})")
+                      for selector in ['.manuscript-frame','.manuscript-inner']:
+                          img=Image.open(io.BytesIO(page.locator(selector).screenshot())).convert('RGB');imgs[label+selector]=img;img.save(out/f'{width}-{label}-{selector[1:]}.png')
+                  for selector in ['.manuscript-frame','.manuscript-inner']:
+                      a=imgs['after'+selector];b=imgs['before'+selector];d=ImageChops.difference(a,b);d.point(lambda x:min(255,x*16)).save(out/f'{width}-difference-{selector[1:]}.png')
+                      report.append({'width':width,'selector':selector,'beforeSize':b.size,'afterSize':a.size,'bbox':d.getbbox(),'max':d.getextrema(),'mean':ImageStat.Stat(d).mean,'changedPixels':sum(1 for pix in d.getdata()if any(pix)),'states':states})
+              browser.close()
+          for proc in processes:proc.terminate()
+          (out/'report.json').write_text(json.dumps(report,indent=2));print(json.dumps(report,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: cini-panel-diagnosis
+          path: diagnosis/
+          retention-days: 7
