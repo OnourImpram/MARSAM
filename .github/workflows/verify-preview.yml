@@ -1,5 +1,7 @@
 name: Verify preview
 on:
+  push:
+    branches: [main]
   pull_request:
   workflow_dispatch:
 permissions:
@@ -10,7 +12,10 @@ concurrency:
 jobs:
   verify:
     runs-on: ubuntu-latest
+    container: mcr.microsoft.com/playwright/python:v1.61.0-noble
     timeout-minutes: 15
+    env:
+      BROWSERS: chromium,firefox,webkit
     steps:
       - uses: actions/checkout@v4
         with:
@@ -18,43 +23,36 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Content, locale and root-path tests
+      - name: Verify content contracts and both deployment roots
         shell: bash
         run: |
-          set -o pipefail
+          set -euo pipefail
           mkdir -p verification
-          npm run check 2>&1 | tee verification/check-root.log
-      - name: Subpath tests and restore root build
+          BASE_PATH=/ npm run check | tee verification/reading-room-root.log
+          BASE_PATH=/MARSAM/ PAGES_PREVIEW=true npm run check | tee verification/reading-room-pages.log
+          node scripts/budget.mjs
+      - name: Prepare matching browser and script coverage
+        run: |
+          python -m pip install --timeout 25 -q playwright==1.61.0
+          python scripts/test-fonts.py
+      - name: Verify native interactions, institutional boundaries and responsive layouts
         shell: bash
         run: |
-          set -o pipefail
-          BASE_PATH=/MARSAM/ npm run check 2>&1 | tee verification/check-subpath.log
-          npm run build
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-      - name: Install test-only browser dependencies
-        run: |
-          python -m pip install playwright==1.57.0
-          python -m playwright install --with-deps chromium
-      - name: Real HTTP browser checks
-        run: |
-          python tests/browser_e2e.py
-          python tests/campus_e2e.py
-      - name: Package source, preview and verification
+          set -euo pipefail
+          python tests/browser_e2e.py & core=$!
+          python tests/scope_e2e.py & scope=$!
+          python tests/heritage_e2e.py & layout=$!
+          status=0
+          wait "$core" || status=1
+          wait "$scope" || status=1
+          wait "$layout" || status=1
+          exit "$status"
+      - uses: actions/upload-artifact@v4
         if: always()
-        run: |
-          mkdir -p /tmp/marsam-delivery
-          git archive HEAD -o /tmp/marsam-delivery/source.tar
-          git rev-parse HEAD > /tmp/marsam-delivery/commit.txt
-          if [ -d dist ]; then cp -r dist /tmp/marsam-delivery/dist; fi
-          if [ -d verification ]; then cp -r verification /tmp/marsam-delivery/verification; fi
-          if [ -d .browser-results/live ]; then cp -r .browser-results/live /tmp/marsam-delivery/screenshots; fi
-          if [ -d .browser-results/campus ]; then cp -r .browser-results/campus /tmp/marsam-delivery/campus-screenshots; fi
-      - name: Upload development artifact
-        if: always()
-        uses: actions/upload-artifact@v4
         with:
-          name: marsam-preview
-          path: /tmp/marsam-delivery/
+          name: reading-room-verification
+          path: |
+            verification/reading-room-*
+            .browser-results/reading-room/
+          include-hidden-files: true
           retention-days: 14

@@ -1,50 +1,43 @@
 # MARSAM
 
-Marmara Üniversitesi bünyesinde planlanan Maneviyat ve Ruh Sağlığı Araştırmaları Merkezi için kurumsal web sitesi taslağı.
+Maneviyat, ruh sağlığı, araştırma ve öğrenme için sekiz dilli akademik bilgi platformu. Marmara Üniversitesi bağlamında önerilen merkez için hazırlanmış kurumsal inceleme sürümüdür. Resmî kuruluş, üniversite sahipliği, onay, akreditasyon veya klinik hizmet yetkisi doğrulanmış değildir.
 
-## Canlı sürüm
+## Güncel tasarım ve uygulama
 
-https://onourimpram.github.io/MARSAM/tr/
+Kod sürümü 0.7.0. Araştırma ve tasarım kararlarının güncel dizini `docs/design/README.md`. Uygulanan, kısmen uygulanan ve ileri aşamaya bırakılan kapsam `docs/design/COVERAGE.md`. Doğrulanmış canlı sürüm ve yayın kanıtı `DELIVERY_STATUS.md` dosyasında tutulur. Eski sürüm raporları tarihsel kayıtlardır.
 
-Sürüm 0.6.0. Ebru ve mimari bezemeden esinlenen görsel kimlik, dokuz kitaplık seçki ve 2025 ile 2026 yıllarından sekiz araştırma kaydı.
+İngilizce site https://onourimpram.github.io/MARSAM/en/
 
-Yayımlanan uygulama kaynağı `038506a0313509437ba038043188f3aa0c398cb6`. Yayın deposundaki commit `7a15cd6d9daec45a81a60b1669bbad24b81a789f`. Daha sonraki teslim belgeleri uygulama dosyalarını değiştirmez.
+Türkçe site https://onourimpram.github.io/MARSAM/tr/
 
-Kitaplık https://onourimpram.github.io/MARSAM/tr/books/
+## Uygulama
 
-Güncel araştırmalar https://onourimpram.github.io/MARSAM/tr/publications/
+Beş ana gezinme alanı, erken görünür arama, özgün eser künyelerini koruyan katalog, kitaplarda kapak ve liste görünümü, kaynak karşılaştırma ve ayrı kaynak inceleme boyutları bulunur. Öğrenci, uygulayıcı ve araştırmacı okuma yolları korunur. DOI ve ISBN sorguları önceliklidir. Dil değişimi filtreleri ve ilgili sayfayı korur. Okuma listesi yalnız kullanılan tarayıcıda tutulur. Katkı formu yerel dosya hazırlar, gönderim yapmaz.
 
-## Görsel kimlik ve kaynaklar
+Türkçe, İngilizce, Almanca, Basitleştirilmiş Çince, Rusça, Arapça, Endonezce ve Malayca. Arapça sağdan sola düzen kullanır. Akademik açıklamalar ve arayüz metinleri insan dil incelemesi bekler. Kaynak kimliği, erişilen kapsam, bilimsel değerlendirme, güncellik ve kullanım hakları aynı onay sayılmaz.
 
-Marmara işareti, lacivert ve petrol mavisi korunur. Kâğıt tonları, ölçülü altın çizgiler, geometrik geçmeler ve bitkisel bezeme kullanılır. Ebru uyarlamasının eser sahibi, lisansı ve yapılan değişiklikler belirtilmiştir. Belirli bir tarihî yapının birebir rekonstrüksiyonu iddia edilmez.
+Ebru, kâğıt tonları ve ölçülü geometrik bezeme okuma düzenini destekler. Üniversite logosu için izin doğrulanmadığından kamusal üst bölümde resmî logo birleşimi kullanılmaz. Önerilen Marmara bağlamı açıkça belirtilir. Özel ders dosyaları, kişisel yansıtmalar, katılımcı verisi ve tam kitap metinleri yayımlanmaz. Tasarım örneği olarak incelenen kurumlar ortakmış gibi gösterilmez.
 
-GitHub tasarım kaynaklarından yararlanılan ilkeler ve incelenen commitler `docs/HERITAGE_DESIGN_REVIEW_TR.md` dosyasındadır. Elif Tasarım sürecinden alınan tasarım dersleri `docs/ELIF_DESIGN_LESSONS_TR.md` dosyasında korunur. Referans kurumlar ortak veya merkez üyesi olarak sunulmaz.
+## Teknik yapı
 
-## Kapsam
-
-Türkçe, İngilizce, Almanca, Basitleştirilmiş Çince, Rusça, Arapça, Endonezce ve Malayca. Arapça sağdan sola düzen kullanır. Arama, okuma listesi, kaynak karşılaştırma, RIS ve BibTeX indirme, kitap ve makale filtreleri bulunur. Katalog, özgün eser adlarını ve yazar sırasını korur. Diğer dillerdeki açıklamalar yayımlanmış çeviri baskılarına işaret etmez.
-
-Site kurumsal inceleme sürümüdür. Resmî kuruluş kararı, bilimsel editör onayı veya klinik hizmet yetkisi varmış gibi sunulmaz. Katılımcı yanıtı, ödeme veya kişisel sağlık bilgisi toplanmaz. Yayın ortaklığı, kadro üyeliği veya öğrencilik ilişkisi olarak yorumlanmaz. Tam metinler ve kişisel ders dosyaları yayımlanmaz.
-
-## Yerel çalıştırma
-
-Node.js 22 veya üzeri. Uygulamanın paket bağımlılığı yoktur.
+Node.js 22 veya üzeri ile bağımlılıksız statik HTML üretimi. Açık bileşenler, tek stil dosyası ve semantik tasarım değişkenleri kullanılır. React, sunucu uygulaması, hesap, klinik asistan veya veri toplama altyapısı eklenmemiştir.
 
 ```sh
 npm run check
 npm run preview
 ```
 
-Yerel adres `http://127.0.0.1:4173/tr/`.
+Yerel adres `http://127.0.0.1:4173/en/`.
 
 GitHub Pages alt yolu için.
 
 ```sh
 BASE_PATH=/MARSAM/ PAGES_PREVIEW=true npm run check
+node scripts/budget.mjs
 ```
 
-## Doğrulama
+## Doğrulama ve sınırlar
 
-`npm run check` kaynak testlerini, derlemeyi ve iç bağlantıları denetler. `tests/heritage_e2e.py` yeni tasarım ve katalogların gerçek tarayıcı denetimidir. Önceki işlevler `tests/browser_e2e.py` ve `tests/scope_e2e.py` ile korunur. Gerçek glif desteği test ortamında sağlanır. Yazı tipi dosyaları siteyle veya teslim arşivleriyle dağıtılmaz.
+Kaynak ve bağlantı testleri `npm run check` komutuyla çalışır. `tests/browser_e2e.py`, `tests/scope_e2e.py` ve `tests/heritage_e2e.py` güncel ortak tarayıcı paketine yönlenir. `BROWSERS=chromium,firefox,webkit` üç motoru seçer. Test ortamı için kurulan yazı tipleri dağıtılmaz.
 
-Son canlı doğrulama https://github.com/OnourImpram/onourimpram.github.io/actions/runs/36911218513 adresindedir. Doğrulama kapsamı ve önceki başarısız kurulum kaydı `DELIVERY_STATUS.md` dosyasındadır. Teknik testler bilimsel onay, ana dil uzmanı incelemesi veya bağımsız erişilebilirlik sertifikası değildir.
+Otomatik testler insan akademik değerlendirmesi, ana dil incelemesi, gerçek cihaz testi, ekran okuyucu değerlendirmesi veya bağımsız erişilebilirlik onayı değildir. Kurumsal yayın, görsel kullanım izinleri ve bilimsel sorumluluk insan kararına bağlıdır.
