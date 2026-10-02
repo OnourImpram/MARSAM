@@ -1,0 +1,25 @@
+name: Matte artwork and research content review
+on:
+  push:
+    branches: [fix/matte-research-content-073]
+    paths: [.github/workflows/matte-content-review.yml]
+permissions:
+  contents: read
+jobs:
+  source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: cc7aadf643bf6786194484134d7e98de9f14fdb7
+          persist-credentials: false
+      - run: |
+          mkdir -p /tmp/matte-source
+          git archive --format=zip HEAD > /tmp/matte-source/source.zip
+          git rev-parse HEAD > /tmp/matte-source/commit.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: matte-exact-source
+          path: /tmp/matte-source/
+          retention-days: 7
