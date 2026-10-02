@@ -31,3 +31,10 @@ SVG toplam sıkıştırılmış boyut hedefi 8 KiB altında, mevcut CSS bütçes
 ## Piksel ve yükleme karşılaştırması
 
 Kesirli CSS koordinatlarının ekran görüntüsünde dışarı yuvarlanması, dış zeminden örneklenen tek piksellik kenarda fark oluşturur. Test yalnız bir piksellik dış örnekleme sınırını kırpar. Panelin geri kalanında toleranssız piksel eşitliği aranır. Kitap gridi karşılaştırılmadan önce her iki sitede tembel yüklenen kapaklara kaydırılır ve yükleme tamamlanır. Grid ve metin ölçüleri aynı yükleme durumunda karşılaştırılır.
+
+
+## 0.8.2. Mevcut motiflerin görünürlük düzeltmesi
+
+Kullanıcının son talebi yeni tasarım veya yeni çizim değil, mevcut çiniyi belirginleştirmektir. Aynı iki SVG, aynı renk kodları, aynı konumlar ve aynı boyutlar korunur. Yalnız CSS opaklığı ve dış kenardaki alfa geçişi değişir. Masaüstünde sayfa 0,30, açılış kenarı 0,32, başlık üstü mevcut motif 0,34 opaklıktadır. Bu sayılar algısal yoğunluk ölçümü değildir. Tablet 0,18 ila 0,24 ve mobildeki tek mevcut fragman 0,20 değerini kullanır. Maske içerik sınırından 8 veya 10 piksel önce tamamen kaybolmaya devam eder. Panelin içine, kartlara veya başlıkların arkasına yeni görsel eklenmez.
+
+Yeni görsel, SVG, JavaScript, font, renk, motif, hareket veya düzen değişikliği yoktur. Koyu yüzeyler, Marmara kimliği, ebru paneli, sekiz dil ve tüm akademik içerik korunur. Önceden üretilen on görsel taslak siteye aktarılmamıştır.
