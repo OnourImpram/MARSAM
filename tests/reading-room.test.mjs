@@ -7,11 +7,11 @@ import {locales} from '../src/languages.mjs';
 import {resources} from '../src/content.mjs';
 const optional=async path=>{try{return await import(path);}catch{return {};}};
 
-test('approved reading-room shell has five primary routes, no unapproved logo, and search before decoration',()=>{
+test('restored institutional shell retains five primary routes, planned status, and search before decoration',()=>{
  for(const l of locales){const html=renderCampusHome(l,'/MARSAM/');
   assert.ok(html.includes('data-primary-nav'),l);
-  assert.ok(html.includes('data-institution-status="proposed"'),l);
-  assert.ok(!html.includes('university-signature'),l);
+  assert.ok(html.includes('data-institution-status="planned"'),l);
+  assert.ok(html.includes('university-signature'),l);
   assert.ok(html.indexOf('id="hero-search"')<html.indexOf('class="heritage-art"'),l);
   for(const path of ['collections','library','learning','research','about'])assert.ok(html.includes(`/MARSAM/${l}/${path}/`));
  }

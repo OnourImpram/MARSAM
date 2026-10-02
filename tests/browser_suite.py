@@ -172,8 +172,8 @@ class Review:
             for path in ['about/', 'governance/', 'research/', 'events/', 'media/', 'projects/', 'news/']:
                 self.goto(page, locale, path)
                 self.fit(page, f'{engine}/{locale}/{path} fits')
-                self.ck(f'{engine}/{locale}/{path} proposed masthead', page.locator('[data-institution-status="proposed"]').count() == 1)
-                self.ck(f'{engine}/{locale}/{path} no official lockup', page.locator('.university-signature,.institution-card,.partner-grid').count() == 0)
+                self.ck(f'{engine}/{locale}/{path} planned masthead', page.locator('[data-institution-status="planned"]').count() == 1)
+                self.ck(f'{engine}/{locale}/{path} restored planned institution', page.locator('.university-signature').count() == 1 and page.locator('[data-institution-status=planned]').count() == 1 and page.locator('.institution-card,.partner-grid').count() == 0)
             self.goto(page, locale, 'governance/')
             self.ck(f'{engine}/{locale} privacy addressable', page.locator('#privacy').count() == 1)
             self.ck(f'{engine}/{locale} accessibility addressable', page.locator('#accessibility').count() == 1)
@@ -209,7 +209,7 @@ class Review:
                     if path == '':
                         self.ck(f'{engine}/{locale}/{width} search early', page.locator('#hero-search').bounding_box()['y'] < (800 if width < 650 else 1000))
                         if width < 650:
-                            self.ck(f'{engine}/{locale}/{width} no decorative barrier', not page.locator('.heritage-art').is_visible())
+                            self.ck(f'{engine}/{locale}/{width} compact heritage follows discovery', page.locator('.heritage-art').bounding_box()['y'] > page.locator('#hero-search').bounding_box()['y'] and page.locator('.heritage-art').bounding_box()['height'] < 340)
                             page.locator('.mobile-nav summary').click()
                             self.fit(page, f'{engine}/{locale}/{width} open menu')
                             page.locator('.mobile-nav summary').click()

@@ -1,3 +1,9 @@
+# MARSAM 0.7.1. Visual correction candidate
+
+Restores the approved 0.6 heritage composition and Marmara masthead without rolling back the richer 0.7 catalogue, search, provenance, eight locales or citation exports. Planned affiliation uses official faculty and department names. The homepage warning strip and governance-promotion block are removed. Candidate browser receipts are in docs/releases/restoration-0.7.1-candidate.json. Live delivery must be verified separately before it is announced.
+
+## Previous completed release record
+
 # MARSAM. Tamamlanan okuma ve araştırma platformu sürümü
 
 2 Ekim 2026. Uygulama sürümü 0.7.0.

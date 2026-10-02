@@ -1,3 +1,9 @@
+# MARSAM 0.7.1. Marmara identity and heritage restoration
+
+The owner-requested 0.6 visual identity is restored over the 0.7 content and interaction model. The planned academic home is Marmara University, Atatürk Faculty of Education, Department of Educational Sciences, Division of Guidance and Psychological Counselling. See docs/design/RESTORATION_0_7_1.md. The prominent homepage warning strip and governance promotion are removed. About and source-level review details remain available. Formal establishment is not asserted.
+
+## Previous 0.7 release documentation
+
 # MARSAM
 
 Maneviyat, ruh sağlığı, araştırma ve öğrenme için sekiz dilli akademik bilgi platformu. Marmara Üniversitesi bağlamında önerilen merkez için hazırlanmış kurumsal inceleme sürümüdür. Resmî kuruluş, üniversite sahipliği, onay, akreditasyon veya klinik hizmet yetkisi doğrulanmış değildir.

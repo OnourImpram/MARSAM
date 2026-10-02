@@ -18,7 +18,7 @@ test('hero artwork is responsive and decorative, not falsely attributed campus p
  const h=renderCampusHome('tr','/MARSAM/');
  assert.ok(h.includes('ebru-marbling.webp'));assert.ok(h.includes('ebru-marbling-small.webp'));
  assert.match(h,/<img[^>]+class="hero-water"[^>]+alt=""/);
- assert.ok(h.indexOf('id="hero-search"')<h.indexOf('class="heritage-art"'));assert.ok(h.includes('sizes="320px"'));
+ assert.ok(h.indexOf('id="hero-search"')<h.indexOf('class="heritage-art"'));assert.ok(h.includes('480px"'));
 });
 test('design keeps the real sources, pathways and direct comparison controls',()=>{
  for(const l of locales){const h=decorate(renderCampusHome(l,'/MARSAM/'),l,'','/MARSAM/');

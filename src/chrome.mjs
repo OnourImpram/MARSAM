@@ -21,12 +21,12 @@ function groupLinks(group,l,path,base) {
 function header(l,path,base) {
  const t=labels[l];
  return `<a class="skip-link" href="#main">${e(t.skip)}</a>
- <div class="preview-strip" data-institution-status="proposed"><div class="wide"><span>${e(message('site.proposed',l))}</span><a href="${route(l,'about',base)}">${e(t.about)} ${icon('arrow')}</a></div></div>
- <header class="site-header" id="top"><div class="wide header-inner">
- <a class="brand" href="${route(l,'',base)}" aria-label="MARSAM. ${e(t.home)}"><img src="${base}assets/heritage/rosette.svg" width="50" height="50" alt="" class="brand-rosette"><span><span class="wordmark" dir="ltr">MARSAM</span><span class="brand-sub">${e(message('site.kicker',l))}</span></span></a>
+ <header class="site-header" id="top" data-institution-status="planned"><div class="wide header-inner">
+ <div class="institution-lockup"><a class="university-signature" href="https://www.marmara.edu.tr/" aria-label="${e(message('institution.university',l))}"><img src="${base}assets/marmara-${l==='tr'?'tr':'en'}.png" alt="${e(message('institution.university',l))}" width="320" height="105"></a><span class="lockup-rule" aria-hidden="true"></span><a class="brand" href="${route(l,'',base)}" aria-label="MARSAM. ${e(t.home)}"><span><span class="wordmark" dir="ltr">MARSAM</span><span class="brand-sub">${e(t.brand)}</span></span></a></div>
  <div class="header-actions"><a class="icon-button" href="${route(l,'saved',base)}" aria-label="${e(t.saved)}" title="${e(t.saved)}">${icon('bookmark')}</a>
  <details class="language-select"><summary>${icon('globe')}<bdi>${e(localeNames[l])}</bdi><span class="chevron" aria-hidden="true"></span></summary><div class="language-panel">${locales.map(x=>`<a href="${route(x,path,base)}" lang="${langTags[x]}" hreflang="${langTags[x]}" ${x===l?'aria-current="true"':''}><bdi>${e(localeNames[x])}</bdi>${x===l?icon('check'):''}</a>`).join('')}</div></details>
  <a class="icon-button search-toggle" href="${route(l,'search',base)}" data-open-search aria-label="${e(t.search)}">${icon('search')}</a></div></div>
+ <div class="wide academic-context" data-academic-unit="guidance-counselling"><span>${e(message('institution.faculty',l))}</span><span>${e(message('institution.department',l))}</span><span>${e(message('institution.division',l))}</span></div>
  <div class="wide nav-wrap"><nav class="desktop-nav" aria-label="${e(t.menu)}" data-primary-nav>${navigation.map(g=>`<details class="nav-group"><summary>${e(message('nav.'+g.key,l))}<span class="chevron" aria-hidden="true"></span></summary><div class="mega-panel">${groupLinks(g,l,path,base)}</div></details>`).join('')}</nav>
  <details class="mobile-nav"><summary>${icon('layers')} ${e(t.menu)}</summary><nav aria-label="${e(t.menu)}">${navigation.map(g=>`<div class="mobile-nav-group"><strong>${e(message('nav.'+g.key,l))}</strong>${groupLinks(g,l,path,base)}</div>`).join('')}</nav></details>
  <a class="nav-reading" href="${route(l,'compare',base)}" data-compare-nav>${e(t.compare)} <span class="compare-count" data-compare-count>0</span></a></div></header>`;
@@ -38,7 +38,7 @@ function footer(l,base) {
  <div class="footer-notice">${icon('circle')}<p>${e(t.notClinical)}</p></div>
  <details class="future-sections"><summary>${e(message('footer.future',l))}</summary><div>${['projects','events','media','news'].map(id=>`<a href="${route(l,id,base)}">${e(t[id]||campusCopy[l][id])}</a>`).join('')}</div></details>
  <details class="visual-credits"><summary>${e(h.imageCredits[l])}</summary><p>${e(h.imageNote[l])}</p><a href="https://commons.wikimedia.org/wiki/File:Battal_Ebru.jpg" target="_blank" rel="noopener noreferrer">Akcire.14 · Battal Ebru</a><a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a></details>
- <div class="footer-bottom"><span dir="ltr">MARSAM · ${RELEASE.version}</span><a href="${route(l,'governance',base)}#privacy">${e(t.privacy)}</a><a href="${route(l,'governance',base)}#accessibility">${e(message('governance.accessibility',l))}</a><a href="${route(l,'contribute',base)}">${e(t.contribute)}</a><a href="#top">${e(t.backTop)} ↑</a></div></div></footer>`;
+ <div class="footer-bottom"><span dir="ltr">MARSAM · ${RELEASE.version}</span><span class="institution-stage">${e(message('institution.stage',l))}</span><a href="${route(l,'governance',base)}#privacy">${e(t.privacy)}</a><a href="${route(l,'governance',base)}#accessibility">${e(message('governance.accessibility',l))}</a><a href="${route(l,'contribute',base)}">${e(t.contribute)}</a><a href="#top">${e(t.backTop)} ↑</a></div></div></footer>`;
 }
 export function shell(l,path,pageTitle,description,body,base='/',siteURL='') {
  const t=labels[l],c=campusCopy[l],origin=siteURL|| (base==='/MARSAM/'?'https://onourimpram.github.io':'');
