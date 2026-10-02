@@ -1,6 +1,6 @@
-# MARSAM 0.8.0
+# MARSAM 0.8.1
 
-Maneviyat ve Ruh Sağlığı Araştırmaları Merkezi için sekiz dilli akademik bilgi platformu. Planlanan akademik yapı Marmara Üniversitesi, Atatürk Eğitim Fakültesi, Eğitim Bilimleri Bölümü, Rehberlik ve Psikolojik Danışmanlık Anabilim Dalıdır. Marmara kimliği ve kullanıcının onayladığı ebru çerçeveli tasarım korunur. Resmî kuruluş bu teknik teslimle doğrulanmış sayılmaz.
+Maneviyat ve Ruh Sağlığı Araştırmaları Merkezi için sekiz dilli akademik bilgi platformu. Planlanan akademik yapı Marmara Üniversitesi, Atatürk Eğitim Fakültesi, Eğitim Bilimleri Bölümü, Rehberlik ve Psikolojik Danışmanlık Anabilim Dalıdır. Marmara kimliği ve kullanıcının onayladığı ebru çerçeveli mat panel korunur. Resmî kuruluş bu teknik teslimle doğrulanmış sayılmaz.
 
 ## Canlı site
 
@@ -10,19 +10,19 @@ English https://onourimpram.github.io/MARSAM/en/
 
 Araştırma rehberleri https://onourimpram.github.io/MARSAM/tr/research/
 
-## Tamamlanan güncelleme
+## Son görsel güncelleme
 
-Panelin ortasındaki beyaz radyal katmanlar ve parlayan yazı gölgesi kaldırıldı. İç yüzey düz, mat kâğıt rengidir. Tam yüzeye yayılan geometrik desen, kemer, ebru çerçeve, Marmara logosu ve bölüm satırı korundu. Kullanıcının kaldırdığı ana sayfa arama kutusu, açıklama paragrafı, bağlantı sırası ve alt çiçek bezemesi geri getirilmedi.
+Eski tekrarlı dış kenar geometrisinin yerine, iki özgün SVG ile seyrek ve asimetrik İznik esintili çini kompozisyonları eklendi. Soluk kobalt ve turkuaz floral çizgiler, içerik kutusuna yaklaşmadan alfa maskesiyle kaybolur. Merkezdeki metin alanları ve kartlar temiz kalır. Mobilde tek küçük köşe fragmanı vardır. Yeni JavaScript, raster görsel, font veya animasyon eklenmedi. Ebru çerçeve, mat MARSAM paneli, Marmara logosu, tipografi ve grid korunur. Kaldırılan büyük açılış araması, açıklama paragrafı ve alt çiçek geri getirilmedi.
 
-Araştırma bölümüne sekiz dilde dört yöntem rehberi, boş araştırma ve ölçme şablonları, veri erişim dosyaları ve mevcut katalog metadata'sıyla çalışan yeniden üretilebilir bir laboratuvar eklendi. Toplam 13 indirilebilir çalışma dosyası bulunur. Python betiği ve Jupyter notebook gerçek ortamda çalıştırıldı. Quarto kaynak dosyası sağlanır, Quarto çalıştırma hizmeti veya tamamlanmış meta analiz sunulduğu ileri sürülmez.
+Kitap ve makale künyeleri, sekiz dilde dört yöntem rehberi, 13 indirilebilir çalışma dosyası, arama, okuma listesi, kaynak karşılaştırma ve atıf indirme işlevleri önceki sürümden korunur. Python betiği ve Jupyter notebook gerçek ortamda sınandı. Quarto kaynak dosyası sağlanır, çalıştırılmış Quarto raporu veya tamamlanmış meta analiz iddia edilmez.
 
 ## Doğrulanmış yayın
 
-Yayımlanan uygulama kaynağı `91703cb6a91c03b67840965589f8c42bda477a73`. Hosting commit `cf35d7a7f53ce135b9223d03328fd614d5d525ed`. Daha sonraki teslim belgesi güncellemeleri uygulama dosyalarını değiştirmez.
+Yayımlanan uygulama kaynağı `0bf0a06f122ffc808273d918ef77ebe9ef79ba5d`. Hosting commit `a0cb5bc1bd1a0bdc9fc1d77ea324b15ecf8848c8`. Daha sonraki teslim belgesi güncellemeleri uygulama dosyalarını değiştirmez.
 
-Canlı kontrol https://github.com/OnourImpram/onourimpram.github.io/actions/runs/37005526844/attempts/2
+Canlı kontrol https://github.com/OnourImpram/onourimpram.github.io/actions/runs/37054039081
 
-Güncel durum `DELIVERY_STATUS.md`, sürüm kimliği `docs/LIVE_REVIEW_RELEASE.json`, kaynakların uygulamaya aktarımı `docs/design/MATTE_RESEARCH_0_8.md`. Önceki aday teslim metni tarihsel kayıt olarak saklanmıştır.
+Güncel durum DELIVERY_STATUS.md. Sürüm kimliği docs/LIVE_REVIEW_RELEASE.json. Çini kararları docs/design/CINI_0_8_1.md. Görsel köken kayıtları docs/CINI_ASSETS.json. Eski teslimler docs/releases içinde korunur.
 
 ## Geliştirme
 
@@ -37,9 +37,10 @@ BROWSERS=chromium,firefox,webkit python tests/browser_e2e.py
 BROWSERS=chromium,firefox,webkit python tests/scope_e2e.py
 BROWSERS=chromium,firefox,webkit python tests/heritage_e2e.py
 BROWSERS=chromium,firefox,webkit python tests/research_e2e.py
+BROWSERS=chromium,firefox,webkit python tests/cini_e2e.py
 python tests/research_artifacts.py
 ```
 
-Tarayıcı kontrolleri eşleşen Playwright sürümünü ve sekiz dilin karakter kapsamını gerektirir. Notebook kontrolü gerçek Jupyter çekirdeği kullanır. Test ortamı yazı tipleri dağıtılmaz. Yalnız hosting deposunun `MARSAM/` alt ağacı değiştirilir.
+Tarayıcı kontrolleri eşleşen Playwright sürümünü ve sekiz dilin karakter kapsamını gerektirir. Notebook kontrolü gerçek Jupyter çekirdeği kullanır. Test ortamı yazı tipleri dağıtılmaz. Yalnız hosting deposunun MARSAM alt ağacı değiştirilir.
 
 Bilimsel ve ana dil uzmanı incelemesi tamamlanmış sayılmaz. Kaynak kimliği, inceleme derinliği, kullanım hakları ve kurumsal onay ayrı tutulur. Özel ders dosyaları, tanımlanabilir katılımcı verileri veya paylaşım izni olmayan ham veri setleri yayımlanmaz.

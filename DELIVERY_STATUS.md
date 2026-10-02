@@ -1,49 +1,51 @@
-# MARSAM 0.8.0. Tamamlanan canlı teslim
+# MARSAM 0.8.1. Çini uygulaması ve tamamlanan canlı teslim
 
-2 Ekim 2026. Parlama düzeltmesi ve kaynaklara dayalı araştırma rehberleri yayımlandı. Canlı doğrulamanın ikinci çalıştırması başarıyla tamamlandı.
+2 Ekim 2026. Onaylanan seyrek, asimetrik İznik esintili çini kompozisyonu GitHub Pages üzerinde yayımlandı. Kaynak doğrulaması, yayın ve gerçek canlı tarayıcı kontrolleri başarıyla tamamlandı. Bu belge değişikliği yayımlanan uygulama dosyalarını değiştirmez.
 
-## Canlı adresler
+## Canlı site
 
-Ana sayfa https://onourimpram.github.io/MARSAM/tr/
+https://onourimpram.github.io/MARSAM/tr/
 
-Araştırma bölümü https://onourimpram.github.io/MARSAM/tr/research/
+https://onourimpram.github.io/MARSAM/en/
 
-## Görsel düzeltme
+## Uygulanan görsel değişiklik
 
-Panelin içindeki radyal renk geçişi, ortadaki beyaz örtü ve MARSAM yazısının açık renkli gölgesi kaldırıldı. İç yüzey düz #f4efdf kâğıt rengidir. Geometrik desen, kemer ve ebru çerçeve korunur. Canlı panelin yakın görüntüsü ve ana sayfa gözle de incelendi.
+Sayfanın ve açılışın dış kenarlarındaki eski tekrarlı geometri, MARSAM için oluşturulan iki özgün çini SVG kompozisyonuyla değiştirildi. Hatayi esintili çiçekler, rumi karakterli kıvrımlar, stilize laleler ve yapraklar seyrek dallar halinde kullanıldı. Renkler grileştirilmiş kobalt #46647a ve turkuaz #648a88. Mercan, dini ikonografi, müze eseri kopyası veya dış görsel bağımlılığı eklenmedi.
 
-Marmara Üniversitesi logosu ile Atatürk Eğitim Fakültesi, Eğitim Bilimleri Bölümü ve Rehberlik ve Psikolojik Danışmanlık Anabilim Dalı satırı yerinde. Önceden kaldırılan büyük ana sayfa arama formu, açıklama paragrafı, kısayol sırası ve alt çiçek bezemesi geri getirilmedi.
+Kompozisyonlar kısmen ekran dışında devam eder. Motifin kendisi alfa maskesiyle içerik sınırına yaklaşmadan kaybolur. Ortaya beyaz örtü, parlama veya bulanıklaştırma eklenmez. Normal okuma ve kaynak alanları temiz kalır. Tablet görünümünde yoğunluk azalır. Mobilde genel sayfa ve açılış kenar bezemesi kapanır, yalnız başlık üstündeki boş köşede küçük bir fragman kalır. Baskıda, zorlanmış renklerde ve maske desteklenmediğinde yeni bezeme kapatılır.
 
-## Aktarılan içerik
+Marmara Üniversitesi logosu, Atatürk Eğitim Fakültesi, Eğitim Bilimleri Bölümü ve Rehberlik ve Psikolojik Danışmanlık Anabilim Dalı satırı korundu. Ebru çerçeve, kemerli mat panel ve panelin iç geometrisi değişmedi. Tipografi, grid, kartlar, kitap ve makale kayıtları, dört araştırma rehberi, indirilebilir çalışma dosyaları ve sekiz dil aynı kaldı. Önceden kaldırılan büyük açılış araması, açıklama paragrafı, kısayol sırası, alt çiçek ve parlama geri getirilmedi.
 
-Sağlanan akademik içerik ve tasarım raporlarından dört yöntem rehberi üretildi. Bir araştırmayı kanıtıyla okumak, Ölçme aracı kanıt dosyası, Veri erişimi ve Türkiye karşılaştırmaları, Katalog envanteri laboratuvarı. Rehberlerin tamamı Türkçe, İngilizce, Almanca, Basitleştirilmiş Çince, Rusça, Arapça, Endonezce ve Malayca sunuluyor.
+Yeni JavaScript, animasyon, font veya raster görsel eklenmedi. Yeni koyu tema kurulmadı. Mevcut koyu yüzeyler değiştirilmedi. İki yeni SVG'nin toplam gzip boyutu 3.105 bayt. CSS gzip boyutu 13.187 bayt, mevcut 18.000 bayt bütçesinin altında. Bunlar dosya ölçümleridir, saha Core Web Vitals sonuçları değildir.
 
-Araştırma özeti ve ölçme kanıtı için boş JSON ve CSV şablonları, veri erişim manifesti ve boş değişken eşleme tablosu, araştırma nesnesi şeması, katalog CSV ve CSL JSON çıktıları, Python betiği, Jupyter notebook, Quarto kaynak dosyası ve laboratuvar manifesti olmak üzere 13 çalışma dosyası bulunur. Laboratuvar yalnız mevcut seçilmiş katalog metadata'sını betimler. Bir klinik veri seti veya alanın sistematik kanıt haritası değildir.
+## Önceki kesintinin nedeni ve düzeltme
 
-Planlama raporundaki altı aylık hedefler gerçekleştirilmiş araştırmalar gibi sunulmadı. Kişisel ödevler, özel yansıtmalar ve yayımlanmamış çalışmalar siteye taşınmadı. Bilimsel ve ana dil incelemesi, üçüncü taraf hakları ve kurumsal onay teknik kontrollerden ayrı kaldı.
+Önceki 37015548752 numaralı kaynak işinde bütün testler geçmiş, ancak build token ile bir workflow dosyasını değiştiren commit gönderilmek istendiğinde GitHub gönderimi reddetmişti. Bu çalıştırmada token yetkileri genişletilmedi. Build token yalnız uygulama ve test dosyalarını kaydetti. Gerekli yeniden kullanılabilir CI değişikliği yetkili bağlantı üzerinden ayrı uygulandı. Başarılı çini tasarımı baştan üretilmedi.
 
-## Kesintinin kapatılması
+Yeni kaynak doğrulaması https://github.com/OnourImpram/MARSAM/actions/runs/37052908156
 
-İlk yayın işinde kaynak derlendi ve hosting aday dalı hazırlandı. Ancak aday ana dala taşınmadan süreç kesildi. Canlı kontrol beklediği sürümü bulamadığı için durdu. Bu çalıştırmada hazırlanan MARSAM ağacı güncel hosting ana dalına taşındı ve yalnız başarısız canlı kontrol işi yeniden çalıştırıldı. Başarılı kod ve içerik çalışmaları yeniden yapılmadı.
+Başarılı canlı doğrulama https://github.com/OnourImpram/onourimpram.github.io/actions/runs/37054039081
 
-Yayımlanan uygulama kaynağı `91703cb6a91c03b67840965589f8c42bda477a73`.
+## Sürüm kimliği
 
-Hosting commit `cf35d7a7f53ce135b9223d03328fd614d5d525ed`.
+Yayımlanan uygulama kaynağı `0bf0a06f122ffc808273d918ef77ebe9ef79ba5d`.
 
-MARSAM ağacı `9d6edbd6eae2f8a4b33779b6c991d3120fb03077`.
+Hosting commit `a0cb5bc1bd1a0bdc9fc1d77ea324b15ecf8848c8`.
 
-Canlı doğrulama https://github.com/OnourImpram/onourimpram.github.io/actions/runs/37005526844/attempts/2
+MARSAM ağacı `0471e3096f86fd8d6bab1d5567369ae535c78afd`.
 
 ## Doğrulama kapsamı
 
-647 kamusal dosyanın SHA256 değeri yayın manifestiyle eşleşti. Sorgu parametresi olmayan ve sürüm parametresi olan stil dosyaları ayrıca karşılaştırıldı. Gerçek GitHub Pages adresinde Chromium, Firefox ve WebKit ile temel etkileşim, kaynak kapsamı, yerleşim ve yeni araştırma rehberleri kontrol edildi. Bu dört pakette sırasıyla 818, 899, 2627 ve 2324 kontrol geçti. Sekiz dil ve 320, 390, 768, 1440 piksel genişlikler sınandı. Tarayıcı hata kaydı ve gönderilen form verisi yoktu.
+649 kamusal dosyanın SHA256 değeri canlı yayın manifestiyle eşleşti. Sürüm parametresi olmayan stil dosyası ve iki SVG ayrıca karşılaştırıldı. Gerçek https://onourimpram.github.io origin üzerinde Chromium, Firefox ve WebKit kullanıldı. Çini paketi sekiz dilde 320, 390, 768, 1440 ve 1920 piksel genişlikleri sınadı. Bu pakette 1.225 kontrol, temel etkileşimde 818, kapsamda 899, yerleşimde 2.627 ve araştırma rehberlerinde 2.324 kontrol geçti. JavaScript hata kaydı ve form gönderimi yoktu. Bu sayılar otomatik assertion sayılarıdır, kullanıcı katılımcısı veya bağımsız test senaryosu sayısı değildir.
 
-Araştırma dosyalarının beş testi geçti. Python betiği ve notebook çıktısı manifestle eşleşti. Değiştirilmiş veri baytları ve tekrarlanan kaynak kimlikleri reddedildi. Boş şablonların sonuç veya izin iddia etmediği doğrulandı. Ham workflow özetindeki research-artifacts passed alanı genel sayaç nedeniyle 0 görünür. Esas research-artifacts.json kaydı testsRun 5, failures 0, errors 0 değerlerini verir. Bu kayıtta doğru test sayısı kullanılmıştır.
+Kaynak doğrulamasında eski sürümle aynı ortamda ek karşılaştırma yapıldı. Grid ve metin ölçüleri aynı kaldı. Kesirli koordinatların ekran görüntüsünde yuvarlandığı tek piksellik dış sınır hariç panelin piksel eşitliği doğrulandı. Kitap kapakları her iki karşılaştırmada tamamen yüklendi. Kaynak çini paketinde bu ek denetimlerle 1.273 kontrol geçti. Python betiği, gerçek Jupyter notebook ve veri bozulması kontrollerinin beş testi de geçti.
 
-İndirilen kanıt paketi `11226132568`, SHA256 `b5244ccb0b827bb93adc4b285ebbc9e27af8be7ccd7b06a5b59d89f387096532`. Canlı ekran görüntüleri bu başarılı çalıştırmadan alındı.
+Canlı masaüstü 1440 ve 1920, mobil 390 ve araştırma sayfası ekran görüntüleri ayrıca gözle incelendi. Görseller canlı doğrulama paketinden alındı, yerel önizleme görüntüleri canlı görüntü olarak sunulmadı.
 
-## Diğer siteler ve sınırlar
+Canlı kanıt paketi `11248380522`. ZIP SHA256 `766b8c07e431c0aef17e30c75db2dc96742492312e593959ec883a76cb2066c6`.
 
-Yalnız MARSAM alt ağacı güncellendi. Elif Tasarım ağacı `6199523b0b87b7abaa7b61c8dab67332a1858a86`, kişisel ana sayfa, kök README, .github ve .nojekyll korundu. Ana sayfa baytları canlı sunucuda da karşılaştırıldı.
+## Korunan kapsam ve sınırlar
 
-Kontroller insan bilimsel incelemesi, ana dil uzmanı değerlendirmesi, gerçek cihaz veya ekran okuyucu araştırması ve bağımsız erişilebilirlik sertifikası değildir. Quarto kaynak dosyası bu sürümde render edilmedi. Resmî kuruluş, akreditasyon veya klinik hizmet yetkisi ileri sürülmedi. Önceki teslimler `docs/releases/DELIVERY_0_8_CANDIDATE_HISTORICAL.md` ve ilgili sürüm kayıtlarında korunur.
+Hosting deposunda yalnız MARSAM alt ağacı değiştirildi. .github, .nojekyll, kök README, kişisel index.html ve Elif Tasarım ağacı aynı SHA değerlerinde kaldı. Koruma kayıtları docs/releases/cini-0.8.1-live.json içindedir.
+
+Teknik kontroller insan bilimsel incelemesi, ana dil uzmanı değerlendirmesi, gerçek cihaz veya ekran okuyucu araştırması ve bağımsız erişilebilirlik sertifikası değildir. Saha Core Web Vitals ölçümü yapılmadı. Kurumsal kuruluş, akreditasyon ve klinik hizmet yetkisi ileri sürülmedi. Önceki tamamlanan teslim docs/releases/DELIVERY_0_8_COMPLETED_HISTORICAL.md içinde korunur. Çini kararları docs/design/CINI_0_8_1.md, görsel köken kayıtları docs/CINI_ASSETS.json dosyasındadır.
