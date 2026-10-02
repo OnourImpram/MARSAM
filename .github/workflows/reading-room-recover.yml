@@ -1,0 +1,25 @@
+name: Recover reading-room candidate
+on:
+  push:
+    branches: [feat/scholarly-reading-room-20261002]
+    paths: ['.github/workflows/reading-room-recover.yml']
+permissions:
+  contents: read
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: c1ee674b5dac4f8eaa96501de83e0c35ef88c219
+      - name: Archive the exact unfinished application
+        run: |
+          mkdir -p recovery
+          git archive HEAD --format=zip -o recovery/candidate.zip
+          git ls-tree -r HEAD > recovery/candidate-tree.txt
+          git rev-parse HEAD > recovery/candidate-sha.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reading-room-recovery
+          path: recovery/
+          retention-days: 7
