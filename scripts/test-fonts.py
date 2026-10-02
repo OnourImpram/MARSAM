@@ -1,7 +1,9 @@
 """Install a pinned CJK face on a disposable test host only. Never publish it."""
 from pathlib import Path
 from urllib.request import urlopen
-import hashlib,json,subprocess,time
+import hashlib,json,subprocess,time,os,pwd
+# Use the same effective-user home as the native browsers.
+os.environ["HOME"] = pwd.getpwuid(os.getuid()).pw_dir
 commit='f8d157532fbfaeda587e826d4cd5b21a49186f7c'
 url=f'https://raw.githubusercontent.com/notofonts/noto-cjk/{commit}/Serif/OTF/SimplifiedChinese/NotoSerifCJKsc-Regular.otf'
 blob='cba8a4783cc38574ac7cda52cae7d9b4241c07a5'

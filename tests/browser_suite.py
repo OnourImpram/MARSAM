@@ -13,7 +13,10 @@ import traceback
 import urllib.request
 from pathlib import Path
 from urllib.parse import quote
-from playwright.sync_api import sync_playwright
+from playwright.sync_api import sync_playwright, expect
+import re, pwd
+# Container HOME must belong to its effective user, especially for Firefox.
+os.environ["HOME"] = pwd.getpwuid(os.getuid()).pw_dir
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = json.loads((ROOT / 'dist/build-manifest.json').read_text())
@@ -49,7 +52,7 @@ class Review:
         self.last_page = page
         response = page.goto(self.origin + BASE + locale + '/' + path, wait_until='load')
         self.ck(f'HTTP {locale}/{path}', response is not None and response.status == 200)
-        page.wait_for_function("document.body.dataset.release === " + json.dumps(VERSION))
+        expect(page.locator("body")).to_have_attribute("data-release", VERSION)
         return response
 
     def fit(self, page, name):
@@ -87,14 +90,14 @@ class Review:
             self.ck(f'{engine}/{locale} saved record resolves', page.locator('.saved-item').count() == 1)
             self.ck(f'{engine}/{locale} storage scope disclosed', len(page.locator('main .notice p').inner_text()) > 40)
             page.locator('[data-clear-saved]').click()
-            page.wait_for_function("document.querySelectorAll('.saved-item').length === 0")
+            expect(page.locator(".saved-item")).to_have_count(0)
 
             self.goto(page, locale, 'search/')
             page.locator('#page-search').fill('https://doi.org/' + DOI)
             page.wait_for_selector('[data-search-results] .search-result')
             self.ck(f'{engine}/{locale} exact DOI first', '/resource/sipas/' in page.locator('.search-result').first.get_attribute('href'))
             page.locator('#page-search').fill('ISBN ' + ISBN.replace('-', ''))
-            page.wait_for_function("document.querySelector('.search-result')?.href.includes('/resource/trauma-spirituality/')")
+            expect(page.locator(".search-result").first).to_have_attribute("href", re.compile(r"/resource/trauma-spirituality/"))
             self.ck(f'{engine}/{locale} identifier not generic search', page.locator('.search-result').count() == 1)
             page.locator('#page-search').fill('<svg onload=alert(1)>')
             page.wait_for_timeout(250)
@@ -103,7 +106,7 @@ class Review:
             self.goto(page, locale, 'books/')
             page.locator('[data-view="list"]').click()
             page.locator('[data-bib-query]').fill(ISBN)
-            page.wait_for_function("document.querySelectorAll('[data-bib-record]:not([hidden])').length === 1")
+            expect(page.locator("[data-bib-record]:not([hidden])")).to_have_count(1)
             self.ck(f'{engine}/{locale} native list toggle', page.locator('.books-full').get_attribute('data-view') == 'list')
             target = 'ar' if locale != 'ar' else 'ms'
             page.locator('.language-select summary').click()
@@ -113,7 +116,7 @@ class Review:
             self.ck(f'{engine}/{locale} filter survives language change', page.locator('[data-bib-query]').input_value() == ISBN and page.locator('[data-bib-record]:visible').count() == 1)
             self.ck(f'{engine}/{locale} view survives language change', 'view=list' in page.url and 'q=' in page.url)
             page.locator('[data-bib-form] button[type=reset]').click()
-            page.wait_for_function("document.querySelectorAll('[data-bib-record]:not([hidden])').length > 1")
+            expect(page.locator("[data-bib-record]:not([hidden])")).to_have_count(page.locator("[data-bib-record]").count())
 
             self.goto(page, locale, 'library/')
             buttons = page.locator('[data-compare-id]')
