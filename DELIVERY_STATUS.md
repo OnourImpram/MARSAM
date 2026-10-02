@@ -1,61 +1,49 @@
-# MARSAM 0.8.0. Matte panel and research workbench
+# MARSAM 0.8.0. Tamamlanan canlı teslim
 
-Candidate implementation. The central white gradient overlay and glowing wordmark are removed. The approved heritage composition and Marmara PDR identity remain. Four eight-language method guides, blank extraction templates and an executable catalogue-inventory laboratory are added to the existing Research route. The richer catalogue and source-review distinctions are preserved.
+2 Ekim 2026. Parlama düzeltmesi ve kaynaklara dayalı araştırma rehberleri yayımlandı. Canlı doğrulamanın ikinci çalıştırması başarıyla tamamlandı.
 
-See docs/design/MATTE_RESEARCH_0_8.md for the source-to-implementation record. Independent scientific, language and institutional approval are not asserted. Quarto source is provided, but no Quarto execution service or completed meta analysis is claimed. Public delivery must be confirmed separately against the exact source commit.
+## Canlı adresler
 
-## Previous completed release record
+Ana sayfa https://onourimpram.github.io/MARSAM/tr/
 
-# MARSAM 0.7.2. Tamamlanan canlı teslim
+Araştırma bölümü https://onourimpram.github.io/MARSAM/tr/research/
 
-2 Ekim 2026. Kullanıcının işaretlediği görsel düzeltmeler ana dala alındı, GitHub Pages üzerinde yayımlandı ve gerçek canlı adreste kontrol edildi.
+## Görsel düzeltme
 
-## Canlı adres ve sürüm
+Panelin içindeki radyal renk geçişi, ortadaki beyaz örtü ve MARSAM yazısının açık renkli gölgesi kaldırıldı. İç yüzey düz #f4efdf kâğıt rengidir. Geometrik desen, kemer ve ebru çerçeve korunur. Canlı panelin yakın görüntüsü ve ana sayfa gözle de incelendi.
 
-Türkçe https://onourimpram.github.io/MARSAM/tr/
+Marmara Üniversitesi logosu ile Atatürk Eğitim Fakültesi, Eğitim Bilimleri Bölümü ve Rehberlik ve Psikolojik Danışmanlık Anabilim Dalı satırı yerinde. Önceden kaldırılan büyük ana sayfa arama formu, açıklama paragrafı, kısayol sırası ve alt çiçek bezemesi geri getirilmedi.
 
-İngilizce https://onourimpram.github.io/MARSAM/en/
+## Aktarılan içerik
 
-Uygulama kaynağı 5807ac46976daadd93285a6dd5355347dd3dfbcc.
+Sağlanan akademik içerik ve tasarım raporlarından dört yöntem rehberi üretildi. Bir araştırmayı kanıtıyla okumak, Ölçme aracı kanıt dosyası, Veri erişimi ve Türkiye karşılaştırmaları, Katalog envanteri laboratuvarı. Rehberlerin tamamı Türkçe, İngilizce, Almanca, Basitleştirilmiş Çince, Rusça, Arapça, Endonezce ve Malayca sunuluyor.
 
-Yayın deposu OnourImpram/onourimpram.github.io. Yayın commit 1161a132093fb6d55cde8d65d7a754a87019b834. Yayımlanan MARSAM ağacı f4f7e6f82af914779c66b74e5039db98b5ab4191. Sonraki belge güncellemeleri bu uygulama kimliğini değiştirmez.
+Araştırma özeti ve ölçme kanıtı için boş JSON ve CSV şablonları, veri erişim manifesti ve boş değişken eşleme tablosu, araştırma nesnesi şeması, katalog CSV ve CSL JSON çıktıları, Python betiği, Jupyter notebook, Quarto kaynak dosyası ve laboratuvar manifesti olmak üzere 13 çalışma dosyası bulunur. Laboratuvar yalnız mevcut seçilmiş katalog metadata'sını betimler. Bir klinik veri seti veya alanın sistematik kanıt haritası değildir.
 
-## Görselde istenen düzeltmeler
+Planlama raporundaki altı aylık hedefler gerçekleştirilmiş araştırmalar gibi sunulmadı. Kişisel ödevler, özel yansıtmalar ve yayımlanmamış çalışmalar siteye taşınmadı. Bilimsel ve ana dil incelemesi, üçüncü taraf hakları ve kurumsal onay teknik kontrollerden ayrı kaldı.
 
-Kırmızı ile çizilen alt çiçek bezemesi HTML içinden kaldırıldı. Üstteki geometrik motif ayrı bir simge olmaktan çıkarıldı. Mevcut özgün motif, sarı ile çevrelenen kemerli iç yüzeyin tamamında arka plan olarak kullanılıyor. MARSAM yazısı merkezde, yumuşak kâğıt geçişiyle okunaklı tutuluyor. Kullanıcının sarı ve kırmızı işaretleri siteye renk veya görsel olarak taşınmadı.
+## Kesintinin kapatılması
 
-Ebru çerçevenin özgün dosyaları ve Marmara Üniversitesi üst kimliği korundu. Planlanan akademik yapı Atatürk Eğitim Fakültesi, Eğitim Bilimleri Bölümü, Rehberlik ve Psikolojik Danışmanlık Anabilim Dalı olarak gösteriliyor. Resmî kuruluş onayı ileri sürülmüyor.
+İlk yayın işinde kaynak derlendi ve hosting aday dalı hazırlandı. Ancak aday ana dala taşınmadan süreç kesildi. Canlı kontrol beklediği sürümü bulamadığı için durdu. Bu çalıştırmada hazırlanan MARSAM ağacı güncel hosting ana dalına taşındı ve yalnız başarısız canlı kontrol işi yeniden çalıştırıldı. Başarılı kod ve içerik çalışmaları yeniden yapılmadı.
 
-Önceki düzeltmede açılışta kalmış olan açıklama paragrafı, büyük arama formu ve altındaki bağlantı sırası da kaldırıldı. Üst menüdeki arama, ayrı arama sayfası ve katalog filtreleri korundu.
+Yayımlanan uygulama kaynağı `91703cb6a91c03b67840965589f8c42bda477a73`.
 
-## Genel arka plan
+Hosting commit `cf35d7a7f53ce135b9223d03328fd614d5d525ed`.
 
-Sıcak kâğıt tonları korundu. Açılış yüzeyine hafif ton geçişi verildi. Geometrik desenler genel sayfada dış kenarlarla sınırlandı, uzun metinlerin okuma yüzeyleri sade bırakıldı. Okuma seçkisi ve alt bilgi aynı paletle ilişkilendirildi. Dar ekranlarda kenar süslemeleri kaldırılıyor. Yazdırma ve yüksek karşıtlık durumları sade yüzey kullanıyor.
+MARSAM ağacı `9d6edbd6eae2f8a4b33779b6c991d3120fb03077`.
 
-Yeni görsel dosyası, yazı tipi, hareketli fon veya JavaScript bağımlılığı eklenmedi. Yeni arka plan mevcut SVG dosyalarını kullanıyor.
+Canlı doğrulama https://github.com/OnourImpram/onourimpram.github.io/actions/runs/37005526844/attempts/2
 
-## Korunan içerik ve işlevler
+## Doğrulama kapsamı
 
-Akademik kaynak dosyaları, kitap ve makale künyeleri, yazar sıraları, DOI ve ISBN kayıtları, sekiz dilin metinleri ve inceleme durumları değiştirilmedi. Arama kodu, okuma listesi, atıf indirme, karşılaştırma ve katalog etkileşimleri korundu. Kaynak koruma denetimi aday doğrulama iş akışında geçti.
+647 kamusal dosyanın SHA256 değeri yayın manifestiyle eşleşti. Sorgu parametresi olmayan ve sürüm parametresi olan stil dosyaları ayrıca karşılaştırıldı. Gerçek GitHub Pages adresinde Chromium, Firefox ve WebKit ile temel etkileşim, kaynak kapsamı, yerleşim ve yeni araştırma rehberleri kontrol edildi. Bu dört pakette sırasıyla 818, 899, 2627 ve 2324 kontrol geçti. Sekiz dil ve 320, 390, 768, 1440 piksel genişlikler sınandı. Tarayıcı hata kaydı ve gönderilen form verisi yoktu.
 
-## Gerçek canlı doğrulama
+Araştırma dosyalarının beş testi geçti. Python betiği ve notebook çıktısı manifestle eşleşti. Değiştirilmiş veri baytları ve tekrarlanan kaynak kimlikleri reddedildi. Boş şablonların sonuç veya izin iddia etmediği doğrulandı. Ham workflow özetindeki research-artifacts passed alanı genel sayaç nedeniyle 0 görünür. Esas research-artifacts.json kaydı testsRun 5, failures 0, errors 0 değerlerini verir. Bu kayıtta doğru test sayısı kullanılmıştır.
 
-Kaynak ana dal kontrolü https://github.com/OnourImpram/MARSAM/actions/runs/36977839984
+İndirilen kanıt paketi `11226132568`, SHA256 `b5244ccb0b827bb93adc4b285ebbc9e27af8be7ccd7b06a5b59d89f387096532`. Canlı ekran görüntüleri bu başarılı çalıştırmadan alındı.
 
-Aday ve geri dönüş testi https://github.com/OnourImpram/MARSAM/actions/runs/36977278814
+## Diğer siteler ve sınırlar
 
-Canlı doğrulama https://github.com/OnourImpram/onourimpram.github.io/actions/runs/36977980013
+Yalnız MARSAM alt ağacı güncellendi. Elif Tasarım ağacı `6199523b0b87b7abaa7b61c8dab67332a1858a86`, kişisel ana sayfa, kök README, .github ve .nojekyll korundu. Ana sayfa baytları canlı sunucuda da karşılaştırıldı.
 
-Üç iş akışı da başarıyla tamamlandı. Canlı sitedeki 601 dosyanın hash değeri sürüm kaydıyla eşleşti. Chromium, Firefox ve WebKit üzerinde 818 temel etkileşim, 899 kapsam ve 2627 yerleşim kontrolü geçti. Sekiz dil ve 320, 390, 768, 1440 piksel genişlikler sınandı. Yeni arka planın ölçüleri iç panelle karşılaştırıldı. Kaldırılan öğelerin yokluğu ve Marmara kimliğinin varlığı canlı HTML üzerinde kontrol edildi.
-
-Ana sayfa, mobil görünüm ve panelin yakın görünümü doğrudan canlı adresten alındı. Masaüstü ve yakın görünüm ayrıca görsel olarak incelendi. Önceki 0.7.1 yayını da başarılıydı. O çalışmanın kesilen son yanıtı yayın başarısızlığı olarak yeniden etiketlenmedi. Önceki canlı kayıt docs/releases/restoration-0.7.1-live.json dosyasındadır.
-
-## Diğer sitelerin korunması
-
-Yayın sırasında host ana dalındaki eşzamanlı Elif V25.1 güncellemesi tespit edildi. Yalnız MARSAM, güncel dc0e9f4aaa9925464ba947c4af90defd1e727c34 üzerine yerleştirildi. Elif ağacı 9f335f631c2d456706e6a9703973128a09d8a513 olarak korundu. Kişisel index.html, kök README, .github ve .nojekyll de değişmedi.
-
-## Sınırlar ve kalıcı kayıt
-
-Bilimsel editör ve ana dil uzmanı incelemesi, resmî kurumsal onay ve bağımsız erişilebilirlik değerlendirmesi tamamlanmış sayılmaz. Tarayıcı motoru kontrolleri gerçek cihaz veya ekran okuyucu testlerinin yerine geçmez. Dosya boyutu bütçeleri sahadan ölçülmüş performans sonuçları değildir.
-
-Güncel kalıcı doğrulama docs/releases/bookplate-0.7.2-live.json dosyasıdır. Tarihsel 0.7.0 ve 0.7.1 teslim metni docs/releases/DELIVERY_0_7_0_1_HISTORICAL.md olarak korunmuştur. Tasarım yönünü değiştiren eski öneriler güncel kullanıcı düzeltmesinin yerine geçmez.
+Kontroller insan bilimsel incelemesi, ana dil uzmanı değerlendirmesi, gerçek cihaz veya ekran okuyucu araştırması ve bağımsız erişilebilirlik sertifikası değildir. Quarto kaynak dosyası bu sürümde render edilmedi. Resmî kuruluş, akreditasyon veya klinik hizmet yetkisi ileri sürülmedi. Önceki teslimler `docs/releases/DELIVERY_0_8_CANDIDATE_HISTORICAL.md` ve ilgili sürüm kayıtlarında korunur.
