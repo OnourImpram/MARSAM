@@ -61,6 +61,8 @@ try:
                     check(prefix+' release',response.status==200 and page.locator('body').get_attribute('data-release')==M['version'])
                     check(prefix+' no horizontal overflow',page.evaluate('document.documentElement.scrollWidth <= innerWidth + 1'))
                     s=style(page,'body','::before');h=style(page,'.editorial-hero','::before');accent=style(page,'.editorial-hero-copy','::before')
+                    if width>1100:
+                        check(prefix+' existing contours visible',float(s['opacity'])>=.24 and float(h['opacity'])>=.24 and float(accent['opacity'])>=.24)
                     if width>900:
                         for label,item in [('page',s),('hero',h)]:
                             check(prefix+' '+label+' original cini active','assets/cini/iznik-corner' in item['image'] and 'repeat' not in item['repeat'].replace('no-repeat',''))
@@ -109,6 +111,7 @@ try:
                     page.set_viewport_size({'width':width,'height':1000});page.goto(ORIGIN+M['base']+'tr/',wait_until='networkidle');settle_reading_layout(page);after=metrics(page)
                     panel_after=page.locator('.manuscript-frame').screenshot()
                     page.goto('http://127.0.0.1:4196'+M['base']+'tr/',wait_until='networkidle');settle_reading_layout(page);before=metrics(page)
+                    if engine=='chromium':page.screenshot(path=str(OUT/f'before-{width}.png'))
                     (OUT/f'baseline-metrics-{engine}-{width}.json').write_text(json.dumps({'before':before,'after':after},indent=2))
                     for selector in before:check(f'{engine}/{width} existing layout and text style unchanged '+selector,before[selector]==after[selector])
                     # Exact panel pixels, not merely a selector-presence check.
