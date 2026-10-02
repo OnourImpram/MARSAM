@@ -1,0 +1,79 @@
+name: Persist verified matte application
+on:
+  push:
+    branches: [fix/matte-panel-research-resources-20261002]
+    paths: [.github/workflows/matte-finish.yml]
+permissions:
+  contents: write
+  actions: read
+jobs:
+  persist:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Reproduce the already tested source recipe exactly
+        run: |
+          python -m pip install --timeout 25 -q PyYAML==6.0.2
+          python - <<'PY'
+          from pathlib import Path
+          import yaml,subprocess,hashlib
+          f=Path('.github/workflows/matte-research-verify.yml');raw=f.read_bytes()
+          assert hashlib.sha1(b'blob '+str(len(raw)).encode()+b'\0'+raw).hexdigest()=='fd5fd68d4889e941966c614818e186203d1d3023'
+          doc=yaml.safe_load(raw)
+          step=next(s for s in doc['jobs']['verify']['steps']if s.get('name')=='Apply exact reviewed source and validate original file identities')
+          subprocess.run(['bash','-e','-c',step['run']],check=True)
+          Path('verification').mkdir(exist_ok=True)
+          Path('verification/matte-desired-preview-workflow.txt').write_bytes(Path('.github/workflows/verify-preview.yml').read_bytes())
+          # GITHUB_TOKEN has contents permission, not workflows permission. Leave CI changes to the authorized maintainer connector.
+          subprocess.run(['git','restore','.github/workflows/verify-preview.yml'],check=True)
+          PY
+      - name: Require every successful browser and notebook receipt from the exact recipe
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api repos/OnourImpram/MARSAM/actions/artifacts/11224694062/zip > /tmp/verified-receipts.zip
+          python - <<'PY'
+          from pathlib import Path
+          import zipfile,json
+          z=zipfile.ZipFile('/tmp/verified-receipts.zip');reports={}
+          for name in ['reading-room-core','reading-room-scope','reading-room-layout','research-browser','research-artifacts']:
+              data=json.loads(z.read('verification/'+name+'.json'));assert data['success'],name
+              reports[name]={'success':True,'passed':data.get('passed',len(data.get('checks',[]))),'browsers':data.get('browsers')}
+          record={'version':'0.8.0','status':'verified-candidate-not-yet-published','verifiedRecipeCommit':'7151df194285820aae41fc8461b0e9ae04326eda','verificationRun':37004288759,'verificationArtifact':11224694062,'runConclusion':'failure only at GITHUB_TOKEN workflow-file push, all test steps succeeded','applicationChangeSinceVerification':False,'originalBibliographyChanged':False,'formalApproval':False,'humanLanguageReview':False,'notebookActuallyExecuted':True,'quartoRendererExecuted':False,'reports':reports}
+          Path('docs/releases/matte-research-0.8.0-candidate.json').write_text(json.dumps(record,indent=2)+'\n')
+          PY
+      - name: Recheck exact application, protected content and both build paths
+        shell: bash
+        run: |
+          set -euo pipefail
+          git diff --exit-code -- src/editorial.mjs src/chrome.mjs src/content.mjs src/articles.mjs src/publications-data.json src/publications-data.mjs src/locales public/assets public/app.js public/campus.js public/heritage.js public/search-core.js .github/workflows/verify-preview.yml
+          BASE_PATH=/ npm run check > verification/matte-final-root.log
+          BASE_PATH=/MARSAM/ PAGES_PREVIEW=true npm run check > verification/matte-final-pages.log
+          node scripts/budget.mjs
+      - name: Commit application files only with the job's actual content permission
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'Onour Impram'
+          git config user.email '215815131+OnourImpram@users.noreply.github.com'
+          git add AGENTS.md README.md DELIVERY_STATUS.md package.json public/site.css scripts src research schemas tests docs/design/MATTE_RESEARCH_0_8.md docs/releases/matte-research-0.8.0-candidate.json
+          python - <<'PY'
+          import subprocess
+          paths=subprocess.check_output(['git','diff','--cached','--name-only','-z']).decode().split('\0')
+          assert not any(p.startswith('.github/')for p in paths if p)
+          PY
+          git commit -m 'fix: persist verified matte panel and multilingual research workbench'
+          git push origin HEAD:fix/matte-panel-research-resources-20261002
+          git rev-parse HEAD > verification/matte-candidate-sha.txt
+          git ls-tree HEAD > verification/matte-candidate-tree.txt
+          git diff HEAD^ HEAD --stat > verification/matte-change-stat.txt
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: marsam-matte-persisted
+          path: verification/matte-*
+          retention-days: 14
