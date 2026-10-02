@@ -46,11 +46,13 @@ jobs:
           python tests/scope_e2e.py & scope=$!
           python tests/heritage_e2e.py & layout=$!
           timeout 420 python -u tests/research_e2e.py & research=$!
+          python tests/cini_e2e.py & cini=$!
           status=0
           wait "$core" || status=1
           wait "$scope" || status=1
           wait "$layout" || status=1
           wait "$research" || status=1
+          wait "$cini" || status=1
           exit "$status"
       - uses: actions/upload-artifact@v4
         if: always()
@@ -59,6 +61,8 @@ jobs:
           path: |
             verification/reading-room-*
             verification/research-*
+            verification/cini-*
+            .browser-results/cini/
             .browser-results/research/
             .browser-results/reading-room/
           include-hidden-files: true
