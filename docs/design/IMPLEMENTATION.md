@@ -23,3 +23,9 @@ Long translated titles must wrap without horizontal overflow. Mixed-direction id
 ## Deferred decisions
 
 Human scholarly and native-language approvals, institutional authorization, ownership and cover rights clearance remain unresolved. No backend, clinical assistant, survey collection or uncurated evidence graph is introduced. Pagefind is not added because the present small catalogue can meet the tested identifier and language-search contract without a runtime dependency. This is not a claim of equivalent full-text retrieval at scale.
+
+## Completion recovery, 2 October 2026
+
+Recovered the exact candidate c1ee674b5dac4f8eaa96501de83e0c35ef88c219. The last candidate run passed layout and scope suites but failed the WebKit Russian comparison reflow check. Diagnostic run 36969003160 reproduced a 447px document at a 390px viewport. Native WebKit select rendering forced visible overflow despite the authored overflow rule. Changing only native control appearance to none restored the authored overflow and a 390px document. Clipping the control did not fix the layout and was rejected. The fix retains native HTML selects, full option labels, native change events and focus, with a noninteractive decorative chevron. It does not clip the page or discard scholarly titles.
+
+The expanded regression repeats populated comparison at 320px and 390px in every locale and native engine. Permanent verify-preview and artifact-preparation workflows are aligned with the current three-engine suite. No test failure is relabelled as a pass. No formal, scientific or language approval is changed by this recovery.

@@ -132,7 +132,17 @@ class Review:
             data = json.loads(self.download(page, '[data-comparison-export]'))
             self.ck(f'{engine}/{locale} descriptive real export', len(data['items']) == 4 and data['scientificApproval'] is False and data['clinicalRanking'] is False)
             page.set_viewport_size({'width': 390, 'height': 900})
-            self.fit(page, f'{engine}/{locale} comparison scroll contained')
+            for comparison_width in [320, 390]:
+                page.set_viewport_size({'width': comparison_width, 'height': 900})
+                self.fit(page, f'{engine}/{locale}/{comparison_width} comparison scroll contained')
+            native = page.locator('#compare-1')
+            native.focus()
+            self.ck(f'{engine}/{locale} native select keeps keyboard focus', native.evaluate('(e)=>e.tagName==="SELECT"&&e===document.activeElement'))
+            native.select_option('client-preference')
+            expect(page.locator('.comparison-table thead th')).to_have_count(4)
+            self.ck(f'{engine}/{locale} native selection updates comparison', native.input_value() == 'client-preference')
+            if engine == 'webkit' and locale in ['ru','ar','en']:
+                page.screenshot(path=str(self.output / f'{locale}-comparison-mobile.png'), full_page=True)
             self.goto(page, locale, 'compare/?ids=aservic-principles,aservic-principles,unknown,%3Cimg%3E')
             self.ck(f'{engine}/{locale} selection validation', page.locator('.comparison-table thead th').count() == 2)
 
