@@ -117,3 +117,17 @@ body::before{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none
 .manuscript-frame.approved-portal::before,.manuscript-frame.approved-portal::after{display:none}
 .approved-portal-picture{display:block;width:100%;line-height:0;pointer-events:none}
 .approved-portal-image{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:contain;pointer-events:none}
+
+
+/* 0.8.4 portal continuity repair. The approved raster stays as architecture.
+   Existing geometry is redrawn continuously over its central plane so fine breaks
+   and the wordmark knockout no longer interrupt the visual flow. */
+.manuscript-frame.approved-portal{position:relative;isolation:isolate}
+.approved-portal-picture{position:relative;z-index:0}
+.portal-line-repair{position:absolute;z-index:1;inset:25% 20% 20%;pointer-events:none;background:url('assets/heritage/rosette.svg') center 48%/84% auto no-repeat;opacity:.12;mix-blend-mode:multiply}
+.portal-continuity{position:absolute;z-index:2;left:22.5%;right:22.5%;top:38.5%;height:29%;display:grid;place-items:center;pointer-events:none;background:url('assets/heritage/rosette.svg') center/83% auto no-repeat,radial-gradient(ellipse at center,rgba(247,242,226,.995) 0 39%,rgba(247,242,226,.97) 52%,rgba(247,242,226,.70) 68%,rgba(247,242,226,0) 86%)}
+.portal-wordmark{position:relative;z-index:1;font:400 clamp(1.7rem,3vw,2.75rem)/1 Georgia,'Times New Roman',serif;letter-spacing:.18em;color:#244d56;text-shadow:none;padding-inline:.18em;transform:translateX(.09em)}
+@media(max-width:900px){.portal-line-repair{inset:24% 18% 18%;opacity:.10}.portal-continuity{left:21%;right:21%;top:38%;height:30%}.portal-wordmark{font-size:clamp(1.2rem,3.2vw,2rem)}}
+@media(max-width:650px){.portal-line-repair{opacity:.08}.portal-continuity{left:20%;right:20%;top:38%;height:30%}.portal-wordmark{font-size:clamp(1rem,7vw,1.65rem)}}
+@media(forced-colors:active){.portal-line-repair,.portal-continuity{display:none!important}}
+@media print{.portal-line-repair,.portal-continuity{display:none!important}}
