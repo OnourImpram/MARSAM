@@ -10,7 +10,7 @@ export const navigation = Object.freeze([
  {key:'explore',path:'collections',children:['collections','concepts','approaches']},
  {key:'library',path:'library',children:['library','publications','books','measures','compare']},
  {key:'learn',path:'learning',children:['learning','practice','ethics']},
- {key:'research',path:'research',children:['research','methods','participate']},
+ {key:'research',path:'research',children:['research','evidence','methods','participate']},
  {key:'about',path:'about',children:['about','governance','editorial','contribute']}
 ]);
 const json=value=>JSON.stringify(value).replace(/</g,'\\u003c');

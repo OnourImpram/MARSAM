@@ -1,4 +1,4 @@
-# MARSAM 0.8.3
+# MARSAM 0.9.0
 
 Maneviyat ve Ruh Sağlığı Araştırmaları Merkezi için sekiz dilli akademik bilgi platformu. Planlanan akademik yapı Marmara Üniversitesi, Atatürk Eğitim Fakültesi, Eğitim Bilimleri Bölümü, Rehberlik ve Psikolojik Danışmanlık Anabilim Dalıdır. Resmî kuruluş, akreditasyon veya klinik hizmet yetkisi bu teknik teslimle doğrulanmış sayılmaz.
 
@@ -10,6 +10,10 @@ English https://onourimpram.github.io/MARSAM/en/
 
 Araştırma rehberleri https://onourimpram.github.io/MARSAM/tr/research/
 
+## Bilimsel içerik geliştirmesi
+
+Kanıtı okumak sayfası, altı araştırma teması, dört ölçme profili, sekiz dilde kurucu tanıtımı ve 36 kaynaklık akademik seçki. Gerekçeli kapsam denetimi ve bakım süreci [SCHOLARLY_WORKFLOW.md](docs/research/SCHOLARLY_WORKFLOW.md) dosyasındadır. Yeni kaynak sürümleri ortak bilgi kayıtlarına bağlanır. Güncel yayın durumu [DELIVERY_STATUS.md](DELIVERY_STATUS.md) dosyasındadır.
+
 ## Onaylanan görsel
 
 3 Ekim 2026 tarihinde proje sahibi tarafından seçilen katmanlı MARSAM portalı ana sayfadaki mevcut görselin yerini aldı. Görsel, fildişi ve sıcak kâğıt yüzeyler, turkuaz ebru katmanları, ince altın hatlar ve yalnızca MARSAM sözcüğünü içeren özgün bir kompozisyondur. Eski “Araştırma · Öğrenme” alt yazısı ve ayrı ön plan kelime katmanı geri getirilmedi.
@@ -18,7 +22,7 @@ Sayfanın arka planındaki mevcut özgün çini SVG’leri korunuyor ancak yenid
 
 Marmara Üniversitesi logosu ve akademik birim satırı, tipografi, grid, kartlar, kitap ve makale künyeleri, araştırma rehberleri, indirmeler, arama, okuma listesi, karşılaştırma ve sekiz dil korunur.
 
-## Doğrulanmış yayın
+## Önceki doğrulanmış yayın, 0.8.3
 
 Uygulama kaynağı `4ecce9f3f3be90e532890f1f071e4301bd035bd3`.
 
@@ -48,6 +52,7 @@ BROWSERS=chromium,firefox,webkit python tests/scope_e2e.py
 BROWSERS=chromium,firefox,webkit python tests/heritage_e2e.py
 BROWSERS=chromium,firefox,webkit python tests/research_e2e.py
 BROWSERS=chromium,firefox,webkit python tests/cini_e2e.py
+BROWSERS=chromium,firefox,webkit python tests/scholarship_e2e.py
 python tests/research_artifacts.py
 ```
 

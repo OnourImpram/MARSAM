@@ -1,3 +1,4 @@
+import {scholarlyCopy as sc} from './scholarship.mjs';
 import {researchGuides} from './research-data.mjs';
 /** Immutable presentation projection. Original academic text and provenance stay in their source modules. */
 import {labels as baseLabels} from './i18n.mjs';
@@ -22,7 +23,7 @@ export const labels=Object.fromEntries(locales.map(l=>[l,{
  learning:n.learning[l],media:n.media[l],news:n.news[l],projects:n.projects[l],practicePage:n.practiceTitle[l],
  footerLine:n.footer[l],featuredTitle:baseLabels[l].brand,browse:n.viewLibrary[l],startLearning:n.viewEducation[l],
  heroTitle:baseLabels[l].brand,heroAccent:n.research[l],compare:originalCampusCopy[l].compare,
- governance:message('governance.title',l)
+ evidence:sc.evidence[l],governance:message('governance.title',l)
 }]));
 const scope={tr:'Özet',en:'Summary',de:'Zusammenfassung',zh:'摘要',ru:'Краткое описание',ar:'ملخص',id:'Ringkasan',ms:'Ringkasan'};
 export const campusCopy=Object.fromEntries(locales.map(l=>[l,{...originalCampusCopy[l],scope:scope[l],
@@ -38,6 +39,7 @@ for(const [id,title,summary,group]of [
  ['governance',localized('governance.title'),localized('governance.lead'),'center']
 ])if(!sections.some(s=>s.id===id))sections.push({id,title,summary,group,topic:'methods'});
 for(const g of researchGuides)sections.push({id:g.id,title:g.title,summary:g.summary,group:'research',topic:'methods'});
+for(const [id,name]of [['brief-rcope','Brief RCOPE'],['rss-14','RSS-14'],['meaning-questionnaire','Meaning in Life Questionnaire (MLQ)'],['durel','DUREL']])sections.push({id:'measure-'+id,title:Object.fromEntries(locales.map(l=>[l,name])),summary:sc.measureLead,group:'research',topic:'assessment'});
 export const overview={...baseOverview,editorial:baseOverview.editorial.map((item,i)=>i===2?{...item,text:permissionsText}:item),about:[
  {title:n.aboutTitle,text:n.aboutText},{title:n.areas,text:n.areasLead},{title:n.educationTitle,text:n.educationLead}
 ]};
