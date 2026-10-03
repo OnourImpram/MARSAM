@@ -1,6 +1,6 @@
-# MARSAM 0.8.2
+# MARSAM 0.8.3
 
-Maneviyat ve Ruh Sağlığı Araştırmaları Merkezi için sekiz dilli akademik bilgi platformu. Planlanan akademik yapı Marmara Üniversitesi, Atatürk Eğitim Fakültesi, Eğitim Bilimleri Bölümü, Rehberlik ve Psikolojik Danışmanlık Anabilim Dalıdır. Marmara kimliği ve kullanıcının onayladığı ebru çerçeveli mat panel korunur. Resmî kuruluş bu teknik teslimle doğrulanmış sayılmaz.
+Maneviyat ve Ruh Sağlığı Araştırmaları Merkezi için sekiz dilli akademik bilgi platformu. Planlanan akademik yapı Marmara Üniversitesi, Atatürk Eğitim Fakültesi, Eğitim Bilimleri Bölümü, Rehberlik ve Psikolojik Danışmanlık Anabilim Dalıdır. Resmî kuruluş, akreditasyon veya klinik hizmet yetkisi bu teknik teslimle doğrulanmış sayılmaz.
 
 ## Canlı site
 
@@ -10,19 +10,29 @@ English https://onourimpram.github.io/MARSAM/en/
 
 Araştırma rehberleri https://onourimpram.github.io/MARSAM/tr/research/
 
-## Son görsel güncelleme
+## Onaylanan görsel
 
-Mevcut iki çini çiziminin görünürlüğü artırıldı. Yalnız CSS opaklığı ve dış kenardaki alfa geçişi değişti. Yeni desen, motif, SVG, renk paleti, görsel katman, font veya JavaScript eklenmedi. Motiflerin boyutları ve konumları aynı kaldı. Merkezdeki metin alanları temiz kalıyor. Mobildeki mevcut tek küçük fragman korunuyor. Ebru çerçeve, mat MARSAM paneli, Marmara logosu, tipografi ve grid değişmedi. Kaldırılan büyük açılış araması, açıklama paragrafı, alt çiçek ve parlama geri getirilmedi.
+3 Ekim 2026 tarihinde proje sahibi tarafından seçilen katmanlı MARSAM portalı ana sayfadaki mevcut görselin yerini aldı. Görsel, fildişi ve sıcak kâğıt yüzeyler, turkuaz ebru katmanları, ince altın hatlar ve yalnızca MARSAM sözcüğünü içeren özgün bir kompozisyondur. Eski “Araştırma · Öğrenme” alt yazısı ve ayrı ön plan kelime katmanı geri getirilmedi.
 
-Kitap ve makale künyeleri, sekiz dilde dört yöntem rehberi, 13 indirilebilir çalışma dosyası, arama, okuma listesi, kaynak karşılaştırma ve atıf indirme işlevleri önceki sürümden korunur. Python betiği ve Jupyter notebook gerçek ortamda sınandı. Quarto kaynak dosyası sağlanır, çalıştırılmış Quarto raporu veya tamamlanmış meta analiz iddia edilmez.
+Sayfanın arka planındaki mevcut özgün çini SVG’leri korunuyor ancak yeniden geri plana alındı. Masaüstünde kenarlarda ve negatif alanda hafifçe görünür, merkeze yaklaşırken kaybolur. Tablet ve mobilde yoğunluk daha da düşer. Yeni animasyon, font veya JavaScript bağımlılığı eklenmedi.
+
+Marmara Üniversitesi logosu ve akademik birim satırı, tipografi, grid, kartlar, kitap ve makale künyeleri, araştırma rehberleri, indirmeler, arama, okuma listesi, karşılaştırma ve sekiz dil korunur.
 
 ## Doğrulanmış yayın
 
-Yayımlanan uygulama kaynağı `01d9ffa171f7c40f635a33f910a0891133933951`. Hosting commit `6b47990c0c343bdaa365b5e7d3737b173e463ea9`. Daha sonraki teslim belgesi güncellemeleri uygulama dosyalarını değiştirmez.
+Uygulama kaynağı `4ecce9f3f3be90e532890f1f071e4301bd035bd3`.
 
-Canlı kontrol https://github.com/OnourImpram/onourimpram.github.io/actions/runs/37060669243
+Kaynak doğrulaması https://github.com/OnourImpram/MARSAM/actions/runs/37103211071
 
-Güncel durum DELIVERY_STATUS.md. Sürüm kimliği docs/LIVE_REVIEW_RELEASE.json. Çini kararları ve son görünürlük düzeltmesi docs/design/CINI_0_8_1.md. Görsel köken kayıtları docs/CINI_ASSETS.json. Eski teslimler Git geçmişinde ve docs/releases içinde korunur.
+Hosting staging doğrulaması https://github.com/OnourImpram/onourimpram.github.io/actions/runs/37104882349
+
+GitHub Pages yayını https://github.com/OnourImpram/onourimpram.github.io/actions/runs/37104944002
+
+Hosting commit `1245e91a67b2de15ca6846820b48612a496f6437`.
+
+MARSAM ağacı `ff558e3279001baefccc6e020ad1ec4b9d9fc541`.
+
+Güncel durum DELIVERY_STATUS.md. Görsel karar docs/design/APPROVED_PORTAL_0_8_3.md. Görsel köken ve işleme kaydı docs/design/APPROVED_PORTAL_ASSETS.json. Önceki tasarım ve teslim kayıtları Git geçmişinde ve docs/releases içinde korunur.
 
 ## Geliştirme
 
@@ -41,6 +51,4 @@ BROWSERS=chromium,firefox,webkit python tests/cini_e2e.py
 python tests/research_artifacts.py
 ```
 
-Tarayıcı kontrolleri eşleşen Playwright sürümünü ve sekiz dilin karakter kapsamını gerektirir. Notebook kontrolü gerçek Jupyter çekirdeği kullanır. Test ortamı yazı tipleri dağıtılmaz. Yalnız hosting deposunun MARSAM alt ağacı değiştirilir.
-
-Bilimsel ve ana dil uzmanı incelemesi tamamlanmış sayılmaz. Kaynak kimliği, inceleme derinliği, kullanım hakları ve kurumsal onay ayrı tutulur. Özel ders dosyaları, tanımlanabilir katılımcı verileri veya paylaşım izni olmayan ham veri setleri yayımlanmaz.
+Teknik testler bilimsel editör onayı, ana dil uzmanı incelemesi, gerçek cihaz veya ekran okuyucu araştırması ya da bağımsız erişilebilirlik sertifikası değildir. Özel ders dosyaları, tanımlanabilir katılımcı verileri ve paylaşım izni olmayan ham veri setleri yayımlanmaz.
