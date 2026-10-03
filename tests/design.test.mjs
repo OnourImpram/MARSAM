@@ -16,8 +16,8 @@ test('refined home has an explicit editorial hierarchy rather than the former re
 });
 test('hero artwork is responsive and decorative, not falsely attributed campus photography',()=>{
  const h=renderCampusHome('tr','/MARSAM/');
- assert.ok(h.includes('ebru-marbling.webp'));assert.ok(h.includes('ebru-marbling-small.webp'));
- assert.match(h,/<img[^>]+class="hero-water"[^>]+alt=""/);
+ assert.ok(h.includes('approved-portal-960.webp'));assert.ok(h.includes('approved-portal-480.webp'));
+ assert.match(h,/<img[^>]+class="approved-portal-image"[^>]+alt=""/);
  assert.ok(h.includes('data-open-search')&&!h.includes('id="hero-search"'));assert.ok(h.includes('480px"'));
 });
 test('design keeps the real sources, pathways and direct comparison controls',()=>{

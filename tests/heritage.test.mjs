@@ -42,7 +42,7 @@ test('new books and papers have correct portable citations',()=>{
 });
 test('heritage design and useful publication pages are implemented in all eight languages',()=>{
  for(const l of locales){const h=decorate(renderCampusHome(l,'/MARSAM/'),l,'','/MARSAM/');
-  assert.ok(h.includes('heritage-hero'));assert.ok(h.includes('ebru-marbling.webp'));
+  assert.ok(h.includes('heritage-hero'));assert.ok(h.includes('approved-portal-960.webp'));
   assert.ok(h.includes('book-gallery'));assert.ok(h.includes('recent-research'));
   assert.ok(h.includes(`/${l}/books/`));assert.ok(h.includes(`/${l}/publications/`));
   assert.ok(h.includes(`data-release="${RELEASE.version}"`));

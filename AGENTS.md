@@ -1,3 +1,7 @@
+## Latest owner-approved visual, 3 October 2026
+
+Use the exact supplied layered ebru portal artwork recorded in docs/design/APPROVED_PORTAL_ASSETS.json. It supersedes earlier requirements to retain the flat manuscript interior. Only MARSAM appears inside the picture. Do not restore the Arastirma / Ogrenme subtitle, old overlaid rosette, or independent wordmark. Preserve the warm palette, academic typography, Marmara masthead and existing scholarly content. Cini is a restrained background, not a foreground wall covering. The approved square artwork must never be stretched or regenerated. No institutional approval follows from this visual approval.
+
 # MARSAM content and release boundaries
 
 Approved çini refinement, 2 October 2026. docs/design/CINI_0_8_1.md now governs the outer background. Replace repeating edge geometry with original, sparse İznik-inspired botanical compositions. Preserve the existing matte central panel, ebru, Marmara identity, typography, layouts and all content. Do not revert çini to generic geometry in unrelated refactors. Run tests/cini_e2e.py alongside the existing suites.

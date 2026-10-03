@@ -52,13 +52,13 @@ test('cini has explicit mobile, print and forced-colour fallbacks and no movemen
 test('unsupported masks omit ornament',()=>{assert.ok(css().includes('@supports not (mask-image:linear-gradient(#000,transparent)){body::before,.editorial-hero::before,.editorial-hero-copy::before{display:none!important}}'));});
 
 // Owner refinement. Increase visibility of existing artwork, not its density.
-test('existing cini contours are visibly reinforced without opaque decoration', () => {
+test('existing cini remains a subordinate background after owner approval', () => {
   const source = css();
   for (const selector of ['body::before', '.editorial-hero::before', '.editorial-hero-copy::before']) {
     const start = source.indexOf(selector + '{', source.indexOf('/* MARSAM Iznik cini'));
     const rule = source.slice(start, source.indexOf('}', start));
     const opacity = Number(rule.match(/opacity:([.\d]+)/)?.[1]);
-    assert.ok(opacity >= .24 && opacity <= .4, `${selector} must remain visible but subordinate, got ${opacity}`);
+    assert.ok(opacity > 0 && opacity <= .12, `${selector} must stay subdued, got ${opacity}`);
     assert.match(rule, /background-repeat:no-repeat/);
     assert.match(rule, /pointer-events:none/);
   }

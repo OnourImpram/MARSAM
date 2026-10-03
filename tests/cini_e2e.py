@@ -62,7 +62,7 @@ try:
                     check(prefix+' no horizontal overflow',page.evaluate('document.documentElement.scrollWidth <= innerWidth + 1'))
                     s=style(page,'body','::before');h=style(page,'.editorial-hero','::before');accent=style(page,'.editorial-hero-copy','::before')
                     if width>1100:
-                        check(prefix+' existing contours visible',float(s['opacity'])>=.24 and float(h['opacity'])>=.24 and float(accent['opacity'])>=.24)
+                        check(prefix+' subdued page and hero ornament',0<float(s['opacity'])<=.12 and 0<float(h['opacity'])<=.12 and 0<float(accent['opacity'])<=.12)
                     if width>900:
                         for label,item in [('page',s),('hero',h)]:
                             check(prefix+' '+label+' original cini active','assets/cini/iznik-corner' in item['image'] and 'repeat' not in item['repeat'].replace('no-repeat',''))
@@ -72,7 +72,8 @@ try:
                     check(prefix+' single noninteractive headspace fragment',accent['pointer']=='none' and 'assets/cini/' in accent['image'])
                     # The additional headspace ornament ends ABOVE the copy box.
                     check(prefix+' no motif over title',float(accent['bottom'].removesuffix('px'))>0)
-                    check(prefix+' matte panel retained',page.locator('.manuscript-inner').evaluate('e=>getComputedStyle(e).backgroundImage')=='none')
+                    check(prefix+' exact approved portal decoded',page.locator('.approved-portal-image').evaluate('async e=>{await e.decode();const i=new Image();i.src=e.currentSrc;await i.decode();return [480,960].includes(i.naturalWidth)&&i.naturalWidth===i.naturalHeight&&getComputedStyle(e).filter==="none"}'))
+                    check(prefix+' no superseded title overlay',page.locator('.manuscript-inner,.manuscript-subline').count()==0)
                     check(prefix+' Marmara retained',page.locator('.university-signature img').count()==1)
                     check(prefix+' locale direction',page.locator('html').get_attribute('dir')==('rtl' if locale=='ar' else 'ltr'))
                     if engine=='chromium' and ((locale=='tr' and width in [390,1440,1920]) or (locale in ['en','ar','zh'] and width==1440)):
