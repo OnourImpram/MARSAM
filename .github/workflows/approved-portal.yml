@@ -49,6 +49,7 @@ jobs:
           Path('public/assets/heritage/approved-portal-960.webp').write_bytes(data)
           PY
           python .github/approved-portal/apply.py
+          python .github/approved-portal/refine.py
       - name: Protect content, identity, translations, palette and existing interactions
         run: |
           git diff --exit-code -- src/articles.mjs src/content.mjs src/publications-data.json src/publications-data.mjs src/locales src/i18n.mjs src/tokens.json src/chrome.mjs public/app.js public/search-core.js public/heritage.js public/campus.js public/assets/cini research
