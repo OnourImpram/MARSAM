@@ -1,3 +1,4 @@
+import {evidence} from './scholarship.mjs';
 import {catalogue,labels} from './catalogue.mjs';
 import {digest,translationRecord,message} from './messages.mjs';
 import {locales} from './languages.mjs';
@@ -58,9 +59,10 @@ export function knowledgeLedger() {
 export function translationLedger() {
   const records=[...catalogue.resources,...catalogue.articles,...catalogue.learningPaths];
   return records.flatMap(record=>locales.map(locale=>{
-    // Preserve original multi-language seed as version-bound evidence rather than pretending English is always the original.
-    const source={title:record.title.tr,summary:record.summary.tr,body:record.body?.tr||null};
+    // New scholarship binds to a shared factual brief. Legacy editions retain their seed binding explicitly.
+    const scholarly=evidence.find(r=>r.id===record.id);
+    const source=scholarly?.brief||{title:record.title.tr,summary:record.summary.tr,body:record.body?.tr||null};
     const target={title:record.title[locale],summary:record.summary[locale],body:record.body?.[locale]||null};
-    return translationRecord(record.id,locale,source,target);
+    return {...translationRecord(record.id,locale,source,target),sourceLanguage:scholarly?null:'tr',bindingModel:scholarly?'shared-factual-brief':'legacy-seed'};
   }));
 }

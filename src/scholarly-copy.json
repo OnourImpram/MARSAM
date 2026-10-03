@@ -1,0 +1,322 @@
+{
+  "evidence": {
+    "tr": "Kanıtı okumak",
+    "en": "Reading the evidence",
+    "de": "Evidenz verstehen",
+    "zh": "理解证据",
+    "ru": "Как читать доказательства",
+    "ar": "قراءة الأدلة",
+    "id": "Membaca bukti",
+    "ms": "Memahami bukti"
+  },
+  "lead": {
+    "tr": "Maneviyat ve ruh sağlığı alanında seçilmiş araştırmalar. Bulguyu, araştırma tasarımını ve çıkarım sınırını birlikte okuyun.",
+    "en": "Selected research on spirituality and mental health. Read findings alongside study design and limits of inference.",
+    "de": "Ausgewählte Forschung zu Spiritualität und psychischer Gesundheit. Befunde, Studiendesign und Aussagegrenzen gemeinsam betrachten.",
+    "zh": "灵性与心理健康研究选读。结合研究设计与推论边界理解发现。",
+    "ru": "Избранные исследования духовности и психического здоровья. Рассматривайте результаты вместе с дизайном и границами выводов.",
+    "ar": "بحوث مختارة عن الروحانية والصحة النفسية. اقرأ النتائج مع تصميم الدراسة وحدود الاستنتاج.",
+    "id": "Riset pilihan tentang spiritualitas dan kesehatan mental. Baca temuan bersama desain studi dan batas kesimpulannya.",
+    "ms": "Penyelidikan terpilih tentang kerohanian dan kesihatan mental. Baca dapatan bersama reka bentuk kajian dan batas kesimpulan."
+  },
+  "finding": {
+    "tr": "Bulgular",
+    "en": "Findings",
+    "de": "Befunde",
+    "zh": "研究发现",
+    "ru": "Результаты",
+    "ar": "النتائج",
+    "id": "Temuan",
+    "ms": "Dapatan"
+  },
+  "limit": {
+    "tr": "Çıkarım sınırı",
+    "en": "Limits of inference",
+    "de": "Aussagegrenzen",
+    "zh": "推论边界",
+    "ru": "Границы выводов",
+    "ar": "حدود الاستنتاج",
+    "id": "Batas kesimpulan",
+    "ms": "Batas kesimpulan"
+  },
+  "design": {
+    "tr": "Araştırma tasarımı",
+    "en": "Study design",
+    "de": "Studiendesign",
+    "zh": "研究设计",
+    "ru": "Дизайн исследования",
+    "ar": "تصميم الدراسة",
+    "id": "Desain studi",
+    "ms": "Reka bentuk kajian"
+  },
+  "selected": {
+    "tr": "Seçilmiş kanıtlar",
+    "en": "Selected evidence",
+    "de": "Ausgewählte Evidenz",
+    "zh": "精选证据",
+    "ru": "Избранные доказательства",
+    "ar": "أدلة مختارة",
+    "id": "Bukti terpilih",
+    "ms": "Bukti terpilih"
+  },
+  "selectionNote": {
+    "tr": "Bu seçki sistematik derleme değildir. Güncellik, yöntem çeşitliliği, Türkiye bağlamı ve karşıt bulgular gözetilmiştir. Eksiksiz alan taraması veya etkililik sıralaması olarak kullanılmamalıdır.",
+    "en": "This selection is not a systematic review. Recency, methodological variety, Turkish contexts and contrasting findings informed inclusion. It is neither exhaustive nor an efficacy ranking.",
+    "de": "Diese Auswahl ist keine systematische Übersicht. Aktualität, Methodenvielfalt, türkische Kontexte und gegenläufige Befunde leiten die Auswahl. Sie ist weder vollständig noch eine Wirksamkeitsrangliste.",
+    "zh": "本选集并非系统综述，选入时考虑时效性、方法多样性、土耳其情境及相反发现。它不代表完整检索或疗效排名。",
+    "ru": "Подборка не является систематическим обзором. Учтены актуальность, разнообразие методов, турецкий контекст и противоречащие результаты. Это не полный охват и не рейтинг эффективности.",
+    "ar": "هذه مختارات وليست مراجعة منهجية. روعي فيها حداثة البحوث وتنوع المناهج والسياق التركي والنتائج المتباينة. وهي ليست شاملة ولا ترتيباً للفعالية.",
+    "id": "Pilihan ini bukan tinjauan sistematis. Kebaruan, keragaman metode, konteks Turki, dan temuan yang berbeda menjadi pertimbangan. Cakupannya tidak lengkap dan bukan peringkat efektivitas.",
+    "ms": "Pilihan ini bukan ulasan sistematik. Kemutakhiran, kepelbagaian kaedah, konteks Turki dan dapatan berbeza dipertimbangkan. Ia tidak menyeluruh dan bukan kedudukan keberkesanan."
+  },
+  "review": {
+    "tr": "Yapay zekâ destekli editoryal taslak. Bilimsel ve anadil incelemesi henüz tamamlanmadı.",
+    "en": "AI-assisted editorial draft. Scientific and native-language review are pending.",
+    "de": "KI-gestützter redaktioneller Entwurf. Wissenschaftliche und muttersprachliche Prüfung stehen aus.",
+    "zh": "人工智能辅助编辑草稿，尚待科学审查与母语审校。",
+    "ru": "Редакционный черновик с помощью ИИ. Научная проверка и проверка носителями языка ещё не выполнены.",
+    "ar": "مسودة تحريرية بمساعدة الذكاء الاصطناعي. المراجعة العلمية واللغوية من متحدثين أصليين لم تكتمل.",
+    "id": "Draf editorial berbantuan AI. Tinjauan ilmiah dan penutur asli belum selesai.",
+    "ms": "Draf editorial berbantukan AI. Semakan saintifik dan penutur asli belum selesai."
+  },
+  "measures": {
+    "tr": "Ölçme araçlarını değerlendirmek",
+    "en": "Evaluating measurement instruments",
+    "de": "Messinstrumente beurteilen",
+    "zh": "评估测量工具",
+    "ru": "Оценка измерительных инструментов",
+    "ar": "تقييم أدوات القياس",
+    "id": "Menilai instrumen pengukuran",
+    "ms": "Menilai instrumen pengukuran"
+  },
+  "measureLead": {
+    "tr": "Yapıyı, örneklemi ve kullanım koşullarını birlikte değerlendirin. Ölçek puanı klinik tanı değildir. Bir dildeki yayın, diğer dillerde geçerlik kanıtı oluşturmaz.",
+    "en": "Consider construct, sample and conditions of use together. A scale score is not a diagnosis. Publication in one language does not validate other language versions.",
+    "de": "Konstrukt, Stichprobe und Nutzungsbedingungen gemeinsam prüfen. Ein Skalenwert ist keine Diagnose. Eine Veröffentlichung validiert keine anderen Sprachfassungen.",
+    "zh": "同时考虑构念、样本及使用条件。量表分数不等于诊断，一种语言的发表并不验证其他语言版本。",
+    "ru": "Оценивайте конструкт, выборку и условия использования вместе. Балл шкалы не является диагнозом. Публикация на одном языке не валидирует другие версии.",
+    "ar": "ينبغي تقييم المفهوم والعينة وشروط الاستخدام معاً. درجة المقياس ليست تشخيصاً، والنشر بلغة واحدة لا يثبت صلاحية النسخ بلغات أخرى.",
+    "id": "Pertimbangkan konstruk, sampel, dan syarat penggunaan bersama. Skor skala bukan diagnosis. Publikasi dalam satu bahasa tidak memvalidasi versi bahasa lain.",
+    "ms": "Pertimbangkan konstruk, sampel dan syarat penggunaan bersama. Skor skala bukan diagnosis. Penerbitan dalam satu bahasa tidak mengesahkan versi bahasa lain."
+  },
+  "permission": {
+    "tr": "Maddeler burada çoğaltılmıyor. Araştırmada kullanmadan önce özgün formu, uyarlama çalışmasını, puanlama yönergesini ve hak sahibinin koşullarını kontrol edin. MARSAM kullanım izni vermez.",
+    "en": "Items are not reproduced here. Before research use, check the original form, adaptation study, scoring guidance and rights holder’s terms. MARSAM grants no licence.",
+    "de": "Items werden hier nicht wiedergegeben. Vor der Nutzung Originalfassung, Adaptationsstudie, Auswertung und Rechtebedingungen prüfen. MARSAM erteilt keine Lizenz.",
+    "zh": "本站不复制条目。研究使用前请核对原始版本、适应性研究、计分指南及权利人条件。MARSAM不授予使用许可。",
+    "ru": "Пункты здесь не воспроизводятся. Перед использованием проверьте оригинал, адаптацию, правила подсчёта и условия правообладателя. MARSAM не выдаёт лицензию.",
+    "ar": "لا تُعاد هنا طباعة الفقرات. قبل الاستخدام البحثي راجع النسخة الأصلية ودراسة التكييف وإرشادات التصحيح وشروط صاحب الحقوق. لا يمنح MARSAM ترخيصاً.",
+    "id": "Butir tidak disalin di sini. Sebelum digunakan, periksa bentuk asli, studi adaptasi, panduan penskoran, dan ketentuan pemegang hak. MARSAM tidak memberikan lisensi.",
+    "ms": "Item tidak diterbitkan semula di sini. Sebelum digunakan, semak bentuk asal, kajian penyesuaian, panduan pemarkahan dan syarat pemegang hak. MARSAM tidak memberikan lesen."
+  },
+  "founderTitle": {
+    "tr": "Akademik girişimin kurucusu",
+    "en": "Founder of the academic initiative",
+    "de": "Gründer der akademischen Initiative",
+    "zh": "学术倡议发起人",
+    "ru": "Основатель академической инициативы",
+    "ar": "مؤسس المبادرة الأكاديمية",
+    "id": "Pendiri inisiatif akademik",
+    "ms": "Pengasas inisiatif akademik"
+  },
+  "founderShort": {
+    "tr": "Prof. Dr. Halil Ekşi, MARSAM akademik girişiminin kurucusudur. Girişim, maneviyat ve ruh sağlığı alanında araştırma, eleştirel okuma ve bilimsel diyaloğu desteklemeyi amaçlar.",
+    "en": "Prof. Dr. Halil Ekşi founded the MARSAM academic initiative, which aims to support research, critical reading and scholarly dialogue on spirituality and mental health.",
+    "de": "Prof. Dr. Halil Ekşi ist Gründer der akademischen Initiative MARSAM. Sie will Forschung, kritische Lektüre und wissenschaftlichen Dialog zu Spiritualität und psychischer Gesundheit unterstützen.",
+    "zh": "Halil Ekşi教授发起MARSAM学术倡议，旨在支持灵性与心理健康领域的研究、批判性阅读及学术对话。",
+    "ru": "Профессор, доктор Halil Ekşi основал академическую инициативу MARSAM для поддержки исследований, критического чтения и научного диалога о духовности и психическом здоровье.",
+    "ar": "أسس الأستاذ الدكتور Halil Ekşi مبادرة MARSAM الأكاديمية لدعم البحث والقراءة النقدية والحوار العلمي حول الروحانية والصحة النفسية.",
+    "id": "Prof. Dr. Halil Ekşi mendirikan inisiatif akademik MARSAM untuk mendukung penelitian, pembacaan kritis, dan dialog ilmiah tentang spiritualitas dan kesehatan mental.",
+    "ms": "Prof. Dr. Halil Ekşi mengasaskan inisiatif akademik MARSAM bagi menyokong penyelidikan, pembacaan kritis dan dialog ilmiah tentang kerohanian dan kesihatan mental."
+  },
+  "founderText": {
+    "tr": "Prof. Dr. Halil Ekşi, MARSAM akademik girişiminin kurucusudur. Marmara Üniversitesi bünyesindeki akademik çalışmaları psikolojik danışma, din ve maneviyat psikolojisi ile ölçme ve değerlendirme alanlarıyla ilişkilidir. MARSAM, bu birikimden hareketle maneviyat ve ruh sağlığı ilişkisini farklı kuramsal yaklaşımlar, kültürel bağlamlar ve araştırma yöntemleri üzerinden ele alan bir bilgi ortamı geliştirmeyi amaçlar. Kurucunun çalışmaları, alanın ulusal ve uluslararası literatürüyle birlikte, aynı kaynak seçimi ve eleştirel değerlendirme ölçütlerine tabidir. Buradaki kurucu tanımı akademik girişime ilişkindir. Resmî merkez kuruluşu veya idari müdürlük ataması beyanı değildir. Girişimin kurumsal durumu ve içerik inceleme süreçleri yönetişim sayfasında açıklanır.",
+    "en": "Prof. Dr. Halil Ekşi is the founder of the MARSAM academic initiative. His work at Marmara University connects psychological counselling, the psychology of religion and spirituality, and measurement and evaluation. MARSAM draws on this background to develop a scholarly resource that examines spirituality and mental health through diverse theories, cultural contexts and research methods. The founder’s publications are considered alongside Turkish and international scholarship, using the same selection and critical appraisal criteria. “Founder” refers to the academic initiative. It does not establish formal centre status or an appointment as administrative director. The governance page explains the initiative’s institutional status and content review processes.",
+    "de": "Prof. Dr. Halil Ekşi ist Gründer der akademischen Initiative MARSAM. Seine Arbeit an der Marmara-Universität verbindet psychologische Beratung, Religions- und Spiritualitätspsychologie sowie Messung und Evaluation. Auf dieser Grundlage entsteht ein wissenschaftliches Informationsangebot, das Spiritualität und psychische Gesundheit aus unterschiedlichen theoretischen, kulturellen und methodischen Perspektiven untersucht. Veröffentlichungen des Gründers werden gemeinsam mit türkischer und internationaler Forschung nach denselben Auswahl- und Bewertungskriterien betrachtet. Die Bezeichnung „Gründer“ gilt der akademischen Initiative. Sie bestätigt weder die formale Errichtung eines Zentrums noch eine Ernennung zum administrativen Direktor. Die Seite zur Governance erläutert den institutionellen Status und die Verfahren zur Prüfung der Inhalte.",
+    "zh": "Halil Ekşi教授是MARSAM学术倡议的发起人。他在马尔马拉大学的学术工作涉及心理咨询、宗教与灵性心理学以及测量与评价。MARSAM以此为基础，致力于建立一个从不同理论、文化情境和研究方法出发，探讨灵性与心理健康关系的学术资源平台。发起人的著作与土耳其及国际文献一同接受相同的遴选和批判性评价，不因作者身份而获得特殊证据地位。这里的“发起人”仅指学术倡议，不表示研究中心已正式成立，也不表示已获行政主任任命。治理页面说明倡议的机构状态及内容审查流程。",
+    "ru": "Профессор, доктор Halil Ekşi является основателем академической инициативы MARSAM. Его работа в Университете Мармара связана с психологическим консультированием, психологией религии и духовности, измерением и оценкой. На этой основе MARSAM развивает научный ресурс, рассматривающий духовность и психическое здоровье через разные теории, культурные контексты и методы исследования. Публикации основателя рассматриваются наряду с турецкими и международными исследованиями по единым критериям отбора и критической оценки. Обозначение «основатель» относится к академической инициативе. Оно не подтверждает официальное учреждение центра или назначение административным директором. Институциональный статус и порядок проверки материалов описаны на странице управления.",
+    "ar": "الأستاذ الدكتور Halil Ekşi هو مؤسس مبادرة MARSAM الأكاديمية. يرتبط عمله في جامعة مرمرة بالإرشاد النفسي وعلم نفس الدين والروحانية والقياس والتقويم. تنطلق المبادرة من هذه الخبرة لبناء مورد علمي يدرس العلاقة بين الروحانية والصحة النفسية من خلال نظريات وسياقات ثقافية ومناهج بحث متنوعة. وتُدرس منشورات المؤسس إلى جانب الأدبيات التركية والدولية وفق معايير الاختيار والتقييم النقدي نفسها. ويشير وصف «المؤسس» هنا إلى المبادرة الأكاديمية، ولا يعني إنشاء مركز بصفة رسمية أو تعيين مدير إداري له. وتوضح صفحة الحوكمة الوضع المؤسسي للمبادرة وإجراءات مراجعة محتواها.",
+    "id": "Prof. Dr. Halil Ekşi adalah pendiri inisiatif akademik MARSAM. Karyanya di Universitas Marmara berkaitan dengan konseling psikologis, psikologi agama dan spiritualitas, serta pengukuran dan evaluasi. Berangkat dari latar ini, MARSAM mengembangkan sumber ilmiah untuk menelaah spiritualitas dan kesehatan mental melalui beragam teori, konteks budaya, dan metode penelitian. Publikasi pendiri dipertimbangkan bersama literatur Turki dan internasional dengan kriteria seleksi serta penilaian kritis yang sama. Sebutan pendiri merujuk pada inisiatif akademik. Sebutan ini tidak menyatakan pembentukan pusat secara resmi ataupun pengangkatan sebagai direktur administratif. Halaman tata kelola menjelaskan status kelembagaan dan proses peninjauan konten.",
+    "ms": "Prof. Dr. Halil Ekşi ialah pengasas inisiatif akademik MARSAM. Karyanya di Universiti Marmara berkaitan dengan kaunseling psikologi, psikologi agama dan kerohanian, serta pengukuran dan penilaian. Berasaskan pengalaman ini, MARSAM membangunkan sumber ilmiah yang meneliti kerohanian dan kesihatan mental melalui pelbagai teori, konteks budaya dan kaedah penyelidikan. Penerbitan pengasas dipertimbangkan bersama kesarjanaan Turki dan antarabangsa menggunakan kriteria pemilihan dan penilaian kritis yang sama. Gelaran pengasas merujuk kepada inisiatif akademik ini. Ia tidak mengesahkan penubuhan pusat secara rasmi atau pelantikan sebagai pengarah pentadbiran. Halaman tadbir urus menerangkan status institusi dan proses semakan kandungan."
+  },
+  "profile": {
+    "tr": "Akademik profil",
+    "en": "Academic profile",
+    "de": "Akademisches Profil",
+    "zh": "学术档案",
+    "ru": "Академический профиль",
+    "ar": "الملف الأكاديمي",
+    "id": "Profil akademik",
+    "ms": "Profil akademik"
+  },
+  "researchLead": {
+    "tr": "Maneviyat ve ruh sağlığına ilişkin Türkiye’den ve dünyadan seçilmiş araştırmalar.",
+    "en": "Selected research on spirituality and mental health from Türkiye and around the world.",
+    "de": "Ausgewählte Forschung zu Spiritualität und psychischer Gesundheit aus der Türkei und weltweit.",
+    "zh": "来自土耳其及世界各地的灵性与心理健康研究选读。",
+    "ru": "Избранные исследования духовности и психического здоровья из Турции и других стран.",
+    "ar": "بحوث مختارة عن الروحانية والصحة النفسية من تركيا والعالم.",
+    "id": "Riset pilihan tentang spiritualitas dan kesehatan mental dari Turki dan dunia.",
+    "ms": "Penyelidikan terpilih tentang kerohanian dan kesihatan mental dari Türkiye dan seluruh dunia."
+  },
+  "booksLead": {
+    "tr": "Maneviyatla ilişkisi açık olan kuramsal ve mesleki kaynaklar. Kitap seçkisi tedavi etkililiği kanıtı değildir.",
+    "en": "Theoretical and professional resources with an explicit spiritual focus. This book selection is not evidence of treatment efficacy.",
+    "de": "Theoretische und professionelle Literatur mit ausdrücklichem Spiritualitätsbezug. Die Auswahl belegt keine Behandlungswirksamkeit.",
+    "zh": "具有明确灵性主题的理论与专业资源。书目选集并非治疗效果证据。",
+    "ru": "Теоретические и профессиональные источники с явной связью с духовностью. Подборка книг не доказывает эффективность лечения.",
+    "ar": "مصادر نظرية ومهنية ذات صلة واضحة بالروحانية. اختيار الكتب ليس دليلاً على فعالية العلاج.",
+    "id": "Sumber teoretis dan profesional dengan fokus spiritual yang jelas. Pilihan buku bukan bukti efektivitas terapi.",
+    "ms": "Sumber teori dan profesional dengan fokus kerohanian yang jelas. Pilihan buku bukan bukti keberkesanan rawatan."
+  },
+  "source": {
+    "tr": "Kaynak kaydı",
+    "en": "Source record",
+    "de": "Quelleneintrag",
+    "zh": "来源记录",
+    "ru": "Запись источника",
+    "ar": "سجل المصدر",
+    "id": "Catatan sumber",
+    "ms": "Rekod sumber"
+  },
+  "readingQuestions": {
+    "tr": "Yöntem ve okuma soruları",
+    "en": "Methods and reading questions",
+    "de": "Methoden und Lesefragen",
+    "zh": "方法与阅读问题",
+    "ru": "Методы и вопросы к чтению",
+    "ar": "المناهج وأسئلة القراءة",
+    "id": "Metode dan pertanyaan bacaan",
+    "ms": "Kaedah dan soalan bacaan"
+  },
+  "rssNote": {
+    "tr": "Türkçe RSS-14 uyarlaması, 495 kişilik Müslüman örnekleminde altı boyut bildirdi. Toplam alfa 0,82, alt ölçekler 0,60–0,82. Bu sonuçlar başka inanç gruplarında ölçüm değişmezliğini veya klinik eşik değerlerini göstermez.",
+    "en": "The Turkish RSS-14 adaptation reported six dimensions in 495 Muslim participants. Total alpha was 0.82, subscales 0.60–0.82. These results do not establish invariance across worldviews or clinical cut-offs.",
+    "de": "Die türkische RSS-14-Adaptation berichtete sechs Dimensionen bei 495 muslimischen Personen. Gesamtalpha: 0,82, Subskalen: 0,60–0,82. Daraus folgen weder weltanschauungsübergreifende Messinvarianz noch klinische Grenzwerte.",
+    "zh": "土耳其语RSS-14适应研究在495名穆斯林参与者中报告六个维度。总量表α为0.82，分量表为0.60–0.82。这不证明跨世界观测量不变性或临床界值。",
+    "ru": "Турецкая адаптация RSS-14 выявила шесть измерений у 495 мусульман. Общая альфа 0,82, по субшкалам 0,60–0,82. Это не доказывает инвариантность между мировоззрениями или клинические пороги.",
+    "ar": "أبلغ التكييف التركي لـRSS-14 عن ستة أبعاد لدى 495 مشاركاً مسلماً. ألفا الكلية 0.82 وللمقاييس الفرعية 0.60–0.82. لا تثبت النتائج ثبات القياس عبر المعتقدات أو عتبات سريرية.",
+    "id": "Adaptasi RSS-14 bahasa Turki melaporkan enam dimensi pada 495 peserta Muslim. Alfa total 0,82, subskala 0,60–0,82. Hasil ini tidak membuktikan invariansi lintas pandangan hidup atau ambang klinis.",
+    "ms": "Penyesuaian RSS-14 bahasa Turki melaporkan enam dimensi dalam 495 peserta Muslim. Alfa keseluruhan 0.82, subskala 0.60–0.82. Ini tidak membuktikan invarians merentas pandangan hidup atau ambang klinikal."
+  },
+  "meta-analysis": {
+    "tr": "Meta-analiz",
+    "en": "Meta-analysis",
+    "de": "Metaanalyse",
+    "zh": "元分析",
+    "ru": "Метаанализ",
+    "ar": "تحليل تلوي",
+    "id": "Meta-analisis",
+    "ms": "Meta-analisis"
+  },
+  "systematic-review": {
+    "tr": "Sistematik derleme",
+    "en": "Systematic review",
+    "de": "Systematische Übersicht",
+    "zh": "系统综述",
+    "ru": "Систематический обзор",
+    "ar": "مراجعة منهجية",
+    "id": "Tinjauan sistematis",
+    "ms": "Ulasan sistematik"
+  },
+  "prospective-cohort": {
+    "tr": "İleriye dönük kohort",
+    "en": "Prospective cohort",
+    "de": "Prospektive Kohorte",
+    "zh": "前瞻性队列",
+    "ru": "Проспективная когорта",
+    "ar": "دراسة أترابية مستقبلية",
+    "id": "Kohort prospektif",
+    "ms": "Kohort prospektif"
+  },
+  "cross-sectional": {
+    "tr": "Kesitsel çalışma",
+    "en": "Cross-sectional study",
+    "de": "Querschnittsstudie",
+    "zh": "横断面研究",
+    "ru": "Поперечное исследование",
+    "ar": "دراسة مقطعية",
+    "id": "Studi potong lintang",
+    "ms": "Kajian keratan rentas"
+  },
+  "pilot-rct": {
+    "tr": "Pilot randomize kontrollü deneme",
+    "en": "Pilot randomized controlled trial",
+    "de": "Randomisierte kontrollierte Pilotstudie",
+    "zh": "试点随机对照试验",
+    "ru": "Пилотное рандомизированное контролируемое испытание",
+    "ar": "تجربة استطلاعية عشوائية مضبوطة",
+    "id": "Uji coba acak terkontrol perintis",
+    "ms": "Percubaan terkawal rawak rintis"
+  },
+  "qualitative": {
+    "tr": "Nitel araştırma",
+    "en": "Qualitative research",
+    "de": "Qualitative Forschung",
+    "zh": "定性研究",
+    "ru": "Качественное исследование",
+    "ar": "بحث نوعي",
+    "id": "Penelitian kualitatif",
+    "ms": "Penyelidikan kualitatif"
+  },
+  "psychometric-review": {
+    "tr": "Psikometrik derleme",
+    "en": "Psychometric review",
+    "de": "Psychometrische Übersicht",
+    "zh": "心理测量综述",
+    "ru": "Психометрический обзор",
+    "ar": "مراجعة سيكومترية",
+    "id": "Tinjauan psikometrik",
+    "ms": "Ulasan psikometrik"
+  },
+  "scale-development": {
+    "tr": "Ölçek geliştirme",
+    "en": "Scale development",
+    "de": "Skalenentwicklung",
+    "zh": "量表开发",
+    "ru": "Разработка шкалы",
+    "ar": "تطوير مقياس",
+    "id": "Pengembangan skala",
+    "ms": "Pembangunan skala"
+  },
+  "measurement-overview": {
+    "tr": "Ölçme aracına genel bakış",
+    "en": "Measurement overview",
+    "de": "Überblick zum Messinstrument",
+    "zh": "测量工具概览",
+    "ru": "Обзор измерительного инструмента",
+    "ar": "عرض أداة القياس",
+    "id": "Tinjauan instrumen",
+    "ms": "Gambaran instrumen"
+  },
+  "population": {
+    "tr": "Örneklem ve kapsam",
+    "en": "Population and scope",
+    "de": "Population und Umfang",
+    "zh": "人群与范围",
+    "ru": "Популяция и охват",
+    "ar": "الفئة والنطاق",
+    "id": "Populasi dan cakupan",
+    "ms": "Populasi dan skop"
+  },
+  "firstOnline": {
+    "tr": "İlk çevrim içi yayın",
+    "en": "First published online",
+    "de": "Online-Erstveröffentlichung",
+    "zh": "首次在线发表",
+    "ru": "Первая онлайн-публикация",
+    "ar": "أول نشر إلكتروني",
+    "id": "Pertama terbit daring",
+    "ms": "Terbit dalam talian kali pertama"
+  },
+  "selectedWorks": {
+    "tr": "Alanla ilgili seçilmiş çalışmaları",
+    "en": "Selected relevant scholarship",
+    "de": "Ausgewählte einschlägige Arbeiten",
+    "zh": "相关学术成果选读",
+    "ru": "Избранные работы по теме",
+    "ar": "أعمال علمية مختارة ذات صلة",
+    "id": "Karya ilmiah terkait pilihan",
+    "ms": "Karya ilmiah berkaitan yang terpilih"
+  }
+}

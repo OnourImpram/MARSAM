@@ -1,3 +1,4 @@
+import {scholarlyCopy} from './scholarship.mjs';
 import {L,labels} from './i18n.mjs';
 const checked='2026-10-01';
 const source=(id,title,year,url,citation,kind,inspection='abstract',extra={})=>({id,title,year,url,citation,kind,inspection,checked,level:'V1',status:'PARTIALLY_VERIFIED',access:inspection==='abstract'?'Authoritative bibliographic record and accessible abstract inspected.':inspection==='official'?'Relevant official public resource page inspected.':'Publisher bibliographic record and description inspected.',limit:'No comprehensive current correction/retraction or permissions clearance audit. Inspection is limited to the identified material. Not scientific editorial approval.',...extra});
@@ -74,3 +75,5 @@ typeKeys.book='metaBook';
 
 import {h as heritageLabels} from './heritage-copy.mjs';
 for(const id of ['publications','books'])if(!sections.some(s=>s.id===id))sections.push({id,title:heritageLabels[id],summary:heritageLabels[id+'Lead'],group:'explore',topic:'theory'});
+
+sections.push({id:'evidence',title:scholarlyCopy.evidence,summary:scholarlyCopy.lead,group:'research',topic:'evidence'});

@@ -47,12 +47,14 @@ jobs:
           python tests/heritage_e2e.py & layout=$!
           timeout 420 python -u tests/research_e2e.py & research=$!
           python tests/cini_e2e.py & cini=$!
+          python tests/scholarship_e2e.py & scholarship=$!
           status=0
           wait "$core" || status=1
           wait "$scope" || status=1
           wait "$layout" || status=1
           wait "$research" || status=1
           wait "$cini" || status=1
+          wait "$scholarship" || status=1
           exit "$status"
       - uses: actions/upload-artifact@v4
         if: always()
@@ -62,7 +64,9 @@ jobs:
             verification/reading-room-*
             verification/research-*
             verification/cini-*
+            verification/scholarship-*
             .browser-results/cini/
+            .browser-results/scholarship/
             .browser-results/research/
             .browser-results/reading-room/
           include-hidden-files: true

@@ -1,0 +1,169 @@
+[
+  {
+    "id": "constructs",
+    "sources": [
+      "s-meaning-questionnaire",
+      "s-durel",
+      "s-brief-rcope"
+    ],
+    "title": {
+      "tr": "Neyi ölçüyoruz?",
+      "en": "What are we measuring?",
+      "de": "Was messen wir?",
+      "zh": "我们在测量什么？",
+      "ru": "Что именно мы измеряем?",
+      "ar": "ما الذي نقيسه؟",
+      "id": "Apa yang kita ukur?",
+      "ms": "Apakah yang kita ukur?"
+    },
+    "text": {
+      "tr": "Maneviyat, dindarlık, anlam ve iyi oluş aynı yapı değildir. Bir ölçek yaşam doyumunu maneviyat tanımına katıyorsa ruh sağlığıyla ilişkisi kısmen kavramsal örtüşmeden kaynaklanabilir. Önce tanımı ve maddelerin içeriğini, sonra katsayıyı okuyun.",
+      "en": "Spirituality, religiosity, meaning and wellbeing are different constructs. When a spirituality measure incorporates wellbeing, its association with mental health may partly reflect conceptual overlap. Examine definitions and item content before interpreting a coefficient.",
+      "de": "Spiritualität, Religiosität, Sinn und Wohlbefinden sind verschiedene Konstrukte. Enthält ein Spiritualitätsmaß bereits Wohlbefinden, kann sein Zusammenhang mit psychischer Gesundheit teilweise begriffliche Überlappung widerspiegeln. Zuerst Definitionen und Iteminhalte prüfen, dann Koeffizienten interpretieren.",
+      "zh": "灵性、宗教性、意义和福祉是不同构念。如果灵性量表本身包含福祉，其与心理健康的关联可能部分源于概念重叠。解释系数前，先审视定义与条目内容。",
+      "ru": "Духовность, религиозность, смысл и благополучие являются разными конструктами. Если шкала духовности включает благополучие, связь с психическим здоровьем может частично отражать пересечение понятий. Перед интерпретацией коэффициента изучите определения и содержание пунктов.",
+      "ar": "الروحانية والتدين والمعنى والرفاه مفاهيم مختلفة. إذا تضمّن مقياس الروحانية الرفاه، فقد يعكس ارتباطه بالصحة النفسية تداخلاً مفاهيمياً جزئياً. افحص التعريفات ومحتوى الفقرات قبل تفسير المعامل.",
+      "id": "Spiritualitas, religiositas, makna, dan kesejahteraan merupakan konstruk berbeda. Jika ukuran spiritualitas memasukkan kesejahteraan, hubungannya dengan kesehatan mental mungkin sebagian mencerminkan tumpang tindih konsep. Periksa definisi dan isi butir sebelum menafsirkan koefisien.",
+      "ms": "Kerohanian, religiositi, makna dan kesejahteraan ialah konstruk berbeza. Jika ukuran kerohanian merangkumi kesejahteraan, perkaitannya dengan kesihatan mental mungkin sebahagiannya mencerminkan pertindihan konsep. Semak definisi dan kandungan item sebelum mentafsir pekali."
+    }
+  },
+  {
+    "id": "causality",
+    "sources": [
+      "s-attendance-cohorts",
+      "s-religious-cbt",
+      "s-captari"
+    ],
+    "title": {
+      "tr": "İlişki, değişim ve tedavi etkisi",
+      "en": "Association, change and treatment effects",
+      "de": "Zusammenhang, Veränderung und Behandlungseffekt",
+      "zh": "关联、变化与治疗效果",
+      "ru": "Связь, изменения и эффект лечения",
+      "ar": "الارتباط والتغير وآثار العلاج",
+      "id": "Hubungan, perubahan, dan efek terapi",
+      "ms": "Perkaitan, perubahan dan kesan rawatan"
+    },
+    "text": {
+      "tr": "Kesitsel ilişki zaman sırasını göstermez. Kohort çalışması zaman sırasını güçlendirir, fakat karıştırıcıları tümüyle gidermez. Randomize denemede karşılaştırma grubu ve kayıplar belirleyicidir. Dini uyarlamalı BDT denemesindeki genel farkın anlamsız olması, yöntemlerin eşdeğer olduğunu kanıtlamaz.",
+      "en": "Cross-sectional associations do not establish temporal order. Cohorts improve temporal information but cannot remove all confounding. In randomized trials, comparator choice and attrition matter. A nonsignificant overall difference in the religious CBT trial does not establish equivalence.",
+      "de": "Querschnittszusammenhänge klären die zeitliche Abfolge nicht. Kohorten verbessern diese Information, beseitigen aber nicht jede Konfundierung. Bei randomisierten Studien sind Vergleichsbedingung und Ausfälle entscheidend. Der nichtsignifikante Gesamtunterschied in der religiösen Verhaltenstherapiestudie belegt keine Gleichwertigkeit.",
+      "zh": "横断面关联不能确定时间顺序。队列研究提供时间信息，但无法排除所有混杂。随机试验中，对照条件和脱落情况很重要。宗教整合式认知行为疗法试验中的总体差异不显著，并不证明等效。",
+      "ru": "Поперечные связи не устанавливают временной порядок. Когорты уточняют последовательность, но не устраняют всё смешение. В испытаниях важны выбор сравнения и выбывание. Незначимое общее различие в испытании религиозно интегрированной КПТ не доказывает эквивалентность.",
+      "ar": "لا تحدد العلاقات المقطعية الترتيب الزمني. تحسّن الدراسات الأترابية المعلومات الزمنية لكنها لا تزيل جميع العوامل المربكة. في التجارب العشوائية يهم اختيار المقارنة والانسحاب. عدم دلالة الفرق الإجمالي في تجربة العلاج المدمج دينياً لا يثبت التكافؤ.",
+      "id": "Hubungan potong lintang tidak menetapkan urutan waktu. Kohort memperjelas urutan, tetapi tidak menghilangkan semua perancu. Dalam uji acak, pembanding dan kehilangan peserta penting. Perbedaan keseluruhan yang tidak signifikan pada uji CBT religius tidak membuktikan kesetaraan.",
+      "ms": "Perkaitan keratan rentas tidak menentukan urutan masa. Kohort memperjelas urutan tetapi tidak menghapuskan semua faktor pengeliru. Dalam percubaan rawak, pembanding dan keciciran peserta penting. Perbezaan keseluruhan tidak signifikan dalam percubaan CBT beragama tidak membuktikan kesetaraan."
+    }
+  },
+  {
+    "id": "struggles",
+    "sources": [
+      "s-youth-evidence",
+      "s-atheist-struggles",
+      "s-spiritual-struggles"
+    ],
+    "title": {
+      "tr": "Destek, mücadele ve zarar olasılığı",
+      "en": "Support, struggles and possible harm",
+      "de": "Unterstützung, Konflikte und mögliche Belastung",
+      "zh": "支持、挣扎与潜在伤害",
+      "ru": "Поддержка, трудности и возможный вред",
+      "ar": "الدعم والصراعات واحتمال الضرر",
+      "id": "Dukungan, pergumulan, dan kemungkinan dampak buruk",
+      "ms": "Sokongan, pergolakan dan kemungkinan mudarat"
+    },
+    "text": {
+      "tr": "İnanç ve topluluk bazı kişiler için destek, bazıları için suçluluk, dışlanma veya çatışma kaynağı olabilir. Olumlu ve olumsuz başa çıkmayı tek puanda eritmeyin. Manevi mücadeleyi tek başına hastalık saymayın. İnançsızlık da eksiklik veya ruhsal bozukluk değildir.",
+      "en": "Belief and community may offer support or involve guilt, exclusion and conflict. Do not collapse positive and negative coping into one score. Spiritual struggle alone is not a disorder. Nonbelief is neither a deficit nor a mental illness.",
+      "de": "Glaube und Gemeinschaft können unterstützen, aber auch Schuldgefühle, Ausgrenzung und Konflikte mit sich bringen. Positive und negative Bewältigung nicht zu einem Wert zusammenziehen. Spirituelle Konflikte allein sind keine Störung. Nichtglaube ist weder Defizit noch psychische Krankheit.",
+      "zh": "信仰与群体可能提供支持，也可能伴随内疚、排斥或冲突。不要把积极与消极应对合成一个分数。灵性挣扎本身并非障碍，无信仰也不是缺陷或精神疾病。",
+      "ru": "Вера и община могут поддерживать, но также сопровождаться виной, исключением и конфликтами. Не объединяйте позитивное и негативное совладание в один балл. Духовные трудности сами по себе не являются расстройством. Неверие не является дефицитом или психической болезнью.",
+      "ar": "قد يمنح الإيمان والمجتمع دعماً أو يترافقان مع الذنب والإقصاء والصراع. لا تدمج التكيف الإيجابي والسلبي في درجة واحدة. الصراع الروحاني وحده ليس اضطراباً، وعدم الإيمان ليس نقصاً أو مرضاً نفسياً.",
+      "id": "Keyakinan dan komunitas dapat mendukung, tetapi juga melibatkan rasa bersalah, pengucilan, dan konflik. Jangan gabungkan koping positif dan negatif dalam satu skor. Pergumulan spiritual sendiri bukan gangguan. Ketidakpercayaan bukan kekurangan atau penyakit mental.",
+      "ms": "Kepercayaan dan komuniti boleh menyokong, tetapi juga melibatkan rasa bersalah, peminggiran dan konflik. Jangan gabungkan daya tindak positif dan negatif dalam satu skor. Pergolakan rohani sahaja bukan gangguan. Ketiadaan kepercayaan bukan kekurangan atau penyakit mental."
+    }
+  },
+  {
+    "id": "context",
+    "sources": [
+      "s-german-meta",
+      "s-adolescent-contexts",
+      "s-older-adults"
+    ],
+    "title": {
+      "tr": "Kültür ve yaşam dönemi",
+      "en": "Culture and life stage",
+      "de": "Kultur und Lebensphase",
+      "zh": "文化与生命阶段",
+      "ru": "Культура и этап жизни",
+      "ar": "الثقافة ومرحلة الحياة",
+      "id": "Budaya dan tahap kehidupan",
+      "ms": "Budaya dan peringkat kehidupan"
+    },
+    "text": {
+      "tr": "Bir ülkede, yaş grubunda veya dini gelenekte bulunan ilişkiyi başka bir topluluğa doğrudan taşımayın. Ergenlikte aile bağlamı, ileri yaşta kayıp ve sosyal destek farklı sorular doğurur. Örneklemin kimleri dışarıda bıraktığı, ortalama ilişkinin büyüklüğü kadar önemlidir.",
+      "en": "An association in one country, age group or religious tradition does not automatically transfer to another. Adolescence raises questions about family context, while later life brings loss and social support into focus. Who is absent from the sample matters alongside the average association.",
+      "de": "Ein Zusammenhang in einem Land, einer Altersgruppe oder Religion ist nicht automatisch übertragbar. Im Jugendalter ist der Familienkontext relevant, im Alter etwa Verlust und soziale Unterstützung. Wer in der Stichprobe fehlt, ist ebenso zu beachten wie der durchschnittliche Zusammenhang.",
+      "zh": "一个国家、年龄组或宗教传统中的关联，不能自动推广至另一群体。青春期需要考虑家庭情境，晚年则可能涉及丧失与社会支持。样本遗漏了谁，与平均关联大小同样重要。",
+      "ru": "Связь в одной стране, возрастной группе или традиции не переносится автоматически на другую. В подростковом возрасте важен семейный контекст, в старшем возрасте возникают вопросы утраты и поддержки. Отсутствующие в выборке группы важны наряду со средней величиной связи.",
+      "ar": "لا ينتقل ارتباط في بلد أو فئة عمرية أو تقليد ديني تلقائياً إلى غيره. تثير المراهقة أسئلة السياق الأسري، بينما يبرز الفقد والدعم الاجتماعي في العمر المتقدم. من يغيب عن العينة مهم بقدر متوسط الارتباط.",
+      "id": "Hubungan di satu negara, kelompok usia, atau tradisi agama tidak otomatis berlaku di tempat lain. Masa remaja menyoroti konteks keluarga, sedangkan usia lanjut menghadirkan kehilangan dan dukungan sosial. Kelompok yang tidak terwakili juga penting.",
+      "ms": "Perkaitan dalam sesebuah negara, kumpulan umur atau tradisi agama tidak terpakai secara automatik kepada yang lain. Remaja menimbulkan persoalan keluarga, manakala usia lanjut melibatkan kehilangan dan sokongan sosial. Golongan yang tidak diwakili turut penting."
+    }
+  },
+  {
+    "id": "disaster",
+    "sources": [
+      "s-disaster-needs",
+      "s-trauma-spirituality"
+    ],
+    "title": {
+      "tr": "Afet, yas ve bakımın sınırları",
+      "en": "Disaster, grief and boundaries of care",
+      "de": "Katastrophen, Trauer und Grenzen der Unterstützung",
+      "zh": "灾害、哀伤与照护边界",
+      "ru": "Катастрофы, горе и границы помощи",
+      "ar": "الكوارث والحزن وحدود الرعاية",
+      "id": "Bencana, duka, dan batas layanan",
+      "ms": "Bencana, kedukaan dan batas penjagaan"
+    },
+    "text": {
+      "tr": "Afet sonrası uzman görüşleri, gereksinimleri ve hizmet bağlamını anlamaya yardımcı olur. Bunlar bir müdahalenin travma belirtilerini azalttığını göstermez. Manevi destek kişinin isteğine dayanmalı, kaybına anlam yüklemeye zorlamamalı ve gerekli ruh sağlığı hizmetlerinin yerine geçmemelidir.",
+      "en": "Professional accounts after disasters help identify needs and service contexts. They do not show that an intervention reduces trauma symptoms. Spiritual support should follow the person’s wishes, avoid imposed meanings of loss and preserve access to needed mental health care.",
+      "de": "Fachliche Berichte nach Katastrophen erschließen Bedürfnisse und Versorgungskontexte. Sie belegen keine Verringerung von Traumasymptomen durch eine Intervention. Spirituelle Unterstützung soll sich am Wunsch der Person orientieren, Verlust nicht fremd deuten und notwendige psychische Versorgung nicht ersetzen.",
+      "zh": "灾后专业人员叙述有助于理解需求和服务情境，但不能证明某项干预减少创伤症状。灵性支持应尊重个人意愿，不强加丧失的意义，也不替代所需的心理健康照护。",
+      "ru": "Рассказы специалистов после катастроф помогают понять потребности и контекст помощи. Они не доказывают снижение симптомов травмы. Духовная поддержка должна отвечать желанию человека, не навязывать смысл утраты и сохранять доступ к необходимой психологической и психиатрической помощи.",
+      "ar": "تساعد روايات المختصين بعد الكوارث على فهم الاحتياجات وسياق الخدمات، لكنها لا تثبت خفض أعراض الصدمة. ينبغي أن تتبع المساندة الروحانية رغبة الشخص، وألا تفرض معنى للفقد أو تحل محل الرعاية النفسية اللازمة.",
+      "id": "Pengalaman profesional setelah bencana membantu memahami kebutuhan dan konteks layanan, bukan membuktikan penurunan gejala trauma. Dukungan spiritual harus mengikuti keinginan individu, tidak memaksakan makna kehilangan, dan menjaga akses ke layanan kesehatan mental yang diperlukan.",
+      "ms": "Pengalaman profesional selepas bencana membantu memahami keperluan dan konteks perkhidmatan, bukan membuktikan pengurangan gejala trauma. Sokongan rohani hendaklah mengikut kehendak individu, tidak memaksakan makna kehilangan dan mengekalkan akses kepada penjagaan kesihatan mental yang diperlukan."
+    }
+  },
+  {
+    "id": "practice",
+    "sources": [
+      "s-aservic",
+      "s-vieten",
+      "s-swift"
+    ],
+    "title": {
+      "tr": "Mesleki uygulamaya geçiş",
+      "en": "From evidence to professional practice",
+      "de": "Von Evidenz zur beruflichen Praxis",
+      "zh": "从证据到专业实践",
+      "ru": "От доказательств к профессиональной практике",
+      "ar": "من الأدلة إلى الممارسة المهنية",
+      "id": "Dari bukti menuju praktik profesional",
+      "ms": "Daripada bukti kepada amalan profesional"
+    },
+    "text": {
+      "tr": "Araştırma bulgusu, danışana manevi yaklaşım uygulanması için tek başına gerekçe değildir. Danışanın tercihi, açık rızası, uzmanın yeterliği ve müdahalenin amacı birlikte değerlendirilmelidir. Mesleki rehberler etik çerçeve sunar. Tedavi etkisi için kontrollü araştırma gerekir.",
+      "en": "A research association alone does not justify introducing spirituality into a client’s care. Consider preferences, informed consent, professional competence and the intervention’s purpose together. Professional guidance offers an ethical framework. Claims of treatment benefit require controlled evidence.",
+      "de": "Ein Forschungszusammenhang allein rechtfertigt keine spirituelle Intervention. Präferenzen, informierte Einwilligung, fachliche Kompetenz und Zielsetzung sind gemeinsam zu prüfen. Berufsleitlinien liefern einen ethischen Rahmen. Aussagen über Behandlungseffekte brauchen kontrollierte Evidenz.",
+      "zh": "研究关联本身不足以成为在个案照护中引入灵性的理由。应同时考虑个人偏好、知情同意、专业能力及干预目的。专业指南提供伦理框架，治疗获益的主张需要受控研究证据。",
+      "ru": "Исследовательская связь сама по себе не оправдывает включение духовности в помощь. Учитывайте предпочтения, информированное согласие, компетентность и цель вмешательства. Профессиональные рекомендации задают этическую рамку. Утверждения о пользе лечения требуют контролируемых исследований.",
+      "ar": "لا يبرر الارتباط البحثي وحده إدخال الروحانية في رعاية المستفيد. تُراعى تفضيلاته وموافقته المستنيرة وكفاءة المختص وهدف التدخل معاً. توفر الإرشادات المهنية إطاراً أخلاقياً، أما ادعاءات فائدة العلاج فتحتاج أدلة مضبوطة.",
+      "id": "Hubungan dalam riset saja tidak membenarkan memasukkan spiritualitas ke layanan klien. Pertimbangkan preferensi, persetujuan berdasarkan informasi, kompetensi profesional, dan tujuan intervensi. Pedoman profesi memberi kerangka etis. Klaim manfaat terapi memerlukan bukti terkontrol.",
+      "ms": "Perkaitan penyelidikan sahaja tidak mewajarkan penerapan kerohanian dalam penjagaan klien. Pertimbangkan keutamaan, persetujuan termaklum, kecekapan profesional dan tujuan intervensi. Panduan profesional memberi kerangka etika. Dakwaan manfaat rawatan memerlukan bukti terkawal."
+    }
+  }
+]

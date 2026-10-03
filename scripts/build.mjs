@@ -1,3 +1,4 @@
+import {validateScholarship,validateScope,reviewManifest,evidence,scholarlyThemes} from '../src/scholarship.mjs';
 import {emitResearchArtifacts} from './research-artifacts.mjs';
 import {renderCampusHome,campusRenderers} from '../src/campus.mjs';
 import {mkdir,writeFile,readFile,cp,rm} from 'node:fs/promises';
@@ -15,7 +16,7 @@ import {languagePacks} from '../src/translate.mjs';
 import {sectionPage,dossierPage,resourcePage,pathPage,searchIndex} from '../src/site.mjs';
 const root=resolve(dirname(fileURLToPath(import.meta.url)),'..');
 const base=normalizeBase(process.env.BASE_PATH||'/');
-const errors=validateContent({locales,labels,sources,resources,sections,articles});
+const errors=[...validateContent({locales,labels,sources,resources,sections,articles}),...validateScholarship(),...validateScope(sources)];
 if(errors.length)throw new Error(errors.join('\n'));
 if(process.env.PUBLISH==='true'){
   const pending=[...resources,...articles].filter(r=>!canPublish(r,createHash('sha256').update(JSON.stringify({...r,approval:undefined})).digest('hex')));
@@ -29,6 +30,9 @@ const paths=[];
 async function emit(path,html){const target=resolve(dist,path,'index.html');await mkdir(dirname(target),{recursive:true});const [locale,...parts]=path.split('/');await writeFile(target,html);paths.push('/'+(path?path+'/':''));}
 for(const l of locales){await emit(l,renderCampusHome(l,base));for(const s of sections)await emit(`${l}/${s.id}`,(campusRenderers[s.id]?campusRenderers[s.id](l,base):sectionPage(s.id,l,base)));for(const a of articles)await emit(`${l}/dossier/${a.id}`,dossierPage(a,l,base));for(const r of resources)await emit(`${l}/resource/${r.id}`,resourcePage(r,l,base));for(const p of learningPaths)await emit(`${l}/learning/${p.id}`,pathPage(p,l,base));}
 await mkdir(resolve(dist,'data'),{recursive:true});
+await writeFile(resolve(dist,'data/scholarly-editions.json'),JSON.stringify(reviewManifest(),null,2));
+await writeFile(resolve(dist,'data/evidence-briefs.json'),JSON.stringify({schemaVersion:1,records:evidence.map(r=>({id:r.id,sourceId:r.sourceId,brief:r.brief})),themes:scholarlyThemes.map(t=>({id:t.id,sourceIds:t.sources}))},null,2));
+
 for(const l of locales)await writeFile(resolve(dist,`data/search-${l}.json`),JSON.stringify(searchIndex(l,base)));
 await writeFile(resolve(dist,'data/source-ledger.json'),JSON.stringify({schemaVersion:1,checked:'2026-10-01',editorialState:'preview',review:'SEQUENTIAL_ROLE_REVIEW',note:'Source identity and inspection scope are separate. Technical validation is not scientific approval. Audit fields below use English; interface and reading texts are localized.',sources},null,2));
 await mkdir(resolve(dist,'citations'),{recursive:true});for(const s of sources){await writeFile(resolve(dist,`citations/${s.id}.ris`),exportRIS(s));await writeFile(resolve(dist,`citations/${s.id}.bib`),exportBib(s));}
