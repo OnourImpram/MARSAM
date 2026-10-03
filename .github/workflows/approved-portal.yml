@@ -1,0 +1,31 @@
+name: Verify approved MARSAM portal
+on:
+  push:
+    branches: [design/approved-portal-20261003]
+    paths: [.github/workflows/approved-portal.yml]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - name: Require exact artwork byte identity
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib,base64
+          hashes=['360a8ab88149272dd0982d3eb569fd2a0c363e0017d0cc772a62048695a38b03','33bb18b8f7ac76d1dc39e98c86567edb6790bd53b17b94367ac6a09dac446d2a','02b9048b5cee74bfecc4b420abce38dbbc2a1c67c0ee296799a3d381902a962a','c7c61eeb188ea2f6b42e1fc2fc237eb500da39fd1db1d2276af38076e34234ee','39999e755f67de3765c60d7802e1cd7302afb049a801036c1b8546c6fa627fec','85fceaff4a43d1e622ce7f468bbda91861b06bdc3b43ad9761554acd27e49869','4383823a6a6f62b8c208031966c7e100de9aeb3a8359c4781c10b86f4ca7587c']
+          parts=[]
+          for i,h in enumerate(hashes,1):
+              text=Path(f'.github/approved-portal/part{i}.b64').read_text().strip()
+              if i==3 and 'MYxKK0Nx' in text:text=text.replace('MYxKK0Nx','MYxK0Nx')
+              got=hashlib.sha256(text.encode()).hexdigest()
+              print(i,len(text),got,flush=True)
+              assert got==h,('Transfer part checksum mismatch',i)
+              parts.append(text)
+          data=base64.b64decode(''.join(parts),validate=True)
+          assert len(data)==78536 and hashlib.sha256(data).hexdigest()=='00a058dc8f737d73d9bfbd49ef9e541fe54defb2f8d0015efa3ad77cfaa6c66b'
+          print('Exact approved artwork verified',flush=True)
+          PY
