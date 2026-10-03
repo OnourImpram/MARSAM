@@ -1,51 +1,53 @@
-# MARSAM 0.8.2. Mevcut çini tasarımının belirginleştirilmesi
+# MARSAM 0.8.3. Onaylanan katmanlı portal ve geri plandaki çini
 
-2 Ekim 2026. Mevcut çini desenleri daha görünür hale getirildi ve canlı siteye yayımlandı. Yeni motif, SVG, raster görsel, renk paleti veya tasarım sistemi eklenmedi. Yalnızca mevcut CSS dekorasyon kurallarındaki opaklıklar ve kenar maskelerinin geçişi değişti.
+3 Ekim 2026. Proje sahibinin seçtiği katmanlı MARSAM portalı, mevcut akademik ana sayfa düzeni içinde yayımlandı. Arka plandaki çini motifleri önceki yüksek görünürlük düzeyinden geri çekildi. Akademik içerik, sekiz dil, Marmara kimliği ve mevcut etkileşimler korunuyor.
 
 ## Canlı site
 
-https://onourimpram.github.io/MARSAM/tr/?v=0.8.2
+https://onourimpram.github.io/MARSAM/tr/?v=0.8.3
 
-https://onourimpram.github.io/MARSAM/en/?v=0.8.2
+https://onourimpram.github.io/MARSAM/en/?v=0.8.3
 
 ## Görsel değişiklik
 
-Aynı iki özgün çini SVG dosyası, aynı renk kodları, aynı boyutlar ve aynı konumlar korunuyor. Sayfa kenarı opaklığı 0,07 yerine 0,30. Açılış kenarı 0,105 yerine 0,32. Başlık üzerindeki mevcut dal 0,095 yerine 0,34. Bunlar CSS alfa değerleridir, algısal görünürlük oranları değildir. Kenardaki çizgiler daha uzun süre görünür kalırken maske, ana içerik sınırından 8 veya 10 piksel önce tamamen kaybolmaya devam ediyor. Tablet görünümünde 0,18 ila 0,24, mobildeki tek mevcut fragmanda 0,20 kullanılıyor.
+Ana sayfadaki eski düz MARSAM paneli, proje sahibinin açıkça onayladığı katmanlı portal görseliyle değiştirildi. Kompozisyon fildişi ve sıcak kâğıt yüzeyler, mevcut turkuaz ebru paleti, ince altın hatlar ve tekrarlanan kemer katmanlarından oluşuyor. Görselin merkezinde yalnızca MARSAM yer alıyor. Önceki “Araştırma · Öğrenme” alt yazısı ve ayrı ön plan kelime katmanı kaldırılmış durumda.
 
-Yeni çiçek, lale, rozet, merkez filigranı, çerçeve veya hareket eklenmedi. Önceki on görsel alternatiften herhangi biri siteye aktarılmadı. Parlama, beyaz örtü ve bulanıklık geri getirilmedi. Baskı ve zorlanmış renk modlarında dekorasyon kapalı kalıyor. Koyu yüzeyler değişmedi.
+Orijinal onaylı görsel yeniden üretilmedi veya yeniden renklendirilmedi. 960 ve 480 piksel WebP türevleri aynı kare oran korunarak hazırlandı. Masaüstü türevinin SHA256 değeri `00a058dc8f737d73d9bfbd49ef9e541fe54defb2f8d0015efa3ad77cfaa6c66b`.
 
-Marmara Üniversitesi logosu, Atatürk Eğitim Fakültesi, Eğitim Bilimleri Bölümü ve Rehberlik ve Psikolojik Danışmanlık Anabilim Dalı satırı aynı kaldı. Ebru çerçeveli mat panel, tipografi, grid, kartlar, özgün kitap ve makale künyeleri, dört araştırma rehberi, indirmeler ve sekiz dil korunuyor.
+Sayfa, hero ve üst boşluktaki mevcut özgün çini SVG’leri aynı çizim ve renklerle korunuyor. Yalnız görünürlükleri geri plana alındı. Masaüstü alfa değerleri yaklaşık 0,09, 0,11 ve 0,08. Daha dar kırılma noktalarında 0,05 ila 0,07 aralığı kullanılıyor. Motifler merkeze doğru alfa maskesiyle kayboluyor. Beyaz örtü, parlama, bulanıklık, neon etki veya hareket eklenmedi.
 
-## Yayın öncesi ve canlı doğrulama
+Marmara Üniversitesi logosu, Atatürk Eğitim Fakültesi, Eğitim Bilimleri Bölümü ve Rehberlik ve Psikolojik Danışmanlık Anabilim Dalı satırı aynı kaldı. Tipografi, grid, kartlar, kitap ve makale kayıtları, araştırma rehberleri, indirilebilir dosyalar, arama, okuma listesi, kaynak karşılaştırma ve sekiz dil korunuyor.
 
-Kaynak denetimi https://github.com/OnourImpram/MARSAM/actions/runs/37059667142
+## Doğrulama
 
-Canlı denetim https://github.com/OnourImpram/onourimpram.github.io/actions/runs/37060669243
+Tam aday doğrulaması https://github.com/OnourImpram/MARSAM/actions/runs/37103211071
 
-Her iki çalışma başarıyla tamamlandı. Önce eski CSS üzerinde görünürlük regresyonunun beklenen nedenle başarısız olduğu doğrulandı. Ardından iki dağıtım kökü, kaynak sözleşmeleri, mevcut etkileşimler, araştırma indirmeleri ve tarayıcılar sınandı. Aynı ortamda eski ve yeni sürümün yerleşim ve yazı ölçüleri eşleşti. Kesirli ekran koordinatlarının bir piksellik dış örnekleme kenarı hariç merkez panelin piksel eşitliği doğrulandı.
+Bu doğrulamada Chromium, Firefox ve WebKit kullanıldı. Ana etkileşim paketi 818, kapsam paketi 899, yerleşim paketi 2723, araştırma tarayıcı paketi 2324 ve çini paketi 1393 kontrolü başarıyla tamamladı. Bunlar otomatik assertion sayılarıdır, bağımsız kullanıcı veya senaryo sayıları değildir.
 
-Canlı https://onourimpram.github.io adresinde Chromium, Firefox ve WebKit, sekiz dil ve çini paketi için beş genişlik kullanıldı. 649 kamusal dosyanın SHA256 değeri yayın manifestiyle eşleşti. Sürüm parametresi içermeyen CSS ve iki SVG ayrıca kontrol edildi. Çini paketinde 1273, temel etkileşimde 818, kapsamda 899 ve yerleşimde 2627 assertion geçti. Araştırma rehberi paketi de hatasız tamamlandı. Bunlar otomatik assertion sayılarıdır, bağımsız katılımcı veya senaryo sayıları değildir.
+Kaynak ana dalına aktarım sonrasında standart doğrulama ayrıca başlatıldı. Uygulama dosyalarının yayımlanan kimliği aşağıdaki kaynak committir.
 
-Yayın aşaması, kamusal dosya adlarının önceki sürümle aynı olduğunu ve HTML içeriğinde yalnız sürüm etiketinin değiştiğini doğruladı. Araştırma manifestlerinde yalnız platform sürümü değişti. Görsel dosyaları, renk değişkenleri, araştırma verileri, çeviriler ve diğer statik dosyalar değişmedi. Yeni kamusal dosya sayısı sıfırdır. CSS gzip boyutu 13198 bayttır, önceki 13187 bayta göre 11 bayt artmıştır. Yeni JavaScript, font veya görsel yükü yoktur. Bu ölçüm saha Core Web Vitals değerlendirmesi değildir.
+## Yayın
 
-Canlı ana sayfa, geniş ekran, mobil ve iç sayfa görüntüleri doğrulama paketinden alındı. Canlı masaüstü görüntüsü ayrıca gözle incelendi. Yerel önizleme görüntüsü canlı görüntü olarak sunulmadı.
+Uygulama kaynağı `4ecce9f3f3be90e532890f1f071e4301bd035bd3`.
 
-## Sürüm kimliği ve korunan host kapsamı
+Hosting staging işi https://github.com/OnourImpram/onourimpram.github.io/actions/runs/37104882349 başarıyla tamamlandı. İş, tam kaynak commitini derledi, sürümün 0.8.3 olduğunu kontrol etti ve yalnız MARSAM alt ağacını staging dalında değiştirdi.
 
-Uygulama kaynağı `01d9ffa171f7c40f635a33f910a0891133933951`.
+Hosting ana dalında yalnız MARSAM alt ağacı, staging işinde üretilen `ff558e3279001baefccc6e020ad1ec4b9d9fc541` ağacıyla değiştirildi. Diğer üst düzey içerik mevcut ana dal ağacından korundu.
 
-Hosting commit `6b47990c0c343bdaa365b5e7d3737b173e463ea9`.
+Hosting commit `1245e91a67b2de15ca6846820b48612a496f6437`.
 
-MARSAM ağacı `b1ac951f4ceaabe32d0da73036ec9f1fe88ee192`.
+GitHub Pages build ve deployment https://github.com/OnourImpram/onourimpram.github.io/actions/runs/37104944002 başarıyla tamamlandı.
 
-Canlı kanıt paketi `11250671444`. ZIP SHA256 `51d446740ff3507084751760da5c0a4fd2383f6d7505855976c9d8859080e90d`.
+Yayımlanan `MARSAM/release.json`, sürümü `0.8.3`, kaynak commitini `4ecce9f3f3be90e532890f1f071e4301bd035bd3` ve 652 kamusal dosyayı kaydediyor.
 
-Hosting deposunda yalnız MARSAM alt ağacı değiştirildi. .github, .nojekyll, kök README, kişisel ana sayfa ve Elif Tasarım ağacı aynı SHA değerlerinde kaldı. Bu son belge güncellemesi uygulama dosyalarını değiştirmez.
+## Performans ve erişilebilirlik sınırları
 
-## Sınırlar ve önceki kayıt
+Yeni portal iki WebP türevi ekler. Yeni JavaScript, font, animasyon veya üçüncü taraf görsel bağımlılığı eklenmez. CSS gzip ölçümü aday doğrulamasında 13.320 bayt ile mevcut bütçe içindedir.
 
-Teknik kontroller bağımsız erişilebilirlik sertifikası, gerçek cihaz araştırması, bilimsel editör onayı veya ana dil uzmanı incelemesi değildir. Kurumsal kuruluş, akreditasyon ve klinik hizmet yetkisi eklenmedi. Kaynak inceleme, hak ve çeviri onayları yükseltilmedi.
+Dekoratif görsel etkileşim yakalamaz. Yazdırma ve zorlanmış renk modlarındaki korumalar sürer. Mobilde duvar kâğıdı etkisi kullanılmaz. Bu kontroller bağımsız WCAG sertifikası, saha Core Web Vitals ölçümü veya gerçek kullanıcı araştırması değildir.
 
-Önceki 0.8.1 teslimi değişmez Git kaydında korunur. https://github.com/OnourImpram/MARSAM/blob/0ca2cb83667788fed8379f22a8ea5a1916ca2a3e/DELIVERY_STATUS.md
+## Kurumsal ve akademik sınır
 
-Görsel kararın önceki tasarım ve son görünürlük düzeltmesi docs/design/CINI_0_8_1.md içindedir. SVG köken kayıtları docs/CINI_ASSETS.json dosyasında değişmeden kalır.
+Teknik yayın resmî kuruluş, akreditasyon, klinik hizmet yetkisi, bilimsel editör onayı veya insan tarafından tamamlanmış sekiz dil incelemesi anlamına gelmez. Bu durumlar ayrı yönetişim süreçleri olarak korunur.
+
+Görsel karar docs/design/APPROVED_PORTAL_0_8_3.md dosyasında, görsel kökeni ve işleme kaydı docs/design/APPROVED_PORTAL_ASSETS.json dosyasında yer alır. 0.8.2 ve daha eski teslimler Git geçmişinde korunur.
