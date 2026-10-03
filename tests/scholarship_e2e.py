@@ -1,5 +1,5 @@
 """Real HTTP acceptance for scholarly content, source journeys and eight-locale parity."""
-import json, os, subprocess, time, urllib.request
+import json, os, subprocess, time, urllib.request, pwd
 from pathlib import Path
 from playwright.sync_api import sync_playwright
 ROOT=Path(__file__).resolve().parents[1]
@@ -18,7 +18,7 @@ try:
             except Exception:time.sleep(.1)
     with sync_playwright() as p:
         for engine in os.environ.get('BROWSERS','chromium,firefox,webkit').split(','):
-            browser=getattr(p,engine).launch(headless=True);engines[engine]=browser.version
+            browser=getattr(p,engine).launch(headless=True,env={**os.environ,'HOME':pwd.getpwuid(os.getuid()).pw_dir});engines[engine]=browser.version
             context=browser.new_context(viewport={'width':1280,'height':900})
             page=context.new_page();page.on('pageerror',lambda error:errors.append(str(error)))
             for locale in manifest['locales']:
