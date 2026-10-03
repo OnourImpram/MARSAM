@@ -1,6 +1,6 @@
 {
   "version": "0.9.0",
-  "status": "awaiting-final-ci-after-independent-review-fixes",
+  "status": "superseded-by-verified-live-review-preview",
   "date": "2026-10-03",
   "baseSourceCommit": "90a2e98ecf2c7ed94ae20ffb22236b977c0a685b",
   "sourceTests": 93,
@@ -194,7 +194,7 @@
       }
     ]
   },
-  "independentAICodeReview": "9/9 scholarship tests passed, blocking findings resolved",
+  "independentAICodeReview": "Initial 9/9 suite followed by independent final review. Four further material findings reproduced and resolved, final scholarship suite 13/13.",
   "scientificApproval": false,
   "humanLanguageApproval": false,
   "formalInstitutionalApproval": false,
@@ -207,7 +207,7 @@
     "The older-adults source count discrepancy is disclosed, not resolved.",
     "Shared-brief freshness covers 88 record editions, not all prose or legacy locale files.",
     "No screen-reader user study, independent accessibility certification or field performance measurements.",
-    "Live deployment has not yet been verified in this candidate record."
+    "Historical local candidate receipts. Exact final CI and public results are in the separate live record."
   ],
   "deviations": [
     "Preserve approved portal, palette and static architecture.",
@@ -224,5 +224,6 @@
     "Arabic scientific token isolation",
     "original RSS name retrieval"
   ],
-  "suitesDescribe": "Prior local candidate receipts. Final post-fix CI and public receipts are recorded separately in the live release record."
+  "suitesDescribe": "Prior local candidate receipts. Final post-fix CI and public receipts are recorded separately in the live release record.",
+  "liveRecord": "scholarly-evidence-0.9.0-live.json"
 }

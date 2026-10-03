@@ -1,6 +1,6 @@
 # MARSAM 0.9.0 geliştirme ve değerlendirme raporu
 
-3 Ekim 2026. Kaynak başlangıcı `90a2e98ecf2c7ed94ae20ffb22236b977c0a685b`. Bu rapor, MARSAM'ın mevcut mimarisini temel alan bilimsel içerik geliştirmesini açıklar. Kesin kaynak ve yayın commitleri, canlı dosya karşılaştırması ve son tarayıcı sonuçları aynı klasördeki `scholarly-evidence-0.9.0-live.json` kaydıyla tamamlanır. Bu kayıt yoksa canlı yayın doğrulanmış sayılmaz.
+3 Ekim 2026. [MARSAM 0.9.0 canlı inceleme sürümü](https://onourimpram.github.io/MARSAM/tr/) yayımlandı ve doğrulandı. Kaynak başlangıcı `90a2e98ecf2c7ed94ae20ffb22236b977c0a685b`. Bu rapor, MARSAM'ın mevcut mimarisini temel alan bilimsel içerik geliştirmesini açıklar. Kesin kaynak ve yayın commitleri, canlı dosya karşılaştırması ve son tarayıcı sonuçları aynı klasördeki `scholarly-evidence-0.9.0-live.json` kaydındadır.
 
 ## Sonuç ve kapsam
 
@@ -110,3 +110,33 @@ Literatür keşif betiği en fazla 20 incelenmemiş aday üretebilir. Kamusal ka
 İnsan incelemesinde öncelik, nicel iddiaların asıl kaynaklarla eşleştirilmesi, psikometrik yorumlar, dil başına akademik doğallık ve klinik çıkarım sınırlarıdır. Bilimsel, anadil ve resmî kurumsal onay alanları tamamlanmadan doğru olarak işaretlenmez. Bu eksiklikler platformun mevcut teknik inceleme sürümünün yayınını durdurmak için yeni bir yetki talebi oluşturmaz.
 
 Kesin değişen dosya listesi ve sürüm commitleri canlı yayın makbuzunda bulunur. Kaynak kodu yalnız MARSAM deposunda güncellenir. Mevcut yayın deposunda yalnız `MARSAM/` ağacı değiştirilir. Diğer köklerin Git ağaç kimlikleri yayın öncesi ve sonrası karşılaştırılır.
+
+## Kesin yayın ve test sonuçları
+
+Test edilen ve yayımlanan kaynak commit `05963f0512cab78e599945448d4365a6a705b835`. Kaynak PR 5'in birleştirme commit'i `78e21464efa5fcdcc30bbd480c6a8341a3796ab8`. Kamusal yayın commit'i `aaeb7ca009a6763f34239a5b87d7dbaa6107f12f`. Yayın deposunda değişen 712 dosyanın tamamı MARSAM klasörü içindedir. Elif Tasarım, kök ana sayfa ve diğer kök girişlerin Git kimlikleri korunmuştur.
+
+[Kaynak doğrulaması](https://github.com/OnourImpram/MARSAM/actions/runs/37145524289) iki yayın kökünde 93 kaynak testi ve 11 üretilmiş sayfa testiyle başarılıdır. Gerçek Jupyter çekirdeği dahil beş araştırma dosyası testi ve altı tam tarayıcı takımı da aynı CI çalıştırmasında geçmiştir. [GitHub Pages yayını](https://github.com/OnourImpram/onourimpram.github.io/actions/runs/37146061890) başarılıdır.
+
+Canlı paket, sürüm manifesti ve kaynak commit'i ile eşleşir. HTML, CSS, JavaScript, arama verisi, atıf dosyası ve diğer varlıklardan oluşan 784 dosyanın byte boyutu ve SHA 256 hash'i canlı sunucuda karşılaştırılmıştır. Arşivlenen iki kaynağın sekiz dildeki toplam 16 eski adresi HTTP 404 döndürür.
+
+| Canlı tarayıcı takımı | Başarılı kontrol | Sonuç |
+| --- | ---: | --- |
+| Genel gezinme, arama, karşılaştırma ve yerel taslak indirme | 818 | Tam takımın yeniden çalıştırılması başarılı |
+| Kaynak kapsamı ve kurumsal sınırlar | 899 | İlk canlı çalıştırmada başarılı |
+| Duyarlı yerleşim ve erişilebilirlik davranışları | 2.723 | İlk canlı çalıştırmada başarılı |
+| Araştırma rehberleri ve indirilebilir araştırma dosyaları | 2.324 | İlk canlı çalıştırmada başarılı |
+| Çini, portal ve görsel sistem davranışları | 1.393 | İlk canlı çalıştırmada başarılı |
+| Yeni kanıt, ölçme, DOI araması ve Arapça bilimsel sıralama | 397 | İlk canlı çalıştırmada başarılı |
+| Toplam | 8.554 | Altı takımın nihai sonuçları başarılı |
+
+Tarayıcılar Chromium 149.0.7827.55, Firefox 151.0 ve WebKit 26.5'tir. Bu toplam bilimsel uzman değerlendirmesinin sayısı değildir. Otomatik teknik kontrol sayısıdır.
+
+[İlk canlı çalışma](https://github.com/OnourImpram/onourimpram.github.io/actions/runs/37145692432) genel gezinme takımında başarısızdır. 710 kontrolden sonra Rusça katkı sayfasının beklenen HTTP 200 yanıtı alınmamıştır. Kaydedilen WebKit görüntüsü MARSAM içeriği yerine GitHub'ın servis hata sayfasını gösterir. O andaki HTTP durum kodu günlükte bulunmadığından kesin kod belirtilmez. Diğer beş takım ve bütün dosya karşılaştırması başarılıdır.
+
+[Ayrı tam gezinme tekrarı](https://github.com/OnourImpram/onourimpram.github.io/actions/runs/37146510935) aynı test edilen kaynak koduyla ve hiçbir koşulu gevşetmeden üç tarayıcıda 818 kontrolü geçmiştir. Eklenen tanı kaydı, 280 gezinme yanıtının tamamının HTTP 200 olduğunu gösterir. İlk hata kaydı ve GitHub hata görüntüsü korunur. Böylece başarısız ilk çalıştırma başarılı bir toplu çalışma gibi sunulmaz.
+
+CSS sıkıştırılmış bütçesi 13.652 byte, JavaScript bütçesi 9.660 byte olarak geçmiştir. Bütçe kaydı aynı sürümün arama verilerini de içerir. Saha performansı veya Core Web Vitals sonucu üretilmemiştir.
+
+Güncel ham kayıtlar `verification/0.9.0` altındadır. İlk çalışma arşivinde bulunan eski `live-browser.json` bu çalışma tarafından üretilmediği için güncel sonuçlara dahil edilmemiştir. Güncel toplam yalnız yukarıdaki altı takımın doğrulanan kayıtlarını içerir. Canlı ana sayfa, kanıt alanı ve Arapça RSS profili ayrıca herkese açık tarayıcıda incelenmiş, aynı ekran görüntüleri `screenshots` altında saklanmıştır.
+
+Bu teslim, sahibinin yetkilendirdiği kamusal inceleme sürümünün teknik geliştirilmesini ve yayınını tamamlar. Bilimsel uzman, anadil uzmanı ve resmî kurumsal onay durumları henüz tamamlanmamıştır ve doğru olarak işaretlenmemiştir.

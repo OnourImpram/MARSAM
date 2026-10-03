@@ -1,6 +1,6 @@
 # MARSAM 0.9.0. Bilimsel kanıt ve araştırma okuması
 
-3 Ekim 2026. Bu sürüm, mevcut onaylı portal tasarımını koruyarak bilimsel kaynakların değerlendirilmesini güçlendirir. Yayın adayının teknik sonuçları docs/releases/scholarly-evidence-0.9.0-candidate.json dosyasında, canlı yayın doğrulaması tamamlandığında ayrı live kaydında yer alır. Önceki 0.8.3 teslim kaydı docs/releases/DELIVERY_0_8_3_HISTORICAL.md içinde korunur.
+3 Ekim 2026. MARSAM 0.9.0, [canlı inceleme sürümü](https://onourimpram.github.io/MARSAM/tr/) olarak yayımlandı ve doğrulandı. Mevcut onaylı portal tasarımı korunarak bilimsel kaynakların değerlendirilmesi güçlendirildi. Kesin commitler, 784 dosyanın canlı hash karşılaştırması, üç tarayıcıda 8.554 başarılı kontrol ve ilk HTTP hatasının kaydı docs/releases/scholarly-evidence-0.9.0-live.json içindedir. Ayrıntılı Türkçe rapor docs/releases/SCHOLARLY_RELEASE_0_9_0_TR.md dosyasındadır. Önceki 0.8.3 teslim kaydı docs/releases/DELIVERY_0_8_3_HISTORICAL.md içinde korunur.
 
 ## Değişiklikler
 
@@ -11,6 +11,12 @@
 - Prof. Dr. Halil Ekşi’nin akademik girişimin kurucusu olarak ölçülü tanıtımı. Resmî müdürlük veya tamamlanmış merkez kuruluşu iddiası yoktur.
 - Sekiz dilde 88 yeni kaynak metni ortak bilgi kayıtlarına bağlanır. Bilgi veya sınırlılık değiştiğinde eski dil sürümleri derlemeyi durdurur.
 - Aday literatür keşfi betiği kamusal kataloğa otomatik içerik eklemez.
+
+## Doğrulanan teslim
+
+Kaynak PR 5, tüm kaynak ve üretilmiş sayfa testleri iki kökte, gerçek Jupyter defteri ve altı tarayıcı takımı başarılı olduktan sonra birleştirildi. Canlı paket tam olarak test edilen 05963f0512cab78e599945448d4365a6a705b835 kaynak commitinden üretildi. Yayın deposunda yalnız MARSAM ağacı değişti. Elif Tasarım ve diğer kökler aynı Git kimliklerini korur.
+
+Canlı kontrolün ilk genel gezinme takımı Rusça katkı sayfasında GitHub servis hata sayfası aldı. İlk hata kaydı silinmedi. Aynı kod ve aynı test koşullarıyla bütün genel gezinme takımı üç tarayıcıda yeniden çalıştırıldı. 818 kontrol geçti, kaydedilen 280 gezinme yanıtı HTTP 200 oldu. Diğer beş takım ilk canlı çalıştırmada geçti. Hiçbir test koşulu gevşetilmedi. Güncel sonuçların ham JSON kayıtları docs/releases/verification/0.9.0 içinde, canlı ekran görüntüleri docs/releases/screenshots içinde bulunur.
 
 ## Bilinçli kararlar
 
