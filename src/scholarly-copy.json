@@ -318,5 +318,95 @@
     "ar": "أعمال علمية مختارة ذات صلة",
     "id": "Karya ilmiah terkait pilihan",
     "ms": "Karya ilmiah berkaitan yang terpilih"
+  },
+  "targetedFullText": {
+    "tr": "Tam metnin ilgili yöntem ve tablo bölümleri incelendi. Bu, kapsamlı bilimsel doğrulama değildir.",
+    "en": "Relevant full-text methods and tables inspected. This is not comprehensive scientific validation.",
+    "de": "Relevante Methodenteile und Tabellen im Volltext geprüft. Keine umfassende wissenschaftliche Validierung.",
+    "zh": "已检查全文中的相关方法和表格，不等于全面科学验证。",
+    "ru": "Проверены соответствующие разделы методов и таблицы полного текста. Это не полная научная валидация.",
+    "ar": "فُحصت أقسام المنهج والجداول ذات الصلة في النص الكامل. لا يمثل ذلك تحققاً علمياً شاملاً.",
+    "id": "Bagian metode dan tabel teks lengkap yang relevan diperiksa. Ini bukan validasi ilmiah menyeluruh.",
+    "ms": "Bahagian kaedah dan jadual teks penuh yang berkaitan diperiksa. Ini bukan pengesahan saintifik menyeluruh."
+  },
+  "swbsDistinction": {
+    "tr": "Aynı ad, farklı ölçme araçları. Madde sayısını, geliştiricileri ve kullanım amacını kontrol edin. Puanları birbirinin yerine kullanmayın.",
+    "en": "Shared name, different instruments. Check item count, developers and intended use. Do not treat their scores as interchangeable.",
+    "de": "Gleicher Name, unterschiedliche Instrumente. Itemzahl, Urheberschaft und Zweck prüfen. Die Werte sind nicht austauschbar.",
+    "zh": "名称相同，工具不同。请核对条目数量、开发者和用途，不要互换分数。",
+    "ru": "Одинаковое название, разные инструменты. Уточняйте число пунктов, разработчиков и назначение. Баллы не взаимозаменяемы.",
+    "ar": "اسم واحد وأداتان مختلفتان. تحقق من عدد الفقرات والمطورين والغرض من الاستخدام. لا تتعامل مع الدرجات بوصفها قابلة للاستبدال.",
+    "id": "Nama sama, instrumen berbeda. Periksa jumlah butir, pengembang dan tujuan penggunaan. Skornya tidak dapat dipertukarkan.",
+    "ms": "Nama sama, instrumen berbeza. Semak bilangan item, pembangun dan tujuan penggunaan. Skor tidak boleh saling menggantikan."
+  },
+  "primaryDocuments": {
+    "tr": "İncelenen birincil belgeler",
+    "en": "Primary documents inspected",
+    "de": "Geprüfte Primärdokumente",
+    "zh": "已检查的一手文件",
+    "ru": "Проверенные первичные документы",
+    "ar": "الوثائق الأولية المفحوصة",
+    "id": "Dokumen primer yang diperiksa",
+    "ms": "Dokumen primer yang diperiksa"
+  },
+  "sourceRoles": {
+    "tr": "Makale, yazar kılavuzu veya form. Bağlantıların erişilebilirliği kullanım izninin kapsamını genişletmez.",
+    "en": "Article, author manual or form. Access to a document does not extend its reuse permissions.",
+    "de": "Artikel, Autorenmanual oder Formular. Die Zugänglichkeit erweitert keine Nutzungsrechte.",
+    "zh": "论文、作者手册或表单。文件可访问不意味着转载权限扩大。",
+    "ru": "Статья, авторское руководство или форма. Доступность не расширяет права повторного использования.",
+    "ar": "مقالة أو دليل المؤلف أو صيغة المقياس. الإتاحة لا توسع حقوق إعادة الاستخدام.",
+    "id": "Artikel, manual penulis atau formulir. Akses dokumen tidak memperluas izin penggunaannya.",
+    "ms": "Artikel, manual pengarang atau borang. Akses dokumen tidak memperluas kebenaran penggunaannya."
+  },
+  "docArticle": {
+    "tr": "Makale künyesi ve özet",
+    "en": "Article record and abstract",
+    "de": "Artikel und Abstract",
+    "zh": "论文信息与摘要",
+    "ru": "Запись статьи и аннотация",
+    "ar": "بيانات المقالة وملخصها",
+    "id": "Rekaman artikel dan abstrak",
+    "ms": "Rekod artikel dan abstrak"
+  },
+  "docFullText": {
+    "tr": "İncelenen yöntem ve tablolar, özgün tam metin",
+    "en": "Inspected methods and tables, original full text",
+    "de": "Geprüfte Methoden und Tabellen im Originalvolltext",
+    "zh": "已检查的方法与表格，原始全文",
+    "ru": "Проверенные методы и таблицы, исходный полный текст",
+    "ar": "المنهج والجداول المفحوصة في النص الأصلي",
+    "id": "Metode dan tabel yang diperiksa, teks asli",
+    "ms": "Kaedah dan jadual yang diperiksa, teks asal"
+  },
+  "docAuthor": {
+    "tr": "Yazarın ölçek ve dil sürümleri sayfası",
+    "en": "Author’s instrument and language editions page",
+    "de": "Instrument und Sprachfassungen auf der Autorenseite",
+    "zh": "作者的量表与语言版本页面",
+    "ru": "Страница автора об инструменте и языковых версиях",
+    "ar": "صفحة المؤلف للأداة وصيغها اللغوية",
+    "id": "Halaman instrumen dan versi bahasa dari penulis",
+    "ms": "Halaman instrumen dan versi bahasa pengarang"
+  },
+  "docManual": {
+    "tr": "Yazarın kılavuzu, sürüm 2.02",
+    "en": "Author’s manual, version 2.02",
+    "de": "Autorenmanual, Version 2.02",
+    "zh": "作者手册，2.02版",
+    "ru": "Авторское руководство, версия 2.02",
+    "ar": "دليل المؤلف، الإصدار 2.02",
+    "id": "Manual penulis, versi 2.02",
+    "ms": "Manual pengarang, versi 2.02"
+  },
+  "docTurkishForm": {
+    "tr": "Türkçe form ve kullanım koşulları, 2022",
+    "en": "Turkish form and use conditions, 2022",
+    "de": "Türkische Fassung und Nutzungsbedingungen, 2022",
+    "zh": "土耳其语表单及使用条件，2022年",
+    "ru": "Турецкая форма и условия использования, 2022",
+    "ar": "الصيغة التركية وشروط الاستخدام، 2022",
+    "id": "Formulir bahasa Turki dan syarat penggunaan, 2022",
+    "ms": "Borang bahasa Turki dan syarat penggunaan, 2022"
   }
 }
