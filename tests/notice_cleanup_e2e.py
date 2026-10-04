@@ -1,5 +1,5 @@
 """Check actual rendered notice cleanup without hiding research or source context."""
-import json,os,time,subprocess,urllib.request
+import json,os,pwd,time,subprocess,urllib.request
 from pathlib import Path
 from playwright.sync_api import sync_playwright
 ROOT=Path(__file__).resolve().parents[1]
@@ -22,7 +22,7 @@ try:
         else: raise RuntimeError('Preview server unavailable')
     with sync_playwright() as pw:
         for engine in os.environ.get('BROWSERS','chromium,firefox,webkit').split(','):
-            browser=getattr(pw,engine).launch()
+            browser=getattr(pw,engine).launch(env={**os.environ,"HOME":pwd.getpwuid(os.getuid()).pw_dir})
             context=browser.new_context(viewport={'width':1440,'height':960})
             page=context.new_page();page.on('pageerror',lambda error:errors.append(str(error)))
             for l in M['locales']:

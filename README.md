@@ -1,6 +1,10 @@
-# MARSAM 0.10.1
+# MARSAM 0.10.2
 
 Maneviyat ve Ruh Sağlığı Araştırmaları Merkezi girişimi için sekiz dilli akademik bilgi platformu. Planlanan akademik yapı Marmara Üniversitesi, Atatürk Eğitim Fakültesi, Eğitim Bilimleri Bölümü, Rehberlik ve Psikolojik Danışmanlık Anabilim Dalıdır. Teknik yayın, resmî kuruluş veya bilimsel onay değildir.
+
+## 0.10.2 arayüz sadeleştirmesi
+
+Tekrarlanan genel dipnotlar, klinik hizmet uyarısı, okuma rotası uyarısı ve yinelenen taslak panelleri kaldırıldı. Kaynak kayıtları, bilimsel sınırlılıklar, kullanım izinleri ve 0.10.1 portalı değişmedi.
 
 ## Platform
 

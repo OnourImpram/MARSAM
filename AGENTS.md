@@ -1,3 +1,7 @@
+## Owner-requested notice cleanup, 4 October 2026, 0.10.2
+
+Do not restore the generic clinical disclaimer footer, duplicate article or contribution side notes, blanket reading-path accreditation notice, or repeated draft warning panels. Editorial review information belongs on the existing editorial page and in source-level review records. Preserve real study limitations, citations, rights, attribution, institutional status and the approved continuous portal. Remove obsolete notice markup and CSS rather than hiding them.
+
 ## Current portal correction, 4 October 2026, 0.10.1
 
 The owner reported a visible rectangular break after the 0.9.4 CSS seam patch. The two runtime pseudo-element patches are superseded. Display only `portal-continuous-v1.svg`, reproduced by `node scripts/portal-art.mjs` from the unchanged original WebP. It contains one coordinate system and one continuous first-arch contour ending at the diagonal foot, not a rectangle extending across the lower rail. Do not restore independent breakpoint-specific overlays or the forced 480 px mobile source. The original text, right half, centre, outer frame and underlying WebP bytes stay unchanged. Other design and scholarly rules below remain in force.
