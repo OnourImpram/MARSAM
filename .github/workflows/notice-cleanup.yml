@@ -1,0 +1,107 @@
+name: Verify MARSAM notice cleanup 0.10.2
+on:
+  push:
+    branches: [fix/editorial-notice-cleanup-0102]
+    paths: [.github/workflows/notice-cleanup.yml]
+permissions:
+  contents: write
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    container: mcr.microsoft.com/playwright/python:v1.61.0-noble
+    timeout-minutes: 15
+    env:
+      BROWSERS: chromium,firefox,webkit
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Establish unchanged baseline and prove the regression
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          mkdir -p verification/notice-cleanup
+          npm test > verification/notice-cleanup/baseline.log 2>&1
+          if node --test tests/editorial-cleanup.test.mjs > verification/notice-cleanup/red.log 2>&1; then
+            echo 'Expected notice regressions did not fail'; exit 1
+          fi
+          grep -F '# fail 5' verification/notice-cleanup/red.log
+      - name: Remove repeated generic notices at the source
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re,json,hashlib
+          def replace(path,old,new,expected=1):
+              p=Path(path); s=p.read_text(); assert s.count(old)==expected,(path,old[:70],s.count(old)); p.write_text(s.replace(old,new))
+          keep=['src/editorial.mjs','src/scholarship-data.json','src/evidence-2026-10.json','src/evidence-bindings.json','src/narrative-bindings.json','src/articles.mjs','src/provenance.mjs','public/assets/heritage/portal-continuous-v1.svg','public/assets/heritage/approved-portal-960.webp','public/assets/heritage/approved-portal-480.webp']
+          hashes={p:hashlib.sha256(Path(p).read_bytes()).hexdigest() for p in keep}
+          replace('src/chrome.mjs',' <div class="footer-notice">${icon(\'circle\')}<p>${e(t.notClinical)}</p></div>\n','')
+          replace('src/site.mjs','<p>${e(t.notClinical)}</p>','',2)
+          replace('src/site.mjs','const draftNotice=t=>`<div class="review-notice"><span class="chip clay">${e(t.editorialDraft)}</span><p>${e(t.translationNote)}</p></div>`;\n','')
+          replace('src/site.mjs','${draftNotice(t)}','',4)
+          replace('src/site.mjs','<div class="notice">${icon(\'book\')}<p>${e(t.noProgram)}</p></div>','',2)
+          p=Path('src/i18n.mjs');s,n=re.subn(r'^(?:notClinical|noProgram): .*\n','',p.read_text(),flags=re.M);assert n==2;p.write_text(s)
+          p=Path('public/site.css');s=p.read_text()
+          for old,new in [('.notice,.review-notice{','.notice{'),('.notice p,.review-notice p{','.notice p{'),('.reading-body .review-notice p,.reading-body .muted{','.reading-body .muted{')]:
+              assert s.count(old)==1,old;s=s.replace(old,new)
+          s,n=re.subn(r'\.footer-notice(?:>\.icon| p)?\{[^{}]*\}','',s);assert n==4,n
+          s,n=re.subn(r'(?:\.reading-body )?\.review-notice(?: \.chip| p)?\{[^{}]*\}','',s);assert n==5,n
+          assert 'footer-notice' not in s and 'review-notice' not in s;p.write_text(s)
+          p=Path('package.json');d=json.loads(p.read_text());assert d['version']=='0.10.1';d['version']='0.10.2';d['scripts']['test']+=' tests/editorial-cleanup.test.mjs';p.write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n')
+          p=Path('src/release.mjs');s=p.read_text();assert "version:'0.10.1'" in s;p.write_text(s.replace('0.10.1','0.10.2'))
+          p=Path('AGENTS.md');p.write_text('## Owner-requested notice cleanup, 4 October 2026, 0.10.2\n\nDo not restore the generic clinical disclaimer footer, duplicate article or contribution side notes, blanket reading-path accreditation notice, or repeated draft warning panels. Editorial review information belongs on the existing editorial page and in source-level review records. Preserve real study limitations, citations, rights, attribution, institutional status and the approved continuous portal. Remove obsolete notice markup and CSS rather than hiding them.\n\n'+p.read_text())
+          p=Path('README.md');s=p.read_text();assert s.startswith('# MARSAM 0.10.1');p.write_text(s.replace('# MARSAM 0.10.1','# MARSAM 0.10.2',1).replace('## Platform','## 0.10.2 arayüz sadeleştirmesi\n\nTekrarlanan genel dipnotlar, klinik hizmet uyarısı, okuma rotası uyarısı ve yinelenen taslak panelleri kaldırıldı. Kaynak kayıtları, bilimsel sınırlılıklar, kullanım izinleri ve 0.10.1 portalı değişmedi.\n\n## Platform',1))
+          p=Path('docs/design/NOTICE_CLEANUP_0_10_2.md');p.write_text('# MARSAM 0.10.2. Tekrarlanan dipnotların temizlenmesi\n\n4 Ekim 2026. Kullanıcının ekran görüntüsünde gösterdiği genel klinik hizmet dipnotu tüm sekiz dilde ortak altbilgiden kaldırıldı. Aynı notun dosya okuma ve katkı sayfalarındaki kopyaları da çıkarıldı. Okuma yollarındaki genel kayıt ve sertifika uyarısı ile yinelenen taslak uyarı panelleri kaldırıldı. Kullanılmayan iki arayüz anahtarı ve bileşen CSS kuralları temizlendi.\n\nAraştırma sınırlılıkları, kaynak künyeleri, ölçek izinleri, görsel atıfları, kaynak düzeyi inceleme kayıtları ve editoryal politika korunur. Metinler CSS ile gizlenmez, oluşturma şablonundan çıkarılır. Portal geometrisine ve akademik veri dosyalarına dokunulmaz. Yeni testler sekiz dilde temiz şablonu ve korunan akademik bağlamı birlikte denetler.\n')
+          assert all(hashlib.sha256(Path(p).read_bytes()).hexdigest()==v for p,v in hashes.items())
+          Path('verification/notice-cleanup/preserved-files.json').write_text(json.dumps(hashes,indent=2))
+          PY
+      - name: Verify all contracts and generated routes
+        shell: bash
+        run: |
+          set -euo pipefail
+          BASE_PATH=/ npm run check > verification/notice-cleanup/root.log 2>&1
+          BASE_PATH=/MARSAM/ PAGES_PREVIEW=true npm run check > verification/notice-cleanup/pages.log 2>&1
+          node scripts/budget.mjs > verification/notice-cleanup/budget.log
+      - name: Prepare matching browser environment
+        run: |
+          python -m pip install --timeout 25 -q playwright==1.61.0 Pillow nbclient==0.10.2 nbformat==5.10.4 ipykernel==6.30.1
+          python scripts/test-fonts.py
+      - name: Full browser regression and actual cleaned footer
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tests/research_artifacts.py > verification/notice-cleanup/artifacts.log 2>&1
+          pids=()
+          for script in browser_e2e scope_e2e heritage_e2e research_e2e cini_e2e scholarship_e2e evidence_cycle_e2e portal_pixels notice_cleanup_e2e; do
+            timeout 480 python -u "tests/$script.py" > "verification/notice-cleanup/$script.log" 2>&1 & pids+=("$!")
+          done
+          status=0
+          for pid in "${pids[@]}"; do wait "$pid" || status=1; done
+          for log in verification/notice-cleanup/*e2e.log verification/notice-cleanup/portal_pixels.log; do echo "$log"; tail -3 "$log"; done
+          exit "$status"
+      - name: Commit verified content only
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'Onour Impram'
+          git config user.email 'onuribram@outlook.com'
+          git add src/chrome.mjs src/site.mjs src/i18n.mjs public/site.css src/release.mjs package.json AGENTS.md README.md docs/design/NOTICE_CLEANUP_0_10_2.md
+          git diff --cached --check
+          git commit -m 'fix: remove repetitive blanket notices across MARSAM language editions'
+          git push origin HEAD:fix/editorial-notice-cleanup-0102
+          git rev-parse HEAD > verification/notice-cleanup/source-sha.txt
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: notice-cleanup-0102-verified
+          path: |
+            verification/notice-cleanup/
+            verification/*browser.json
+            verification/reading-room-*.json
+            verification/portal-continuity/*.json
+          retention-days: 7
