@@ -1,91 +1,51 @@
-# MARSAM 0.9.1. Ölçme kimliği ve çok dilli kanıt sürekliliği
+# MARSAM 0.9.2. Portal simetri düzeltmesi
 
-4 Ekim 2026. MARSAM 0.9.1, 0.9.0 bilimsel kanıt sürümünün son akademik red team düzeltmesi olarak yayımlandı. Görsel kimlik veya bilgi mimarisi yeniden tasarlanmadı. Düzeltme, ölçme araçlarının birbirine karışması, kaynak içi psikometrik uyuşmazlığın görünürlüğü ve sekiz dilde kanıt güncelliğinin izlenmesi üzerinde yoğunlaştı.
+4 Ekim 2026. MARSAM 0.9.2, 0.9.1 bilimsel sürümünün içeriğini ve bilgi mimarisini değiştirmeden, sahibin ekran görüntüsünde sarı ile işaretlediği tek görsel kusuru düzeltir. Sol dış iç-geçit boyunca kalan dar fildişi açıklık, sağ taraftaki karşılık gelen turkuaz ebru yüzeyinin yalnız gerekli şerit içinde aynalanmasıyla kapatıldı.
 
 ## Canlı site
 
-https://onourimpram.github.io/MARSAM/tr/?v=0.9.1
+https://onourimpram.github.io/MARSAM/tr/?v=0.9.2
 
-https://onourimpram.github.io/MARSAM/en/?v=0.9.1
+https://onourimpram.github.io/MARSAM/en/?v=0.9.2
 
-## Bilimsel düzeltmeler
+## Düzeltmenin sınırı
 
-### İki ayrı SWBS
+Onaylı 960 ve 480 piksel WebP portal varlıkları byte düzeyinde değiştirilmedi. MARSAM yazısı, iç içe kemerler, sıcak kâğıt yüzeyi, ebru dokusu, İznik esintili arka plan, Marmara masthead'i, renk paleti, tipografi, grid ve akademik içerik aynen korundu.
 
-Aynı İngilizce kısaltma ve başlığa sahip iki farklı araç artık veri modelinde, ölçme dizininde, kaynak sayfalarında ve sekiz dilde ayrı kimliklerle gösterilir.
+Düzeltme yalnız `.manuscript-frame.approved-portal::after` üzerinde çalışır. Mevcut 960 piksel portal görseli yatay olarak aynalanır ve yalnız şu dar maske görünür bırakılır.
 
-1. Ekşi ve Kardaş 2017. Türkiye'de geliştirilen 29 maddelik Spiritual Well-Being Scale.
-2. Paloutzian ve Ellison 1982. 20 maddelik Spiritual Well-Being Scale.
+`polygon(84.5% 32.5%, 86.5% 33%, 86.2% 86.5%, 84.6% 83.5%)`
 
-Madde sayısı, geliştiriciler ve ölçme kökeni arayüzde görünür. Puanların veya psikometrik kanıtların birbirinin yerine kullanılabileceği izlenimi verilmez.
-
-### Kaynak içi SRMR uyuşmazlığı
-
-Ekşi ve Kardaş 2017 çalışmasının özetinde SRMR .50, Tablo 6'da ise .050 olarak raporlanır. MARSAM bu iki değerden birini varsayımla düzeltmez. Uyuşmazlık kaynak notuna açıkça eklenir ve doğrulama sınırı olarak korunur.
-
-### Geliştirme, uyarlama ve doğrulama ayrımı
-
-Türkiye'de geliştirilmiş bir araç ile başka bir aracın Türkçe uyarlaması aynı kategoriye konmaz. Bir çeviri veya Türkçe formun varlığı da bağımsız psikometrik doğrulama olarak sunulmaz.
-
-### Çok dilli kanıt güncelliği
-
-Kaynak kartlarının ötesinde kurucu bölümü, kanıt temaları, RSS ve önemli anlatı blokları kaynak parmak izi, ortak brief ve dil sürümü kimliklerine bağlandı. İçerik değiştiğinde eski bir dil sürümünün sessizce güncel görünmesini engelleyen doğrulama eklendi.
-
-### Kaynak defteri
-
-Tek bir global “checked” tarihi artık tüm katalog için güncellik iddiası üretmez. Kayıt düzeyindeki inceleme tarihleri yetkilidir.
-
-### Editoryal temizlik
-
-Hakkında sayfasındaki yinelenen giriş metni kaldırıldı. İçerik kapsamı veya kurucu ağırlığı büyütülmedi.
-
-## Korunan güçlü sistemler
-
-36 kaynaklık kamusal seçki, altı kanıt teması, kurucu bölüm, araştırma ve yöntem rehberleri, katalog, arama, DOI ve ISBN erişimi, okuma listesi, karşılaştırma, atıf dışa aktarımı, sekiz dil ve Arapça RTL davranışı korundu.
-
-Onaylı katmanlı ebru portalı, İznik esintili arka plan, Marmara Üniversitesi masthead'i, renk paleti, tipografi, grid ve kart sistemi değişmedi. Görsel varlık SHA değerleri bu sürümde değiştirilmedi.
+Bu nedenle yeni bir görsel üretilmedi, görsel bütünü aynalanmadı, yeniden renklendirme yapılmadı ve metin yeniden oluşturulmadı. Katman etkileşimsizdir ve portal karesinin dışına taşamaz.
 
 ## Test ve doğrulama
 
-Düzeltme için önce beş yeni regresyon testi eski davranış üzerinde başarısız oldu, ardından uygulama sonrası beşi de geçti.
+Kaynak ana dal doğrulaması 37203871480 üzerinde başarıyla tamamlandı. İki deployment root, içerik sözleşmeleri, notebook ve kurcalama kontrolleri, Chromium, Firefox ve WebKit tabanlı native tarayıcı kontrolleri, sekiz dil ve responsive yerleşimler geçti.
 
-Aday doğrulama çalışması 37192115633 başarıyla tamamlandı. Altı tarayıcı paketi şu otomatik kontrol sayılarını geçti.
+Hosting yayın işi 37204284924 başarıyla tamamlandı. İş exact kaynak commitini yeniden çekti, 0.9.2'yi yeniden oluşturdu ve doğruladı, yalnız `MARSAM/` alt ağacını değiştirdi, eşzamanlı host değişikliği kontrolünü uyguladı ve tek kullanımlık yayın workflow'unu final committen kaldırdı.
 
-- Temel etkileşim 818.
-- Kapsam 899.
-- Yerleşim 2723.
-- Araştırma 2324.
-- Çini 1393.
-- Scholarship 829.
+GitHub Pages build ve deployment işi 37204309163 başarıyla tamamlandı.
 
-Ana dalın bağımsız doğrulaması 37201521701 üzerinde başarıyla tamamlandı. İki deployment root, gerçek notebook ve kurcalama kontrolleri, üç tarayıcı motoru, sekiz dil, responsive düzen ve kurumsal sınırlar geçti.
-
-Hosting staging işi 37201910825 başarıyla tamamlandı. İlk staging denemesi kaynak hatası nedeniyle değil, runner ortamında nbformat bulunmadığı için durmuştu. Eşleşen notebook bağımlılıkları kurulduktan sonra exact kaynak aynı kontrollerden geçti.
-
-GitHub Pages build ve deploy işi 37202021619 başarıyla tamamlandı.
+Deployment sonrasında gerçek kamusal URL ayrı bir canlı tarayıcı oturumunda yeniden açıldı. Sol taraftaki dar açıklığın turkuaz ebru şeridiyle kapandığı, sağ tarafla görsel olarak eşleştiği ve görünür dikiş, boşluk, distorsiyon veya yeni asimetri oluşmadığı doğrulandı. MARSAM wordmarkı ve portalın geri kalanı değişmemiş görünmektedir.
 
 ## Sürüm kimliği
 
-Kaynak commit: `b0f1ddb59b97b480fb994226a196e2d40d184d9c`.
+Kaynak payload commit: `aeddf3f175f0ea4a799d683cc18a2d05ecc557cb`.
 
-Hosting commit: `0e0a0e9f38451ccf18b8a421f1be900edc19ad31`.
+Kaynak tree: `1cefa0a7741e60865dbb1665d0e5854ee092c7ab`.
 
-Host tree: `7222a0180dcda023cd5b3251f63454927145f7d1`.
+Hosting commit: `002e004e5fa35e19643d421c836a9d44f81c0abd`.
 
-MARSAM subtree: `b584efaa8bc5f3e5be6a74fbc3258809ff533dc7`.
+Host tree: `0bb9b6deaa9cfbc145923fd70967cd6b355b4d12`.
 
-Canlı hosttaki `MARSAM/release.json`, sürümü 0.9.1 ve sourceCommit değerini yukarıdaki kaynak commit olarak kaydeder. Yayımlanan Türkçe ölçme dizini de `data-release="0.9.1"` taşır.
+MARSAM subtree: `637f220ab61d00b3e7c65d7391ea80a4203e159d`.
 
-## Bilinçli sapmalar
+Canlı hosttaki `MARSAM/release.json`, sürümü `0.9.2`, release kimliğini `marsam-portal-symmetry-repair-0.9.2` ve sourceCommit değerini yukarıdaki payload commit olarak kaydeder. Manifest 821 kamusal dosyayı kapsar.
 
-Master brief'teki her öneri mekanik olarak uygulanmadı. Bu sürümde yeni bilgi mimarisi, yeni görsel sistem veya yüzlerce yeni kaynak eklemek yerine 0.9.0'ın güçlü çözümleri korundu. Bunun nedeni bilimsel bütünlük önceliğinin değişiklik hacminden daha yüksek olmasıdır.
+## Korunan 0.9.1 bilimsel katmanı
 
-Ölçme dizini “tam psikometri gözlemevi” olarak sunulmadı. Yalnız kaynağı yeterince doğrulanmış alanlar genişletildi. Ölçek maddeleri çoğaltılmadı.
-
-Sekiz dil “insan tarafından onaylanmış” gösterilmedi. Dil sürümleri yapay zekâ destekli editoryal taslak durumundadır. Bilimsel insan incelemesi, anadil incelemesi ve resmî yayın onayı ayrı kalır.
-
-MARSAM'ın kurumsal statüsü yükseltilmedi. Platform planlanan Marmara Üniversitesi bağlamını korur, fakat teknik yayın resmî merkez kuruluşu, akreditasyon veya klinik yetki anlamına gelmez.
+0.9.1'de yapılan SWBS kimlik ayrımı, Ekşi ve Kardaş 2017 içindeki SRMR uyuşmazlığının açık gösterimi, geliştirme, uyarlama ve bağımsız doğrulama ayrımı, sekiz dilde kaynak parmak izi sistemi ve kayıt düzeyi inceleme tarihleri bu görsel patchte değiştirilmedi.
 
 ## Bilinen sınırlar
 
-0.9.1 bağımsız bilimsel hakem incelemesi değildir. Sekiz dilde ana dil uzmanı incelemesi tamamlanmış değildir. Kaynakların V1 / PARTIALLY_VERIFIED düzeyi tam metin sistematik inceleme anlamına gelmez. Ölçme profilleri kullanım izni, puanlama talimatı veya klinik karar desteği sağlamaz. Bağımsız erişilebilirlik sertifikası ve saha Core Web Vitals çalışması yapılmamıştır.
+0.9.2 görsel bir hata düzeltmesidir. Bağımsız erişilebilirlik sertifikası, saha Core Web Vitals çalışması, insan bilimsel hakem incelemesi veya sekiz dilde anadil uzmanı onayı iddia etmez. MARSAM'ın resmî kurumsal kuruluş statüsünü de değiştirmez.
