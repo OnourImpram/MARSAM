@@ -1,0 +1,126 @@
+name: MARSAM mission baseline
+on:
+  push:
+    branches: [audit/mission-20261004]
+    paths: [.github/workflows/mission-baseline.yml]
+permissions:
+  contents: write
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    container: mcr.microsoft.com/playwright/python:v1.61.0-noble
+    timeout-minutes: 18
+    env:
+      BROWSERS: chromium,firefox,webkit
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run unchanged baseline and capture inventory
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p docs/cycles/2026-10-04/baseline
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          git ls-files > docs/cycles/2026-10-04/baseline/inventory.txt
+          git log -15 --format='%H %s' > docs/cycles/2026-10-04/baseline/history.txt
+          BASE_PATH=/ npm run check > docs/cycles/2026-10-04/baseline/root-tests.log 2>&1
+          BASE_PATH=/MARSAM/ PAGES_PREVIEW=true npm run check > docs/cycles/2026-10-04/baseline/pages-tests.log 2>&1
+          node scripts/budget.mjs > docs/cycles/2026-10-04/baseline/budget.json
+          node --input-type=module <<'JS'
+          import {writeFileSync} from 'node:fs';
+          import {sources,resources,sections} from './src/catalogue.mjs';
+          import {evidence} from './src/scholarship.mjs';
+          const dir='docs/cycles/2026-10-04/baseline/';
+          writeFileSync(dir+'catalogue.json',JSON.stringify({sources:sources.map(s=>({id:s.id,title:s.title,year:s.year,url:s.url,authors:s.authors,verification:s.verification,rights:s.rights,checked:s.checked,access:s.access})),resources:resources.map(r=>({id:r.id,sourceId:r.sourceId,title:r.title,sections:r.sections,summary:r.summary?.en})),sections:sections.map(s=>s.id)},null,2));
+          writeFileSync(dir+'evidence.json',JSON.stringify(evidence.map(r=>({id:r.id,brief:r.brief,bibliography:r.bibliography,edition:r.editions.en})),null,2));
+          JS
+      - name: Prepare existing browser environment
+        run: |
+          python -m pip install -q playwright==1.61.0 nbclient==0.10.2 nbformat==5.10.4 ipykernel==6.30.1
+          python scripts/test-fonts.py
+      - name: Existing browser and reproducibility tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tests/research_artifacts.py > docs/cycles/2026-10-04/baseline/artifacts.log 2>&1
+          python tests/browser_e2e.py > docs/cycles/2026-10-04/baseline/core.log 2>&1 & a=$!
+          python tests/scope_e2e.py > docs/cycles/2026-10-04/baseline/scope.log 2>&1 & b=$!
+          python tests/heritage_e2e.py > docs/cycles/2026-10-04/baseline/layout.log 2>&1 & c=$!
+          python tests/research_e2e.py > docs/cycles/2026-10-04/baseline/research.log 2>&1 & d=$!
+          python tests/cini_e2e.py > docs/cycles/2026-10-04/baseline/cini.log 2>&1 & e=$!
+          python tests/scholarship_e2e.py > docs/cycles/2026-10-04/baseline/scholarship.log 2>&1 & f=$!
+          status=0
+          for pid in $a $b $c $d $e $f; do wait "$pid" || status=1; done
+          exit "$status"
+      - name: Read actual public release and all released HTML routes
+        if: always()
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json,hashlib,concurrent.futures,urllib.request,datetime,pathlib,base64
+          from html.parser import HTMLParser
+          from playwright.sync_api import sync_playwright
+          root=pathlib.Path('docs/cycles/2026-10-04/baseline'); root.mkdir(parents=True,exist_ok=True)
+          origin='https://onourimpram.github.io/MARSAM/'
+          def get(path):
+              with urllib.request.urlopen(urllib.request.Request(origin+path,headers={'User-Agent':'MARSAM-owner-authorized-audit'}),timeout=35) as r: return r.status,r.read(),dict(r.headers)
+          status,raw,headers=get('release.json'); release=json.loads(raw)
+          root.joinpath('public-release.json').write_text(json.dumps({k:v for k,v in release.items() if k!='files'},indent=2))
+          class Text(HTMLParser):
+              def __init__(self): super().__init__();self.skip=0;self.words=[];self.lang=None;self.dir=None;self.h1=0
+              def handle_starttag(self,tag,attrs):
+                  a=dict(attrs)
+                  if tag=='html':self.lang=a.get('lang');self.dir=a.get('dir')
+                  if tag in ('script','style'):self.skip+=1
+                  if tag=='h1':self.h1+=1
+              def handle_endtag(self,tag):
+                  if tag in ('script','style'):self.skip=max(0,self.skip-1)
+              def handle_data(self,data):
+                  if not self.skip and data.strip():self.words.append(data.strip())
+          def inspect(item):
+              path,expected=item
+              try:
+                  status,data,h=get(path); p=Text();p.feed(data.decode())
+                  return {'path':path,'status':status,'matchesRelease':hashlib.sha256(data).hexdigest()==expected['sha256'],'bytes':len(data),'lang':p.lang,'dir':p.dir,'h1':p.h1}
+              except Exception as e:return {'path':path,'error':str(e)}
+          items=[(p,v) for p,v in release['files'].items() if p.endswith('.html')]
+          with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:routes=list(pool.map(inspect,items))
+          summary={'checkedAt':datetime.datetime.now(datetime.timezone.utc).isoformat(),'release':release['version'],'sourceCommit':release['sourceCommit'],'htmlRoutes':len(routes),'failures':[r for r in routes if r.get('error') or not r.get('matchesRelease')],'responseHeaders':headers,'routes':routes}
+          root.joinpath('live-routes.json').write_text(json.dumps(summary,indent=2))
+          journeys=[]
+          with sync_playwright() as pw:
+              browser=pw.chromium.launch(args=['--no-sandbox']);page=browser.new_page(viewport={'width':1440,'height':1000})
+              for locale in ['tr','en','de','zh','ru','ar','id','ms']:
+                  for route in ['', 'about/','evidence/','measures/','research/','search/']:
+                      url=origin+locale+'/'+route;resp=page.goto(url,wait_until='networkidle',timeout=45000)
+                      journeys.append({'locale':locale,'route':route,'status':resp.status,'release':page.locator('body').get_attribute('data-release'),'overflow':page.evaluate('document.documentElement.scrollWidth>innerWidth+1'),'h1':page.locator('h1').all_text_contents()})
+                  page.goto(origin+locale+'/',wait_until='networkidle')
+                  page.screenshot(path=str(root/(locale+'-home.jpg')),type='jpeg',quality=65)
+              page.goto(origin+'tr/',wait_until='networkidle');page.locator('.approved-portal-image').evaluate('(e)=>e.decode()')
+              pic=page.locator('.approved-portal').screenshot(type='jpeg',quality=60)
+              root.joinpath('portal.jpg').write_bytes(pic)
+              root.joinpath('portal.b64').write_text(base64.b64encode(pic).decode())
+              browser.close()
+          root.joinpath('live-journeys.json').write_text(json.dumps(journeys,ensure_ascii=False,indent=2))
+          print(json.dumps({k:v for k,v in summary.items() if k!='routes'}));print('Live browser routes',len(journeys))
+          PY
+      - name: Retain baseline receipts only on isolated audit branch
+        if: always()
+        shell: bash
+        run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          git config user.name 'Onour Impram'
+          git config user.email 'onuribram@outlook.com'
+          git add docs/cycles/2026-10-04/baseline
+          git diff --cached --quiet || git commit -m 'audit: retain fresh unchanged baseline and public-origin receipts'
+          git push origin HEAD:audit/mission-20261004
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: marsam-mission-baseline
+          path: docs/cycles/2026-10-04/baseline
+          retention-days: 14
