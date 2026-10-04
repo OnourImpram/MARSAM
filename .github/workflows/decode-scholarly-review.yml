@@ -1,0 +1,29 @@
+name: Decode scholarly review patch
+on:
+  push:
+    branches: [fix/scholarly-final-review-20261004]
+    paths: [.github/workflows/decode-scholarly-review.yml]
+permissions:
+  contents: read
+jobs:
+  decode:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Decode only
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p verification/decoded
+          cat .github/final-review/patch1.b64 .github/final-review/patch2.b64 .github/final-review/patch3.b64 | base64 -d | xz -dc > verification/decoded/apply.py
+          python -m py_compile verification/decoded/apply.py
+          sha256sum verification/decoded/apply.py > verification/decoded/sha256.txt
+          sed -n '1,260p' verification/decoded/apply.py > verification/decoded/preview.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: scholarly-review-decoded-patch
+          path: verification/decoded/
+          retention-days: 2
