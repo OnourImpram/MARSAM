@@ -1,0 +1,109 @@
+name: Verify scholarly correction 0.9.1
+on:
+  push:
+    branches: [fix/scholarly-final-review-20261004]
+    paths: [.github/workflows/verify-scholarly-correction.yml]
+permissions:
+  contents: write
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    container: mcr.microsoft.com/playwright/python:v1.61.0-noble
+    timeout-minutes: 15
+    env:
+      BROWSERS: chromium,firefox,webkit
+    steps:
+      - uses: actions/checkout@v4
+      - name: Trust checked-out container directory
+        run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Recover exact reviewed patch and prove regressions against baseline
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p verification
+          python - <<'PY'
+          from pathlib import Path
+          import base64,lzma,hashlib
+          text=''.join(Path(f'.github/final-review/patch{i}.b64').read_text().strip() for i in range(1,4))
+          patch=lzma.decompress(base64.b64decode(text,validate=True))
+          assert hashlib.sha256(patch).hexdigest()=='e16e0a4ce938b70d38e2f5bf85e7d2389ba081e94eeefc6ca77916fa53ed02a5'
+          assert patch.startswith(b'diff --git ')
+          Path('verification/recovered.patch').write_bytes(patch)
+          PY
+          git apply --check verification/recovered.patch
+          git apply --include=tests/final-review.test.mjs verification/recovered.patch
+          if node --test tests/final-review.test.mjs > verification/correction-red.log 2>&1; then
+            echo 'Expected five baseline regressions did not fail' >&2; exit 1
+          fi
+          grep -q '# fail 5' verification/correction-red.log
+          git apply --exclude=tests/final-review.test.mjs verification/recovered.patch
+          node --test tests/final-review.test.mjs > verification/correction-green.log 2>&1
+          git diff --exit-code -- public src/tokens.json src/editorial.mjs src/heritage-copy.mjs research src/locales
+      - name: Verify both deployment roots and budgets
+        shell: bash
+        run: |
+          set -euo pipefail
+          BASE_PATH=/ npm run check > verification/correction-root.log 2>&1
+          BASE_PATH=/MARSAM/ PAGES_PREVIEW=true npm run check > verification/correction-pages.log 2>&1
+          node scripts/budget.mjs
+      - name: Prepare matching browsers, real notebook and glyph coverage
+        run: |
+          python -m pip install --timeout 25 -q playwright==1.61.0 nbclient==0.10.2 nbformat==5.10.4 ipykernel==6.30.1
+          python scripts/test-fonts.py
+          python tests/research_artifacts.py > verification/correction-notebook.log 2>&1
+      - name: Run all six browser suites
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tests/browser_e2e.py > verification/correction-core.log 2>&1 & core=$!
+          python tests/scope_e2e.py > verification/correction-scope.log 2>&1 & scope=$!
+          python tests/heritage_e2e.py > verification/correction-layout.log 2>&1 & layout=$!
+          timeout 420 python -u tests/research_e2e.py > verification/correction-research.log 2>&1 & research=$!
+          python tests/cini_e2e.py > verification/correction-cini.log 2>&1 & cini=$!
+          python tests/scholarship_e2e.py > verification/correction-scholarship.log 2>&1 & scholarship=$!
+          status=0
+          wait "$core" || status=1
+          wait "$scope" || status=1
+          wait "$layout" || status=1
+          wait "$research" || status=1
+          wait "$cini" || status=1
+          wait "$scholarship" || status=1
+          exit "$status"
+      - name: Commit only verified source files on the review branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          import json,os
+          reports={}
+          for name in ['reading-room-core','reading-room-scope','reading-room-layout','research-browser','cini-browser','scholarship-browser']:
+              p=Path('verification')/(name+'.json');d=json.loads(p.read_text());assert d['success'],name
+              reports[name]={'passed':len(d.get('checks',[])),'browsers':d.get('browsers'),'success':True}
+          record={'version':'0.9.1','status':'candidate-verified-not-public','sourceBaseline':'992a29bcefd350f54342d388b86c1f98e13bd212','runId':os.environ['GITHUB_RUN_ID'],'regressions':{'beforeFailed':5,'afterPassed':5},'suites':reports,'visualAssetsChanged':False,'paletteChanged':False,'scientificHumanReview':False,'nativeLanguageHumanReview':False,'formalInstitutionalApproval':False}
+          Path('docs/releases/scholarly-correction-0.9.1-candidate.json').write_text(json.dumps(record,indent=2)+'\n')
+          PY
+          git config user.name 'Onour Impram'
+          git config user.email '215815131+OnourImpram@users.noreply.github.com'
+          git add docs/research/SCOPE_AUDIT.json docs/releases/scholarly-correction-0.9.1-candidate.json package.json scripts/build.mjs src tests
+          git diff --cached --stat > verification/correction-change-stat.txt
+          git commit -m 'fix: distinguish SWBS instruments and protect multilingual evidence continuity'
+          git push origin HEAD:fix/scholarly-final-review-20261004
+          git rev-parse HEAD > verification/correction-source-sha.txt
+          git archive --format=tar HEAD > verification/correction-source.tar
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: scholarly-correction-091-review
+          path: |
+            verification/correction-*
+            verification/reading-room-*.json
+            verification/research-*.json
+            verification/cini-browser.json
+            verification/scholarship-*.json
+            .browser-results/
+          include-hidden-files: true
+          retention-days: 14
