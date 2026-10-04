@@ -18,10 +18,10 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p verification/decoded
-          cat .github/final-review/patch1.b64 .github/final-review/patch2.b64 .github/final-review/patch3.b64 | base64 -d | xz -dc > verification/decoded/apply.py
-          python -m py_compile verification/decoded/apply.py
-          sha256sum verification/decoded/apply.py > verification/decoded/sha256.txt
-          sed -n '1,260p' verification/decoded/apply.py > verification/decoded/preview.txt
+          cat .github/final-review/patch1.b64 .github/final-review/patch2.b64 .github/final-review/patch3.b64 | base64 -d | xz -dc > verification/decoded/changes.patch
+          git apply --check verification/decoded/changes.patch
+          sha256sum verification/decoded/changes.patch > verification/decoded/sha256.txt
+          sed -n '1,360p' verification/decoded/changes.patch > verification/decoded/preview.txt
       - uses: actions/upload-artifact@v4
         with:
           name: scholarly-review-decoded-patch
