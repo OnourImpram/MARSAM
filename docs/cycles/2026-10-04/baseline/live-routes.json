@@ -1,0 +1,6172 @@
+{
+  "checkedAt": "2026-10-04T15:04:20.116512+00:00",
+  "release": "0.9.4",
+  "sourceCommit": "58bf9f82c18c95f76f9a11bc84423acf94546679",
+  "htmlRoutes": 682,
+  "failures": [],
+  "responseHeaders": {
+    "Connection": "close",
+    "Content-Length": "127243",
+    "Server": "GitHub.com",
+    "Content-Type": "application/json; charset=utf-8",
+    "Last-Modified": "Sun, 04 Oct 2026 14:47:24 GMT",
+    "Access-Control-Allow-Origin": "*",
+    "Strict-Transport-Security": "max-age=31556952",
+    "ETag": "\"6ac266fc-1f10b\"",
+    "expires": "Sun, 04 Oct 2026 15:14:02 GMT",
+    "Cache-Control": "max-age=600",
+    "x-proxy-cache": "MISS",
+    "X-GitHub-Request-Id": "2D1A:16F1E2:A03B0:C434C:6AC26AE1",
+    "x-github-edge-region": "westus3",
+    "Accept-Ranges": "bytes",
+    "Age": "0",
+    "Date": "Sun, 04 Oct 2026 15:04:02 GMT",
+    "Via": "1.1 varnish",
+    "X-Served-By": "cache-sjc1000110-SJC",
+    "X-Cache": "MISS",
+    "X-Cache-Hits": "0",
+    "X-Timer": "S1791126242.129623,VS0,VE108",
+    "Vary": "Accept-Encoding",
+    "X-Fastly-Request-ID": "5ddb9d9debb93299fa3b6bdf2fa7c99b1acdfdaa"
+  },
+  "routes": [
+    {
+      "path": "404.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 1061,
+      "lang": "en",
+      "dir": null,
+      "h1": 1
+    },
+    {
+      "path": "ar/about/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 54667,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/approaches/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 62007,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/books/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 76670,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/collections/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 98347,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/compare/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 127978,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/concepts/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 64193,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/contribute/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53649,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/data-access/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 60037,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/dossier/assessment-and-permission/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 60203,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/dossier/culture-and-worldviews/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 61055,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/dossier/digital-tools-and-responsibility/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 61033,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/dossier/preferences-and-boundaries/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 60764,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/dossier/question-to-design/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 60545,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/dossier/reading-evidence/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 60747,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/dossier/theory-and-integration/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 60923,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/dossier/understanding-spiritual-experience/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 61102,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/editorial/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 54319,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/ethics/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 60358,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/events/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51264,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/evidence/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 66605,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/governance/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 54275,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 75480,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/learning/foundations/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 54631,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/learning/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53120,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/learning/professional/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 54775,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/learning/research/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 54505,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/library/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 143908,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/measure-brief-rcope/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53463,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/measure-durel/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53290,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/measure-meaning-questionnaire/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53822,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/measure-rss-14/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53023,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/measure-swbs-eksi-kardas/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 55820,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/measure-swbs-paloutzian-ellison/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 56317,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/measurement-guide/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 58823,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/measures/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 86985,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/media/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51405,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/methods/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 67403,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/news/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 50913,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/participate/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53855,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/practice/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 71317,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/projects/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51423,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/publications/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 98137,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/reproducible-lab/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 62799,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/research/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 56064,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/research-guide/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 58789,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/resource/adolescent-contexts/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 62621,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/resource/ai-health-ethics/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 59894,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/resource/aservic-principles/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 61331,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/resource/atheist-struggles/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 62775,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/resource/attendance-cohorts/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 63060,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/resource/brief-rcope/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 62263,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/resource/cbt-spiritual/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 61469,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/resource/client-preference/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 59743,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/resource/disaster-needs/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 62558,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/resource/durel/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 62135,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/resource/family-spiritual/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 61407,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/resource/german-meta/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 62566,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/resource/group-counselling/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 61836,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/resource/integration-meta-analysis/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 58521,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/resource/loneliness-spirituality/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 61758,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/resource/malaysia-ukm-counselling/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 61175,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/resource/meaning-questionnaire/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 62824,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/resource/metaphysical-diversity/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 59846,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/resource/older-adults/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 63114,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/resource/prisma-guidance/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 60658,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/resource/professional-training/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 61980,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/resource/religious-cbt/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 63153,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/resource/sacred-tensions/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 60712,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/resource/sipas/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 61576,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/resource/spiritual-burnout/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 61507,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/resource/spiritual-competence/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 60940,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/resource/spiritual-counselling-book/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 62295,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/resource/spiritual-integrity/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 61674,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/resource/spiritual-struggles/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 61647,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/resource/spirituality-dimensions/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 61917,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/resource/swbs-eksi-kardas/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 66345,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/resource/swbs-paloutzian-ellison/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 66411,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/resource/techniques-101/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 61651,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/resource/theories-book/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 59529,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/resource/three-waves/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 60653,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/resource/toad-directory/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 58168,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/resource/trauma-spirituality/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 61773,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/resource/youth-evidence/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 63016,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/saved/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51639,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "ar/search/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 140761,
+      "lang": "ar",
+      "dir": "rtl",
+      "h1": 1
+    },
+    {
+      "path": "de/about/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 46942,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/approaches/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53812,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/books/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 68663,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/collections/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 87493,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/compare/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 110448,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/concepts/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 55527,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/contribute/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 46238,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/data-access/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51730,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/dossier/assessment-and-permission/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51868,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/dossier/culture-and-worldviews/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52414,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/dossier/digital-tools-and-responsibility/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52308,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/dossier/preferences-and-boundaries/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52344,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/dossier/question-to-design/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52037,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/dossier/reading-evidence/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52258,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/dossier/theory-and-integration/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52411,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/dossier/understanding-spiritual-experience/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52675,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/editorial/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 46182,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/ethics/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51971,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/events/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 44026,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/evidence/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 57097,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/governance/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 46512,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 66454,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/learning/foundations/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 46976,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/learning/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 45524,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/learning/professional/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 47051,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/learning/research/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 46877,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/library/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 130128,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/measure-brief-rcope/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 45609,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/measure-durel/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 45497,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/measure-meaning-questionnaire/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 45971,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/measure-rss-14/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 45219,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/measure-swbs-eksi-kardas/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 47267,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/measure-swbs-paloutzian-ellison/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 47957,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/measurement-guide/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 50615,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/measures/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 76353,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/media/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 44002,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/methods/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 58596,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/news/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 43739,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/participate/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 46230,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/practice/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 62486,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/projects/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 44094,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/publications/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 89801,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/reproducible-lab/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 54679,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/research/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 48344,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/research-guide/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 50655,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/resource/adolescent-contexts/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 54219,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/resource/ai-health-ethics/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51262,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/resource/aservic-principles/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52792,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/resource/atheist-struggles/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 54352,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/resource/attendance-cohorts/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 54396,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/resource/brief-rcope/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53868,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/resource/cbt-spiritual/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53245,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/resource/client-preference/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51563,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/resource/disaster-needs/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 54084,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/resource/durel/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53723,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/resource/family-spiritual/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53136,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/resource/german-meta/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53944,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/resource/group-counselling/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53473,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/resource/integration-meta-analysis/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 50539,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/resource/loneliness-spirituality/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53594,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/resource/malaysia-ukm-counselling/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52918,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/resource/meaning-questionnaire/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 54291,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/resource/metaphysical-diversity/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51689,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/resource/older-adults/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 54692,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/resource/prisma-guidance/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52248,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/resource/professional-training/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53711,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/resource/religious-cbt/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 54621,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/resource/sacred-tensions/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52398,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/resource/sipas/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53241,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/resource/spiritual-burnout/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53280,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/resource/spiritual-competence/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52607,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/resource/spiritual-counselling-book/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53923,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/resource/spiritual-integrity/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53528,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/resource/spiritual-struggles/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53417,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/resource/spirituality-dimensions/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53747,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/resource/swbs-eksi-kardas/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 56581,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/resource/swbs-paloutzian-ellison/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 57107,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/resource/techniques-101/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53497,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/resource/theories-book/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51394,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/resource/three-waves/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52416,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/resource/toad-directory/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 49964,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/resource/trauma-spirituality/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53533,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/resource/youth-evidence/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 54530,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/saved/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 44255,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "de/search/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 127310,
+      "lang": "de",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/about/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 45615,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/approaches/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52622,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/books/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 67466,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/collections/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 85963,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/compare/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 105164,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/concepts/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 54521,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/contribute/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 45075,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/data-access/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 50694,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/dossier/assessment-and-permission/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 50731,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/dossier/culture-and-worldviews/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51346,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/dossier/digital-tools-and-responsibility/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51178,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/dossier/preferences-and-boundaries/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51220,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/dossier/question-to-design/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51007,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/dossier/reading-evidence/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51226,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/dossier/theory-and-integration/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51311,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/dossier/understanding-spiritual-experience/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51533,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/editorial/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 45014,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/ethics/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 50835,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/events/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 42871,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/evidence/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 55402,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/governance/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 45194,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 65043,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/learning/foundations/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 45970,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/learning/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 44562,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/learning/professional/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 46072,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/learning/research/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 45787,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/library/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 127525,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/measure-brief-rcope/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 44482,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/measure-durel/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 44356,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/measure-meaning-questionnaire/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 44873,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/measure-rss-14/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 44123,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/measure-swbs-eksi-kardas/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 46124,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/measure-swbs-paloutzian-ellison/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 46748,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/measurement-guide/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 49570,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/measures/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 74529,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/media/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 42931,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/methods/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 57341,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/news/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 42627,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/participate/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 45171,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/practice/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 61259,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/projects/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 42968,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/publications/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 88523,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/reproducible-lab/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53602,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/research/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 47173,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/research-guide/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 49537,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/resource/adolescent-contexts/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52703,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/resource/ai-health-ethics/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 49903,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/resource/aservic-principles/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51453,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/resource/atheist-struggles/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52863,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/resource/attendance-cohorts/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52989,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/resource/brief-rcope/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52467,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/resource/cbt-spiritual/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51900,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/resource/client-preference/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 50221,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/resource/disaster-needs/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52678,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/resource/durel/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52273,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/resource/family-spiritual/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51816,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/resource/german-meta/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52568,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/resource/group-counselling/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52170,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/resource/integration-meta-analysis/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 49148,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/resource/loneliness-spirituality/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52239,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/resource/malaysia-ukm-counselling/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51658,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/resource/meaning-questionnaire/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52930,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/resource/metaphysical-diversity/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 50305,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/resource/older-adults/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53136,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/resource/prisma-guidance/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 50907,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/resource/professional-training/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52405,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/resource/religious-cbt/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53127,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/resource/sacred-tensions/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51009,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/resource/sipas/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51975,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/resource/spiritual-burnout/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51958,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/resource/spiritual-competence/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51273,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/resource/spiritual-counselling-book/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52632,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/resource/spiritual-integrity/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52156,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/resource/spiritual-struggles/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52057,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/resource/spirituality-dimensions/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52441,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/resource/swbs-eksi-kardas/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 55057,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/resource/swbs-paloutzian-ellison/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 55349,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/resource/techniques-101/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52220,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/resource/theories-book/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 50029,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/resource/three-waves/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51118,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/resource/toad-directory/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 48582,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/resource/trauma-spirituality/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52160,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/resource/youth-evidence/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53041,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/saved/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 43131,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "en/search/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 124639,
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/about/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 46039,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/approaches/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52972,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/books/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 67770,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/collections/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 86318,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/compare/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 106853,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/concepts/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 54832,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/contribute/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 45439,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/data-access/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 50851,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/dossier/assessment-and-permission/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51023,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/dossier/culture-and-worldviews/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51789,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/dossier/digital-tools-and-responsibility/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51533,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/dossier/preferences-and-boundaries/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51599,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/dossier/question-to-design/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51401,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/dossier/reading-evidence/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51679,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/dossier/theory-and-integration/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51671,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/dossier/understanding-spiritual-experience/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51963,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/editorial/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 45496,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/ethics/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51207,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/events/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 43280,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/evidence/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 55664,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/governance/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 45494,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 65321,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/learning/foundations/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 46298,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/learning/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 44918,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/learning/professional/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 46422,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/learning/research/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 46134,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/library/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 128062,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/measure-brief-rcope/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 44787,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/measure-durel/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 44673,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/measure-meaning-questionnaire/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 45176,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/measure-rss-14/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 44453,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/measure-swbs-eksi-kardas/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 46494,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/measure-swbs-paloutzian-ellison/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 47097,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/measurement-guide/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 49655,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/measures/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 75007,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/media/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 43292,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/methods/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 57711,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/news/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 43008,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/participate/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 45677,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/practice/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 61628,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/projects/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 43340,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/publications/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 88771,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/reproducible-lab/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53763,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/research/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 47437,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/research-guide/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 49763,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/resource/adolescent-contexts/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53041,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/resource/ai-health-ethics/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 50400,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/resource/aservic-principles/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51838,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/resource/atheist-struggles/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53129,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/resource/attendance-cohorts/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53286,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/resource/brief-rcope/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52697,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/resource/cbt-spiritual/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52212,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/resource/client-preference/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 50641,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/resource/disaster-needs/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53017,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/resource/durel/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52586,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/resource/family-spiritual/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52152,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/resource/german-meta/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52864,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/resource/group-counselling/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52486,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/resource/integration-meta-analysis/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 49594,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/resource/loneliness-spirituality/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52540,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/resource/malaysia-ukm-counselling/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51989,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/resource/meaning-questionnaire/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53203,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/resource/metaphysical-diversity/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 50776,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/resource/older-adults/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53550,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/resource/prisma-guidance/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51368,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/resource/professional-training/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52805,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/resource/religious-cbt/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53540,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/resource/sacred-tensions/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51451,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/resource/sipas/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52258,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/resource/spiritual-burnout/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52251,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/resource/spiritual-competence/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51722,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/resource/spiritual-counselling-book/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52946,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/resource/spiritual-integrity/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52541,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/resource/spiritual-struggles/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52348,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/resource/spirituality-dimensions/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52640,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/resource/swbs-eksi-kardas/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 55551,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/resource/swbs-paloutzian-ellison/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 55834,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/resource/techniques-101/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52511,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/resource/theories-book/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 50394,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/resource/three-waves/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51484,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/resource/toad-directory/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 49103,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/resource/trauma-spirituality/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52475,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/resource/youth-evidence/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53384,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/saved/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 43538,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "id/search/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 125248,
+      "lang": "id",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 66778,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/about/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 46015,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/approaches/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53112,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/books/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 67873,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/collections/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 86423,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/compare/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 107050,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/concepts/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 54965,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/contribute/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 45510,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/data-access/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 50944,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/dossier/assessment-and-permission/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51106,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/dossier/culture-and-worldviews/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51898,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/dossier/digital-tools-and-responsibility/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51688,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/dossier/preferences-and-boundaries/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51746,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/dossier/question-to-design/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51457,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/dossier/reading-evidence/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51763,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/dossier/theory-and-integration/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51766,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/dossier/understanding-spiritual-experience/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52134,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/editorial/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 45555,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/ethics/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51284,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/events/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 43287,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/evidence/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 55805,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/governance/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 45538,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 65455,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/learning/foundations/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 46351,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/learning/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 44972,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/learning/professional/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 46486,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/learning/research/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 46272,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/library/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 128414,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/measure-brief-rcope/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 44850,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/measure-durel/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 44735,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/measure-meaning-questionnaire/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 45223,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/measure-rss-14/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 44507,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/measure-swbs-eksi-kardas/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 46548,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/measure-swbs-paloutzian-ellison/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 47171,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/measurement-guide/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 49737,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/measures/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 75168,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/media/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 43326,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/methods/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 57848,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/news/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 43040,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/participate/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 45670,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/practice/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 61693,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/projects/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 43378,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/publications/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 88875,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/reproducible-lab/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53721,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/research/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 47505,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/research-guide/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 49815,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/resource/adolescent-contexts/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53171,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/resource/ai-health-ethics/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 50463,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/resource/aservic-principles/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51870,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/resource/atheist-struggles/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53333,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/resource/attendance-cohorts/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53432,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/resource/brief-rcope/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52839,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/resource/cbt-spiritual/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52360,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/resource/client-preference/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 50698,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/resource/disaster-needs/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53137,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/resource/durel/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52703,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/resource/family-spiritual/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52260,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/resource/german-meta/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53010,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/resource/group-counselling/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52580,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/resource/integration-meta-analysis/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 49645,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/resource/loneliness-spirituality/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52674,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/resource/malaysia-ukm-counselling/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52141,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/resource/meaning-questionnaire/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53293,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/resource/metaphysical-diversity/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 50822,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/resource/older-adults/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53630,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/resource/prisma-guidance/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51445,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/resource/professional-training/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52883,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/resource/religious-cbt/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53648,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/resource/sacred-tensions/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51494,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/resource/sipas/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52369,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/resource/spiritual-burnout/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52365,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/resource/spiritual-competence/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51798,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/resource/spiritual-counselling-book/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53043,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/resource/spiritual-integrity/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52657,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/resource/spiritual-struggles/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52478,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/resource/spirituality-dimensions/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52754,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/resource/swbs-eksi-kardas/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 55629,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/resource/swbs-paloutzian-ellison/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 56025,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/resource/techniques-101/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52642,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/resource/theories-book/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 50439,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/resource/three-waves/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51599,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/resource/toad-directory/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 49115,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/resource/trauma-spirituality/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52544,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/resource/youth-evidence/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53510,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/saved/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 43615,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ms/search/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 125556,
+      "lang": "ms",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/about/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 61899,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/approaches/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 69352,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/books/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 83544,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/collections/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 108689,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/compare/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 146012,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/concepts/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 71486,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/contribute/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 60181,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/data-access/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 67089,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/dossier/assessment-and-permission/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 67481,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/dossier/culture-and-worldviews/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 68374,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/dossier/digital-tools-and-responsibility/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 68211,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/dossier/preferences-and-boundaries/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 68018,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/dossier/question-to-design/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 67854,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/dossier/reading-evidence/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 68125,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/dossier/theory-and-integration/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 68031,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/dossier/understanding-spiritual-experience/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 68540,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/editorial/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 60889,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/ethics/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 67214,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/events/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 57454,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/evidence/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 75232,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/governance/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 61368,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 83685,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/learning/foundations/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 61220,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/learning/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 59457,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/learning/professional/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 61402,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/learning/research/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 61190,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/library/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 158378,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/measure-brief-rcope/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 59913,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/measure-durel/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 59858,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/measure-meaning-questionnaire/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 60232,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/measure-rss-14/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 59265,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/measure-swbs-eksi-kardas/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 62168,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/measure-swbs-paloutzian-ellison/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 63096,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/measurement-guide/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 66036,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/measures/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 96114,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/media/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 57454,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/methods/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 74869,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/news/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 57037,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/participate/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 60302,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/practice/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 79375,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/projects/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 57694,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/publications/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 106075,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/reproducible-lab/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 70254,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/research/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 62925,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/research-guide/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 66232,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/resource/adolescent-contexts/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 70255,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/resource/ai-health-ethics/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 66876,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/resource/aservic-principles/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 68614,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/resource/atheist-struggles/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 70086,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/resource/attendance-cohorts/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 70654,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/resource/brief-rcope/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 69914,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/resource/cbt-spiritual/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 68822,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/resource/client-preference/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 66943,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/resource/disaster-needs/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 70330,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/resource/durel/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 69900,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/resource/family-spiritual/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 68671,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/resource/german-meta/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 69867,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/resource/group-counselling/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 69142,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/resource/integration-meta-analysis/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 65656,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/resource/loneliness-spirituality/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 69094,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/resource/malaysia-ukm-counselling/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 68781,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/resource/meaning-questionnaire/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 70183,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/resource/metaphysical-diversity/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 67137,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/resource/older-adults/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 70940,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/resource/prisma-guidance/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 67984,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/resource/professional-training/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 69352,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/resource/religious-cbt/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 70523,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/resource/sacred-tensions/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 68093,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/resource/sipas/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 68905,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/resource/spiritual-burnout/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 68823,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/resource/spiritual-competence/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 68160,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/resource/spiritual-counselling-book/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 69663,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/resource/spiritual-integrity/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 69073,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/resource/spiritual-struggles/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 68931,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/resource/spirituality-dimensions/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 69260,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/resource/swbs-eksi-kardas/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 74002,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/resource/swbs-paloutzian-ellison/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 75197,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/resource/techniques-101/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 69114,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/resource/theories-book/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 66439,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/resource/three-waves/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 67940,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/resource/toad-directory/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 64944,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/resource/trauma-spirituality/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 68992,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/resource/youth-evidence/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 70545,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/saved/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 57934,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "ru/search/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 154727,
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/about/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 47471,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/approaches/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 54299,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/books/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 69132,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/collections/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 87918,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/compare/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 108206,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/concepts/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 55975,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/contribute/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 46696,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/data-access/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52641,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/dossier/assessment-and-permission/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52458,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/dossier/culture-and-worldviews/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53065,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/dossier/digital-tools-and-responsibility/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52852,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/dossier/preferences-and-boundaries/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53043,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/dossier/question-to-design/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52737,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/dossier/reading-evidence/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52907,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/dossier/theory-and-integration/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53117,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/dossier/understanding-spiritual-experience/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53179,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/editorial/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 46761,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/ethics/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52298,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/events/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 44482,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/evidence/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 57193,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/governance/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 46769,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 66778,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/learning/foundations/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 47487,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/learning/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 46176,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/learning/professional/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 47630,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/learning/research/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 47371,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/library/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 129407,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/measure-brief-rcope/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 46164,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/measure-durel/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 46030,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/measure-meaning-questionnaire/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 46552,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/measure-rss-14/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 45792,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/measure-swbs-eksi-kardas/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 47850,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/measure-swbs-paloutzian-ellison/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 48493,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/measurement-guide/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51403,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/measures/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 76168,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/media/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 44474,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/methods/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 59028,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/news/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 44160,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/participate/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 46766,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/practice/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 62945,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/projects/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 44620,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/publications/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 90335,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/reproducible-lab/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 55608,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/research/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 48914,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/research-guide/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51456,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/resource/adolescent-contexts/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 54471,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/resource/ai-health-ethics/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51528,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/resource/aservic-principles/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53069,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/resource/atheist-struggles/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 54468,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/resource/attendance-cohorts/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 54642,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/resource/brief-rcope/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 54082,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/resource/cbt-spiritual/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53462,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/resource/client-preference/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51835,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/resource/disaster-needs/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 54362,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/resource/durel/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53920,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/resource/family-spiritual/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53315,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/resource/german-meta/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 54173,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/resource/group-counselling/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53815,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/resource/integration-meta-analysis/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 50778,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/resource/loneliness-spirituality/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53892,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/resource/malaysia-ukm-counselling/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53347,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/resource/meaning-questionnaire/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 54686,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/resource/metaphysical-diversity/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51898,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/resource/older-adults/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 54805,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/resource/prisma-guidance/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52626,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/resource/professional-training/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 54080,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/resource/religious-cbt/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 54644,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/resource/sacred-tensions/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52577,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/resource/sipas/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53704,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/resource/spiritual-burnout/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53666,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/resource/spiritual-competence/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52888,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/resource/spiritual-counselling-book/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 54124,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/resource/spiritual-integrity/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53777,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/resource/spiritual-struggles/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53624,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/resource/spirituality-dimensions/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 54005,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/resource/swbs-eksi-kardas/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 56602,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/resource/swbs-paloutzian-ellison/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 57122,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/resource/techniques-101/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53702,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/resource/theories-book/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51636,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/resource/three-waves/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 52623,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/resource/toad-directory/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 50229,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/resource/trauma-spirituality/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 53674,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/resource/youth-evidence/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 54642,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/saved/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 44798,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "tr/search/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 126505,
+      "lang": "tr",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/about/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 42671,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/approaches/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 49449,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/books/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 64480,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/collections/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 81018,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/compare/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 96550,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/concepts/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51314,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/contribute/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 42446,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/data-access/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 47622,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/dossier/assessment-and-permission/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 47437,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/dossier/culture-and-worldviews/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 48179,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/dossier/digital-tools-and-responsibility/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 48027,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/dossier/preferences-and-boundaries/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 48019,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/dossier/question-to-design/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 47810,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/dossier/reading-evidence/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 48031,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/dossier/theory-and-integration/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 48109,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/dossier/understanding-spiritual-experience/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 48370,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/editorial/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 42084,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/ethics/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 47849,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/events/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 40324,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/evidence/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51633,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/governance/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 42238,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 61388,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/learning/foundations/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 43132,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/learning/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 41917,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/learning/professional/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 43229,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/learning/research/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 43030,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/library/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 120480,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/measure-brief-rcope/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 41740,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/measure-durel/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 41604,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/measure-meaning-questionnaire/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 42085,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/measure-rss-14/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 41413,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/measure-swbs-eksi-kardas/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 43241,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/measure-swbs-paloutzian-ellison/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 43831,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/measurement-guide/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 46444,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/measures/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 70112,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/media/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 40331,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/methods/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 54051,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/news/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 40093,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/participate/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 42517,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/practice/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 57651,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/projects/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 40370,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/publications/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 85137,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/reproducible-lab/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 50571,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/research/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 44280,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/research-guide/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 46485,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/resource/adolescent-contexts/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 49597,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/resource/ai-health-ethics/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 47028,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/resource/aservic-principles/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 48392,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/resource/atheist-struggles/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 49691,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/resource/attendance-cohorts/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 49877,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/resource/brief-rcope/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 49275,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/resource/cbt-spiritual/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 48780,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/resource/client-preference/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 47200,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/resource/disaster-needs/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 49438,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/resource/durel/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 49085,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/resource/family-spiritual/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 48718,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/resource/german-meta/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 49369,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/resource/group-counselling/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 49089,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/resource/integration-meta-analysis/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 46189,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/resource/loneliness-spirituality/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 49043,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/resource/malaysia-ukm-counselling/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 48521,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/resource/meaning-questionnaire/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 49696,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/resource/metaphysical-diversity/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 47326,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/resource/older-adults/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 49853,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/resource/prisma-guidance/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 47908,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/resource/professional-training/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 49221,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/resource/religious-cbt/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 49957,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/resource/sacred-tensions/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 47914,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/resource/sipas/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 48797,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/resource/spiritual-burnout/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 48803,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/resource/spiritual-competence/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 48197,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/resource/spiritual-counselling-book/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 49477,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/resource/spiritual-integrity/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 49011,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/resource/spiritual-struggles/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 48952,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/resource/spirituality-dimensions/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 49210,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/resource/swbs-eksi-kardas/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51406,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/resource/swbs-paloutzian-ellison/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 51802,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/resource/techniques-101/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 49062,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/resource/theories-book/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 47082,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/resource/three-waves/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 48055,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/resource/toad-directory/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 45715,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/resource/trauma-spirituality/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 49089,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/resource/youth-evidence/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 49640,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/saved/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 40646,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    },
+    {
+      "path": "zh/search/index.html",
+      "status": 200,
+      "matchesRelease": true,
+      "bytes": 117827,
+      "lang": "zh-Hans",
+      "dir": "ltr",
+      "h1": 1
+    }
+  ]
+}

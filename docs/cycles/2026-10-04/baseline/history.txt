@@ -1,0 +1,15 @@
+c247b7b559522e46c4f4f8d70330b94c2acabf54 audit: inspect existing source and actual public MARSAM before product changes
+58bf9f82c18c95f76f9a11bc84423acf94546679 fix: close final lower-left portal seam
+733ac30e0b71c9703a51a9dcc229cbf5b0d0fea1 fix: mirror complete first portal layer on the left
+2fe9954f3cbf590bb57ff7da0ac0fb2e8996e8a9 docs: record verified live MARSAM 0.9.2 symmetry repair
+aeddf3f175f0ea4a799d683cc18a2d05ecc557cb fix: close owner-marked portal recess and release 0.9.2
+394769af1306a5b6a2eeaeb5c298722aa0ae3b4c docs: preserve immutable MARSAM 0.9.1 live release record
+6aad1205811aa088112d963c88d3c35437374456 docs: close verified MARSAM 0.9.1 delivery
+fc42dbfd0c9779037118155452d6c91ceddb9b45 docs: describe live MARSAM 0.9.1 scholarly correction
+b0f1ddb59b97b480fb994226a196e2d40d184d9c fix: distinguish SWBS instruments and protect multilingual evidence continuity
+992a29bcefd350f54342d388b86c1f98e13bd212 Record verified MARSAM 0.9.0 live delivery, original service error and complete recheck
+78e21464efa5fcdcc30bbd480c6a8341a3796ab8 Merge scholarly evidence release 0.9.0
+05963f0512cab78e599945448d4365a6a705b835 Align scholarship browser process home with effective CI user
+8d25dd7af09efde530736b1bb712f5fdf84ec05b Strengthen MARSAM scholarly evidence, measurement and eight-language discovery
+90a2e98ecf2c7ed94ae20ffb22236b977c0a685b docs: preserve immutable MARSAM 0.8.3 publication record
+c8fdc35939532dc06751a91ea4ad2d547b6a2baf docs: update live release identity for deployed MARSAM 0.8.3

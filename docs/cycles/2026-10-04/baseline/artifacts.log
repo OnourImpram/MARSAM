@@ -1,0 +1,10 @@
+test_actual_jupyter_kernel_reproduces_notebook_output (__main__.ResearchArtifacts.test_actual_jupyter_kernel_reproduces_notebook_output) ... ok
+test_changed_bytes_are_rejected (__main__.ResearchArtifacts.test_changed_bytes_are_rejected) ... ok
+test_duplicate_ids_are_rejected_even_with_a_matching_checksum (__main__.ResearchArtifacts.test_duplicate_ids_are_rejected_even_with_a_matching_checksum) ... ok
+test_empty_templates_never_assert_a_finding_or_permission (__main__.ResearchArtifacts.test_empty_templates_never_assert_a_finding_or_permission) ... ok
+test_inventory_reproduces_and_exports_preserve_source_identity (__main__.ResearchArtifacts.test_inventory_reproduces_and_exports_preserve_source_identity) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.965s
+
+OK

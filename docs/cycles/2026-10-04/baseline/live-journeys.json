@@ -1,0 +1,482 @@
+[
+  {
+    "locale": "tr",
+    "route": "",
+    "status": 200,
+    "release": "0.9.4",
+    "overflow": false,
+    "h1": [
+      "Maneviyat ve Ruh Sağlığı Araştırmaları Merkezi"
+    ]
+  },
+  {
+    "locale": "tr",
+    "route": "about/",
+    "status": 200,
+    "release": "0.9.4",
+    "overflow": false,
+    "h1": [
+      "MARSAM hakkında"
+    ]
+  },
+  {
+    "locale": "tr",
+    "route": "evidence/",
+    "status": 200,
+    "release": "0.9.4",
+    "overflow": false,
+    "h1": [
+      "Kanıtı okumak"
+    ]
+  },
+  {
+    "locale": "tr",
+    "route": "measures/",
+    "status": 200,
+    "release": "0.9.4",
+    "overflow": false,
+    "h1": [
+      "Ölçme araçları dizini"
+    ]
+  },
+  {
+    "locale": "tr",
+    "route": "research/",
+    "status": 200,
+    "release": "0.9.4",
+    "overflow": false,
+    "h1": [
+      "Araştırma ve kaynak haritası"
+    ]
+  },
+  {
+    "locale": "tr",
+    "route": "search/",
+    "status": 200,
+    "release": "0.9.4",
+    "overflow": false,
+    "h1": [
+      "İçerikte ara"
+    ]
+  },
+  {
+    "locale": "en",
+    "route": "",
+    "status": 200,
+    "release": "0.9.4",
+    "overflow": false,
+    "h1": [
+      "Research Center for Spirituality and Mental Health"
+    ]
+  },
+  {
+    "locale": "en",
+    "route": "about/",
+    "status": 200,
+    "release": "0.9.4",
+    "overflow": false,
+    "h1": [
+      "About MARSAM"
+    ]
+  },
+  {
+    "locale": "en",
+    "route": "evidence/",
+    "status": 200,
+    "release": "0.9.4",
+    "overflow": false,
+    "h1": [
+      "Reading the evidence"
+    ]
+  },
+  {
+    "locale": "en",
+    "route": "measures/",
+    "status": 200,
+    "release": "0.9.4",
+    "overflow": false,
+    "h1": [
+      "Assessment directory"
+    ]
+  },
+  {
+    "locale": "en",
+    "route": "research/",
+    "status": 200,
+    "release": "0.9.4",
+    "overflow": false,
+    "h1": [
+      "Research and collection map"
+    ]
+  },
+  {
+    "locale": "en",
+    "route": "search/",
+    "status": 200,
+    "release": "0.9.4",
+    "overflow": false,
+    "h1": [
+      "Search the collection"
+    ]
+  },
+  {
+    "locale": "de",
+    "route": "",
+    "status": 200,
+    "release": "0.9.4",
+    "overflow": false,
+    "h1": [
+      "Forschungszentrum für Spiritualität und psychische Gesundheit"
+    ]
+  },
+  {
+    "locale": "de",
+    "route": "about/",
+    "status": 200,
+    "release": "0.9.4",
+    "overflow": false,
+    "h1": [
+      "Über MARSAM"
+    ]
+  },
+  {
+    "locale": "de",
+    "route": "evidence/",
+    "status": 200,
+    "release": "0.9.4",
+    "overflow": false,
+    "h1": [
+      "Evidenz verstehen"
+    ]
+  },
+  {
+    "locale": "de",
+    "route": "measures/",
+    "status": 200,
+    "release": "0.9.4",
+    "overflow": false,
+    "h1": [
+      "Instrumentenverzeichnis"
+    ]
+  },
+  {
+    "locale": "de",
+    "route": "research/",
+    "status": 200,
+    "release": "0.9.4",
+    "overflow": false,
+    "h1": [
+      "Forschung und Quellenübersicht"
+    ]
+  },
+  {
+    "locale": "de",
+    "route": "search/",
+    "status": 200,
+    "release": "0.9.4",
+    "overflow": false,
+    "h1": [
+      "Sammlung durchsuchen"
+    ]
+  },
+  {
+    "locale": "zh",
+    "route": "",
+    "status": 200,
+    "release": "0.9.4",
+    "overflow": false,
+    "h1": [
+      "灵性与心理健康研究中心"
+    ]
+  },
+  {
+    "locale": "zh",
+    "route": "about/",
+    "status": 200,
+    "release": "0.9.4",
+    "overflow": false,
+    "h1": [
+      "关于 MARSAM"
+    ]
+  },
+  {
+    "locale": "zh",
+    "route": "evidence/",
+    "status": 200,
+    "release": "0.9.4",
+    "overflow": false,
+    "h1": [
+      "理解证据"
+    ]
+  },
+  {
+    "locale": "zh",
+    "route": "measures/",
+    "status": 200,
+    "release": "0.9.4",
+    "overflow": false,
+    "h1": [
+      "测量工具目录"
+    ]
+  },
+  {
+    "locale": "zh",
+    "route": "research/",
+    "status": 200,
+    "release": "0.9.4",
+    "overflow": false,
+    "h1": [
+      "研究与资源概览"
+    ]
+  },
+  {
+    "locale": "zh",
+    "route": "search/",
+    "status": 200,
+    "release": "0.9.4",
+    "overflow": false,
+    "h1": [
+      "搜索内容"
+    ]
+  },
+  {
+    "locale": "ru",
+    "route": "",
+    "status": 200,
+    "release": "0.9.4",
+    "overflow": false,
+    "h1": [
+      "Исследовательский центр духовности и психического здоровья"
+    ]
+  },
+  {
+    "locale": "ru",
+    "route": "about/",
+    "status": 200,
+    "release": "0.9.4",
+    "overflow": false,
+    "h1": [
+      "О MARSAM"
+    ]
+  },
+  {
+    "locale": "ru",
+    "route": "evidence/",
+    "status": 200,
+    "release": "0.9.4",
+    "overflow": false,
+    "h1": [
+      "Как читать доказательства"
+    ]
+  },
+  {
+    "locale": "ru",
+    "route": "measures/",
+    "status": 200,
+    "release": "0.9.4",
+    "overflow": false,
+    "h1": [
+      "Каталог инструментов"
+    ]
+  },
+  {
+    "locale": "ru",
+    "route": "research/",
+    "status": 200,
+    "release": "0.9.4",
+    "overflow": false,
+    "h1": [
+      "Исследования и обзор коллекции"
+    ]
+  },
+  {
+    "locale": "ru",
+    "route": "search/",
+    "status": 200,
+    "release": "0.9.4",
+    "overflow": false,
+    "h1": [
+      "Поиск по коллекции"
+    ]
+  },
+  {
+    "locale": "ar",
+    "route": "",
+    "status": 200,
+    "release": "0.9.4",
+    "overflow": false,
+    "h1": [
+      "مركز أبحاث الروحانية والصحة النفسية"
+    ]
+  },
+  {
+    "locale": "ar",
+    "route": "about/",
+    "status": 200,
+    "release": "0.9.4",
+    "overflow": false,
+    "h1": [
+      "عن MARSAM"
+    ]
+  },
+  {
+    "locale": "ar",
+    "route": "evidence/",
+    "status": 200,
+    "release": "0.9.4",
+    "overflow": false,
+    "h1": [
+      "قراءة الأدلة"
+    ]
+  },
+  {
+    "locale": "ar",
+    "route": "measures/",
+    "status": 200,
+    "release": "0.9.4",
+    "overflow": false,
+    "h1": [
+      "دليل أدوات التقييم"
+    ]
+  },
+  {
+    "locale": "ar",
+    "route": "research/",
+    "status": 200,
+    "release": "0.9.4",
+    "overflow": false,
+    "h1": [
+      "البحث وخريطة المصادر"
+    ]
+  },
+  {
+    "locale": "ar",
+    "route": "search/",
+    "status": 200,
+    "release": "0.9.4",
+    "overflow": false,
+    "h1": [
+      "البحث في المجموعة"
+    ]
+  },
+  {
+    "locale": "id",
+    "route": "",
+    "status": 200,
+    "release": "0.9.4",
+    "overflow": false,
+    "h1": [
+      "Pusat Riset Spiritualitas dan Kesehatan Mental"
+    ]
+  },
+  {
+    "locale": "id",
+    "route": "about/",
+    "status": 200,
+    "release": "0.9.4",
+    "overflow": false,
+    "h1": [
+      "Tentang MARSAM"
+    ]
+  },
+  {
+    "locale": "id",
+    "route": "evidence/",
+    "status": 200,
+    "release": "0.9.4",
+    "overflow": false,
+    "h1": [
+      "Membaca bukti"
+    ]
+  },
+  {
+    "locale": "id",
+    "route": "measures/",
+    "status": 200,
+    "release": "0.9.4",
+    "overflow": false,
+    "h1": [
+      "Direktori asesmen"
+    ]
+  },
+  {
+    "locale": "id",
+    "route": "research/",
+    "status": 200,
+    "release": "0.9.4",
+    "overflow": false,
+    "h1": [
+      "Penelitian dan peta koleksi"
+    ]
+  },
+  {
+    "locale": "id",
+    "route": "search/",
+    "status": 200,
+    "release": "0.9.4",
+    "overflow": false,
+    "h1": [
+      "Cari dalam koleksi"
+    ]
+  },
+  {
+    "locale": "ms",
+    "route": "",
+    "status": 200,
+    "release": "0.9.4",
+    "overflow": false,
+    "h1": [
+      "Pusat Penyelidikan Kerohanian dan Kesihatan Mental"
+    ]
+  },
+  {
+    "locale": "ms",
+    "route": "about/",
+    "status": 200,
+    "release": "0.9.4",
+    "overflow": false,
+    "h1": [
+      "Tentang MARSAM"
+    ]
+  },
+  {
+    "locale": "ms",
+    "route": "evidence/",
+    "status": 200,
+    "release": "0.9.4",
+    "overflow": false,
+    "h1": [
+      "Memahami bukti"
+    ]
+  },
+  {
+    "locale": "ms",
+    "route": "measures/",
+    "status": 200,
+    "release": "0.9.4",
+    "overflow": false,
+    "h1": [
+      "Direktori penilaian"
+    ]
+  },
+  {
+    "locale": "ms",
+    "route": "research/",
+    "status": 200,
+    "release": "0.9.4",
+    "overflow": false,
+    "h1": [
+      "Penyelidikan dan peta koleksi"
+    ]
+  },
+  {
+    "locale": "ms",
+    "route": "search/",
+    "status": 200,
+    "release": "0.9.4",
+    "overflow": false,
+    "h1": [
+      "Cari dalam koleksi"
+    ]
+  }
+]

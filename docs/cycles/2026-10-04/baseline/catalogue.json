@@ -1,0 +1,1054 @@
+{
+  "sources": [
+    {
+      "id": "s-aservic",
+      "title": "Spiritual and religious best practices",
+      "year": 2025,
+      "url": "https://aservic.org/wp-content/uploads/2026/02/ASERVIC.-2025.-Spiritual-and-Religious-Best-Practices-1.pdf",
+      "checked": "2026-10-01",
+      "access": "Official PDF and cover inspected. ASERVIC approval and pending ACA endorsement are recorded as wording of this document, not a claim about a separately checked current ACA decision."
+    },
+    {
+      "id": "s-vieten",
+      "title": "Spiritual and religious competencies in psychology",
+      "year": 2022,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34264695/",
+      "checked": "2026-10-01",
+      "access": "Authoritative bibliographic record and accessible abstract inspected."
+    },
+    {
+      "id": "s-captari",
+      "title": "Integrating clients’ religion and spirituality within psychotherapy: A comprehensive meta-analysis",
+      "year": 2018,
+      "url": "https://doi.org/10.1002/jclp.22681",
+      "checked": "2026-10-01",
+      "access": "Authoritative bibliographic record and accessible abstract inspected."
+    },
+    {
+      "id": "s-swift",
+      "title": "Client preference accommodation for religious/spiritual integration and psychotherapy outcomes in naturalistic practice settings",
+      "year": 2022,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34553982/",
+      "checked": "2026-10-01",
+      "access": "Authoritative bibliographic record and accessible abstract inspected."
+    },
+    {
+      "id": "s-tunc",
+      "title": "Sacred Tensions: How Mental Health Professionals Navigate Spirituality, Ethics, and Professional Identity",
+      "year": 2025,
+      "url": "https://link.springer.com/article/10.1007/s11089-025-01244-0",
+      "checked": "2026-10-01",
+      "access": "Published article metadata and accessible abstract. No complete methods or findings review."
+    },
+    {
+      "id": "s-hodge",
+      "title": "Metaphysical diversity in mental health discourse: The key to scientific progress in the helping professions",
+      "year": 2021,
+      "url": "https://doi.org/10.37898/spc.2021.6.3.154",
+      "checked": "2026-10-01",
+      "access": "Authoritative bibliographic record and accessible abstract inspected."
+    },
+    {
+      "id": "s-pargament",
+      "title": "From research to practice: Three waves in the evolution of the psychology of religion and spirituality",
+      "year": 2023,
+      "url": "https://doi.org/10.37898/spc.2023.8.3.191",
+      "checked": "2026-10-01",
+      "access": "Authoritative bibliographic record and accessible abstract inspected."
+    },
+    {
+      "id": "s-eksi",
+      "title": "Psikoterapi ve Psikolojik Danışma Kuramları: Manevi Boyutlarıyla",
+      "year": 2024,
+      "url": "https://www.kaknus.com.tr/urun/psikoterapi-ve-psikolojik-danisma-kuramlari/",
+      "checked": "2026-10-01",
+      "access": "Publisher catalogue and edition metadata. No book chapters republished."
+    },
+    {
+      "id": "s-toad",
+      "title": "Türkiye Ölçme Araçları Dizini",
+      "year": null,
+      "url": "https://toad.halileksi.net/",
+      "checked": "2026-10-01",
+      "access": "Relevant official public resource page inspected."
+    },
+    {
+      "id": "s-prisma",
+      "title": "PRISMA statement",
+      "year": null,
+      "url": "https://www.prisma-statement.org/",
+      "checked": "2026-10-01",
+      "access": "Relevant official public resource page inspected."
+    },
+    {
+      "id": "s-who-ai",
+      "title": "Ethics and governance of artificial intelligence for health",
+      "year": 2021,
+      "url": "https://www.who.int/publications/i/item/9789240029200",
+      "checked": "2026-10-01",
+      "access": "Relevant official public resource page inspected."
+    },
+    {
+      "id": "s-ukm-counselling",
+      "title": "The Islamic counselling approach in addressing anxiety among adolescents in higher education institutions (HEIs)",
+      "year": 2024,
+      "url": "https://spaj.ukm.my/jalhikmah/index.php/jalhikmah/article/view/514",
+      "checked": "2026-10-01",
+      "access": "Official UKM journal landing page, author names, bibliographic record and abstract inspected. The abstract identifies content analysis of previous studies, articles and scholarly works."
+    },
+    {
+      "id": "s-trauma-spirituality",
+      "title": "Travmanın İzinde Maneviyat: Bütüncül Bir Psikoterapi Rehberi",
+      "year": 2026,
+      "url": "https://www.nobelyayin.com/travmanin-izinde-maneviyat-butuncul-bir-psikoterapi-rehberi-23386.html",
+      "checked": "2026-10-01",
+      "access": "Publisher catalogue and edition metadata. No book chapters republished."
+    },
+    {
+      "id": "s-spiritual-counselling-book",
+      "title": "Manevi Yönelimli Psikolojik Danışma",
+      "year": 2024,
+      "url": "https://www.nobelyayin.com/manevi-yonelimli-psikolojik-danisma-15894.html",
+      "checked": "2026-10-01",
+      "access": "Publisher catalogue and edition metadata. No book chapters republished."
+    },
+    {
+      "id": "s-techniques-101",
+      "title": "Psikoterapi ve Psikolojik Danışmada Manevi Yönelimli 101 Teknik",
+      "year": 2024,
+      "url": "https://www.nobelyayin.com/psikoterapi-ve-psikolojik-danismada-manevi-yonelimli-101-teknik-18476.html",
+      "checked": "2026-10-01",
+      "access": "Publisher catalogue and edition metadata. No book chapters republished."
+    },
+    {
+      "id": "s-family-spiritual",
+      "title": "Aile Terapisi: Manevi Yönelimli Bir Perspektif",
+      "year": 2023,
+      "url": "https://www.nobelyayin.com/aile-terapisi-manevi-yonelimli-bir-perspektif-16429.html",
+      "checked": "2026-10-01",
+      "access": "Publisher catalogue and edition metadata. No book chapters republished."
+    },
+    {
+      "id": "s-group-counselling",
+      "title": "Grupla Psikolojik Danışma Uygulamaları: Psikospiritüel Gelişim Kılavuzu",
+      "year": 2023,
+      "url": "https://www.nobelyayin.com/grupla-psikolojik-danisma-uygulamalari-psikospirituel-gelisim-kilavuzu-17677.html",
+      "checked": "2026-10-01",
+      "access": "Publisher catalogue and edition metadata. No book chapters republished."
+    },
+    {
+      "id": "s-cbt-spiritual",
+      "title": "Bilişsel Davranışçı Terapi: Manevi Perspektifli Teori ve Uygulamalar",
+      "year": 2022,
+      "url": "https://www.nobelyayin.com/bilissel-davranisci-terapi-manevi-perspektifli-teori-ve-uygulamalar-18795.html",
+      "checked": "2026-10-01",
+      "access": "Publisher catalogue and edition metadata. No book chapters republished."
+    },
+    {
+      "id": "s-spiritual-burnout",
+      "title": "The Spiritual Burnout Scale: Development and Psychometric Validation of a Measure of Spiritual Resource Depletion in Türkiye",
+      "year": 2026,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42766252/",
+      "checked": "2026-10-01",
+      "access": "Published article metadata and accessible abstract. No complete methods or findings review."
+    },
+    {
+      "id": "s-sipas",
+      "title": "Spiritually Integrated Process Assessment Scale (SIPAS): Validity and Reliability Study",
+      "year": 2026,
+      "url": "https://dergipark.org.tr/en/pub/spiritualpc/article/1793082",
+      "checked": "2026-10-01",
+      "access": "Published article metadata and accessible abstract. No complete methods or findings review."
+    },
+    {
+      "id": "s-loneliness-spirituality",
+      "title": "The Mediating Role of Loneliness in the Relationship Between Spirituality and Anxiety Levels Among University Students in Turkiye",
+      "year": 2026,
+      "url": "https://dergipark.org.tr/en/pub/spiritualpc/article/1603809",
+      "checked": "2026-10-01",
+      "access": "Published article metadata and accessible abstract. No complete methods or findings review."
+    },
+    {
+      "id": "s-professional-training",
+      "title": "Addressing Spirituality in Counseling: Turkish Mental Health Professionals’ Views on a Training Program for Professional Competencies",
+      "year": 2026,
+      "url": "https://link.springer.com/article/10.1007/s10943-025-02551-9",
+      "checked": "2026-10-01",
+      "access": "Published article metadata and accessible abstract. No complete methods or findings review."
+    },
+    {
+      "id": "s-spiritual-integrity",
+      "title": "Measuring Spiritual Integrity in Turkish Culture: A Psychometric Approach to Understanding the Relationship Between Spirituality and Well-Being",
+      "year": 2025,
+      "url": "https://link.springer.com/article/10.1007/s10943-025-02329-z",
+      "checked": "2026-10-01",
+      "access": "Published article metadata and accessible abstract. No complete methods or findings review."
+    },
+    {
+      "id": "s-spirituality-dimensions",
+      "title": "Unveiling the Multifaceted Nature of Spirituality: Assessing the Dimensions of the Spirituality Inventory in the Turkish Context—A Preliminary Adaptation and Validity Reliability Study",
+      "year": 2025,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40274690/",
+      "checked": "2026-10-01",
+      "access": "Published article metadata and accessible abstract. No complete methods or findings review."
+    },
+    {
+      "id": "s-spiritual-struggles",
+      "title": "Dini ve Manevi Mücadele Ölçeği’nin Türkçe Uyarlaması: Geçerlik ve Güvenirlik Çalışması",
+      "year": 2025,
+      "url": "https://dergipark.org.tr/tr/pub/ilted/article/1564927",
+      "checked": "2026-10-01",
+      "access": "Published article metadata and accessible abstract. No complete methods or findings review."
+    },
+    {
+      "id": "s-german-meta",
+      "title": "Religiosity, Spirituality and Mental Health: Meta-analysis of Studies from the German-Speaking Area",
+      "year": 2026,
+      "url": "https://doi.org/10.1007/s10943-025-02406-3",
+      "checked": "2026-10-03",
+      "access": "abstract-and-metadata. https://doi.org/10.1007/s10943-025-02406-3. No comprehensive full-text appraisal."
+    },
+    {
+      "id": "s-adolescent-contexts",
+      "title": "Unpacking the Complex Relationship Between Religiosity and Adolescent Mental Health: A Cross-Cultural Systematic Literature Review",
+      "year": 2026,
+      "url": "https://doi.org/10.1007/s10943-026-02736-w",
+      "checked": "2026-10-03",
+      "access": "abstract-and-metadata. https://doi.org/10.1007/s10943-026-02736-w. No comprehensive full-text appraisal."
+    },
+    {
+      "id": "s-youth-evidence",
+      "title": "Religiosity and spirituality in the prevention and management of depression and anxiety in young people: a systematic review and meta-analysis",
+      "year": 2023,
+      "url": "https://doi.org/10.1186/s12888-023-05091-2",
+      "checked": "2026-10-03",
+      "access": "abstract-and-metadata. https://doi.org/10.1186/s12888-023-05091-2. No comprehensive full-text appraisal."
+    },
+    {
+      "id": "s-older-adults",
+      "title": "Religiosity/Spirituality and Mental Health in Older Adults: A Systematic Review and Meta-Analysis of Observational Studies",
+      "year": 2022,
+      "url": "https://doi.org/10.3389/fmed.2022.877213",
+      "checked": "2026-10-03",
+      "access": "abstract-and-metadata. https://doi.org/10.3389/fmed.2022.877213. No comprehensive full-text appraisal."
+    },
+    {
+      "id": "s-attendance-cohorts",
+      "title": "Religious-service attendance and subsequent health and well-being throughout adulthood: evidence from three prospective cohorts",
+      "year": 2020,
+      "url": "https://doi.org/10.1093/ije/dyaa120",
+      "checked": "2026-10-03",
+      "access": "abstract-and-metadata. https://doi.org/10.1093/ije/dyaa120. No comprehensive full-text appraisal."
+    },
+    {
+      "id": "s-atheist-struggles",
+      "title": "Spiritual Struggles among Atheists: Links to Psychological Distress and Well-Being",
+      "year": 2018,
+      "url": "https://doi.org/10.3390/rel9080242",
+      "checked": "2026-10-03",
+      "access": "abstract-and-metadata. https://doi.org/10.3390/rel9080242. No comprehensive full-text appraisal."
+    },
+    {
+      "id": "s-religious-cbt",
+      "title": "Religious vs. Conventional Cognitive Behavioral Therapy for Major Depression in Persons With Chronic Medical Illness",
+      "year": 2015,
+      "url": "https://doi.org/10.1097/NMD.0000000000000273",
+      "checked": "2026-10-03",
+      "access": "abstract-and-metadata. https://europepmc.org/article/MED/25816046. No comprehensive full-text appraisal."
+    },
+    {
+      "id": "s-disaster-needs",
+      "title": "Deprem Sonrası Manevi Danışmanlık ve Rehberlik İhtiyaçları: Psiko-Sosyal Destek Uzmanlarının Görüşlerine Dayalı Nitel Bir Araştırma",
+      "year": 2025,
+      "url": "https://doi.org/10.56432/tmdrd.1645518",
+      "checked": "2026-10-03",
+      "access": "abstract-and-metadata. https://dergipark.org.tr/tr/pub/tmdrd/article/1645518. No comprehensive full-text appraisal."
+    },
+    {
+      "id": "s-brief-rcope",
+      "title": "The Brief RCOPE: Current Psychometric Status of a Short Measure of Religious Coping",
+      "year": 2011,
+      "url": "https://doi.org/10.3390/rel2010051",
+      "checked": "2026-10-03",
+      "access": "abstract-and-metadata. https://doi.org/10.3390/rel2010051. No comprehensive full-text appraisal."
+    },
+    {
+      "id": "s-meaning-questionnaire",
+      "title": "The meaning in life questionnaire: Assessing the presence of and search for meaning in life.",
+      "year": 2006,
+      "url": "https://doi.org/10.1037/0022-0167.53.1.80",
+      "checked": "2026-10-03",
+      "access": "official-measure-description-and-metadata. https://ppc.sas.upenn.edu/node/213. No comprehensive full-text appraisal."
+    },
+    {
+      "id": "s-durel",
+      "title": "The Duke University Religion Index (DUREL): A Five-Item Measure for Use in Epidemological Studies",
+      "year": 2010,
+      "url": "https://doi.org/10.3390/rel1010078",
+      "checked": "2026-10-03",
+      "access": "official-measure-description-and-metadata. https://scholars.duke.edu/publication/960636. No comprehensive full-text appraisal."
+    },
+    {
+      "id": "s-swbs-eksi-kardas",
+      "title": "Spiritual Well-Being: Scale Development and Validation",
+      "year": 2017,
+      "url": "https://doi.org/10.12738/spc.2017.1.0022",
+      "checked": "2026-10-04",
+      "access": "Targeted full-text inspection of abstract, Methods and Tables 4 and 6, especially printed pages 76–84. Table 6 visually inspected. This is not a comprehensive psychometric appraisal or correction/retraction search."
+    },
+    {
+      "id": "s-swbs-paloutzian-ellison",
+      "title": "Spiritual Well-Being: Conceptualization and Measurement",
+      "year": 1983,
+      "url": "https://doi.org/10.1177/009164718301100406",
+      "checked": "2026-10-04",
+      "access": "Sage article identity and abstract, author-hosted SWBS Manual version 2.02, 2022 Turkish form and its copyright/use statement. Full 1983 article methods and all adaptation evidence not appraised."
+    }
+  ],
+  "resources": [
+    {
+      "id": "aservic-principles",
+      "title": {
+        "tr": "Manevi ve dini konularda mesleki uygulama ilkeleri",
+        "en": "Professional principles for spirituality and religion",
+        "de": "Fachliche Prinzipien für Spiritualität und Religion",
+        "zh": "灵性与宗教领域的专业实践原则",
+        "ru": "Профессиональные принципы работы с духовностью и религией",
+        "ar": "المبادئ المهنية للتعامل مع الروحانية والدين",
+        "id": "Prinsip profesional tentang spiritualitas dan agama",
+        "ms": "Prinsip profesional bagi kerohanian dan agama"
+      },
+      "sections": [
+        "library",
+        "ethics",
+        "practice"
+      ],
+      "summary": "ASERVIC’s 2025 professional guidance. The record distinguishes the document’s approval wording and professional scope."
+    },
+    {
+      "id": "spiritual-competence",
+      "title": {
+        "tr": "Manevi ve dini yeterlikler",
+        "en": "Spiritual and religious competence",
+        "de": "Spirituelle und religiöse Kompetenz",
+        "zh": "灵性与宗教胜任力",
+        "ru": "Духовная и религиозная компетентность",
+        "ar": "الكفاءة في القضايا الروحانية والدينية",
+        "id": "Kompetensi spiritual dan keagamaan",
+        "ms": "Kompetensi kerohanian dan keagamaan"
+      },
+      "sections": [
+        "library",
+        "practice",
+        "learning",
+        "ethics"
+      ],
+      "summary": "A framework addressing assessment, treatment planning and competence. Used within the accessible abstract’s scope."
+    },
+    {
+      "id": "integration-meta-analysis",
+      "title": {
+        "tr": "Manevi uyarlamalar için meta-analitik kanıt",
+        "en": "Meta-analytic evidence for spiritual adaptations",
+        "de": "Metaanalytische Evidenz zu spirituellen Anpassungen",
+        "zh": "灵性适配的元分析证据",
+        "ru": "Метааналитические данные о духовной адаптации терапии",
+        "ar": "أدلة التحليل التلوي على التكييفات الروحانية",
+        "id": "Bukti meta-analitik untuk adaptasi spiritual",
+        "ms": "Bukti meta-analitik bagi penyesuaian kerohanian"
+      },
+      "sections": [
+        "library",
+        "methods",
+        "practice"
+      ],
+      "summary": "A meta-analysis of religiously and spiritually adapted psychotherapy across comparison conditions and outcomes."
+    },
+    {
+      "id": "client-preference",
+      "title": {
+        "tr": "Danışanın manevi entegrasyon tercihi",
+        "en": "Client preferences for spiritual integration",
+        "de": "Präferenzen für spirituelle Integration",
+        "zh": "来访者对灵性整合的偏好",
+        "ru": "Предпочтения клиента относительно духовной интеграции",
+        "ar": "تفضيلات المسترشد بشأن الدمج الروحاني",
+        "id": "Preferensi klien untuk integrasi spiritual",
+        "ms": "Keutamaan klien bagi integrasi kerohanian"
+      },
+      "sections": [
+        "library",
+        "practice",
+        "methods"
+      ],
+      "summary": "An observational study of preference accommodation in routine practice. Association alone does not establish causation."
+    },
+    {
+      "id": "sacred-tensions",
+      "title": {
+        "tr": "Maneviyat, etik ve mesleki kimlik",
+        "en": "Spirituality, ethics and professional identity",
+        "de": "Spiritualität, Ethik und berufliche Identität",
+        "zh": "灵性、伦理与专业身份",
+        "ru": "Духовность, этика и профессиональная идентичность",
+        "ar": "الروحانية والأخلاق والهوية المهنية",
+        "id": "Spiritualitas, etika, dan identitas profesional",
+        "ms": "Kerohanian, etika dan identiti profesional"
+      },
+      "sections": [
+        "library",
+        "publications",
+        "practice"
+      ],
+      "summary": "Qualitative research on spiritual values, professional boundaries and cultural sensitivity through eight practitioners’ experiences."
+    },
+    {
+      "id": "metaphysical-diversity",
+      "title": {
+        "tr": "Metafizik çeşitlilik üzerine kuramsal tartışma",
+        "en": "A theoretical discussion of metaphysical diversity",
+        "de": "Theoretische Diskussion metaphysischer Vielfalt",
+        "zh": "关于形而上学多样性的理论讨论",
+        "ru": "Теоретическое обсуждение метафизического разнообразия",
+        "ar": "نقاش نظري حول التنوع الميتافيزيقي",
+        "id": "Pembahasan teoretis tentang keberagaman metafisis",
+        "ms": "Perbincangan teori tentang kepelbagaian metafizik"
+      },
+      "sections": [
+        "library",
+        "concepts",
+        "approaches"
+      ],
+      "summary": "A theoretical examination of metaphysical assumptions in mental health discourse. It does not test treatment superiority."
+    },
+    {
+      "id": "three-waves",
+      "title": {
+        "tr": "Araştırmadan uygulamaya üç dalga",
+        "en": "Three waves from research to practice",
+        "de": "Drei Wellen von Forschung zur Praxis",
+        "zh": "从研究到实践的三次发展浪潮",
+        "ru": "Три волны от исследования к практике",
+        "ar": "ثلاث موجات من البحث إلى الممارسة",
+        "id": "Tiga gelombang dari riset ke praktik",
+        "ms": "Tiga gelombang daripada penyelidikan kepada amalan"
+      },
+      "sections": [
+        "library",
+        "concepts",
+        "methods"
+      ],
+      "summary": "A field review of the relationship between theory, research and practice in the psychology of religion and spirituality."
+    },
+    {
+      "id": "theories-book",
+      "title": {
+        "tr": "Psikoterapi ve Psikolojik Danışma Kuramları",
+        "en": "Psychotherapy and Counselling Theories",
+        "de": "Psychotherapie- und Beratungstheorien",
+        "zh": "心理治疗与咨询理论",
+        "ru": "Теории психотерапии и консультирования",
+        "ar": "نظريات العلاج النفسي والإرشاد",
+        "id": "Teori Psikoterapi dan Konseling",
+        "ms": "Teori Psikoterapi dan Kaunseling"
+      },
+      "sections": [
+        "library",
+        "books",
+        "learning"
+      ],
+      "summary": "An edited collection examining the spiritual dimensions of different psychotherapy theories."
+    },
+    {
+      "id": "toad-directory",
+      "title": {
+        "tr": "TOAD · Türkçe ölçme kaynağı aramak",
+        "en": "TOAD · Finding Turkish assessment resources",
+        "de": "TOAD · Türkischsprachige Instrumente finden",
+        "zh": "TOAD · 查找土耳其语测量资源",
+        "ru": "TOAD · Поиск инструментов на турецком языке",
+        "ar": "TOAD · البحث عن مصادر تقييم باللغة التركية",
+        "id": "TOAD · Menemukan sumber asesmen berbahasa Turki",
+        "ms": "TOAD · Mencari sumber penilaian bahasa Turki"
+      },
+      "sections": [
+        "library",
+        "measures"
+      ],
+      "summary": "An external index for Turkish assessment resources. No MARSAM integration or partnership is implied."
+    },
+    {
+      "id": "prisma-guidance",
+      "title": {
+        "tr": "PRISMA · Şeffaf derleme raporlaması",
+        "en": "PRISMA · Transparent review reporting",
+        "de": "PRISMA · Transparente Berichterstattung",
+        "zh": "PRISMA · 透明的综述报告",
+        "ru": "PRISMA · Прозрачная отчётность обзоров",
+        "ar": "PRISMA · الإبلاغ الشفاف عن المراجعات",
+        "id": "PRISMA · Pelaporan tinjauan yang transparan",
+        "ms": "PRISMA · Pelaporan tinjauan yang telus"
+      },
+      "sections": [
+        "library",
+        "methods"
+      ],
+      "summary": "An entry point to the official statement and extensions. A reporting checklist does not itself validate design or evidence quality."
+    },
+    {
+      "id": "ai-health-ethics",
+      "title": {
+        "tr": "Sağlıkta yapay zekâ, etik ve yönetişim",
+        "en": "AI for health, ethics and governance",
+        "de": "KI für Gesundheit, Ethik und Governance",
+        "zh": "健康领域人工智能的伦理与治理",
+        "ru": "ИИ в здравоохранении: этика и управление",
+        "ar": "الذكاء الاصطناعي للصحة، الأخلاقيات والحوكمة",
+        "id": "AI untuk kesehatan, etika, dan tata kelola",
+        "ms": "AI untuk kesihatan, etika dan tadbir urus"
+      },
+      "sections": [
+        "library",
+        "ethics",
+        "methods"
+      ],
+      "summary": "WHO’s 2021 guidance. Technical performance, clinical benefit, human oversight and responsibility require separate consideration."
+    },
+    {
+      "id": "malaysia-ukm-counselling",
+      "title": {
+        "tr": "İslami danışma ve kaygı üzerine literatür incelemesi",
+        "en": "Islamic counselling and anxiety. A literature study",
+        "de": "Islamische Beratung und Angst. Eine Literaturstudie",
+        "zh": "伊斯兰咨询与焦虑文献研究",
+        "ru": "Исламское консультирование и тревога. Анализ литературы",
+        "ar": "الإرشاد الإسلامي والقلق. دراسة أدبية",
+        "id": "Konseling Islam dan kecemasan. Kajian literatur",
+        "ms": "Kaunseling Islam dan kebimbangan. Kajian literatur"
+      },
+      "sections": [
+        "library",
+        "approaches"
+      ],
+      "summary": "A 2024 content analysis of previous publications, not a new clinical trial. It is not treated as independent causal evidence for anxiety reduction."
+    },
+    {
+      "id": "trauma-spirituality",
+      "title": {
+        "tr": "Travmanın İzinde Maneviyat",
+        "en": "Spirituality in the Wake of Trauma",
+        "de": "Spiritualität im Kontext von Trauma",
+        "zh": "创伤历程中的灵性",
+        "ru": "Духовность в контексте травмы",
+        "ar": "الروحانية في سياق الصدمة",
+        "id": "Spiritualitas dalam Jejak Trauma",
+        "ms": "Kerohanian dalam Jejak Trauma"
+      },
+      "sections": [
+        "library",
+        "books",
+        "learning"
+      ],
+      "summary": "A September 2026 edited volume addressing trauma and spirituality in psychotherapy."
+    },
+    {
+      "id": "spiritual-counselling-book",
+      "title": {
+        "tr": "Manevi Yönelimli Psikolojik Danışma",
+        "en": "Spiritually Oriented Psychological Counselling",
+        "de": "Spirituell orientierte psychologische Beratung",
+        "zh": "灵性取向心理咨询",
+        "ru": "Духовно ориентированное психологическое консультирование",
+        "ar": "الإرشاد النفسي ذو التوجه الروحي",
+        "id": "Konseling Psikologis Berorientasi Spiritual",
+        "ms": "Kaunseling Psikologi Berorientasikan Kerohanian"
+      },
+      "sections": [
+        "library",
+        "books",
+        "learning"
+      ],
+      "summary": "Conceptual foundations, culture, assessment, practice and ethics. Updated third edition."
+    },
+    {
+      "id": "techniques-101",
+      "title": {
+        "tr": "Manevi Yönelimli 101 Teknik",
+        "en": "101 Spiritually Oriented Techniques",
+        "de": "101 spirituell orientierte Techniken",
+        "zh": "101种灵性取向技术",
+        "ru": "101 духовно ориентированная техника",
+        "ar": "101 تقنية ذات توجه روحي",
+        "id": "101 Teknik Berorientasi Spiritual",
+        "ms": "101 Teknik Berorientasikan Kerohanian"
+      },
+      "sections": [
+        "library",
+        "books",
+        "learning"
+      ],
+      "summary": "A reference volume bringing together spiritually oriented techniques for counselling and psychotherapy."
+    },
+    {
+      "id": "family-spiritual",
+      "title": {
+        "tr": "Aile Terapisi",
+        "en": "Family Therapy",
+        "de": "Familientherapie",
+        "zh": "家庭治疗",
+        "ru": "Семейная терапия",
+        "ar": "العلاج الأسري",
+        "id": "Terapi Keluarga",
+        "ms": "Terapi Keluarga"
+      },
+      "sections": [
+        "library",
+        "books",
+        "learning"
+      ],
+      "summary": "An edited volume examining family therapy and spirituality from a spiritually oriented perspective."
+    },
+    {
+      "id": "group-counselling",
+      "title": {
+        "tr": "Grupla Psikolojik Danışma Uygulamaları",
+        "en": "Group Counselling Practices",
+        "de": "Praxis der Gruppenberatung",
+        "zh": "团体心理咨询实践",
+        "ru": "Практика группового консультирования",
+        "ar": "ممارسات الإرشاد النفسي الجماعي",
+        "id": "Praktik Konseling Kelompok",
+        "ms": "Amalan Kaunseling Kelompok"
+      },
+      "sections": [
+        "library",
+        "books",
+        "learning"
+      ],
+      "summary": "A guide addressing psychospiritual development through group work with adolescents and adults."
+    },
+    {
+      "id": "cbt-spiritual",
+      "title": {
+        "tr": "Bilişsel Davranışçı Terapi",
+        "en": "Cognitive Behavioural Therapy",
+        "de": "Kognitive Verhaltenstherapie",
+        "zh": "认知行为治疗",
+        "ru": "Когнитивно-поведенческая терапия",
+        "ar": "العلاج المعرفي السلوكي",
+        "id": "Terapi Kognitif Perilaku",
+        "ms": "Terapi Tingkah Laku Kognitif"
+      },
+      "sections": [
+        "library",
+        "books",
+        "learning"
+      ],
+      "summary": "A book discussing cognitive behavioural theory and practice from a spiritual perspective."
+    },
+    {
+      "id": "spiritual-burnout",
+      "title": {
+        "tr": "Manevi tükenmişliğin ölçülmesi",
+        "en": "Measuring spiritual burnout",
+        "de": "Spirituelles Ausgebranntsein erfassen",
+        "zh": "测量灵性耗竭",
+        "ru": "Измерение духовного выгорания",
+        "ar": "قياس الاحتراق الروحي",
+        "id": "Mengukur kelelahan spiritual",
+        "ms": "Mengukur kelesuan rohani"
+      },
+      "sections": [
+        "library",
+        "publications",
+        "measures"
+      ],
+      "summary": "Scale development and initial psychometric evaluation of spiritual resource depletion among university students in Türkiye."
+    },
+    {
+      "id": "sipas",
+      "title": {
+        "tr": "SIPAS. Maneviyatın danışma sürecine bütünleştirilmesi",
+        "en": "SIPAS. Integrating spirituality into counselling",
+        "de": "SIPAS. Spiritualität in der Beratung",
+        "zh": "SIPAS. 咨询中的灵性整合",
+        "ru": "SIPAS. Интеграция духовности в консультирование",
+        "ar": "SIPAS. دمج الروحانية في الإرشاد",
+        "id": "SIPAS. Integrasi spiritualitas dalam konseling",
+        "ms": "SIPAS. Integrasi kerohanian dalam kaunseling"
+      },
+      "sections": [
+        "library",
+        "publications",
+        "measures"
+      ],
+      "summary": "Turkish adaptation assessing professionals’ attitudes, self-efficacy and practice concerning spiritual integration."
+    },
+    {
+      "id": "loneliness-spirituality",
+      "title": {
+        "tr": "Manevi iyi oluş, yalnızlık ve kaygı",
+        "en": "Spiritual well-being, loneliness and anxiety",
+        "de": "Spirituelles Wohlbefinden, Einsamkeit und Angst",
+        "zh": "灵性福祉、孤独与焦虑",
+        "ru": "Духовное благополучие, одиночество и тревога",
+        "ar": "الرفاه الروحي والوحدة والقلق",
+        "id": "Kesejahteraan spiritual, kesepian, dan kecemasan",
+        "ms": "Kesejahteraan rohani, kesunyian dan kebimbangan"
+      },
+      "sections": [
+        "library",
+        "publications",
+        "practice"
+      ],
+      "summary": "A study of associations between spiritual well-being, loneliness and anxiety among university students in Türkiye."
+    },
+    {
+      "id": "professional-training",
+      "title": {
+        "tr": "Maneviyatla çalışmak için mesleki eğitim",
+        "en": "Professional training for working with spirituality",
+        "de": "Professionelle Ausbildung im Umgang mit Spiritualität",
+        "zh": "灵性相关工作的专业培训",
+        "ru": "Профессиональное обучение работе с духовностью",
+        "ar": "التدريب المهني للعمل مع الروحانية",
+        "id": "Pelatihan profesional untuk bekerja dengan spiritualitas",
+        "ms": "Latihan profesional untuk bekerja dengan kerohanian"
+      },
+      "sections": [
+        "library",
+        "publications",
+        "practice"
+      ],
+      "summary": "Qualitative research on Turkish mental health professionals’ training needs for spiritual counselling competencies."
+    },
+    {
+      "id": "spiritual-integrity",
+      "title": {
+        "tr": "Manevi bütünlük ve iyi oluş",
+        "en": "Spiritual integrity and well-being",
+        "de": "Spirituelle Integrität und Wohlbefinden",
+        "zh": "灵性整合与福祉",
+        "ru": "Духовная целостность и благополучие",
+        "ar": "التكامل الروحي والرفاه",
+        "id": "Integritas spiritual dan kesejahteraan",
+        "ms": "Integriti kerohanian dan kesejahteraan"
+      },
+      "sections": [
+        "library",
+        "publications",
+        "measures"
+      ],
+      "summary": "Psychometric research on measuring spiritual integrity and its association with well-being in Turkish culture."
+    },
+    {
+      "id": "spirituality-dimensions",
+      "title": {
+        "tr": "Maneviyatın çok boyutlu yapısı",
+        "en": "The multidimensional nature of spirituality",
+        "de": "Die Mehrdimensionalität der Spiritualität",
+        "zh": "灵性的多维结构",
+        "ru": "Многомерная природа духовности",
+        "ar": "طبيعة الروحانية متعددة الأبعاد",
+        "id": "Sifat multidimensi spiritualitas",
+        "ms": "Sifat kerohanian yang multidimensi"
+      },
+      "sections": [
+        "library",
+        "publications",
+        "measures"
+      ],
+      "summary": "A Turkish adaptation and preliminary psychometric evaluation of the Dimensions of Spirituality Inventory."
+    },
+    {
+      "id": "spiritual-struggles",
+      "title": {
+        "tr": "Dini ve manevi mücadele",
+        "en": "Religious and spiritual struggles",
+        "de": "Religiöse und spirituelle Konflikte",
+        "zh": "宗教与灵性挣扎",
+        "ru": "Религиозные и духовные трудности",
+        "ar": "الصراعات الدينية والروحية",
+        "id": "Pergumulan agama dan spiritual",
+        "ms": "Pergelutan agama dan kerohanian"
+      },
+      "sections": [
+        "library",
+        "publications",
+        "measures"
+      ],
+      "summary": "Turkish adaptation of the RSS-14 measure of religious and spiritual struggles in an adult sample."
+    },
+    {
+      "id": "german-meta",
+      "title": {
+        "tr": "Almanca konuşulan ülkelerde maneviyat ve ruh sağlığı",
+        "en": "Spirituality and mental health in German-speaking settings",
+        "de": "Spiritualität und psychische Gesundheit im deutschsprachigen Raum",
+        "zh": "德语地区的灵性与心理健康",
+        "ru": "Духовность и психическое здоровье в немецкоязычных странах",
+        "ar": "الروحانية والصحة النفسية في البيئات الناطقة بالألمانية",
+        "id": "Spiritualitas dan kesehatan mental di wilayah berbahasa Jerman",
+        "ms": "Kerohanian dan kesihatan mental di wilayah berbahasa Jerman"
+      },
+      "sections": [
+        "library",
+        "evidence"
+      ],
+      "summary": "39 studies: a small association, r = 0.083. Correlation does not establish causation. Culture and measurement matter."
+    },
+    {
+      "id": "adolescent-contexts",
+      "title": {
+        "tr": "Ergenlikte din ve ruh sağlığı: kültürler arası bulgular",
+        "en": "Religion and adolescent mental health across cultures",
+        "de": "Religion und psychische Gesundheit Jugendlicher im Kulturvergleich",
+        "zh": "跨文化视角下青少年的宗教与心理健康",
+        "ru": "Религия и психическое здоровье подростков в разных культурах",
+        "ar": "الدين والصحة النفسية للمراهقين عبر الثقافات",
+        "id": "Agama dan kesehatan mental remaja lintas budaya",
+        "ms": "Agama dan kesihatan mental remaja merentas budaya"
+      },
+      "sections": [
+        "library",
+        "evidence"
+      ],
+      "summary": "10 studies include beneficial, neutral and adverse associations. Contexts differ. Universal protection cannot be inferred."
+    },
+    {
+      "id": "youth-evidence",
+      "title": {
+        "tr": "Gençlerde depresyon ve kaygı: farklı maneviyat boyutları",
+        "en": "Depression and anxiety in young people: distinct spiritual dimensions",
+        "de": "Depression und Angst bei jungen Menschen: unterschiedliche spirituelle Dimensionen",
+        "zh": "青年抑郁与焦虑：不同的灵性维度",
+        "ru": "Депрессия и тревога у молодёжи: разные аспекты духовности",
+        "ar": "الاكتئاب والقلق لدى الشباب: أبعاد روحانية متمايزة",
+        "id": "Depresi dan kecemasan pada kaum muda: dimensi spiritual yang berbeda",
+        "ms": "Kemurungan dan kebimbangan golongan muda: dimensi kerohanian yang berbeza"
+      },
+      "sections": [
+        "library",
+        "evidence"
+      ],
+      "summary": "Spiritual wellbeing correlated inversely with depression. Religious importance showed no overall association. Study quality and intervention heterogeneity constrain conclusions."
+    },
+    {
+      "id": "older-adults",
+      "title": {
+        "tr": "İleri yaşta maneviyat ve ruh sağlığı",
+        "en": "Spirituality and mental health in later life",
+        "de": "Spiritualität und psychische Gesundheit im Alter",
+        "zh": "老年人的灵性与心理健康",
+        "ru": "Духовность и психическое здоровье в пожилом возрасте",
+        "ar": "الروحانية والصحة النفسية في سن متقدمة",
+        "id": "Spiritualitas dan kesehatan mental pada usia lanjut",
+        "ms": "Kerohanian dan kesihatan mental pada usia lanjut"
+      },
+      "sections": [
+        "library",
+        "evidence"
+      ],
+      "summary": "The review generally reported associations with better mental health. Observational findings do not establish treatment effects. Abstract and body report different study counts, so no total is reproduced here."
+    },
+    {
+      "id": "attendance-cohorts",
+      "title": {
+        "tr": "Dini katılım: üç ileriye dönük kohort",
+        "en": "Religious attendance: three prospective cohorts",
+        "de": "Religiöse Teilnahme: drei prospektive Kohorten",
+        "zh": "宗教活动参与：三项前瞻性队列",
+        "ru": "Участие в религиозных службах: три проспективные когорты",
+        "ar": "المشاركة الدينية: ثلاث مجموعات أترابية مستقبلية",
+        "id": "Kehadiran kegiatan agama: tiga kohort prospektif",
+        "ms": "Kehadiran kegiatan agama: tiga kohort prospektif"
+      },
+      "sections": [
+        "library",
+        "evidence"
+      ],
+      "summary": "Attendance was favourably associated with some subsequent mental health outcomes. US samples. Residual confounding remains possible. Attendance is not spirituality as a whole."
+    },
+    {
+      "id": "atheist-struggles",
+      "title": {
+        "tr": "Ateist örneklemlerde anlam ve manevi mücadele",
+        "en": "Meaning and spiritual struggles in atheist samples",
+        "de": "Sinnfragen und spirituelle Konflikte in atheistischen Stichproben",
+        "zh": "无神论者样本中的意义与灵性挣扎",
+        "ru": "Смысл и духовные трудности в выборках атеистов",
+        "ar": "المعنى والصراعات الروحانية في عينات ملحدة",
+        "id": "Makna dan pergumulan spiritual pada sampel ateis",
+        "ms": "Makna dan pergolakan kerohanian dalam sampel ateis"
+      },
+      "sections": [
+        "library",
+        "evidence"
+      ],
+      "summary": "Meaning-related struggles were associated with distress among atheist participants too. Cross-sectional samples do not represent all nonreligious people."
+    },
+    {
+      "id": "religious-cbt",
+      "title": {
+        "tr": "Dini uyarlamalı BDT ve standart BDT",
+        "en": "Religiously integrated versus conventional CBT",
+        "de": "Religiös integrierte und konventionelle Verhaltenstherapie",
+        "zh": "宗教整合式与常规认知行为疗法",
+        "ru": "Религиозно интегрированная и обычная КПТ",
+        "ar": "العلاج المعرفي السلوكي المدمج دينياً مقابل التقليدي",
+        "id": "CBT terintegrasi agama dibandingkan CBT konvensional",
+        "ms": "CBT berintegrasikan agama berbanding CBT konvensional"
+      },
+      "sections": [
+        "library",
+        "evidence"
+      ],
+      "summary": "The 132-person pilot trial found no significant overall group difference. A nonsignificant difference does not prove equivalence."
+    },
+    {
+      "id": "disaster-needs",
+      "title": {
+        "tr": "Deprem sonrasında manevi destek gereksinimleri",
+        "en": "Spiritual support needs after earthquakes",
+        "de": "Spiritueller Unterstützungsbedarf nach Erdbeben",
+        "zh": "地震后的灵性支持需求",
+        "ru": "Потребности в духовной поддержке после землетрясений",
+        "ar": "احتياجات الدعم الروحاني بعد الزلازل",
+        "id": "Kebutuhan dukungan spiritual setelah gempa",
+        "ms": "Keperluan sokongan rohani selepas gempa bumi"
+      },
+      "sections": [
+        "library",
+        "evidence"
+      ],
+      "summary": "Professional interviews explore spiritual support needs after earthquakes. Interviews do not establish intervention efficacy."
+    },
+    {
+      "id": "brief-rcope",
+      "title": {
+        "tr": "Brief RCOPE: dini başa çıkmanın iki boyutu",
+        "en": "Brief RCOPE: two dimensions of religious coping",
+        "de": "Brief RCOPE: zwei Dimensionen religiöser Bewältigung",
+        "zh": "Brief RCOPE：宗教应对的两个维度",
+        "ru": "Brief RCOPE: два аспекта религиозного совладания",
+        "ar": "Brief RCOPE: بُعدا التكيف الديني",
+        "id": "Brief RCOPE: dua dimensi koping religius",
+        "ms": "Brief RCOPE: dua dimensi daya tindak beragama"
+      },
+      "sections": [
+        "library",
+        "measures"
+      ],
+      "summary": "14 items distinguish positive and negative religious coping. Validity needs separate assessment in each language and culture."
+    },
+    {
+      "id": "meaning-questionnaire",
+      "title": {
+        "tr": "Yaşamın Anlamı Ölçeği: anlamın varlığı ve aranması",
+        "en": "Meaning in Life Questionnaire: presence and search",
+        "de": "Meaning in Life Questionnaire: Sinnerleben und Sinnsuche",
+        "zh": "生命意义问卷：意义感与意义追寻",
+        "ru": "Опросник смысла жизни: наличие и поиск",
+        "ar": "استبيان معنى الحياة: وجود المعنى والبحث عنه",
+        "id": "Kuesioner Makna Hidup: keberadaan dan pencarian",
+        "ms": "Soal Selidik Makna Hidup: kewujudan dan pencarian"
+      },
+      "sections": [
+        "library",
+        "measures"
+      ],
+      "summary": "10 items measure presence of meaning and search for meaning separately. Meaning is not identical to religiosity or psychiatric diagnosis."
+    },
+    {
+      "id": "durel",
+      "title": {
+        "tr": "DUREL: dini katılım ve içsel dindarlık",
+        "en": "DUREL: religious involvement and intrinsic religiosity",
+        "de": "DUREL: religiöse Beteiligung und intrinsische Religiosität",
+        "zh": "DUREL：宗教参与与内在宗教性",
+        "ru": "DUREL: религиозная вовлечённость и внутренняя религиозность",
+        "ar": "DUREL: المشاركة الدينية والتدين الداخلي",
+        "id": "DUREL: keterlibatan agama dan religiositas intrinsik",
+        "ms": "DUREL: penglibatan agama dan religiositi intrinsik"
+      },
+      "sections": [
+        "library",
+        "measures"
+      ],
+      "summary": "Five items address three dimensions of religiosity. It does not measure all spirituality or clinical need."
+    },
+    {
+      "id": "swbs-eksi-kardas",
+      "title": {
+        "tr": "Manevi İyi Oluş Ölçeği (SWBS). SWBS, Ekşi ve Kardaş. Türkiye’de geliştirilen 29 maddelik araç",
+        "en": "Spiritual Well-Being Scale (SWBS). SWBS, Ekşi and Kardaş. A 29-item instrument developed in Türkiye",
+        "de": "Skala des spirituellen Wohlbefindens (SWBS). SWBS von Ekşi und Kardaş. In der Türkei entwickeltes Instrument mit 29 Items",
+        "zh": "灵性福祉量表 (SWBS). Ekşi与Kardaş的SWBS。在土耳其开发的29条目工具",
+        "ru": "Шкала духовного благополучия (SWBS). SWBS Экши и Кардаша. Инструмент из 29 пунктов, разработанный в Турции",
+        "ar": "مقياس الرفاه الروحي (SWBS). مقياس SWBS لإكشي وكارداش. أداة من 29 فقرة طُورت في تركيا",
+        "id": "Skala Kesejahteraan Spiritual (SWBS). SWBS Ekşi dan Kardaş. Instrumen 29 butir yang dikembangkan di Türkiye",
+        "ms": "Skala Kesejahteraan Kerohanian (SWBS). SWBS Ekşi dan Kardaş. Instrumen 29 item yang dibangunkan di Türkiye"
+      },
+      "sections": [
+        "library",
+        "measures"
+      ],
+      "summary": "The 2017 development study reports 29 items, five response categories and three dimensions, transcendence, harmony with nature and anomie. Overall internal consistency is reported as .886. This instrument is not a Turkish translation of the 20-item Paloutzian and Ellison SWBS. The abstract reports SRMR .50, while Table 6 gives .050 on page 84. MARSAM records this unresolved source discrepancy rather than silently correcting it. Exploratory and confirmatory analyses use the same data. Independent validation, cross-group measurement invariance and clinical cut-offs are not established by this record."
+    },
+    {
+      "id": "swbs-paloutzian-ellison",
+      "title": {
+        "tr": "Manevi İyi Oluş Ölçeği (SWBS). SWBS, Paloutzian ve Ellison. 20 maddelik araç ve Türkçe form",
+        "en": "Spiritual Well-Being Scale (SWBS). SWBS, Paloutzian and Ellison. The 20-item instrument and Turkish form",
+        "de": "Skala des spirituellen Wohlbefindens (SWBS). SWBS von Paloutzian und Ellison. Instrument mit 20 Items und türkischer Fassung",
+        "zh": "灵性福祉量表 (SWBS). Paloutzian与Ellison的SWBS。20条目工具及土耳其语表单",
+        "ru": "Шкала духовного благополучия (SWBS). SWBS Палуциана и Эллисона. Инструмент из 20 пунктов и турецкая форма",
+        "ar": "مقياس الرفاه الروحي (SWBS). مقياس SWBS لبالوتزيان وإليسون. أداة من 20 فقرة وصيغتها التركية",
+        "id": "Skala Kesejahteraan Spiritual (SWBS). SWBS Paloutzian dan Ellison. Instrumen 20 butir dan formulir bahasa Turki",
+        "ms": "Skala Kesejahteraan Kerohanian (SWBS). SWBS Paloutzian dan Ellison. Instrumen 20 item dan borang bahasa Turki"
+      },
+      "sections": [
+        "library",
+        "measures"
+      ],
+      "summary": "Twenty items use six response categories to assess religious and existential wellbeing. Each subscale has ten items. The religious domain includes a relationship with God. This is a different instrument from the 29-item Ekşi and Kardaş scale. The author hosts a Turkish form dated 2022. Availability of a translation does not establish Turkish psychometric validity or measurement invariance, neither of which is verified here. No-cost use requires proper citation and retention of the copyright byline. MARSAM does not republish items or the scoring form. The two SWBS scores must not be assumed equivalent."
+    }
+  ],
+  "sections": [
+    "library",
+    "concepts",
+    "approaches",
+    "practice",
+    "ethics",
+    "methods",
+    "measures",
+    "learning",
+    "media",
+    "projects",
+    "participate",
+    "news",
+    "about",
+    "editorial",
+    "contribute",
+    "saved",
+    "search",
+    "publications",
+    "books",
+    "evidence",
+    "collections",
+    "compare",
+    "events",
+    "research",
+    "governance",
+    "research-guide",
+    "measurement-guide",
+    "data-access",
+    "reproducible-lab",
+    "measure-brief-rcope",
+    "measure-rss-14",
+    "measure-meaning-questionnaire",
+    "measure-durel",
+    "measure-swbs-eksi-kardas",
+    "measure-swbs-paloutzian-ellison"
+  ]
+}

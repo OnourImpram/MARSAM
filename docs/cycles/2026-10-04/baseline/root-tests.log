@@ -1,0 +1,691 @@
+
+> marsam-knowledge-platform@0.9.4 check
+> npm test && npm run build && npm run test:build
+
+
+> marsam-knowledge-platform@0.9.4 test
+> node --test tests/core.test.mjs tests/locales.test.mjs tests/campus.test.mjs tests/editorial-scope.test.mjs tests/design.test.mjs tests/design-controls.test.mjs tests/heritage.test.mjs tests/reading-room.test.mjs tests/discovery-contracts.test.mjs tests/identity-restoration.test.mjs tests/bookplate.test.mjs tests/research-toolkit.test.mjs tests/cini.test.mjs tests/approved-portal.test.mjs tests/scholarship.test.mjs tests/final-review.test.mjs
+
+TAP version 13
+# Subtest: approved receding-arch artwork, first-layer symmetry repair and lower-left seam closure are used in each locale and under both deployment roots
+ok 1 - approved receding-arch artwork, first-layer symmetry repair and lower-left seam closure are used in each locale and under both deployment roots
+  ---
+  duration_ms: 47.621941
+  type: 'test'
+  ...
+# Subtest: approved original composition remains byte-identical while the visual repair stays CSS-only
+ok 2 - approved original composition remains byte-identical while the visual repair stays CSS-only
+  ---
+  duration_ms: 2.849789
+  type: 'test'
+  ...
+# Subtest: approved picture is undistorted and cini recedes at every breakpoint
+ok 3 - approved picture is undistorted and cini recedes at every breakpoint
+  ---
+  duration_ms: 1.106503
+  type: 'test'
+  ...
+# Subtest: approved layered portal retains ebru and geometry without the removed subtitle or extra embellishments
+ok 4 - approved layered portal retains ebru and geometry without the removed subtitle or extra embellishments
+  ---
+  duration_ms: 56.10864
+  type: 'test'
+  ...
+# Subtest: previously rejected hero paragraph, search block and shortcut row are absent, while global search is preserved
+ok 5 - previously rejected hero paragraph, search block and shortcut row are absent, while global search is preserved
+  ---
+  duration_ms: 14.398766
+  type: 'test'
+  ...
+# Subtest: full-surface pattern and restrained page margins have noninteractive, print-safe and high-contrast alternatives
+ok 6 - full-surface pattern and restrained page margins have noninteractive, print-safe and high-contrast alternatives
+  ---
+  duration_ms: 0.978093
+  type: 'test'
+  ...
+# Subtest: institutional enhancement module is implemented
+ok 7 - institutional enhancement module is implemented
+  ---
+  duration_ms: 21.431071
+  type: 'test'
+  ...
+# Subtest: campus copy has exact eight-language coverage
+ok 8 - campus copy has exact eight-language coverage
+  ---
+  duration_ms: 2.411899
+  type: 'test'
+  ...
+# Subtest: design benchmarks are excluded from the public content
+ok 9 - design benchmarks are excluded from the public content
+  ---
+  duration_ms: 0.278993
+  type: 'test'
+  ...
+# Subtest: comparison selection validates IDs and caps four
+ok 10 - comparison selection validates IDs and caps four
+  ---
+  duration_ms: 0.398146
+  type: 'test'
+  ...
+# Subtest: event status uses dates, not evergreen registrations
+ok 11 - event status uses dates, not evergreen registrations
+  ---
+  duration_ms: 0.820617
+  type: 'test'
+  ...
+# Subtest: source comparison is descriptive, no efficacy ranking
+ok 12 - source comparison is descriptive, no efficacy ranking
+  ---
+  duration_ms: 0.359904
+  type: 'test'
+  ...
+# Subtest: planned institutional status accompanies the owner-requested Marmara masthead
+ok 13 - planned institutional status accompanies the owner-requested Marmara masthead
+  ---
+  duration_ms: 34.577552
+  type: 'test'
+  ...
+# Subtest: comparison page and source IDs present in every locale
+ok 14 - comparison page and source IDs present in every locale
+  ---
+  duration_ms: 22.720207
+  type: 'test'
+  ...
+# Subtest: source records require explicit scope rather than inferred institutional membership
+ok 15 - source records require explicit scope rather than inferred institutional membership
+  ---
+  duration_ms: 0.691886
+  type: 'test'
+  ...
+# Subtest: two original scalable Iznik compositions replace generic repeating page decoration
+ok 16 - two original scalable Iznik compositions replace generic repeating page decoration
+  ---
+  duration_ms: 3.632365
+  type: 'test'
+  ...
+# Subtest: page and hero margins use sparse non-repeating cini rather than a tiled wallpaper
+ok 17 - page and hero margins use sparse non-repeating cini rather than a tiled wallpaper
+  ---
+  duration_ms: 0.927628
+  type: 'test'
+  ...
+# Subtest: cini has explicit mobile, print and forced-colour fallbacks and no movement or glow
+ok 18 - cini has explicit mobile, print and forced-colour fallbacks and no movement or glow
+  ---
+  duration_ms: 0.707966
+  type: 'test'
+  ...
+# Subtest: unsupported masks omit ornament
+ok 19 - unsupported masks omit ornament
+  ---
+  duration_ms: 0.580076
+  type: 'test'
+  ...
+# Subtest: existing cini remains a subordinate background after owner approval
+ok 20 - existing cini remains a subordinate background after owner approval
+  ---
+  duration_ms: 0.728124
+  type: 'test'
+  ...
+# Subtest: stronger cini still fades completely before the reading container
+ok 21 - stronger cini still fades completely before the reading container
+  ---
+  duration_ms: 1.404701
+  type: 'test'
+  ...
+# Subtest: shared validation module exists
+ok 22 - shared validation module exists
+  ---
+  duration_ms: 1.157308
+  type: 'test'
+  ...
+# Subtest: exact eight requested locales
+ok 23 - exact eight requested locales
+  ---
+  duration_ms: 2.297985
+  type: 'test'
+  ...
+# Subtest: locale key parity and nonempty strings
+ok 24 - locale key parity and nonempty strings
+  ---
+  duration_ms: 4.551818
+  type: 'test'
+  ...
+# Subtest: HTML escaping
+ok 25 - HTML escaping
+  ---
+  duration_ms: 0.365525
+  type: 'test'
+  ...
+# Subtest: only https external URLs accepted
+ok 26 - only https external URLs accepted
+  ---
+  duration_ms: 0.317245
+  type: 'test'
+  ...
+# Subtest: Unicode search normalization
+ok 27 - Unicode search normalization
+  ---
+  duration_ms: 1.469934
+  type: 'test'
+  ...
+# Subtest: safe locale and base path routes
+ok 28 - safe locale and base path routes
+  ---
+  duration_ms: 0.557083
+  type: 'test'
+  ...
+# Subtest: all content is coherent
+ok 29 - all content is coherent
+  ---
+  duration_ms: 2.735255
+  type: 'test'
+  ...
+# Subtest: unapproved content cannot publish
+ok 30 - unapproved content cannot publish
+  ---
+  duration_ms: 0.706333
+  type: 'test'
+  ...
+# Subtest: all sources record their inspection limits
+ok 31 - all sources record their inspection limits
+  ---
+  duration_ms: 0.51782
+  type: 'test'
+  ...
+# Subtest: unique resource and dossier IDs
+ok 32 - unique resource and dossier IDs
+  ---
+  duration_ms: 0.228659
+  type: 'test'
+  ...
+# Subtest: restricted items and participant responses absent
+ok 33 - restricted items and participant responses absent
+  ---
+  duration_ms: 0.184717
+  type: 'test'
+  ...
+# Subtest: compact search labels stay on one line across scripts
+ok 34 - compact search labels stay on one line across scripts
+  ---
+  duration_ms: 1.079472
+  type: 'test'
+  ...
+# Subtest: refined home has an explicit editorial hierarchy rather than the former repeated grid
+ok 35 - refined home has an explicit editorial hierarchy rather than the former repeated grid
+  ---
+  duration_ms: 42.041767
+  type: 'test'
+  ...
+# Subtest: hero artwork is responsive and decorative, not falsely attributed campus photography
+ok 36 - hero artwork is responsive and decorative, not falsely attributed campus photography
+  ---
+  duration_ms: 2.487681
+  type: 'test'
+  ...
+# Subtest: design keeps the real sources, pathways and direct comparison controls
+ok 37 - design keeps the real sources, pathways and direct comparison controls
+  ---
+  duration_ms: 14.633717
+  type: 'test'
+  ...
+# Subtest: refinement has reduced-motion, print and RTL rules without hidden content tricks
+ok 38 - refinement has reduced-motion, print and RTL rules without hidden content tricks
+  ---
+  duration_ms: 0.742962
+  type: 'test'
+  ...
+# Subtest: publication-selection cards preserve the source type rather than calling every source a study
+ok 39 - publication-selection cards preserve the source type rather than calling every source a study
+  ---
+  duration_ms: 1.604105
+  type: 'test'
+  ...
+# Subtest: preview server serves WebP and university PNG with image MIME types
+ok 40 - preview server serves WebP and university PNG with image MIME types
+  ---
+  duration_ms: 0.246501
+  type: 'test'
+  ...
+# Subtest: browser and build share the retrieval contract without an old cache version
+ok 41 - browser and build share the retrieval contract without an old cache version
+  ---
+  duration_ms: 1.543712
+  type: 'test'
+  ...
+# Subtest: query preservation and accessible list controls are explicitly implemented
+ok 42 - query preservation and accessible list controls are explicitly implemented
+  ---
+  duration_ms: 0.370875
+  type: 'test'
+  ...
+# Subtest: invalid local contribution forms have an accessible error summary anchor
+ok 43 - invalid local contribution forms have an accessible error summary anchor
+  ---
+  duration_ms: 2.515462
+  type: 'test'
+  ...
+# Subtest: each work preserves source identity, uses scoped contributor mentions and has separate review states
+ok 44 - each work preserves source identity, uses scoped contributor mentions and has separate review states
+  ---
+  duration_ms: 7.919849
+  type: 'test'
+  ...
+# Subtest: translation records are tied to original and localized text without human approval
+ok 45 - translation records are tied to original and localized text without human approval
+  ---
+  duration_ms: 27.228253
+  type: 'test'
+  ...
+# Subtest: identifier retrieval is exact and stable across all eight locales
+ok 46 - identifier retrieval is exact and stable across all eight locales
+  ---
+  duration_ms: 126.240856
+  type: 'test'
+  ...
+# Subtest: semantic foreground roles meet their intended contrast combinations
+ok 47 - semantic foreground roles meet their intended contrast combinations
+  ---
+  duration_ms: 1.111432
+  type: 'test'
+  ...
+# Subtest: design benchmarks are not public catalogue institutions
+ok 48 - design benchmarks are not public catalogue institutions
+  ---
+  duration_ms: 1.003591
+  type: 'test'
+  ...
+# Subtest: centre name, not a personal research question, is the main headline
+ok 49 - centre name, not a personal research question, is the main headline
+  ---
+  duration_ms: 31.897756
+  type: 'test'
+  ...
+# Subtest: navigation and search do not promote reference institutions
+ok 50 - navigation and search do not promote reference institutions
+  ---
+  duration_ms: 119.465275
+  type: 'test'
+  ...
+# Subtest: homepage leads to centre research, education and publications
+ok 51 - homepage leads to centre research, education and publications
+  ---
+  duration_ms: 8.632433
+  type: 'test'
+  ...
+# Subtest: comparison summary row uses a concise field label
+ok 52 - comparison summary row uses a concise field label
+  ---
+  duration_ms: 0.174687
+  type: 'test'
+  ...
+# Subtest: SWBS names resolve to two different instruments, not two versions of one tool
+ok 53 - SWBS names resolve to two different instruments, not two versions of one tool
+  ---
+  duration_ms: 422.131617
+  type: 'test'
+  ...
+# Subtest: primary-source discrepancy and translation-versus-validation distinction remain explicit
+ok 54 - primary-source discrepancy and translation-versus-validation distinction remain explicit
+  ---
+  duration_ms: 1.324492
+  type: 'test'
+  ...
+# Subtest: about introduction appears once in the rendered main content in all languages
+ok 55 - about introduction appears once in the rendered main content in all languages
+  ---
+  duration_ms: 3.952455
+  type: 'test'
+  ...
+# Subtest: founder, RSS and themes have persisted source and edition bindings that reject stale changes
+ok 56 - founder, RSS and themes have persisted source and edition bindings that reject stale changes
+  ---
+  duration_ms: 21.517864
+  type: 'test'
+  ...
+# Subtest: new instrument source depth is not downgraded to abstract, items remain link-only
+ok 57 - new instrument source depth is not downgraded to abstract, items remain link-only
+  ---
+  duration_ms: 0.285966
+  type: 'test'
+  ...
+# Subtest: curated publication programme matches the canonical book and paper collection without duplicate sources
+ok 58 - curated publication programme matches the canonical book and paper collection without duplicate sources
+  ---
+  duration_ms: 1.74513
+  type: 'test'
+  ...
+# Subtest: book editions, contributor roles and September 2026 research remain distinct
+ok 59 - book editions, contributor roles and September 2026 research remain distinct
+  ---
+  duration_ms: 1.109349
+  type: 'test'
+  ...
+# Subtest: new books and papers have correct portable citations
+ok 60 - new books and papers have correct portable citations
+  ---
+  duration_ms: 1.539064
+  type: 'test'
+  ...
+# Subtest: heritage design and useful publication pages are implemented in all eight languages
+ok 61 - heritage design and useful publication pages are implemented in all eight languages
+  ---
+  duration_ms: 158.240519
+  type: 'test'
+  ...
+# Subtest: decoration remains locally served, optional to reading and motion safe
+ok 62 - decoration remains locally served, optional to reading and motion safe
+  ---
+  duration_ms: 0.751478
+  type: 'test'
+  ...
+# Subtest: owner-requested Marmara identity is restored in every locale without inventing completed establishment
+ok 63 - owner-requested Marmara identity is restored in every locale without inventing completed establishment
+  ---
+  duration_ms: 22.481379
+  type: 'test'
+  ...
+# Subtest: unwanted public homepage warning promotions are removed, not merely CSS hidden
+ok 64 - unwanted public homepage warning promotions are removed, not merely CSS hidden
+  ---
+  duration_ms: 9.795962
+  type: 'test'
+  ...
+# Subtest: restored hero keeps header search, patterned artwork and version 0.7 source records
+ok 65 - restored hero keeps header search, patterned artwork and version 0.7 source records
+  ---
+  duration_ms: 1.461007
+  type: 'test'
+  ...
+# Subtest: Arabic, Indonesian and Malay are real additional locales
+ok 66 - Arabic, Indonesian and Malay are real additional locales
+  ---
+  duration_ms: 1.397979
+  type: 'test'
+  ...
+# Subtest: all eight labels and full reading bodies exist without fallback
+ok 67 - all eight labels and full reading bodies exist without fallback
+  ---
+  duration_ms: 1.082838
+  type: 'test'
+  ...
+# Subtest: new locales have distinct safe routes and are searchable
+ok 68 - new locales have distinct safe routes and are searchable
+  ---
+  duration_ms: 43.145544
+  type: 'test'
+  ...
+# Subtest: Arabic pages declare RTL, original citations remain LTR
+ok 69 - Arabic pages declare RTL, original citations remain LTR
+  ---
+  duration_ms: 20.809167
+  type: 'test'
+  ...
+# Subtest: content updates without translations fail closed
+ok 70 - content updates without translations fail closed
+  ---
+  duration_ms: 0.730529
+  type: 'test'
+  ...
+# Subtest: all metadata and source notes remain valid after extension
+ok 71 - all metadata and source notes remain valid after extension
+  ---
+  duration_ms: 2.281244
+  type: 'test'
+  ...
+# Subtest: eight-language switching preserves the reading page
+ok 72 - eight-language switching preserves the reading page
+  ---
+  duration_ms: 2.805296
+  type: 'test'
+  ...
+# Subtest: Javanese and Sundanese remain outside the agreed academic language scope
+ok 73 - Javanese and Sundanese remain outside the agreed academic language scope
+  ---
+  duration_ms: 0.231264
+  type: 'test'
+  ...
+# Subtest: restored institutional shell retains five primary routes, planned status, and search before decoration
+ok 74 - restored institutional shell retains five primary routes, planned status, and search before decoration
+  ---
+  duration_ms: 29.309721
+  type: 'test'
+  ...
+# Subtest: page shell uses a single versioned stylesheet rather than CSS or regex patch layers
+ok 75 - page shell uses a single versioned stylesheet rather than CSS or regex patch layers
+  ---
+  duration_ms: 2.447167
+  type: 'test'
+  ...
+# Subtest: search indexes identify original works by DOI and ISBN, not merely editorial summaries
+ok 76 - search indexes identify original works by DOI and ISBN, not merely editorial summaries
+  ---
+  duration_ms: 24.354445
+  type: 'test'
+  ...
+# Subtest: exact and tolerant normalization are distinct and script-aware
+ok 77 - exact and tolerant normalization are distinct and script-aware
+  ---
+  duration_ms: 5.995365
+  type: 'test'
+  ...
+# Subtest: source detail exposes separate review dimensions without upgrading approval
+ok 78 - source detail exposes separate review dimensions without upgrading approval
+  ---
+  duration_ms: 2.409487
+  type: 'test'
+  ...
+# Subtest: stable-message contract supplies all eight languages, no fallback and exact review hashes
+ok 79 - stable-message contract supplies all eight languages, no fallback and exact review hashes
+  ---
+  duration_ms: 1.553035
+  type: 'test'
+  ...
+# Subtest: scholarly source roles allow real institutional citations but reject unsupported partnerships
+ok 80 - scholarly source roles allow real institutional citations but reject unsupported partnerships
+  ---
+  duration_ms: 1.005331
+  type: 'test'
+  ...
+# Subtest: catalogue rendering imports do not mutate source content or base locale dictionaries
+ok 81 - catalogue rendering imports do not mutate source content or base locale dictionaries
+  ---
+  duration_ms: 0.694809
+  type: 'test'
+  ...
+# Subtest: tokens define semantic colour roles and the stylesheet includes RTL, reduced motion and forced colours
+ok 82 - tokens define semantic colour roles and the stylesheet includes RTL, reduced motion and forced colours
+  ---
+  duration_ms: 0.67348
+  type: 'test'
+  ...
+# Subtest: matte bookplate has no white overlay, gradient or glowing wordmark
+ok 83 - matte bookplate has no white overlay, gradient or glowing wordmark
+  ---
+  duration_ms: 1.26725
+  type: 'test'
+  ...
+# Subtest: source-grounded research guides are full, distinct localized pages, searchable without restoring rejected hero
+ok 84 - source-grounded research guides are full, distinct localized pages, searchable without restoring rejected hero
+  ---
+  duration_ms: 306.058494
+  type: 'test'
+  ...
+# Subtest: research templates are explicit empty drafts, not invented findings or permissions
+ok 85 - research templates are explicit empty drafts, not invented findings or permissions
+  ---
+  duration_ms: 0.547244
+  type: 'test'
+  ...
+# Subtest: scope projection archives self-help while retaining explicitly spiritual professional books
+ok 86 - scope projection archives self-help while retaining explicitly spiritual professional books
+  ---
+  duration_ms: 1.081924
+  type: 'test'
+  ...
+# Subtest: evidence includes international synthesis, prospective observation, null trial and Turkish qualitative research
+ok 87 - evidence includes international synthesis, prospective observation, null trial and Turkish qualitative research
+  ---
+  duration_ms: 0.621893
+  type: 'test'
+  ...
+# Subtest: shared brief freshness rejects outdated or incomplete language editions
+ok 88 - shared brief freshness rejects outdated or incomplete language editions
+  ---
+  duration_ms: 3.309871
+  type: 'test'
+  ...
+# Subtest: scope audit is exhaustive and does not promote machine review to human approval
+ok 89 - scope audit is exhaustive and does not promote machine review to human approval
+  ---
+  duration_ms: 10.359538
+  type: 'test'
+  ...
+# Subtest: new evidence and measure content is searchable in every locale
+ok 90 - new evidence and measure content is searchable in every locale
+  ---
+  duration_ms: 80.785199
+  type: 'test'
+  ...
+# Subtest: candidate discovery deduplicates DOI identity and never approves or publishes
+ok 91 - candidate discovery deduplicates DOI identity and never approves or publishes
+  ---
+  duration_ms: 1.245549
+  type: 'test'
+  ...
+# Subtest: scholarly renderers preserve claim limits, source routes and native direction
+ok 92 - scholarly renderers preserve claim limits, source routes and native direction
+  ---
+  duration_ms: 5.302158
+  type: 'test'
+  ...
+# Subtest: publication rejects missing scope decisions and unbound populations or limits
+ok 93 - publication rejects missing scope decisions and unbound populations or limits
+  ---
+  duration_ms: 2.037722
+  type: 'test'
+  ...
+# Subtest: new study and psychometric articles export complete journal citations
+ok 94 - new study and psychometric articles export complete journal citations
+  ---
+  duration_ms: 1.845011
+  type: 'test'
+  ...
+# Subtest: source identity cannot be rebound beneath fresh scholarly editions
+ok 95 - source identity cannot be rebound beneath fresh scholarly editions
+  ---
+  duration_ms: 2.256521
+  type: 'test'
+  ...
+# Subtest: an invalid scope action fails closed rather than restoring archived works
+ok 96 - an invalid scope action fails closed rather than restoring archived works
+  ---
+  duration_ms: 0.684661
+  type: 'test'
+  ...
+# Subtest: RSS full original instrument name retrieves its profile in all eight editions
+ok 97 - RSS full original instrument name retrieves its profile in all eight editions
+  ---
+  duration_ms: 143.449144
+  type: 'test'
+  ...
+# Subtest: Arabic scholarly numeric ranges and Latin formulas retain their reading order
+ok 98 - Arabic scholarly numeric ranges and Latin formulas retain their reading order
+  ---
+  duration_ms: 2.022784
+  type: 'test'
+  ...
+1..98
+# tests 98
+# suites 0
+# pass 98
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1427.800983
+
+> marsam-knowledge-platform@0.9.4 build
+> node scripts/build.mjs
+
+Built 681 pages + 404, 8 languages, 8 dossiers, 38 source records. BASE_PATH=/. PREVIEW ONLY.
+
+> marsam-knowledge-platform@0.9.4 test:build
+> node --test tests/build.test.mjs
+
+TAP version 13
+# Subtest: exact route parity with no fabricated content counts
+ok 1 - exact route parity with no fabricated content counts
+  ---
+  duration_ms: 1.00506
+  type: 'test'
+  ...
+# Subtest: all localized HTML has correct lang, navigation, single h1 and draft robots
+ok 2 - all localized HTML has correct lang, navigation, single h1 and draft robots
+  ---
+  duration_ms: 41.687176
+  type: 'test'
+  ...
+# Subtest: every generated internal link, asset, download and fragment resolves
+ok 3 - every generated internal link, asset, download and fragment resolves
+  ---
+  duration_ms: 8404.61059
+  type: 'test'
+  ...
+# Subtest: localized content has no internal placeholders or chat citation tokens
+ok 4 - localized content has no internal placeholders or chat citation tokens
+  ---
+  duration_ms: 33.236771
+  type: 'test'
+  ...
+# Subtest: source records have real metadata and downloadable citation representations
+ok 5 - source records have real metadata and downloadable citation representations
+  ---
+  duration_ms: 20.794294
+  type: 'test'
+  ...
+# Subtest: all locale search indexes cover sections, dossiers and records without duplicates
+ok 6 - all locale search indexes cover sections, dossiers and records without duplicates
+  ---
+  duration_ms: 6.877489
+  type: 'test'
+  ...
+# Subtest: preview contains no external embeds, fonts, trackers or submission endpoints
+ok 7 - preview contains no external embeds, fonts, trackers or submission endpoints
+  ---
+  duration_ms: 55.49991
+  type: 'test'
+  ...
+# Subtest: non-publication defaults persist, publication flag fails closed
+ok 8 - non-publication defaults persist, publication flag fails closed
+  ---
+  duration_ms: 85.485477
+  type: 'test'
+  ...
+# Subtest: bibliography and IAPOS inspection ledger do not claim independent or full review
+ok 9 - bibliography and IAPOS inspection ledger do not claim independent or full review
+  ---
+  duration_ms: 1.584395
+  type: 'test'
+  ...
+# Subtest: public pages contain no benchmark directory or fabricated partner relationship
+ok 10 - public pages contain no benchmark directory or fabricated partner relationship
+  ---
+  duration_ms: 29.845346
+  type: 'test'
+  ...
+# Subtest: review records and emitted design use exact source-bound metadata
+ok 11 - review records and emitted design use exact source-bound metadata
+  ---
+  duration_ms: 13.689776
+  type: 'test'
+  ...
+1..11
+# tests 11
+# suites 0
+# pass 11
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 9021.404724

@@ -1,0 +1,10 @@
+{
+  "release": "marsam-portal-seam-closure-0.9.4",
+  "version": "0.9.4",
+  "sourceCommit": "58bf9f82c18c95f76f9a11bc84423acf94546679",
+  "url": "https://onourimpram.github.io/MARSAM/",
+  "mode": "institutional-review",
+  "formalApproval": false,
+  "scientificApproval": false,
+  "humanLanguageReview": false
+}

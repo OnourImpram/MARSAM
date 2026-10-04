@@ -1,0 +1,802 @@
+[
+  {
+    "id": "german-meta",
+    "brief": {
+      "design": "meta-analysis",
+      "population": "39 studies from German-speaking settings",
+      "findingDirection": "small-positive",
+      "doi": "10.1007/s10943-025-02406-3",
+      "inspection": "abstract-and-metadata",
+      "checked": "2026-10-03",
+      "effect": {
+        "r": 0.083,
+        "CI95": [
+          0.055,
+          0.111
+        ]
+      },
+      "onlineDate": "2025-08-12",
+      "issueYear": 2026,
+      "limitationCodes": [
+        "association-not-causation",
+        "cultural-transfer-uncertain",
+        "construct-overlap"
+      ]
+    },
+    "bibliography": {
+      "type": "article",
+      "authors": [
+        "Christian Zwingmann"
+      ],
+      "editors": [],
+      "date": "2026-02",
+      "journal": "Journal of Religion and Health",
+      "volume": "65",
+      "issue": "1",
+      "pages": "132-157",
+      "doi": "10.1007/s10943-025-02406-3",
+      "note": {
+        "tr": "Korelasyon nedensellik göstermez. Kültür ve ölçüm önemlidir.",
+        "en": "Correlation does not establish causation. Culture and measurement matter.",
+        "de": "Korrelation belegt keine Kausalität. Kultur und Messung sind relevant.",
+        "zh": "相关不等于因果，文化与测量方式会影响解释。",
+        "ru": "Корреляция не доказывает причинность. Важны культура и измерение.",
+        "ar": "الارتباط لا يثبت السببية. للسياق الثقافي والقياس أهمية.",
+        "id": "Korelasi bukan bukti sebab akibat. Budaya dan pengukuran penting.",
+        "ms": "Korelasi tidak membuktikan sebab akibat. Budaya dan pengukuran penting."
+      },
+      "onlineDate": "2025-08-12"
+    },
+    "edition": {
+      "title": "Spirituality and mental health in German-speaking settings",
+      "finding": "39 studies: a small association, r = 0.083.",
+      "limit": "Correlation does not establish causation. Culture and measurement matter.",
+      "briefHash": "853b813c2df56f13f5f1ba6052b14bd58273e76ed1546f31e954f6507b8f2dc0",
+      "humanReviewed": false,
+      "scientificApproval": false,
+      "population": "39 studies from German-speaking settings."
+    }
+  },
+  {
+    "id": "adolescent-contexts",
+    "brief": {
+      "design": "systematic-review",
+      "population": "10 studies, adolescents, multiple countries",
+      "findingDirection": "mixed",
+      "doi": "10.1007/s10943-026-02736-w",
+      "inspection": "abstract-and-metadata",
+      "checked": "2026-10-03",
+      "limitationCodes": [
+        "heterogeneous-contexts",
+        "no-universal-protection"
+      ]
+    },
+    "bibliography": {
+      "type": "article",
+      "authors": [
+        "Lydia Mannion",
+        "Maurice Harmon",
+        "Trevor O’Brien"
+      ],
+      "editors": [],
+      "date": "2026-07-11",
+      "journal": "Journal of Religion and Health",
+      "volume": "",
+      "issue": "",
+      "pages": "",
+      "doi": "10.1007/s10943-026-02736-w",
+      "note": {
+        "tr": "Bağlamlar farklıdır. Evrensel koruyuculuk çıkarılamaz.",
+        "en": "Contexts differ. Universal protection cannot be inferred.",
+        "de": "Unterschiedliche Kontexte erlauben keine universelle Schutzannahme.",
+        "zh": "情境不同，不能推断普遍的保护作用。",
+        "ru": "Контексты различаются. Универсальная защита не доказана.",
+        "ar": "تختلف السياقات، ولا يمكن استنتاج حماية شاملة.",
+        "id": "Konteks berbeda. Perlindungan universal tidak dapat disimpulkan.",
+        "ms": "Konteks berbeza. Perlindungan sejagat tidak dapat disimpulkan."
+      }
+    },
+    "edition": {
+      "title": "Religion and adolescent mental health across cultures",
+      "finding": "10 studies include beneficial, neutral and adverse associations.",
+      "limit": "Contexts differ. Universal protection cannot be inferred.",
+      "briefHash": "76ff9599e07b76e8f747ec4c5dee18276a4f3735105ae9bc95c911c9e67e1c76",
+      "humanReviewed": false,
+      "scientificApproval": false,
+      "population": "10 studies of adolescents across countries and religious contexts."
+    }
+  },
+  {
+    "id": "youth-evidence",
+    "brief": {
+      "design": "meta-analysis",
+      "population": "45 longitudinal and 29 intervention studies, ages 10–24",
+      "findingDirection": "mixed",
+      "doi": "10.1186/s12888-023-05091-2",
+      "inspection": "abstract-and-metadata",
+      "checked": "2026-10-03",
+      "effects": {
+        "wellbeingDepression": {
+          "r": -0.153,
+          "CI95": [
+            -0.187,
+            -0.118
+          ]
+        },
+        "importanceDepression": {
+          "r": -0.024,
+          "CI95": [
+            -0.053,
+            0.004
+          ]
+        },
+        "negativeCopingDepression": {
+          "r": 0.09,
+          "CI95": [
+            -0.009,
+            0.188
+          ]
+        }
+      },
+      "limitationCodes": [
+        "mostly-low-moderate-quality",
+        "intervention-heterogeneity",
+        "high-income-predominance"
+      ]
+    },
+    "bibliography": {
+      "type": "article",
+      "authors": [
+        "Shilpa Aggarwal",
+        "Judith Wright",
+        "Amy Morgan",
+        "George Patton",
+        "Nicola Reavley"
+      ],
+      "editors": [],
+      "date": "2023-10-10",
+      "journal": "BMC Psychiatry",
+      "volume": "23",
+      "issue": "1",
+      "pages": "729",
+      "doi": "10.1186/s12888-023-05091-2",
+      "note": {
+        "tr": "Çalışma kalitesi ve müdahale çeşitliliği çıkarımları sınırlar.",
+        "en": "Study quality and intervention heterogeneity constrain conclusions.",
+        "de": "Studienqualität und heterogene Interventionen begrenzen Schlussfolgerungen.",
+        "zh": "研究质量与干预差异限制结论。",
+        "ru": "Качество исследований и неоднородность вмешательств ограничивают выводы.",
+        "ar": "تحد جودة الدراسات وتباين التدخلات من الاستنتاجات.",
+        "id": "Kualitas studi dan keragaman intervensi membatasi kesimpulan.",
+        "ms": "Kualiti kajian dan kepelbagaian intervensi mengehadkan kesimpulan."
+      }
+    },
+    "edition": {
+      "title": "Depression and anxiety in young people: distinct spiritual dimensions",
+      "finding": "Spiritual wellbeing correlated inversely with depression. Religious importance showed no overall association.",
+      "limit": "Study quality and intervention heterogeneity constrain conclusions.",
+      "briefHash": "d8719888820f469bdc2459b88d9bbced20022b51b20f81c7427ce33bc46737d2",
+      "humanReviewed": false,
+      "scientificApproval": false,
+      "population": "Ages 10–24. 45 longitudinal studies and 29 intervention studies."
+    }
+  },
+  {
+    "id": "older-adults",
+    "brief": {
+      "design": "meta-analysis",
+      "population": "Observational studies of adults aged 60+. Total study count is unresolved between abstract and body.",
+      "findingDirection": "generally-positive",
+      "doi": "10.3389/fmed.2022.877213",
+      "inspection": "abstract-and-metadata",
+      "checked": "2026-10-03",
+      "limitationCodes": [
+        "observational-not-treatment-effect",
+        "heterogeneous-measures",
+        "study-count-discrepancy"
+      ],
+      "countStatus": "abstract-fulltext-counts-unreconciled"
+    },
+    "bibliography": {
+      "type": "article",
+      "authors": [
+        "Hélio José Coelho-Júnior",
+        "Riccardo Calvani",
+        "Francesco Panza",
+        "Riccardo F. Allegri",
+        "Anna Picca",
+        "Emanuele Marzetti",
+        "Vicente Paulo Alves"
+      ],
+      "editors": [],
+      "date": "2022-05-12",
+      "journal": "Frontiers in Medicine",
+      "volume": "9",
+      "issue": "",
+      "pages": "877213",
+      "doi": "10.3389/fmed.2022.877213",
+      "note": {
+        "tr": "Gözlemsel bulgular tedavi etkisini göstermez. Özet ve tam metin farklı çalışma sayıları verdiğinden burada toplam sayı aktarılmadı.",
+        "en": "Observational findings do not establish treatment effects. Abstract and body report different study counts, so no total is reproduced here.",
+        "de": "Beobachtungsbefunde belegen keine Behandlungseffekte. Abstract und Haupttext nennen unterschiedliche Studienzahlen, deshalb wird hier keine Gesamtzahl angegeben.",
+        "zh": "观察性发现不能确立治疗效果。摘要与正文报告的研究数不同，因此此处不列总数。",
+        "ru": "Наблюдения не доказывают эффект лечения. Число исследований в аннотации и основном тексте различается, поэтому общее число здесь не приводится.",
+        "ar": "لا تثبت النتائج الرصدية آثار العلاج. يختلف عدد الدراسات بين الملخص والمتن، لذا لا يُذكر مجموع هنا.",
+        "id": "Temuan observasional tidak membuktikan efek terapi. Jumlah studi dalam abstrak dan isi berbeda, sehingga total tidak dicantumkan di sini.",
+        "ms": "Dapatan pemerhatian tidak membuktikan kesan rawatan. Bilangan kajian dalam abstrak dan teks berbeza, maka jumlah tidak dinyatakan di sini."
+      }
+    },
+    "edition": {
+      "title": "Spirituality and mental health in later life",
+      "finding": "The review generally reported associations with better mental health.",
+      "limit": "Observational findings do not establish treatment effects. Abstract and body report different study counts, so no total is reproduced here.",
+      "briefHash": "1a138e9bde7d0d84a3f19d7a02d2ea269950b9fe5befc94f58d12d5bec658b76",
+      "humanReviewed": false,
+      "scientificApproval": false,
+      "population": "Observational research on adults aged 60 or older."
+    }
+  },
+  {
+    "id": "attendance-cohorts",
+    "brief": {
+      "design": "prospective-cohort",
+      "population": "Three US cohorts across adulthood",
+      "findingDirection": "mixed",
+      "doi": "10.1093/ije/dyaa120",
+      "inspection": "abstract-and-metadata",
+      "checked": "2026-10-03",
+      "limitationCodes": [
+        "residual-confounding",
+        "us-context",
+        "attendance-not-total-spirituality"
+      ]
+    },
+    "bibliography": {
+      "type": "article",
+      "authors": [
+        "Ying Chen",
+        "Eric S Kim",
+        "Tyler J VanderWeele"
+      ],
+      "editors": [],
+      "date": "2020-08-13",
+      "journal": "International Journal of Epidemiology",
+      "volume": "49",
+      "issue": "6",
+      "pages": "2030-2040",
+      "doi": "10.1093/ije/dyaa120",
+      "note": {
+        "tr": "ABD örneklemleri. Artık karıştırıcılık olasıdır. Katılım, maneviyatın bütünü değildir.",
+        "en": "US samples. Residual confounding remains possible. Attendance is not spirituality as a whole.",
+        "de": "US-Stichproben. Restkonfundierung bleibt möglich. Teilnahme erfasst nicht die gesamte Spiritualität.",
+        "zh": "样本来自美国，仍可能存在残余混杂。参与活动不等同于全部灵性。",
+        "ru": "Выборки из США. Возможно остаточное смешение. Участие не охватывает всю духовность.",
+        "ar": "عينات أمريكية. قد تبقى عوامل مربكة. المشاركة لا تشمل الروحانية كلها.",
+        "id": "Sampel AS. Perancu residual mungkin ada. Kehadiran bukan keseluruhan spiritualitas.",
+        "ms": "Sampel AS. Faktor pengeliru baki mungkin wujud. Kehadiran bukan keseluruhan kerohanian."
+      }
+    },
+    "edition": {
+      "title": "Religious attendance: three prospective cohorts",
+      "finding": "Attendance was favourably associated with some subsequent mental health outcomes.",
+      "limit": "US samples. Residual confounding remains possible. Attendance is not spirituality as a whole.",
+      "briefHash": "fa66640007d72703ea902d0e0e77e734bd7af873e74b64d8b362674b1ed16a16",
+      "humanReviewed": false,
+      "scientificApproval": false,
+      "population": "Three US cohorts following young, middle-aged and older adults."
+    }
+  },
+  {
+    "id": "atheist-struggles",
+    "brief": {
+      "design": "cross-sectional",
+      "population": "3978 undergraduates and 1048 internet workers, atheist/theist comparisons",
+      "findingDirection": "adverse-associations",
+      "doi": "10.3390/rel9080242",
+      "inspection": "abstract-and-metadata",
+      "checked": "2026-10-03",
+      "limitationCodes": [
+        "cross-sectional",
+        "sampling-not-all-nonreligious"
+      ]
+    },
+    "bibliography": {
+      "type": "article",
+      "authors": [
+        "Aaron E. Sedlar",
+        "Nick Stauner",
+        "Kenneth I. Pargament",
+        "Julie J. Exline",
+        "Joshua B. Grubbs",
+        "David F. Bradley"
+      ],
+      "editors": [],
+      "date": "2018-08-09",
+      "journal": "Religions",
+      "volume": "9",
+      "issue": "8",
+      "pages": "242",
+      "doi": "10.3390/rel9080242",
+      "note": {
+        "tr": "Kesitsel örneklemler tüm inançsız insanları temsil etmez.",
+        "en": "Cross-sectional samples do not represent all nonreligious people.",
+        "de": "Querschnittsstichproben repräsentieren nicht alle nichtreligiösen Menschen.",
+        "zh": "横断面样本不能代表所有无宗教信仰者。",
+        "ru": "Поперечные выборки не представляют всех нерелигиозных людей.",
+        "ar": "العينات المقطعية لا تمثل جميع غير المتدينين.",
+        "id": "Sampel potong lintang tidak mewakili semua orang nonreligius.",
+        "ms": "Sampel keratan rentas tidak mewakili semua orang tanpa pegangan agama."
+      }
+    },
+    "edition": {
+      "title": "Meaning and spiritual struggles in atheist samples",
+      "finding": "Meaning-related struggles were associated with distress among atheist participants too.",
+      "limit": "Cross-sectional samples do not represent all nonreligious people.",
+      "briefHash": "7baad6fc6048caf2e7d3225bfd08cbe980dadacdf0c8cf8cc46ae868287353df",
+      "humanReviewed": false,
+      "scientificApproval": false,
+      "population": "Atheist/theist comparisons in two samples of 3,978 undergraduates and 1,048 internet workers."
+    }
+  },
+  {
+    "id": "religious-cbt",
+    "brief": {
+      "design": "pilot-rct",
+      "population": "132 people with major depression and chronic medical illness, 12 weeks",
+      "findingDirection": "no-overall-difference",
+      "doi": "10.1097/NMD.0000000000000273",
+      "inspection": "abstract-and-metadata",
+      "checked": "2026-10-03",
+      "outcome": {
+        "p": 0.86
+      },
+      "inspectionURL": "https://europepmc.org/article/MED/25816046",
+      "limitationCodes": [
+        "pilot-sample",
+        "nonsignificance-not-equivalence",
+        "subgroup-exploratory"
+      ]
+    },
+    "bibliography": {
+      "type": "article",
+      "authors": [
+        "Harold G. Koenig",
+        "Michelle J. Pearce",
+        "Bruce Nelson",
+        "Sally F. Shaw",
+        "Clive J. Robins",
+        "Noha S. Daher",
+        "Harvey Jay Cohen",
+        "Lee S. Berk",
+        "Denise L. Bellinger",
+        "Kenneth I. Pargament",
+        "David H. Rosmarin",
+        "Sasan Vasegh",
+        "Jean Kristeller",
+        "Nalini Juthani",
+        "Douglas Nies",
+        "Michael B. King"
+      ],
+      "editors": [],
+      "date": "2015-04",
+      "journal": "Journal of Nervous & Mental Disease",
+      "volume": "203",
+      "issue": "4",
+      "pages": "243-251",
+      "doi": "10.1097/NMD.0000000000000273",
+      "note": {
+        "tr": "Anlamsız fark, eşdeğerlik kanıtı değildir.",
+        "en": "A nonsignificant difference does not prove equivalence.",
+        "de": "Ein nichtsignifikanter Unterschied belegt keine Gleichwertigkeit.",
+        "zh": "差异不显著并不证明等效。",
+        "ru": "Незначимое различие не доказывает эквивалентность.",
+        "ar": "غياب فرق دال لا يثبت التكافؤ.",
+        "id": "Perbedaan tidak signifikan bukan bukti kesetaraan.",
+        "ms": "Perbezaan tidak signifikan bukan bukti kesetaraan."
+      }
+    },
+    "edition": {
+      "title": "Religiously integrated versus conventional CBT",
+      "finding": "The 132-person pilot trial found no significant overall group difference.",
+      "limit": "A nonsignificant difference does not prove equivalence.",
+      "briefHash": "d50d6d95c726a8638b3ffa3abd4ae625d3efc89da27a13ebb9d5931b12e1350c",
+      "humanReviewed": false,
+      "scientificApproval": false,
+      "population": "132 people with major depression and chronic medical illness. A 12-week comparison."
+    }
+  },
+  {
+    "id": "disaster-needs",
+    "brief": {
+      "design": "qualitative",
+      "population": "Interviews with psychosocial support professionals after the 2023 Türkiye earthquakes",
+      "findingDirection": "needs-and-experiences",
+      "doi": "10.56432/tmdrd.1645518",
+      "inspection": "abstract-and-metadata",
+      "checked": "2026-10-03",
+      "inspectionURL": "https://dergipark.org.tr/tr/pub/tmdrd/article/1645518",
+      "limitationCodes": [
+        "professional-perspectives",
+        "no-efficacy-test"
+      ]
+    },
+    "bibliography": {
+      "type": "article",
+      "authors": [
+        "İclal Öztürk",
+        "Ümit Horozcu"
+      ],
+      "editors": [],
+      "date": "2025-06-30",
+      "journal": "Türk Manevi Danışmanlık ve Rehberlik Dergisi",
+      "volume": "",
+      "issue": "11",
+      "pages": "85-118",
+      "doi": "10.56432/tmdrd.1645518",
+      "note": {
+        "tr": "Görüşmeler müdahale etkililiğini kanıtlamaz.",
+        "en": "Interviews do not establish intervention efficacy.",
+        "de": "Interviews belegen keine Wirksamkeit von Interventionen.",
+        "zh": "访谈不能确立干预效果。",
+        "ru": "Интервью не доказывают эффективность вмешательства.",
+        "ar": "المقابلات لا تثبت فعالية التدخل.",
+        "id": "Wawancara tidak membuktikan efektivitas intervensi.",
+        "ms": "Temu bual tidak membuktikan keberkesanan intervensi."
+      }
+    },
+    "edition": {
+      "title": "Spiritual support needs after earthquakes",
+      "finding": "Professional interviews explore spiritual support needs after earthquakes.",
+      "limit": "Interviews do not establish intervention efficacy.",
+      "briefHash": "60a4538f6da937c287527435cd5647fa1e4f736e965f02f172918a119c9cf20b",
+      "humanReviewed": false,
+      "scientificApproval": false,
+      "population": "Interviews with psychosocial support professionals after the 2023 Türkiye earthquakes."
+    }
+  },
+  {
+    "id": "brief-rcope",
+    "brief": {
+      "design": "psychometric-review",
+      "population": "14 items, positive and negative religious coping subscales",
+      "findingDirection": "measurement",
+      "doi": "10.3390/rel2010051",
+      "inspection": "abstract-and-metadata",
+      "checked": "2026-10-03",
+      "limitationCodes": [
+        "context-specific-validity",
+        "not-universal-translation-validation"
+      ]
+    },
+    "bibliography": {
+      "type": "article",
+      "authors": [
+        "Kenneth Pargament",
+        "Margaret Feuille",
+        "Donna Burdzy"
+      ],
+      "editors": [],
+      "date": "2011-02-22",
+      "journal": "Religions",
+      "volume": "2",
+      "issue": "1",
+      "pages": "51-76",
+      "doi": "10.3390/rel2010051",
+      "note": {
+        "tr": "Dil ve kültür için geçerlik ayrıca değerlendirilmelidir.",
+        "en": "Validity needs separate assessment in each language and culture.",
+        "de": "Validität ist je Sprache und Kultur gesondert zu prüfen.",
+        "zh": "各语言与文化中的效度须分别检验。",
+        "ru": "Валидность требует отдельной оценки для каждого языка и культуры.",
+        "ar": "تحتاج الصلاحية إلى تقييم مستقل لكل لغة وثقافة.",
+        "id": "Validitas perlu dinilai untuk tiap bahasa dan budaya.",
+        "ms": "Kesahan perlu dinilai bagi setiap bahasa dan budaya."
+      }
+    },
+    "edition": {
+      "title": "Brief RCOPE: two dimensions of religious coping",
+      "finding": "14 items distinguish positive and negative religious coping.",
+      "limit": "Validity needs separate assessment in each language and culture.",
+      "briefHash": "8a843ae41cd740c6feb4731379621d4dfbe4f8ca91d89dbffcf31b71bb15fb42",
+      "humanReviewed": false,
+      "scientificApproval": false,
+      "population": "Psychometric review of a 14-item religious coping measure."
+    }
+  },
+  {
+    "id": "meaning-questionnaire",
+    "brief": {
+      "design": "scale-development",
+      "population": "10 items, presence of meaning and search for meaning",
+      "findingDirection": "measurement",
+      "doi": "10.1037/0022-0167.53.1.80",
+      "inspection": "official-measure-description-and-metadata",
+      "checked": "2026-10-03",
+      "inspectionURL": "https://ppc.sas.upenn.edu/node/213",
+      "limitationCodes": [
+        "institutional-description-not-full-validation-appraisal",
+        "meaning-not-diagnosis"
+      ]
+    },
+    "bibliography": {
+      "type": "article",
+      "authors": [
+        "Michael F. Steger",
+        "Patricia Frazier",
+        "Shigehiro Oishi",
+        "Matthew Kaler"
+      ],
+      "editors": [],
+      "date": "2006-01",
+      "journal": "Journal of Counseling Psychology",
+      "volume": "53",
+      "issue": "1",
+      "pages": "80-93",
+      "doi": "10.1037/0022-0167.53.1.80",
+      "note": {
+        "tr": "Anlam, dindarlıkla veya ruhsal bozukluk tanısıyla özdeş değildir.",
+        "en": "Meaning is not identical to religiosity or psychiatric diagnosis.",
+        "de": "Sinn ist weder mit Religiosität noch mit psychiatrischer Diagnose gleichzusetzen.",
+        "zh": "意义不等同于宗教性或精神障碍诊断。",
+        "ru": "Смысл не тождествен религиозности или психиатрическому диагнозу.",
+        "ar": "المعنى ليس مرادفاً للتدين أو التشخيص النفسي.",
+        "id": "Makna tidak identik dengan religiositas atau diagnosis psikiatri.",
+        "ms": "Makna tidak sama dengan religiositi atau diagnosis psikiatri."
+      }
+    },
+    "edition": {
+      "title": "Meaning in Life Questionnaire: presence and search",
+      "finding": "10 items measure presence of meaning and search for meaning separately.",
+      "limit": "Meaning is not identical to religiosity or psychiatric diagnosis.",
+      "briefHash": "b8a94e89384f162916a6fc73271668491501305ac39d9b3a13043f6ef5480def",
+      "humanReviewed": false,
+      "scientificApproval": false,
+      "population": "Original development record and official instrument description. Development samples were not appraised in this profile."
+    }
+  },
+  {
+    "id": "durel",
+    "brief": {
+      "design": "measurement-overview",
+      "population": "5 items, organizational, non-organizational and intrinsic religiosity",
+      "findingDirection": "measurement",
+      "doi": "10.3390/rel1010078",
+      "inspection": "official-measure-description-and-metadata",
+      "checked": "2026-10-03",
+      "inspectionURL": "https://scholars.duke.edu/publication/960636",
+      "limitationCodes": [
+        "religiosity-not-all-spirituality",
+        "not-clinical-need-assessment"
+      ]
+    },
+    "bibliography": {
+      "type": "article",
+      "authors": [
+        "Harold G. Koenig",
+        "Arndt Büssing"
+      ],
+      "editors": [],
+      "date": "2010-12-01",
+      "journal": "Religions",
+      "volume": "1",
+      "issue": "1",
+      "pages": "78-85",
+      "doi": "10.3390/rel1010078",
+      "note": {
+        "tr": "Maneviyatın tümünü veya klinik gereksinimi ölçmez.",
+        "en": "It does not measure all spirituality or clinical need.",
+        "de": "Es misst weder die gesamte Spiritualität noch klinischen Bedarf.",
+        "zh": "不能测量全部灵性或临床需求。",
+        "ru": "Не измеряет духовность во всей полноте или клиническую потребность.",
+        "ar": "لا يقيس الروحانية بكاملها أو الحاجة السريرية.",
+        "id": "Tidak mengukur seluruh spiritualitas atau kebutuhan klinis.",
+        "ms": "Tidak mengukur keseluruhan kerohanian atau keperluan klinikal."
+      }
+    },
+    "edition": {
+      "title": "DUREL: religious involvement and intrinsic religiosity",
+      "finding": "Five items address three dimensions of religiosity.",
+      "limit": "It does not measure all spirituality or clinical need.",
+      "briefHash": "9ee0c81f6d7bd6e7790248de1fe0715a7cd7464b02582bd5cdff6e01bb2b5578",
+      "humanReviewed": false,
+      "scientificApproval": false,
+      "population": "Five-item instrument for epidemiological research. This overview is not a single validation sample."
+    }
+  },
+  {
+    "id": "swbs-eksi-kardas",
+    "brief": {
+      "design": "scale-development",
+      "population": "865 participants in Türkiye, age range 16–54 in Methods although described as adults",
+      "inspection": "targeted-fulltext",
+      "inspectionURL": "https://dergipark.org.tr/tr/download/article-file/317808",
+      "inspectionDetail": "Targeted full-text inspection of abstract, Methods and Tables 4 and 6, especially printed pages 76–84. Table 6 visually inspected. This is not a comprehensive psychometric appraisal or correction/retraction search.",
+      "limitationCodes": [
+        "same-sample-efa-cfa",
+        "abstract-table-srmr-discrepancy-unresolved",
+        "adult-label-includes-age16",
+        "measurement-invariance-not-verified",
+        "no-diagnostic-cutoffs"
+      ],
+      "instrument": {
+        "name": "Spiritual Well-Being Scale",
+        "authors": [
+          "Halil Ekşi",
+          "Selami Kardaş"
+        ],
+        "items": 29,
+        "responseCategories": 5,
+        "dimensions": [
+          "transcendence",
+          "harmony with nature",
+          "anomie"
+        ],
+        "validationSample": {
+          "n": 865,
+          "ageRange": "16–54",
+          "sameDataEFAandCFA": true
+        },
+        "totalAlphaReported": ".886",
+        "scoreEquivalenceEstablished": false,
+        "itemReusePermissionVerified": false
+      },
+      "reportedDiscrepancies": {
+        "srmr": {
+          "abstract": ".50",
+          "table6": ".050",
+          "tablePage": 84,
+          "resolved": false
+        }
+      },
+      "primaryDocuments": [
+        {
+          "url": "https://dergipark.org.tr/en/pub/spiritualpc/article/323508",
+          "role": "metadata-and-abstract",
+          "labelKey": "docArticle"
+        },
+        {
+          "url": "https://dergipark.org.tr/tr/download/article-file/317808",
+          "role": "targeted-fulltext",
+          "pages": "76–84, Table 6 p84",
+          "labelKey": "docFullText"
+        }
+      ],
+      "doi": "10.12738/spc.2017.1.0022",
+      "checked": "2026-10-04",
+      "findingDirection": "measurement"
+    },
+    "bibliography": {
+      "type": "article",
+      "authors": [
+        "Halil Ekşi",
+        "Selami Kardaş"
+      ],
+      "editors": [],
+      "date": "2017",
+      "journal": "Spiritual Psychology and Counseling",
+      "volume": "2",
+      "issue": "1",
+      "pages": "73-88",
+      "doi": "10.12738/spc.2017.1.0022",
+      "note": {
+        "tr": "Özette SRMR .50, Tablo 6’da .050 yazmaktadır, sayfa 84. MARSAM bu kaynak içi uyuşmazlığı çözülmüş kabul etmez. Açımlayıcı ve doğrulayıcı analizler aynı veri setindedir. Bu kayıt bağımsız doğrulamayı, gruplar arası ölçme değişmezliğini veya klinik kesme puanını doğrulamaz.",
+        "en": "The abstract reports SRMR .50, while Table 6 gives .050 on page 84. MARSAM records this unresolved source discrepancy rather than silently correcting it. Exploratory and confirmatory analyses use the same data. Independent validation, cross-group measurement invariance and clinical cut-offs are not established by this record.",
+        "de": "Im Abstract steht SRMR .50, in Tabelle 6 auf Seite 84 dagegen .050. Dieser Widerspruch bleibt ausdrücklich ungeklärt. Explorative und konfirmatorische Analysen beruhen auf demselben Datensatz. Unabhängige Validierung, Messinvarianz zwischen Gruppen und klinische Grenzwerte sind durch diesen Eintrag nicht belegt.",
+        "zh": "摘要将SRMR列为.50，第84页表6却列为.050。MARSAM保留这项尚未解决的原文差异，不擅自改正数值。探索性与验证性分析使用同一数据集。本记录未确立独立验证、跨群体测量不变性或临床界值。",
+        "ru": "В аннотации указано SRMR .50, а в таблице 6 на странице 84 стоит .050. Расхождение в источнике сохраняется как неразрешённое. Эксплораторный и конфирматорный анализы выполнены на одном наборе данных. Запись не подтверждает независимую валидацию, межгрупповую инвариантность или клинические пороги.",
+        "ar": "يرد SRMR بقيمة .50 في الملخص، مقابل .050 في الجدول 6 بالصفحة 84. يسجل MARSAM هذا التعارض بوصفه غير محسوم ولا يصحح المصدر بصمت. أُجري التحليل الاستكشافي والتوكيدي على البيانات نفسها. لا تثبت هذه البطاقة تحققاً مستقلاً أو ثبات القياس بين المجموعات أو حدوداً فاصلة سريرية.",
+        "id": "Abstrak mencantumkan SRMR .50, sedangkan Tabel 6 pada halaman 84 mencantumkan .050. Perbedaan dalam sumber ini belum terselesaikan dan tidak dikoreksi diam-diam. Analisis eksploratori dan konfirmatori memakai data yang sama. Rekaman ini tidak membuktikan validasi independen, invariansi antarkelompok atau ambang klinis.",
+        "ms": "Abstrak menyatakan SRMR .50, manakala Jadual 6 pada halaman 84 menyatakan .050. Percanggahan sumber ini belum diselesaikan dan tidak dibetulkan secara senyap. Analisis penerokaan dan pengesahan menggunakan data yang sama. Rekod ini tidak membuktikan pengesahan bebas, invarians antara kumpulan atau ambang klinikal."
+      }
+    },
+    "edition": {
+      "title": "Spiritual Well-Being Scale (SWBS). SWBS, Ekşi and Kardaş. A 29-item instrument developed in Türkiye",
+      "population": "865 participants in Türkiye. Although called an adult sample, the methods give an age range of 16–54.",
+      "finding": "The 2017 development study reports 29 items, five response categories and three dimensions, transcendence, harmony with nature and anomie. Overall internal consistency is reported as .886. This instrument is not a Turkish translation of the 20-item Paloutzian and Ellison SWBS.",
+      "limit": "The abstract reports SRMR .50, while Table 6 gives .050 on page 84. MARSAM records this unresolved source discrepancy rather than silently correcting it. Exploratory and confirmatory analyses use the same data. Independent validation, cross-group measurement invariance and clinical cut-offs are not established by this record.",
+      "briefHash": "50b3f9f55f0d96ee532a8b0bfd650186f06c0564d7164a9f0c5d99c4538531d3",
+      "humanReviewed": false,
+      "scientificApproval": false
+    }
+  },
+  {
+    "id": "swbs-paloutzian-ellison",
+    "brief": {
+      "design": "measurement-overview",
+      "population": "Original English measure, 1982. Article abstract plus author-hosted manual and Turkish form, not one validation sample.",
+      "inspection": "official-author-manual-form-and-article-abstract",
+      "inspectionURL": "https://www.westmont.edu/psychology/raymond-paloutzian-spiritual-wellbeing-scale",
+      "inspectionDetail": "Sage article identity and abstract, author-hosted SWBS Manual version 2.02, 2022 Turkish form and its copyright/use statement. Full 1983 article methods and all adaptation evidence not appraised.",
+      "limitationCodes": [
+        "turkish-form-not-validation-study",
+        "measurement-invariance-not-verified",
+        "different-instrument-same-name",
+        "no-score-equating",
+        "reuse-conditions-not-open-license"
+      ],
+      "instrument": {
+        "name": "Spiritual Well-Being Scale",
+        "authors": [
+          "Raymond F. Paloutzian",
+          "Craig W. Ellison"
+        ],
+        "originalYear": 1982,
+        "originalLanguage": "en",
+        "items": 20,
+        "responseCategories": 6,
+        "dimensions": [
+          "religious wellbeing",
+          "existential wellbeing"
+        ],
+        "itemsPerDimension": 10,
+        "turkishFormYear": 2022,
+        "turkishPsychometricValidationVerified": false,
+        "scoreEquivalenceEstablished": false,
+        "rights": {
+          "noCostUseAuthorStated": true,
+          "retainCopyrightByline": true,
+          "properCitationRequired": true,
+          "openLicenseClaimed": false,
+          "itemsHostedByMARSAM": false
+        }
+      },
+      "primaryDocuments": [
+        {
+          "url": "https://journals.sagepub.com/doi/10.1177/009164718301100406",
+          "role": "article-metadata-and-abstract",
+          "labelKey": "docArticle"
+        },
+        {
+          "url": "https://www.westmont.edu/psychology/raymond-paloutzian-spiritual-wellbeing-scale",
+          "role": "author-information-and-language-availability",
+          "labelKey": "docAuthor"
+        },
+        {
+          "url": "https://www.westmont.edu/sites/default/files/users/user401/SWBS%20Manual%202.0_0.pdf",
+          "role": "author-manual-v2.02",
+          "labelKey": "docManual"
+        },
+        {
+          "url": "https://www.westmont.edu/sites/default/files/users/user401/Turkish%20SWBS%202022.pdf",
+          "role": "turkish-form-and-use-conditions",
+          "labelKey": "docTurkishForm"
+        }
+      ],
+      "doi": "10.1177/009164718301100406",
+      "checked": "2026-10-04",
+      "findingDirection": "measurement"
+    },
+    "bibliography": {
+      "type": "article",
+      "authors": [
+        "Craig W. Ellison"
+      ],
+      "editors": [],
+      "date": "1983",
+      "journal": "Journal of Psychology and Theology",
+      "volume": "11",
+      "issue": "4",
+      "pages": "330-338",
+      "doi": "10.1177/009164718301100406",
+      "note": {
+        "tr": "Yazarın sayfasında 2022 tarihli Türkçe form vardır. Formun bulunması Türkçe psikometrik geçerlik veya ölçme değişmezliği kanıtı değildir, bu kayıtta böyle bir doğrulama yapılmamıştır. Ücretsiz kullanım, atıf ve telif satırını koruma koşuluna bağlıdır. MARSAM maddeleri veya puanlama formunu yeniden yayımlamaz. İki SWBS’nin puanları eşdeğer varsayılamaz.",
+        "en": "The author hosts a Turkish form dated 2022. Availability of a translation does not establish Turkish psychometric validity or measurement invariance, neither of which is verified here. No-cost use requires proper citation and retention of the copyright byline. MARSAM does not republish items or the scoring form. The two SWBS scores must not be assumed equivalent.",
+        "de": "Der Autor stellt eine türkische Fassung von 2022 bereit. Eine verfügbare Übersetzung belegt weder psychometrische Validität auf Türkisch noch Messinvarianz. Beides wurde hier nicht bestätigt. Kostenfreie Nutzung setzt korrekte Zitation und Erhalt des Urheberrechtsvermerks voraus. MARSAM veröffentlicht keine Items oder Auswertungsformulare. Die Werte beider SWBS sind nicht als gleichwertig anzusehen.",
+        "zh": "作者网站提供标注2022年的土耳其语表单。译本可获取不等于土耳其语心理测量效度或测量不变性已获得验证，本记录未确认此类证据。免费使用仍须正确引用并保留版权说明。MARSAM不转载条目或计分表，也不将两种SWBS的分数视为等值。",
+        "ru": "На сайте автора размещена турецкая форма 2022 года. Наличие перевода не доказывает психометрическую валидность на турецком языке или инвариантность измерения, эти свойства здесь не подтверждены. Бесплатное использование требует корректного цитирования и сохранения строки об авторских правах. MARSAM не перепечатывает пункты и бланк подсчёта. Эквивалентность баллов двух SWBS не предполагается.",
+        "ar": "يتيح موقع المؤلف صيغة تركية مؤرخة في 2022. إتاحة الترجمة لا تثبت صلاحيتها السيكومترية بالتركية أو ثبات القياس، ولم يُتحقق منهما هنا. يشترط الاستخدام المجاني التوثيق الصحيح والإبقاء على بيان حقوق النشر. لا يعيد MARSAM نشر الفقرات أو نموذج التصحيح. ولا تُفترض مكافأة درجات أداتي SWBS.",
+        "id": "Situs penulis menyediakan formulir bahasa Turki bertanggal 2022. Tersedianya terjemahan bukan bukti validitas psikometrik bahasa Turki atau invariansi pengukuran, keduanya belum diverifikasi di sini. Penggunaan tanpa biaya mensyaratkan sitasi yang benar dan pencantuman hak cipta. MARSAM tidak menerbitkan ulang butir atau formulir penskoran. Skor kedua SWBS tidak boleh dianggap setara.",
+        "ms": "Laman pengarang menyediakan borang bahasa Turki bertarikh 2022. Ketersediaan terjemahan bukan bukti kesahan psikometrik bahasa Turki atau invarians pengukuran, kedua-duanya belum disahkan di sini. Penggunaan tanpa bayaran mensyaratkan sitasi yang betul dan pengekalan pernyataan hak cipta. MARSAM tidak menerbitkan semula item atau borang pemarkahan. Skor kedua-dua SWBS tidak boleh dianggap setara."
+      }
+    },
+    "edition": {
+      "title": "Spiritual Well-Being Scale (SWBS). SWBS, Paloutzian and Ellison. The 20-item instrument and Turkish form",
+      "population": "The original 1982 instrument is in English. This record combines the 1983 article abstract, the author’s manual and the Turkish form, rather than representing one validation sample.",
+      "finding": "Twenty items use six response categories to assess religious and existential wellbeing. Each subscale has ten items. The religious domain includes a relationship with God. This is a different instrument from the 29-item Ekşi and Kardaş scale.",
+      "limit": "The author hosts a Turkish form dated 2022. Availability of a translation does not establish Turkish psychometric validity or measurement invariance, neither of which is verified here. No-cost use requires proper citation and retention of the copyright byline. MARSAM does not republish items or the scoring form. The two SWBS scores must not be assumed equivalent.",
+      "briefHash": "eba8530a3a7e31e801191c765181b820d66d94603557a9995ded27d1fdf8c1fb",
+      "humanReviewed": false,
+      "scientificApproval": false
+    }
+  }
+]

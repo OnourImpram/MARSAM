@@ -1,0 +1,27 @@
+/__w/MARSAM/MARSAM/tests/research_e2e.py:66: SyntaxWarning: invalid escape sequence '\.'
+  check('approved geometry belongs to the unchanged artwork',page.locator('.approved-portal-image').evaluate('async e=>{await e.decode();return /approved-portal-(480|960)\.webp/.test(e.currentSrc)&&e.naturalWidth>0}'))
+Research checks chromium/tr
+Research checks chromium/en
+Research checks chromium/de
+Research checks chromium/zh
+Research checks chromium/ru
+Research checks chromium/ar
+Research checks chromium/id
+Research checks chromium/ms
+Research checks firefox/tr
+Research checks firefox/en
+Research checks firefox/de
+Research checks firefox/zh
+Research checks firefox/ru
+Research checks firefox/ar
+Research checks firefox/id
+Research checks firefox/ms
+Research checks webkit/tr
+Research checks webkit/en
+Research checks webkit/de
+Research checks webkit/zh
+Research checks webkit/ru
+Research checks webkit/ar
+Research checks webkit/id
+Research checks webkit/ms
+{"success": true, "checks": 2420, "browsers": ["chromium", "firefox", "webkit"]}
