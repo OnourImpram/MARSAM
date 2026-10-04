@@ -16,9 +16,9 @@ test('refined home has an explicit editorial hierarchy rather than the former re
 });
 test('hero artwork is responsive and decorative, not falsely attributed campus photography',()=>{
  const h=renderCampusHome('tr','/MARSAM/');
- assert.ok(h.includes('approved-portal-960.webp'));assert.ok(h.includes('approved-portal-480.webp'));
+ assert.ok(h.includes('portal-continuous-v1.svg'));assert.ok(h.includes('portal-continuous-v1.svg'));
  assert.match(h,/<img[^>]+class="approved-portal-image"[^>]+alt=""/);
- assert.ok(h.includes('data-open-search')&&!h.includes('id="hero-search"'));assert.ok(h.includes('480px"'));
+ assert.ok(h.includes('data-open-search')&&!h.includes('id="hero-search"'));assert.ok(h.includes('width="960" height="960"'));
 });
 test('design keeps the real sources, pathways and direct comparison controls',()=>{
  for(const l of locales){const h=decorate(renderCampusHome(l,'/MARSAM/'),l,'','/MARSAM/');

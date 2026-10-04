@@ -1,3 +1,7 @@
+## Current portal correction, 4 October 2026, 0.10.1
+
+The owner reported a visible rectangular break after the 0.9.4 CSS seam patch. The two runtime pseudo-element patches are superseded. Display only `portal-continuous-v1.svg`, reproduced by `node scripts/portal-art.mjs` from the unchanged original WebP. It contains one coordinate system and one continuous first-arch contour ending at the diagonal foot, not a rectangle extending across the lower rail. Do not restore independent breakpoint-specific overlays or the forced 480 px mobile source. The original text, right half, centre, outer frame and underlying WebP bytes stay unchanged. Other design and scholarly rules below remain in force.
+
 ## Latest owner-approved visual correction, 4 October 2026, 0.9.4
 
 The remaining tiny lower-left seam at the foot of the first outer receding portal layer must be closed using the corresponding correct right-hand segment. Keep the approved WebP assets byte-identical. Preserve the 0.9.3 full first-layer mirror in `::before`, and use only the narrow lower segment mask in `::after` recorded in `docs/design/PORTAL_LOWER_LEFT_SEAM_0_9_4.md`. Do not expand the patch into the floor, inner arches, central panel, outer square frame, MARSAM wordmark or page layout. This 0.9.4 rule supersedes any earlier instruction that leaves `::after` disabled.

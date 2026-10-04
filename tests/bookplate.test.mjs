@@ -12,7 +12,7 @@ test('approved layered portal retains ebru and geometry without the removed subt
   assert.ok(!art.includes('heritage-floral')&&!art.includes('floral.svg'),locale+' floral ornament removed from markup');
   assert.ok(!art.includes('class="heritage-rosette"'),locale+' no independent top emblem');
   assert.ok(art.includes('class="approved-portal-image"'),locale+' exact approved composition');
-  assert.ok(art.includes('approved-portal-960.webp')&&!art.includes('manuscript-subline'),locale+' approved image without subtitle');
+  assert.ok(art.includes('portal-continuous-v1.svg')&&!art.includes('manuscript-subline'),locale+' approved image without subtitle');
  }
 });
 test('previously rejected hero paragraph, search block and shortcut row are absent, while global search is preserved',()=>{

@@ -26,7 +26,7 @@ test('restored hero keeps header search, patterned artwork and version 0.7 sourc
  const html=renderCampusHome('tr','/MARSAM/');
  assert.ok(html.includes('class="approved-portal-image"'));
  assert.ok(html.includes('data-open-search'));
- assert.ok(html.includes('approved-portal-960.webp'));
+ assert.ok(html.includes('portal-continuous-v1.svg'));
  assert.ok(html.includes('Atatürk Eğitim Fakültesi'));
  assert.ok(html.includes('Eğitim Bilimleri Bölümü'));
  assert.ok(html.includes('Rehberlik ve Psikolojik Danışmanlık Anabilim Dalı'));
