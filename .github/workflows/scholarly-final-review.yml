@@ -1,0 +1,36 @@
+name: Scholarly final review
+on:
+  push:
+    branches: [fix/scholarly-final-review-20261004]
+    paths: [.github/workflows/scholarly-final-review.yml]
+permissions:
+  contents: read
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Archive complete tracked source and baseline checks
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p verification/final-review
+          git archive --format=tar HEAD > verification/final-review/source.tar
+          git rev-parse HEAD > verification/final-review/source-sha.txt
+          BASE_PATH=/ npm run check > verification/final-review/baseline-root.log 2>&1
+          BASE_PATH=/MARSAM/ PAGES_PREVIEW=true npm run check > verification/final-review/baseline-pages.log 2>&1
+          node scripts/budget.mjs > verification/final-review/baseline-budget.json
+          node scripts/release-manifest.mjs
+          tar -cf verification/final-review/built-site.tar dist
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: scholarly-final-review-baseline
+          path: verification/final-review/
+          retention-days: 14
