@@ -85,7 +85,8 @@ jobs:
           rm -rf .github/mission-import
           rm .github/workflows/mission-import.yml
           git add README.md DELIVERY_STATUS.md .github/workflows/verify-preview.yml docs/cycles/2026-10-04 docs/research/SCOPE_AUDIT.json docs/superpowers/plans/2026-10-04-evidence-continuity.md package.json scripts/build.mjs src tests .github/mission-import .github/workflows/mission-import.yml
-          git diff --cached --check
+          # Raw RED output is evidence, not code formatting. Do not rewrite it.
+          git diff --cached --check -- . ':!docs/cycles/2026-10-04/*.log'
           git commit -m 'feat: strengthen plural evidence and persisted multilingual draft continuity for MARSAM 0.10.0'
           git push origin HEAD:research/evidence-continuity-20261004
           git rev-parse HEAD > verification/candidate-source-sha.txt
