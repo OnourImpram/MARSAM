@@ -1,0 +1,127 @@
+name: MARSAM 0.10.0 public acceptance
+on:
+  push:
+    branches: [audit/mission-20261004]
+    paths: [.github/workflows/mission-live-final.yml]
+permissions:
+  contents: read
+jobs:
+  live:
+    runs-on: ubuntu-latest
+    container: mcr.microsoft.com/playwright/python:v1.61.0-noble
+    timeout-minutes: 18
+    env:
+      SOURCE_SHA: 79e1204c9f6fe117afac5e6e9d5e4f90ce17cc68
+      HOST_SHA: 17f646b3ef890c4ea9d2b28735f238c507b6ff71
+      PREVIEW_ORIGIN: https://onourimpram.github.io
+      BROWSERS: chromium,firefox,webkit
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 79e1204c9f6fe117afac5e6e9d5e4f90ce17cc68
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build matching test manifest and prepare engines
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p verification
+          BASE_PATH=/MARSAM/ PAGES_PREVIEW=true npm run build > verification/live-build.log 2>&1
+          python -m pip install --timeout 25 -q playwright==1.61.0
+          python scripts/test-fonts.py
+      - name: Wait for the exact public release then verify every declared file
+        shell: bash
+        run: |
+          python - <<'PY'
+          import os,json,time,hashlib,urllib.request,concurrent.futures,pathlib,datetime
+          root=pathlib.Path('verification');origin=os.environ['PREVIEW_ORIGIN']+'/MARSAM/'
+          def request(url):
+              req=urllib.request.Request(url,headers={'User-Agent':'MARSAM-owner-authorized-release-verification','Cache-Control':'no-cache'})
+              with urllib.request.urlopen(req,timeout=30) as response:return response.status,response.read(),dict(response.headers)
+          errors=[]
+          for attempt in range(30):
+              try:
+                  _,raw,headers=request(origin+'release.json?receipt='+os.environ['SOURCE_SHA'])
+                  release=json.loads(raw)
+                  if release.get('version')=='0.10.0' and release.get('sourceCommit')==os.environ['SOURCE_SHA']:break
+              except Exception as error:errors.append(str(error))
+              time.sleep(8)
+          else:raise AssertionError('Exact public release not available, '+str(errors))
+          def inspect(item):
+              path,expected=item
+              for attempt in range(3):
+                  try:
+                      status,data,_=request(origin+path)
+                      matched=len(data)==expected['bytes'] and hashlib.sha256(data).hexdigest()==expected['sha256']
+                      if matched:return {'path':path,'status':status,'bytes':len(data),'matchesRelease':True}
+                      reason='hash or byte length mismatch'
+                  except Exception as error:reason=str(error)
+                  time.sleep(2)
+              return {'path':path,'matchesRelease':False,'error':reason}
+          with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
+              results=list(pool.map(inspect,release['files'].items()))
+          _,canonical,_=request(origin+'release.json')
+          canonical=json.loads(canonical)
+          assert canonical['sourceCommit']==os.environ['SOURCE_SHA'],'Canonical release remains stale'
+          failures=[r for r in results if not r['matchesRelease']]
+          local=json.loads(pathlib.Path('dist/build-manifest.json').read_text())
+          # Read immutable Git objects. No host write or permission expansion.
+          api='https://api.github.com/repos/OnourImpram/onourimpram.github.io/'
+          def api_json(path):return json.loads(request(api+path)[1])
+          def root_entries(sha):
+              commit=api_json('git/commits/'+sha)
+              return {e['path']:e['sha'] for e in api_json('git/trees/'+commit['tree']['sha'])['tree']}
+          before=root_entries('837442c956c1cb244e021ac96316773cb6cc415d');after=root_entries(os.environ['HOST_SHA'])
+          assert {k:v for k,v in before.items() if k!='MARSAM'}=={k:v for k,v in after.items() if k!='MARSAM'},'Unrelated host files changed'
+          assert after['MARSAM']=='140fc86b0352801926d19e5cdfe346230faff5bd'
+          receipt={'checkedAt':datetime.datetime.now(datetime.timezone.utc).isoformat(),'release':release['version'],'sourceCommit':release['sourceCommit'],'hostCommit':os.environ['HOST_SHA'],'filesChecked':len(results),'htmlFiles':sum(x['path'].endswith('.html') for x in results),'failures':failures,'canonicalReleaseMatches':True,'unrelatedHostRootEntriesUnchanged':True,'unrelatedHostRootEntries':{k:v for k,v in after.items() if k!='MARSAM'},'responseHeaders':headers,'formalApproval':release['formalApproval'],'scientificApproval':release['scientificApproval'],'humanLanguageReview':release['humanLanguageReview'],'results':results}
+          root.joinpath('live-file-integrity.json').write_text(json.dumps(receipt,ensure_ascii=False,indent=2))
+          root.joinpath('live-release.json').write_text(json.dumps(release,ensure_ascii=False,indent=2))
+          print(json.dumps({k:v for k,v in receipt.items() if k not in ['results','responseHeaders']}))
+          assert not failures,failures
+          assert not any(release[k] for k in ['formalApproval','scientificApproval','humanLanguageReview'])
+          PY
+      - name: Real public browser interactions and new scholarly journeys
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tests/browser_e2e.py > verification/live-core.log 2>&1 & core=$!
+          python tests/evidence_cycle_e2e.py > verification/live-evidence-cycle.log 2>&1 & cycle=$!
+          status=0
+          wait "$core" || status=1
+          wait "$cycle" || status=1
+          tail -5 verification/live-core.log
+          tail -8 verification/live-evidence-cycle.log
+          exit "$status"
+      - name: Compact receipt and exact-source snapshot
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json,pathlib,datetime
+          root=pathlib.Path('verification');reports={}
+          for name in ['reading-room-core.json','evidence-cycle-browser.json']:
+              d=json.loads((root/name).read_text());assert d['success']
+              checks=d.get('checks',[])
+              reports[name]={'success':d['success'],'passed':d.get('passed',len(checks)),'engines':d.get('browsers',d.get('engines')),'origin':d['origin'],'errors':d.get('errors',d.get('browserErrors',[]))}
+          integrity=json.loads((root/'live-file-integrity.json').read_text())
+          summary={k:v for k,v in integrity.items() if k not in ['results','responseHeaders']};summary['browserSuites']=reports
+          summary['completedAt']=datetime.datetime.now(datetime.timezone.utc).isoformat()
+          (root/'live-summary.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2))
+          print(json.dumps(summary,ensure_ascii=False,indent=2))
+          PY
+          git -c safe.directory="$GITHUB_WORKSPACE" archive --format=tar --output=verification/final-source.tar HEAD
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: marsam-0100-public-acceptance
+          path: |
+            verification/live-*
+            verification/reading-room-core.json
+            verification/evidence-cycle-browser.json
+            verification/final-source.tar
+            .browser-results/evidence-cycle/
+            .browser-results/reading-room/core/
+          include-hidden-files: true
+          retention-days: 14
