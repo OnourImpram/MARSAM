@@ -49,6 +49,7 @@ jobs:
           python tests/cini_e2e.py & cini=$!
           python tests/scholarship_e2e.py & scholarship=$!
           python tests/evidence_cycle_e2e.py & cycle=$!
+          python tests/portal_pixels.py & portal=$!
           status=0
           wait "$core" || status=1
           wait "$scope" || status=1
@@ -57,6 +58,7 @@ jobs:
           wait "$cini" || status=1
           wait "$scholarship" || status=1
           wait "$cycle" || status=1
+          wait "$portal" || status=1
           exit "$status"
       - uses: actions/upload-artifact@v4
         if: always()
@@ -68,6 +70,7 @@ jobs:
             verification/cini-*
             verification/scholarship-*
             verification/evidence-cycle-*
+            verification/portal-continuity/
             .browser-results/cini/
             .browser-results/scholarship/
             .browser-results/evidence-cycle/
