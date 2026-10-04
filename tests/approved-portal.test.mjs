@@ -5,7 +5,7 @@ import {createHash} from 'node:crypto';
 import {renderCampusHome} from '../src/campus.mjs';
 import {locales} from '../src/languages.mjs';
 const root=new URL('../',import.meta.url);
-test('approved receding-arch artwork and owner-marked symmetry repair are used in each locale and under both deployment roots',()=>{
+test('approved receding-arch artwork and owner-marked first-layer symmetry repair are used in each locale and under both deployment roots',()=>{
  for(const base of ['/','/MARSAM/'])for(const locale of locales){
   const html=renderCampusHome(locale,base);
   const art=html.match(/<div class="heritage-art"[\s\S]*?<\/section>/)?.[0];
@@ -25,8 +25,8 @@ test('approved original composition remains byte-identical while the visual repa
  assert.equal(createHash('sha256').update(desktop).digest('hex'),'00a058dc8f737d73d9bfbd49ef9e541fe54defb2f8d0015efa3ad77cfaa6c66b');
  assert.ok(desktop.length<=90000);
  const css=readFileSync(new URL('public/site.css',root),'utf8');
- assert.match(css,/\.manuscript-frame\.approved-portal::after\{[^}]*approved-portal-960\.webp[^}]*scaleX\(-1\)[^}]*clip-path:polygon\(84\.5% 32\.5%,86\.5% 33%,86\.2% 86\.5%,84\.6% 83\.5%\)[^}]*pointer-events:none/);
- assert.match(css,/\.manuscript-frame\.approved-portal::before\{display:none\}/);
+ assert.match(css,/\.manuscript-frame\.approved-portal::before\{[^}]*approved-portal-960\.webp[^}]*scaleX\(-1\)[^}]*clip-path:polygon\(50% 2\.5%,53\.2% 5\.4%,58% 7\.8%,64% 10\.3%,71% 12\.7%,77% 15\.3%,82\.3% 18\.6%,86\.7% 20\.4%,87% 84\.8%,81\.7% 84\.8%,81\.7% 21\.7%,78\.5% 19\.8%,73% 17%,67\.2% 15\.2%,61\.2% 13\.4%,56% 11\.4%,52\.2% 9%,50% 7\.1%\)[^}]*pointer-events:none/);
+ assert.match(css,/\.manuscript-frame\.approved-portal::after\{display:none\}/);
  const mobile=readFileSync(new URL('public/assets/heritage/approved-portal-480.webp',root));
  assert.ok(mobile.length<=40000);
  for(const image of [desktop,mobile])assert.equal(image.subarray(8,12).toString(),'WEBP');

@@ -1,6 +1,6 @@
-## Latest owner-approved visual correction, 4 October 2026
+## Latest owner-approved visual correction, 4 October 2026, 0.9.3
 
-Keep the approved layered ebru portal asset byte-identical, but close the narrow open vertical recess on the left that the owner marked in the 4 October screenshot. The approved repair is CSS-only. Mirror only the corresponding right-side ebru strip through the `.approved-portal::after` mask recorded in `docs/design/PORTAL_SYMMETRY_REPAIR_0_9_2.md`. Do not widen the mask, recolor the image, regenerate text, alter the nested arches, or treat this as permission for a broader redesign. This correction supersedes the earlier instruction that prohibited every overlay. The base artwork, typography, palette, Marmara masthead and scholarly content remain unchanged.
+The right side of the first outer receding portal layer is the geometry authority. The left side must match it exactly in silhouette. Preserve the approved portal WebP bytes and mirror only that complete outer ebru arch layer into the left through the CSS mask recorded in `docs/design/PORTAL_FIRST_LAYER_SYMMETRY_0_9_3.md`. This supersedes the narrower 0.9.2 vertical-strip repair, which did not correct the full first-layer contour. Do not mirror the inner arches, the central panel, MARSAM text, or the full artwork. Do not recolor, regenerate, crop, blur, animate or otherwise redesign the approved visual.
 
 ## Latest owner-approved visual, 3 October 2026
 
