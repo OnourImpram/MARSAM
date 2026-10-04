@@ -165,5 +165,62 @@
       "id": "Hubungan dalam riset saja tidak membenarkan memasukkan spiritualitas ke layanan klien. Pertimbangkan preferensi, persetujuan berdasarkan informasi, kompetensi profesional, dan tujuan intervensi. Pedoman profesi memberi kerangka etis. Klaim manfaat terapi memerlukan bukti terkontrol.",
       "ms": "Perkaitan penyelidikan sahaja tidak mewajarkan penerapan kerohanian dalam penjagaan klien. Pertimbangkan keutamaan, persetujuan termaklum, kecekapan profesional dan tujuan intervensi. Panduan profesional memberi kerangka etika. Dakwaan manfaat rawatan memerlukan bukti terkawal."
     }
+  },
+  {
+    "id": "longitudinal-questions",
+    "title": {
+      "tr": "Boylamsal bulgular neden farklılaşır",
+      "en": "Why longitudinal findings differ",
+      "de": "Warum Längsschnittbefunde voneinander abweichen",
+      "zh": "纵向研究结果为何不同",
+      "ru": "Почему продольные результаты различаются",
+      "ar": "لماذا تختلف نتائج الدراسات الطولية",
+      "id": "Mengapa temuan longitudinal berbeda",
+      "ms": "Mengapa dapatan longitudinal berbeza"
+    },
+    "text": {
+      "tr": "Dini katılım ile sonraki ruh sağlığı arasındaki ilişki tek bir katsayıyla özetlenemez. ABD kohortları bazı olumlu ilişkiler bildirirken, Birleşik Krallık kişi içi analizleri çoğunlukla anlamlı olmayan, ALSPAC analizleri ise küçük veya sıfırla uyumlu bulgular sunuyor. Brezilyalı tıp öğrencilerinde örgütlü dindarlıkla bazı olumlu ilişkiler görülüyor. Bunlar aynı örneklemin tekrarları değildir. Kişiler arası farkları, kişi içi değişimi, ölçülen sonucu ve izlem dönemini ayırın. Farklı bulguları oy sayımıyla birleştirmek, genel bir yarar veya zarar hükmüne götürmez.",
+      "en": "The link between attendance and later mental health cannot be reduced to one coefficient. US cohorts report some favourable associations, UK within-person analyses are mostly nonsignificant, and ALSPAC results are small or compatible with zero. Brazilian medical students show some favourable associations with organisational religiosity. These are not replications in an identical population. Distinguish between-person differences, within-person change, outcomes and follow-up periods. Counting positive and negative studies cannot establish an overall benefit or harm.",
+      "de": "Der Zusammenhang zwischen religiöser Teilnahme und späterer psychischer Gesundheit lässt sich nicht auf einen Koeffizienten reduzieren. US-Kohorten berichten teils günstige Zusammenhänge, britische Analysen innerhalb einer Person überwiegend nicht signifikante Befunde und ALSPAC kleine oder mit Null vereinbare Ergebnisse. Bei brasilianischen Medizinstudierenden zeigen sich teils günstige Zusammenhänge mit organisationaler Religiosität. Dies sind keine Replikationen in derselben Population. Unterschiede zwischen Personen, Veränderungen innerhalb einer Person, Zielgrößen und Beobachtungszeiträume sind getrennt zu prüfen. Das Zählen positiver und negativer Studien belegt keinen Gesamtnutzen oder Gesamtschaden.",
+      "zh": "宗教活动参与与随后心理健康的联系不能归结为单一系数。美国队列报告部分有利关联，英国个体内分析多数不显著，ALSPAC结果较小或与零效应相容。巴西医学生中，组织性宗教性也呈现部分有利关联。这些研究并非在同一人群中的重复验证。应区分个体间差异、个体内变化、结局指标及随访时间，不能用正负结果的简单计数来判定总体有益或有害。",
+      "ru": "Связь религиозной посещаемости с последующим психическим здоровьем не сводится к одному коэффициенту. Когорты США показывают некоторые благоприятные связи, британские внутриличностные анализы преимущественно незначимые результаты, а ALSPAC малые или совместимые с нулём оценки. У бразильских студентов-медиков обнаружены некоторые благоприятные связи с организационной религиозностью. Это не репликации в одной и той же популяции. Различайте межличностные различия, изменения у одного человека, исходы и периоды наблюдения. Подсчёт положительных и отрицательных исследований не устанавливает общую пользу или вред.",
+      "ar": "لا يمكن اختزال صلة المشاركة الدينية بالصحة النفسية اللاحقة في معامل واحد. تسجل مجموعات أمريكية بعض الارتباطات الملائمة، بينما كانت معظم التحليلات البريطانية داخل الفرد غير دالة، ونتائج ALSPAC صغيرة أو متوافقة مع الصفر. وتظهر لدى طلاب الطب البرازيليين بعض الارتباطات الملائمة بالمشاركة الدينية المنظمة. ليست هذه تكرارات في مجتمع واحد. ينبغي التمييز بين الفروق بين الأفراد والتغير داخل الفرد والنتائج المقاسة وفترات المتابعة. ولا يثبت عد الدراسات الإيجابية والسلبية نفعاً أو ضرراً عاماً.",
+      "id": "Hubungan kehadiran keagamaan dengan kesehatan mental berikutnya tidak dapat diringkas menjadi satu koefisien. Kohort AS melaporkan sejumlah hubungan yang menguntungkan, analisis dalam diri individu di Inggris kebanyakan tidak signifikan, dan hasil ALSPAC kecil atau sesuai dengan nol. Mahasiswa kedokteran Brasil menunjukkan beberapa hubungan yang menguntungkan dengan religiositas organisasional. Studi-studi ini bukan replikasi pada populasi yang sama. Bedakan perbedaan antarindividu, perubahan dalam diri individu, hasil yang diukur, dan waktu tindak lanjut. Menghitung studi positif dan negatif tidak membuktikan manfaat atau kerugian keseluruhan.",
+      "ms": "Perkaitan kehadiran keagamaan dengan kesihatan mental berikutnya tidak boleh dirumuskan kepada satu pekali. Kohort AS melaporkan beberapa perkaitan yang baik, analisis dalam individu di United Kingdom kebanyakannya tidak signifikan, dan dapatan ALSPAC kecil atau selaras dengan sifar. Pelajar perubatan Brazil menunjukkan beberapa perkaitan yang baik dengan religiositi organisasi. Kajian ini bukan replikasi dalam populasi yang sama. Bezakan perbezaan antara individu, perubahan dalam individu, hasil yang diukur dan tempoh susulan. Mengira kajian positif dan negatif tidak membuktikan manfaat atau kemudaratan keseluruhan."
+    },
+    "sources": [
+      "s-attendance-cohorts",
+      "s-within-person-attendance",
+      "s-bidirectional-alspac",
+      "s-brazil-medical-students"
+    ]
+  },
+  {
+    "id": "harm-and-clinical-context",
+    "title": {
+      "tr": "Manevi zarar ve klinik bağlamın sınırları",
+      "en": "Spiritual harm and clinical context",
+      "de": "Spirituelle Schädigung und klinischer Kontext",
+      "zh": "灵性伤害与临床情境",
+      "ru": "Духовный вред и клинический контекст",
+      "ar": "الأذى الروحاني والسياق السريري",
+      "id": "Luka spiritual dan konteks klinis",
+      "ms": "Kemudaratan rohani dan konteks klinikal"
+    },
+    "text": {
+      "tr": "Din görevlilerinin istismarı sonrasındaki manevi zarar ile psikoz araştırmalarındaki dini başa çıkma ayrı konulardır. İlk alandaki kapsam derlemesi sınırlı ve heterojen bir literatürü haritalıyor, tedavi etkililiğini değerlendirmiyor. Psikoz derlemesi ise farklı başa çıkma biçimleriyle klinik sonuçlar arasındaki ilişkileri ele alıyor. Birini diğerinin açıklaması olarak sunmamak gerekir. Dini kimliği patolojikleştirmeden, olumsuz deneyimleri de görünmez kılmadan okuyun. Araştırma bulguları danışanın onamı, tercihleri ve mesleki yetkinlik sınırlarının yerine geçmez.",
+      "en": "Spiritual harm after clergy abuse and religious coping in psychosis are distinct research questions. The scoping review maps a limited, heterogeneous literature rather than treatment efficacy. The psychosis review examines associations between forms of coping and clinical outcomes. Neither should be presented as an explanation of the other. Avoid pathologising religious identity while also recognising adverse experiences. Research findings do not replace consent, client preferences or professional competence boundaries.",
+      "de": "Spirituelle Schädigung nach Missbrauch durch Geistliche und religiöse Bewältigung bei Psychosen sind unterschiedliche Forschungsfragen. Die Scoping-Übersicht kartiert eine begrenzte, heterogene Literatur, nicht die Wirksamkeit von Behandlungen. Die Psychoseübersicht untersucht Zusammenhänge zwischen Bewältigungsformen und klinischen Ergebnissen. Keines der Themen erklärt automatisch das andere. Religiöse Identität darf nicht pathologisiert werden, belastende Erfahrungen dürfen aber auch nicht unsichtbar bleiben. Forschungsbefunde ersetzen weder Einwilligung und Präferenzen noch fachliche Kompetenzgrenzen.",
+      "zh": "神职人员侵害后的灵性伤害，与精神病性障碍中的宗教应对是不同的研究问题。范围综述梳理有限且异质的文献，并不评价治疗疗效。精神病性障碍综述考察应对方式与临床结局的关联，不能将其中一个问题当作另一个问题的解释。既应避免将宗教身份病理化，也不应忽视负面经历。研究发现不能替代知情同意、来访者偏好或专业胜任力边界。",
+      "ru": "Духовный вред после насилия со стороны духовенства и религиозное совладание при психозе являются разными исследовательскими вопросами. Обзор охвата описывает ограниченную и неоднородную литературу, а не эффективность лечения. Обзор психоза изучает связи форм совладания с клиническими исходами. Нельзя представлять одну тему как объяснение другой. Не патологизируйте религиозную идентичность, но и не игнорируйте неблагоприятный опыт. Исследовательские результаты не заменяют согласие, предпочтения клиента и границы профессиональной компетентности.",
+      "ar": "الأذى الروحاني بعد اعتداء رجال الدين والتكيف الديني في الذهان سؤالان بحثيان مختلفان. ترسم المراجعة النطاقية خريطة لأدبيات محدودة ومتباينة، ولا تقيم فعالية العلاج. أما مراجعة الذهان فتبحث ارتباط أساليب التكيف بالنتائج السريرية. ولا يصح تقديم أحد الموضوعين تفسيراً للآخر. ينبغي تجنب اعتبار الهوية الدينية مرضاً دون إغفال التجارب المؤذية. ولا تحل نتائج البحث محل الموافقة وتفضيلات المسترشد وحدود الكفاءة المهنية.",
+      "id": "Luka spiritual setelah kekerasan oleh rohaniwan dan koping religius dalam psikosis merupakan pertanyaan penelitian yang berbeda. Tinjauan cakupan memetakan literatur terbatas dan heterogen, bukan efektivitas pengobatan. Tinjauan psikosis membahas hubungan bentuk koping dengan hasil klinis. Satu topik tidak boleh dianggap sebagai penjelasan bagi topik lainnya. Hindari memandang identitas agama sebagai patologi, sekaligus jangan mengabaikan pengalaman merugikan. Temuan penelitian tidak menggantikan persetujuan, preferensi klien, atau batas kompetensi profesional.",
+      "ms": "Kemudaratan rohani selepas penderaan oleh pemimpin agama dan daya tindak beragama dalam psikosis ialah soalan penyelidikan yang berbeza. Ulasan skop memetakan literatur yang terhad dan heterogen, bukan keberkesanan rawatan. Ulasan psikosis meneliti perkaitan bentuk daya tindak dengan hasil klinikal. Satu topik tidak harus dianggap sebagai penjelasan bagi topik yang lain. Elakkan mempatologikan identiti agama tanpa mengabaikan pengalaman yang memudaratkan. Dapatan penyelidikan tidak menggantikan persetujuan, pilihan klien atau batas kompetensi profesional."
+    },
+    "sources": [
+      "s-clergy-abuse-harm",
+      "s-psychosis-spirituality",
+      "s-aservic"
+    ]
   }
 ]

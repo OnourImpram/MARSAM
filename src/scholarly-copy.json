@@ -320,14 +320,14 @@
     "ms": "Karya ilmiah berkaitan yang terpilih"
   },
   "targetedFullText": {
-    "tr": "Tam metnin ilgili yöntem ve tablo bölümleri incelendi. Bu, kapsamlı bilimsel doğrulama değildir.",
-    "en": "Relevant full-text methods and tables inspected. This is not comprehensive scientific validation.",
-    "de": "Relevante Methodenteile und Tabellen im Volltext geprüft. Keine umfassende wissenschaftliche Validierung.",
-    "zh": "已检查全文中的相关方法和表格，不等于全面科学验证。",
-    "ru": "Проверены соответствующие разделы методов и таблицы полного текста. Это не полная научная валидация.",
-    "ar": "فُحصت أقسام المنهج والجداول ذات الصلة في النص الكامل. لا يمثل ذلك تحققاً علمياً شاملاً.",
-    "id": "Bagian metode dan tabel teks lengkap yang relevan diperiksa. Ini bukan validasi ilmiah menyeluruh.",
-    "ms": "Bahagian kaedah dan jadual teks penuh yang berkaitan diperiksa. Ini bukan pengesahan saintifik menyeluruh."
+    "tr": "Özgün metnin ilgili bölümleri incelendi. Bu, makalenin bütün analizlerinin, eklerinin veya güncel düzeltme geçmişinin kapsamlı olarak değerlendirildiği anlamına gelmez.",
+    "en": "Relevant sections of the original full text were inspected. This is not a comprehensive appraisal of every analysis, supplement or subsequent correction.",
+    "de": "Relevante Abschnitte des Originalvolltexts wurden geprüft. Dies ist keine vollständige Bewertung sämtlicher Analysen, Ergänzungen oder späterer Korrekturen.",
+    "zh": "已查阅原始全文的相关部分。这不代表对所有分析、补充材料或后续更正进行了全面评价。",
+    "ru": "Изучены соответствующие разделы оригинального полного текста. Это не полная оценка всех анализов, приложений или последующих исправлений.",
+    "ar": "فُحصت الأجزاء ذات الصلة من النص الأصلي الكامل. لا يعني ذلك إجراء تقييم شامل لكل التحليلات أو الملاحق أو التصحيحات اللاحقة.",
+    "id": "Bagian yang relevan dari teks lengkap asli telah diperiksa. Ini bukan penilaian menyeluruh atas semua analisis, lampiran, atau koreksi berikutnya.",
+    "ms": "Bahagian berkaitan dalam teks penuh asal telah diperiksa. Ini bukan penilaian menyeluruh terhadap semua analisis, lampiran atau pembetulan berikutnya."
   },
   "swbsDistinction": {
     "tr": "Aynı ad, farklı ölçme araçları. Madde sayısını, geliştiricileri ve kullanım amacını kontrol edin. Puanları birbirinin yerine kullanmayın.",
@@ -408,5 +408,75 @@
     "ar": "الصيغة التركية وشروط الاستخدام، 2022",
     "id": "Formulir bahasa Turki dan syarat penggunaan, 2022",
     "ms": "Borang bahasa Turki dan syarat penggunaan, 2022"
+  },
+  "reported-mediation": {
+    "tr": "Aracılık analizi, zaman sırası doğrulanmadı",
+    "en": "Mediation analysis, temporal design unverified",
+    "de": "Mediationsanalyse, zeitliches Design ungeprüft",
+    "zh": "中介分析，测量时序未核实",
+    "ru": "Медиаторный анализ, временной дизайн не проверен",
+    "ar": "تحليل وساطة، التسلسل الزمني غير متحقق",
+    "id": "Analisis mediasi, urutan waktu belum diverifikasi",
+    "ms": "Analisis pengantaraan, turutan masa belum disahkan"
+  },
+  "scoping-review": {
+    "tr": "Kapsam derlemesi",
+    "en": "Scoping review",
+    "de": "Scoping-Übersicht",
+    "zh": "范围综述",
+    "ru": "Обзор охвата",
+    "ar": "مراجعة نطاقية",
+    "id": "Tinjauan cakupan",
+    "ms": "Ulasan skop"
+  },
+  "relatedEvidence": {
+    "tr": "Birlikte okunabilecek araştırmalar",
+    "en": "Read alongside",
+    "de": "Weiterführende Vergleichslektüre",
+    "zh": "对照阅读",
+    "ru": "Материалы для сопоставления",
+    "ar": "قراءات للمقارنة",
+    "id": "Bacaan pembanding",
+    "ms": "Bacaan perbandingan"
+  },
+  "relatedEvidenceNote": {
+    "tr": "Bu bağlantılar editoryal okuma önerileridir. Tekrarlama çalışması, eşdeğerlik veya etkililik sıralaması bildirmez.",
+    "en": "These are editorial reading connections, not claims of replication, equivalence or comparative efficacy.",
+    "de": "Dies sind redaktionelle Leseverbindungen, keine Belege für Replikation, Gleichwertigkeit oder vergleichende Wirksamkeit.",
+    "zh": "这些是编辑提出的阅读联系，并不表示重复验证、等效性或疗效比较。",
+    "ru": "Это редакционные связи для чтения, а не утверждения о репликации, эквивалентности или сравнительной эффективности.",
+    "ar": "هذه روابط قراءة تحريرية، وليست إثباتاً لتكرار النتائج أو التكافؤ أو المقارنة في الفعالية.",
+    "id": "Tautan ini merupakan saran bacaan editorial, bukan bukti replikasi, kesetaraan, atau perbandingan efektivitas.",
+    "ms": "Pautan ini ialah cadangan bacaan editorial, bukan bukti replikasi, kesetaraan atau perbandingan keberkesanan."
+  },
+  "instrumentUse": {
+    "tr": "Bu aracı kullanan araştırmalar",
+    "en": "Studies using this instrument",
+    "de": "Studien mit diesem Instrument",
+    "zh": "使用该工具的研究",
+    "ru": "Исследования с применением инструмента",
+    "ar": "دراسات استخدمت هذه الأداة",
+    "id": "Studi yang menggunakan instrumen ini",
+    "ms": "Kajian yang menggunakan instrumen ini"
+  },
+  "instrumentUseNote": {
+    "tr": "Bir araştırmada kullanılması, aracın yeni bir örneklemde veya dilde geçerliğini tek başına göstermez. Aşağıdaki bağlantılar kullanım örnekleridir, kullanım izni veya bağımsız doğrulama belgesi değildir.",
+    "en": "Use in a study does not by itself validate an instrument in a new population or language. These links document research use, not permission or independent validation.",
+    "de": "Die Anwendung in einer Studie validiert ein Instrument nicht automatisch für eine neue Population oder Sprache. Die Links dokumentieren Nutzung, keine Erlaubnis oder unabhängige Validierung.",
+    "zh": "在研究中使用某工具，本身不能验证其在新群体或新语言中的效度。以下链接说明研究用途，而非使用许可或独立验证。",
+    "ru": "Применение в исследовании само по себе не подтверждает валидность для новой популяции или языка. Ссылки показывают использование, а не разрешение или независимую валидацию.",
+    "ar": "استخدام الأداة في دراسة لا يثبت بمفرده صلاحيتها لفئة أو لغة جديدة. توثق الروابط استخداماً بحثياً، لا إذناً بالاستخدام أو تحققاً مستقلاً من الصلاحية.",
+    "id": "Penggunaan dalam studi tidak dengan sendirinya membuktikan validitas instrumen pada populasi atau bahasa baru. Tautan ini menunjukkan penggunaan penelitian, bukan izin atau validasi independen.",
+    "ms": "Penggunaan dalam kajian tidak dengan sendirinya mengesahkan kesahan instrumen dalam populasi atau bahasa baharu. Pautan ini menunjukkan penggunaan penyelidikan, bukan kebenaran atau pengesahan bebas."
+  },
+  "longitudinal-panel-analysis": {
+    "tr": "Boylamsal panel analizi",
+    "en": "Longitudinal panel analysis",
+    "de": "Längsschnittliche Panelanalyse",
+    "zh": "纵向面板分析",
+    "ru": "Продольный панельный анализ",
+    "ar": "تحليل لوحي طولي",
+    "id": "Analisis panel longitudinal",
+    "ms": "Analisis panel longitudinal"
   }
 }

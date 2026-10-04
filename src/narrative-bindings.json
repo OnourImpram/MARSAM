@@ -536,6 +536,153 @@
           "scientificApproval": false
         }
       }
+    },
+    {
+      "id": "theme-longitudinal-questions",
+      "brief": {
+        "boundary": "Editorial comparative synthesis of the listed source records. Populations and estimands are not interchangeable. No causal or clinical authority, replication claim or universal religious judgement is inferred.",
+        "sourceIds": [
+          "s-attendance-cohorts",
+          "s-within-person-attendance",
+          "s-bidirectional-alspac",
+          "s-brazil-medical-students"
+        ],
+        "checked": "2026-10-04"
+      },
+      "sourceIds": [
+        "s-attendance-cohorts",
+        "s-within-person-attendance",
+        "s-bidirectional-alspac",
+        "s-brazil-medical-students"
+      ],
+      "sourceHashes": {
+        "s-attendance-cohorts": "6d380597e5a46f5a140885957c3aadccb50579f710464ac01e0007a4d733201d",
+        "s-within-person-attendance": "d4ed4c38edb03cf7f35553d5c249fa1af140beb2da955dfb396ff4e2f95995e8",
+        "s-bidirectional-alspac": "4dd9be06a8f8913bbed1b07d4bd6490a996d1b294a622aa82ef39097c0cad9db",
+        "s-brazil-medical-students": "9b0e6c30d88d1d356292f61e451bf8f80c30ba795124fe5d310b124340f6fa7f"
+      },
+      "editions": {
+        "tr": {
+          "briefHash": "1f8ce586f735226507a3a18300f74aebbfc511ced0ee90b9d0fe3b903c48f154",
+          "editionHash": "2ddbc28690eeab66bdd09ab471ac7dbffabbed427334d6c5d3ff0ddf5dfb8c92",
+          "humanReviewed": false,
+          "scientificApproval": false
+        },
+        "en": {
+          "briefHash": "1f8ce586f735226507a3a18300f74aebbfc511ced0ee90b9d0fe3b903c48f154",
+          "editionHash": "7b5804d7b4629e90722a9af33a976e437bfc63c6f94fa491c6b2a982bb003ac7",
+          "humanReviewed": false,
+          "scientificApproval": false
+        },
+        "de": {
+          "briefHash": "1f8ce586f735226507a3a18300f74aebbfc511ced0ee90b9d0fe3b903c48f154",
+          "editionHash": "057698086721ae89354f1a45c420211d6926b828d29fd6af6dfdb79ed2b2a748",
+          "humanReviewed": false,
+          "scientificApproval": false
+        },
+        "zh": {
+          "briefHash": "1f8ce586f735226507a3a18300f74aebbfc511ced0ee90b9d0fe3b903c48f154",
+          "editionHash": "e3542dd19c935a92ed08de2194ec52d7a98592af41ae5fb871d9ea2827539f4c",
+          "humanReviewed": false,
+          "scientificApproval": false
+        },
+        "ru": {
+          "briefHash": "1f8ce586f735226507a3a18300f74aebbfc511ced0ee90b9d0fe3b903c48f154",
+          "editionHash": "28e96563ea6b5ec0cf7cba6e78032a3b4319d9d466546f63b34bc99de902ba3a",
+          "humanReviewed": false,
+          "scientificApproval": false
+        },
+        "ar": {
+          "briefHash": "1f8ce586f735226507a3a18300f74aebbfc511ced0ee90b9d0fe3b903c48f154",
+          "editionHash": "5fd57184280b11fb7ed1301700a824a6ad005df3ecee23a012334e1cb95cbd3c",
+          "humanReviewed": false,
+          "scientificApproval": false
+        },
+        "id": {
+          "briefHash": "1f8ce586f735226507a3a18300f74aebbfc511ced0ee90b9d0fe3b903c48f154",
+          "editionHash": "4d074268c748df9a9b9baf2e8cb646aeac38d001be31590ffaf1dc35c73a8416",
+          "humanReviewed": false,
+          "scientificApproval": false
+        },
+        "ms": {
+          "briefHash": "1f8ce586f735226507a3a18300f74aebbfc511ced0ee90b9d0fe3b903c48f154",
+          "editionHash": "fac3d5ac6117b38eb43a1a8be7edff5f08fcf7affb41b73f3dd1fa49d27e179c",
+          "humanReviewed": false,
+          "scientificApproval": false
+        }
+      }
+    },
+    {
+      "id": "theme-harm-and-clinical-context",
+      "brief": {
+        "boundary": "Editorial comparative synthesis of the listed source records. Populations and estimands are not interchangeable. No causal or clinical authority, replication claim or universal religious judgement is inferred.",
+        "sourceIds": [
+          "s-clergy-abuse-harm",
+          "s-psychosis-spirituality",
+          "s-aservic"
+        ],
+        "checked": "2026-10-04"
+      },
+      "sourceIds": [
+        "s-clergy-abuse-harm",
+        "s-psychosis-spirituality",
+        "s-aservic"
+      ],
+      "sourceHashes": {
+        "s-clergy-abuse-harm": "6888cc7dee046a546b3492a1c0e836db9b5156d18b82ee68987b1607233c04e4",
+        "s-psychosis-spirituality": "91c9e3fc11a4b7b37353f80963ae9d46ea14d58dc2ac4c1b99efef7433686aef",
+        "s-aservic": "aa6829a870a8cdd17af117d876c05e3004cde223e54268fed67e4f4896a33aa6"
+      },
+      "editions": {
+        "tr": {
+          "briefHash": "3568be02e650a0bf9353c688def15b160b6c53568d83045e271e7dea4bac4892",
+          "editionHash": "66a1c56e07af37a46ab0fc42318a104e43f38ea5fc9538e4eaea07ae2bb43503",
+          "humanReviewed": false,
+          "scientificApproval": false
+        },
+        "en": {
+          "briefHash": "3568be02e650a0bf9353c688def15b160b6c53568d83045e271e7dea4bac4892",
+          "editionHash": "f690ca2a304d16bc82e1e03a4db2dcdbb1231353eb87931a0c737595f5ac0fbd",
+          "humanReviewed": false,
+          "scientificApproval": false
+        },
+        "de": {
+          "briefHash": "3568be02e650a0bf9353c688def15b160b6c53568d83045e271e7dea4bac4892",
+          "editionHash": "4de705846efc04c17fdaae8e96c76e001eec4266dc9fbdc048eeb273c4ae7eed",
+          "humanReviewed": false,
+          "scientificApproval": false
+        },
+        "zh": {
+          "briefHash": "3568be02e650a0bf9353c688def15b160b6c53568d83045e271e7dea4bac4892",
+          "editionHash": "f3b779b5a6d6c48d4e69eba7c54f6d7925b6651340b7d31b9a84747b383dde86",
+          "humanReviewed": false,
+          "scientificApproval": false
+        },
+        "ru": {
+          "briefHash": "3568be02e650a0bf9353c688def15b160b6c53568d83045e271e7dea4bac4892",
+          "editionHash": "6810caaa0f39e7087d73512ae017d5b592799c1f6490fd20723375aec6128ee3",
+          "humanReviewed": false,
+          "scientificApproval": false
+        },
+        "ar": {
+          "briefHash": "3568be02e650a0bf9353c688def15b160b6c53568d83045e271e7dea4bac4892",
+          "editionHash": "97474b5047307c94490cb36ca9a10e2d5738ba58f517b01af11894d92ae81d8e",
+          "humanReviewed": false,
+          "scientificApproval": false
+        },
+        "id": {
+          "briefHash": "3568be02e650a0bf9353c688def15b160b6c53568d83045e271e7dea4bac4892",
+          "editionHash": "0db47f93e751b0df382857ef5c88edf09493fa80d44960609aa45bea65e875ef",
+          "humanReviewed": false,
+          "scientificApproval": false
+        },
+        "ms": {
+          "briefHash": "3568be02e650a0bf9353c688def15b160b6c53568d83045e271e7dea4bac4892",
+          "editionHash": "23e9dedced89909a4e38ff162302b5cd431f723c623e47616cd34e2ba71aa38b",
+          "humanReviewed": false,
+          "scientificApproval": false
+        }
+      }
     }
   ]
 }

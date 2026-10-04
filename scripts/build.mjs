@@ -1,3 +1,4 @@
+import {evidenceContinuityManifest} from '../src/evidence-continuity.mjs';
 import {validateScholarship,validateScope,reviewManifest,evidence,scholarlyThemes,validateNarrativeBindings,narrativeReviewManifest} from '../src/scholarship.mjs';
 import {emitResearchArtifacts} from './research-artifacts.mjs';
 import {renderCampusHome,campusRenderers} from '../src/campus.mjs';
@@ -31,6 +32,7 @@ async function emit(path,html){const target=resolve(dist,path,'index.html');awai
 for(const l of locales){await emit(l,renderCampusHome(l,base));for(const s of sections)await emit(`${l}/${s.id}`,(campusRenderers[s.id]?campusRenderers[s.id](l,base):sectionPage(s.id,l,base)));for(const a of articles)await emit(`${l}/dossier/${a.id}`,dossierPage(a,l,base));for(const r of resources)await emit(`${l}/resource/${r.id}`,resourcePage(r,l,base));for(const p of learningPaths)await emit(`${l}/learning/${p.id}`,pathPage(p,l,base));}
 await mkdir(resolve(dist,'data'),{recursive:true});
 await writeFile(resolve(dist,'data/scholarly-editions.json'),JSON.stringify(reviewManifest(),null,2));
+await writeFile(resolve(dist,'data/locale-parity.json'),JSON.stringify(evidenceContinuityManifest(evidence),null,2));
 await writeFile(resolve(dist,'data/narrative-editions.json'),JSON.stringify(narrativeReviewManifest(sources),null,2));
 await writeFile(resolve(dist,'data/evidence-briefs.json'),JSON.stringify({schemaVersion:1,records:evidence.map(r=>({id:r.id,sourceId:r.sourceId,brief:r.brief})),themes:scholarlyThemes.map(t=>({id:t.id,sourceIds:t.sources}))},null,2));
 

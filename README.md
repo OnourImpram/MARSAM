@@ -1,66 +1,41 @@
-# MARSAM 0.9.1
+# MARSAM 0.10.0
 
-Maneviyat ve Ruh Sağlığı Araştırmaları Merkezi için sekiz dilli akademik bilgi platformu. Planlanan akademik yapı Marmara Üniversitesi, Atatürk Eğitim Fakültesi, Eğitim Bilimleri Bölümü, Rehberlik ve Psikolojik Danışmanlık Anabilim Dalıdır. Resmî kuruluş, akreditasyon veya klinik hizmet yetkisi bu teknik teslimle doğrulanmış sayılmaz.
+Maneviyat ve Ruh Sağlığı Araştırmaları Merkezi girişimi için sekiz dilli akademik bilgi platformu. Planlanan akademik yapı Marmara Üniversitesi, Atatürk Eğitim Fakültesi, Eğitim Bilimleri Bölümü, Rehberlik ve Psikolojik Danışmanlık Anabilim Dalıdır. Teknik yayın, resmî kuruluş veya bilimsel onay değildir.
 
-## Canlı site
+## Platform
 
 Türkçe https://onourimpram.github.io/MARSAM/tr/
 
 English https://onourimpram.github.io/MARSAM/en/
 
-Araştırma rehberleri https://onourimpram.github.io/MARSAM/tr/research/
+Bu kaynak sürümünde 44 kamusal kaynak kaydı, sekiz kanıt teması, 19 ortak bilimsel özete bağlı araştırma kaydı ve bu kayıtlar için 152 dil metni bulunur. Sekiz dildeki tüm eski dosyaların bağımsız anadil veya bilimsel incelemesinin tamamlandığı iddia edilmez. Eski içeriklerin legacy-seed modeli ayrıca kaydedilir.
 
-Ölçme araçları https://onourimpram.github.io/MARSAM/tr/measures/
+## Bu döngü
 
-## 0.9.1 bilimsel düzeltmesi
+Altı yeni kaynak, boylamsal ve kişi içi bulgular, Türkiye'de eş kaybı, Brezilya'daki tıp öğrencileri, psikoz bağlamı ve din görevlileriyle ilişkili istismar sonrası manevi zarar konularını seçkiye ekler. İki yeni sentez, farklı örneklem ve yöntemlerden gelen sonuçları tek bir etkililik hükmüne indirgemez.
 
-Bu sürüm 0.9.0'ın görsel sistemini ve bilgi mimarisini koruyarak ölçme ve çok dilli kanıt sürekliliğindeki somut açıkları giderir.
+Kaynak üstverisi ve her dil metni kalıcı taslak parmak izleriyle korunur. Build sırasında eski parmak izleri otomatik olarak yeniden onaylanmaz. data/locale-parity.json alanların varlığını ve kayıtlı içerikle eşleşmeyi gösterir. Bu dosya anlam eşdeğerliği, doğruluk veya insan onayı sertifikası değildir.
 
-- Ekşi ve Kardaş 2017 tarafından geliştirilen 29 maddelik Spiritual Well-Being Scale ile Paloutzian ve Ellison'ın 20 maddelik Spiritual Well-Being Scale arayüzde ve veri modelinde ayrı ölçme araçları olarak tanımlanır.
-- Ekşi ve Kardaş kaynağındaki SRMR uyuşmazlığı gizlenmez. Özet .50, Tablo 6 ise .050 verir. MARSAM bunu kaynak içi uyuşmazlık olarak kaydeder, sessizce düzeltmez.
-- Türkçe form, uyarlama, geliştirme ve bağımsız doğrulama kavramları birbirinin yerine kullanılmaz.
-- Hakkında sayfasındaki yinelenen giriş kaldırılır.
-- Kurucu metni, kanıt temaları ve ölçme anlatıları kaynak ve dil sürümü bağlarıyla izlenir. Bir içerik değiştiğinde eski dil sürümünün sessizce güncel görünmesi engellenir.
-- Kaynak defterinde tek bir üst düzey kontrol tarihi yerine kayıt düzeyindeki inceleme tarihleri yetkilidir.
-- Görsel tasarım, ebru portalı, çini yoğunluğu, Marmara masthead'i, palet, tipografi ve akademik içerik düzeni değiştirilmedi.
+Onaylı 0.9.4 portalı, bütün görsel varlıklar, CSS, gezinme, kurucu anlatısı ve mevcut araştırma laboratuvarı korunur. İki SWBS ayrı araç olarak kalır. Ekşi ve Kardaş 2017 kaynağındaki .50 ve .050 SRMR uyuşmazlığı gizlenmez.
 
-## Bilimsel içerik
+Ayrıntılar [döngü raporunda](docs/cycles/2026-10-04/REPORT.md), yayın kanıtları [teslim durumunda](DELIVERY_STATUS.md) bulunur. Önceki README ve teslim metni değişmeden döngü arşivine taşınmıştır.
 
-MARSAM 36 kaynaklık kamusal akademik seçki, altı temalı Kanıtı okumak alanı, araştırma ve yöntem rehberleri, yeniden üretilebilir örnekler ve ölçme profilleri sunar. Kaynak seçimi yazarlık prestijine değil, maneviyat ve ruh sağlığı alanına maddi katkıya dayanır.
+## Geliştirme ve kontrol
 
-## Doğrulama
-
-0.9.1 kaynak commit: `b0f1ddb59b97b480fb994226a196e2d40d184d9c`.
-
-Aday doğrulama: https://github.com/OnourImpram/MARSAM/actions/runs/37192115633
-
-Ana dal doğrulama: https://github.com/OnourImpram/MARSAM/actions/runs/37201521701
-
-Hosting staging doğrulama: https://github.com/OnourImpram/onourimpram.github.io/actions/runs/37201910825
-
-GitHub Pages yayını: https://github.com/OnourImpram/onourimpram.github.io/actions/runs/37202021619
-
-Hosting commit: `0e0a0e9f38451ccf18b8a421f1be900edc19ad31`.
-
-MARSAM yayın ağacı: `b584efaa8bc5f3e5be6a74fbc3258809ff533dc7`.
-
-Güncel teslim kaydı [DELIVERY_STATUS.md](DELIVERY_STATUS.md), değişmez sürüm kaydı [docs/releases/scholarly-correction-0.9.1-live.json](docs/releases/scholarly-correction-0.9.1-live.json) içindedir.
-
-## Geliştirme
-
-Node.js 22 veya üzeri.
+Node.js 22 veya üzeri. Ek bir uygulama çatısı veya tarayıcı çalışma zamanı bağımlılığı yoktur.
 
 ```sh
 npm run check
 BASE_PATH=/MARSAM/ PAGES_PREVIEW=true npm run check
 node scripts/budget.mjs
+python tests/research_artifacts.py
 BROWSERS=chromium,firefox,webkit python tests/browser_e2e.py
 BROWSERS=chromium,firefox,webkit python tests/scope_e2e.py
 BROWSERS=chromium,firefox,webkit python tests/heritage_e2e.py
 BROWSERS=chromium,firefox,webkit python tests/research_e2e.py
 BROWSERS=chromium,firefox,webkit python tests/cini_e2e.py
 BROWSERS=chromium,firefox,webkit python tests/scholarship_e2e.py
-python tests/research_artifacts.py
+BROWSERS=chromium,firefox,webkit python tests/evidence_cycle_e2e.py
 ```
 
-Teknik testler bilimsel editör onayı, ana dil uzmanı incelemesi, gerçek cihaz veya ekran okuyucu araştırması ya da bağımsız erişilebilirlik sertifikası değildir. Özel ders dosyaları, tanımlanabilir katılımcı verileri ve paylaşım izni olmayan ham veri setleri yayımlanmaz.
+Kalıcı taslak kayıtlarının güncellenmesi için [bakım yönergesini](docs/cycles/2026-10-04/MAINTENANCE.md) izleyin. Özel ders belgeleri, katılımcı verileri, izin alınmamış ölçek maddeleri ve font dosyaları yayımlanmaz. Teknik kontroller insan bilimsel değerlendirmesi, bağımsız erişilebilirlik sertifikası veya anadil incelemesi yerine geçmez.

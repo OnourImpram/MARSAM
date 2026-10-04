@@ -1,26 +1,32 @@
 /** Independent, shared factual briefs. No locale is the source of another locale. */
 import data from './scholarship-data.json' with {type:'json'};
 import swbs from './swbs-data.json' with {type:'json'};
+import cycle from './evidence-2026-10.json' with {type:'json'};
+import {measureProfiles} from './measure-profiles.mjs';
 import bindings from './narrative-bindings.json' with {type:'json'};
 import audit from '../docs/research/SCOPE_AUDIT.json' with {type:'json'};
 import copy from './scholarly-copy.json' with {type:'json'};
 import themes from './scholarly-themes.json' with {type:'json'};
 import {locales} from './languages.mjs';
 import {digest} from './messages.mjs';
-export const evidence=[...data.records,...swbs.records];
+import {validateEvidenceContinuity,evidenceDraftState} from './evidence-continuity.mjs';
+export {evidenceContinuityManifest,validateEvidenceContinuity} from './evidence-continuity.mjs';
+export const evidence=[...data.records,...swbs.records,...cycle.records];
 export const narrativeBindings=bindings;
 export const scholarlyThemes=themes;
 export const scholarlyCopy=copy;
 export const archivedSourceIds=new Set(audit.records.filter(r=>r.action==='archive').map(r=>r.sourceId));
 export const scopeDecision=id=>{const r=audit.records.find(r=>r.sourceId===id);if(!r)throw Error(`Missing scope decision ${id}`);return r;};
-export function validateScope(sources){const errors=[];const ids=audit.records.map(r=>r.sourceId);if(new Set(ids).size!==ids.length)errors.push('Duplicate scope decision');for(const decision of audit.records)if(!['retain','add','archive'].includes(decision.action))errors.push(`Invalid scope action ${decision.sourceId}`);for(const source of sources){const decision=audit.records.find(r=>r.sourceId===source.id);if(!decision||!audit.classificationVocabulary.includes(decision.classification)||!decision.reason)errors.push(`Missing or invalid scope decision ${source.id}`);else if(decision.action==='archive')errors.push(`Archived source leaked ${source.id}`);}return errors;}
+export function validateScope(sources){const errors=[];const ids=audit.records.map(r=>r.sourceId);if(new Set(ids).size!==ids.length)errors.push('Duplicate scope decision');for(const decision of audit.records)if(!['retain','add','archive'].includes(decision.action))errors.push(`Invalid scope action ${decision.sourceId}`);for(const source of sources){const decision=audit.records.find(r=>r.sourceId===source.id);if(!decision||!audit.classificationVocabulary.includes(decision.classification)||!decision.reason)errors.push(`Missing or invalid scope decision ${source.id}`);else if(decision.classification==='OUT_OF_SCOPE')errors.push(`OUT_OF_SCOPE source leaked ${source.id}`);else if(decision.action==='archive')errors.push(`Archived source leaked ${source.id}`);}return errors;}
 export const sc=(key,l)=>{const value=copy[key]?.[l];if(!value)throw Error(`Missing scholarly copy ${key}/${l}`);return value;};
 export function validateScholarship(records=evidence){
- const errors=[],ids=new Set(),dois=new Set(),sourceIds=new Set();
+ const errors=validateEvidenceContinuity(records),ids=new Set(),dois=new Set(),sourceIds=new Set();
  for(const r of records){
-  if(ids.has(r.id)||dois.has(r.brief.doi))errors.push(`Duplicate scholarly identity ${r.id}`);ids.add(r.id);dois.add(r.brief.doi);
+  if(ids.has(r.id)||dois.has(r.brief.doi.toLowerCase()))errors.push(`Duplicate scholarly identity ${r.id}`);ids.add(r.id);dois.add(r.brief.doi.toLowerCase());
   if(sourceIds.has(r.sourceId)||r.sourceId!==`s-${r.id}`||r.bibliography.doi?.toLowerCase()!==r.brief.doi.toLowerCase()||r.url.toLowerCase()!==`https://doi.org/${r.brief.doi.toLowerCase()}`)errors.push(`Mismatched scholarly source identity ${r.id}`);
   sourceIds.add(r.sourceId);
+  if(r.brief.usesMeasure&&!measureProfiles.some(p=>p.id===r.brief.usesMeasure))errors.push(`Invalid instrument link ${r.id}`);
+  if(r.brief.relatedRecords!==undefined&&(!Array.isArray(r.brief.relatedRecords)||r.brief.relatedRecords.some(id=>id===r.id||!records.some(x=>x.id===id))))errors.push(`Invalid related evidence ${r.id}`);
   if(!r.brief.design||!r.brief.population||!r.brief.inspection||!r.brief.checked||!r.brief.limitationCodes?.length)errors.push(`Incomplete brief ${r.id}`);
   const hash=digest(r.brief);
   for(const l of locales){const edition=r.editions[l];
@@ -43,7 +49,7 @@ export const scholarlyPublications=evidence.map(r=>({
  sections:['library',r.brief.findingDirection==='measurement'?'measures':'evidence'],topic:r.brief.findingDirection==='measurement'?'assessment':'evidence',
  bibliography:{...r.bibliography,identityVerified:true,collection:r.year>=2025?'recent-research':'foundational-research'}
 }));
-export function reviewManifest(){return {schemaVersion:1,humanReviewed:false,sourceLanguage:null,method:'Shared factual brief with independently authored locale editions. Hashes establish freshness, not linguistic or scientific accuracy.',records:evidence.flatMap(r=>locales.map(l=>({id:r.id,locale:l,sourceLanguage:null,briefHash:digest(r.brief),editionHash:digest(r.editions[l]),claimIds:[`${r.id}:population`,`${r.id}:finding`,`${r.id}:limit`],sourceIds:[r.sourceId],status:r.editions[l].briefHash===digest(r.brief)?'AI_ASSISTED_DRAFT':'OUTDATED',humanReviewed:false,scientificApproval:false})))};}
+export function reviewManifest(){return {schemaVersion:1,humanReviewed:false,sourceLanguage:null,method:'Shared factual brief with independently authored locale editions. Persisted source and edition hashes establish continuity, not linguistic or scientific accuracy.',records:evidence.flatMap(r=>locales.map(l=>({id:r.id,locale:l,sourceLanguage:null,briefHash:digest(r.brief),editionHash:digest(r.editions[l]),claimIds:[`${r.id}:population`,`${r.id}:finding`,`${r.id}:limit`],sourceIds:[r.sourceId],status:Object.values(evidenceDraftState(r,l)).every(Boolean)?'AI_ASSISTED_DRAFT':'OUTDATED',humanReviewed:false,scientificApproval:false})))};}
 
 /** Bind consequential narrative text to its own brief, sources and reviewed draft bytes.
  * A hash proves change detection, not truth, fluency or human review. */
