@@ -1,0 +1,62 @@
+name: MARSAM public citation download diagnostic
+on:
+  push:
+    branches: [audit/mission-20261004]
+    paths: [.github/workflows/mission-download-diagnostic.yml]
+permissions:
+  contents: read
+jobs:
+  diagnostic:
+    runs-on: ubuntu-latest
+    container: mcr.microsoft.com/playwright/python:v1.61.0-noble
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 79e1204c9f6fe117afac5e6e9d5e4f90ce17cc68
+          persist-credentials: false
+      - run: python -m pip install -q playwright==1.61.0
+      - name: Compare rapid and naturally paced real clicks
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json,pathlib,time,pwd,os,hashlib
+          from playwright.sync_api import sync_playwright
+          out=pathlib.Path('verification/download-diagnostic');out.mkdir(parents=True,exist_ok=True)
+          origin='https://onourimpram.github.io/MARSAM/'
+          records=json.loads(pathlib.Path('src/evidence-2026-10.json').read_text())['records']
+          results=[]
+          with sync_playwright() as pw:
+              for engine,pace,reverse in [('chromium',0,False),('chromium',0,True),('chromium',0.6,False),('firefox',0.6,False),('webkit',0.6,False)]:
+                  browser=getattr(pw,engine).launch(headless=True,env={**os.environ,'HOME':pwd.getpwuid(os.getuid()).pw_dir})
+                  context=browser.new_context(accept_downloads=True);page=context.new_page()
+                  events=[]
+                  page.on('console',lambda msg:events.append({'type':'console','level':msg.type,'text':msg.text}))
+                  page.on('requestfailed',lambda req:events.append({'type':'requestfailed','url':req.url,'failure':req.failure}))
+                  label=f'{engine}-pace{pace}-reverse{reverse}';checks=[];start=time.monotonic()
+                  for record in list(reversed(records)) if reverse else records:
+                      page.goto(origin+'en/resource/'+record['id']+'/',wait_until='load')
+                      for ext in ['ris','bib']:
+                          if pace:page.wait_for_timeout(pace*1000)
+                          row={'id':record['id'],'format':ext,'start':time.monotonic()-start}
+                          try:
+                              with page.expect_download(timeout=5000) as pending:
+                                  page.locator('a[href="/MARSAM/citations/'+record['sourceId']+'.'+ext+'"]').click()
+                              data=pathlib.Path(pending.value.path()).read_bytes()
+                              row.update(ok=record['brief']['doi'].encode() in data,bytes=len(data),sha256=hashlib.sha256(data).hexdigest())
+                          except Exception as error:
+                              row.update(ok=False,error=str(error))
+                              page.screenshot(path=str(out/(label+'-failure.png')))
+                          row['end']=time.monotonic()-start;checks.append(row)
+                  results.append({'condition':label,'engine':browser.version,'checks':checks,'events':events})
+                  browser.close()
+          out.joinpath('results.json').write_text(json.dumps(results,ensure_ascii=False,indent=2))
+          for row in results:print(row['condition'],sum(c['ok'] for c in row['checks']),len(row['checks']),row['events'])
+          assert all(c['ok'] for row in results if 'pace0.6' in row['condition'] for c in row['checks']), 'Individual paced downloads failed'
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: marsam-download-diagnostic
+          path: verification/download-diagnostic
+          retention-days: 14
