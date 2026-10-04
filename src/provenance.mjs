@@ -1,4 +1,4 @@
-import {evidence} from './scholarship.mjs';
+import {evidence,sc} from './scholarship.mjs';
 import {catalogue,labels} from './catalogue.mjs';
 import {digest,translationRecord,message} from './messages.mjs';
 import {locales} from './languages.mjs';
@@ -35,7 +35,7 @@ export function reviewDimensions(source,resource) {
 export function sourceReviewPanel(source,resource,l,base) {
   const t=labels[l],d=reviewDimensions(source,resource);
   const values={identity:message(d.identity.status==='matched'?'review.identityValue':'review.identityLimited',l),
-    inspection:source.inspection==='official'?t.officialPage:source.inspection==='metadata'?t.metadataOnly:t.abstractOnly,
+    inspection:source.inspection==='fulltext'?sc('targetedFullText',l):source.inspection==='official'?t.officialPage:source.inspection==='metadata'?t.metadataOnly:t.abstractOnly,
     scientific:message('review.pending',l),currency:message('review.currencyValue',l),
     translation:message('review.languageDraft',l),rights:message('review.rightsValue',l)};
   return `<section class="source-review-panel" data-review-status="draft" aria-labelledby="source-review-title"><div class="section-heading"><h2 id="source-review-title">${e(message('review.title',l))}</h2></div><dl class="review-dimensions">${Object.entries(values).map(([key,value])=>`<div data-review-dimension="${key}"><dt>${e(message('review.'+key,l))}</dt><dd>${e(value)}</dd></div>`).join('')}</dl><p class="review-date">${e(message('review.checked',l))}. <time datetime="${e(source.checked)}" dir="ltr">${e(source.checked)}</time></p><a href="${route(l,'governance',base)}">${e(message('governance.title',l))}</a></section>`;

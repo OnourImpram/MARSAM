@@ -1,4 +1,5 @@
 import {scholarlyCopy as sc} from './scholarship.mjs';
+import {measureProfiles} from './measure-profiles.mjs';
 import {researchGuides} from './research-data.mjs';
 /** Immutable presentation projection. Original academic text and provenance stay in their source modules. */
 import {labels as baseLabels} from './i18n.mjs';
@@ -39,9 +40,9 @@ for(const [id,title,summary,group]of [
  ['governance',localized('governance.title'),localized('governance.lead'),'center']
 ])if(!sections.some(s=>s.id===id))sections.push({id,title,summary,group,topic:'methods'});
 for(const g of researchGuides)sections.push({id:g.id,title:g.title,summary:g.summary,group:'research',topic:'methods'});
-for(const [id,name]of [['brief-rcope','Brief RCOPE'],['rss-14','RSS-14'],['meaning-questionnaire','Meaning in Life Questionnaire (MLQ)'],['durel','DUREL']])sections.push({id:'measure-'+id,title:Object.fromEntries(locales.map(l=>[l,name])),summary:sc.measureLead,group:'research',topic:'assessment'});
+for(const p of measureProfiles)sections.push({id:'measure-'+p.id,title:Object.fromEntries(locales.map(l=>[l,p.title])),summary:sc.measureLead,group:'research',topic:'assessment'});
 export const overview={...baseOverview,editorial:baseOverview.editorial.map((item,i)=>i===2?{...item,text:permissionsText}:item),about:[
- {title:n.aboutTitle,text:n.aboutText},{title:n.areas,text:n.areasLead},{title:n.educationTitle,text:n.educationLead}
+ {title:n.areas,text:n.areasLead},{title:n.educationTitle,text:n.educationLead}
 ]};
 export {sources,topics,typeKeys};
 export const catalogue=Object.freeze({sources,resources,sections,articles,learningPaths,labels});

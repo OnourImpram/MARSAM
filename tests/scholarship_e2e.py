@@ -37,7 +37,7 @@ try:
                 page.locator('[data-search-results] a[href="'+base+locale+'/measure-rss-14/"]').first.wait_for()
                 check(engine+locale+' full instrument name search',page.locator('[data-search-results] a[href="'+base+locale+'/measure-rss-14/"]').count()>0)
                 page.goto(prefix+'measures/',wait_until='load')
-                for id in ['brief-rcope','rss-14','meaning-questionnaire','durel']:
+                for id in ['brief-rcope','rss-14','meaning-questionnaire','durel','swbs-eksi-kardas','swbs-paloutzian-ellison']:
                     check(engine+locale+' measure link '+id,page.locator('a[href="'+base+locale+'/measure-'+id+'/"]').count()==1)
                 page.locator('a[href="'+base+locale+'/measure-rss-14/"]').click()
                 check(engine+locale+' measure population','495' in page.locator('main').inner_text())
@@ -47,6 +47,26 @@ try:
                     page.goto(prefix+'evidence/',wait_until='load')
                     token=page.locator('[data-claim="youth-evidence:population"] bdi').filter(has_text='10–24').first
                     check(engine+' Arabic population range order',token.evaluate("e=>{const t=e.firstChild,a=document.createRange(),b=document.createRange();a.setStart(t,0);a.setEnd(t,1);b.setStart(t,t.length-1);b.setEnd(t,t.length);return a.getBoundingClientRect().left < b.getBoundingClientRect().left}"))
+                for profile in ['swbs-eksi-kardas','swbs-paloutzian-ellison']:
+                    response=page.goto(prefix+'measure-'+profile+'/',wait_until='load')
+                    check(engine+locale+profile+' HTTP',response.status==200)
+                    check(engine+locale+profile+' release',page.locator('body').get_attribute('data-release')==manifest['version'])
+                    limit=page.locator('[data-claim="'+profile+':limit"]').inner_text()
+                    check(engine+locale+profile+' explicit scope limit',len(limit)>60)
+                    if profile=='swbs-eksi-kardas':
+                        check(engine+locale+' unresolved SRMR retained','.50' in limit and '.050' in limit)
+                    else:check(engine+locale+' Turkish form distinct from validation','2022' in limit)
+                    check(engine+locale+profile+' other instrument linked',page.locator('[data-instrument-distinction] a').count()==1)
+                    for width in [320,390]:
+                        page.set_viewport_size({'width':width,'height':900})
+                        check(engine+locale+profile+str(width)+' fits',page.evaluate('document.documentElement.scrollWidth<=innerWidth+1'))
+                    if engine=='chromium' and locale in ['tr','ar','zh']:
+                        page.screenshot(path=str(output/(profile+'-'+locale+'-390.png')),full_page=True)
+                    page.set_viewport_size({'width':1280,'height':900})
+                page.goto(prefix+'search/?q=SWBS',wait_until='load')
+                for profile in ['swbs-eksi-kardas','swbs-paloutzian-ellison']:
+                    page.locator('[data-search-results] a[href="'+base+locale+'/measure-'+profile+'/"]').first.wait_for()
+                    check(engine+locale+profile+' SWBS search disambiguation',True)
                 page.goto(prefix+'about/#founder',wait_until='load')
                 check(engine+locale+' founder',page.locator('#founder').count()==1 and 'Halil Ekşi' in page.locator('#founder').inner_text())
                 page.set_viewport_size({'width':320,'height':800})
