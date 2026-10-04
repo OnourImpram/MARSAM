@@ -1,35 +1,35 @@
-# MARSAM 0.10.0. Doğrulanmış canlı teslim
+# MARSAM 0.10.1. Canlı görsel düzeltme teslimi
 
-4 Ekim 2026. Geliştirme, kaynak aktarımı ve GitHub Pages yayını tamamlandı. Kamuya açık sitede son kabul 16.32 UTC, 19.32 Türkiye saati itibarıyla başarıyla tamamlandı.
+4 Ekim 2026. Kullanıcının gösterdiği sol alt dikdörtgen birleşim hatası giderildi ve düzeltme gerçek kamuya açık adreste doğrulandı.
 
-Türkçe https://onourimpram.github.io/MARSAM/tr/
+Canlı site. https://onourimpram.github.io/MARSAM/tr/?v=0.10.1
 
-## Teslim edilen kapsam
+## Düzeltme
 
-38 kaynaklık seçkiye altı çalışma eklenerek 44 kaynağa ulaşıldı. Sekiz kanıt teması, 19 yapılandırılmış kanıt kaydı ve 152 dil matrisi satırı bulunur. Kalıcı kaynak ve dil metni parmak izleri, DOI tekrar denetimi, kapsam dışı kaynak engeli, karşılaştırmalı okuma bağlantıları ve görünür inceleme kapsamı düzeltmesi yayımlandı. Bu döngüde yeni kaynak çıkarılmadı. Önceden arşivlenen iki kitap yeni çıkarım olarak gösterilmez.
+Önceki iki CSS kaplaması kaldırıldı. Tek, kendi içinde yeterli SVG dosyası özgün WebP görselini bir kez gömer. Sağdaki ilk kemer konturu sola aktarılır. Kemer ayağı alt çerçeveden önce çapraz sonlanır. MARSAM yazısı ve görsel yeniden üretilmedi. Özgün WebP dosyaları değişmedi. Önceki kompozisyonu donduran testler, özgün piksel referansını denetleyen regresyonlarla değiştirildi.
 
-Onaylı 0.9.4 ebru portalı, iki simetri düzeltmesi, çini, CSS, Marmara kimliği, gezinme ve kurucu anlatısı korundu. Canlı portal ekran görüntüsü üç tarayıcı motorunda adayın görüntüsüyle piksel düzeyinde aynıdır. Başka host projelerine veya kök dosyalara dokunulmadı.
+Yalnızca mobil 480 ve masaüstü 960 çözünürlüklerini eşleştirmek yeterli değildi. Önceki dikdörtgen maske alt çerçeveyi de kesiyordu. Bu sürüm o geometrik sorunu giderir ve bağımsız ölçeklenen kaplamaları kaldırır.
 
 ## Doğrulama
 
-Aday işi 37215979835 başarıyla tamamlandı. Yedi tarayıcı paketinde toplam 10577 otomatik kontrol geçti. Kaynak main doğrulaması 37216409064, host staging işi 37216449856 ve Pages yayını 37216558850 ayrıca başarılıdır.
+112 kaynak testi ve 11 oluşturulmuş site testi hem kök hem /MARSAM/ yollarında geçti. Beş araştırma dosyası ve gerçek notebook testi başarılıdır. Mevcut yedi tarayıcı paketinde 10577, yeni portal paketinde 745 otomatik kontrol geçti. Yeni iki regresyon testi eski kompozisyonda beklenen şekilde başarısız oldu.
 
-Yayın sonrası gerçek HTTP kabul işi 37216622752, ikinci denemesinde aynı kaynak ve değişmemiş testlerle geçti. 882 kamuya açık dosyanın tamamı boyut ve SHA256 bakımından manifestle eşleşti. Bunların 730'u HTML dosyasıdır. Chromium, Firefox ve WebKit ile sekiz dilde 818 çekirdek ve 1495 yeni kanıt döngüsü kontrolü geçti. Arama, bağlantı geçişleri, gerçek RIS ve BibTeX indirmeleri, dar ekranlar, Arapça yön ve JavaScript kapalı içerik denetlendi.
+Aday doğrulaması 37226010682, ana dal doğrulaması 37226722972, host hazırlığı 37226744748 ve Pages yayını 37226834651 başarıyla tamamlandı.
 
-İlk canlı denemede tek bir Chromium indirme olayı 15 saniyelik süreyi aştı. Bu başarısız kayıt gizlenmedi. Ayrı tanı işinde 60 gerçek indirme hızlı, ters sıralı ve aralıklı koşullarda geçti. İlk zaman aşımının kesin nedeni belirlenmiş değildir. Son tam kabul, dosya veya tarayıcı güvenlik ayarı değiştirilmeden geçti.
+Gerçek canlı kabul 37226348343 başarılıdır. 883 dosyanın tamamı, içlerindeki 730 HTML dosyası dahil, yayın manifestiyle boyut ve SHA256 bakımından eşleşti. Canlı adreste 818 temel etkileşim ve 745 portal kontrolü geçti. Chromium, Firefox ve WebKit, sekiz dil, 320, 390, 650, 651, 900 ve 1440 piksel genişlikleri sınandı. Türkçe ve Arapça için yüksek piksel yoğunluğu ayrıca kontrol edildi.
+
+Seçilmiş alt çerçeve, merkez, sağ yüzey ve düzeltilmiş ayak bölgelerinde özgün referansa göre piksel farkı sıfırdı. Üç tarayıcının yüksek yoğunluklu mobil canlı portal görüntüleri test edilen adayla aynıydı. Canlı ekran görüntüleri ayrıca görsel olarak incelendi. Bu sonuçlar bütün cihazlar için kusursuzluk veya bağımsız erişilebilirlik sertifikası değildir.
+
+## Korunan kapsam
+
+44 kaynak, sekiz dil, 19 yapılandırılmış kanıt kaydı, 152 dil kaydı, kurucu anlatısı ve önceki akademik iyileştirmeler korundu. Eski 38 kaynaklık sürüme dönülmedi. Başka host projelerine dokunulmadı. Bu teknik düzeltme turunda yeni literatür araştırması yapılmadı.
 
 ## Sabit yayın kimliği
 
-Kaynak payload commit. `79e1204c9f6fe117afac5e6e9d5e4f90ce17cc68`.
+Kaynak payload. `f0572eb27dcd9324e07746ea89e192cbda47af23`.
 
-Host commit. `17f646b3ef890c4ea9d2b28735f238c507b6ff71`.
+Host commit. `12ed97027a1b7e46498497089bd95693370f0b39`.
 
-MARSAM alt ağacı. `140fc86b0352801926d19e5cdfe346230faff5bd`.
+[Değişmez yayın kanıtı](docs/releases/portal-continuity-0.10.1-live.json). [Görsel karar ve kök neden](docs/design/PORTAL_CONTINUITY_0_10_1.md).
 
-[Değişmez yayın kanıtı](docs/releases/evidence-continuity-0.10.0-live.json). [Geliştirme ve eleştirel inceleme raporu](docs/cycles/2026-10-04/REPORT.md). Sonraki yalnız belge içeren commitler bu yayın payload kimliğini değiştirmez.
-
-## Bilinçli kararlar ve sınırlar
-
-Yüzlerce kayıt veya yeni bir site çatısı yerine çıkarım kalitesini güçlendiren altı kaynak, iki sentez ve kalıcı kanıt sürekliliği tercih edildi. İyi çalışan kurucu bölümü, arama, laboratuvar ve görsel kimlik yeniden kurulmadı.
-
-Teknik teslim, resmî merkez kuruluşu, insan bilimsel onayı, anadil uzmanı incelemesi, klinik hizmet yetkisi veya bağımsız erişilebilirlik sertifikası değildir. Dil matrisi semantik eşdeğerlik sertifikası vermez. Eski legacy-seed içeriklerin tümünün yeni modele taşındığı iddia edilmez. Bu geliştirme ve yayın döngüsü tamamlandı, insan denetimi gerektiren bilimsel ve kurumsal işlemler tamamlanmış gösterilmedi.
+Sonraki yalnız belge içeren commitler bu yayın payload kimliğini değiştirmez. Halil Ekşi'nin akademik değerlendirmesine sunulacak teknik sürüm hazırdır. İnsan bilimsel incelemesi, anadil uzmanı onayı ve resmî kuruluş süreçleri tamamlanmış gösterilmez.

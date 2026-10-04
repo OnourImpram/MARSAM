@@ -1,4 +1,4 @@
-# MARSAM 0.10.0
+# MARSAM 0.10.1
 
 Maneviyat ve Ruh Sağlığı Araştırmaları Merkezi girişimi için sekiz dilli akademik bilgi platformu. Planlanan akademik yapı Marmara Üniversitesi, Atatürk Eğitim Fakültesi, Eğitim Bilimleri Bölümü, Rehberlik ve Psikolojik Danışmanlık Anabilim Dalıdır. Teknik yayın, resmî kuruluş veya bilimsel onay değildir.
 
@@ -8,23 +8,30 @@ Türkçe https://onourimpram.github.io/MARSAM/tr/
 
 English https://onourimpram.github.io/MARSAM/en/
 
-Bu kaynak sürümünde 44 kamusal kaynak kaydı, sekiz kanıt teması, 19 ortak bilimsel özete bağlı araştırma kaydı ve bu kayıtlar için 152 dil metni bulunur. Sekiz dildeki tüm eski dosyaların bağımsız anadil veya bilimsel incelemesinin tamamlandığı iddia edilmez. Eski içeriklerin legacy-seed modeli ayrıca kaydedilir.
+44 kamusal kaynak kaydı, sekiz kanıt teması, 19 ortak bilimsel özete bağlı araştırma kaydı ve bu kayıtlar için 152 dil metni bulunur. Sekiz dildeki tüm eski dosyaların bağımsız anadil veya bilimsel incelemesinin tamamlandığı iddia edilmez. Eski içeriklerin legacy-seed modeli ayrıca kaydedilir.
 
-## Bu döngü
+## 0.10.1 görsel düzeltmesi
 
-Altı yeni kaynak, boylamsal ve kişi içi bulgular, Türkiye'de eş kaybı, Brezilya'daki tıp öğrencileri, psikoz bağlamı ve din görevlileriyle ilişkili istismar sonrası manevi zarar konularını seçkiye ekler. İki yeni sentez, farklı örneklem ve yöntemlerden gelen sonuçları tek bir etkililik hükmüne indirgemez.
+Sol alt birleşimdeki dikdörtgen yama izi kaldırıldı. İki bağımsız CSS kaplaması yerine tek, kendi içinde yeterli portal-continuous-v1.svg kullanılır. Dosya özgün WebP görselini bir kez gömer ve sağdaki ilk kemer konturunu sol tarafta yeniden kullanır. Alt çerçeveye taşan dikdörtgen maske yoktur. MARSAM yazısı veya görsel yeniden üretilmedi. Özgün WebP dosyaları değişmeden saklanır.
+
+Mobil ve masaüstü aynı kompozisyonu kullanır. Regresyon testleri artık hatalı eski CSS kompozisyonuna eşitliği değil, korunacak özgün pikselleri, düzeltilen ayağı ve kaplamasız görüntülemeyi denetler. Ayrıntılar [görsel düzeltme kaydında](docs/design/PORTAL_CONTINUITY_0_10_1.md), canlı kanıt [yayın kaydında](docs/releases/portal-continuity-0.10.1-live.json) bulunur.
+
+## Korunan akademik katman
+
+0.10.0 döngüsündeki altı yeni kaynak, boylamsal ve kişi içi bulgular, Türkiye'de eş kaybı, Brezilya'daki tıp öğrencileri, psikoz bağlamı ve din görevlileriyle ilişkili istismar sonrası manevi zarar konularını seçkiye ekler. İki sentez, farklı örneklem ve yöntemlerden gelen sonuçları tek bir etkililik hükmüne indirgemez. Bu içerik 0.10.1 düzeltmesinde değiştirilmedi.
 
 Kaynak üstverisi ve her dil metni kalıcı taslak parmak izleriyle korunur. Build sırasında eski parmak izleri otomatik olarak yeniden onaylanmaz. data/locale-parity.json alanların varlığını ve kayıtlı içerikle eşleşmeyi gösterir. Bu dosya anlam eşdeğerliği, doğruluk veya insan onayı sertifikası değildir.
 
-Onaylı 0.9.4 portalı, bütün görsel varlıklar, CSS, gezinme, kurucu anlatısı ve mevcut araştırma laboratuvarı korunur. İki SWBS ayrı araç olarak kalır. Ekşi ve Kardaş 2017 kaynağındaki .50 ve .050 SRMR uyuşmazlığı gizlenmez.
+Marmara kimliği, çini, gezinme, kurucu anlatısı ve araştırma laboratuvarı korunur. İki SWBS ayrı araç olarak kalır. Ekşi ve Kardaş 2017 kaynağındaki .50 ve .050 SRMR uyuşmazlığı gizlenmez.
 
-Ayrıntılar [döngü raporunda](docs/cycles/2026-10-04/REPORT.md), yayın kanıtları [teslim durumunda](DELIVERY_STATUS.md) bulunur. Önceki README ve teslim metni değişmeden döngü arşivine taşınmıştır.
+Akademik döngünün ayrıntıları [döngü raporunda](docs/cycles/2026-10-04/REPORT.md), güncel teknik teslim [teslim durumunda](DELIVERY_STATUS.md) bulunur. Önceki sürümler ve doğrulama kayıtları tarihsel kanıt olarak saklanır.
 
 ## Geliştirme ve kontrol
 
 Node.js 22 veya üzeri. Ek bir uygulama çatısı veya tarayıcı çalışma zamanı bağımlılığı yoktur.
 
 ```sh
+node scripts/portal-art.mjs
 npm run check
 BASE_PATH=/MARSAM/ PAGES_PREVIEW=true npm run check
 node scripts/budget.mjs
@@ -36,6 +43,7 @@ BROWSERS=chromium,firefox,webkit python tests/research_e2e.py
 BROWSERS=chromium,firefox,webkit python tests/cini_e2e.py
 BROWSERS=chromium,firefox,webkit python tests/scholarship_e2e.py
 BROWSERS=chromium,firefox,webkit python tests/evidence_cycle_e2e.py
+BROWSERS=chromium,firefox,webkit python tests/portal_pixels.py
 ```
 
 Kalıcı taslak kayıtlarının güncellenmesi için [bakım yönergesini](docs/cycles/2026-10-04/MAINTENANCE.md) izleyin. Özel ders belgeleri, katılımcı verileri, izin alınmamış ölçek maddeleri ve font dosyaları yayımlanmaz. Teknik kontroller insan bilimsel değerlendirmesi, bağımsız erişilebilirlik sertifikası veya anadil incelemesi yerine geçmez.
