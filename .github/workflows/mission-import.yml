@@ -22,12 +22,13 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Apply the exact locally reviewed patch
+      - name: Apply exact candidate without changing Actions-token permissions
         shell: bash
         run: |
           set -euo pipefail
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           mkdir -p verification
+          echo "START_SHA=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
           python - <<'PY'
           import base64,hashlib,lzma,pathlib,subprocess
           parts=sorted(pathlib.Path('.github/mission-import').glob('payload.*'))
@@ -40,10 +41,24 @@ jobs:
           path=pathlib.Path('/tmp/marsam-evidence-cycle.patch');path.write_bytes(patch)
           subprocess.run(['git','apply','--check',str(path)],check=True)
           subprocess.run(['git','apply',str(path)],check=True)
+          pathlib.Path('verification/pending-verify-preview.yml').write_bytes(pathlib.Path('.github/workflows/verify-preview.yml').read_bytes())
+          # Workflow edits use the owner's authorized connector separately.
+          # The Actions token may push content, not workflow changes.
+          subprocess.run(['git','restore','.github/workflows/verify-preview.yml'],check=True)
           pathlib.Path('verification/candidate-patch-sha256.txt').write_text(digest+'\n')
-          print('Exact patch verified and applied',digest)
+          print('Exact content patch applied',digest)
           PY
-      - name: Run source and generated-route contracts at both roots
+          tar --exclude='./.git' --exclude='./verification' --exclude='./.github/mission-import' -cf /tmp/candidate-inspection.tar .
+          cp /tmp/candidate-inspection.tar verification/candidate-inspection.tar
+      - uses: actions/upload-artifact@v4
+        with:
+          name: marsam-candidate-inspection
+          path: |
+            verification/candidate-inspection.tar
+            verification/pending-verify-preview.yml
+            verification/candidate-patch-sha256.txt
+          retention-days: 7
+      - name: Verify source and generated routes at both roots
         shell: bash
         run: |
           set -euo pipefail
@@ -60,7 +75,7 @@ jobs:
         run: |
           python -m pip install --timeout 25 -q playwright==1.61.0 nbclient==0.10.2 nbformat==5.10.4 ipykernel==6.30.1
           python scripts/test-fonts.py
-      - name: Execute notebook and all seven real browser suites
+      - name: Execute notebook and all seven browser suites
         shell: bash
         run: |
           set -euo pipefail
@@ -74,29 +89,31 @@ jobs:
           python tests/evidence_cycle_e2e.py > verification/candidate-evidence-cycle.log 2>&1 & cycle=$!
           status=0
           for pid in $core $scope $layout $research $cini $scholarship $cycle; do wait "$pid" || status=1; done
-          for log in verification/candidate-*.log; do echo "$log"; tail -12 "$log"; done
+          for log in verification/candidate-*.log; do echo "$log"; tail -4 "$log"; done
           exit "$status"
-      - name: Commit only the verified candidate and remove temporary transport
+      - name: Commit verified content only
         shell: bash
         run: |
           set -euo pipefail
           git config user.name 'Onour Impram'
           git config user.email 'onuribram@outlook.com'
           rm -rf .github/mission-import
-          rm .github/workflows/mission-import.yml
-          git add README.md DELIVERY_STATUS.md .github/workflows/verify-preview.yml docs/cycles/2026-10-04 docs/research/SCOPE_AUDIT.json docs/superpowers/plans/2026-10-04-evidence-continuity.md package.json scripts/build.mjs src tests .github/mission-import .github/workflows/mission-import.yml
-          # Raw RED output is evidence, not code formatting. Do not rewrite it.
+          git add README.md DELIVERY_STATUS.md docs/cycles/2026-10-04 docs/research/SCOPE_AUDIT.json docs/superpowers/plans/2026-10-04-evidence-continuity.md package.json scripts/build.mjs src tests .github/mission-import
+          test -z "$(git diff --cached --name-only -- .github/workflows)"
           git diff --cached --check -- . ':!docs/cycles/2026-10-04/*.log'
-          git commit -m 'feat: strengthen plural evidence and persisted multilingual draft continuity for MARSAM 0.10.0'
-          git push origin HEAD:research/evidence-continuity-20261004
+          git fetch origin research/evidence-continuity-20261004
+          test "$(git rev-parse origin/research/evidence-continuity-20261004)" = "$START_SHA"
+          git commit -m 'feat: strengthen plural evidence and persisted multilingual continuity for MARSAM 0.10.0'
           git rev-parse HEAD > verification/candidate-source-sha.txt
           git archive --format=tar --output=verification/candidate-source.tar HEAD
+          git push origin HEAD:research/evidence-continuity-20261004
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: marsam-evidence-candidate
           path: |
             verification/candidate-*
+            verification/pending-verify-preview.yml
             verification/reading-room-*.json
             verification/research-*.json
             verification/cini-*.json
