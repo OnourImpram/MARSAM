@@ -1,29 +1,91 @@
-# MARSAM 0.9.0. Bilimsel kanıt ve araştırma okuması
+# MARSAM 0.9.1. Ölçme kimliği ve çok dilli kanıt sürekliliği
 
-3 Ekim 2026. MARSAM 0.9.0, [canlı inceleme sürümü](https://onourimpram.github.io/MARSAM/tr/) olarak yayımlandı ve doğrulandı. Mevcut onaylı portal tasarımı korunarak bilimsel kaynakların değerlendirilmesi güçlendirildi. Kesin commitler, 784 dosyanın canlı hash karşılaştırması, üç tarayıcıda 8.554 başarılı kontrol ve ilk HTTP hatasının kaydı docs/releases/scholarly-evidence-0.9.0-live.json içindedir. Ayrıntılı Türkçe rapor docs/releases/SCHOLARLY_RELEASE_0_9_0_TR.md dosyasındadır. Önceki 0.8.3 teslim kaydı docs/releases/DELIVERY_0_8_3_HISTORICAL.md içinde korunur.
+4 Ekim 2026. MARSAM 0.9.1, 0.9.0 bilimsel kanıt sürümünün son akademik red team düzeltmesi olarak yayımlandı. Görsel kimlik veya bilgi mimarisi yeniden tasarlanmadı. Düzeltme, ölçme araçlarının birbirine karışması, kaynak içi psikometrik uyuşmazlığın görünürlüğü ve sekiz dilde kanıt güncelliğinin izlenmesi üzerinde yoğunlaştı.
 
-## Değişiklikler
+## Canlı site
 
-- Mevcut 27 kaynağın tümü için gerekçeli kapsam kararı. 25 kaynak korundu, iki kişisel gelişim kaydı kamusal akademik seçkiden çıkarıldı. Tarihsel kayıtları silinmedi.
-- Uluslararası ve Türkiye bağlamlarından 11 araştırma veya ölçme kaynağı eklendi. Kamusal katalog toplamı 36 kaynak.
-- Altı temayı bir araya getiren Kanıtı okumak sayfası. Araştırma tasarımı, örneklem, bulgu ve çıkarım sınırı birlikte sunulur.
-- Brief RCOPE, RSS-14, Yaşamın Anlamı Ölçeği ve DUREL için dört ölçme profili. Ölçek maddeleri veya izinsiz çeviriler çoğaltılmaz.
-- Prof. Dr. Halil Ekşi’nin akademik girişimin kurucusu olarak ölçülü tanıtımı. Resmî müdürlük veya tamamlanmış merkez kuruluşu iddiası yoktur.
-- Sekiz dilde 88 yeni kaynak metni ortak bilgi kayıtlarına bağlanır. Bilgi veya sınırlılık değiştiğinde eski dil sürümleri derlemeyi durdurur.
-- Aday literatür keşfi betiği kamusal kataloğa otomatik içerik eklemez.
+https://onourimpram.github.io/MARSAM/tr/?v=0.9.1
 
-## Doğrulanan teslim
+https://onourimpram.github.io/MARSAM/en/?v=0.9.1
 
-Kaynak PR 5, tüm kaynak ve üretilmiş sayfa testleri iki kökte, gerçek Jupyter defteri ve altı tarayıcı takımı başarılı olduktan sonra birleştirildi. Canlı paket tam olarak test edilen 05963f0512cab78e599945448d4365a6a705b835 kaynak commitinden üretildi. Yayın deposunda yalnız MARSAM ağacı değişti. Elif Tasarım ve diğer kökler aynı Git kimliklerini korur.
+## Bilimsel düzeltmeler
 
-Canlı kontrolün ilk genel gezinme takımı Rusça katkı sayfasında GitHub servis hata sayfası aldı. İlk hata kaydı silinmedi. Aynı kod ve aynı test koşullarıyla bütün genel gezinme takımı üç tarayıcıda yeniden çalıştırıldı. 818 kontrol geçti, kaydedilen 280 gezinme yanıtı HTTP 200 oldu. Diğer beş takım ilk canlı çalıştırmada geçti. Hiçbir test koşulu gevşetilmedi. Güncel sonuçların ham JSON kayıtları docs/releases/verification/0.9.0 içinde, canlı ekran görüntüleri docs/releases/screenshots içinde bulunur.
+### İki ayrı SWBS
 
-## Bilinçli kararlar
+Aynı İngilizce kısaltma ve başlığa sahip iki farklı araç artık veri modelinde, ölçme dizininde, kaynak sayfalarında ve sekiz dilde ayrı kimliklerle gösterilir.
 
-Onaylı ebru portalı, palet, çini düzeni ve statik mimari korundu. Var olan güçlü dosyalar yeniden yazılmadı. Birçok küçük bölüm yerine altı temalı tek kanıt okuma alanı kuruldu. Başlığı genel görünen ancak manevi yaklaşımı açıkça içeren BDT, grup danışması ve kuram kitapları korundu. Güncel araştırma vitrini kurucu yayınlarıyla sınırlı tutulmadı.
+1. Ekşi ve Kardaş 2017. Türkiye'de geliştirilen 29 maddelik Spiritual Well-Being Scale.
+2. Paloutzian ve Ellison 1982. 20 maddelik Spiritual Well-Being Scale.
 
-## İnceleme sınırları
+Madde sayısı, geliştiriciler ve ölçme kökeni arayüzde görünür. Puanların veya psikometrik kanıtların birbirinin yerine kullanılabileceği izlenimi verilmez.
 
-İçerik ve dil sürümleri yapay zekâ destekli editoryal taslaktır. Bilimsel uzman, anadil uzmanı ve resmî kurumsal onay tamamlanmış gösterilmez. Kaynaklar V1 / PARTIALLY_VERIFIED düzeyindedir. Dört ölçme profili kapsamlı geçerlik, uyarlama veya puanlama kataloğu değildir. Tema, kurucu ve RSS açıklamalarında yapısal dil denetimi vardır, 88 kaynak sürümüyle aynı ortak bilgi özeti bağı mevcut değildir. Ekran okuyucu kullanıcı araştırması ve bağımsız erişilebilirlik sertifikası yapılmamıştır.
+### Kaynak içi SRMR uyuşmazlığı
 
-Kaynak seçimi, doğrulama kapsamı, terminoloji ve bakım süreci docs/research/SCHOLARLY_WORKFLOW.md içinde açıklanır. Son kod incelemesi docs/research/FINAL_REVIEW.md içindedir.
+Ekşi ve Kardaş 2017 çalışmasının özetinde SRMR .50, Tablo 6'da ise .050 olarak raporlanır. MARSAM bu iki değerden birini varsayımla düzeltmez. Uyuşmazlık kaynak notuna açıkça eklenir ve doğrulama sınırı olarak korunur.
+
+### Geliştirme, uyarlama ve doğrulama ayrımı
+
+Türkiye'de geliştirilmiş bir araç ile başka bir aracın Türkçe uyarlaması aynı kategoriye konmaz. Bir çeviri veya Türkçe formun varlığı da bağımsız psikometrik doğrulama olarak sunulmaz.
+
+### Çok dilli kanıt güncelliği
+
+Kaynak kartlarının ötesinde kurucu bölümü, kanıt temaları, RSS ve önemli anlatı blokları kaynak parmak izi, ortak brief ve dil sürümü kimliklerine bağlandı. İçerik değiştiğinde eski bir dil sürümünün sessizce güncel görünmesini engelleyen doğrulama eklendi.
+
+### Kaynak defteri
+
+Tek bir global “checked” tarihi artık tüm katalog için güncellik iddiası üretmez. Kayıt düzeyindeki inceleme tarihleri yetkilidir.
+
+### Editoryal temizlik
+
+Hakkında sayfasındaki yinelenen giriş metni kaldırıldı. İçerik kapsamı veya kurucu ağırlığı büyütülmedi.
+
+## Korunan güçlü sistemler
+
+36 kaynaklık kamusal seçki, altı kanıt teması, kurucu bölüm, araştırma ve yöntem rehberleri, katalog, arama, DOI ve ISBN erişimi, okuma listesi, karşılaştırma, atıf dışa aktarımı, sekiz dil ve Arapça RTL davranışı korundu.
+
+Onaylı katmanlı ebru portalı, İznik esintili arka plan, Marmara Üniversitesi masthead'i, renk paleti, tipografi, grid ve kart sistemi değişmedi. Görsel varlık SHA değerleri bu sürümde değiştirilmedi.
+
+## Test ve doğrulama
+
+Düzeltme için önce beş yeni regresyon testi eski davranış üzerinde başarısız oldu, ardından uygulama sonrası beşi de geçti.
+
+Aday doğrulama çalışması 37192115633 başarıyla tamamlandı. Altı tarayıcı paketi şu otomatik kontrol sayılarını geçti.
+
+- Temel etkileşim 818.
+- Kapsam 899.
+- Yerleşim 2723.
+- Araştırma 2324.
+- Çini 1393.
+- Scholarship 829.
+
+Ana dalın bağımsız doğrulaması 37201521701 üzerinde başarıyla tamamlandı. İki deployment root, gerçek notebook ve kurcalama kontrolleri, üç tarayıcı motoru, sekiz dil, responsive düzen ve kurumsal sınırlar geçti.
+
+Hosting staging işi 37201910825 başarıyla tamamlandı. İlk staging denemesi kaynak hatası nedeniyle değil, runner ortamında nbformat bulunmadığı için durmuştu. Eşleşen notebook bağımlılıkları kurulduktan sonra exact kaynak aynı kontrollerden geçti.
+
+GitHub Pages build ve deploy işi 37202021619 başarıyla tamamlandı.
+
+## Sürüm kimliği
+
+Kaynak commit: `b0f1ddb59b97b480fb994226a196e2d40d184d9c`.
+
+Hosting commit: `0e0a0e9f38451ccf18b8a421f1be900edc19ad31`.
+
+Host tree: `7222a0180dcda023cd5b3251f63454927145f7d1`.
+
+MARSAM subtree: `b584efaa8bc5f3e5be6a74fbc3258809ff533dc7`.
+
+Canlı hosttaki `MARSAM/release.json`, sürümü 0.9.1 ve sourceCommit değerini yukarıdaki kaynak commit olarak kaydeder. Yayımlanan Türkçe ölçme dizini de `data-release="0.9.1"` taşır.
+
+## Bilinçli sapmalar
+
+Master brief'teki her öneri mekanik olarak uygulanmadı. Bu sürümde yeni bilgi mimarisi, yeni görsel sistem veya yüzlerce yeni kaynak eklemek yerine 0.9.0'ın güçlü çözümleri korundu. Bunun nedeni bilimsel bütünlük önceliğinin değişiklik hacminden daha yüksek olmasıdır.
+
+Ölçme dizini “tam psikometri gözlemevi” olarak sunulmadı. Yalnız kaynağı yeterince doğrulanmış alanlar genişletildi. Ölçek maddeleri çoğaltılmadı.
+
+Sekiz dil “insan tarafından onaylanmış” gösterilmedi. Dil sürümleri yapay zekâ destekli editoryal taslak durumundadır. Bilimsel insan incelemesi, anadil incelemesi ve resmî yayın onayı ayrı kalır.
+
+MARSAM'ın kurumsal statüsü yükseltilmedi. Platform planlanan Marmara Üniversitesi bağlamını korur, fakat teknik yayın resmî merkez kuruluşu, akreditasyon veya klinik yetki anlamına gelmez.
+
+## Bilinen sınırlar
+
+0.9.1 bağımsız bilimsel hakem incelemesi değildir. Sekiz dilde ana dil uzmanı incelemesi tamamlanmış değildir. Kaynakların V1 / PARTIALLY_VERIFIED düzeyi tam metin sistematik inceleme anlamına gelmez. Ölçme profilleri kullanım izni, puanlama talimatı veya klinik karar desteği sağlamaz. Bağımsız erişilebilirlik sertifikası ve saha Core Web Vitals çalışması yapılmamıştır.
