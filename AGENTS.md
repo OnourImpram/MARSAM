@@ -1,3 +1,7 @@
+## Latest owner-approved visual correction, 4 October 2026
+
+Keep the approved layered ebru portal asset byte-identical, but close the narrow open vertical recess on the left that the owner marked in the 4 October screenshot. The approved repair is CSS-only. Mirror only the corresponding right-side ebru strip through the `.approved-portal::after` mask recorded in `docs/design/PORTAL_SYMMETRY_REPAIR_0_9_2.md`. Do not widen the mask, recolor the image, regenerate text, alter the nested arches, or treat this as permission for a broader redesign. This correction supersedes the earlier instruction that prohibited every overlay. The base artwork, typography, palette, Marmara masthead and scholarly content remain unchanged.
+
 ## Latest owner-approved visual, 3 October 2026
 
 Use the exact supplied layered ebru portal artwork recorded in docs/design/APPROVED_PORTAL_ASSETS.json. It supersedes earlier requirements to retain the flat manuscript interior. Only MARSAM appears inside the picture. Do not restore the Arastirma / Ogrenme subtitle, old overlaid rosette, or independent wordmark. Preserve the warm palette, academic typography, Marmara masthead and existing scholarly content. Cini is a restrained background, not a foreground wall covering. The approved square artwork must never be stretched or regenerated. No institutional approval follows from this visual approval.

@@ -5,7 +5,7 @@ import {createHash} from 'node:crypto';
 import {renderCampusHome} from '../src/campus.mjs';
 import {locales} from '../src/languages.mjs';
 const root=new URL('../',import.meta.url);
-test('approved receding-arch artwork is used unchanged in each locale and under both deployment roots',()=>{
+test('approved receding-arch artwork and owner-marked symmetry repair are used in each locale and under both deployment roots',()=>{
  for(const base of ['/','/MARSAM/'])for(const locale of locales){
   const html=renderCampusHome(locale,base);
   const art=html.match(/<div class="heritage-art"[\s\S]*?<\/section>/)?.[0];
@@ -20,10 +20,13 @@ test('approved receding-arch artwork is used unchanged in each locale and under 
   assert.ok(html.includes('data-open-search'));
  }
 });
-test('approved original composition is fingerprinted and web derivatives stay within their image budgets',()=>{
+test('approved original composition remains byte-identical while the visual repair stays CSS-only',()=>{
  const desktop=readFileSync(new URL('public/assets/heritage/approved-portal-960.webp',root));
  assert.equal(createHash('sha256').update(desktop).digest('hex'),'00a058dc8f737d73d9bfbd49ef9e541fe54defb2f8d0015efa3ad77cfaa6c66b');
  assert.ok(desktop.length<=90000);
+ const css=readFileSync(new URL('public/site.css',root),'utf8');
+ assert.match(css,/\.manuscript-frame\.approved-portal::after\{[^}]*approved-portal-960\.webp[^}]*scaleX\(-1\)[^}]*clip-path:polygon\(84\.5% 32\.5%,86\.5% 33%,86\.2% 86\.5%,84\.6% 83\.5%\)[^}]*pointer-events:none/);
+ assert.match(css,/\.manuscript-frame\.approved-portal::before\{display:none\}/);
  const mobile=readFileSync(new URL('public/assets/heritage/approved-portal-480.webp',root));
  assert.ok(mobile.length<=40000);
  for(const image of [desktop,mobile])assert.equal(image.subarray(8,12).toString(),'WEBP');
@@ -31,7 +34,7 @@ test('approved original composition is fingerprinted and web derivatives stay wi
 test('approved picture is undistorted and cini recedes at every breakpoint',()=>{
  const css=readFileSync(new URL('public/site.css',root),'utf8');
  const rule=css.match(/\.manuscript-frame\.approved-portal\{([^}]+)\}/)?.[1]||'';
- assert.match(rule,/aspect-ratio:1/);assert.match(rule,/height:auto/);assert.match(rule,/padding:0/);
+ assert.match(rule,/aspect-ratio:1/);assert.match(rule,/height:auto/);assert.match(rule,/padding:0/);assert.match(rule,/position:relative/);assert.match(rule,/overflow:hidden/);
  assert.match(css,/\.approved-portal-image\{[^}]*height:auto[^}]*object-fit:contain/);
  const cini=css.slice(css.indexOf('/* MARSAM Iznik cini'),css.indexOf('/* End MARSAM Iznik cini */'));
  const values=[...cini.matchAll(/opacity:([.\d]+)/g)].map(m=>Number(m[1]));
