@@ -48,6 +48,7 @@ jobs:
           timeout 420 python -u tests/research_e2e.py & research=$!
           python tests/cini_e2e.py & cini=$!
           python tests/scholarship_e2e.py & scholarship=$!
+          python tests/evidence_cycle_e2e.py & cycle=$!
           status=0
           wait "$core" || status=1
           wait "$scope" || status=1
@@ -55,6 +56,7 @@ jobs:
           wait "$research" || status=1
           wait "$cini" || status=1
           wait "$scholarship" || status=1
+          wait "$cycle" || status=1
           exit "$status"
       - uses: actions/upload-artifact@v4
         if: always()
@@ -65,8 +67,10 @@ jobs:
             verification/research-*
             verification/cini-*
             verification/scholarship-*
+            verification/evidence-cycle-*
             .browser-results/cini/
             .browser-results/scholarship/
+            .browser-results/evidence-cycle/
             .browser-results/research/
             .browser-results/reading-room/
           include-hidden-files: true
