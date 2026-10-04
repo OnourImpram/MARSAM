@@ -1,0 +1,82 @@
+name: Public portal 0.10.1 acceptance
+on:
+  push:
+    branches: [audit/portal-live-0101]
+    paths: [.github/workflows/portal-live-0101.yml]
+permissions:
+  contents: read
+jobs:
+  live:
+    runs-on: ubuntu-latest
+    container: mcr.microsoft.com/playwright/python:v1.61.0-noble
+    timeout-minutes: 18
+    env:
+      BROWSERS: chromium,firefox,webkit
+      PREVIEW_ORIGIN: https://onourimpram.github.io
+      BASE_PATH: /MARSAM/
+      PAGES_PREVIEW: 'true'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Wait for intended asset and obtain exact deployed source
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          python - <<'PY'
+          import urllib.request,json,time,pathlib,re
+          for attempt in range(35):
+              try:
+                  with urllib.request.urlopen('https://onourimpram.github.io/MARSAM/release.json',timeout=30) as response:r=json.load(response)
+                  if r.get('version')=='0.10.1' and r['files'].get('assets/heritage/portal-continuous-v1.svg',{}).get('sha256')=='2321afc7d91b5a66e435a4a252ac143b194c2168628fc13dee8ddd00ade7c0d7':
+                      assert re.fullmatch('[0-9a-f]{40}',r['sourceCommit'])
+                      pathlib.Path('/tmp/public-source-sha').write_text(r['sourceCommit']);pathlib.Path('/tmp/public-release.json').write_text(json.dumps(r));break
+              except Exception as e:print(type(e).__name__,str(e),flush=True)
+              time.sleep(20)
+          else:raise RuntimeError('Intended 0.10.1 release did not become public')
+          PY
+          git fetch --depth=1 origin "$(cat /tmp/public-source-sha)"
+          git checkout --detach FETCH_HEAD
+          node scripts/build.mjs
+          python -m pip install -q playwright==1.61.0
+          python scripts/test-fonts.py
+      - name: Check every published file against exact release manifest
+        shell: bash
+        run: |
+          python - <<'PY'
+          import urllib.request,json,hashlib,concurrent.futures,pathlib,datetime
+          r=json.loads(pathlib.Path('/tmp/public-release.json').read_text());out=pathlib.Path('verification/portal-continuity');out.mkdir(parents=True,exist_ok=True)
+          def inspect(item):
+              name,expected=item
+              try:
+                  with urllib.request.urlopen('https://onourimpram.github.io/MARSAM/'+name,timeout=40) as response:data=response.read()
+                  return {'path':name,'passed':len(data)==expected['bytes'] and hashlib.sha256(data).hexdigest()==expected['sha256']}
+              except Exception as e:return {'path':name,'passed':False,'error':str(e)}
+          with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:files=list(pool.map(inspect,r['files'].items()))
+          receipt={'version':r['version'],'sourceCommit':r['sourceCommit'],'checkedAt':datetime.datetime.now(datetime.timezone.utc).isoformat(),'files':len(files),'html':sum(x['path'].endswith('.html') for x in files),'failures':[x for x in files if not x['passed']]}
+          (out/'public-files.json').write_text(json.dumps(receipt,indent=2));print(json.dumps(receipt));assert not receipt['failures']
+          PY
+      - name: Real public mobile geometry and native interactions
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tests/portal_pixels.py > verification/portal-continuity/public-pixels.log 2>&1 & pixels=$!
+          python tests/browser_e2e.py > verification/portal-continuity/public-core.log 2>&1 & core=$!
+          status=0
+          wait "$pixels" || status=1
+          wait "$core" || status=1
+          tail -10 verification/portal-continuity/public-pixels.log
+          tail -10 verification/portal-continuity/public-core.log
+          exit "$status"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: portal-0101-public-acceptance
+          path: |
+            verification/portal-continuity/
+            verification/reading-room-*.json
+          retention-days: 14
