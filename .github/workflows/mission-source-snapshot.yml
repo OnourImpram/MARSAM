@@ -1,0 +1,22 @@
+name: MARSAM exact source snapshot
+on:
+  push:
+    branches: [audit/mission-20261004]
+    paths: [.github/workflows/mission-source-snapshot.yml]
+permissions:
+  contents: read
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 58bf9f82c18c95f76f9a11bc84423acf94546679
+          persist-credentials: false
+      - run: git archive --format=tar --output=source.tar HEAD
+      - uses: actions/upload-artifact@v4
+        with:
+          name: marsam-exact-source-58bf9f8
+          path: source.tar
+          retention-days: 7
