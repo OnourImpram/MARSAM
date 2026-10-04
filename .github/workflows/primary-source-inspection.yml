@@ -1,0 +1,46 @@
+name: Inspect primary scholarly sources
+on:
+  push:
+    branches: [audit/scholarly-refinement-20261004]
+    paths: [.github/workflows/primary-source-inspection.yml]
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Retrieve current source endpoints and new primary texts
+        run: |
+          python - <<'PY'
+          import json,time,hashlib
+          from pathlib import Path
+          from urllib.request import Request,urlopen
+          from urllib.parse import quote
+          from concurrent.futures import ThreadPoolExecutor
+          out=Path('primary-inspection');out.mkdir()
+          records=json.loads(Path('docs/research/SCOPE_AUDIT.json').read_text())['records']
+          queries=[(r['sourceId'],r['url']) for r in records]
+          queries += [('swbs-original.pdf','https://dergipark.org.tr/tr/download/article-file/317808'),('mlq-adaptation','https://dergipark.org.tr/en/pub/inuefd/article/108817'),('mlq-original.pdf','https://abakus.inonu.edu.tr/bitstreams/9ffa9718-03b6-473f-a0ca-8c6e7a82510e/download'),('suicidality-meta.pdf','https://cme.lww.com/files/ReligiositySpiritualityMeaningMakingandSuicidalityinPsychiatricPatientsandSuicideAttemptersASystematicReviewandMetaAnalysis-1732033790656.pdf')]
+          for name,doi in [('swbs','10.12738/spc.2017.1.0022'),('mlq-tr','10.17679/iuefd.16250801'),('suicidality','10.1097/HRP.0000000000000409')]:queries.append((name+'-crossref.json','https://api.crossref.org/works/'+quote(doi,safe='')))
+          def get(q):
+              id,url=q
+              try:
+                  with urlopen(Request(url,headers={'User-Agent':'MARSAM-source-audit/0.9.1'}),timeout=35) as r:
+                      data=r.read(6000000);status=r.status;resolved=r.url;typ=r.headers.get('content-type','')
+                  ext='' if id.endswith(('.pdf','.json')) else '.html'
+                  (out/(id+ext)).write_bytes(data)
+                  return {'id':id,'requested':url,'resolved':resolved,'status':status,'type':typ,'bytes':len(data),'sha256':hashlib.sha256(data).hexdigest(),'note':'Transport evidence only, not scientific appraisal or rights clearance.'}
+              except Exception as e:return {'id':id,'requested':url,'error':str(e)}
+          with ThreadPoolExecutor(max_workers=8) as pool:receipts=list(pool.map(get,queries))
+          (out/'transport.json').write_text(json.dumps(receipts,indent=2))
+          print('Fetched',sum('status' in r for r in receipts),'of',len(receipts),'No failure is silently interpreted as source invalidity.')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: marsam-primary-source-inspection
+          path: primary-inspection/
+          retention-days: 14
