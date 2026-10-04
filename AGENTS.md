@@ -1,3 +1,7 @@
+## Latest owner-approved visual correction, 4 October 2026, 0.9.4
+
+The remaining tiny lower-left seam at the foot of the first outer receding portal layer must be closed using the corresponding correct right-hand segment. Keep the approved WebP assets byte-identical. Preserve the 0.9.3 full first-layer mirror in `::before`, and use only the narrow lower segment mask in `::after` recorded in `docs/design/PORTAL_LOWER_LEFT_SEAM_0_9_4.md`. Do not expand the patch into the floor, inner arches, central panel, outer square frame, MARSAM wordmark or page layout. This 0.9.4 rule supersedes any earlier instruction that leaves `::after` disabled.
+
 ## Latest owner-approved visual correction, 4 October 2026, 0.9.3
 
 The right side of the first outer receding portal layer is the geometry authority. The left side must match it exactly in silhouette. Preserve the approved portal WebP bytes and mirror only that complete outer ebru arch layer into the left through the CSS mask recorded in `docs/design/PORTAL_FIRST_LAYER_SYMMETRY_0_9_3.md`. This supersedes the narrower 0.9.2 vertical-strip repair, which did not correct the full first-layer contour. Do not mirror the inner arches, the central panel, MARSAM text, or the full artwork. Do not recolor, regenerate, crop, blur, animate or otherwise redesign the approved visual.
