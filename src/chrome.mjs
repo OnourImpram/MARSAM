@@ -1,5 +1,5 @@
 import {locales,localeNames,langTags,direction} from './languages.mjs';
-import {labels,campusCopy,resources} from './catalogue.mjs';
+import {labels,campusCopy,resources,sections} from './catalogue.mjs';
 import {message} from './messages.mjs';
 import {h} from './heritage-copy.mjs';
 import {RELEASE} from './release.mjs';
@@ -7,14 +7,14 @@ import {escapeHTML as e,route} from './lib.mjs';
 import {icon} from './ui.mjs';
 
 export const navigation = Object.freeze([
- {key:'explore',path:'collections',children:['collections','concepts','approaches']},
- {key:'library',path:'library',children:['library','publications','books','measures','compare']},
+ {key:'explore',path:'collections',children:['collections','concepts','construct-dictionary','approaches']},
+ {key:'library',path:'library',children:['library','publications','books','measures','measurement-observatory','compare']},
  {key:'learn',path:'learning',children:['learning','practice','ethics']},
- {key:'research',path:'research',children:['research','evidence','methods','participate']},
+ {key:'research',path:'research',children:['research','evidence','evidence-bridges','datasets','methods','participate']},
  {key:'about',path:'about',children:['about','governance','editorial','contribute']}
 ]);
 const json=value=>JSON.stringify(value).replace(/</g,'\\u003c');
-const title=(id,l)=>id==='research'?message('nav.research',l):id==='governance'?message('governance.title',l):id==='practice'?labels[l].practicePage:labels[l][id];
+const title=(id,l)=>id==='research'?message('nav.research',l):id==='governance'?message('governance.title',l):id==='practice'?labels[l].practicePage:sections.find(s=>s.id===id)?.title?.[l]||labels[l][id];
 function groupLinks(group,l,path,base) {
  return group.children.map(id=>`<a href="${route(l,id,base)}" ${path===id?'aria-current="page"':''}>${e(title(id,l))}${icon('arrow')}</a>`).join('');
 }
