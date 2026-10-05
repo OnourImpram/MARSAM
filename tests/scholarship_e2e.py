@@ -12,7 +12,7 @@ def check(name,condition):
 def goto(page,url):
     last=None
     for attempt in range(3):
-        try:return goto(page,url,wait_until='load',timeout=45000)
+        try:return page.goto(url,wait_until='load',timeout=45000)
         except Exception as exc:
             last=exc
             if attempt<2:time.sleep(.5)
