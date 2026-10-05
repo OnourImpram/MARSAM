@@ -29,3 +29,8 @@ Kaynak payload. `15885a42b21d082401c63406f1e433e064f15768`.
 Host commit. `bf401c9299651d0ebac5f6430549f4f37873e054`.
 
 [Değişmez yayın kaydı](docs/releases/notice-cleanup-0.10.2-live.json). [Temizlenen bileşenler](docs/design/NOTICE_CLEANUP_0_10_2.md). Sonraki yalnız belge içeren commitler yayınlanan payload kimliğini değiştirmez.
+
+
+## 0.11.0 research roadmap candidate · 2026-10-05
+
+Implemented from the deep research roadmap without redesigning the approved heritage layer. The candidate adds nine source-checked records selected for marginal evidence value, formal instrument lineage for the first Measurement Observatory slice, four Türkiye–international evidence bridges, ESS/EVS/WVS/MIDUS registry records, a construct dictionary, static API v1 and source/instrument/claim schemas. All new scholarly content remains AI-assisted draft pending human scientific and native-language review. No institutional approval, partnership, clinical authority or permission to reproduce scale items is inferred.

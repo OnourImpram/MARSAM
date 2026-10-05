@@ -573,6 +573,114 @@
       "rights": "link-only",
       "scientificApproval": false,
       "humanLanguageReview": false
+    },
+    {
+      "sourceId": "s-spirituality-ptsd-review",
+      "title": "The Effects of Spirituality on Depression, Anxiety, and Post-Traumatic Stress Disorder: A Systematic Review",
+      "origin": "0.11.0",
+      "classification": "CORE",
+      "action": "add",
+      "reason": "Current systematic review directly synthesizing spirituality with depression, anxiety and PTSD, including spiritual conflict.",
+      "url": "https://doi.org/10.1007/s10943-026-02671-w",
+      "reviewedAt": "2026-10-05",
+      "reviewer": "AI-assisted source-based editorial assessment",
+      "humanApproval": false
+    },
+    {
+      "sourceId": "s-rss-ff-tr",
+      "title": "Adaptation of the Five-Factor Religious and Spiritual Struggles Scale and its Psychometric Properties in Türkiye",
+      "origin": "0.11.0",
+      "classification": "CORE",
+      "action": "add",
+      "reason": "Distinct Turkish adaptation of the 22-item five-factor RSS form. Instrument identity must remain separate from RSS-14.",
+      "url": "https://doi.org/10.1007/s10943-026-02728-w",
+      "reviewedAt": "2026-10-05",
+      "reviewer": "AI-assisted source-based editorial assessment",
+      "humanApproval": false
+    },
+    {
+      "sourceId": "s-sprs",
+      "title": "The Spiritual Psychological Robustness Scale (SPRS): A New Measure for Assessing Spiritual and Psychological Strength in the Context of Turkish Culture",
+      "origin": "0.11.0",
+      "classification": "CORE",
+      "action": "add",
+      "reason": "Turkish scale development directly connecting spirituality and psychological robustness.",
+      "url": "https://doi.org/10.1007/s10943-024-02175-5",
+      "reviewedAt": "2026-10-05",
+      "reviewer": "AI-assisted source-based editorial assessment",
+      "humanApproval": false
+    },
+    {
+      "sourceId": "s-sefc",
+      "title": "Development and Validation of the Spiritual Empathy Fatigue Scale (SEFC): A Psychometric Study Among Faith-Based Care Providers in Turkey",
+      "origin": "0.11.0",
+      "classification": "CORE",
+      "action": "add",
+      "reason": "Psychometric development addressing burdens among faith-based care providers and professional competence.",
+      "url": "https://doi.org/10.1007/s10943-025-02523-z",
+      "reviewedAt": "2026-10-05",
+      "reviewer": "AI-assisted source-based editorial assessment",
+      "humanApproval": false
+    },
+    {
+      "sourceId": "s-hemodialysis-spiritual-care",
+      "title": "The Effect of Spiritual Care on Anxiety and Depression Level in Patients Receiving Hemodialysis Treatment: a Randomized Controlled Trial",
+      "origin": "0.11.0",
+      "classification": "CORE",
+      "action": "add",
+      "reason": "Turkish randomized intervention evidence. Retain with explicit single-study and risk-of-bias limits.",
+      "url": "https://doi.org/10.1007/s10943-021-01386-4",
+      "reviewedAt": "2026-10-05",
+      "reviewer": "AI-assisted source-based editorial assessment",
+      "humanApproval": false
+    },
+    {
+      "sourceId": "s-muslim-coping-multinational",
+      "title": "On the links between positive religious coping, satisfaction with life and depressive symptoms among a multinational sample of Muslims",
+      "origin": "0.11.0",
+      "classification": "CORE",
+      "action": "add",
+      "reason": "Cross-cultural Muslim comparison including Türkiye and Malaysia. Useful because depressive symptoms were not automatically linked to positive religious coping.",
+      "url": "https://doi.org/10.1002/ijop.12521",
+      "reviewedAt": "2026-10-05",
+      "reviewer": "AI-assisted source-based editorial assessment",
+      "humanApproval": false
+    },
+    {
+      "sourceId": "s-refugee-faith-coping",
+      "title": "Faith-Based Coping Among Arabic-Speaking Refugees Seeking Mental Health Services in Berlin, Germany: An Exploratory Qualitative Study",
+      "origin": "0.11.0",
+      "classification": "DIRECTLY_RELEVANT",
+      "action": "add",
+      "reason": "Migration, Muslim-majority origin, mental-health service use and faith-based coping provide culturally contextual evidence.",
+      "url": "https://doi.org/10.3389/fpsyt.2021.595979",
+      "reviewedAt": "2026-10-05",
+      "reviewer": "AI-assisted source-based editorial assessment",
+      "humanApproval": false
+    },
+    {
+      "sourceId": "s-nonreligious-turkiye",
+      "title": "Healthcare Experiences and Expectations of Atheists, Deists and Agnostics in Türkiye: A Qualitative Study of Mental Well-Being",
+      "origin": "0.11.0",
+      "classification": "CORE",
+      "action": "add",
+      "reason": "Direct Turkish evidence on nonreligious worldviews, healthcare experiences, neutrality and mental wellbeing.",
+      "url": "https://doi.org/10.1111/jpm.70148",
+      "reviewedAt": "2026-10-05",
+      "reviewer": "AI-assisted source-based editorial assessment",
+      "humanApproval": false
+    },
+    {
+      "sourceId": "s-religious-sexual-stigma",
+      "title": "Religious-Based Sexual Stigma and Psychological Health: Roles of Internalization, Religious Struggle, and Religiosity",
+      "origin": "0.11.0",
+      "classification": "CORE",
+      "action": "add",
+      "reason": "Direct evidence on adverse religious context, stigma, religious struggle and psychological health.",
+      "url": "https://doi.org/10.1080/00918369.2019.1601439",
+      "reviewedAt": "2026-10-05",
+      "reviewer": "AI-assisted source-based editorial assessment",
+      "humanApproval": false
     }
   ]
 }

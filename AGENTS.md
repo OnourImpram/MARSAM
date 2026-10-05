@@ -1,3 +1,7 @@
+## Latest scholarly product direction, 5 October 2026
+
+Preserve the approved continuous heritage portal and the relevance-first editorial model. The 0.11.x line may deepen scientific infrastructure through source-verified evidence bridges, instrument lineage, dataset metadata, construct boundaries, claim provenance and versioned static data. Do not convert source inclusion into clinical endorsement, instrument availability into permission to reproduce items, translation presence into human review, or founder authorship into selection priority. New locale prose may remain English-backed draft only when explicitly marked as not human reviewed. Do not reintroduce generic clinical disclaimer banners.
+
 ## Owner-requested notice cleanup, 4 October 2026, 0.10.2
 
 Do not restore the generic clinical disclaimer footer, duplicate article or contribution side notes, blanket reading-path accreditation notice, or repeated draft warning panels. Editorial review information belongs on the existing editorial page and in source-level review records. Preserve real study limitations, citations, rights, attribution, institutional status and the approved continuous portal. Remove obsolete notice markup and CSS rather than hiding them.

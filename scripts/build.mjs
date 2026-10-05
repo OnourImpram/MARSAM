@@ -14,6 +14,7 @@ import {message,messages,translationRecord} from '../src/messages.mjs';
 import {tokenCSS} from './styles.mjs';
 import {normalizeBase,validateContent,escapeHTML as e,exportRIS,exportBib,canPublish} from '../src/lib.mjs';
 import {languagePacks} from '../src/translate.mjs';
+import {instruments,datasets,constructs,bridges,claims} from '../src/roadmap/platform.mjs';
 import {sectionPage,dossierPage,resourcePage,pathPage,searchIndex} from '../src/site.mjs';
 const root=resolve(dirname(fileURLToPath(import.meta.url)),'..');
 const base=normalizeBase(process.env.BASE_PATH||'/');
@@ -31,6 +32,14 @@ const paths=[];
 async function emit(path,html){const target=resolve(dist,path,'index.html');await mkdir(dirname(target),{recursive:true});const [locale,...parts]=path.split('/');await writeFile(target,html);paths.push('/'+(path?path+'/':''));}
 for(const l of locales){await emit(l,renderCampusHome(l,base));for(const s of sections)await emit(`${l}/${s.id}`,(campusRenderers[s.id]?campusRenderers[s.id](l,base):sectionPage(s.id,l,base)));for(const a of articles)await emit(`${l}/dossier/${a.id}`,dossierPage(a,l,base));for(const r of resources)await emit(`${l}/resource/${r.id}`,resourcePage(r,l,base));for(const p of learningPaths)await emit(`${l}/learning/${p.id}`,pathPage(p,l,base));}
 await mkdir(resolve(dist,'data'),{recursive:true});
+await mkdir(resolve(dist,'data/v1'),{recursive:true});
+const apiBase={schemaVersion:1,release:RELEASE.id,version:RELEASE.version,generatedAt:new Date().toISOString(),reviewStatus:'AI_ASSISTED_DRAFT',humanReviewed:false};
+await writeFile(resolve(dist,'data/v1/sources.json'),JSON.stringify({...apiBase,records:sources.map(s=>({id:s.id,title:s.title,year:s.year,url:s.url,kind:s.kind,inspection:s.inspection,checked:s.checked,doi:s.bibliography?.doi||null,pmid:s.bibliography?.pmid||null,rights:'link-only'}))},null,2));
+await writeFile(resolve(dist,'data/v1/instruments.json'),JSON.stringify({...apiBase,records:instruments},null,2));
+await writeFile(resolve(dist,'data/v1/datasets.json'),JSON.stringify({...apiBase,records:datasets},null,2));
+await writeFile(resolve(dist,'data/v1/constructs.json'),JSON.stringify({...apiBase,records:constructs},null,2));
+await writeFile(resolve(dist,'data/v1/evidence-bridges.json'),JSON.stringify({...apiBase,records:bridges},null,2));
+await writeFile(resolve(dist,'data/v1/claims.json'),JSON.stringify({...apiBase,records:[...evidence.flatMap(r=>['population','finding','limit'].map(field=>({id:r.id+':'+field,sourceIds:[r.sourceId],support:'source-bound-edition',reviewStatus:'AI_ASSISTED_DRAFT'}))),...claims]},null,2));
 await writeFile(resolve(dist,'data/scholarly-editions.json'),JSON.stringify(reviewManifest(),null,2));
 await writeFile(resolve(dist,'data/locale-parity.json'),JSON.stringify(evidenceContinuityManifest(evidence),null,2));
 await writeFile(resolve(dist,'data/narrative-editions.json'),JSON.stringify(narrativeReviewManifest(sources),null,2));
