@@ -10,4 +10,5 @@ const authors={
  's-nonreligious-turkiye':['Güven Soner','Emel Güven','Ercan Tunç'],
  's-religious-sexual-stigma':['Dawn M. Szymanski','Rachel F. Carretta']
 };
-for(const s of sourcesC)s.bibliography.authors=authors[s.id];
+const journals={'s-refugee-faith-coping':'Frontiers in Psychiatry','s-nonreligious-turkiye':'Journal of Psychiatric and Mental Health Nursing','s-religious-sexual-stigma':'Journal of Homosexuality'};
+for(const s of sourcesC){s.bibliography.authors=authors[s.id];s.bibliography.journal=journals[s.id];}
