@@ -200,7 +200,7 @@ class Review:
             page = ctx.new_page()
             for width in [320, 390, 768, 1440]:
                 page.set_viewport_size({'width': width, 'height': 1000})
-                for path in ['', 'books/', 'publications/', 'resource/sipas/', 'dossier/reading-evidence/']:
+                for path in ['', 'books/', 'publications/', 'resource/sipas/', 'dossier/reading-evidence/', 'measurement-observatory/', 'evidence-bridges/', 'datasets/', 'construct-dictionary/']:
                     self.goto(page, locale, path)
                     page.evaluate('document.fonts.ready')
                     self.fit(page, f'{engine}/{locale}/{path}/{width} reflow')
