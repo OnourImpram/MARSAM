@@ -26,8 +26,17 @@ def check(name,condition):
     (out/'progress.json').write_text(json.dumps({'lastCheck':name,'checksCompleted':len(checks),'passed':bool(condition)},ensure_ascii=False))
     if not condition:raise AssertionError(name)
 
+def navigate(page,url):
+    last=None
+    for attempt in range(3):
+        try:return page.goto(url,wait_until='load',timeout=45000)
+        except Exception as exc:
+            last=exc
+            if attempt<2:time.sleep(.5)
+    raise last
+
 def go(page,locale,path='',wait_fonts=True):
-    r=page.goto(origin+base+locale+'/'+path,wait_until='load')
+    r=navigate(page,origin+base+locale+'/'+path)
     check(f'HTTP {locale}/{path}',r is not None and r.status==200)
     expect(page.locator('body')).to_have_attribute('data-release',version)
     if wait_fonts:page.wait_for_function("document.fonts.status === 'loaded'",timeout=8000)

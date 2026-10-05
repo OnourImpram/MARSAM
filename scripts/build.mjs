@@ -15,6 +15,7 @@ import {tokenCSS} from './styles.mjs';
 import {normalizeBase,validateContent,escapeHTML as e,exportRIS,exportBib,canPublish} from '../src/lib.mjs';
 import {languagePacks} from '../src/translate.mjs';
 import {instruments,datasets,constructs,bridges,claims} from '../src/roadmap/platform.mjs';
+import reviewEvents from '../src/review-events.json' with {type:'json'};
 import {sectionPage,dossierPage,resourcePage,pathPage,searchIndex} from '../src/site.mjs';
 const root=resolve(dirname(fileURLToPath(import.meta.url)),'..');
 const base=normalizeBase(process.env.BASE_PATH||'/');
@@ -40,7 +41,16 @@ await writeFile(resolve(dist,'data/v1/instruments.json'),JSON.stringify({...apiB
 await writeFile(resolve(dist,'data/v1/datasets.json'),JSON.stringify({...apiBase,records:datasets},null,2));
 await writeFile(resolve(dist,'data/v1/constructs.json'),JSON.stringify({...apiBase,records:constructs},null,2));
 await writeFile(resolve(dist,'data/v1/evidence-bridges.json'),JSON.stringify({...apiBase,records:bridges},null,2));
-await writeFile(resolve(dist,'data/v1/claims.json'),JSON.stringify({...apiBase,records:[...evidence.flatMap(r=>['population','finding','limit'].map(field=>({id:r.id+':'+field,sourceIds:[r.sourceId],support:'source-bound-edition',reviewStatus:'AI_ASSISTED_DRAFT'}))),...claims]},null,2));
+await writeFile(resolve(dist,'data/v1/claims.json'),JSON.stringify({...apiBase,records:[...evidence.flatMap(r=>['population','finding','limit'].map(field=>({id:r.id+':'+field,sourceIds:[r.sourceId],support:'source-bound-edition',claimType:field,sourceLocation:'shared scholarly brief',reviewStatus:'AI_ASSISTED_DRAFT',scientificApproval:false}))),...claims]},null,2));
+const personMentions=sources.flatMap(source=>(source.bibliography?.authors||[]).map((name,index)=>({id:source.id+':author:'+(index+1),displayName:name,identityResolution:'source-scoped-mention',externalPersonId:null,sourceId:source.id,role:'author',orcid:null,orcidProvenance:null})));
+const personRelations=personMentions.map(p=>({id:'relation:'+p.id,personMentionId:p.id,sourceId:p.sourceId,relation:'author-of',institutionalMembershipClaim:false}));
+await writeFile(resolve(dist,'data/v1/people.json'),JSON.stringify({...apiBase,identityPolicy:'Source-scoped mentions are not merged by name. ORCID is never guessed from a name.',records:personMentions},null,2));
+await writeFile(resolve(dist,'data/v1/organizations.json'),JSON.stringify({...apiBase,identityPolicy:'No organization membership is inferred from coauthorship or source mentions.',records:[]},null,2));
+await writeFile(resolve(dist,'data/v1/relations.json'),JSON.stringify({...apiBase,records:personRelations},null,2));
+await writeFile(resolve(dist,'data/v1/review-events.json'),JSON.stringify({...apiBase,appendOnly:true,records:reviewEvents.events},null,2));
+await writeFile(resolve(dist,'data/v1/schema-index.json'),JSON.stringify({...apiBase,schemas:['source-record-v3','instrument','claim','review-event']},null,2));
+await writeFile(resolve(dist,'data/v1/integrity.json'),JSON.stringify({...apiBase,policy:'Recorded post-publication state is review metadata; detected updates never rewrite claims automatically.',records:sources.filter(s=>s.bibliography?.doi).map(s=>({sourceId:s.id,doi:s.bibliography.doi,state:s.correctionState||'not-checked',correctionDoi:s.correctionDoi||null,checked:s.checked,requiresHumanReview:['correction','retraction','expression-of-concern'].includes(s.correctionState)}))},null,2));
+await writeFile(resolve(dist,'data/v1/collections.json'),JSON.stringify({...apiBase,records:[{id:'selected-catalogue',method:'editorial-curation',systematic:false,exhaustive:false,sourceIds:sources.map(s=>s.id)},{id:'research-roadmap-wave2',method:'targeted-gap-filling',systematic:false,exhaustive:false,sourceIds:sources.filter(s=>s.bibliography?.collection==='research-roadmap-wave2').map(s=>s.id)}]},null,2));
 await writeFile(resolve(dist,'data/scholarly-editions.json'),JSON.stringify(reviewManifest(),null,2));
 await writeFile(resolve(dist,'data/locale-parity.json'),JSON.stringify(evidenceContinuityManifest(evidence),null,2));
 await writeFile(resolve(dist,'data/narrative-editions.json'),JSON.stringify(narrativeReviewManifest(sources),null,2));
@@ -48,7 +58,16 @@ await writeFile(resolve(dist,'data/evidence-briefs.json'),JSON.stringify({schema
 
 for(const l of locales)await writeFile(resolve(dist,`data/search-${l}.json`),JSON.stringify(searchIndex(l,base)));
 await writeFile(resolve(dist,'data/source-ledger.json'),JSON.stringify({schemaVersion:1,checked:null,recordDatesAreAuthoritative:true,editorialState:'preview',review:'SEQUENTIAL_ROLE_REVIEW',note:'Source identity and inspection scope are separate. Technical validation is not scientific approval. Audit fields below use English; interface and reading texts are localized.',sources},null,2));
-await mkdir(resolve(dist,'citations'),{recursive:true});for(const s of sources){await writeFile(resolve(dist,`citations/${s.id}.ris`),exportRIS(s));await writeFile(resolve(dist,`citations/${s.id}.bib`),exportBib(s));}
+await mkdir(resolve(dist,'citations'),{recursive:true});await mkdir(resolve(dist,'metadata'),{recursive:true});
+for(const s of sources){
+ await writeFile(resolve(dist,`citations/${s.id}.ris`),exportRIS(s));
+ await writeFile(resolve(dist,`citations/${s.id}.bib`),exportBib(s));
+ const b=s.bibliography||{};
+ const csl={id:s.id,type:b.type==='book'?'book':'article-journal',title:s.title,author:(b.authors||[]).map(name=>({literal:name})),issued:{raw:b.date||String(s.year||'')},DOI:b.doi||undefined,ISBN:b.isbn||undefined,'container-title':b.journal||undefined,publisher:b.publisher||undefined,URL:s.url};
+ await writeFile(resolve(dist,`citations/${s.id}.json`),JSON.stringify(csl,null,2));
+ const jsonld={'@context':'https://schema.org','@type':b.type==='book'?'Book':'ScholarlyArticle','@id':s.url,name:s.title,datePublished:b.date||String(s.year||''),identifier:[b.doi&&'https://doi.org/'+b.doi,b.isbn&&'ISBN '+b.isbn].filter(Boolean),author:(b.authors||[]).map(name=>({'@type':'Person',name})),isPartOf:b.journal?{'@type':'Periodical',name:b.journal}:undefined,url:s.url};
+ await writeFile(resolve(dist,`metadata/${s.id}.jsonld`),JSON.stringify(jsonld,null,2));
+}
 // The project root opens the full Turkish preview, not a placeholder splash.
 await emit('',renderCampusHome('tr',base));
 await writeFile(resolve(dist,'404.html'),`<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>404 · MARSAM</title><link rel="stylesheet" href="${base}site.css?v=${RELEASE.version}"></head><body><main class="error-body"><span class="wordmark">MARSAM</span><h1>404</h1><p>Sayfa bulunamadı · Page not found · Seite nicht gefunden · 页面不存在 · Страница не найдена · الصفحة غير موجودة · Halaman tidak ditemukan · Halaman tidak dijumpai</p><nav>${locales.map(l=>`<a href="${base}${l}/" lang="${langTags[l]}"><bdi>${e(localeNames[l])}</bdi></a>`).join('')}</nav></main></body></html>`);

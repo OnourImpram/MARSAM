@@ -49,6 +49,96 @@
     },
     "rights": {
       "type": "string"
+    },
+    "form": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "itemCount": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 1
+    },
+    "population": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": true
+    },
+    "measurementProperties": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "property",
+          "sourceId",
+          "appraisal"
+        ],
+        "properties": {
+          "property": {
+            "type": "string"
+          },
+          "method": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "resultSummary": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "sourceId": {
+            "type": "string",
+            "pattern": "^s-"
+          },
+          "appraisal": {
+            "type": "object",
+            "required": [
+              "framework",
+              "status"
+            ],
+            "properties": {
+              "framework": {
+                "type": "string"
+              },
+              "status": {
+                "enum": [
+                  "NOT_YET_APPRAISED",
+                  "APPRAISED"
+                ]
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "rightsDetail": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "itemReproduction": {
+          "type": "string"
+        },
+        "scoringInstructions": {
+          "type": "string"
+        },
+        "translationReuse": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
     }
   },
   "additionalProperties": false
