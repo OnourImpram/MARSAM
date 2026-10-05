@@ -10,4 +10,5 @@ const authors={
  's-rss-ff-tr':['Betül Şahin','Yıldız Bilge'],
  's-sprs':['Nesrullah Okan','Füsun Ekşi']
 };
-for(const s of sourcesA)s.bibliography.authors=authors[s.id];
+const journals={'s-spirituality-ptsd-review':'Journal of Religion and Health','s-rss-ff-tr':'Journal of Religion and Health','s-sprs':'Journal of Religion and Health'};
+for(const s of sourcesA){s.bibliography.authors=authors[s.id];s.bibliography.journal=journals[s.id];}
