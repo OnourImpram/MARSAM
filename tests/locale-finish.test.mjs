@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {statSync} from 'node:fs';
+import {statSync, readFileSync} from 'node:fs';
 import {strategicResources} from '../src/roadmap/platform.mjs';
 import {renderCampusHome} from '../src/campus.mjs';
 import {locales} from '../src/i18n.mjs';
@@ -32,6 +32,20 @@ test('every page head carries a social preview image with dimensions', () => {
     assert.match(html, /<meta property="og:locale" content="[a-z]{2}_[A-Z]{2}">/, `${base}${l} og:locale`);
     assert.match(html, /<meta property="og:title" content="MARSAM · [^"]{10,}">/, `${base}${l} home og:title carries the full centre name`);
   }
+});
+
+test('the ebru dark surface keeps light text at AAA contrast', () => {
+  const {color} = JSON.parse(readFileSync(new URL('../src/tokens.json', import.meta.url), 'utf8'));
+  const lum = hex => {
+    const [r, g, b] = [1, 3, 5].map(i => parseInt(hex.slice(i, i + 2), 16) / 255).map(v => v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4);
+    return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+  };
+  const ratio = (a, b) => { const [hi, lo] = [lum(a), lum(b)].sort((x, y) => y - x); return (hi + 0.05) / (lo + 0.05); };
+  assert.ok(ratio(color['text-on-dark'], color.footer) >= 7, `footer ${color.footer} on ${color['text-on-dark']}`);
+  const css = readFileSync(new URL('../public/site.css', import.meta.url), 'utf8');
+  const glow = css.match(/\.site-footer\{background:radial-gradient\(ellipse at 12% 0%,(#[0-9a-f]{6})/)[1];
+  const texts = [css.match(/\.site-footer\{[^}]*?color:(#[0-9a-f]{6})/)[1], css.match(/\.site-footer a\{color:(#[0-9a-f]{6})/)[1]];
+  for (const t of texts) assert.ok(ratio(t, glow) >= 4.5, `footer text ${t} on glow ${glow}: ${ratio(t, glow).toFixed(2)}`);
 });
 
 test('the social preview card stays under the size messengers will fetch', () => {
