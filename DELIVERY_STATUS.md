@@ -1,36 +1,23 @@
-# MARSAM 0.10.2. Canlı dipnot temizliği
+# MARSAM 0.12.0. Bitmiş merkez dili, tam yerelleştirme ve kurucu yayınları
 
-4 Ekim 2026. Kullanıcının gösterdiği genel klinik hizmet dipnotu ve benzer tekrarlanan uyarılar sekiz dilde kaldırıldı. Güncel sürüm canlıya yayımlandı.
-
-Canlı site. https://onourimpram.github.io/MARSAM/tr/?v=0.10.2
+5 Ekim 2026. Canlı: https://onourimpram.github.io/MARSAM/tr/
 
 ## Değişiklikler
 
-Ortak altbilgideki genel tanı ve terapi uyarısı, aynı metnin okuma ve katkı sayfalarındaki kopyaları, öğrenme yollarındaki genel kayıt ve sertifika uyarısı ve sayfalarda tekrarlanan taslak panelleri kaldırıldı. Bunlar CSS ile gizlenmedi. Oluşturma şablonları, kullanılmayan arayüz anahtarları ve artık kullanılmayan bileşen CSS kuralları temizlendi.
+Sahibin 5 Ekim kararıyla sekiz dilde "planlanan merkez", "kuruluş hazırlığı", "dijital önizleme" ve "web taslağı" ifadeleri kaldırıldı; altbilgideki aşama etiketi emekliye ayrıldı. Kuruluş tarihi, kurul, akreditasyon veya istatistik eklenmedi. Yapay zekâ destekli çeviri tek cümleyle belirtilir.
 
-Kaynakçalar, araştırmalara özgü sınırlılıklar, ölçek izinleri, görsel atıflar ve editoryal politika korundu. 44 kaynak, sekiz dil ve 0.10.1'de düzeltilen sürekli portal görseli değiştirilmedi. Başka host projelerine dokunulmadı.
+Türkçe dışındaki dillerde İngilizce kalan 17 stratejik kaynak ve 31 yol haritası metni yerelleştirildi; eksik yerelleştirme artık derlemeyi durdurur. Doğrulanmış çeviri bulguları uygulandı (danışan/client, counseling, literature review, religious and spiritual struggles, Rusça birim adı, Çincede kaynakta olmayan eklemelerin kaldırılması).
+
+Prof. Dr. Halil Ekşi'nin maneviyat alanındaki 18 hakemli makalesi eklendi. Künye atomları Crossref kaydından alındı, başlık her yayıncı sayfasında doğrulandı; her biri için kapsam kararı SCOPE_AUDIT'e yazıldı. Özetlerdeki sayılar kaynak özetle karşılaştırıldı.
+
+Sosyal paylaşım kartı (og:image, 1200×630) onaylı portal görseli değiştirilmeden üretildi. RIS dosyalarında boş etiketler artık satır sonu boşluğu taşımaz.
 
 ## Doğrulama
 
-117 kaynak testi ve 11 oluşturulmuş site testi hem kök hem /MARSAM/ yollarında başarılıdır. Yeni beş test önce eski kaynakta beklenen şekilde başarısız oldu, değişiklikten sonra geçti. Kaynak ana dal doğrulaması 37229576625 ve GitHub Pages yayını 37229747478 başarıyla tamamlandı.
+Kaynak testleri 132/132, oluşturulmuş site testleri 12/12. Ana dal doğrulaması 37327112170 (c30f506) başarılı: core 818, scope 899, layout 4263, portal 745, research 2420, campus 1393/1393 kontrol; Chromium, Firefox, WebKit. Yayın işi 37328376811 başarılı, host commit ba695a8 iş akışı ile tetiklendi.
 
-Gerçek kamuya açık adreste 883 dosyanın tamamı boyut ve SHA256 bakımından yayın manifestiyle eşleşti. 730 HTML dosyasının tamamında kaldırılan uyarı bileşenleri ve kullanılmayan iki arayüz anahtarı bulunmuyor. Chromium, Firefox ve WebKit ile 577 dipnot ve okuma arayüzü, 745 portal ve 818 temel etkileşim kontrolü geçti. Mobil ve masaüstü canlı altbilgi ekran görüntüleri incelendi.
+Yerel mobil tarama: 8 dilde 1040 sayfa, 390 px genişlikte taşan öğe 0 (negatif kontrol taşmayı yakaladı). Tam derlemede durum dili 0 sayfa (önceki sürümde 897).
 
-## Test yürütme kayıtları
+Canlı adreste release.json 0.12.0 ve kaynak c30f506; 8 dil × 4 sayfa 200, durum dili 0, og:image her sayfada, 18 yeni yayının 18'i görünür, kök site 200.
 
-İlk aday işi 37228594596 mevcut testleri geçti. Yeni tarayıcı testinde Firefox, test konteynerindeki HOME sahipliği nedeniyle başlatılamadı. Yalnız test ortamı düzeltildi. Aynı web sitesi değişikliğini yeniden doğrulayan 37229227727 işi başarılıdır.
-
-Canlı kontrol işi 37229640255 bütün dosya ve tarayıcı denetimlerini tamamladı. Testlerin ardından günlükleri yazdıran `tail -3` komutu çoklu dosya kullanımında hata verdiğinden işin genel durumu başarısızdır. Bu kayıt başarılı workflow olarak sunulmaz. Saklanan ayrı JSON ve günlük sonuçları, 577, 745 ve 818 canlı kontrolün tamamının başarılı olduğunu gösterir. Bu günlük yazdırma hatası kaynak kodu veya canlı site hatası değildir.
-
-## Sabit yayın kimliği
-
-Kaynak payload. `15885a42b21d082401c63406f1e433e064f15768`.
-
-Host commit. `bf401c9299651d0ebac5f6430549f4f37873e054`.
-
-[Değişmez yayın kaydı](docs/releases/notice-cleanup-0.10.2-live.json). [Temizlenen bileşenler](docs/design/NOTICE_CLEANUP_0_10_2.md). Sonraki yalnız belge içeren commitler yayınlanan payload kimliğini değiştirmez.
-
-
-## 0.11.0 research roadmap candidate · 2026-10-05
-
-Implemented from the deep research roadmap without redesigning the approved heritage layer. The candidate adds nine source-checked records selected for marginal evidence value, formal instrument lineage for the first Measurement Observatory slice, four Türkiye–international evidence bridges, ESS/EVS/WVS/MIDUS registry records, a construct dictionary, static API v1 and source/instrument/claim schemas. All new scholarly content remains AI-assisted draft pending human scientific and native-language review. No institutional approval, partnership, clinical authority or permission to reproduce scale items is inferred.
+Teknik kontroller insan bilimsel editör, ana dil uzmanı veya bağımsız erişilebilirlik onayı değildir. Site `noindex` önizleme modunda kalır.
