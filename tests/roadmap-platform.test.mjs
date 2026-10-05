@@ -2,6 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {sources,resources,sections} from '../src/catalogue.mjs';
 import {strategicSources,instruments,datasets,constructs,bridges,claims} from '../src/roadmap/platform.mjs';
+import {measurementObservatoryPage,evidenceBridgesPage,datasetRegistryPage,constructDictionaryPage} from '../src/roadmap/view.mjs';
+const locales=['tr','en','de','zh','ru','ar','id','ms'];
 
 test('roadmap sources are public, unique and source-checked drafts',()=>{
  assert.equal(strategicSources.length,17);
