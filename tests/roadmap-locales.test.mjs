@@ -11,6 +11,15 @@ test('roadmap public section and bridge records expose every locale',()=>{
  }
 });
 
+test('public scholarly section navigation does not silently fall back to English',()=>{
+ for(const record of strategicSections){
+  for(const locale of locales.filter(x=>!['tr','en'].includes(x))){
+   assert.notEqual(record.title[locale],record.title.en,record.id+'/title/'+locale);
+   assert.notEqual(record.summary[locale],record.summary.en,record.id+'/summary/'+locale);
+  }
+ }
+});
+
 test('roadmap locale state does not imply human review',()=>{
  for(const record of [...strategicSections,...bridges]) assert.equal(record.humanReviewed??false,false);
 });
