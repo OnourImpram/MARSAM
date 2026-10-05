@@ -5,3 +5,9 @@ export const sourcesC=[
  S('s-nonreligious-turkiye','Healthcare Experiences and Expectations of Atheists, Deists and Agnostics in Türkiye: A Qualitative Study of Mental Well-Being',2026,'10.1111/jpm.70148','42171513','study','qualitative','Soner, G., Güven, E., & Tunç, E. (2026). Healthcare Experiences and Expectations of Atheists, Deists and Agnostics in Türkiye: A Qualitative Study of Mental Well-Being. Journal of Psychiatric and Mental Health Nursing, 33(4), 715–730. https://doi.org/10.1111/jpm.70148','Open full text and PubMed record inspected. Descriptive phenomenology with 17 participants in Samsun; findings concern reported healthcare experiences and should not be generalised to all nonreligious people in Türkiye.'),
  S('s-religious-sexual-stigma','Religious-Based Sexual Stigma and Psychological Health: Roles of Internalization, Religious Struggle, and Religiosity',2020,'10.1080/00918369.2019.1601439','31017532','study','cross-sectional','Szymanski, D. M., & Carretta, R. F. (2020). Religious-Based Sexual Stigma and Psychological Health: Roles of Internalization, Religious Struggle, and Religiosity. Journal of Homosexuality, 67(8), 1062–1080. https://doi.org/10.1080/00918369.2019.1601439','PubMed bibliographic record and abstract inspected. The study examines enacted religious-based sexual stigma, internalized heterosexism, religious struggle and psychological outcomes; context and design limit causal inference.')
 ];
+const authors={
+ 's-refugee-faith-coping':['Diana Rayes','Carine Karnouk','Dana Churbaji','Lena Walther','Malek Bajbouj'],
+ 's-nonreligious-turkiye':['Güven Soner','Emel Güven','Ercan Tunç'],
+ 's-religious-sexual-stigma':['Dawn M. Szymanski','Rachel F. Carretta']
+};
+for(const s of sourcesC)s.bibliography.authors=authors[s.id];
