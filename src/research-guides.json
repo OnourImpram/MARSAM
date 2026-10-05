@@ -73,14 +73,14 @@
       "ms": "Rekod katalog berkaitan"
     },
     "review": {
-      "tr": "Yöntem ve öğretim taslağı. Bilimsel ve ana dil incelemesi henüz tamamlanmadı. Bir akreditasyon veya uygulama yetkisi sağlamaz.",
-      "en": "Methods and teaching draft. Scientific and native-language review are not complete. This does not confer accreditation or authorization to practise.",
-      "de": "Methodischer Lehrentwurf. Wissenschaftliche und muttersprachliche Prüfung stehen aus. Keine Akkreditierung oder Befugnis zur Berufsausübung.",
-      "zh": "方法与教学草稿。尚未完成科学审查和母语审校。不提供资质认证或执业授权。",
-      "ru": "Методический учебный черновик. Научная и языковая проверка не завершены. Материал не даёт аккредитации или права на практику.",
-      "ar": "مسودة منهجية وتعليمية لم تكتمل مراجعتها العلمية واللغوية. لا تمنح اعتماداً أو ترخيصاً للممارسة.",
-      "id": "Draf metode dan pembelajaran. Telaah ilmiah dan penelaahan penutur asli belum selesai. Tidak memberikan akreditasi atau izin praktik.",
-      "ms": "Draf kaedah dan pembelajaran. Semakan ilmiah dan penutur asli belum selesai. Tidak memberikan akreditasi atau kebenaran amalan."
+      "tr": "Yöntem ve öğretim notu. Çeviriler yapay zekâ desteğiyle hazırlanmıştır. Bir akreditasyon veya uygulama yetkisi sağlamaz.",
+      "en": "Methods and teaching note. Translations were prepared with AI assistance. This does not confer accreditation or authorization to practise.",
+      "de": "Methodischer Lehrtext. Die Übersetzungen wurden mit KI-Unterstützung erstellt. Keine Akkreditierung oder Befugnis zur Berufsausübung.",
+      "zh": "方法与教学说明。译文在人工智能辅助下完成。不提供资质认证或执业授权。",
+      "ru": "Методический учебный материал. Переводы подготовлены с помощью искусственного интеллекта. Материал не даёт аккредитации или права на практику.",
+      "ar": "ملاحظة منهجية وتعليمية. أُعدّت الترجمات بمساعدة الذكاء الاصطناعي. لا تمنح اعتماداً أو ترخيصاً للممارسة.",
+      "id": "Catatan metode dan pembelajaran. Terjemahan disiapkan dengan bantuan AI. Tidak memberikan akreditasi atau izin praktik.",
+      "ms": "Nota kaedah dan pembelajaran. Terjemahan disediakan dengan bantuan AI. Tidak memberikan akreditasi atau kebenaran amalan."
     },
     "templateNote": {
       "tr": "Şablonlar boş olarak indirilir. null, henüz çıkarılmamış bilgidir, sıfır veya kaynakta raporlanmadı anlamına gelmez. Alan adları birlikte çalışabilirlik için İngilizcedir. Doldurulan dosya siteye gönderilmez.",

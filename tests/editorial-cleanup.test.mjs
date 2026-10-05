@@ -14,7 +14,7 @@ test('site footer no longer emits the blanket clinical disclaimer in any locale'
   assert.ok(footer,l);
   assert.ok(!footer.includes('footer-notice'),base+l+' generic footer notice');
   assert.ok(footer.includes('visual-credits')&&footer.includes('CC BY-SA 4.0'),l+' attribution remains');
-  assert.ok(footer.includes('institution-stage'),l+' status remains');
+  assert.ok(!footer.includes('institution-stage'),l+' establishment-stage label retired (owner, 2026-10-05)');
  }
 });
 test('retired blanket disclaimer labels are not shipped as unused UI payload',()=>{

@@ -4,7 +4,9 @@ import {sourcesB} from './sources-b.mjs';
 import {sourcesC} from './sources-c.mjs';
 import {sourcesD} from './sources-d.mjs';
 export const strategicSources=[...sourcesA,...sourcesB,...sourcesC,...sourcesD];
-export const q=(tr,en)=>({tr,en,de:en,zh:en,ru:en,ar:en,id:en,ms:en});
+import qLocales from './q-locales.json' with {type:'json'};
+/** Turkish source keys bind the localizations; a missing entry fails the build instead of shipping English. */
+export const q=(tr,en)=>{const t=qLocales[tr];if(!t)throw new Error(`Missing roadmap localization: ${tr} / ${en}`);return {tr,...t};};
 const card={
  's-spirituality-ptsd-review':['Depresyon, anksiyete ve PTSD için güncel sistematik derleme','17 çalışmalık anlatısal sentez, olası yararlı ilişkilerin yanında manevi çatışma ve karşılanmamış manevi ihtiyaçlarla ilişkili sıkıntıyı da ayırır.','A 17-study narrative synthesis separates potentially beneficial associations from distress linked to spiritual conflict and unmet spiritual needs.'],
  's-rss-ff-tr':['RSS-FF Türkiye uyarlaması · 22 madde','Beş faktörlü Türkçe form, mevcut RSS-14 kaydından ayrı bir araç sürümüdür.','The five-factor Turkish form is a distinct instrument version from the existing RSS-14 record.'],
@@ -63,7 +65,7 @@ export const datasets=[
 ];
 export const constructs=[
  {id:'spiritual-distress',tr:'Manevi sıkıntı',en:'Spiritual distress',boundary:'Distress involving spiritual meaning, connection or conflict. It is not interchangeable with low spiritual well-being and is not a diagnosis.'},
- {id:'rs-struggle',tr:'Dini ve manevi mücadele',en:'Religious and spiritual struggle',boundary:'Conflict or tension involving divine, interpersonal, moral, doubt or ultimate-meaning domains. Positive and negative consequences are both possible.'},
+ {id:'rs-struggle',tr:'Dini ve manevi mücadele',en:'Religious and spiritual struggless',boundary:'Conflict or tension involving divine, interpersonal, moral, doubt or ultimate-meaning domains. Positive and negative consequences are both possible.'},
  {id:'religious-trauma',tr:'Dinle ilişkili travma',en:'Religious trauma',boundary:'A contested umbrella term. Distinguish traumatic events, adverse religious experiences, coercion, stigma and post-traumatic outcomes rather than assume a single syndrome.'},
  {id:'worldview-nonreligion',tr:'Dünya görüşü ve dinsizlik',en:'Worldview and nonreligion',boundary:'Religious, spiritual, secular, atheist, agnostic and other meaning systems are possible worldviews. None is treated as the default.'},
  {id:'spiritual-bypassing',tr:'Manevi bypass',en:'Spiritual bypassing',boundary:'Use of spiritual frameworks in ways that may avoid unresolved psychological distress. It is culturally contingent and not a diagnostic label.'},

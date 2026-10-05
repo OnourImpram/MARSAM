@@ -53,7 +53,7 @@ export function reviewManifest(){return {schemaVersion:1,humanReviewed:false,sou
 
 /** Bind consequential narrative text to its own brief, sources and reviewed draft bytes.
  * A hash proves change detection, not truth, fluency or human review. */
-function narrativeMaterial(id,l,themeData,copyData){
+export function narrativeMaterial(id,l,themeData,copyData){
  if(id==='founder')return {title:copyData.founderTitle?.[l],short:copyData.founderShort?.[l],text:copyData.founderText?.[l]};
  if(id==='rss-profile')return {text:copyData.rssNote?.[l]};
  const theme=themeData.find(t=>'theme-'+t.id===id);

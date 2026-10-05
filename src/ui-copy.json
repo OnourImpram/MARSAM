@@ -50,24 +50,24 @@
     "ms": "Tentang"
   },
   "site.proposed": {
-    "tr": "Geliştirme ve kurumsal inceleme sürümü",
-    "en": "Development and institutional review preview",
-    "de": "Entwicklungsfassung zur institutionellen Prüfung",
-    "zh": "开发及机构审议预览版",
-    "ru": "Версия для разработки и институционального рассмотрения",
-    "ar": "نسخة تطوير ومراجعة مؤسسية",
-    "id": "Pratinjau pengembangan dan tinjauan kelembagaan",
-    "ms": "Pratonton pembangunan dan semakan institusi"
+    "tr": "Maneviyat ve ruh sağlığı araştırmaları",
+    "en": "Research on spirituality and mental health",
+    "de": "Forschung zu Spiritualität und psychischer Gesundheit",
+    "zh": "灵性与心理健康研究",
+    "ru": "Исследования духовности и психического здоровья",
+    "ar": "أبحاث الروحانية والصحة النفسية",
+    "id": "Penelitian spiritualitas dan kesehatan mental",
+    "ms": "Penyelidikan kerohanian dan kesihatan mental"
   },
   "site.context": {
-    "tr": "Marmara Üniversitesi Atatürk Eğitim Fakültesi, Eğitim Bilimleri Bölümü, Rehberlik ve Psikolojik Danışmanlık Anabilim Dalına bağlı olarak kurulması planlanan MARSAM için hazırlanan web sitesi.",
-    "en": "Website for MARSAM, planned within the Division of Guidance and Psychological Counselling, Department of Educational Sciences, Atatürk Faculty of Education, Marmara University.",
-    "de": "Website für MARSAM, dessen Einrichtung im Fachbereich für Beratung und psychologische Beratung der Abteilung für Erziehungswissenschaften an der Atatürk-Fakultät der Marmara Universität geplant ist.",
-    "zh": "本网站为拟设于马尔马拉大学阿塔图尔克教育学院教育科学系指导与心理咨询学科的MARSAM提供内容与设计预览。",
-    "ru": "Сайт MARSAM, создание которого планируется в отделении профориентации и психологического консультирования кафедры педагогических наук педагогического факультета имени Ататюрка Университета Мармара.",
-    "ar": "موقع لمركز MARSAM المزمع إنشاؤه ضمن شعبة التوجيه والإرشاد النفسي في قسم العلوم التربوية بكلية أتاتورك للتربية في جامعة مرمرة.",
-    "id": "Situs untuk MARSAM yang direncanakan berada di bawah Divisi Bimbingan dan Konseling Psikologis, Departemen Ilmu Pendidikan, Fakultas Pendidikan Atatürk, Universitas Marmara.",
-    "ms": "Laman untuk MARSAM yang dirancang di bawah Bahagian Bimbingan dan Kaunseling Psikologi, Jabatan Sains Pendidikan, Fakulti Pendidikan Atatürk, Universiti Marmara."
+    "tr": "Marmara Üniversitesi Atatürk Eğitim Fakültesi, Eğitim Bilimleri Bölümü, Rehberlik ve Psikolojik Danışmanlık Anabilim Dalı bünyesindeki MARSAM'ın web sitesi.",
+    "en": "Website of MARSAM, within the Division of Guidance and Psychological Counseling, Department of Educational Sciences, Atatürk Faculty of Education, Marmara University.",
+    "de": "Website von MARSAM im Fachbereich für Bildungsberatung und psychologische Beratung der Abteilung für Erziehungswissenschaften an der Atatürk-Fakultät für Pädagogik der Marmara-Universität.",
+    "zh": "本网站属于MARSAM，该中心隶属于马尔马拉大学阿塔图尔克教育学院教育科学系指导与心理咨询学科。",
+    "ru": "Сайт MARSAM — центра при отделении профориентации и психологического консультирования кафедры педагогических наук педагогического факультета имени Ататюрка Университета Мармара.",
+    "ar": "موقع مركز MARSAM التابع لشعبة التوجيه والإرشاد النفسي في قسم العلوم التربوية بكلية أتاتورك للتربية في جامعة مرمرة.",
+    "id": "Situs MARSAM, yang berada di bawah Divisi Bimbingan dan Konseling Psikologis, Departemen Ilmu Pendidikan, Fakultas Pendidikan Atatürk, Universitas Marmara.",
+    "ms": "Laman MARSAM, yang bernaung di bawah Bahagian Bimbingan dan Kaunseling Psikologi, Jabatan Sains Pendidikan, Fakulti Pendidikan Atatürk, Universiti Marmara."
   },
   "site.kicker": {
     "tr": "Maneviyat, ruh sağlığı ve akademik bilgi",
@@ -270,14 +270,14 @@
     "ms": "Menunggu kelulusan editor manusia."
   },
   "review.languageDraft": {
-    "tr": "Yapay zekâ destekli taslak. Uzman dil incelemesi tamamlanmadı.",
-    "en": "AI-assisted draft. Expert language review is not complete.",
-    "de": "KI-unterstützter Entwurf. Fachsprachliche Prüfung nicht abgeschlossen.",
-    "zh": "人工智能辅助草稿。专家语言审校尚未完成。",
-    "ru": "Черновик с помощью ИИ. Экспертная языковая проверка не завершена.",
-    "ar": "مسودة بمساعدة الذكاء الاصطناعي. لم تكتمل المراجعة اللغوية المتخصصة.",
-    "id": "Draf berbantuan AI. Penelaahan bahasa oleh ahli belum selesai.",
-    "ms": "Draf berbantukan AI. Semakan bahasa oleh pakar belum selesai."
+    "tr": "Çeviriler yapay zekâ desteğiyle hazırlanmıştır.",
+    "en": "Translations were prepared with AI assistance.",
+    "de": "Die Übersetzungen wurden mit KI-Unterstützung erstellt.",
+    "zh": "译文在人工智能辅助下完成。",
+    "ru": "Переводы подготовлены с помощью ИИ.",
+    "ar": "أُعدّت الترجمات بمساعدة الذكاء الاصطناعي.",
+    "id": "Terjemahan disiapkan dengan bantuan AI.",
+    "ms": "Terjemahan disediakan dengan bantuan AI."
   },
   "review.currencyValue": {
     "tr": "Kapsamlı düzeltme ve geri çekilme kontrolü tamamlanmadı.",
@@ -310,14 +310,14 @@
     "ms": "Rekod kali terakhir diperiksa"
   },
   "review.translationNotice": {
-    "tr": "Bu dildeki arayüz ve açıklamalar uzman incelemesi bekleyen taslaklardır. Özgün kaynak başlıkları korunmuştur.",
-    "en": "The interface and descriptions in this language are drafts awaiting expert review. Original source titles are preserved.",
-    "de": "Oberfläche und Beschreibungen dieser Sprache sind Entwürfe zur fachlichen Prüfung. Originaltitel bleiben erhalten.",
-    "zh": "本语言的界面与简介为待专家审校的草稿。原始来源题名予以保留。",
-    "ru": "Интерфейс и описания на этом языке являются черновиками, ожидающими экспертной проверки. Оригинальные названия сохранены.",
-    "ar": "الواجهة والأوصاف بهذه اللغة مسودات تنتظر مراجعة متخصصة. حُفظت عناوين المصادر الأصلية.",
-    "id": "Antarmuka dan deskripsi dalam bahasa ini adalah draf yang menunggu penelaahan ahli. Judul sumber asli dipertahankan.",
-    "ms": "Antara muka dan penerangan dalam bahasa ini ialah draf yang menunggu semakan pakar. Tajuk sumber asal dikekalkan."
+    "tr": "Çeviriler yapay zekâ desteğiyle hazırlanmıştır. Özgün kaynak başlıkları korunmuştur.",
+    "en": "Translations were prepared with AI assistance. Original source titles are preserved.",
+    "de": "Die Übersetzungen wurden mit Unterstützung künstlicher Intelligenz erstellt. Originaltitel bleiben erhalten.",
+    "zh": "译文借助人工智能辅助完成。原始来源题名予以保留。",
+    "ru": "Переводы подготовлены с помощью искусственного интеллекта. Оригинальные названия сохранены.",
+    "ar": "أُعدّت الترجمات بمساعدة الذكاء الاصطناعي. حُفظت عناوين المصادر الأصلية.",
+    "id": "Terjemahan disusun dengan bantuan kecerdasan buatan. Judul sumber asli dipertahankan.",
+    "ms": "Terjemahan disediakan dengan bantuan kecerdasan buatan. Tajuk sumber asal dikekalkan."
   },
   "saved.storage": {
     "tr": "Okuma listeniz bu tarayıcıda saklanır. Bir hesapla eşitlenmez. Paylaşılan cihazlarda listenizi temizleyin. Aynı alan adındaki diğer uygulamalarla ortak tarayıcı depolama alanı kullanılır.",
@@ -346,7 +346,7 @@
     "zh": "目录记录、学术解释、翻译与发布许可分别评估。",
     "ru": "Каталожные записи, научные интерпретации, перевод и разрешение на публикацию оцениваются отдельно.",
     "ar": "تُقيّم السجلات الفهرسية والتفسير العلمي والترجمة وإذن النشر بصورة منفصلة.",
-    "id": "Rekaman katalog, interpretasi ilmiah, terjemahan, dan izin publikasi dinilai secara terpisah.",
+    "id": "Catatan katalog, interpretasi ilmiah, terjemahan, dan izin publikasi dinilai secara terpisah.",
     "ms": "Rekod katalog, tafsiran ilmiah, terjemahan dan kebenaran penerbitan dinilai secara berasingan."
   },
   "governance.status": {
@@ -410,14 +410,14 @@
     "ms": "Privasi dan tindakan setempat"
   },
   "governance.privacyText": {
-    "tr": "Hesap, analiz izleyicisi veya katılımcı veri toplama formu bulunmaz. Barındırma hizmetinin erişim kayıtları ayrı bir konudur. Herkese açık önizleme, özel bir çalışma alanı değildir.",
-    "en": "There are no accounts, analytics trackers or participant data collection forms. Hosting access logs are a separate consideration. The public preview is not a private workspace.",
-    "de": "Es gibt keine Konten, Analyse-Tracker oder Formulare zur Erhebung von Teilnehmerdaten. Zugriffsprotokolle des Hostingdienstes sind gesondert zu betrachten. Die öffentliche Vorschau ist kein privater Arbeitsbereich.",
-    "zh": "平台不设账户、分析跟踪器或参与者数据收集表单。托管服务的访问日志须另行考虑。公开预览不是私密工作空间。",
-    "ru": "Здесь нет аккаунтов, аналитических трекеров или форм сбора данных участников. Журналы доступа хостинга рассматриваются отдельно. Публичная версия не является приватным рабочим пространством.",
-    "ar": "لا توجد حسابات أو متتبعات تحليلية أو نماذج لجمع بيانات المشاركين. سجلات الوصول لدى الاستضافة مسألة منفصلة. المعاينة العامة ليست مساحة عمل خاصة.",
-    "id": "Tidak ada akun, pelacak analitik, atau formulir pengumpulan data partisipan. Log akses penyedia hosting merupakan pertimbangan tersendiri. Pratinjau publik bukan ruang kerja privat.",
-    "ms": "Tiada akaun, penjejak analitik atau borang pengumpulan data peserta. Log akses penyedia pengehosan ialah pertimbangan berasingan. Pratonton awam bukan ruang kerja peribadi."
+    "tr": "Hesap, analiz izleyicisi veya katılımcı veri toplama formu bulunmaz. Barındırma hizmetinin erişim kayıtları ayrı bir konudur. Site herkese açıktır; özel bir çalışma alanı değildir.",
+    "en": "There are no accounts, analytics trackers or participant data collection forms. Hosting access logs are a separate consideration. The website is public and is not a private workspace.",
+    "de": "Es gibt keine Konten, Analyse-Tracker oder Formulare zur Erhebung von Teilnehmerdaten. Zugriffsprotokolle des Hostingdienstes sind gesondert zu betrachten. Die Website ist öffentlich und kein privater Arbeitsbereich.",
+    "zh": "平台不设账户、分析跟踪器或参与者数据收集表单。托管服务的访问日志须另行考虑。本网站为公开网站，并非私密工作空间。",
+    "ru": "Здесь нет аккаунтов, аналитических трекеров или форм сбора данных участников. Журналы доступа хостинга рассматриваются отдельно. Сайт является общедоступным и не служит приватным рабочим пространством.",
+    "ar": "لا توجد حسابات أو متتبعات تحليلية أو نماذج لجمع بيانات المشاركين. سجلات الوصول لدى الاستضافة مسألة منفصلة. الموقع متاح للعموم وليس مساحة عمل خاصة.",
+    "id": "Tidak ada akun, pelacak analitik, atau formulir pengumpulan data partisipan. Log akses penyedia hosting merupakan pertimbangan tersendiri. Situs ini bersifat publik dan bukan ruang kerja privat.",
+    "ms": "Tiada akaun, penjejak analitik atau borang pengumpulan data peserta. Log akses penyedia pengehosan ialah pertimbangan berasingan. Laman ini terbuka kepada umum dan bukan ruang kerja peribadi."
   },
   "research.title": {
     "tr": "Araştırma ve kaynak haritası",
@@ -550,14 +550,14 @@
     "ms": "Pengarang, editor atau penyumbang bab. Ini tidak menentukan keanggotaan institusi."
   },
   "footer.future": {
-    "tr": "Geliştirilmesi planlanan bölümler",
-    "en": "Planned sections",
-    "de": "Geplante Bereiche",
-    "zh": "计划中的栏目",
-    "ru": "Планируемые разделы",
-    "ar": "الأقسام المخطط لها",
-    "id": "Bagian yang direncanakan",
-    "ms": "Bahagian yang dirancang"
+    "tr": "Geliştirilen bölümler",
+    "en": "Sections in development",
+    "de": "Bereiche in Entwicklung",
+    "zh": "正在拓展的栏目",
+    "ru": "Разделы в разработке",
+    "ar": "الأقسام قيد التطوير",
+    "id": "Bagian yang sedang dikembangkan",
+    "ms": "Bahagian yang sedang dibangunkan"
   },
   "form.errors": {
     "tr": "Lütfen bu alanları kontrol edin",
@@ -602,7 +602,7 @@
   "institution.faculty": {
     "tr": "Atatürk Eğitim Fakültesi",
     "en": "Atatürk Faculty of Education",
-    "de": "Atatürk-Fakultät für Erziehungswissenschaften",
+    "de": "Pädagogische Fakultät Atatürk",
     "zh": "阿塔图尔克教育学院",
     "ru": "Педагогический факультет имени Ататюрка",
     "ar": "كلية أتاتورك للتربية",
@@ -622,21 +622,11 @@
   "institution.division": {
     "tr": "Rehberlik ve Psikolojik Danışmanlık Anabilim Dalı",
     "en": "Division of Guidance and Psychological Counselling",
-    "de": "Fachbereich für Beratung und psychologische Beratung",
+    "de": "Fachbereich für Bildungsberatung und psychologische Beratung",
     "zh": "指导与心理咨询学科",
-    "ru": "Отделение профориентации и психологического консультирования",
+    "ru": "Отделение психологического консультирования и сопровождения",
     "ar": "شعبة التوجيه والإرشاد النفسي",
     "id": "Divisi Bimbingan dan Konseling Psikologis",
     "ms": "Bahagian Bimbingan dan Kaunseling Psikologi"
-  },
-  "institution.stage": {
-    "tr": "Kuruluş hazırlığı",
-    "en": "In preparation",
-    "de": "In Vorbereitung",
-    "zh": "筹建阶段",
-    "ru": "Подготовка к созданию",
-    "ar": "قيد التأسيس",
-    "id": "Dalam persiapan",
-    "ms": "Dalam persediaan"
   }
 }
