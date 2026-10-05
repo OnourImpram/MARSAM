@@ -71,6 +71,10 @@ resources.push(...regionalResources);
 
 import {applyPublications} from './publications-data.mjs';
 applyPublications(sources,resources);
+import {strategicSources,strategicResources,strategicSections} from './roadmap/platform.mjs';
+sources.push(...strategicSources);
+resources.push(...strategicResources);
+sections.push(...strategicSections);
 typeKeys.book='metaBook';
 
 import {h as heritageLabels} from './heritage-copy.mjs';
