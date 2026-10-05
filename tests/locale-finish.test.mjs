@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import {statSync} from 'node:fs';
 import {strategicResources} from '../src/roadmap/platform.mjs';
 import {renderCampusHome} from '../src/campus.mjs';
 import {locales} from '../src/i18n.mjs';
@@ -24,10 +25,18 @@ test('strategic resource titles are short catalogue labels, not full article tit
 test('every page head carries a social preview image with dimensions', () => {
   for (const base of ['/', '/MARSAM/']) for (const l of locales) {
     const html = renderCampusHome(l, base);
-    assert.match(html, /<meta property="og:image" content="[^"]*assets\/og-card\.png">/, `${base}${l} og:image`);
+    assert.match(html, /<meta property="og:image" content="[^"]*assets\/og-card\.jpg">/, `${base}${l} og:image`);
     assert.match(html, /<meta property="og:image:width" content="1200">/);
     assert.match(html, /<meta name="twitter:card" content="summary_large_image">/);
+    assert.match(html, /<meta property="og:image:type" content="image\/jpeg">/);
+    assert.match(html, /<meta property="og:locale" content="[a-z]{2}_[A-Z]{2}">/, `${base}${l} og:locale`);
+    assert.match(html, /<meta property="og:title" content="MARSAM · [^"]{10,}">/, `${base}${l} home og:title carries the full centre name`);
   }
+});
+
+test('the social preview card stays under the size messengers will fetch', () => {
+  const size = statSync(new URL('../public/assets/og-card.jpg', import.meta.url)).size;
+  assert.ok(size < 300_000, `og-card.jpg ${size} bytes`);
 });
 
 test('visible copy no longer announces a planned, preview or establishment-stage centre', () => {
