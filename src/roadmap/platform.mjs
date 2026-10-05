@@ -40,6 +40,19 @@ export const instruments=[
  {id:'icsg-2-fa',family:'inventory-complicated-spiritual-grief',sourceId:'s-icsg-2-fa',title:'ICSG 2.0 · Persian',status:'adaptation',language:'fa',construct:'complicated spiritual grief',properties:['CFA','internal consistency','test-retest','convergent/divergent validity'],invariance:'adaptation evidence does not establish cross-language invariance',rights:'link-only; item text not republished'},
  {id:'p-sds',family:'spiritual-distress-scale',sourceId:'s-p-sds',title:'P-SDS',status:'adaptation',language:'fa',construct:'spiritual distress',properties:['content validity','CFA','internal consistency','test-retest','concurrent validity'],invariance:'cross-language invariance not established by this record',rights:'link-only; item text not republished'}
 ];
+const instrumentForms={
+ 'rss-ff-tr':{form:'five-factor-22-item',itemCount:22},
+ 'swbs-eksi-kardas':{form:'eksi-kardas-29-item',itemCount:29},
+ 'swbs-paloutzian-ellison':{form:'paloutzian-ellison-20-item',itemCount:20},
+ 'icsg-2':{form:'2.0',itemCount:28},
+ 'icsg-2-fa':{form:'2.0-persian',itemCount:28},
+ 'p-sds':{form:'persian-adaptation',itemCount:null}
+};
+for(const instrument of instruments){
+ Object.assign(instrument,instrumentForms[instrument.id]||{form:null,itemCount:null});
+ instrument.measurementProperties=instrument.properties.map(property=>({property,method:null,resultSummary:null,sourceId:instrument.sourceId,appraisal:{framework:'COSMIN',status:'NOT_YET_APPRAISED'}}));
+ instrument.rightsDetail={itemReproduction:'NOT_CLEARED',scoringInstructions:'NOT_CLEARED',translationReuse:'NOT_CLEARED'};
+}
 export const datasets=[
  {id:'ess',title:'European Social Survey',url:'https://www.europeansocialsurvey.org/data-portal',scope:'Cross-national repeated surveys. Inspect round-specific religion, wellbeing and health variables before analysis.',access:'Official ESS data portal. Round-specific terms and documentation govern use.'},
  {id:'evs',title:'European Values Study',url:'https://www.gesis.org/en/european-values-study/data-and-documentation',scope:'Values, religion, family, work, politics and society. Not every wave contains a mental-health outcome suitable for a MARSAM question.',access:'EVS/GESIS documentation and data access. Registration and usage terms may apply.'},
