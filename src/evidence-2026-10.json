@@ -169,7 +169,7 @@
         "tr": {
           "title": "Dindarlık ve ruh sağlığında çift yönlü ilişkiler",
           "population": "Birleşik Krallık ALSPAC doğum kohortunun ebeveyn kuşağı. Analiz örneklemi modele göre değişiyor.",
-          "finding": "Ön kayıtlı analizlerde dindarlık ile sonraki depresyon ve kaygı arasındaki çift yönlü ilişkiler çoğunlukla küçük veya sıfırla uyumluydu. Cinsiyet farklılıkları kesin değildi.",
+          "finding": "Ön kayıtlı analizlerde dindarlık ile ilerleyen dönemdeki depresyon ve kaygı arasındaki çift yönlü ilişkilerin çoğunlukla zayıf kaldığı ya da sıfır etkiyle uyumlu olduğu görülmüştür. Cinsiyet farklılıkları kesin değildi.",
           "limit": "Gözlemsel tasarım, kalan karıştırıcıları dışlamaz. Geniş belirsizlik aralıkları ve tarihsel ebeveyn örneklemi genellemeyi sınırlar. Sonuçlar nedenselliğin varlığını ya da yokluğunu kesinleştirmez.",
           "briefHash": "d2ddb083a3c400d5d271e6933c0a7e01b10bb7089c71a0b2fa1b8dfcbffdf086",
           "humanReviewed": false,
@@ -442,7 +442,7 @@
         "tr": {
           "title": "Türkiye’de eş kaybı, anlam ve manevi iyi oluş",
           "population": "Türkiye’de eşini kaybetmiş, 65 ile 84 yaşları arasında 403 kişi.",
-          "finding": "Manevi iyi oluş, yaşamda anlam ve dindarlık, daha düşük yalnızlık ve daha yüksek ruhsal iyi oluşla ilişkili olarak bildirildi. Çalışma aracılık analizleri içeriyor.",
+          "finding": "Manevi iyi oluş, yaşamda anlam ve dindarlığın daha düşük yalnızlık ve daha yüksek ruhsal iyi oluşla ilişkili olduğu bildirilmiştir. Çalışma aracılık analizleri içeriyor.",
           "limit": "İncelenen özette ölçümlerin zaman sırası açıklanmıyor. Aracılık analizi nedensel mekanizma veya müdahale etkililiği göstermiyor. Bulgular eş kaybı yaşamış ileri yaştaki örneklemle sınırlı okunmalı.",
           "briefHash": "66170ff885fc293c463f742ca49dee2a928cd4410bc781fc49cded808d0fd45f",
           "humanReviewed": false,

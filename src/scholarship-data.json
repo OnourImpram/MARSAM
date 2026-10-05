@@ -545,9 +545,9 @@
       },
       "editions": {
         "tr": {
-          "title": "Dini katılım: üç ileriye dönük kohort",
-          "finding": "Katılım, bazı sonraki ruh sağlığı sonuçlarıyla olumlu ilişkiliydi.",
-          "limit": "ABD örneklemleri. Artık karıştırıcılık olasıdır. Katılım, maneviyatın bütünü değildir.",
+          "title": "Dini katılım: üç ileriye dönük kohort çalışması",
+          "finding": "Dini katılımın, ilerleyen dönemlerdeki bazı ruh sağlığı çıktılarıyla olumlu ilişkili olduğu görülmüştür.",
+          "limit": "ABD örneklemleri. Kalıntı karıştırıcı etkilerin varlığı muhtemeldir. Katılım, maneviyatın bütünü değildir.",
           "briefHash": "fa66640007d72703ea902d0e0e77e734bd7af873e74b64d8b362674b1ed16a16",
           "humanReviewed": false,
           "scientificApproval": false,
