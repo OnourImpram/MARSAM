@@ -51,3 +51,8 @@ BROWSERS=chromium,firefox,webkit python tests/portal_pixels.py
 ```
 
 Kalıcı taslak kayıtlarının güncellenmesi için [bakım yönergesini](docs/cycles/2026-10-04/MAINTENANCE.md) izleyin. Özel ders belgeleri, katılımcı verileri, izin alınmamış ölçek maddeleri ve font dosyaları yayımlanmaz. Teknik kontroller insan bilimsel değerlendirmesi, bağımsız erişilebilirlik sertifikası veya anadil incelemesi yerine geçmez.
+
+
+## 0.11.0 research infrastructure
+
+This release candidate implements the first source-verified slice of the 5 October research roadmap. It adds nine high-information studies or measurement records, a Measurement Observatory, Türkiye–international evidence bridges, a dataset registry, a construct dictionary, and versioned static research API outputs under `data/v1/`. New scholarly prose remains `AI_ASSISTED_DRAFT` until human scientific and native-language review. The approved heritage portal and visual identity are unchanged.
