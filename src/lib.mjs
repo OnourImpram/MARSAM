@@ -28,7 +28,7 @@ export function exportRIS(source){
   if(b.type==='article'&&b.pages){const pages=b.pages.split(/[–-]/);rows.push(['SP',pages[0]]);if(pages[1])rows.push(['EP',pages[1]]);}
   if(b.type==='book'&&b.pages)rows.push(['N1',b.pages+' pages']);
  }
- rows.push(['N1',source.citation],['ER','']);return rows.map(([k,v])=>k+'  - '+citeValue(v)).join('\n')+'\n';
+ rows.push(['N1',source.citation],['ER','']);return rows.map(([k,v])=>{const value=citeValue(v);return value?k+'  - '+value:k+'  -';}).join('\n')+'\n';
 }
 export function exportBib(source){
  const clean=s=>citeValue(s).replace(/[{}]/g,'').replace(/\\/g,'');const b=source.bibliography;const fields={title:source.title,year:source.year||'',url:source.url};
