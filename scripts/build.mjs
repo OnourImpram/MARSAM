@@ -49,6 +49,8 @@ await writeFile(resolve(dist,'data/v1/organizations.json'),JSON.stringify({...ap
 await writeFile(resolve(dist,'data/v1/relations.json'),JSON.stringify({...apiBase,records:personRelations},null,2));
 await writeFile(resolve(dist,'data/v1/review-events.json'),JSON.stringify({...apiBase,appendOnly:true,records:reviewEvents.events},null,2));
 await writeFile(resolve(dist,'data/v1/schema-index.json'),JSON.stringify({...apiBase,schemas:['source-record-v3','instrument','claim','review-event']},null,2));
+await writeFile(resolve(dist,'data/v1/integrity.json'),JSON.stringify({...apiBase,policy:'Recorded post-publication state is review metadata; detected updates never rewrite claims automatically.',records:sources.filter(s=>s.bibliography?.doi).map(s=>({sourceId:s.id,doi:s.bibliography.doi,state:s.correctionState||'not-checked',correctionDoi:s.correctionDoi||null,checked:s.checked,requiresHumanReview:['correction','retraction','expression-of-concern'].includes(s.correctionState)}))},null,2));
+await writeFile(resolve(dist,'data/v1/collections.json'),JSON.stringify({...apiBase,records:[{id:'selected-catalogue',method:'editorial-curation',systematic:false,exhaustive:false,sourceIds:sources.map(s=>s.id)},{id:'research-roadmap-wave2',method:'targeted-gap-filling',systematic:false,exhaustive:false,sourceIds:sources.filter(s=>s.bibliography?.collection==='research-roadmap-wave2').map(s=>s.id)}]},null,2));
 await writeFile(resolve(dist,'data/scholarly-editions.json'),JSON.stringify(reviewManifest(),null,2));
 await writeFile(resolve(dist,'data/locale-parity.json'),JSON.stringify(evidenceContinuityManifest(evidence),null,2));
 await writeFile(resolve(dist,'data/narrative-editions.json'),JSON.stringify(narrativeReviewManifest(sources),null,2));
