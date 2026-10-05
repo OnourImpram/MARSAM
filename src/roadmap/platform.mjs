@@ -1,3 +1,4 @@
+import {rc} from './copy.mjs';
 import {sourcesA} from './sources-a.mjs';
 import {sourcesB} from './sources-b.mjs';
 import {sourcesC} from './sources-c.mjs';
@@ -24,11 +25,12 @@ const card={
  's-religious-minority-context':['Dini azınlıklar, bağlam ve depresif duygular','ESS 2012 ve 2014 verilerinde 28 ülkedeki 268 bölgeyi karşılaştırır. Bağlam düzeyindeki ilişkiler bireysel nedensellik olarak okunmamalıdır.','Uses ESS 2012 and 2014 data across 268 regions in 28 countries. Context-level associations should not be read as individual causation.']
 };
 export const strategicResources=strategicSources.map(s=>{const [tr,trSummary,en]=card[s.id];return {id:s.id.slice(2),title:q(tr,s.title),summary:q(trSummary,en),sections:['library',s.kind==='measure'?'measurement-observatory':'evidence-bridges'],topic:s.kind==='measure'?'assessment':'evidence',sources:[s.id],kind:s.kind,review:'draft',translation:'draft',rights:'link-only',approval:null};});
+const localeField=key=>Object.fromEntries(Object.entries(rc).map(([locale,copy])=>[locale,copy[key]]));
 export const strategicSections=[
- {id:'measurement-observatory',title:q('Ölçme Gözlemevi','Measurement Observatory'),summary:q('Ölçek ailesi, sürüm, dil formu, geliştirme veya uyarlama statüsü, psikometrik kanıt ve izin durumunu birbirinden ayır.','Separate instrument family, version, language form, development or adaptation status, psychometric evidence and permissions.'),group:'research',topic:'assessment'},
- {id:'evidence-bridges',title:q('Türkiye · Uluslararası Kanıt Köprüleri','Türkiye · International Evidence Bridges'),summary:q('Türkiye bulgularını uluslararası çalışmalarla aynı tasarım türüymüş gibi birleştirmeden karşılaştır.','Compare Turkish and international evidence without treating unlike designs as equivalent.'),group:'research',topic:'evidence'},
- {id:'datasets',title:q('Araştırma Veri Setleri Dizini','Research Dataset Registry'),summary:q('Veriyi yeniden barındırmadan erişim, kapsam, tasarım ve çıkarım sınırlarını birlikte göster.','Show access, scope, design and inferential limits without rehosting datasets.'),group:'research',topic:'methods'},
- {id:'construct-dictionary',title:q('Yapı ve Kavram Sözlüğü','Construct Dictionary'),summary:q('Yakın görünen kavramları tanı, ölçme ve klinik iddia üretmeden birbirinden ayır.','Distinguish adjacent constructs without turning definitions into diagnoses, measures or clinical claims.'),group:'explore',topic:'foundations'}
+ {id:'measurement-observatory',title:localeField('measurementTitle'),summary:localeField('measurementLead'),group:'research',topic:'assessment'},
+ {id:'evidence-bridges',title:localeField('bridgesTitle'),summary:localeField('bridgesLead'),group:'research',topic:'evidence'},
+ {id:'datasets',title:localeField('datasetsTitle'),summary:localeField('datasetsLead'),group:'research',topic:'methods'},
+ {id:'construct-dictionary',title:localeField('constructsTitle'),summary:localeField('constructsLead'),group:'explore',topic:'foundations'}
 ];
 export const instruments=[
  {id:'rss-ff-tr',family:'religious-spiritual-struggles',sourceId:'s-rss-ff-tr',title:'RSS-FF Türkiye · 22',status:'adaptation',language:'tr',construct:'religious and spiritual struggles',properties:['CFA','internal consistency','convergent/divergent validity'],invariance:'not reported in inspected abstract',rights:'link-only; item text not republished'},
