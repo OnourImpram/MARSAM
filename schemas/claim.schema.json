@@ -45,6 +45,28 @@
         "null"
       ],
       "format": "date"
+    },
+    "claimType": {
+      "type": "string"
+    },
+    "scientificApproval": {
+      "type": "boolean"
+    },
+    "localeReview": {
+      "type": "object",
+      "additionalProperties": {
+        "enum": [
+          "AI_ASSISTED_DRAFT",
+          "HUMAN_REVIEWED",
+          "OUTDATED"
+        ]
+      }
+    },
+    "supersedes": {
+      "type": [
+        "string",
+        "null"
+      ]
     }
   },
   "additionalProperties": false
