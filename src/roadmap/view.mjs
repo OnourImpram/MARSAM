@@ -49,6 +49,6 @@ export function datasetRegistryPage(l,b){
 export function constructDictionaryPage(l,b){
  const title={ [l]:road(l,'constructsTitle') },lead={ [l]:road(l,'constructsLead') };
  const cards=constructs.map(x=>`<article class="scholar-theme" id="${e(x.id)}"><h2>${e(l==='tr'?x.tr:x.en)}</h2><p>${e(l==='tr'?(trBoundary[x.id]||x.boundary):x.boundary)}</p></article>`).join('');
- return shell(l,'construct-dictionary',tx(title,l),tx(lead,l),intro(l,b,title,lead)+`<div class="wide section scholarly-page">${review(l)}<div class="two-grid">${cards}</div></div>`,b);
+ return shell(l,'construct-dictionary',tx(title,l),tx(lead,l),intro(l,b,title,lead)+`<div class="wide section scholarly-page"><div class="two-grid">${cards}</div></div>`,b);
 }
 export const roadmapRenderers={'measurement-observatory':measurementObservatoryPage,'evidence-bridges':evidenceBridgesPage,datasets:datasetRegistryPage,'construct-dictionary':constructDictionaryPage};
