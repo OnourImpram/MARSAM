@@ -3,7 +3,7 @@ import {labels,resources} from '../catalogue.mjs';
 import {escapeHTML as e,route,safeURL} from '../lib.mjs';
 import {resourceURL,icon} from '../ui.mjs';
 import {instruments,datasets,constructs,bridges,q} from './platform.mjs';
-import {road} from './copy.mjs';
+import {road,datasetText} from './copy.mjs';
 const tx=(x,l)=>x?.[l]||x?.en||x;
 const intro=(l,b,title,lead)=>`<div class="wide page-intro"><nav class="breadcrumbs" aria-label="${e(labels[l].home)}"><a href="${route(l,'',b)}">${e(labels[l].home)}</a><span aria-hidden="true">/</span><span>${e(tx(title,l))}</span></nav><span class="eyebrow">MARSAM</span><h1>${e(tx(title,l))}</h1><p class="page-deck">${e(tx(lead,l))}</p></div>`;
 const sourceList=(ids,l,b)=>`<ul class="scholar-sources">${ids.map(id=>{const r=resources.find(x=>x.sources.includes(id));return r?`<li><a href="${resourceURL(l,r.id,b)}">${e(r.title[l])}</a></li>`:'';}).join('')}</ul>`;
@@ -20,7 +20,7 @@ export function evidenceBridgesPage(l,b){
 }
 export function datasetRegistryPage(l,b){
  const title={ [l]:road(l,'datasetsTitle') },lead={ [l]:road(l,'datasetsLead') };
- const cards=datasets.map(x=>`<article class="scholar-theme"><h2>${e(x.title)}</h2><p>${e(x.scope)}</p><p class="muted">${e(x.access)}</p><a class="text-link" href="${e(safeURL(x.url))}" target="_blank" rel="noopener noreferrer">${e(labels[l].openSource)} ${icon('external')}</a></article>`).join('');
+ const cards=datasets.map(x=>`<article class="scholar-theme"><h2>${e(x.title)}</h2><p>${e(datasetText(x.id,l,0))}</p><p class="muted">${e(datasetText(x.id,l,1))}</p><a class="text-link" href="${e(safeURL(x.url))}" target="_blank" rel="noopener noreferrer">${e(labels[l].openSource)} ${icon('external')}</a></article>`).join('');
  return shell(l,'datasets',tx(title,l),tx(lead,l),intro(l,b,title,lead)+`<div class="wide section scholarly-page">${review(l)}<div class="two-grid">${cards}</div></div>`,b);
 }
 export function constructDictionaryPage(l,b){
