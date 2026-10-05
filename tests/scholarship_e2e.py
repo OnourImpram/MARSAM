@@ -9,7 +9,7 @@ completed=False; server=None; checks=[]; errors=[]; engines={}; output=ROOT/'.br
 def check(name,condition):
     checks.append({'name':name,'passed':bool(condition)})
     assert condition,name
-def goto(page,url):
+def goto(page,url,**_):
     last=None
     for attempt in range(3):
         try:return page.goto(url,wait_until='load',timeout=45000)
