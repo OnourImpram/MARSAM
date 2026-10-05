@@ -9,10 +9,10 @@ completed=False; server=None; checks=[]; errors=[]; engines={}; output=ROOT/'.br
 def check(name,condition):
     checks.append({'name':name,'passed':bool(condition)})
     assert condition,name
-def goto(page,url):
+def goto(page,url,wait_until='load',timeout=45000):
     last=None
     for attempt in range(3):
-        try:return page.goto(url,wait_until='load',timeout=45000)
+        try:return page.goto(url,wait_until=wait_until,timeout=timeout)
         except Exception as exc:
             last=exc
             if attempt<2:time.sleep(.5)
