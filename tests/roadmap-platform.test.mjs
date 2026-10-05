@@ -37,3 +37,20 @@ test('editorial bridges retain source provenance without pretending human approv
  for(const b of bridges)assert.ok(b.sourceIds.every(id=>sources.some(s=>s.id===id)));
  assert.ok(claims.every(c=>c.reviewStatus==='AI_ASSISTED_DRAFT'&&c.sourceIds.length));
 });
+
+test('handoff UI removes repetitive draft and incomplete-appraisal notes from public scholarly pages',()=>{
+ for(const locale of locales){
+  const measurement=measurementObservatoryPage(locale,'/');
+  const bridges=evidenceBridgesPage(locale,'/');
+  const datasets=datasetRegistryPage(locale,'/');
+  const constructs=constructDictionaryPage(locale,'/');
+  for(const html of [measurement,bridges,datasets,constructs]) assert.doesNotMatch(html,/scholar-review/);
+  assert.doesNotMatch(measurement,/NOT_YET_APPRAISED|Not yet appraised|Henüz değerlendirilmedi|NOT_CLEARED/);
+ }
+ const tr=constructDictionaryPage('tr','/');
+ assert.match(tr,/Manevi anlam, bağ veya çatışmayla ilişkili sıkıntı/);
+ assert.doesNotMatch(tr,/Distress involving spiritual meaning/);
+ const trMeasures=measurementObservatoryPage('tr','/');
+ assert.match(trMeasures,/dini ve manevi mücadele/);
+ assert.match(trMeasures,/iç tutarlılık/);
+});
