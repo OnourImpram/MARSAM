@@ -1,5 +1,6 @@
 import {scholarlyRenderers} from './scholarly-view.mjs';
 import {researchPages} from './research-view.mjs';
+import {roadmapRenderers} from './roadmap/view.mjs';
 /** Explicit institutional-preview page renderers. No mutations or HTML decoration. */
 import {locales,langTags,sourceNotes} from './i18n.mjs';
 import {labels,sources,resources,sections,articles,learningPaths,overview,typeKeys,campusCopy,sourceById} from './catalogue.mjs';
@@ -35,7 +36,7 @@ export function renderCompare(l,b){const c=campusCopy[l],t=labels[l];const rows=
  return shell(l,'compare',c.compare,c.compareLead,intro(l,c.compare,c.compareLead,b)+`<div class="wide section" data-compare-page><div class="notice">${icon('circle')}<p>${e(c.reviewNote)} ${e(t.verificationNote)}</p></div><form class="comparison-picker">${[1,2,3,4].map(i=>`<div><label for="compare-${i}">${e(c.choose)} ${i}</label><select id="compare-${i}" data-compare-slot><option value="">${e(c.none)}</option>${resources.map(r=>`<option value="${r.id}">${e(r.title[l])}</option>`).join('')}</select></div>`).join('')}</form><div class="comparison-actions"><a class="text-link" data-comparison-share href="${route(l,'compare',b)}">${e(c.share)} ${icon('external')}</a><button type="button" class="button secondary" data-comparison-export>${e(c.export)}</button></div><div data-compare-results aria-live="polite"></div><noscript><div class="source-list">${resources.slice(0,4).map(r=>resourceCard(r,l,b)).join('')}</div><p>${e(t.needsJS)}</p></noscript><script type="application/json" data-comparison-records>${json(rows)}</script></div>`,b);
 }
 
-export const campusRenderers={...scholarlyRenderers,...researchPages,research:renderResearch,governance:renderGovernance,books:(l,b)=>bibliographyPage(l,b,'books'),publications:(l,b)=>bibliographyPage(l,b,'publications'),collections:renderCollections,compare:renderCompare,events:renderEvents,media:renderMedia,news:renderNews,projects:renderProjects};
+export const campusRenderers={...scholarlyRenderers,...researchPages,...roadmapRenderers,research:renderResearch,governance:renderGovernance,books:(l,b)=>bibliographyPage(l,b,'books'),publications:(l,b)=>bibliographyPage(l,b,'publications'),collections:renderCollections,compare:renderCompare,events:renderEvents,media:renderMedia,news:renderNews,projects:renderProjects};
 
 /** Compatibility alias for historical callers. All rendering is already composed by shell. */
 export function decorate(html){return html;}
