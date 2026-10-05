@@ -5,3 +5,9 @@ export const sourcesA=[
  S('s-rss-ff-tr','Adaptation of the Five-Factor Religious and Spiritual Struggles Scale and its Psychometric Properties in Türkiye',2026,'10.1007/s10943-026-02728-w','42423872','measure','psychometric-adaptation','Şahin, B., & Bilge, Y. (2026). Adaptation of the Five-Factor Religious and Spiritual Struggles Scale and its Psychometric Properties in Türkiye. Journal of Religion and Health, 65(4), 3911–3931. https://doi.org/10.1007/s10943-026-02728-w','PubMed bibliographic record and abstract inspected. This is the 22-item five-factor Turkish adaptation with the Demonic subscale omitted; it is not the RSS-14 record already in MARSAM.'),
  S('s-sprs','The Spiritual Psychological Robustness Scale (SPRS): A New Measure for Assessing Spiritual and Psychological Strength in the Context of Turkish Culture',2025,'10.1007/s10943-024-02175-5','39542979','measure','scale-development','Okan, N., & Ekşi, F. (2025). The Spiritual Psychological Robustness Scale (SPRS): A New Measure for Assessing Spiritual and Psychological Strength in the Context of Turkish Culture. Journal of Religion and Health, 64(2), 1473–1497. https://doi.org/10.1007/s10943-024-02175-5','PubMed bibliographic record and abstract inspected. Development evidence is Turkish-context psychometrics; cross-cultural invariance is not established by this record.')
 ];
+const authors={
+ 's-spirituality-ptsd-review':['Nesrullah Okan','Yahya Şahin'],
+ 's-rss-ff-tr':['Betül Şahin','Yıldız Bilge'],
+ 's-sprs':['Nesrullah Okan','Füsun Ekşi']
+};
+for(const s of sourcesA)s.bibliography.authors=authors[s.id];
