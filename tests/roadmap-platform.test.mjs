@@ -2,6 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {sources,resources,sections} from '../src/catalogue.mjs';
 import {strategicSources,instruments,datasets,constructs,bridges,claims} from '../src/roadmap/platform.mjs';
+import {measurementObservatoryPage,evidenceBridgesPage,datasetRegistryPage,constructDictionaryPage} from '../src/roadmap/view.mjs';
+const locales=['tr','en','de','zh','ru','ar','id','ms'];
 
 test('roadmap sources are public, unique and source-checked drafts',()=>{
  assert.equal(strategicSources.length,17);
@@ -36,4 +38,21 @@ test('editorial bridges retain source provenance without pretending human approv
  assert.ok(bridges.length>=7);
  for(const b of bridges)assert.ok(b.sourceIds.every(id=>sources.some(s=>s.id===id)));
  assert.ok(claims.every(c=>c.reviewStatus==='AI_ASSISTED_DRAFT'&&c.sourceIds.length));
+});
+
+test('handoff UI removes repetitive draft and incomplete-appraisal notes from public scholarly pages',()=>{
+ for(const locale of locales){
+  const measurement=measurementObservatoryPage(locale,'/');
+  const bridges=evidenceBridgesPage(locale,'/');
+  const datasets=datasetRegistryPage(locale,'/');
+  const constructs=constructDictionaryPage(locale,'/');
+  for(const html of [measurement,bridges,datasets,constructs]) assert.doesNotMatch(html,/scholar-review/);
+  assert.doesNotMatch(measurement,/NOT_YET_APPRAISED|Not yet appraised|Henüz değerlendirilmedi|NOT_CLEARED/);
+ }
+ const tr=constructDictionaryPage('tr','/');
+ assert.match(tr,/Manevi anlam, bağ veya çatışmayla ilişkili sıkıntı/);
+ assert.doesNotMatch(tr,/Distress involving spiritual meaning/);
+ const trMeasures=measurementObservatoryPage('tr','/');
+ assert.match(trMeasures,/dini ve manevi mücadele/);
+ assert.match(trMeasures,/iç tutarlılık/);
 });
