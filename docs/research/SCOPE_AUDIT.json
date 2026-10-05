@@ -681,6 +681,102 @@
       "reviewedAt": "2026-10-05",
       "reviewer": "AI-assisted source-based editorial assessment",
       "humanApproval": false
+    },
+    {
+      "sourceId": "s-atheist-minority-stress",
+      "title": "It's like herding cats: Atheist minority stress, group involvement, and psychological outcomes",
+      "origin": "0.11.0",
+      "classification": "CORE",
+      "action": "add",
+      "reason": "Atheist minority-stress evidence adds discrimination, stigma consciousness, internalized anti-atheism and outness mechanisms beyond treating nonreligion as absence of religion.",
+      "url": "https://doi.org/10.1037/cou0000392",
+      "reviewedAt": "2026-10-05",
+      "reviewer": "AI-assisted source-based editorial assessment",
+      "humanApproval": false
+    },
+    {
+      "sourceId": "s-sexual-minority-rs-meta",
+      "title": "The relationship between religiousness and health among sexual minorities: A meta-analysis",
+      "origin": "0.11.0",
+      "classification": "CORE",
+      "action": "add",
+      "reason": "Meta-analysis directly tests heterogeneity and context dependence of religion/spirituality-health associations in sexual minorities. Published correction is retained in provenance.",
+      "url": "https://doi.org/10.1037/bul0000321",
+      "reviewedAt": "2026-10-05",
+      "reviewer": "AI-assisted source-based editorial assessment",
+      "humanApproval": false
+    },
+    {
+      "sourceId": "s-lgbq-religious-family-therapy",
+      "title": "Freedom and struggling openly in psychotherapy: A qualitative inquiry with LGBQ young adults from religious families",
+      "origin": "0.11.0",
+      "classification": "DIRECTLY_RELEVANT",
+      "action": "add",
+      "reason": "Qualitative psychotherapy evidence connects religious-family context, therapeutic relationship and client experience without converting qualitative findings into efficacy claims.",
+      "url": "https://doi.org/10.1111/jmft.12442",
+      "reviewedAt": "2026-10-05",
+      "reviewer": "AI-assisted source-based editorial assessment",
+      "humanApproval": false
+    },
+    {
+      "sourceId": "s-lebanon-sexual-stigma",
+      "title": "Internalized Sexual Orientation Stigma and Mental Health in a Religiously Diverse Sample of Gay and Bisexual Men in Lebanon",
+      "origin": "0.11.0",
+      "classification": "CORE",
+      "action": "add",
+      "reason": "Middle Eastern evidence shows religion can coexist with stigma and coping processes, adding context-sensitive adverse and potentially supportive associations.",
+      "url": "https://doi.org/10.1080/00918369.2022.2030617",
+      "reviewedAt": "2026-10-05",
+      "reviewer": "AI-assisted source-based editorial assessment",
+      "humanApproval": false
+    },
+    {
+      "sourceId": "s-icsg-2",
+      "title": "Inventory of Complicated Spiritual Grief 2.0 (ICSG 2.0): Validation of a revised measure of spiritual distress in bereavement",
+      "origin": "0.11.0",
+      "classification": "CORE",
+      "action": "add",
+      "reason": "Measurement evidence distinguishes complicated spiritual grief from generic wellbeing and supplies a lineage anchor for bereavement-related spiritual distress.",
+      "url": "https://doi.org/10.1080/07481187.2019.1627031",
+      "reviewedAt": "2026-10-05",
+      "reviewer": "AI-assisted source-based editorial assessment",
+      "humanApproval": false
+    },
+    {
+      "sourceId": "s-icsg-2-fa",
+      "title": "Assessing complicated spiritual grief: A psychometric study of the Inventory of complicated spiritual grief 2.0 in an Iranian context",
+      "origin": "0.11.0",
+      "classification": "CORE",
+      "action": "add",
+      "reason": "Persian psychometric evidence extends the ICSG 2.0 lineage while keeping adaptation distinct from cross-language invariance.",
+      "url": "https://doi.org/10.1080/07481187.2025.2580244",
+      "reviewedAt": "2026-10-05",
+      "reviewer": "AI-assisted source-based editorial assessment",
+      "humanApproval": false
+    },
+    {
+      "sourceId": "s-p-sds",
+      "title": "Cross-Cultural Adaptation and Psychometric Properties of the Persian Version of the Spiritual Distress Scale (P-SDS) Among Older Adults with Cancer in Iran",
+      "origin": "0.11.0",
+      "classification": "CORE",
+      "action": "add",
+      "reason": "Population-specific adaptation evidence supports a separate spiritual-distress construct and prevents collapsing distress into low spiritual wellbeing.",
+      "url": "https://doi.org/10.1007/s10943-025-02335-1",
+      "reviewedAt": "2026-10-05",
+      "reviewer": "AI-assisted source-based editorial assessment",
+      "humanApproval": false
+    },
+    {
+      "sourceId": "s-religious-minority-context",
+      "title": "Depressive Feelings in Religious Minorities: Does the Religious Context Matter?",
+      "origin": "0.11.0",
+      "classification": "CORE",
+      "action": "add",
+      "reason": "ESS-linked multilevel evidence adds regional religious context and discrimination to individual-level spirituality and coping evidence.",
+      "url": "https://doi.org/10.1007/s10943-020-00999-5",
+      "reviewedAt": "2026-10-05",
+      "reviewer": "AI-assisted source-based editorial assessment",
+      "humanApproval": false
     }
   ]
 }

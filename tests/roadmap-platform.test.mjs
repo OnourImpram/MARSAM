@@ -4,7 +4,7 @@ import {sources,resources,sections} from '../src/catalogue.mjs';
 import {strategicSources,instruments,datasets,constructs,bridges,claims} from '../src/roadmap/platform.mjs';
 
 test('roadmap sources are public, unique and source-checked drafts',()=>{
- assert.equal(strategicSources.length,9);
+ assert.equal(strategicSources.length,17);
  const dois=strategicSources.map(s=>s.bibliography.doi.toLowerCase());
  assert.equal(new Set(dois).size,dois.length);
  for(const s of strategicSources){
@@ -12,6 +12,8 @@ test('roadmap sources are public, unique and source-checked drafts',()=>{
   assert.ok(resources.some(x=>x.sources.includes(s.id)));
   assert.equal(s.status,'PARTIALLY_VERIFIED');
   assert.equal(s.checked,'2026-10-05');
+  assert.ok(s.bibliography?.journal!==undefined);
+  assert.ok(Array.isArray(s.bibliography?.authors));
  }
 });
 test('research roadmap surfaces are first-class sections',()=>{
@@ -31,7 +33,7 @@ test('datasets and construct dictionary state inferential boundaries',()=>{
  assert.ok(constructs.every(x=>x.boundary.length>40));
 });
 test('editorial bridges retain source provenance without pretending human approval',()=>{
- assert.ok(bridges.length>=4);
+ assert.ok(bridges.length>=7);
  for(const b of bridges)assert.ok(b.sourceIds.every(id=>sources.some(s=>s.id===id)));
  assert.ok(claims.every(c=>c.reviewStatus==='AI_ASSISTED_DRAFT'&&c.sourceIds.length));
 });

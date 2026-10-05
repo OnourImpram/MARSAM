@@ -10,4 +10,5 @@ const authors={
  's-hemodialysis-spiritual-care':['Mustafa Durmuş','Mine Ekinci'],
  's-muslim-coping-multinational':['Hisham Abu-Raiya','Ali Ayten','Mustafa Tekke','Qutaiba Agbaria']
 };
-for(const s of sourcesB)s.bibliography.authors=authors[s.id];
+const journals={'s-sefc':'Journal of Religion and Health','s-hemodialysis-spiritual-care':'Journal of Religion and Health','s-muslim-coping-multinational':'International Journal of Psychology'};
+for(const s of sourcesB){s.bibliography.authors=authors[s.id];s.bibliography.journal=journals[s.id];}

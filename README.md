@@ -1,4 +1,4 @@
-# MARSAM 0.10.2
+# MARSAM 0.11.0 candidate · live baseline 0.10.2
 
 Maneviyat ve Ruh Sağlığı Araştırmaları Merkezi girişimi için sekiz dilli akademik bilgi platformu. Planlanan akademik yapı Marmara Üniversitesi, Atatürk Eğitim Fakültesi, Eğitim Bilimleri Bölümü, Rehberlik ve Psikolojik Danışmanlık Anabilim Dalıdır. Teknik yayın, resmî kuruluş veya bilimsel onay değildir.
 
@@ -55,4 +55,4 @@ Kalıcı taslak kayıtlarının güncellenmesi için [bakım yönergesini](docs/
 
 ## 0.11.0 research infrastructure
 
-This release candidate implements the first source-verified slice of the 5 October research roadmap. It adds nine high-information studies or measurement records, a Measurement Observatory, Türkiye–international evidence bridges, a dataset registry, a construct dictionary, and versioned static research API outputs under `data/v1/`. New scholarly prose remains `AI_ASSISTED_DRAFT` until human scientific and native-language review. The approved heritage portal and visual identity are unchanged.
+This release candidate implements the 5 October research roadmap in the source repository. It contains the original nine roadmap records plus a second eight-record high-information tranche, expands the Measurement Observatory and Türkiye–international evidence bridges, keeps the dataset registry and construct dictionary, records post-publication correction state, and exposes versioned static research API outputs under `data/v1/`. New scholarly prose remains `AI_ASSISTED_DRAFT` until human scientific and native-language review. The approved heritage portal, visual identity and 0.10.2 disclaimer cleanup are unchanged.
