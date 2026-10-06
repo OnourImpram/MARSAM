@@ -153,7 +153,7 @@
       "editions": {
         "tr": {
           "title": "Ergenlikte din ve ruh sağlığı: kültürler arası bulgular",
-          "finding": "10 çalışma, yararlı ilişkilerin yanında nötr ve olumsuz bulgular içeriyor.",
+          "finding": "10 çalışma, yararlı ilişkilerin yanında nötr ve olumsuz bulgular içermektedir.",
           "limit": "Bağlamlar farklıdır. Evrensel koruyuculuk çıkarılamaz.",
           "briefHash": "76ff9599e07b76e8f747ec4c5dee18276a4f3735105ae9bc95c911c9e67e1c76",
           "humanReviewed": false,
@@ -546,7 +546,7 @@
       "editions": {
         "tr": {
           "title": "Dini katılım: üç ileriye dönük kohort çalışması",
-          "finding": "Dini katılımın, ilerleyen dönemlerdeki bazı ruh sağlığı çıktılarıyla olumlu ilişkili olduğu görülmüştür.",
+          "finding": "Dini katılımın ilerleyen dönemlerdeki bazı ruh sağlığı çıktılarıyla olumlu ilişkili olduğu görülmüştür.",
           "limit": "ABD örneklemleri. Kalıntı karıştırıcı etkiler göz ardı edilemez. Katılım, maneviyatın bütünü değildir.",
           "briefHash": "fa66640007d72703ea902d0e0e77e734bd7af873e74b64d8b362674b1ed16a16",
           "humanReviewed": false,
@@ -671,7 +671,7 @@
           "briefHash": "7baad6fc6048caf2e7d3225bfd08cbe980dadacdf0c8cf8cc46ae868287353df",
           "humanReviewed": false,
           "scientificApproval": false,
-          "population": "3.978 üniversite öğrencisi ve 1.048 çevrim içi çalışan içeren iki örneklemde ateist ve teist karşılaştırmaları."
+          "population": "3.978 üniversite öğrencisi ve 1.048 çevrim içi çalışandan oluşan iki örneklemde ateist ve teist katılımcılar karşılaştırılmıştır."
         },
         "en": {
           "title": "Meaning and spiritual struggles in atheist samples",
@@ -799,7 +799,7 @@
           "briefHash": "d50d6d95c726a8638b3ffa3abd4ae625d3efc89da27a13ebb9d5931b12e1350c",
           "humanReviewed": false,
           "scientificApproval": false,
-          "population": "Majör depresyon ve kronik tıbbi hastalığı olan 132 kişi. 12 haftalık karşılaştırma."
+          "population": "Majör depresyonu ve kronik tıbbi hastalığı olan 132 kişi. 12 haftalık karşılaştırma."
         },
         "en": {
           "title": "Religiously integrated versus conventional CBT",
@@ -928,7 +928,7 @@
       "editions": {
         "tr": {
           "title": "Deprem sonrasında manevi destek gereksinimleri",
-          "finding": "Uzman görüşmeleri, deprem sonrası manevi destek gereksinimlerini ele alıyor.",
+          "finding": "Uzman görüşmeleri, deprem sonrası manevi destek gereksinimlerini ele almaktadır.",
           "limit": "Görüşmeler müdahale etkililiğini kanıtlamaz.",
           "briefHash": "60a4538f6da937c287527435cd5647fa1e4f736e965f02f172918a119c9cf20b",
           "humanReviewed": false,

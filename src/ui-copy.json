@@ -60,7 +60,7 @@
     "ms": "Penyelidikan kerohanian dan kesihatan mental"
   },
   "site.context": {
-    "tr": "Marmara Üniversitesi Atatürk Eğitim Fakültesi, Eğitim Bilimleri Bölümü, Rehberlik ve Psikolojik Danışmanlık Anabilim Dalı bünyesindeki MARSAM’ın web sitesi.",
+    "tr": "Marmara Üniversitesi Atatürk Eğitim Fakültesi, Eğitim Bilimleri Bölümü, Rehberlik ve Psikolojik Danışmanlık Anabilim Dalı bünyesindeki MARSAM’ın web sitesidir.",
     "en": "Website of MARSAM, within the Division of Guidance and Psychological Counseling, Department of Educational Sciences, Atatürk Faculty of Education, Marmara University.",
     "de": "Website von MARSAM im Fachbereich für Bildungsberatung und psychologische Beratung der Abteilung für Erziehungswissenschaften an der Atatürk-Fakultät für Pädagogik der Marmara-Universität.",
     "zh": "本网站属于MARSAM，该中心隶属于马尔马拉大学阿塔图尔克教育学院教育科学系指导与心理咨询学科。",
@@ -370,7 +370,7 @@
     "ms": "Pembetulan dan sumbangan"
   },
   "governance.correctionText": {
-    "tr": "Kaynağın adresini ve düzeltilmesini istediğiniz bölümü belirterek bir öneri dosyası hazırlayabilirsiniz. Dosya yalnızca cihazınıza indirilir, bir editöre gönderilmez. Değişen metin için bilimsel ve dilsel inceleme yeniden gerekir.",
+    "tr": "Kaynağın adresini ve düzeltilmesini istediğiniz bölümü belirterek bir öneri dosyası hazırlayabilirsiniz. Dosya yalnızca cihazınıza indirilir, bir editöre gönderilmez. Değişen metin için bilimsel ve dilsel incelemenin yeniden yapılması gerekir.",
     "en": "Prepare a suggestion identifying the source URL and the passage to correct. The file downloads to your device only and is not sent to an editor. Changed text requires renewed scholarly and language review.",
     "de": "Erstellen Sie einen Vorschlag mit Quellenadresse und zu korrigierender Passage. Die Datei wird nur auf Ihr Gerät heruntergeladen, nicht an eine Redaktion gesendet. Geänderter Text erfordert erneute wissenschaftliche und sprachliche Prüfung.",
     "zh": "可注明来源链接及需更正的段落来准备建议文件。文件仅下载到您的设备，不会发送给编辑。修改后的文本需要重新进行学术和语言审校。",
@@ -410,7 +410,7 @@
     "ms": "Privasi dan tindakan setempat"
   },
   "governance.privacyText": {
-    "tr": "Hesap, analiz izleyicisi veya katılımcı veri toplama formu bulunmaz. Barındırma hizmetinin erişim kayıtları ayrı bir konudur. Site herkese açıktır; özel bir çalışma alanı değildir.",
+    "tr": "Hesap, analitik izleyici veya katılımcı veri toplama formu bulunmaz. Barındırma hizmetinin erişim kayıtları ayrı bir konudur. Site herkese açıktır; özel bir çalışma alanı değildir.",
     "en": "There are no accounts, analytics trackers or participant data collection forms. Hosting access logs are a separate consideration. The website is public and is not a private workspace.",
     "de": "Es gibt keine Konten, Analyse-Tracker oder Formulare zur Erhebung von Teilnehmerdaten. Zugriffsprotokolle des Hostingdienstes sind gesondert zu betrachten. Die Website ist öffentlich und kein privater Arbeitsbereich.",
     "zh": "平台不设账户、分析跟踪器或参与者数据收集表单。托管服务的访问日志须另行考虑。本网站为公开网站，并非私密工作空间。",

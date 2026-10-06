@@ -100,7 +100,7 @@
     "ms": "Pertimbangkan konstruk, sampel dan syarat penggunaan bersama. Skor skala bukan diagnosis. Penerbitan dalam satu bahasa tidak mengesahkan versi bahasa lain."
   },
   "permission": {
-    "tr": "Maddeler burada çoğaltılmıyor. Araştırmada kullanmadan önce özgün formu, uyarlama çalışmasını, puanlama yönergesini ve hak sahibinin koşullarını kontrol edin. MARSAM kullanım izni vermez.",
+    "tr": "Maddeler burada yeniden yayımlanmaz. Araştırmada kullanmadan önce özgün formu, uyarlama çalışmasını, puanlama yönergesini ve hak sahibinin koşullarını kontrol edin. MARSAM kullanım izni vermez.",
     "en": "Items are not reproduced here. Before research use, check the original form, adaptation study, scoring guidance and rights holder’s terms. MARSAM grants no licence.",
     "de": "Items werden hier nicht wiedergegeben. Vor der Nutzung Originalfassung, Adaptationsstudie, Auswertung und Rechtebedingungen prüfen. MARSAM erteilt keine Lizenz.",
     "zh": "本站不复制条目。研究使用前请核对原始版本、适应性研究、计分指南及权利人条件。MARSAM不授予使用许可。",
@@ -190,7 +190,7 @@
     "ms": "Kaedah dan soalan bacaan"
   },
   "rssNote": {
-    "tr": "Türkçe RSS-14 uyarlaması, 495 kişilik Müslüman örnekleminde altı boyut bildirdi. Toplam alfa 0,82, alt ölçekler 0,60–0,82. Bu sonuçlar başka inanç gruplarında ölçüm değişmezliğini veya klinik eşik değerlerini göstermez.",
+    "tr": "Türkçe RSS-14 uyarlaması, 495 kişilik Müslüman örnekleminde altı boyut bildirdi. Toplam alfa katsayısı 0,82, alt ölçeklerinki 0,60–0,82’dir. Bu sonuçlar başka inanç gruplarında ölçme değişmezliğini veya klinik kesme puanlarını göstermez.",
     "en": "The Turkish RSS-14 adaptation reported six dimensions in 495 Muslim participants. Total alpha was 0.82, subscales 0.60–0.82. These results do not establish invariance across worldviews or clinical cut-offs.",
     "de": "Die türkische RSS-14-Adaptation berichtete sechs Dimensionen bei 495 muslimischen Personen. Gesamtalpha: 0,82, Subskalen: 0,60–0,82. Daraus folgen weder weltanschauungsübergreifende Messinvarianz noch klinische Grenzwerte.",
     "zh": "土耳其语RSS-14适应研究在495名穆斯林参与者中报告六个维度。总量表α为0.82，分量表为0.60–0.82。这不证明跨世界观测量不变性或临床界值。",
@@ -310,7 +310,7 @@
     "ms": "Terbit dalam talian kali pertama"
   },
   "selectedWorks": {
-    "tr": "Alanla ilgili seçilmiş çalışmaları",
+    "tr": "Alanla ilgili seçilmiş çalışmalar",
     "en": "Selected relevant scholarship",
     "de": "Ausgewählte einschlägige Arbeiten",
     "zh": "相关学术成果选读",
@@ -410,7 +410,7 @@
     "ms": "Borang bahasa Turki dan syarat penggunaan, 2022"
   },
   "reported-mediation": {
-    "tr": "Aracılık analizi, zaman sırası doğrulanmadı",
+    "tr": "Aracılık analizi; zaman sırası doğrulanmamıştır",
     "en": "Mediation analysis, temporal design unverified",
     "de": "Mediationsanalyse, zeitliches Design ungeprüft",
     "zh": "中介分析，测量时序未核实",

@@ -23,7 +23,7 @@
       "id": "adolescent-contexts",
       "sourceHash": "c442245321ffdcd16291d08f15eeeb508208fceb2717e5bad426c498de946fdf",
       "editionHashes": {
-        "tr": "7207fe4ecefa4384210b375229a3526539959734bd2040a948aac55b19e22e15",
+        "tr": "335092f254262e701bb037c6307f5ca61a54bdafbfcd0ab35dd2e49b782dcb8c",
         "en": "400ca5146f6a0858d7524dd2c31ae2b9cda00f33fa1383e9f8306ac0942b842f",
         "de": "a450479fa86592150a4db14f2a7d626fe05872921b135376a28b682e3513a116",
         "zh": "24785c2012d1455a93fab80cabe99381e9d1d46f6371aee0a2c20c1194eb5de4",
@@ -77,7 +77,7 @@
       "id": "attendance-cohorts",
       "sourceHash": "b988165e465c1e68fe37399e08e8745dd7a9cab467f75b439c0d07c1c8267eb5",
       "editionHashes": {
-        "tr": "451f46bf47aa7daae7b026ca3232ab4c8a3198c9f31097e84c6d7b4dc341679a",
+        "tr": "5d58a9f600a62e18e32f8b5862664e0d2fd9abb927d87dc851f07f11dfeba515",
         "en": "719f3220602384024517b84beee665d6aad54c66dd4415c0fac060608a72b940",
         "de": "84234dc750cfcd8f4c40610be10541bff0f27745ae1d2253258af3d691c36f14",
         "zh": "f187e52ea5ea51a2409103d004f06993fcef777a028edcf947bbf3fbaed869c1",
@@ -95,7 +95,7 @@
       "id": "atheist-struggles",
       "sourceHash": "537296ca446ccf77c4585a0c1777e93df8bbe25bab0e774ac113f2ae83c8b850",
       "editionHashes": {
-        "tr": "81ea13c2b6c891d46023e8033a31c1cef1571283e7f2261f5f5f5a1c65bc8885",
+        "tr": "1b1521b286640cf232bfe2752a2c78ccf0a05f850d51fb898fc93fe3e7469645",
         "en": "ed8ca31b561473c1c5f3abe71264dba64970c60c07aab655e4330d4d5289a5b2",
         "de": "df5dcd96608529bdefde76f8361aef6e96a62a3145993487a7dec686cd008a0b",
         "zh": "f402ba976eac3b4302cf70a33f700aecfdd32950367e751e90ef484af1039554",
@@ -113,7 +113,7 @@
       "id": "religious-cbt",
       "sourceHash": "c7a2c6d6690d631d9d358105450002c7d54ac93bc93b5e2967a44157f92a6e43",
       "editionHashes": {
-        "tr": "88c356881f0d636a5ff8d95d77c258314d5b13e1054cbc51055831b6a44462ef",
+        "tr": "dfac206eaba25067caf78c7394b69cddae084d95585032a0cc843a85e7ae8375",
         "en": "a9b93835d500ff0a911fd2258c09c1ea720c2aa3b11f68c1d6b4c4218b8ed376",
         "de": "049d43b921cd11ce57d9f2356c5154aa43b1d8c75d8b6c2ded4aae8b41d4b6f9",
         "zh": "bc7e4ed9a12e28336d5e01dcbfb642fab69f6ece57e988264b76b2490fed32e8",
@@ -131,7 +131,7 @@
       "id": "disaster-needs",
       "sourceHash": "8b873f6b06e341f03be5ca284c68f02ef63b2a6aa2f46cd99db4cf4d89b2251d",
       "editionHashes": {
-        "tr": "5f6fcf551890496886fa662e9c19fd4fdacfe303978f149a858ef032474823c4",
+        "tr": "029e333578501669c9792a5baad5e45d888d58b38f513747871f0d5a58588f1c",
         "en": "5cf79e850bab589b886700b19bc61bda789483d0978a0a8c96d9705ffa2216e2",
         "de": "68773d8f01d852fd836e4bec928a4a61188608c92407c24e66be888119304d45",
         "zh": "f6ebcab2a1f69deeb5e82b6e12423bdbb2068def7855663f3f313148a392cbd5",
@@ -203,7 +203,7 @@
       "id": "swbs-eksi-kardas",
       "sourceHash": "d3554717474cb81636856aa18710f7cdf06aad707b9443da7558a7b3b9124ef8",
       "editionHashes": {
-        "tr": "385921262aa68e5ba1ab26faca9d6c64c70b7f71725baac1e0f0704ff370a2f6",
+        "tr": "a75ed2909dd48a304b50467c8353f98de0a019f7adcc285d2d4b98b3e3571850",
         "en": "57dff0ad8b5ca81df4cca0e22c0ad8ce8e9dce543f58b2cfcdb3963021e46b49",
         "de": "7953c6e58a6f463bd49959752a7f459c45237f6fe7c7a40c3687ce399fbdb465",
         "zh": "9525e8dccecceb6ac74ce1702352d494c7fa53bfdd80848903133b86a8c5e6c1",
@@ -257,7 +257,7 @@
       "id": "bidirectional-alspac",
       "sourceHash": "7503d55fce228455ec22db22f810d12f33f5baf5971c19b7d83813d6e5bc56ea",
       "editionHashes": {
-        "tr": "af32d016cc9348e42fe92ff56a4eb5fff9a0437037844e7498d2afb3284a808c",
+        "tr": "5ce5d2e13cfaef85e6a652c77afe4a79494902e7ab6d66638f6672f0dc30c1d5",
         "en": "660af8e427f49320f43c708a0a7f4ad295030ec3bbdc2c4305e509a5763f38d0",
         "de": "161b0760464b20f34b3617be5b379545cc9a67e31a5e716d48d4ca8bbe05cfc8",
         "zh": "8c0dc86d797ad3efd3c2581490a0a25ce1dd1a2457e684b4c92db718ac709a1a",
@@ -275,7 +275,7 @@
       "id": "brazil-medical-students",
       "sourceHash": "5817e2d79086a744342a8f26c130c9796687c694870528816a6ff84b2a8ee9db",
       "editionHashes": {
-        "tr": "4e23a0de4652fd705358cc7fa3bf2c55bdd7dddbac5e524b0b445811d7bfb9d0",
+        "tr": "29d393b06c11a2dc4403e59a2df59a59028634510025bd61e236c935ccd5d4e8",
         "en": "840418626d567d65d2db2898a80120d968e68ac56e1b043070c2bbfcd29deb1b",
         "de": "04bc11ef1f5ccb39e6fdc08bd5a35ae3308f071d37f801ef4c29812c09240a36",
         "zh": "2b330b7b08f15ac6b2c592e1c25bd15fde9030864eca1b392942d0de9b6a57ce",
@@ -293,7 +293,7 @@
       "id": "turkish-bereavement",
       "sourceHash": "4b893722a40a8cad8ca80b654a5eb5fe942244518aeec3fc8f6a8ef2543ab448",
       "editionHashes": {
-        "tr": "f2e616e9c55343a4e9953d5866c406f6d06697df770220bb382b7199cd1e442d",
+        "tr": "a25ba6830668d3be8cf74228a34fa38033e358c61feb41292c15c879c48b638a",
         "en": "406e91b4ea1e3160c8f8886e778ca8870744b4a3bd51e7a10be9a06b115b858d",
         "de": "0d3db15c8ed44ad533c099ffdc1809c354855c4501cadb1461ee316583a09f76",
         "zh": "134f4dfc52aa2e86f0e6d4ddd5031e190258617f98fbba9b82b8be1ea200d93c",
@@ -311,7 +311,7 @@
       "id": "psychosis-spirituality",
       "sourceHash": "a67cc16a78128593687975c9bfda500f0a5d48600adc0933820da047793e1554",
       "editionHashes": {
-        "tr": "562921de3db64a3ccadd26f7e39073cc24014802faebdb55b69d4759f2e9dc44",
+        "tr": "b2164808dc206aa08caddb7f08b77f9e6b6b609ac3de1a0e09d7be76fe5f0a6c",
         "en": "0fada9dcdbcfbfd8ac14164635d41276284e65975d52c31f58a3d362b031c85b",
         "de": "016487b2219c409748b064be2af65afbc113c93cac9a85ad9e99900097628425",
         "zh": "76a8105b9f66e78e7643b75c6fb55adf1a938f9329ef03f7f5454effeb1dd964",
@@ -329,7 +329,7 @@
       "id": "clergy-abuse-harm",
       "sourceHash": "058f0e969a57b14e06f08128461f7deaff99ea6309cd66f5c02ab0523d6d49ec",
       "editionHashes": {
-        "tr": "13e0d0d4c635eb19127e3885f4d5ac6375e7f0047612e22699bb62cecf8bef9c",
+        "tr": "3c2a5e0d0b641e7febccd42e25a613297e49b9fb851550187131a2fae3f55fc9",
         "en": "0b8520cceecfb6456ebb29a76a3d9c4c6aa9d43b84186de2a713139e73c74cb1",
         "de": "2e8081a4d4a0f37ff1cadd66aa37af5ce98033d462cebea692e0e5e37022a3ad",
         "zh": "c0c68a4664564a8278094179295f11ab6a556054f8fe3fa3913586e99f46eab2",

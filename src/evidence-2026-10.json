@@ -168,7 +168,7 @@
       "editions": {
         "tr": {
           "title": "Dindarlık ve ruh sağlığında çift yönlü ilişkiler",
-          "population": "Birleşik Krallık ALSPAC doğum kohortunun ebeveyn kuşağı. Analiz örneklemi modele göre değişiyor.",
+          "population": "Birleşik Krallık ALSPAC doğum kohortunun ebeveyn kuşağı. Analiz örneklemi modele göre değişmektedir.",
           "finding": "Ön kayıtlı analizlerde dindarlık ile ilerleyen dönemdeki depresyon ve kaygı arasındaki çift yönlü ilişkilerin çoğunlukla zayıf kaldığı ya da sıfır etkiyle uyumlu olduğu görülmüştür. Cinsiyet farklılıkları kesin değildi.",
           "limit": "Gözlemsel tasarım, kalan karıştırıcıları dışlamaz. Geniş belirsizlik aralıkları ve tarihsel ebeveyn örneklemi genellemeyi sınırlar. Sonuçlar nedenselliğin varlığını ya da yokluğunu kesinleştirmez.",
           "briefHash": "d2ddb083a3c400d5d271e6933c0a7e01b10bb7089c71a0b2fa1b8dfcbffdf086",
@@ -307,7 +307,7 @@
         "tr": {
           "title": "Brezilyalı tıp öğrencilerinde iki yıllık izlem",
           "population": "Brezilya, iki yıl izlenen 277 tıp öğrencisi.",
-          "finding": "Örgütlü dini etkinliklere katılımdaki artış, düzeltme yapılmış analizlerde depresif belirtilerde azalma ve fiziksel yaşam kalitesinde artışla ilişkiliydi. Dindarlık DUREL ile ölçüldü.",
+          "finding": "Örgütlü dini etkinliklere katılımdaki artış, düzeltilmiş analizlerde depresif belirtilerde azalma ve fiziksel yaşam kalitesinde artışla ilişkiliydi. Dindarlık DUREL ile ölçüldü.",
           "limit": "Bu gözlemsel ilişki, katılımı artırmanın tedavi etkisi olduğunu göstermez. Öğrenci örneklemi genellemeyi sınırlar. Bir çalışmada DUREL kullanılması, ölçeğin bütün dil sürümlerini doğrulamaz.",
           "briefHash": "8925f323136bc259c718ca971b31b8f48ce86b5595ec3983ea31e9badc976146",
           "humanReviewed": false,
@@ -442,7 +442,7 @@
         "tr": {
           "title": "Türkiye’de eş kaybı, anlam ve manevi iyi oluş",
           "population": "Türkiye’de eşini kaybetmiş, 65 ile 84 yaşları arasında 403 kişi.",
-          "finding": "Manevi iyi oluş, yaşamda anlam ve dindarlığın daha düşük yalnızlık ve daha yüksek ruhsal iyi oluşla ilişkili olduğu bildirilmiştir. Çalışma aracılık analizleri içeriyor.",
+          "finding": "Manevi iyi oluşun, yaşamda anlamın ve dindarlığın daha düşük yalnızlıkla ve daha yüksek ruhsal iyi oluşla ilişkili olduğu bildirilmiştir. Çalışma aracılık analizleri içermektedir.",
           "limit": "İncelenen özette ölçümlerin zaman sırası açıklanmıyor. Aracılık analizi nedensel mekanizma veya müdahale etkililiği göstermiyor. Bulgular eş kaybı yaşamış ileri yaştaki örneklemle sınırlı okunmalı.",
           "briefHash": "66170ff885fc293c463f742ca49dee2a928cd4410bc781fc49cded808d0fd45f",
           "humanReviewed": false,
@@ -573,7 +573,7 @@
         "tr": {
           "title": "Psikoz araştırmalarında maneviyat ve dini başa çıkma",
           "population": "Psikoz bağlamında maneviyat ve dindarlığı inceleyen 35 çalışma.",
-          "finding": "Olumlu dini başa çıkma daha yüksek iyi oluş ve yaşam kalitesiyle, olumsuz dini başa çıkma ise daha olumsuz klinik sonuçlarla ilişkili olarak bildirildi. Bulgular bağlama göre değişiyor.",
+          "finding": "Olumlu dini başa çıkma daha yüksek iyi oluş ve yaşam kalitesiyle, olumsuz dini başa çıkma ise daha olumsuz klinik sonuçlarla ilişkili olarak bildirildi. Bulgular bağlama göre değişmektedir.",
           "limit": "İlişkiler, dini başa çıkmayı değiştirmenin tedavi etkisini kanıtlamaz. Dini inanç tek başına tanısal gösterge değildir. Derlemede önerilen klinik modeller doğrulanmış tedavi protokolleri sayılmamalıdır.",
           "briefHash": "b711e860cd72d54f5c6d3f5ae8b7ca16901034532e4379f9f5bcdf5b66c91921",
           "humanReviewed": false,
@@ -702,7 +702,7 @@
         "tr": {
           "title": "Din görevlilerinin cinsel istismarı sonrasında manevi zarar",
           "population": "Katolik din görevlileriyle ilişkili cinsel istismar ve manevi zararı ele alan 12 yayın.",
-          "finding": "Kapsam derlemesi, manevi zararın nasıl tanımlandığını ve ruh sağlığıyla ilişkisini ele alıyor. Kavramın tanımları değişken ve kanıt tabanı sınırlı.",
+          "finding": "Kapsam derlemesi, manevi zararın nasıl tanımlandığını ve ruh sağlığıyla ilişkisini ele almaktadır. Kavramın tanımları değişkendir, kanıt tabanı sınırlıdır.",
           "limit": "Bu yayınlar 12 tedavi deneyi değildir. Derlemede kalite değerlendirmesi yapılmamıştır. Katolik bağlamındaki bulgular bütün dinlere genellenemez, yeni bir klinik tanı veya tedavi etkililiği de doğrulamaz.",
           "briefHash": "ce09a9b711cf2d59028adc0d5e45fafd780da88b81e65f67b5522e1e9330e8da",
           "humanReviewed": false,

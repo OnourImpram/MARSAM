@@ -34,6 +34,16 @@ test('every page head carries a social preview image with dimensions', () => {
   }
 });
 
+test('shared English data fields on observatory and construct pages have a Turkish rendering', async () => {
+  const {instruments, constructs} = await import('../src/roadmap/platform.mjs');
+  const trData = JSON.parse(readFileSync(new URL('../src/roadmap/tr-data.json', import.meta.url), 'utf8'));
+  const values = new Set();
+  for (const x of instruments) [x.status, x.construct, x.invariance, x.rights, ...x.properties].forEach(v => values.add(v));
+  for (const x of constructs) values.add(x.boundary);
+  const missing = [...values].filter(v => v && !trData[v]);
+  assert.deepEqual(missing, [], 'add these values to src/roadmap/tr-data.json');
+});
+
 test('the ebru dark surface keeps light text at AAA contrast', () => {
   const {color} = JSON.parse(readFileSync(new URL('../src/tokens.json', import.meta.url), 'utf8'));
   const lum = hex => {

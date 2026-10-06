@@ -23,7 +23,7 @@
       "ms": "Ruang kerja sains terbuka"
     },
     "lead": {
-      "tr": "Bir yayını incelemekten ölçme aracını değerlendirmeye ve analizi yeniden çalıştırmaya. Kaynaklarla bağlantılı rehberler, boş çalışma şablonları ve mevcut katalog üzerinde çalışan bir laboratuvar.",
+      "tr": "Bir yayını incelemekten ölçme aracını değerlendirmeye ve analizi yeniden yürütmeye uzanan çalışma alanı: kaynaklarla bağlantılı rehberler, boş çalışma şablonları ve mevcut katalog üzerinde çalışan bir laboratuvar.",
       "en": "From examining a publication to assessing a measure and reproducing an analysis. Source-linked guides, blank working templates and a laboratory using the existing catalogue.",
       "de": "Von der Prüfung einer Publikation über die Bewertung eines Instruments bis zur Reproduktion einer Analyse. Quellenbezogene Leitfäden, leere Vorlagen und ein Labor mit dem bestehenden Katalog.",
       "zh": "从审读文献、评价测量工具到复现分析。这里提供附有来源的指南、空白工作模板，以及基于现有目录的练习。",
@@ -73,7 +73,7 @@
       "ms": "Rekod katalog berkaitan"
     },
     "review": {
-      "tr": "Yöntem ve öğretim notu. Çeviriler yapay zekâ desteğiyle hazırlanmıştır. Bir akreditasyon veya uygulama yetkisi sağlamaz.",
+      "tr": "Yöntem ve öğretim notu. Çeviriler yapay zekâ desteğiyle hazırlanmıştır. Bu not, akreditasyon veya uygulama yetkisi sağlamaz.",
       "en": "Methods and teaching note. Translations were prepared with AI assistance. This does not confer accreditation or authorization to practise.",
       "de": "Methodischer Lehrtext. Die Übersetzungen wurden mit KI-Unterstützung erstellt. Keine Akkreditierung oder Befugnis zur Berufsausübung.",
       "zh": "方法与教学说明。译文在人工智能辅助下完成。不提供资质认证或执业授权。",
@@ -83,7 +83,7 @@
       "ms": "Nota kaedah dan pembelajaran. Terjemahan disediakan dengan bantuan AI. Tidak memberikan akreditasi atau kebenaran amalan."
     },
     "templateNote": {
-      "tr": "Şablonlar boş olarak indirilir. null, henüz çıkarılmamış bilgidir, sıfır veya kaynakta raporlanmadı anlamına gelmez. Alan adları birlikte çalışabilirlik için İngilizcedir. Doldurulan dosya siteye gönderilmez.",
+      "tr": "Şablonlar boş olarak indirilir. null, henüz çıkarılmamış bilgi demektir; sıfır ya da “kaynakta raporlanmadı” anlamına gelmez. Alan adları birlikte çalışabilirlik için İngilizcedir. Doldurulan dosya siteye gönderilmez.",
       "en": "Templates download empty. null means not yet extracted, not zero or not reported by the source. Field names use English for interoperability. Completed files are not sent to this site.",
       "de": "Vorlagen werden leer heruntergeladen. null bedeutet noch nicht extrahiert, nicht null als Messwert oder nicht berichtet. Feldnamen sind für Interoperabilität englisch. Ausgefüllte Dateien werden nicht an diese Website gesendet.",
       "zh": "模板下载后为空白。null 表示尚未提取，不表示零或原文未报告。字段名使用英语以便互操作。填写后的文件不会提交到本站。",
@@ -159,7 +159,7 @@
             "ms": "Mulakan dengan perkara yang diuji"
           },
           "text": {
-            "tr": "Araştırma sorusunu, çalışma desenini, örneklemi, ülkeyi, ortamı ve izlem süresini ayrı alanlarda kaydet. Maneviyat, dindarlık, dini başa çıkma, entegrasyon tercihi ve uygulama birbirinin yerine yazılmamalı. Her değişkenin hangi araçla, kimden ve ne zaman ölçüldüğünü belirt.",
+            "tr": "Araştırma sorusunu, çalışma desenini, örneklemi, ülkeyi, ortamı ve izlem süresini ayrı alanlarda kaydet. Maneviyat, dindarlık, dini başa çıkma, entegrasyon tercihi ve uygulama birbirinin yerine yazılmamalıdır. Her değişkenin hangi araçla, kimden ve ne zaman ölçüldüğünü belirt.",
             "en": "Record the question, design, sample, country, setting and follow-up separately. Spirituality, religiosity, religious coping, integration preference and practice should not be entered as interchangeable constructs. Identify the instrument, respondent and measurement time for each variable.",
             "de": "Frage, Design, Stichprobe, Land, Setting und Nachbeobachtung getrennt erfassen. Spiritualität, Religiosität, religiöses Coping, Integrationspräferenz und Praxis nicht gleichsetzen. Für jede Variable Instrument, auskunftgebende Person und Messzeitpunkt angeben.",
             "zh": "分别记录问题、设计、样本、国家、场景和随访。灵性、宗教性、宗教应对、整合偏好和实践不可互换。注明每个变量的工具、报告者与测量时间。",
@@ -203,7 +203,7 @@
             "ms": "Bezakan kajian dengan sintesis"
           },
           "text": {
-            "tr": "Bir derleme için kapsam, tarama tarihi, bilgi kaynakları, uygunluk ölçütleri ve seçim kararları ayrıca belgelenir. PRISMA raporlamayı yönlendirir, tek başına çalışma kalitesini puanlamaz. Bu sayfadaki şablon bir veri çıkarma yardımcısıdır, tamamlanmış derleme veya risk değerlendirme aracı değildir.",
+            "tr": "Bir derleme için kapsam, tarama tarihi, bilgi kaynakları, uygunluk ölçütleri ve seçim kararları ayrıca belgelenir. PRISMA raporlamayı yönlendirir, tek başına çalışma kalitesini puanlamaz. Bu sayfadaki şablon, veri çıkarmaya yardımcı bir araçtır, tamamlanmış derleme veya risk değerlendirme aracı değildir.",
             "en": "A review additionally needs its scope, search date, information sources, eligibility criteria and selection decisions documented. PRISMA guides reporting, not a standalone quality score. The template here supports extraction. It is not a completed review or a risk-of-bias instrument.",
             "de": "Eine Übersicht erfordert zusätzlich dokumentierten Umfang, Suchdatum, Informationsquellen, Kriterien und Auswahlentscheidungen. PRISMA unterstützt Berichterstattung, nicht einen eigenständigen Qualitätsscore. Diese Extraktionsvorlage ist weder fertige Übersicht noch Instrument zur Biasbewertung.",
             "zh": "综述还需记录范围、检索日期、信息来源、纳入标准和筛选决定。PRISMA 指导报告，不是独立质量评分。此模板辅助数据提取，不是已完成的综述或偏倚风险工具。",
@@ -256,7 +256,7 @@
         "ms": "Fail bukti alat ukur"
       },
       "summary": {
-        "tr": "Ölçek adından kullanım kararına. Yapı, örneklem, kültürel uyarlama, psikometrik kanıt ve haklar için ortak inceleme çerçevesi.",
+        "tr": "Ölçek adından kullanım kararına uzanan ortak inceleme çerçevesi: yapı, örneklem, kültürel uyarlama, psikometrik kanıt ve haklar.",
         "en": "From an instrument name to a use decision. Examine construct, population, cultural adaptation, psychometric evidence and rights together.",
         "de": "Vom Instrumentennamen zur Nutzungsentscheidung. Konstrukt, Population, Anpassung, Psychometrie und Rechte gemeinsam prüfen.",
         "zh": "从工具名称走向使用决策，共同审查构念、样本、文化适配、心理测量证据和权利。",
@@ -300,7 +300,7 @@
             "ms": "Hubungkan bukti psikometrik dengan sampelnya"
           },
           "text": {
-            "tr": "İçerik ve yapı geçerliği, faktör yapısı, iç tutarlılık, test tekrar test, ölçme hatası ve gruplar arası değişmezlik için ayrı kanıt alanları kullan. Bir güvenirlik katsayısı bütün kullanım amaçlarını doğrulamaz. Türkçe çevirinin bulunması, Türkçe psikometrik kanıt veya farklı gruplar arasında karşılaştırılabilirlik bulunduğunu göstermez.",
+            "tr": "İçerik ve yapı geçerliği, faktör yapısı, iç tutarlılık, test-tekrar test, ölçme hatası ve gruplar arası değişmezlik için ayrı kanıt alanları kullan. Bir güvenirlik katsayısı bütün kullanım amaçlarını doğrulamaz. Türkçe çevirinin bulunması, Türkçe psikometrik kanıtın ya da gruplar arası karşılaştırılabilirliğin varlığını göstermez.",
             "en": "Use separate evidence fields for content and structural validity, factor structure, internal consistency, test–retest reliability, measurement error and invariance across groups. One reliability coefficient does not validate every use. A Turkish translation is not evidence of Turkish psychometric performance or comparability between groups.",
             "de": "Inhaltsvalidität, strukturelle Validität, Faktorenstruktur, interne Konsistenz, Retestreliabilität, Messfehler und Invarianz getrennt erfassen. Ein Reliabilitätswert validiert nicht jede Nutzung. Eine türkische Übersetzung belegt weder türkische Psychometrie noch Gruppenvergleichbarkeit.",
             "zh": "分别记录内容效度、结构效度、因素结构、内部一致性、重测信度、测量误差和跨组不变性的证据。一个信度系数不能验证所有用途。存在土耳其语翻译，不等于存在相应的心理测量或跨组可比性证据。",
@@ -418,7 +418,7 @@
             "ms": "Label sama tidak semestinya ukuran sama"
           },
           "text": {
-            "tr": "Özgün soru metnini, yanıt kategorilerini, eksik veri kodlarını, dil sürümünü, evreni ve ağırlık değişkenini eşleştir. Mutluluk, yaşam doyumu ve öznel sağlık tek bir ruh sağlığı göstergesi gibi birleştirilmemeli. Örneklem tasarımını ve ölçüm karşılaştırılabilirliğini incelemeden ülke sıralaması üretme.",
+            "tr": "Özgün soru metnini, yanıt kategorilerini, eksik veri kodlarını, dil sürümünü, evreni ve ağırlık değişkenini eşleştir. Mutluluğu, yaşam doyumunu ve öznel sağlığı tek bir ruh sağlığı göstergesinde birleştirme. Örneklem tasarımını ve ölçüm karşılaştırılabilirliğini incelemeden ülke sıralaması üretme.",
             "en": "Cross-check question wording, response categories, missing-value codes, language version, target population and weight variable. Happiness, life satisfaction and self-rated health should not be merged into one mental-health indicator without justification. Examine sampling and measurement comparability before ranking countries.",
             "de": "Fragetext, Antwortkategorien, Fehlwertcodes, Sprache, Grundgesamtheit und Gewicht abgleichen. Glück, Lebenszufriedenheit und subjektive Gesundheit nicht unbegründet zu einem psychischen Gesundheitsindikator zusammenfassen. Vor Länderranglisten Stichprobe und Messvergleichbarkeit prüfen.",
             "zh": "核对题目措辞、选项、缺失值编码、语言版本、目标总体与权重。没有理由时，不要将幸福、生活满意度和自评健康合并成一个心理健康指标。国家排名前先审查抽样与测量可比性。",
@@ -440,7 +440,7 @@
             "ms": "Bezakan akses dan pengedaran semula"
           },
           "text": {
-            "tr": "WVS kullanım koşulları veri dosyalarının yeniden dağıtılmasına izin vermez. MIDUS da yeniden dağıtımı ve verilerin kamusal yapay zekâ hizmetlerine yüklenmesini kısıtlar. Bu nedenle burada ham veri barındırılmaz. Kullanıcı özgün sağlayıcıya gider, sürüm ve koşulları kendi analizinden önce doğrular. FAIR, bütün verilerin koşulsuz açık olduğu anlamına gelmez.",
+            "tr": "WVS kullanım koşulları veri dosyalarının yeniden dağıtılmasına izin vermez. MIDUS da yeniden dağıtımı ve verilerin kamuya açık yapay zekâ hizmetlerine yüklenmesini kısıtlar. Bu nedenle burada ham veri barındırılmaz. Özgün sağlayıcıya git; sürümü ve koşulları kendi analizinden önce doğrula. FAIR, bütün verilerin koşulsuz açık olduğu anlamına gelmez.",
             "en": "WVS terms prohibit redistribution of data files. MIDUS also restricts redistribution and uploading data to public AI services. No raw data are hosted here. Users obtain data from the original provider and verify versions and terms before analysis. FAIR does not mean all data are unconditionally open.",
             "de": "WVS untersagt die Weiterverteilung von Datendateien. MIDUS beschränkt ebenfalls Weitergabe und Uploads an öffentliche KI-Dienste. Hier werden keine Rohdaten gehostet. Daten beim Originalanbieter beziehen und Version sowie Bedingungen prüfen. FAIR bedeutet nicht bedingungslos offene Daten.",
             "zh": "WVS 条款禁止再次分发数据文件。MIDUS 也限制再分发和上传至公共人工智能服务。本站不托管原始数据。使用者应从原始提供方获取数据，分析前核实版本和条款。FAIR 不等于所有数据无条件开放。",
@@ -560,7 +560,7 @@
             "ms": "Hadkan tafsiran"
           },
           "text": {
-            "tr": "Kaynak sayısı, müdahale etkililiği veya alanın toplam büyüklüğü değildir. Katalogda yer almayan bir konu için literatürde araştırma yok denemez. Bu ilk laboratuvar metadata bütünlüğü ve yeniden hesaplama öğretir. Katılımcı verisi, klinik etki büyüklüğü veya tamamlanmış meta analiz içermez.",
+            "tr": "Kaynak sayısı, müdahale etkililiğinin veya alanın toplam büyüklüğünün göstergesi değildir. Katalogda yer almayan bir konu için literatürde araştırma bulunmadığı söylenemez. Bu ilk laboratuvar, üst veri bütünlüğünü ve yeniden hesaplamayı öğretir. Katılımcı verisi, klinik etki büyüklüğü veya tamamlanmış meta-analiz içermez.",
             "en": "Source counts do not measure intervention efficacy or the size of the field. Absence from this catalogue is not absence of research. This first laboratory teaches metadata integrity and reproducible computation. It contains no participant data, clinical effect estimates or completed meta-analysis.",
             "de": "Quellenzahlen messen weder Wirksamkeit noch Feldgröße. Fehlende Katalogeinträge belegen keine Forschungslücke. Dieses erste Labor lehrt Metadatenintegrität und reproduzierbares Rechnen. Es enthält keine Teilnehmerdaten, klinischen Effektschätzer oder fertige Metaanalyse.",
             "zh": "来源数量不能衡量干预疗效或整个领域的规模。目录中缺少某主题，不等于没有相关研究。此练习教授元数据完整性与可复现计算，不含参与者数据、临床效应估计或已完成的荟萃分析。",
@@ -572,7 +572,7 @@
         }
       ],
       "prompt": {
-        "tr": "Önce dosyayı değiştirmeden çalıştır. Ardından bir kopyada tek bir başlığı değiştir. Bütünlük kontrolünün hangi nedenle durduğunu açıkla.",
+        "tr": "Önce dosyayı değiştirmeden çalıştır. Ardından bir kopyada tek bir başlığı değiştir. Bütünlük kontrolünün neden durduğunu açıkla.",
         "en": "Run the unchanged files first. Then change one title in a copy. Explain why the integrity check stops.",
         "de": "Zuerst unveränderte Dateien ausführen. Dann in einer Kopie einen Titel ändern und den Abbruch erklären.",
         "zh": "先运行未改动文件，再在副本中修改一个标题，说明完整性检查为何停止。",
