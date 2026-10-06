@@ -21,3 +21,7 @@ Yerel mobil tarama: 8 dilde 1040 sayfa, 390 px genişlikte taşan öğe 0 (negat
 Canlı adreste release.json 0.12.0 ve kaynak c30f506; 8 dil × 4 sayfa 200, durum dili 0, og:image her sayfada, 18 yeni yayının 18'i görünür, kök site 200.
 
 Teknik kontroller insan bilimsel editör, ana dil uzmanı veya bağımsız erişilebilirlik onayı değildir. Site `noindex` önizleme modunda kalır.
+
+## 6 Ekim 2026. Kaynak kimliğinin bilinçli yeniden bağlanması
+
+s-attendance-cohorts kaynak notundaki "Artık karıştırıcılık olasıdır." ifadesi "Kalıntı karıştırıcı etkiler göz ardı edilemez." olarak düzeltildi (özgün: "Residual confounding remains possible"). Sahip onayıyla (6 Ekim 2026) yalnız bu kaynak `node scripts/rebind-editions.mjs --rebind-source=s-attendance-cohorts --write` ile yeniden bağlandı; bayraksız çalıştırma kaynağı yeniden bağlamaz, kapı aynen denetler.
