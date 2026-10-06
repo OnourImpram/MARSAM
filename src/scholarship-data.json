@@ -34,12 +34,12 @@
       "editions": {
         "tr": {
           "title": "Almanca konuşulan ülkelerde maneviyat ve ruh sağlığı",
-          "finding": "39 çalışmada küçük ilişki: r = 0,083.",
+          "finding": "39 çalışmada küçük bir ilişki bulunmuştur: r = 0,083.",
           "limit": "Korelasyon nedensellik göstermez. Kültür ve ölçüm önemlidir.",
           "briefHash": "853b813c2df56f13f5f1ba6052b14bd58273e76ed1546f31e954f6507b8f2dc0",
           "humanReviewed": false,
           "scientificApproval": false,
-          "population": "Almanca konuşulan bölgelerden 39 çalışma."
+          "population": "Almanca konuşulan ülkelerden 39 çalışma."
         },
         "en": {
           "title": "Spirituality and mental health in German-speaking settings",
@@ -153,12 +153,12 @@
       "editions": {
         "tr": {
           "title": "Ergenlikte din ve ruh sağlığı: kültürler arası bulgular",
-          "finding": "10 çalışma, yararlı ilişkilerin yanında nötr ve olumsuz bulgular içermektedir.",
+          "finding": "10 çalışmada yararlı ilişkilerin yanı sıra nötr ve olumsuz bulgular da yer almaktadır.",
           "limit": "Bağlamlar farklıdır. Evrensel koruyuculuk çıkarılamaz.",
           "briefHash": "76ff9599e07b76e8f747ec4c5dee18276a4f3735105ae9bc95c911c9e67e1c76",
           "humanReviewed": false,
           "scientificApproval": false,
-          "population": "Birden çok ülke ve dini bağlamda ergenleri inceleyen 10 çalışma."
+          "population": "Farklı ülke ve dini bağlamlarda ergenleri inceleyen 10 çalışma."
         },
         "en": {
           "title": "Religion and adolescent mental health across cultures",
@@ -297,12 +297,12 @@
       "editions": {
         "tr": {
           "title": "Gençlerde depresyon ve kaygı: farklı maneviyat boyutları",
-          "finding": "Manevi iyi oluş depresyonla ters ilişkiliydi. Dinin kişisel önemi için genel ilişki saptanmadı.",
+          "finding": "Manevi iyi oluş ile depresyon arasında ters yönde bir ilişki bulunmuştur. Dinin kişi için taşıdığı önem açısından ise genel bir ilişki saptanmamıştır.",
           "limit": "Çalışma kalitesi ve müdahale çeşitliliği çıkarımları sınırlar.",
           "briefHash": "d8719888820f469bdc2459b88d9bbced20022b51b20f81c7427ce33bc46737d2",
           "humanReviewed": false,
           "scientificApproval": false,
-          "population": "10–24 yaş aralığı. 45 boylamsal çalışma ve 29 müdahale çalışması."
+          "population": "10–24 yaş aralığında yürütülmüş 45 boylamsal çalışma ve 29 müdahale çalışması."
         },
         "en": {
           "title": "Depression and anxiety in young people: distinct spiritual dimensions",
@@ -421,12 +421,12 @@
       "editions": {
         "tr": {
           "title": "İleri yaşta maneviyat ve ruh sağlığı",
-          "finding": "Derleme, çoğunlukla daha iyi ruh sağlığıyla ilişkiler bildirdi.",
+          "finding": "Derlemedeki çalışmalar çoğunlukla daha iyi ruh sağlığıyla ilişki bildirmektedir.",
           "limit": "Gözlemsel bulgular tedavi etkisini göstermez. Özet ve tam metin farklı çalışma sayıları verdiğinden burada toplam sayı aktarılmadı.",
           "briefHash": "1a138e9bde7d0d84a3f19d7a02d2ea269950b9fe5befc94f58d12d5bec658b76",
           "humanReviewed": false,
           "scientificApproval": false,
-          "population": "60 yaş ve üzerindeki yetişkinleri inceleyen gözlemsel araştırmalar."
+          "population": "60 yaş ve üzerindeki yetişkinlerle yürütülmüş gözlemsel araştırmalar."
         },
         "en": {
           "title": "Spirituality and mental health in later life",
@@ -666,7 +666,7 @@
       "editions": {
         "tr": {
           "title": "Ateist örneklemlerde anlam ve manevi mücadele",
-          "finding": "Anlamla ilgili mücadele, ateist katılımcılarda da sıkıntıyla ilişkiliydi.",
+          "finding": "Anlama ilişkin mücadelenin ateist katılımcılarda da sıkıntıyla ilişkili olduğu bulunmuştur.",
           "limit": "Kesitsel örneklemler tüm inançsız insanları temsil etmez.",
           "briefHash": "7baad6fc6048caf2e7d3225bfd08cbe980dadacdf0c8cf8cc46ae868287353df",
           "humanReviewed": false,
@@ -794,12 +794,12 @@
       "editions": {
         "tr": {
           "title": "Dini uyarlamalı BDT ve standart BDT",
-          "finding": "132 kişilik pilot denemede genel grup farkı anlamlı değildi.",
+          "finding": "132 kişilik ön denemede gruplar arasındaki genel fark anlamlı bulunmamıştır.",
           "limit": "Anlamsız fark, eşdeğerlik kanıtı değildir.",
           "briefHash": "d50d6d95c726a8638b3ffa3abd4ae625d3efc89da27a13ebb9d5931b12e1350c",
           "humanReviewed": false,
           "scientificApproval": false,
-          "population": "Majör depresyonu ve kronik tıbbi hastalığı olan 132 kişi. 12 haftalık karşılaştırma."
+          "population": "Majör depresyonu ve kronik bir tıbbi hastalığı olan 132 kişiyle 12 hafta boyunca yapılan karşılaştırma."
         },
         "en": {
           "title": "Religiously integrated versus conventional CBT",
@@ -928,12 +928,12 @@
       "editions": {
         "tr": {
           "title": "Deprem sonrasında manevi destek gereksinimleri",
-          "finding": "Uzman görüşmeleri, deprem sonrası manevi destek gereksinimlerini ele almaktadır.",
+          "finding": "Uzmanlarla yapılan görüşmeler, deprem sonrasında ortaya çıkan manevi destek ihtiyaçlarını ele almaktadır.",
           "limit": "Görüşmeler müdahale etkililiğini kanıtlamaz.",
           "briefHash": "60a4538f6da937c287527435cd5647fa1e4f736e965f02f172918a119c9cf20b",
           "humanReviewed": false,
           "scientificApproval": false,
-          "population": "2023 Türkiye depremleri sonrasında psikososyal destek veren uzmanlarla görüşmeler."
+          "population": "2023 Türkiye depremlerinin ardından psikososyal destek veren uzmanlarla yapılan görüşmeler."
         },
         "en": {
           "title": "Spiritual support needs after earthquakes",
@@ -1047,7 +1047,7 @@
       "editions": {
         "tr": {
           "title": "Brief RCOPE: dini başa çıkmanın iki boyutu",
-          "finding": "14 madde, olumlu ve olumsuz dini başa çıkmayı ayırır.",
+          "finding": "14 maddeden oluşur; olumlu ve olumsuz dini başa çıkmayı ayrı ayrı ölçer.",
           "limit": "Dil ve kültür için geçerlik ayrıca değerlendirilmelidir.",
           "briefHash": "8a843ae41cd740c6feb4731379621d4dfbe4f8ca91d89dbffcf31b71bb15fb42",
           "humanReviewed": false,
@@ -1168,12 +1168,12 @@
       "editions": {
         "tr": {
           "title": "Yaşamın Anlamı Ölçeği: anlamın varlığı ve aranması",
-          "finding": "10 madde, anlamın varlığını ve anlam arayışını ayrı ölçer.",
+          "finding": "10 maddeden oluşur; anlamın varlığını ve anlam arayışını ayrı ayrı ölçer.",
           "limit": "Anlam, dindarlıkla veya ruhsal bozukluk tanısıyla özdeş değildir.",
           "briefHash": "b8a94e89384f162916a6fc73271668491501305ac39d9b3a13043f6ef5480def",
           "humanReviewed": false,
           "scientificApproval": false,
-          "population": "Özgün geliştirme kaydı ve resmî araç açıklaması. Geliştirme örneklemleri bu profilde değerlendirilmedi."
+          "population": "Ölçeğin özgün geliştirme kaydı ve resmî tanıtımı. Geliştirme örneklemleri bu sayfada değerlendirilmemiştir."
         },
         "en": {
           "title": "Meaning in Life Questionnaire: presence and search",
@@ -1290,12 +1290,12 @@
       "editions": {
         "tr": {
           "title": "DUREL: dini katılım ve içsel dindarlık",
-          "finding": "Beş madde, dindarlığın üç boyutunu ele alır.",
+          "finding": "Beş maddeden oluşur; dindarlığın üç boyutunu ele alır.",
           "limit": "Maneviyatın tümünü veya klinik gereksinimi ölçmez.",
           "briefHash": "9ee0c81f6d7bd6e7790248de1fe0715a7cd7464b02582bd5cdff6e01bb2b5578",
           "humanReviewed": false,
           "scientificApproval": false,
-          "population": "Epidemiyolojik araştırmalar için beş maddelik araç. Bu kayıt tek bir doğrulama örneklemi değildir."
+          "population": "Epidemiyolojik araştırmalar için geliştirilmiş beş maddelik bir ölçme aracı. Bu kayıt tek bir geçerlik çalışmasının örneklemini yansıtmaz."
         },
         "en": {
           "title": "DUREL: religious involvement and intrinsic religiosity",

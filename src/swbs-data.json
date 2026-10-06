@@ -72,8 +72,8 @@
       "editions": {
         "tr": {
           "title": "Manevi İyi Oluş Ölçeği (SWBS). SWBS, Ekşi ve Kardaş. Türkiye’de geliştirilen 29 maddelik araç",
-          "population": "Türkiye’de 865 katılımcı. Makale örneklemi yetişkin olarak adlandırsa da, yöntem bölümünde yaş aralığı 16–54 olarak verilir.",
-          "finding": "2017 çalışması, 29 madde ve beşli yanıt yapısında aşkınlık, doğayla uyum ve anomi boyutlarını bildirir. Toplam iç tutarlılık katsayısı .886 olarak sunulur. Bu araç Paloutzian ve Ellison’ın 20 maddelik SWBS’sinin Türkçe çevirisi değildir.",
+          "population": "Türkiye’de 865 katılımcı. Makalede örneklem yetişkin olarak tanımlansa da yöntem bölümünde yaş aralığı 16–54 olarak verilmektedir.",
+          "finding": "2017 tarihli çalışmada 29 maddelik ve beşli yanıt seçenekli ölçeğin aşkınlık, doğayla uyum ve anomi boyutlarından oluştuğu bildirilmiştir. Toplam iç tutarlılık katsayısı .886 olarak bildirilmiştir. Bu ölçek, Paloutzian ve Ellison’ın 20 maddelik SWBS’sinin Türkçe çevirisi değildir.",
           "limit": "Özette SRMR .50, Tablo 6’da .050 yazmaktadır, sayfa 84. MARSAM bu kaynak içi uyuşmazlığı çözülmüş kabul etmez. Açımlayıcı ve doğrulayıcı analizler aynı veri setindedir. Bu kayıt bağımsız doğrulamayı, gruplar arası ölçme değişmezliğini veya klinik kesme puanını doğrulamaz.",
           "briefHash": "50b3f9f55f0d96ee532a8b0bfd650186f06c0564d7164a9f0c5d99c4538531d3",
           "humanReviewed": false,
@@ -244,8 +244,8 @@
       "editions": {
         "tr": {
           "title": "Manevi İyi Oluş Ölçeği (SWBS). SWBS, Paloutzian ve Ellison. 20 maddelik araç ve Türkçe form",
-          "population": "1982 tarihli özgün araç İngilizcedir. Bu kayıt tek bir doğrulama örneklemini değil, 1983 makalesinin özetini, yazarın kılavuzunu ve yayımladığı Türkçe formu birlikte inceler.",
-          "finding": "20 madde, altılı yanıt yapısında dini ve varoluşsal iyi oluşu ele alır. İki alt ölçek onar maddeden oluşur. Dini boyut Tanrı ile ilişkiyi içerir. Ekşi ve Kardaş’ın 29 maddelik aracıyla aynı ölçek değildir.",
+          "population": "Ölçeğin 1982 tarihli özgün biçimi İngilizcedir. Bu kayıt tek bir geçerlik örneklemine değil, 1983 tarihli makalenin özetine, yazarın kılavuzuna ve yazarın yayımladığı Türkçe forma birlikte dayanmaktadır.",
+          "finding": "20 maddeden ve altılı yanıt seçeneğinden oluşur; dini ve varoluşsal iyi oluşu ölçer. İki alt ölçeğin her biri on maddeden oluşur. Dini iyi oluş boyutu, kişinin Tanrı ile ilişkisini ele alır. Ekşi ve Kardaş’ın 29 maddelik ölçeğiyle aynı ölçek değildir.",
           "limit": "Yazarın sayfasında 2022 tarihli Türkçe form vardır. Formun bulunması Türkçe psikometrik geçerlik veya ölçme değişmezliği kanıtı değildir, bu kayıtta böyle bir doğrulama yapılmamıştır. Ücretsiz kullanım, atıf ve telif satırını koruma koşuluna bağlıdır. MARSAM maddeleri veya puanlama formunu yeniden yayımlamaz. İki SWBS’nin puanları eşdeğer varsayılamaz.",
           "briefHash": "eba8530a3a7e31e801191c765181b820d66d94603557a9995ded27d1fdf8c1fb",
           "humanReviewed": false,

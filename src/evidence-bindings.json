@@ -5,7 +5,7 @@
       "id": "german-meta",
       "sourceHash": "c5700d030e041e37ec03dd793d072537fd7a7bc0922c3feaa45c7f0f76b407fb",
       "editionHashes": {
-        "tr": "feb004ffda03231f488ddaa0d87f23137a8c5fe4ebe134506255e6c06a505727",
+        "tr": "414f37844f0cf9b3ba1f5563a27120eeac66e00b6748fb22e43afd1805671407",
         "en": "2326fa522a54b193a966418fb211643402fbd902c977225ff87fb4619cd5d619",
         "de": "ead661d0312b9915b873bf1f7b4210315216638dad669a5ed0fc4643760835a9",
         "zh": "b61b0312d098b9cb821a6ed4cab845494f5f9398034713650a816458c84f074a",
@@ -23,7 +23,7 @@
       "id": "adolescent-contexts",
       "sourceHash": "c442245321ffdcd16291d08f15eeeb508208fceb2717e5bad426c498de946fdf",
       "editionHashes": {
-        "tr": "335092f254262e701bb037c6307f5ca61a54bdafbfcd0ab35dd2e49b782dcb8c",
+        "tr": "3910177c98df34fc362aab62c7f194a962b186570a326e456475437ff3a62026",
         "en": "400ca5146f6a0858d7524dd2c31ae2b9cda00f33fa1383e9f8306ac0942b842f",
         "de": "a450479fa86592150a4db14f2a7d626fe05872921b135376a28b682e3513a116",
         "zh": "24785c2012d1455a93fab80cabe99381e9d1d46f6371aee0a2c20c1194eb5de4",
@@ -41,7 +41,7 @@
       "id": "youth-evidence",
       "sourceHash": "964381c755e1732016da4dd8a04353b84f4a50fdfe9954f4e48848b46765d128",
       "editionHashes": {
-        "tr": "4c608d69aa5ad169915c2ce2e78e83611ad6a1f36c1a74d7093d3af6f4e11410",
+        "tr": "02702192136178f5279b7b2f0a15746237a5a39d2bd8924631312bd2dc9e8265",
         "en": "f1b7320176183842f87b7b5304473497c7482dd669b0152ffd44b00cbae72fc1",
         "de": "377a97aeb522670517e2a9563403d8e2efd30a0cad1b807cc505d177444ae0fd",
         "zh": "11665e4d950af8e0af7e8c2ccd6165505cdfdefd7593dc443047908e7d5fe636",
@@ -59,7 +59,7 @@
       "id": "older-adults",
       "sourceHash": "b4fa0905179c9ea45dc22efc6384846b3e825587cfc41bf880d71a9f4debaefe",
       "editionHashes": {
-        "tr": "8bddf8c486e9940c79a2589a24339ef1e4b6e73e18314ab37ab4a9fb8a47ba99",
+        "tr": "b1531294cb619d89afc8d2ac63c3162d9f2ad55426c9f32adad77215b0f62f96",
         "en": "16ba67cb5e74a33a73dfd66540b12032beb98bc6a2b21156e6927a6459b2ef65",
         "de": "c0669a0a66b3816df1181693e6065c3020c89ed2a9346937749c6e14a149603c",
         "zh": "736427e3a5cceec868b4dae868da10fc68fda81474b0e6bce5ed1bb59eca8ea2",
@@ -95,7 +95,7 @@
       "id": "atheist-struggles",
       "sourceHash": "537296ca446ccf77c4585a0c1777e93df8bbe25bab0e774ac113f2ae83c8b850",
       "editionHashes": {
-        "tr": "1b1521b286640cf232bfe2752a2c78ccf0a05f850d51fb898fc93fe3e7469645",
+        "tr": "859922a44ee1b1e6886577aef9c2af673f51f79968b850d550283122f6339955",
         "en": "ed8ca31b561473c1c5f3abe71264dba64970c60c07aab655e4330d4d5289a5b2",
         "de": "df5dcd96608529bdefde76f8361aef6e96a62a3145993487a7dec686cd008a0b",
         "zh": "f402ba976eac3b4302cf70a33f700aecfdd32950367e751e90ef484af1039554",
@@ -113,7 +113,7 @@
       "id": "religious-cbt",
       "sourceHash": "c7a2c6d6690d631d9d358105450002c7d54ac93bc93b5e2967a44157f92a6e43",
       "editionHashes": {
-        "tr": "dfac206eaba25067caf78c7394b69cddae084d95585032a0cc843a85e7ae8375",
+        "tr": "c6daca90d8ff10ede8931fe2cc9293462ccce544077c586c3be710143036e6e5",
         "en": "a9b93835d500ff0a911fd2258c09c1ea720c2aa3b11f68c1d6b4c4218b8ed376",
         "de": "049d43b921cd11ce57d9f2356c5154aa43b1d8c75d8b6c2ded4aae8b41d4b6f9",
         "zh": "bc7e4ed9a12e28336d5e01dcbfb642fab69f6ece57e988264b76b2490fed32e8",
@@ -131,7 +131,7 @@
       "id": "disaster-needs",
       "sourceHash": "8b873f6b06e341f03be5ca284c68f02ef63b2a6aa2f46cd99db4cf4d89b2251d",
       "editionHashes": {
-        "tr": "029e333578501669c9792a5baad5e45d888d58b38f513747871f0d5a58588f1c",
+        "tr": "144b9f72f26a06de44ba55c5847cf35a2ac8be42052de90daefa0134614c0152",
         "en": "5cf79e850bab589b886700b19bc61bda789483d0978a0a8c96d9705ffa2216e2",
         "de": "68773d8f01d852fd836e4bec928a4a61188608c92407c24e66be888119304d45",
         "zh": "f6ebcab2a1f69deeb5e82b6e12423bdbb2068def7855663f3f313148a392cbd5",
@@ -149,7 +149,7 @@
       "id": "brief-rcope",
       "sourceHash": "e4452260185ce042300103d5694f438deb3eec6673c283acc4d62f5078ad83af",
       "editionHashes": {
-        "tr": "5a710731f8f63aeb5a30b88fa78ca8d683ab3cb1ba76bdaf6006e1597a4c7894",
+        "tr": "1b6fc5ab0208d8ae08ffe516912719286525b4052ac3f6d7d535f67805148f10",
         "en": "a54581e165940c35a609b450881fe1c0da06dfe54af95374996f6fff409c245c",
         "de": "7632972008d6bb208f4be4e14d760d171c8e81c39a9e5d12f65d6f8ff194000a",
         "zh": "7873e22bdf3e2c5be77ef8080c7066018ba6ce4a4cc3c70c3cc13588c58e6c08",
@@ -167,7 +167,7 @@
       "id": "meaning-questionnaire",
       "sourceHash": "8d5c071a180302a1d547bd04fe02a775145efe9d1ddc8a07721c93d3fc8aa252",
       "editionHashes": {
-        "tr": "8e4fee4fa53733cab829316c87b5e3ee64c43ffc346df52343650da2ab21ff56",
+        "tr": "d5add3303cb881bc317056e09b23c876211be4b99ec890a32db827a8fd4b88d2",
         "en": "d2dce5fb8b38275a4a9b3a6e14e607be1fa42cc003e99263b1d6cf5a320c3b75",
         "de": "a11081190b5c27ce5c7c0612089739c85d196b4688485e6d194fecf66f08ab45",
         "zh": "de8f553e49f37466c67d1cec52ce8c02dda676887d179e883490e16c98f4e5dd",
@@ -185,7 +185,7 @@
       "id": "durel",
       "sourceHash": "7426c2ad35cf92de50220817720506a0074849e86f205e308d9fd6ac3e998b2d",
       "editionHashes": {
-        "tr": "22a1294f0ea0db147b44f233f1d769ffb80e9ceb681ae79f3059d0e15d294099",
+        "tr": "56403a73c64e277b01de5b76435bbc97b842a175924e4ad2a44711a0cea5c387",
         "en": "1b0fd5037d52077ef64a6745640d45dc21a4d6346a0131b6cb7f1289f02e7b47",
         "de": "2d5223f3e642d2f5525b65c6c7f40ab050220f4c7f2d7bcdef8a13d49940a752",
         "zh": "96aeb60e524c90f51222f0c01062d73145cbb0fa260ca197e76fba7afac1c20c",
@@ -203,7 +203,7 @@
       "id": "swbs-eksi-kardas",
       "sourceHash": "d3554717474cb81636856aa18710f7cdf06aad707b9443da7558a7b3b9124ef8",
       "editionHashes": {
-        "tr": "a75ed2909dd48a304b50467c8353f98de0a019f7adcc285d2d4b98b3e3571850",
+        "tr": "5b3080c7e3732a697fddf74984099daa27fb4ccb56767e2c2f7006309b1ae979",
         "en": "57dff0ad8b5ca81df4cca0e22c0ad8ce8e9dce543f58b2cfcdb3963021e46b49",
         "de": "7953c6e58a6f463bd49959752a7f459c45237f6fe7c7a40c3687ce399fbdb465",
         "zh": "9525e8dccecceb6ac74ce1702352d494c7fa53bfdd80848903133b86a8c5e6c1",
@@ -221,7 +221,7 @@
       "id": "swbs-paloutzian-ellison",
       "sourceHash": "aa9db1879205191b0131cb71c0f28ddefb477cd28c198b498917157a1453a7fe",
       "editionHashes": {
-        "tr": "2e86d89047218d44ba586bf87d38bd87ee9c053c4261ab3de03d6ed35d755717",
+        "tr": "7a12181a344af4f6f0a188301b74cee3a5142c2a175565ffd20af936aae5b39e",
         "en": "c0d1123b617a35f2712fd78b774e5b84d59f19f0b70817e65e0c42c3b00122d2",
         "de": "655065c9fc4650d79d9d014cf91ab16da873ee9118a738700e21b29bae8e593f",
         "zh": "4fec8bd8333a971ef759060692531e8fca3242ff3fd62ac9842dc1ae7b30f8e9",
@@ -239,7 +239,7 @@
       "id": "within-person-attendance",
       "sourceHash": "9486764c223abec7e1616f98dc3789d35c3e921d8b93819b76c008a3276b3e85",
       "editionHashes": {
-        "tr": "60a6246324ba0d5c0ab8e621dc7d4ed965883c08711ad91b39f8d09be383a4cb",
+        "tr": "06da84bdc260c7be46310a6e3663c39f9c8a57807ea4549dff78a51bb49d38b6",
         "en": "bce335f08754e2fcde0d403c0f1c3810c4230f50dabd990a72c13150efe189a3",
         "de": "9d9ff26274be15e33ecc0aed630a4058722951351d3906e842468913145f59e5",
         "zh": "e6120cf36a6a06995d69cab6fa7509515a2990b55d99e831efbc9f89ab3a7aed",
@@ -257,7 +257,7 @@
       "id": "bidirectional-alspac",
       "sourceHash": "7503d55fce228455ec22db22f810d12f33f5baf5971c19b7d83813d6e5bc56ea",
       "editionHashes": {
-        "tr": "5ce5d2e13cfaef85e6a652c77afe4a79494902e7ab6d66638f6672f0dc30c1d5",
+        "tr": "ad8cf9e86668455bd014f733620ab4330a634c171f1550db6db22f81d375fa96",
         "en": "660af8e427f49320f43c708a0a7f4ad295030ec3bbdc2c4305e509a5763f38d0",
         "de": "161b0760464b20f34b3617be5b379545cc9a67e31a5e716d48d4ca8bbe05cfc8",
         "zh": "8c0dc86d797ad3efd3c2581490a0a25ce1dd1a2457e684b4c92db718ac709a1a",
@@ -275,7 +275,7 @@
       "id": "brazil-medical-students",
       "sourceHash": "5817e2d79086a744342a8f26c130c9796687c694870528816a6ff84b2a8ee9db",
       "editionHashes": {
-        "tr": "29d393b06c11a2dc4403e59a2df59a59028634510025bd61e236c935ccd5d4e8",
+        "tr": "f4c061d7b8664cb363b11bea4216de89db546c2174643c5989e359924a6dbb11",
         "en": "840418626d567d65d2db2898a80120d968e68ac56e1b043070c2bbfcd29deb1b",
         "de": "04bc11ef1f5ccb39e6fdc08bd5a35ae3308f071d37f801ef4c29812c09240a36",
         "zh": "2b330b7b08f15ac6b2c592e1c25bd15fde9030864eca1b392942d0de9b6a57ce",
@@ -293,7 +293,7 @@
       "id": "turkish-bereavement",
       "sourceHash": "4b893722a40a8cad8ca80b654a5eb5fe942244518aeec3fc8f6a8ef2543ab448",
       "editionHashes": {
-        "tr": "a25ba6830668d3be8cf74228a34fa38033e358c61feb41292c15c879c48b638a",
+        "tr": "d69eca1eda4adc834c8204aed3a69c72599c25f988d7845eaa53e3aa89c389aa",
         "en": "406e91b4ea1e3160c8f8886e778ca8870744b4a3bd51e7a10be9a06b115b858d",
         "de": "0d3db15c8ed44ad533c099ffdc1809c354855c4501cadb1461ee316583a09f76",
         "zh": "134f4dfc52aa2e86f0e6d4ddd5031e190258617f98fbba9b82b8be1ea200d93c",
@@ -311,7 +311,7 @@
       "id": "psychosis-spirituality",
       "sourceHash": "a67cc16a78128593687975c9bfda500f0a5d48600adc0933820da047793e1554",
       "editionHashes": {
-        "tr": "b2164808dc206aa08caddb7f08b77f9e6b6b609ac3de1a0e09d7be76fe5f0a6c",
+        "tr": "28f498eed6bc05f81febee666ee9ce9337b4ba85a7e045ac239207169f5bff32",
         "en": "0fada9dcdbcfbfd8ac14164635d41276284e65975d52c31f58a3d362b031c85b",
         "de": "016487b2219c409748b064be2af65afbc113c93cac9a85ad9e99900097628425",
         "zh": "76a8105b9f66e78e7643b75c6fb55adf1a938f9329ef03f7f5454effeb1dd964",
@@ -329,7 +329,7 @@
       "id": "clergy-abuse-harm",
       "sourceHash": "058f0e969a57b14e06f08128461f7deaff99ea6309cd66f5c02ab0523d6d49ec",
       "editionHashes": {
-        "tr": "3c2a5e0d0b641e7febccd42e25a613297e49b9fb851550187131a2fae3f55fc9",
+        "tr": "ba8e6994b74a6e494a6bbb3ac26c12798bc8885437ee77c5552cb6729decc2bc",
         "en": "0b8520cceecfb6456ebb29a76a3d9c4c6aa9d43b84186de2a713139e73c74cb1",
         "de": "2e8081a4d4a0f37ff1cadd66aa37af5ce98033d462cebea692e0e5e37022a3ad",
         "zh": "c0c68a4664564a8278094179295f11ab6a556054f8fe3fa3913586e99f46eab2",

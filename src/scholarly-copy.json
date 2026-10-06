@@ -10,7 +10,7 @@
     "ms": "Memahami bukti"
   },
   "lead": {
-    "tr": "Maneviyat ve ruh sağlığı alanında seçilmiş araştırmalar. Bulguyu, araştırma tasarımını ve çıkarım sınırını birlikte okuyun.",
+    "tr": "Maneviyat ve ruh sağlığı alanından seçilmiş araştırmalar. Her araştırmanın bulgusunu, tasarımını ve bu bulgudan ne kadar sonuç çıkarılabileceğini birlikte değerlendirin.",
     "en": "Selected research on spirituality and mental health. Read findings alongside study design and limits of inference.",
     "de": "Ausgewählte Forschung zu Spiritualität und psychischer Gesundheit. Befunde, Studiendesign und Aussagegrenzen gemeinsam betrachten.",
     "zh": "灵性与心理健康研究选读。结合研究设计与推论边界理解发现。",
@@ -60,7 +60,7 @@
     "ms": "Bukti terpilih"
   },
   "selectionNote": {
-    "tr": "Bu seçki sistematik derleme değildir. Güncellik, yöntem çeşitliliği, Türkiye bağlamı ve karşıt bulgular gözetilmiştir. Eksiksiz alan taraması veya etkililik sıralaması olarak kullanılmamalıdır.",
+    "tr": "Bu seçki sistematik bir derleme değildir. Seçimde güncellik, yöntem çeşitliliği, Türkiye bağlamı ve birbiriyle çelişen bulgular gözetilmiştir. Bu nedenle alanın eksiksiz bir taraması ya da yöntemlerin etkililik sıralaması olarak kullanılmamalıdır.",
     "en": "This selection is not a systematic review. Recency, methodological variety, Turkish contexts and contrasting findings informed inclusion. It is neither exhaustive nor an efficacy ranking.",
     "de": "Diese Auswahl ist keine systematische Übersicht. Aktualität, Methodenvielfalt, türkische Kontexte und gegenläufige Befunde leiten die Auswahl. Sie ist weder vollständig noch eine Wirksamkeitsrangliste.",
     "zh": "本选集并非系统综述，选入时考虑时效性、方法多样性、土耳其情境及相反发现。它不代表完整检索或疗效排名。",
@@ -90,7 +90,7 @@
     "ms": "Menilai instrumen pengukuran"
   },
   "measureLead": {
-    "tr": "Yapıyı, örneklemi ve kullanım koşullarını birlikte değerlendirin. Ölçek puanı klinik tanı değildir. Bir dildeki yayın, diğer dillerde geçerlik kanıtı oluşturmaz.",
+    "tr": "Ölçeğin neyi ölçtüğünü, hangi örneklemde geliştirildiğini ve kullanım koşullarını birlikte değerlendirin. Ölçek puanı klinik bir tanı değildir. Bir dilde yapılmış geçerlik çalışması, ölçeğin diğer dillerde de geçerli olduğunu göstermez.",
     "en": "Consider construct, sample and conditions of use together. A scale score is not a diagnosis. Publication in one language does not validate other language versions.",
     "de": "Konstrukt, Stichprobe und Nutzungsbedingungen gemeinsam prüfen. Ein Skalenwert ist keine Diagnose. Eine Veröffentlichung validiert keine anderen Sprachfassungen.",
     "zh": "同时考虑构念、样本及使用条件。量表分数不等于诊断，一种语言的发表并不验证其他语言版本。",
@@ -100,7 +100,7 @@
     "ms": "Pertimbangkan konstruk, sampel dan syarat penggunaan bersama. Skor skala bukan diagnosis. Penerbitan dalam satu bahasa tidak mengesahkan versi bahasa lain."
   },
   "permission": {
-    "tr": "Maddeler burada yeniden yayımlanmaz. Araştırmada kullanmadan önce özgün formu, uyarlama çalışmasını, puanlama yönergesini ve hak sahibinin koşullarını kontrol edin. MARSAM kullanım izni vermez.",
+    "tr": "Ölçek maddeleri bu sitede yeniden yayımlanmaz. Ölçeği araştırmada kullanmadan önce özgün formu, uyarlama çalışmasını, puanlama yönergesini ve hak sahibinin koşullarını kontrol edin. MARSAM kullanım izni vermez.",
     "en": "Items are not reproduced here. Before research use, check the original form, adaptation study, scoring guidance and rights holder’s terms. MARSAM grants no licence.",
     "de": "Items werden hier nicht wiedergegeben. Vor der Nutzung Originalfassung, Adaptationsstudie, Auswertung und Rechtebedingungen prüfen. MARSAM erteilt keine Lizenz.",
     "zh": "本站不复制条目。研究使用前请核对原始版本、适应性研究、计分指南及权利人条件。MARSAM不授予使用许可。",
@@ -110,7 +110,7 @@
     "ms": "Item tidak diterbitkan semula di sini. Sebelum digunakan, semak bentuk asal, kajian penyesuaian, panduan pemarkahan dan syarat pemegang hak. MARSAM tidak memberikan lesen."
   },
   "founderTitle": {
-    "tr": "Akademik girişimin kurucusu",
+    "tr": "Merkezin kurucusu",
     "en": "Founder of the academic initiative",
     "de": "Gründer der akademischen Initiative",
     "zh": "学术倡议发起人",
@@ -120,7 +120,7 @@
     "ms": "Pengasas inisiatif akademik"
   },
   "founderShort": {
-    "tr": "Prof. Dr. Halil Ekşi, MARSAM’ın kurucusudur. Girişim, maneviyat ve ruh sağlığı alanında araştırma, eleştirel okuma ve bilimsel diyaloğu desteklemeyi amaçlar.",
+    "tr": "Prof. Dr. Halil Ekşi, MARSAM’ın kurucusudur. Merkez, maneviyat ve ruh sağlığı alanında araştırmayı, eleştirel okumayı ve bilimsel tartışmayı desteklemeyi amaçlamaktadır.",
     "en": "Prof. Dr. Halil Ekşi founded the MARSAM academic initiative, which aims to support research, critical reading and scholarly dialogue on spirituality and mental health.",
     "de": "Prof. Dr. Halil Ekşi ist Gründer von MARSAM. Sie will Forschung, kritische Lektüre und wissenschaftlichen Dialog zu Spiritualität und psychischer Gesundheit unterstützen.",
     "zh": "Halil Ekşi教授发起MARSAM学术倡议，旨在支持灵性与心理健康领域的研究、批判性阅读及学术对话。",
@@ -130,7 +130,7 @@
     "ms": "Prof. Dr. Halil Ekşi mengasaskan inisiatif akademik MARSAM bagi menyokong penyelidikan, pembacaan kritis dan dialog ilmiah tentang kerohanian dan kesihatan mental."
   },
   "founderText": {
-    "tr": "Prof. Dr. Halil Ekşi, MARSAM’ın kurucusudur. Marmara Üniversitesi bünyesindeki akademik çalışmaları psikolojik danışma, din ve maneviyat psikolojisi ile ölçme ve değerlendirme alanlarıyla ilişkilidir. MARSAM, bu birikimden hareketle maneviyat ve ruh sağlığı ilişkisini farklı kuramsal yaklaşımlar, kültürel bağlamlar ve araştırma yöntemleri üzerinden ele alan bir bilgi ortamı geliştirmeyi amaçlar. Kurucunun çalışmaları, alanın ulusal ve uluslararası literatürüyle birlikte, aynı kaynak seçimi ve eleştirel değerlendirme ölçütlerine tabidir. Merkezin içerik inceleme süreçleri yönetişim sayfasında açıklanır.",
+    "tr": "Prof. Dr. Halil Ekşi, MARSAM’ın kurucusudur. Marmara Üniversitesindeki akademik çalışmaları psikolojik danışma, din ve maneviyat psikolojisi ile ölçme ve değerlendirme alanlarında yoğunlaşmaktadır. MARSAM, bu birikimden yola çıkarak maneviyat ve ruh sağlığı ilişkisini farklı kuramsal yaklaşımlar, kültürel bağlamlar ve araştırma yöntemleri üzerinden ele alan bir bilgi ortamı oluşturmayı amaçlamaktadır. Sitede kurucunun çalışmalarına da alandaki diğer ulusal ve uluslararası çalışmalarla aynı seçim ve değerlendirme ölçütleri uygulanmaktadır. İçeriklerin nasıl incelendiği yönetişim sayfasında açıklanmaktadır.",
     "en": "Prof. Dr. Halil Ekşi is the founder of MARSAM. His work at Marmara University connects psychological counseling, the psychology of religion and spirituality, and measurement and evaluation. MARSAM draws on this background to develop a scholarly resource that examines spirituality and mental health through diverse theories, cultural contexts and research methods. The founder’s publications are considered alongside Turkish and international scholarship, using the same selection and critical appraisal criteria. The governance page explains the center’s content review processes.",
     "de": "Prof. Dr. Halil Ekşi ist Gründer von MARSAM. Seine Arbeit an der Marmara-Universität verbindet psychologische Beratung, Religions- und Spiritualitätspsychologie sowie Messung und Evaluation. Auf dieser Grundlage entsteht ein wissenschaftliches Informationsangebot, das Spiritualität und psychische Gesundheit aus unterschiedlichen theoretischen, kulturellen und methodischen Perspektiven untersucht. Veröffentlichungen des Gründers werden gemeinsam mit türkischer und internationaler Forschung nach denselben Auswahl- und Bewertungskriterien betrachtet. Die Seite zur Governance erläutert die Verfahren zur Prüfung der Inhalte.",
     "zh": "Halil Ekşi教授是MARSAM的创始人。他在马尔马拉大学的学术工作涉及心理咨询、宗教与灵性心理学以及测量与评价。MARSAM以此为基础，致力于建立一个从不同理论、文化情境和研究方法出发，探讨灵性与心理健康关系的学术资源平台。创始人的著作与土耳其及国际文献一同接受相同的遴选和批判性评价，。治理页面说明中心的内容审查流程。",
@@ -150,7 +150,7 @@
     "ms": "Profil akademik"
   },
   "researchLead": {
-    "tr": "Maneviyat ve ruh sağlığına ilişkin Türkiye’den ve dünyadan seçilmiş araştırmalar.",
+    "tr": "Maneviyat ve ruh sağlığı üzerine Türkiye’den ve dünyadan seçilmiş araştırmalar.",
     "en": "Selected research on spirituality and mental health from Türkiye and around the world.",
     "de": "Ausgewählte Forschung zu Spiritualität und psychischer Gesundheit aus der Türkei und weltweit.",
     "zh": "来自土耳其及世界各地的灵性与心理健康研究选读。",
@@ -160,7 +160,7 @@
     "ms": "Penyelidikan terpilih tentang kerohanian dan kesihatan mental dari Türkiye dan seluruh dunia."
   },
   "booksLead": {
-    "tr": "Maneviyatla ilişkisi açık olan kuramsal ve mesleki kaynaklar. Kitap seçkisi tedavi etkililiği kanıtı değildir.",
+    "tr": "Maneviyatla doğrudan ilişkili kuramsal ve mesleki kitaplar. Bu seçki, tedavilerin etkililiğine ilişkin kanıt olarak sunulmamaktadır.",
     "en": "Theoretical and professional resources with an explicit spiritual focus. This book selection is not evidence of treatment efficacy.",
     "de": "Theoretische und professionelle Literatur mit ausdrücklichem Spiritualitätsbezug. Die Auswahl belegt keine Behandlungswirksamkeit.",
     "zh": "具有明确灵性主题的理论与专业资源。书目选集并非治疗效果证据。",
@@ -180,7 +180,7 @@
     "ms": "Rekod sumber"
   },
   "readingQuestions": {
-    "tr": "Yöntem ve okuma soruları",
+    "tr": "Yöntemle ilgili okuma soruları",
     "en": "Methods and reading questions",
     "de": "Methoden und Lesefragen",
     "zh": "方法与阅读问题",
@@ -190,7 +190,7 @@
     "ms": "Kaedah dan soalan bacaan"
   },
   "rssNote": {
-    "tr": "Türkçe RSS-14 uyarlaması, 495 kişilik Müslüman örnekleminde altı boyut bildirdi. Toplam alfa katsayısı 0,82, alt ölçeklerinki 0,60–0,82’dir. Bu sonuçlar başka inanç gruplarında ölçme değişmezliğini veya klinik kesme puanlarını göstermez.",
+    "tr": "Türkçe RSS-14 uyarlamasında 495 kişilik Müslüman örneklemde altı boyut bildirilmiştir. Toplam alfa katsayısı 0,82, alt ölçeklerinki ise 0,60–0,82’dir. Bu sonuçlar, ölçeğin başka inanç gruplarında aynı biçimde çalıştığını ya da klinik kesme puanlarını göstermez.",
     "en": "The Turkish RSS-14 adaptation reported six dimensions in 495 Muslim participants. Total alpha was 0.82, subscales 0.60–0.82. These results do not establish invariance across worldviews or clinical cut-offs.",
     "de": "Die türkische RSS-14-Adaptation berichtete sechs Dimensionen bei 495 muslimischen Personen. Gesamtalpha: 0,82, Subskalen: 0,60–0,82. Daraus folgen weder weltanschauungsübergreifende Messinvarianz noch klinische Grenzwerte.",
     "zh": "土耳其语RSS-14适应研究在495名穆斯林参与者中报告六个维度。总量表α为0.82，分量表为0.60–0.82。这不证明跨世界观测量不变性或临床界值。",
@@ -320,7 +320,7 @@
     "ms": "Karya ilmiah berkaitan yang terpilih"
   },
   "targetedFullText": {
-    "tr": "Özgün metnin ilgili bölümleri incelendi. Bu, makalenin bütün analizlerinin, eklerinin veya güncel düzeltme geçmişinin kapsamlı olarak değerlendirildiği anlamına gelmez.",
+    "tr": "Özgün metnin ilgili bölümleri incelenmiştir. Bu, makaledeki bütün analizlerin, eklerin ya da düzeltme geçmişinin ayrıntılı olarak değerlendirildiği anlamına gelmez.",
     "en": "Relevant sections of the original full text were inspected. This is not a comprehensive appraisal of every analysis, supplement or subsequent correction.",
     "de": "Relevante Abschnitte des Originalvolltexts wurden geprüft. Dies ist keine vollständige Bewertung sämtlicher Analysen, Ergänzungen oder späterer Korrekturen.",
     "zh": "已查阅原始全文的相关部分。这不代表对所有分析、补充材料或后续更正进行了全面评价。",
@@ -330,7 +330,7 @@
     "ms": "Bahagian berkaitan dalam teks penuh asal telah diperiksa. Ini bukan penilaian menyeluruh terhadap semua analisis, lampiran atau pembetulan berikutnya."
   },
   "swbsDistinction": {
-    "tr": "Aynı ad, farklı ölçme araçları. Madde sayısını, geliştiricileri ve kullanım amacını kontrol edin. Puanları birbirinin yerine kullanmayın.",
+    "tr": "Aynı ad, farklı ölçme araçları. Madde sayısını, ölçeği geliştirenleri ve kullanım amacını kontrol edin; iki ölçeğin puanlarını birbirinin yerine kullanmayın.",
     "en": "Shared name, different instruments. Check item count, developers and intended use. Do not treat their scores as interchangeable.",
     "de": "Gleicher Name, unterschiedliche Instrumente. Itemzahl, Urheberschaft und Zweck prüfen. Die Werte sind nicht austauschbar.",
     "zh": "名称相同，工具不同。请核对条目数量、开发者和用途，不要互换分数。",
@@ -350,7 +350,7 @@
     "ms": "Dokumen primer yang diperiksa"
   },
   "sourceRoles": {
-    "tr": "Makale, yazar kılavuzu veya form. Bağlantıların erişilebilirliği kullanım izninin kapsamını genişletmez.",
+    "tr": "Makale, yazar kılavuzu ya da form. Bu belgelere erişilebilmesi, kullanım izninin kapsamını genişletmez.",
     "en": "Article, author manual or form. Access to a document does not extend its reuse permissions.",
     "de": "Artikel, Autorenmanual oder Formular. Die Zugänglichkeit erweitert keine Nutzungsrechte.",
     "zh": "论文、作者手册或表单。文件可访问不意味着转载权限扩大。",
@@ -410,7 +410,7 @@
     "ms": "Borang bahasa Turki dan syarat penggunaan, 2022"
   },
   "reported-mediation": {
-    "tr": "Aracılık analizi; zaman sırası doğrulanmamıştır",
+    "tr": "Aracılık analizi yapılmıştır; değişkenlerin zaman sırası doğrulanmamıştır",
     "en": "Mediation analysis, temporal design unverified",
     "de": "Mediationsanalyse, zeitliches Design ungeprüft",
     "zh": "中介分析，测量时序未核实",
@@ -440,7 +440,7 @@
     "ms": "Bacaan perbandingan"
   },
   "relatedEvidenceNote": {
-    "tr": "Bu bağlantılar editoryal okuma önerileridir. Tekrarlama çalışması, eşdeğerlik veya etkililik sıralaması bildirmez.",
+    "tr": "Bu bağlantılar, birlikte okunması önerilen çalışmalardır. Çalışmaların birbirini tekrarladığını, eşdeğer olduğunu ya da etkililik açısından sıralandığını göstermez.",
     "en": "These are editorial reading connections, not claims of replication, equivalence or comparative efficacy.",
     "de": "Dies sind redaktionelle Leseverbindungen, keine Belege für Replikation, Gleichwertigkeit oder vergleichende Wirksamkeit.",
     "zh": "这些是编辑提出的阅读联系，并不表示重复验证、等效性或疗效比较。",
@@ -460,7 +460,7 @@
     "ms": "Kajian yang menggunakan instrumen ini"
   },
   "instrumentUseNote": {
-    "tr": "Bir araştırmada kullanılması, aracın yeni bir örneklemde veya dilde geçerliğini tek başına göstermez. Aşağıdaki bağlantılar kullanım örnekleridir, kullanım izni veya bağımsız doğrulama belgesi değildir.",
+    "tr": "Bir ölçeğin bir araştırmada kullanılmış olması, yeni bir örneklemde ya da dilde geçerli olduğunu tek başına göstermez. Aşağıdaki bağlantılar kullanım örnekleridir; kullanım izni ya da bağımsız geçerlik belgesi değildir.",
     "en": "Use in a study does not by itself validate an instrument in a new population or language. These links document research use, not permission or independent validation.",
     "de": "Die Anwendung in einer Studie validiert ein Instrument nicht automatisch für eine neue Population oder Sprache. Die Links dokumentieren Nutzung, keine Erlaubnis oder unabhängige Validierung.",
     "zh": "在研究中使用某工具，本身不能验证其在新群体或新语言中的效度。以下链接说明研究用途，而非使用许可或独立验证。",

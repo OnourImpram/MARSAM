@@ -7,7 +7,7 @@
       "s-brief-rcope"
     ],
     "title": {
-      "tr": "Neyi ölçüyoruz?",
+      "tr": "Ne ölçülüyor?",
       "en": "What are we measuring?",
       "de": "Was messen wir?",
       "zh": "我们在测量什么？",
@@ -17,7 +17,7 @@
       "ms": "Apakah yang kita ukur?"
     },
     "text": {
-      "tr": "Maneviyat, dindarlık, anlam ve iyi oluş aynı yapı değildir. Bir ölçek yaşam doyumunu maneviyat tanımına katıyorsa ruh sağlığıyla ilişkisi kısmen kavramsal örtüşmeden kaynaklanabilir. Önce tanımı ve maddelerin içeriğini, sonra katsayıyı okuyun.",
+      "tr": "Maneviyat, dindarlık, yaşamda anlam ve iyi oluş birbirinden farklı yapılardır. Örneğin bir maneviyat ölçeği yaşam doyumuyla ilgili maddeler de içeriyorsa, bu ölçekle ruh sağlığı arasında bulunan ilişki kısmen iki ölçümün aynı şeyi sormasından kaynaklanabilir. Bu nedenle bir ilişkinin büyüklüğüne bakmadan önce ölçeğin neyi tanımladığı ve maddelerinin neyi sorduğu incelenmelidir.",
       "en": "Spirituality, religiosity, meaning and wellbeing are different constructs. When a spirituality measure incorporates wellbeing, its association with mental health may partly reflect conceptual overlap. Examine definitions and item content before interpreting a coefficient.",
       "de": "Spiritualität, Religiosität, Sinn und Wohlbefinden sind verschiedene Konstrukte. Enthält ein Spiritualitätsmaß bereits Wohlbefinden, kann sein Zusammenhang mit psychischer Gesundheit teilweise begriffliche Überlappung widerspiegeln. Zuerst Definitionen und Iteminhalte prüfen, dann Koeffizienten interpretieren.",
       "zh": "灵性、宗教性、意义和福祉是不同构念。如果灵性量表本身包含福祉，其与心理健康的关联可能部分源于概念重叠。解释系数前，先审视定义与条目内容。",
@@ -45,7 +45,7 @@
       "ms": "Perkaitan, perubahan dan kesan rawatan"
     },
     "text": {
-      "tr": "Kesitsel ilişki zaman sırasını göstermez. Kohort çalışması zaman sırasını güçlendirir, fakat karıştırıcıları tümüyle gidermez. Randomize denemede karşılaştırma grubu ve kayıplar belirleyicidir. Dini uyarlamalı BDT denemesindeki genel farkın anlamlı olmaması, yöntemlerin eşdeğer olduğunu kanıtlamaz.",
+      "tr": "Kesitsel bir çalışmada bulunan ilişki, hangi değişkenin önce geldiğini göstermez. Kohort çalışmaları zaman sırasını daha iyi gösterir; ancak sonucu etkileyebilecek diğer etkenleri tümüyle ortadan kaldırmaz. Randomize kontrollü denemelerde ise karşılaştırma grubunun nasıl seçildiği ve çalışmadan ayrılan katılımcılar sonucu belirler. Örneğin dini açıdan uyarlanmış bilişsel davranışçı terapi denemesinde gruplar arasında anlamlı bir fark bulunmaması, iki yöntemin eşit derecede etkili olduğunu kanıtlamaz.",
       "en": "Cross-sectional associations do not establish temporal order. Cohorts improve temporal information but cannot remove all confounding. In randomized trials, comparator choice and attrition matter. A nonsignificant overall difference in the religious CBT trial does not establish equivalence.",
       "de": "Querschnittszusammenhänge klären die zeitliche Abfolge nicht. Kohorten verbessern diese Information, beseitigen aber nicht jede Konfundierung. Bei randomisierten Studien sind Vergleichsbedingung und Ausfälle entscheidend. Der nichtsignifikante Gesamtunterschied in der religiösen Verhaltenstherapiestudie belegt keine Gleichwertigkeit.",
       "zh": "横断面关联不能确定时间顺序。队列研究提供时间信息，但无法排除所有混杂。随机试验中，对照条件和脱落情况很重要。宗教整合式认知行为疗法试验中的总体差异不显著，并不证明等效。",
@@ -73,7 +73,7 @@
       "ms": "Sokongan, pergolakan dan kemungkinan mudarat"
     },
     "text": {
-      "tr": "İnanç ve topluluk bazı kişiler için destek, bazıları için suçluluk, dışlanma veya çatışma kaynağı olabilir. Olumlu ve olumsuz başa çıkmayı tek puanda birleştirmeyin. Manevi mücadeleyi tek başına hastalık saymayın. İnançsızlık da eksiklik veya ruhsal bozukluk değildir.",
+      "tr": "İnanç ve topluluk bazı kişiler için destek kaynağıyken, bazıları için suçluluk, dışlanma ya da çatışma kaynağı olabilir. Bu nedenle olumlu ve olumsuz dini başa çıkma tek bir puanda birleştirilmemelidir. Manevi mücadele tek başına bir hastalık belirtisi sayılmamalıdır. İnançsızlık da bir eksiklik ya da ruhsal bozukluk değildir.",
       "en": "Belief and community may offer support or involve guilt, exclusion and conflict. Do not collapse positive and negative coping into one score. Spiritual struggle alone is not a disorder. Nonbelief is neither a deficit nor a mental illness.",
       "de": "Glaube und Gemeinschaft können unterstützen, aber auch Schuldgefühle, Ausgrenzung und Konflikte mit sich bringen. Positive und negative Bewältigung nicht zu einem Wert zusammenziehen. Spirituelle Konflikte allein sind keine Störung. Nichtglaube ist weder Defizit noch psychische Krankheit.",
       "zh": "信仰与群体可能提供支持，也可能伴随内疚、排斥或冲突。不要把积极与消极应对合成一个分数。灵性挣扎本身并非障碍，无信仰也不是缺陷或精神疾病。",
@@ -101,7 +101,7 @@
       "ms": "Budaya dan peringkat kehidupan"
     },
     "text": {
-      "tr": "Bir ülkede, yaş grubunda veya dini gelenekte bulunan ilişkiyi başka bir topluluğa doğrudan taşımayın. Ergenlikte aile bağlamı, ileri yaşta kayıp ve sosyal destek farklı sorular doğurur. Örneklemin kimleri dışarıda bıraktığı, ortalama ilişkinin büyüklüğü kadar önemlidir.",
+      "tr": "Bir ülkede, yaş grubunda ya da dini gelenekte bulunan ilişki, başka bir topluluğa doğrudan aktarılmamalıdır. Ergenlikte aile bağlamı, ileri yaşta ise kayıp ve sosyal destek farklı sorular doğurmaktadır. Örneklemin kimleri dışarıda bıraktığı da bulunan ilişkinin büyüklüğü kadar önemlidir.",
       "en": "An association in one country, age group or religious tradition does not automatically transfer to another. Adolescence raises questions about family context, while later life brings loss and social support into focus. Who is absent from the sample matters alongside the average association.",
       "de": "Ein Zusammenhang in einem Land, einer Altersgruppe oder Religion ist nicht automatisch übertragbar. Im Jugendalter ist der Familienkontext relevant, im Alter etwa Verlust und soziale Unterstützung. Wer in der Stichprobe fehlt, ist ebenso zu beachten wie der durchschnittliche Zusammenhang.",
       "zh": "一个国家、年龄组或宗教传统中的关联，不能自动推广至另一群体。青春期需要考虑家庭情境，晚年则可能涉及丧失与社会支持。样本遗漏了谁，与平均关联大小同样重要。",
@@ -128,7 +128,7 @@
       "ms": "Bencana, kedukaan dan batas penjagaan"
     },
     "text": {
-      "tr": "Afet sonrası uzman görüşleri, gereksinimleri ve hizmet bağlamını anlamaya yardımcı olur. Bunlar bir müdahalenin travma belirtilerini azalttığını göstermez. Manevi destek kişinin isteğine dayanmalı, kişiyi kaybına anlam yüklemeye zorlamamalı ve gerekli ruh sağlığı hizmetlerinin yerine geçmemelidir.",
+      "tr": "Afet sonrasında uzmanlarla yapılan görüşmeler, ihtiyaçları ve hizmetin verildiği koşulları anlamaya yardımcı olur; ancak bir müdahalenin travma belirtilerini azalttığını göstermez. Manevi destek kişinin isteğine dayanmalı, kişiyi kaybına bir anlam yüklemeye zorlamamalı ve gerekli ruh sağlığı hizmetlerinin yerine geçmemelidir.",
       "en": "Professional accounts after disasters help identify needs and service contexts. They do not show that an intervention reduces trauma symptoms. Spiritual support should follow the person’s wishes, avoid imposed meanings of loss and preserve access to needed mental health care.",
       "de": "Fachliche Berichte nach Katastrophen erschließen Bedürfnisse und Versorgungskontexte. Sie belegen keine Verringerung von Traumasymptomen durch eine Intervention. Spirituelle Unterstützung soll sich am Wunsch der Person orientieren, Verlust nicht fremd deuten und notwendige psychische Versorgung nicht ersetzen.",
       "zh": "灾后专业人员叙述有助于理解需求和服务情境，但不能证明某项干预减少创伤症状。灵性支持应尊重个人意愿，不强加丧失的意义，也不替代所需的心理健康照护。",
@@ -156,7 +156,7 @@
       "ms": "Daripada bukti kepada amalan profesional"
     },
     "text": {
-      "tr": "Araştırma bulgusu, danışana manevi yaklaşım uygulanması için tek başına gerekçe değildir. Danışanın tercihi, açık rızası, uzmanın yeterliği ve müdahalenin amacı birlikte değerlendirilmelidir. Mesleki rehberler etik çerçeve sunar. Tedavi etkisi için kontrollü araştırma gerekir.",
+      "tr": "Bir araştırma bulgusu, danışanla manevi bir yaklaşımla çalışmak için tek başına yeterli gerekçe değildir. Danışanın tercihi, açık rızası, uzmanın yeterliği ve müdahalenin amacı birlikte değerlendirilmelidir. Mesleki rehberler etik bir çerçeve sunar; bir tedavinin etkili olduğunu göstermek için ise kontrollü araştırmalar gerekir.",
       "en": "A research association alone does not justify introducing spirituality into a client’s care. Consider preferences, informed consent, professional competence and the intervention’s purpose together. Professional guidance offers an ethical framework. Claims of treatment benefit require controlled evidence.",
       "de": "Ein Forschungszusammenhang allein rechtfertigt keine spirituelle Intervention. Präferenzen, informierte Einwilligung, fachliche Kompetenz und Zielsetzung sind gemeinsam zu prüfen. Berufsleitlinien liefern einen ethischen Rahmen. Aussagen über Behandlungseffekte brauchen kontrollierte Evidenz.",
       "zh": "研究关联本身不足以成为在个案照护中引入灵性的理由。应同时考虑个人偏好、知情同意、专业能力及干预目的。专业指南提供伦理框架，治疗获益的主张需要受控研究证据。",
@@ -169,7 +169,7 @@
   {
     "id": "longitudinal-questions",
     "title": {
-      "tr": "Boylamsal bulgular neden farklılaşır",
+      "tr": "Boylamsal araştırmaların bulguları neden farklılaşıyor?",
       "en": "Why longitudinal findings differ",
       "de": "Warum Längsschnittbefunde voneinander abweichen",
       "zh": "纵向研究结果为何不同",
@@ -179,7 +179,7 @@
       "ms": "Mengapa dapatan longitudinal berbeza"
     },
     "text": {
-      "tr": "Dini katılım ile sonraki ruh sağlığı arasındaki ilişki tek bir katsayıyla özetlenemez. ABD kohortları bazı olumlu ilişkiler bildirirken, Birleşik Krallık kişi içi analizleri çoğunlukla anlamlı olmayan, ALSPAC analizleri ise küçük veya sıfırla uyumlu bulgular sunuyor. Brezilyalı tıp öğrencilerinde örgütlü dindarlıkla bazı olumlu ilişkiler görülüyor. Bunlar aynı örneklemin tekrarları değildir. Kişiler arası farkları, kişi içi değişimi, ölçülen sonucu ve izlem dönemini ayırın. Farklı bulguları oy sayımıyla birleştirmek, genel bir yarar veya zarar hükmüne götürmez.",
+      "tr": "Dini katılım ile ilerleyen yıllardaki ruh sağlığı arasındaki ilişki tek bir sayıyla özetlenemez. ABD’deki kohort çalışmaları bazı olumlu ilişkiler bildirirken, Birleşik Krallık’ta aynı kişilerin zaman içindeki değişimine bakan analizler çoğunlukla anlamlı ilişki bulmamış, ALSPAC analizleri ise küçük ya da sıfıra yakın ilişkiler göstermiştir. Brezilyalı tıp öğrencilerinde ise örgütlü dini etkinliklere katılımla bazı olumlu ilişkiler görülmüştür. Bu çalışmalar aynı bulgunun tekrarları değildir. Kişiler arasındaki farklar ile aynı kişinin zaman içindeki değişimi, ölçülen sonuç ve izlem süresi ayrı ayrı değerlendirilmelidir. Farklı bulguları sayarak birleştirmek, genel bir yarar ya da zarar hükmüne ulaşmayı sağlamaz.",
       "en": "The link between attendance and later mental health cannot be reduced to one coefficient. US cohorts report some favourable associations, UK within-person analyses are mostly nonsignificant, and ALSPAC results are small or compatible with zero. Brazilian medical students show some favourable associations with organisational religiosity. These are not replications in an identical population. Distinguish between-person differences, within-person change, outcomes and follow-up periods. Counting positive and negative studies cannot establish an overall benefit or harm.",
       "de": "Der Zusammenhang zwischen religiöser Teilnahme und späterer psychischer Gesundheit lässt sich nicht auf einen Koeffizienten reduzieren. US-Kohorten berichten teils günstige Zusammenhänge, britische Analysen innerhalb einer Person überwiegend nicht signifikante Befunde und ALSPAC kleine oder mit Null vereinbare Ergebnisse. Bei brasilianischen Medizinstudierenden zeigen sich teils günstige Zusammenhänge mit organisationaler Religiosität. Dies sind keine Replikationen in derselben Population. Unterschiede zwischen Personen, Veränderungen innerhalb einer Person, Zielgrößen und Beobachtungszeiträume sind getrennt zu prüfen. Das Zählen positiver und negativer Studien belegt keinen Gesamtnutzen oder Gesamtschaden.",
       "zh": "宗教活动参与与随后心理健康的联系不能归结为单一系数。美国队列报告部分有利关联，英国个体内分析多数不显著，ALSPAC结果较小或与零效应相容。巴西医学生中，组织性宗教性也呈现部分有利关联。这些研究并非在同一人群中的重复验证。应区分个体间差异、个体内变化、结局指标及随访时间，不能用正负结果的简单计数来判定总体有益或有害。",
@@ -208,7 +208,7 @@
       "ms": "Kemudaratan rohani dan konteks klinikal"
     },
     "text": {
-      "tr": "Din görevlilerinin istismarı sonrasındaki manevi zarar ile psikoz araştırmalarındaki dini başa çıkma ayrı konulardır. İlk alandaki kapsam derlemesi sınırlı ve heterojen bir literatürü haritalandırıyor, tedavi etkililiğini değerlendirmiyor. Psikoz derlemesi ise farklı başa çıkma biçimleriyle klinik sonuçlar arasındaki ilişkileri ele alıyor. Birini diğerinin açıklaması olarak sunmamak gerekir. Dini kimliği patolojikleştirmeden, olumsuz deneyimleri de görünmez kılmadan okuyun. Araştırma bulguları danışanın onamı, tercihleri ve mesleki yeterlik sınırlarının yerine geçmez.",
+      "tr": "Din görevlilerinin istismarı sonrasında yaşanan manevi zarar ile psikoz araştırmalarında incelenen dini başa çıkma birbirinden farklı konulardır. İlk konudaki kapsam derlemesi, sınırlı ve dağınık bir literatürü haritalandırmakta, tedavilerin etkililiğini değerlendirmemektedir. Psikoz derlemesi ise farklı başa çıkma biçimleri ile klinik sonuçlar arasındaki ilişkileri ele almaktadır. Bu nedenle biri diğerinin açıklaması olarak sunulmamalıdır. Bu çalışmalar, dini kimliği hastalık gibi göstermeden ve olumsuz deneyimleri de görmezden gelmeden okunmalıdır. Araştırma bulguları, danışanın onamının, tercihlerinin ve uzmanın yeterlik sınırlarının yerine geçmez.",
       "en": "Spiritual harm after clergy abuse and religious coping in psychosis are distinct research questions. The scoping review maps a limited, heterogeneous literature rather than treatment efficacy. The psychosis review examines associations between forms of coping and clinical outcomes. Neither should be presented as an explanation of the other. Avoid pathologising religious identity while also recognising adverse experiences. Research findings do not replace consent, client preferences or professional competence boundaries.",
       "de": "Spirituelle Schädigung nach Missbrauch durch Geistliche und religiöse Bewältigung bei Psychosen sind unterschiedliche Forschungsfragen. Die Scoping-Übersicht kartiert eine begrenzte, heterogene Literatur, nicht die Wirksamkeit von Behandlungen. Die Psychoseübersicht untersucht Zusammenhänge zwischen Bewältigungsformen und klinischen Ergebnissen. Keines der Themen erklärt automatisch das andere. Religiöse Identität darf nicht pathologisiert werden, belastende Erfahrungen dürfen aber auch nicht unsichtbar bleiben. Forschungsbefunde ersetzen weder Einwilligung und Präferenzen noch fachliche Kompetenzgrenzen.",
       "zh": "神职人员侵害后的灵性伤害，与精神病性障碍中的宗教应对是不同的研究问题。范围综述梳理有限且异质的文献，并不评价治疗疗效。精神病性障碍综述考察应对方式与临床结局的关联，不能将其中一个问题当作另一个问题的解释。既应避免将宗教身份病理化，也不应忽视负面经历。研究发现不能替代知情同意、来访者偏好或专业胜任力边界。",

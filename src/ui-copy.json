@@ -1,6 +1,6 @@
 {
   "nav.explore": {
-    "tr": "Konuları keşfet",
+    "tr": "Konuları keşfedin",
     "en": "Explore topics",
     "de": "Themen entdecken",
     "zh": "探索主题",
@@ -240,7 +240,7 @@
     "ms": "Hak penggunaan"
   },
   "review.identityValue": {
-    "tr": "Bağlantılı kayıtla eşleştirildi.",
+    "tr": "Bağlantı verilen yayınla eşleştirilmiştir.",
     "en": "Matched to the linked record.",
     "de": "Mit dem verlinkten Eintrag abgeglichen.",
     "zh": "已与链接记录核对。",
@@ -250,7 +250,7 @@
     "ms": "Dipadankan dengan rekod terpaut."
   },
   "review.identityLimited": {
-    "tr": "Kısmi künye kontrolü.",
+    "tr": "Künye kısmen kontrol edilmiştir.",
     "en": "Partial bibliographic check.",
     "de": "Teilweise bibliografische Prüfung.",
     "zh": "部分书目信息核查。",
@@ -290,7 +290,7 @@
     "ms": "Semakan menyeluruh pembetulan dan penarikan balik belum selesai."
   },
   "review.rightsValue": {
-    "tr": "Özgün kaynağa bağlantı. Yeniden kullanım izni verilmez.",
+    "tr": "Yalnızca özgün kaynağa bağlantı verilir. İçeriğin yeniden kullanımına izin verilmez.",
     "en": "Links to the original source. No reuse permission is granted.",
     "de": "Link zur Originalquelle. Keine Erlaubnis zur Weiterverwendung.",
     "zh": "链接至原始来源。不授予再次使用的许可。",
@@ -310,7 +310,7 @@
     "ms": "Rekod kali terakhir diperiksa"
   },
   "review.translationNotice": {
-    "tr": "Çeviriler yapay zekâ desteğiyle hazırlanmıştır. Özgün kaynak başlıkları korunmuştur.",
+    "tr": "Çeviriler yapay zekâ desteğiyle hazırlanmıştır. Kaynakların özgün başlıkları değiştirilmemiştir.",
     "en": "Translations were prepared with AI assistance. Original source titles are preserved.",
     "de": "Die Übersetzungen wurden mit Unterstützung künstlicher Intelligenz erstellt. Originaltitel bleiben erhalten.",
     "zh": "译文借助人工智能辅助完成。原始来源题名予以保留。",
@@ -320,7 +320,7 @@
     "ms": "Terjemahan disediakan dengan bantuan kecerdasan buatan. Tajuk sumber asal dikekalkan."
   },
   "saved.storage": {
-    "tr": "Okuma listeniz bu tarayıcıda saklanır. Bir hesapla eşitlenmez. Paylaşılan cihazlarda listenizi temizleyin. Aynı alan adındaki diğer uygulamalarla ortak tarayıcı depolama alanı kullanılır.",
+    "tr": "Okuma listeniz yalnızca bu tarayıcıda saklanır ve herhangi bir hesapla eşitlenmez. Ortak kullanılan bir cihazdaysanız listenizi temizlemeniz önerilir. Tarayıcının depolama alanı, aynı alan adındaki diğer uygulamalarla ortak kullanılmaktadır.",
     "en": "Your reading list is saved in this browser, not synced to an account. Clear it on shared devices. Browser storage is shared with other applications on this origin.",
     "de": "Ihre Leseliste bleibt in diesem Browser und wird nicht mit einem Konto synchronisiert. Löschen Sie sie auf gemeinsam genutzten Geräten. Der Browserspeicher wird mit anderen Anwendungen derselben Origin geteilt.",
     "zh": "阅读清单保存在此浏览器中，不与账户同步。使用共享设备后请清除清单。同源的其他应用共享浏览器存储空间。",
@@ -330,7 +330,7 @@
     "ms": "Senarai bacaan disimpan dalam pelayar ini, bukan disegerakkan dengan akaun. Padamkannya pada peranti kongsi. Storan pelayar dikongsi dengan aplikasi lain pada origin yang sama."
   },
   "governance.title": {
-    "tr": "Editoryal ilkeler ve erişim",
+    "tr": "Yayın ilkeleri ve erişim",
     "en": "Editorial practice and access",
     "de": "Redaktion und Zugang",
     "zh": "编辑规范与访问",
@@ -340,7 +340,7 @@
     "ms": "Amalan editorial dan akses"
   },
   "governance.lead": {
-    "tr": "Katalog kayıtları, bilimsel yorum, çeviri ve yayın izni ayrı ayrı değerlendirilir.",
+    "tr": "Katalogdaki kayıtlar, bilimsel yorum, çeviri ve yayın izni ayrı ayrı değerlendirilir.",
     "en": "Catalogue records, scholarly interpretation, translation and publication permission are assessed separately.",
     "de": "Katalogdaten, wissenschaftliche Interpretation, Übersetzung und Veröffentlichungserlaubnis werden getrennt beurteilt.",
     "zh": "目录记录、学术解释、翻译与发布许可分别评估。",
@@ -370,7 +370,7 @@
     "ms": "Pembetulan dan sumbangan"
   },
   "governance.correctionText": {
-    "tr": "Kaynağın adresini ve düzeltilmesini istediğiniz bölümü belirterek bir öneri dosyası hazırlayabilirsiniz. Dosya yalnızca cihazınıza indirilir, bir editöre gönderilmez. Değişen metin için bilimsel ve dilsel incelemenin yeniden yapılması gerekir.",
+    "tr": "Kaynağın adresini ve düzeltilmesini istediğiniz bölümü belirterek bir öneri dosyası hazırlayabilirsiniz. Dosya yalnızca kendi cihazınıza indirilir; bir editöre gönderilmez. Değişen metnin bilimsel ve dilsel açıdan yeniden incelenmesi gerekir.",
     "en": "Prepare a suggestion identifying the source URL and the passage to correct. The file downloads to your device only and is not sent to an editor. Changed text requires renewed scholarly and language review.",
     "de": "Erstellen Sie einen Vorschlag mit Quellenadresse und zu korrigierender Passage. Die Datei wird nur auf Ihr Gerät heruntergeladen, nicht an eine Redaktion gesendet. Geänderter Text erfordert erneute wissenschaftliche und sprachliche Prüfung.",
     "zh": "可注明来源链接及需更正的段落来准备建议文件。文件仅下载到您的设备，不会发送给编辑。修改后的文本需要重新进行学术和语言审校。",
@@ -390,7 +390,7 @@
     "ms": "Kebolehcapaian"
   },
   "governance.accessText": {
-    "tr": "Klavye kullanımı, büyütülebilir metin, sağdan sola düzen ve azaltılmış hareket desteklenir. Bağımsız erişilebilirlik değerlendirmesi tamamlanmamıştır. WCAG 2.2 AA bir geliştirme hedefidir, uygunluk belgesi değildir.",
+    "tr": "Klavyeyle kullanım, büyütülebilir metin, sağdan sola yazım düzeni ve azaltılmış hareket desteklenmektedir. Bağımsız bir erişilebilirlik değerlendirmesi henüz yapılmamıştır. WCAG 2.2 AA düzeyi bir uygunluk belgesi değil, ulaşılmaya çalışılan bir hedeftir.",
     "en": "Keyboard use, resizable text, right-to-left layout and reduced motion are supported. Independent accessibility evaluation is not complete. WCAG 2.2 AA is a development target, not a conformance certification.",
     "de": "Tastaturbedienung, vergrößerbarer Text, Rechts-nach-links-Layout und reduzierte Bewegung werden unterstützt. Eine unabhängige Barrierefreiheitsprüfung ist nicht abgeschlossen. WCAG 2.2 AA ist ein Entwicklungsziel, keine Konformitätsbescheinigung.",
     "zh": "支持键盘操作、文本缩放、从右向左布局和减少动态效果。独立无障碍评估尚未完成。WCAG 2.2 AA 是开发目标，而非合规认证。",
@@ -410,7 +410,7 @@
     "ms": "Privasi dan tindakan setempat"
   },
   "governance.privacyText": {
-    "tr": "Hesap, analitik izleyici veya katılımcı veri toplama formu bulunmaz. Barındırma hizmetinin erişim kayıtları ayrı bir konudur. Site herkese açıktır; özel bir çalışma alanı değildir.",
+    "tr": "Sitede kullanıcı hesabı, ziyaretçi izleme aracı ya da katılımcılardan veri toplayan bir form bulunmamaktadır. Barındırma hizmetinin tuttuğu erişim kayıtları ise ayrı bir konudur. Site herkese açıktır; özel bir çalışma alanı değildir.",
     "en": "There are no accounts, analytics trackers or participant data collection forms. Hosting access logs are a separate consideration. The website is public and is not a private workspace.",
     "de": "Es gibt keine Konten, Analyse-Tracker oder Formulare zur Erhebung von Teilnehmerdaten. Zugriffsprotokolle des Hostingdienstes sind gesondert zu betrachten. Die Website ist öffentlich und kein privater Arbeitsbereich.",
     "zh": "平台不设账户、分析跟踪器或参与者数据收集表单。托管服务的访问日志须另行考虑。本网站为公开网站，并非私密工作空间。",
@@ -430,7 +430,7 @@
     "ms": "Penyelidikan dan peta koleksi"
   },
   "research.lead": {
-    "tr": "Seçkinin kapsamını inceleyin, yöntem kaynaklarına ve araştırma ilkelerine ulaşın.",
+    "tr": "Seçkinin kapsamını, yöntem kaynaklarını ve araştırma ilkelerini bu sayfada inceleyebilirsiniz.",
     "en": "Inspect the scope of the collection and explore research methods and principles.",
     "de": "Prüfen Sie den Umfang der Auswahl und entdecken Sie Forschungsmethoden und Grundsätze.",
     "zh": "了解本资源集的范围，探索研究方法与原则。",
@@ -450,7 +450,7 @@
     "ms": "Kandungan katalog"
   },
   "research.scope": {
-    "tr": "Sayılar yalnızca bu katalogdaki benzersiz kaynak kayıtlarını gösterir. Çeviriler yeni yayın olarak sayılmaz. Alanın büyüklüğü, kanıt gücü veya klinik etkililik hakkında bir sonuç çıkarılamaz.",
+    "tr": "Sayılar yalnızca bu katalogdaki kaynak kayıtlarını göstermektedir; aynı yayının çevirileri ayrı yayın olarak sayılmaz. Bu sayılardan alanın büyüklüğü, kanıtın gücü ya da klinik etkililik hakkında sonuç çıkarılamaz.",
     "en": "Counts describe unique source records in this catalogue only. Translations are not counted as new publications. They do not establish the size of the field, strength of evidence or clinical effectiveness.",
     "de": "Die Zahlen beschreiben nur eindeutige Quellen dieses Katalogs. Übersetzungen zählen nicht als neue Publikationen. Daraus folgen keine Aussagen über Feldgröße, Evidenzstärke oder klinische Wirksamkeit.",
     "zh": "数量仅描述本目录中的唯一来源记录。译文不计为新增出版物。不能据此推断整个领域的规模、证据强度或临床效果。",
@@ -470,7 +470,7 @@
     "ms": "Bilangan rekod"
   },
   "research.projectsNote": {
-    "tr": "Onaylı bir proje veya katılımcı çağrısı yayımlandığında bu alanda ayrıca belirtilir. Şu anda katılımcı yanıtı toplanmaz.",
+    "tr": "Etik onayı alınmış bir proje ya da katılımcı çağrısı yayımlandığında burada duyurulacaktır. Şu anda katılımcılardan yanıt toplanmamaktadır.",
     "en": "Approved projects or recruitment notices will be identified separately when available. Participant responses are not currently collected.",
     "de": "Genehmigte Projekte oder Teilnahmeaufrufe werden gesondert ausgewiesen, sobald sie vorliegen. Derzeit werden keine Teilnehmerantworten erhoben.",
     "zh": "经批准的项目或招募通知将在可用时单独标明。目前不收集参与者答复。",
@@ -490,7 +490,7 @@
     "ms": "Kenali platform"
   },
   "about.editor": {
-    "tr": "Kaynak önerin veya düzeltme hazırlayın",
+    "tr": "Kaynak önerin ya da düzeltme hazırlayın",
     "en": "Prepare a source suggestion or correction",
     "de": "Quellenvorschlag oder Korrektur vorbereiten",
     "zh": "准备来源建议或更正",
