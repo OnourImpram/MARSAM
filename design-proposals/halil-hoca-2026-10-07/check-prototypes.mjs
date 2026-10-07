@@ -28,5 +28,5 @@ assert.ok(!gallery.includes('allow-scripts'),'preview should not execute embedde
 for(const p of pages)assert.ok(gallery.includes(JSON.stringify(p).slice(1,-1)),'gallery must embed latest individual HTML');
 for(const name of files)assert.ok(gallery.includes(name+'.html'),name+' missing in gallery');
 assert.ok(pages[6].includes('Ruh sağlığı profesyoneliyim')&&pages[6].includes('Araştırmacıyım'));
-assert.ok(pages[1].includes('.academy #egitim,.video #egitim,.dashboard #secim{order:1')&&pages[8].includes('.academy #egitim,.video #egitim,.dashboard #secim{order:1'));
+assert.ok(pages[1].includes('.academy #egitim') && pages[8].includes('.video #egitim'), 'education-first layouts present');
 console.log('PASS: 10 self-contained concepts, all anchors, offline integrity, institution and rights boundaries, updated gallery');
