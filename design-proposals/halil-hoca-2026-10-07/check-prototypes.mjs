@@ -1,0 +1,32 @@
+import {readFile} from 'node:fs/promises';
+import {resolve} from 'node:path';
+import assert from 'node:assert/strict';
+const root=resolve('design-proposals/halil-hoca-2026-10-07');
+const files=['01-split','02-academy','03-minimal','04-editorial','05-dark','06-warm','07-paths','08-dashboard','09-video','10-premium'];
+const ids=['baslangic','secim','uygulama','olcme','egitim','kutuphane','hakkinda'];
+const pages=[];
+for(const name of files){
+ const html=await readFile(resolve(root,name+'.html'),'utf8');
+ assert.match(html,/^<!doctype html>/i,name);
+ assert.match(html,/<html lang="tr">/,name);
+ assert.match(html,/<meta name="viewport"/,name);
+ assert.match(html,/noindex,nofollow/,name);
+ assert.match(html,/@media\(max-width:520px\)/,name);
+ assert.match(html,/<\/html>$/,name);
+ for(const id of ids)assert.ok(html.includes('id="'+id+'"'),name+' missing '+id);
+ for(const href of ['#uygulama','#olcme','#egitim','#kutuphane','#hakkinda'])assert.ok(html.includes('href="'+href+'"'),name+' missing '+href);
+ assert.ok(!/<script\s+src=|<link\s+[^>]*href=|<iframe\s+[^>]*src="https?:|<form\b/i.test(html),name+' must remain offline and data-free');
+ assert.ok(html.includes('Üniversiteye bağlı bir merkez olarak sunulmaz.'),name+' institutional integrity');
+ assert.ok(html.includes('Tamamen kurgusal veri.'),name+' mock scoring');
+ assert.ok(html.includes('Concept-specific composition'),name+' unique composition');
+ pages.push(html);
+}
+const gallery=await readFile(resolve(root,'MARSAM-10-TASARIM-FINAL.html'),'utf8');
+assert.match(gallery,/^<!doctype html>/i);
+assert.match(gallery,/sandbox="allow-same-origin"/);
+assert.ok(!gallery.includes('allow-scripts'),'preview should not execute embedded scripts');
+for(const p of pages)assert.ok(gallery.includes(JSON.stringify(p).slice(1,-1)),'gallery must embed latest individual HTML');
+for(const name of files)assert.ok(gallery.includes(name+'.html'),name+' missing in gallery');
+assert.ok(pages[6].includes('Ruh sağlığı profesyoneliyim')&&pages[6].includes('Araştırmacıyım'));
+assert.ok(pages[1].includes('.academy #egitim{order:1')&&pages[8].includes('.video #egitim{order:1'));
+console.log('PASS: 10 self-contained concepts, all anchors, offline integrity, institution and rights boundaries, updated gallery');
