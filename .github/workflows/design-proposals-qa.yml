@@ -1,0 +1,30 @@
+name: Check ten MARSAM design alternatives
+on:
+  push:
+    branches: [design/halil-feedback-10-html-concepts-20261007]
+    paths:
+      - .github/workflows/design-proposals-qa.yml
+      - design-proposals/halil-hoca-2026-10-07/**
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate ten offline HTML concepts and presentation gallery
+        run: node design-proposals/halil-hoca-2026-10-07/check-prototypes.mjs
+      - name: Confirm no changes to public site or source architecture
+        shell: bash
+        run: |
+          set -euo pipefail
+          git diff --name-only origin/main...HEAD > /tmp/design-changed.txt
+          if grep -vE '^design-proposals/halil-hoca-2026-10-07/|^\.github/workflows/design-proposals-qa.yml$' /tmp/design-changed.txt; then
+            echo 'Unexpected non-design files changed'
+            exit 1
+          fi
+          echo 'Only offline design proposal files were changed.'
